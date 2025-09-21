@@ -1,13 +1,11 @@
-// src/views/TopicView.tsx
-
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { Question } from '../types';
 import QuestionCard from '../Components/question/QuestionCard/QuestionCard';
+import type { Question } from '../types';
 
 interface TopicViewProps {
     topic: string;
-    questions: Question[]; // <-- পরিবর্তন এখানে: props হিসেবে questions গ্রহণ করা হচ্ছে
+    questions: Question[];
     language: 'en' | 'bn';
     isLoggedIn: boolean;
 }
@@ -16,7 +14,6 @@ export default function TopicView({ topic, questions, language, isLoggedIn }: To
     const [searchTerm, setSearchTerm] = useState('');
     const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
-    // ডেটা এখন props থেকে আসছে, তাই সরাসরি ব্যবহার করা হচ্ছে
     const allData = questions || []; 
 
     const groupedBySubTopic = useMemo(() => {
@@ -26,7 +23,7 @@ export default function TopicView({ topic, questions, language, isLoggedIn }: To
             if (!acc[subTopic]) acc[subTopic] = [];
             acc[subTopic].push(question);
             return acc;
-        }, {} as Record<string, typeof allData>);
+        }, {} as Record<string, Question[]>);
     }, [allData]);
 
     const levels = useMemo(() => allData ? [...new Set(allData.map(q => q.level))] : [], [allData]);
@@ -36,7 +33,6 @@ export default function TopicView({ topic, questions, language, isLoggedIn }: To
             prev.includes(level) ? prev.filter(l => l !== level) : [...prev, level]
         );
 
-    // যদি কোনো কারণে প্রশ্ন লোড না হয় তবে একটি মেসেজ দেখানো হবে
     if (allData.length === 0) {
         return (
             <div className="text-center text-gray-400">

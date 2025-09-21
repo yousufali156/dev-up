@@ -1,8 +1,8 @@
-// src/components/layout/Sidebar.tsx
 import React from 'react';
 import { HomeIcon, CodeIcon, ExamIcon, ProfileIcon, LoginIcon } from '../../common/Icons/Icons';
+import type { MockUser } from '../../../types';
 
-// Sidebar Props
+// Defining a TypeScript interface for the Sidebar component's props.
 interface SidebarProps {
     activeView: string;
     setActiveView: (view: string) => void;
@@ -11,7 +11,7 @@ interface SidebarProps {
     setLanguage: (lang: 'en' | 'bn') => void;
     topics: string[];
     handleLogin: () => void;
-    mockUser: { name: string };
+    mockUser: MockUser;
 }
 
 export default function Sidebar({
@@ -42,7 +42,6 @@ export default function Sidebar({
                 <span className="text-3xl mr-2">🚀</span> SkillSphere
             </div>
 
-            {/* Language Toggle */}
             <div className="mb-6 flex bg-gray-800 rounded-lg p-1">
                 <button
                     onClick={() => setLanguage('en')}

@@ -1,10 +1,6 @@
-// code: Icons.tsx
+// Icons.tsx
 
-// React লাইব্রেরী ইম্পোর্ট করা হচ্ছে।
-import React from 'react';
-
-// এই ফাইলে সমস্ত আইকন কম্পোনেন্টগুলো একসাথে রাখা হয়েছে।
-// প্রতিটি আইকনকে 'export' করা হয়েছে যাতে অন্য ফাইল থেকে এগুলোকে import করা যায়।
+// This file contains all the icon components.
 
 export const HomeIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">

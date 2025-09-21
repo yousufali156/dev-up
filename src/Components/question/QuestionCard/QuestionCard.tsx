@@ -1,34 +1,52 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { LockIcon } from '../../common/Icons/Icons';
+import type { Question } from '../../../types';
 
-// --- Dependency Components (Included to fix compilation error) ---
+// AnswerSection-এর জন্য Props টাইপ
+// Defining a TypeScript interface for the AnswerSection's props.
+interface AnswerSectionProps {
+    title: string;
+    content: string;
+    isVip?: boolean;
+}
 
-// এই আইকনটি পূর্বে Icons.jsx ফাইলে ছিল।
-// This icon was previously in the Icons.jsx file.
-const LockIcon = () => <svg xmlns="http://www.w.org/2000/svg" className="h-5 w-5 text-amber-400 inline-block mr-2" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" /></svg>;
-
-// এই কম্পোনেন্টটি পূর্বে AnswerSection.jsx ফাইলে ছিল।
-// This component was previously in the AnswerSection.jsx file.
-const AnswerSection = ({ title, content, isVip = false }) => (
+const AnswerSection = ({ title, content, isVip = false }: AnswerSectionProps) => (
     <div className="mt-4">
         <h4 className={`text-lg font-semibold ${isVip ? 'text-amber-400' : 'text-[#4F46E5]'}`}>{title}</h4>
         <p className="text-gray-300 mt-1 whitespace-pre-wrap font-light">{content}</p>
     </div>
 );
 
+// QuestionCard-এর জন্য Props টাইপ
+// Defining a TypeScript interface for the QuestionCard's props.
+interface QuestionCardProps {
+    question: Question;
+    language: 'en' | 'bn';
+    isLoggedIn: boolean;
+}
 
-// --- Main QuestionCard Component ---
-
-// এই কম্পোনেন্টটি একটি প্রশ্ন কার্ড হিসেবে কাজ করে।
-// This component acts as a single question card.
-export default function QuestionCard({ question, language, isLoggedIn }) {
+export default function QuestionCard({ question, language, isLoggedIn }: QuestionCardProps) {
     const [isOpen, setIsOpen] = useState(false);
-    const levelColor = { 'Basic': 'border-emerald-500', 'Intermediate': 'border-sky-500', 'Advanced': 'border-amber-500', 'Master': 'border-red-500' }[question.level] || 'border-gray-500';
+    
+    // Determining the border color based on the question level.
+    const levelColorMap: Record<string, string> = { 
+        'Basic': 'border-emerald-500', 
+        'Intermediate': 'border-sky-500', 
+        'Advanced': 'border-amber-500', 
+        'Master': 'border-red-500',
+        'Beginner': 'border-emerald-500', 
+        'VIP': 'border-red-500' 
+    };
+    const levelColor = levelColorMap[question.level] || 'border-gray-500';
+
     const isVip = !!question.vip_qa;
 
     const handleToggle = () => {
         if (isVip && !isLoggedIn) {
-            alert(language === 'en' ? 'This is a VIP question. Please log in to view.' : 'এটি একটি ভিআইপি প্রশ্ন। অনুগ্রহ করে দেখতে লগইন করুন।');
+            // alert() এর পরিবর্তে একটি কাস্টম মডেল ব্যবহার করা ভালো
+            // It's better to use a custom modal instead of alert()
+            console.warn('VIP Question: Please log in.');
             return;
         }
         setIsOpen(!isOpen);
@@ -65,4 +83,3 @@ export default function QuestionCard({ question, language, isLoggedIn }) {
         </motion.div>
     );
 }
-
