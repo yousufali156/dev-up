@@ -1,0 +1,467 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "HTML Basics",
+        "question_en": "What is HTML?",
+        "question_bn": "HTML কী?",
+        "details": {
+            "what_is_en": "HTML (HyperText Markup Language) is the standard language used to create web pages.",
+            "what_is_bn": "HTML (হাইপার টেক্সট মার্কআপ ল্যাঙ্গুয়েজ) হলো ওয়েব পেজ তৈরির জন্য ব্যবহৃত মানক ভাষা।"
+        },
+        "vip_qa": {
+            "question_en": "Why is HTML called a markup language?",
+            "answer_en": "Because it uses tags to 'mark up' content and define its structure rather than programming logic."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "HTML Elements",
+        "question_en": "What is the difference between block and inline elements in HTML?",
+        "question_bn": "HTML-এ ব্লক এবং ইনলাইন এলিমেন্টের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "Block elements take up the full width available (e.g., <div>, <p>), while inline elements only take up as much width as needed (e.g., <span>, <a>).",
+            "what_is_bn": "ব্লক এলিমেন্ট পুরো প্রস্থ দখল করে (যেমন <div>, <p>), আর ইনলাইন এলিমেন্ট শুধু প্রয়োজনীয় প্রস্থ দখল করে (যেমন <span>, <a>)।"
+        },
+        "vip_qa": {
+            "question_en": "Can inline elements contain block elements?",
+            "answer_en": "No, according to HTML specification, block elements cannot be nested inside inline elements."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 3",
+        "question_en": "What is HTML concept 3?",
+        "question_bn": "HTML কনসেপ্ট 3 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 3 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 3 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 3?",
+            "answer_en": "Advanced explanation of HTML concept 3 with practical example."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 4",
+        "question_en": "What is HTML concept 4?",
+        "question_bn": "HTML কনসেপ্ট 4 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 4 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 4 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 4?",
+            "answer_en": "Advanced explanation of HTML concept 4 with practical example."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 5",
+        "question_en": "What is HTML concept 5?",
+        "question_bn": "HTML কনসেপ্ট 5 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 5 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 5 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 5?",
+            "answer_en": "Advanced explanation of HTML concept 5 with practical example."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 6",
+        "question_en": "What is HTML concept 6?",
+        "question_bn": "HTML কনসেপ্ট 6 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 6 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 6 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 6?",
+            "answer_en": "Advanced explanation of HTML concept 6 with practical example."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 7",
+        "question_en": "What is HTML concept 7?",
+        "question_bn": "HTML কনসেপ্ট 7 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 7 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 7 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 7?",
+            "answer_en": "Advanced explanation of HTML concept 7 with practical example."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 8",
+        "question_en": "What is HTML concept 8?",
+        "question_bn": "HTML কনসেপ্ট 8 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 8 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 8 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 8?",
+            "answer_en": "Advanced explanation of HTML concept 8 with practical example."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 9",
+        "question_en": "What is HTML concept 9?",
+        "question_bn": "HTML কনসেপ্ট 9 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 9 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 9 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 9?",
+            "answer_en": "Advanced explanation of HTML concept 9 with practical example."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 10",
+        "question_en": "What is HTML concept 10?",
+        "question_bn": "HTML কনসেপ্ট 10 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 10 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 10 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 10?",
+            "answer_en": "Advanced explanation of HTML concept 10 with practical example."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 11",
+        "question_en": "What is HTML concept 11?",
+        "question_bn": "HTML কনসেপ্ট 11 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 11 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 11 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 11?",
+            "answer_en": "Advanced explanation of HTML concept 11 with practical example."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 12",
+        "question_en": "What is HTML concept 12?",
+        "question_bn": "HTML কনসেপ্ট 12 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 12 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 12 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 12?",
+            "answer_en": "Advanced explanation of HTML concept 12 with practical example."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 13",
+        "question_en": "What is HTML concept 13?",
+        "question_bn": "HTML কনসেপ্ট 13 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 13 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 13 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 13?",
+            "answer_en": "Advanced explanation of HTML concept 13 with practical example."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 14",
+        "question_en": "What is HTML concept 14?",
+        "question_bn": "HTML কনসেপ্ট 14 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 14 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 14 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 14?",
+            "answer_en": "Advanced explanation of HTML concept 14 with practical example."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 15",
+        "question_en": "What is HTML concept 15?",
+        "question_bn": "HTML কনসেপ্ট 15 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 15 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 15 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 15?",
+            "answer_en": "Advanced explanation of HTML concept 15 with practical example."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 16",
+        "question_en": "What is HTML concept 16?",
+        "question_bn": "HTML কনসেপ্ট 16 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 16 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 16 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 16?",
+            "answer_en": "Advanced explanation of HTML concept 16 with practical example."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 17",
+        "question_en": "What is HTML concept 17?",
+        "question_bn": "HTML কনসেপ্ট 17 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 17 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 17 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 17?",
+            "answer_en": "Advanced explanation of HTML concept 17 with practical example."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 18",
+        "question_en": "What is HTML concept 18?",
+        "question_bn": "HTML কনসেপ্ট 18 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 18 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 18 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 18?",
+            "answer_en": "Advanced explanation of HTML concept 18 with practical example."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 19",
+        "question_en": "What is HTML concept 19?",
+        "question_bn": "HTML কনসেপ্ট 19 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 19 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 19 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 19?",
+            "answer_en": "Advanced explanation of HTML concept 19 with practical example."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 20",
+        "question_en": "What is HTML concept 20?",
+        "question_bn": "HTML কনসেপ্ট 20 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 20 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 20 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 20?",
+            "answer_en": "Advanced explanation of HTML concept 20 with practical example."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 21",
+        "question_en": "What is HTML concept 21?",
+        "question_bn": "HTML কনসেপ্ট 21 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 21 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 21 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 21?",
+            "answer_en": "Advanced explanation of HTML concept 21 with practical example."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 22",
+        "question_en": "What is HTML concept 22?",
+        "question_bn": "HTML কনসেপ্ট 22 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 22 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 22 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 22?",
+            "answer_en": "Advanced explanation of HTML concept 22 with practical example."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 23",
+        "question_en": "What is HTML concept 23?",
+        "question_bn": "HTML কনসেপ্ট 23 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 23 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 23 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 23?",
+            "answer_en": "Advanced explanation of HTML concept 23 with practical example."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 24",
+        "question_en": "What is HTML concept 24?",
+        "question_bn": "HTML কনসেপ্ট 24 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 24 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 24 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 24?",
+            "answer_en": "Advanced explanation of HTML concept 24 with practical example."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 25",
+        "question_en": "What is HTML concept 25?",
+        "question_bn": "HTML কনসেপ্ট 25 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 25 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 25 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 25?",
+            "answer_en": "Advanced explanation of HTML concept 25 with practical example."
+        }
+    },
+    {
+        "id": 26,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 26",
+        "question_en": "What is HTML concept 26?",
+        "question_bn": "HTML কনসেপ্ট 26 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 26 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 26 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 26?",
+            "answer_en": "Advanced explanation of HTML concept 26 with practical example."
+        }
+    },
+    {
+        "id": 27,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 27",
+        "question_en": "What is HTML concept 27?",
+        "question_bn": "HTML কনসেপ্ট 27 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 27 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 27 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 27?",
+            "answer_en": "Advanced explanation of HTML concept 27 with practical example."
+        }
+    },
+    {
+        "id": 28,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 28",
+        "question_en": "What is HTML concept 28?",
+        "question_bn": "HTML কনসেপ্ট 28 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 28 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 28 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 28?",
+            "answer_en": "Advanced explanation of HTML concept 28 with practical example."
+        }
+    },
+    {
+        "id": 29,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 29",
+        "question_en": "What is HTML concept 29?",
+        "question_bn": "HTML কনসেপ্ট 29 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 29 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 29 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 29?",
+            "answer_en": "Advanced explanation of HTML concept 29 with practical example."
+        }
+    },
+    {
+        "id": 30,
+        "level": "Intermediate",
+        "sub_topic": "HTML Concept 30",
+        "question_en": "What is HTML concept 30?",
+        "question_bn": "HTML কনসেপ্ট 30 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 30 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 30 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 30?",
+            "answer_en": "Advanced explanation of HTML concept 30 with practical example."
+        }
+    },
+    {
+        "id": 31,
+        "level": "Beginner",
+        "sub_topic": "HTML Concept 31",
+        "question_en": "What is HTML concept 31?",
+        "question_bn": "HTML কনসেপ্ট 31 কী?",
+        "details": {
+            "what_is_en": "Explanation of HTML concept 31 in English.",
+            "what_is_bn": "HTML কনসেপ্ট 31 এর ব্যাখ্যা বাংলায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the advanced usage of HTML concept 31?",
+            "answer_en": "Advanced explanation of HTML concept 31 with practical example."
+        }
+    }
+]

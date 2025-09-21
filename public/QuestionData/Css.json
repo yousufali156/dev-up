@@ -1,0 +1,377 @@
+[
+  {
+    "id": 1,
+    "level": "Beginner",
+    "sub_topic": "CSS Basics",
+    "question_en": "What is CSS?",
+    "question_bn": "CSS কী?",
+    "details": {
+      "what_is_en": "CSS (Cascading Style Sheets) is used to style and layout web pages, including colors, fonts, and spacing.",
+      "what_is_bn": "CSS (ক্যাসকেডিং স্টাইল শীটস) ওয়েব পেজের রং, ফন্ট এবং স্পেসিং সহ স্টাইল এবং লেআউটের জন্য ব্যবহৃত হয়।"
+    },
+    "vip_qa": {
+      "question_en": "What are the advantages of using CSS?",
+      "answer_en": "CSS separates content from presentation, improves page loading speed, and allows consistent styling across multiple pages."
+    }
+  },
+  {
+    "id": 2,
+    "level": "Beginner",
+    "sub_topic": "Selectors",
+    "question_en": "What are CSS selectors?",
+    "question_bn": "CSS সিলেক্টর কী?",
+    "details": {
+      "what_is_en": "Selectors are patterns used to select and style elements on a webpage (e.g., .class, #id, element).",
+      "what_is_bn": "সিলেক্টর হলো ওয়েবপেজের এলিমেন্ট নির্বাচন ও স্টাইল করার জন্য ব্যবহৃত প্যাটার্ন (যেমন .class, #id, element)।"
+    },
+    "vip_qa": {
+      "question_en": "What is the difference between class and ID selectors?",
+      "answer_en": "Class selectors (.) can be used multiple times, while ID selectors (#) must be unique within a page."
+    }
+  },
+  {
+    "id": 3,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 3",
+    "question_en": "What is CSS concept 3?",
+    "question_bn": "CSS কনসেপ্ট 3 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 3 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 3 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 3?",
+      "answer_en": "Advanced explanation of CSS concept 3 with example."
+    }
+  },
+  {
+    "id": 4,
+    "level": "Intermediate",
+    "sub_topic": "CSS Concept 4",
+    "question_en": "What is CSS concept 4?",
+    "question_bn": "CSS কনসেপ্ট 4 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 4 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 4 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 4?",
+      "answer_en": "Advanced explanation of CSS concept 4 with example."
+    }
+  },
+  {
+    "id": 5,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 5",
+    "question_en": "What is CSS concept 5?",
+    "question_bn": "CSS কনসেপ্ট 5 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 5 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 5 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 5?",
+      "answer_en": "Advanced explanation of CSS concept 5 with example."
+    }
+  },
+  {
+    "id": 6,
+    "level": "Intermediate",
+    "sub_topic": "CSS Concept 6",
+    "question_en": "What is CSS concept 6?",
+    "question_bn": "CSS কনসেপ্ট 6 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 6 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 6 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 6?",
+      "answer_en": "Advanced explanation of CSS concept 6 with example."
+    }
+  },
+  {
+    "id": 7,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 7",
+    "question_en": "What is CSS concept 7?",
+    "question_bn": "CSS কনসেপ্ট 7 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 7 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 7 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 7?",
+      "answer_en": "Advanced explanation of CSS concept 7 with example."
+    }
+  },
+  {
+    "id": 8,
+    "level": "Intermediate",
+    "sub_topic": "CSS Concept 8",
+    "question_en": "What is CSS concept 8?",
+    "question_bn": "CSS কনসেপ্ট 8 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 8 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 8 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 8?",
+      "answer_en": "Advanced explanation of CSS concept 8 with example."
+    }
+  },
+  {
+    "id": 9,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 9",
+    "question_en": "What is CSS concept 9?",
+    "question_bn": "CSS কনসেপ্ট 9 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 9 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 9 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 9?",
+      "answer_en": "Advanced explanation of CSS concept 9 with example."
+    }
+  },
+  {
+    "id": 10,
+    "level": "Intermediate",
+    "sub_topic": "CSS Concept 10",
+    "question_en": "What is CSS concept 10?",
+    "question_bn": "CSS কনসেপ্ট 10 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 10 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 10 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 10?",
+      "answer_en": "Advanced explanation of CSS concept 10 with example."
+    }
+  },
+  {
+    "id": 11,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 11",
+    "question_en": "What is CSS concept 11?",
+    "question_bn": "CSS কনসেপ্ট 11 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 11 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 11 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 11?",
+      "answer_en": "Advanced explanation of CSS concept 11 with example."
+    }
+  },
+  {
+    "id": 12,
+    "level": "Intermediate",
+    "sub_topic": "CSS Concept 12",
+    "question_en": "What is CSS concept 12?",
+    "question_bn": "CSS কনসেপ্ট 12 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 12 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 12 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 12?",
+      "answer_en": "Advanced explanation of CSS concept 12 with example."
+    }
+  },
+  {
+    "id": 13,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 13",
+    "question_en": "What is CSS concept 13?",
+    "question_bn": "CSS কনসেপ্ট 13 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 13 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 13 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 13?",
+      "answer_en": "Advanced explanation of CSS concept 13 with example."
+    }
+  },
+  {
+    "id": 14,
+    "level": "Intermediate",
+    "sub_topic": "CSS Concept 14",
+    "question_en": "What is CSS concept 14?",
+    "question_bn": "CSS কনসেপ্ট 14 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 14 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 14 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 14?",
+      "answer_en": "Advanced explanation of CSS concept 14 with example."
+    }
+  },
+  {
+    "id": 15,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 15",
+    "question_en": "What is CSS concept 15?",
+    "question_bn": "CSS কনসেপ্ট 15 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 15 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 15 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 15?",
+      "answer_en": "Advanced explanation of CSS concept 15 with example."
+    }
+  },
+  {
+    "id": 16,
+    "level": "Intermediate",
+    "sub_topic": "CSS Concept 16",
+    "question_en": "What is CSS concept 16?",
+    "question_bn": "CSS কনসেপ্ট 16 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 16 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 16 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 16?",
+      "answer_en": "Advanced explanation of CSS concept 16 with example."
+    }
+  },
+  {
+    "id": 17,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 17",
+    "question_en": "What is CSS concept 17?",
+    "question_bn": "CSS কনসেপ্ট 17 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 17 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 17 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 17?",
+      "answer_en": "Advanced explanation of CSS concept 17 with example."
+    }
+  },
+  {
+    "id": 18,
+    "level": "Intermediate",
+    "sub_topic": "CSS Concept 18",
+    "question_en": "What is CSS concept 18?",
+    "question_bn": "CSS কনসেপ্ট 18 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 18 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 18 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 18?",
+      "answer_en": "Advanced explanation of CSS concept 18 with example."
+    }
+  },
+  {
+    "id": 19,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 19",
+    "question_en": "What is CSS concept 19?",
+    "question_bn": "CSS কনসেপ্ট 19 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 19 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 19 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 19?",
+      "answer_en": "Advanced explanation of CSS concept 19 with example."
+    }
+  },
+  {
+    "id": 20,
+    "level": "Intermediate",
+    "sub_topic": "CSS Concept 20",
+    "question_en": "What is CSS concept 20?",
+    "question_bn": "CSS কনসেপ্ট 20 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 20 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 20 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 20?",
+      "answer_en": "Advanced explanation of CSS concept 20 with example."
+    }
+  },
+  {
+    "id": 21,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 21",
+    "question_en": "What is CSS concept 21?",
+    "question_bn": "CSS কনসেপ্ট 21 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 21 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 21 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 21?",
+      "answer_en": "Advanced explanation of CSS concept 21 with example."
+    }
+  },
+  {
+    "id": 22,
+    "level": "Intermediate",
+    "sub_topic": "CSS Concept 22",
+    "question_en": "What is CSS concept 22?",
+    "question_bn": "CSS কনসেপ্ট 22 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 22 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 22 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 22?",
+      "answer_en": "Advanced explanation of CSS concept 22 with example."
+    }
+  },
+  {
+    "id": 23,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 23",
+    "question_en": "What is CSS concept 23?",
+    "question_bn": "CSS কনসেপ্ট 23 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 23 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 23 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 23?",
+      "answer_en": "Advanced explanation of CSS concept 23 with example."
+    }
+  },
+  {
+    "id": 24,
+    "level": "Intermediate",
+    "sub_topic": "CSS Concept 24",
+    "question_en": "What is CSS concept 24?",
+    "question_bn": "CSS কনসেপ্ট 24 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 24 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 24 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 24?",
+      "answer_en": "Advanced explanation of CSS concept 24 with example."
+    }
+  },
+  {
+    "id": 25,
+    "level": "Beginner",
+    "sub_topic": "CSS Concept 25",
+    "question_en": "What is CSS concept 25?",
+    "question_bn": "CSS কনসেপ্ট 25 কী?",
+    "details": {
+      "what_is_en": "Explanation of CSS concept 25 in English.",
+      "what_is_bn": "CSS কনসেপ্ট 25 এর ব্যাখ্যা বাংলায়।"
+    },
+    "vip_qa": {
+      "question_en": "Explain advanced usage of CSS concept 25?",
+      "answer_en": "Advanced explanation of CSS concept 25 with example."
+    }
+  }
+]
