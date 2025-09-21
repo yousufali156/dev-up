@@ -14,7 +14,7 @@ const ExamView: React.FC<ExamViewProps> = ({ language }) => {
   return (
     // মূল কন্টেইনার, যা ফ্লেক্সবক্স ব্যবহার করে কন্টেন্টকে সেন্টারে রাখছে।
     <div className="text-center flex flex-col items-center justify-center h-full">
-      
+
       {/* ভিউ-এর প্রধান শিরোনাম */}
       <h1 className="text-5xl font-extrabold text-white mb-4">
         {/* language state-এর উপর ভিত্তি করে শিরোনাম পরিবর্তন হবে */}
@@ -33,7 +33,7 @@ const ExamView: React.FC<ExamViewProps> = ({ language }) => {
         <h2 className="text-2xl font-bold text-white mb-4">
           {language === 'en' ? 'Upcoming Features' : 'আসন্ন ফিচার'}
         </h2>
-        
+
         {/* ফিচারগুলোর একটি তালিকা */}
         <ul className="text-gray-300 list-disc list-inside text-left">
           <li>

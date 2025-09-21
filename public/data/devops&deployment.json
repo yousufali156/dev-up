@@ -1,0 +1,377 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is DevOps?",
+        "question_bn": "DevOps কী?",
+        "details": {
+            "what_is_en": "DevOps is a set of practices, tools, and a cultural philosophy that combines software development (Dev) and IT operations (Ops) to shorten the development life cycle and provide continuous delivery with high software quality.",
+            "what_is_bn": "DevOps হলো কিছু অনুশীলন, টুলস এবং একটি সাংস্কৃতিক দর্শন যা সফটওয়্যার ডেভেলপমেন্ট (Dev) এবং আইটি অপারেশনস (Ops)-কে একত্রিত করে ডেভেলপমেন্ট জীবনচক্রকে ছোট করে এবং উচ্চ মানের সফটওয়্যারসহ ক্রমাগত ডেলিভারি প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the core principles of the DevOps lifecycle, often remembered by the acronym C.A.L.M.S.?",
+            "answer_en": "C.A.L.M.S. stands for: **C**ulture (collaboration), **A**utomation (automating everything), **L**ean (eliminating waste), **M**easurement (measuring everything), and **S**haring (sharing ideas and feedback)."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Intermediate",
+        "sub_topic": "CI/CD",
+        "question_en": "What is CI/CD?",
+        "question_bn": "CI/CD কী?",
+        "details": {
+            "what_is_en": "CI/CD stands for Continuous Integration and Continuous Delivery/Deployment. It is a practice of automating the software development and release process.",
+            "what_is_bn": "CI/CD এর অর্থ হলো কন্টিনিউয়াস ইন্টিগ্রেশন এবং কন্টিনিউয়াস ডেলিভারি/ডেপ্লয়মেন্ট। এটি সফটওয়্যার ডেভেলপমেন্ট এবং রিলিজ প্রক্রিয়াকে স্বয়ংক্রিয় করার একটি অনুশীলন।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between Continuous Delivery and Continuous Deployment?",
+            "answer_en": "In **Continuous Delivery**, every change is automatically built, tested, and pushed to a non-production environment, but the final deployment to production requires manual approval. In **Continuous Deployment**, every change that passes all stages of the pipeline is automatically released to production."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Intermediate",
+        "sub_topic": "Docker",
+        "question_en": "What is Docker?",
+        "question_bn": "Docker কী?",
+        "details": {
+            "what_is_en": "Docker is a platform for developing, shipping, and running applications in isolated environments called containers. It packages an application and its dependencies together.",
+            "what_is_bn": "Docker হলো কন্টেইনার নামক বিচ্ছিন্ন পরিবেশে অ্যাপ্লিকেশন ডেভেলপ, শিপ এবং রান করার একটি প্ল্যাটফর্ম। এটি একটি অ্যাপ্লিকেশন এবং তার সমস্ত ডিপেন্ডেন্সি একসাথে প্যাকেজ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between a container and a virtual machine (VM)?",
+            "answer_en": "A **VM** virtualizes the hardware, meaning each VM has its own guest operating system. A **container** virtualizes the operating system, meaning containers share the host OS kernel. This makes containers much more lightweight, faster to start, and less resource-intensive than VMs."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Intermediate",
+        "sub_topic": "Docker",
+        "question_en": "What is the difference between a Docker Image and a Docker Container?",
+        "question_bn": "ডকার ইমেজ এবং ডকার কন্টেইনারের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "An **Image** is a read-only template with instructions for creating a container. A **Container** is a runnable instance of an image. You can have multiple containers running from the same image.",
+            "what_is_bn": "একটি **ইমেজ** হলো একটি রিড-অনলি টেমপ্লেট যা একটি কন্টেইনার তৈরির জন্য নির্দেশাবলী ধারণ করে। একটি **কন্টেইনার** হলো একটি ইমেজের একটি চালনযোগ্য ইনস্ট্যান্স। আপনি একই ইমেজ থেকে একাধিক কন্টেইনার চালাতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is a Dockerfile?",
+            "answer_en": "A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. It's the blueprint for building Docker images."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Advanced",
+        "sub_topic": "Web Servers",
+        "question_en": "What is a Reverse Proxy?",
+        "question_bn": "রিভার্স প্রক্সি কী?",
+        "details": {
+            "what_is_en": "A reverse proxy is a server that sits in front of one or more web servers, forwarding client requests to them. The client communicates with the reverse proxy, and the reverse proxy communicates with the backend server(s).",
+            "what_is_bn": "রিভার্স প্রক্সি হলো এমন একটি সার্ভার যা ক্লায়েন্টের রিকোয়েস্ট গ্রহণ করে এবং সেই রিকোয়েস্টটি এক বা একাধিক ব্যাকএন্ড সার্ভারের কাছে ফরোয়ার্ড করে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the key benefits of using a reverse proxy like Nginx in front of a Node.js application?",
+            "answer_en": "1. **Load Balancing:** It can distribute traffic across multiple Node.js instances. 2. **SSL Termination:** It can handle HTTPS decryption, offloading that work from the Node.js app. 3. **Serving Static Content:** Nginx is highly efficient at serving static files. 4. **Security:** It acts as an additional layer of security."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Beginner",
+        "sub_topic": "Hosting Platforms",
+        "question_en": "What are Vercel and Netlify?",
+        "question_bn": "Vercel এবং Netlify কী?",
+        "details": {
+            "what_is_en": "Vercel and Netlify are modern web hosting and automation platforms designed to make deploying frontend applications (especially Jamstack sites) extremely simple and fast.",
+            "what_is_bn": "Vercel এবং Netlify দুটিই আধুনিক ওয়েব হোস্টিং এবং অটোমেশন প্ল্যাটফর্ম যা ফ্রন্টএন্ড অ্যাপ্লিকেশন (বিশেষ করে Jamstack সাইট) ডেপ্লয় করাকে সহজ এবং দ্রুত করে তোলে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is Vercel the preferred platform for deploying Next.js applications?",
+            "answer_en": "Vercel is the company that created Next.js. As a result, the platform is perfectly optimized to support all of Next.js's features out-of-the-box (SSR, SSG, ISR, etc.) with zero configuration and the best possible performance."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Advanced",
+        "sub_topic": "Security",
+        "question_en": "What is SSL/TLS and why is HTTPS important?",
+        "question_bn": "SSL/TLS কী এবং HTTPS কেন গুরুত্বপূর্ণ?",
+        "details": {
+            "what_is_en": "SSL/TLS are cryptographic protocols that provide secure communication over a computer network. HTTPS is the secure version of HTTP that uses SSL/TLS to encrypt communication.",
+            "what_is_bn": "SSL/TLS হলো ক্রিপ্টোগ্রাফিক প্রোটোকল যা একটি কম্পিউটার নেটওয়ার্কে নিরাপদ যোগাযোগ প্রদান করে। HTTPS হলো HTTP-এর সুরক্ষিত সংস্করণ যা SSL/TLS ব্যবহার করে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the three main benefits of using HTTPS on a website?",
+            "answer_en": "1. **Encryption:** Protects data integrity and privacy. 2. **Authentication:** Verifies that users are communicating with the correct website. 3. **SEO:** Search engines use HTTPS as a positive ranking signal."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Intermediate",
+        "sub_topic": "CI/CD",
+        "question_en": "What is GitHub Actions?",
+        "question_bn": "GitHub অ্যাকশন কী?",
+        "details": {
+            "what_is_en": "GitHub Actions is a CI/CD platform that allows you to automate your build, test, and deployment pipeline directly from your GitHub repository.",
+            "what_is_bn": "GitHub অ্যাকশন হলো একটি CI/CD প্ল্যাটফর্ম যা আপনাকে আপনার GitHub রিপোজিটরি থেকে সরাসরি আপনার বিল্ড, টেস্ট এবং ডেপ্লয়মেন্ট পাইপলাইন স্বয়ংক্রিয়ভাবে পরিচালনা করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'workflow' in GitHub Actions?",
+            "answer_en": "A workflow is a configurable automated process made up of one or more 'jobs'. Workflows are defined by a YAML file in the `.github/workflows` directory of a repository."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Beginner",
+        "sub_topic": "Networking",
+        "question_en": "What is DNS?",
+        "question_bn": "DNS কী?",
+        "details": {
+            "what_is_en": "DNS (Domain Name System) is the phonebook of the Internet. It translates human-readable domain names (like google.com) into machine-readable IP addresses (like 172.217.16.142).",
+            "what_is_bn": "DNS (ডোমেইন নেম সিস্টেম) হলো ইন্টারনেটের ফোনবুক। এটি মানুষের পাঠযোগ্য ডোমেইন নামকে (যেমন google.com) মেশিনের পাঠযোগ্য IP ঠিকানায় (যেমন 172.217.16.142) অনুবাদ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the purpose of an 'A' record in DNS?",
+            "answer_en": "An 'A' record is the most basic type of DNS record. It maps a domain name directly to an IPv4 address."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Intermediate",
+        "sub_topic": "Process Management",
+        "question_en": "What is PM2?",
+        "question_bn": "PM2 কী?",
+        "details": {
+            "what_is_en": "PM2 is a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime, and to facilitate common system admin tasks.",
+            "what_is_bn": "PM2 হলো Node.js অ্যাপ্লিকেশনের জন্য একটি প্রোডাকশন প্রসেস ম্যানেজার যার মধ্যে একটি বিল্ট-ইন লোড ব্যালেন্সার রয়েছে। এটি অ্যাপ্লিকেশনগুলিকে সর্বদা জীবিত রাখতে, ডাউনটাইম ছাড়াই রিলোড করতে এবং সাধারণ সিস্টেম অ্যাডমিন কাজগুলি সহজ করতে সাহায্য করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is 'cluster mode' in PM2 and why is it useful?",
+            "answer_en": "Cluster mode allows you to run multiple instances of your application across all available CPU cores. This multiplies the application's ability to handle incoming requests without any code changes, taking full advantage of the server's hardware."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Intermediate",
+        "sub_topic": "Cloud & Hosting",
+        "question_en": "What is the difference between IaaS, PaaS, and SaaS?",
+        "question_bn": "IaaS, PaaS, এবং SaaS-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**IaaS** (Infrastructure as a Service) provides virtualized computing resources. **PaaS** (Platform as a Service) provides hardware and software tools. **SaaS** (Software as a Service) provides a ready-to-use software application.",
+            "what_is_bn": "**IaaS** কম্পিউটিং রিসোর্স প্রদান করে। **PaaS** হার্ডওয়্যার এবং সফটওয়্যার টুলস প্রদান করে। **SaaS** একটি ব্যবহারযোগ্য সফটওয়্যার অ্যাপ্লিকেশন প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "Which category does a service like Heroku or Vercel fall into?",
+            "answer_en": "Heroku and Vercel are examples of **PaaS** (Platform as a Service). They manage the underlying infrastructure (servers, OS, networking), allowing developers to focus solely on deploying and managing their applications."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Intermediate",
+        "sub_topic": "Docker",
+        "question_en": "What is Docker Compose?",
+        "question_bn": "ডকার কম্পোজ কী?",
+        "details": {
+            "what_is_en": "Docker Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services, networks, and volumes.",
+            "what_is_bn": "ডকার কম্পোজ হলো মাল্টি-কন্টেইনার ডকার অ্যাপ্লিকেশন সংজ্ঞায়িত এবং চালানোর একটি টুল। কম্পোজের সাথে, আপনি আপনার অ্যাপ্লিকেশনের পরিষেবা, নেটওয়ার্ক এবং ভলিউম কনফিগার করতে একটি YAML ফাইল ব্যবহার করেন।"
+        },
+        "vip_qa": {
+            "question_en": "Why is Docker Compose useful for local development?",
+            "answer_en": "It's extremely useful for creating a consistent development environment. You can define your entire application stack (e.g., a Node.js app, a MongoDB database, and a Redis cache) in a single `docker-compose.yml` file and spin up the entire environment with one command (`docker-compose up`)."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Advanced",
+        "sub_topic": "Web Servers",
+        "question_en": "What is Load Balancing?",
+        "question_bn": "লোড ব্যালেন্সিং কী?",
+        "details": {
+            "what_is_en": "Load balancing is the process of distributing network traffic across multiple servers to ensure no single server becomes overwhelmed. This improves responsiveness and availability.",
+            "what_is_bn": "লোড ব্যালেন্সিং হলো একাধিক সার্ভারে নেটওয়ার্ক ট্র্যাফিক বিতরণ করার প্রক্রিয়া যাতে কোনো একটি সার্ভার অতিরিক্ত ভারাক্রান্ত না হয়। এটি রেসপন্সিভনেস এবং প্রাপ্যতা উন্নত করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'round-robin' load balancing algorithm?",
+            "answer_en": "Round-robin is one of the simplest load balancing algorithms. It forwards requests to each server in turn, in a cyclical order. Once it reaches the end of the list, it starts again from the beginning."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Intermediate",
+        "sub_topic": "Security",
+        "question_en": "What are environment variables and why are they important?",
+        "question_bn": "এনভায়রনমেন্ট ভেরিয়েবল কী এবং কেন এগুলি গুরুত্বপূর্ণ?",
+        "details": {
+            "what_is_en": "Environment variables are variables whose values are set outside the application, in the environment in which it runs. They are used to store configuration settings, like API keys or database credentials.",
+            "what_is_bn": "এনভায়রনমেন্ট ভেরিয়েবল হলো এমন ভেরিয়েবল যার মান অ্যাপ্লিকেশনের বাইরে, যে পরিবেশে এটি চলে, সেখানে সেট করা হয়। এগুলি কনফিগারেশন সেটিংস, যেমন API কী বা ডেটাবেস ক্রেডেনশিয়াল সংরক্ষণ করতে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why is it a bad practice to hard-code configuration values directly in your code?",
+            "answer_en": "Hard-coding configuration is bad for security (it exposes secrets in your codebase) and flexibility (you have to change the code to change a configuration). Environment variables allow you to separate configuration from code."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Advanced",
+        "sub_topic": "Cloud & Hosting",
+        "question_en": "What is Serverless computing?",
+        "question_bn": "সার্ভারলেস কম্পিউটিং কী?",
+        "details": {
+            "what_is_en": "Serverless computing is a cloud execution model where the cloud provider dynamically manages the allocation and provisioning of servers. You write functions, and the provider runs them in response to events.",
+            "what_is_bn": "সার্ভারলেস কম্পিউটিং একটি ক্লাউড এক্সিকিউশন মডেল যেখানে ক্লাউড প্রদানকারী সার্ভারের বরাদ্দ এবং প্রভিশনিং গতিশীলভাবে পরিচালনা করে। আপনি ফাংশন লেখেন, এবং প্রদানকারী ইভেন্টের প্রতিক্রিয়ায় সেগুলি চালায়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a major advantage of serverless functions (like AWS Lambda)?",
+            "answer_en": "A major advantage is cost efficiency. You pay only for the compute time you consume—there is no charge when your code is not running. This contrasts with traditional servers that you pay for 24/7, regardless of usage."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Intermediate",
+        "sub_topic": "Docker",
+        "question_en": "What is a Docker Volume?",
+        "question_bn": "ডকার ভলিউম কী?",
+        "details": {
+            "what_is_en": "A Docker Volume is the preferred mechanism for persisting data generated by and used by Docker containers. It allows data to survive even after the container is removed.",
+            "what_is_bn": "ডকার ভলিউম হলো ডকার কন্টেইনার দ্বারা তৈরি এবং ব্যবহৃত ডেটা স্থায়ীভাবে সংরক্ষণের জন্য পছন্দের ব্যবস্থা। এটি কন্টেইনার সরিয়ে ফেলার পরেও ডেটাকে টিকিয়ে রাখতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why use a volume instead of a bind mount for a database container?",
+            "answer_en": "Volumes are managed by Docker and are isolated from the host machine's file system, making them more portable and preventing accidental modification from other processes. They are the recommended way to manage a database's data."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Beginner",
+        "sub_topic": "CI/CD",
+        "question_en": "What is a 'build artifact'?",
+        "question_bn": "'বিল্ড আর্টিফ্যাক্ট' কী?",
+        "details": {
+            "what_is_en": "A build artifact is the output of a build process. For a web application, this could be the compiled and minified JavaScript, CSS, and HTML files that are ready for deployment.",
+            "what_is_bn": "বিল্ড আর্টিফ্যাক্ট হলো একটি বিল্ড প্রক্রিয়ার আউটপুট। একটি ওয়েব অ্যাপ্লিকেশনের জন্য, এটি ডেপ্লয়মেন্টের জন্য প্রস্তুত কম্পাইল করা এবং মিনিফাইড জাভাস্ক্রিপ্ট, CSS, এবং HTML ফাইল হতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "How are artifacts typically used in a CI/CD pipeline?",
+            "answer_en": "In a pipeline, one job (the 'build' job) will create the artifacts, and a later job (the 'deploy' job) will download those artifacts and deploy them to a server. This ensures the exact same code that was tested is what gets deployed."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Advanced",
+        "sub_topic": "Infrastructure as Code",
+        "question_en": "What is Infrastructure as Code (IaC)?",
+        "question_bn": "ইনফ্রাস্ট্রাকচার অ্যাজ কোড (IaC) কী?",
+        "details": {
+            "what_is_en": "IaC is the practice of managing and provisioning computing infrastructure (networks, virtual machines, load balancers) through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools.",
+            "what_is_bn": "IaC হলো মেশিন-রিডেবল ডেফিনিশন ফাইলের মাধ্যমে কম্পিউটিং ইনফ্রাস্ট্রাকচার (নেটওয়ার্ক, ভার্চুয়াল মেশিন, লোড ব্যালেন্সার) পরিচালনা এবং প্রভিশনিং করার অনুশীলন।"
+        },
+        "vip_qa": {
+            "question_en": "What are some popular IaC tools?",
+            "answer_en": "Popular tools include Terraform, AWS CloudFormation, and Ansible. They allow you to define your entire cloud infrastructure in code, which can be version-controlled and automated."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Intermediate",
+        "sub_topic": "Security",
+        "question_en": "What is a firewall?",
+        "question_bn": "ফায়ারওয়াল কী?",
+        "details": {
+            "what_is_en": "A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It establishes a barrier between a trusted internal network and an untrusted external network.",
+            "what_is_bn": "ফায়ারওয়াল একটি নেটওয়ার্ক নিরাপত্তা ব্যবস্থা যা পূর্বনির্ধারিত নিরাপত্তা নিয়মের উপর ভিত্তি করে ইনকামিং এবং আউটগোয়িং নেটওয়ার্ক ট্র্যাফিক পর্যবেক্ষণ ও নিয়ন্ত্রণ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between a software firewall and a hardware firewall?",
+            "answer_en": "A software firewall is installed on an individual computer, while a hardware firewall is a physical device that sits between your network and the internet, protecting all devices on the network."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Advanced",
+        "sub_topic": "Monitoring",
+        "question_en": "What is the difference between monitoring and logging?",
+        "question_bn": "মনিটরিং এবং লগিংয়ের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**Logging** is the practice of recording discrete events that happened. **Monitoring** is the practice of collecting and analyzing metrics over time to observe the health and performance of a system.",
+            "what_is_bn": "**লগিং** হলো ঘটে যাওয়া পৃথক ইভেন্ট রেকর্ড করার অনুশীলন। **মনিটরিং** হলো একটি সিস্টেমের স্বাস্থ্য এবং পারফরম্যান্স পর্যবেক্ষণ করার জন্য সময়ের সাথে মেট্রিক্স সংগ্রহ এবং বিশ্লেষণ করার অনুশীলন।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example of a metric you would monitor for a web application.",
+            "answer_en": "A key metric to monitor is **latency**, specifically the 95th or 99th percentile response time. This tells you the response time for the slowest 5% or 1% of your requests, which is often a better indicator of user-perceived performance than the average response time."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is an API Gateway?",
+        "question_bn": "API গেটওয়ে কী?",
+        "details": {
+            "what_is_en": "An API Gateway is a server that acts as a single entry point into a system for all clients. It can handle tasks like authentication, rate limiting, and routing requests to the appropriate microservice.",
+            "what_is_bn": "API গেটওয়ে একটি সার্ভার যা সমস্ত ক্লায়েন্টের জন্য একটি সিস্টেমে একক প্রবেশদ্বার হিসাবে কাজ করে। এটি প্রমাণীকরণ, রেট লিমিটিং এবং উপযুক্ত মাইক্রোসার্ভিসে রিকোয়েস্ট রাউটিংয়ের মতো কাজগুলি পরিচালনা করতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "How does an API Gateway help in a microservices architecture?",
+            "answer_en": "In a microservices architecture, an API Gateway simplifies the client. Instead of having to know the endpoint for dozens of different services, the client makes all its requests to the single, stable gateway, which then handles the internal routing."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Advanced",
+        "sub_topic": "Web Servers",
+        "question_en": "What is SSL Termination?",
+        "question_bn": "SSL টার্মিনেশন কী?",
+        "details": {
+            "what_is_en": "SSL termination is the process of decrypting HTTPS traffic at a reverse proxy or load balancer. The traffic between the client and the proxy is encrypted, but the traffic between the proxy and the backend servers is unencrypted.",
+            "what_is_bn": "SSL টার্মিনেশন হলো একটি রিভার্স প্রক্সি বা লোড ব্যালেন্সারে HTTPS ট্র্যাফিক ডিক্রিপ্ট করার প্রক্রিয়া। ক্লায়েন্ট এবং প্রক্সির মধ্যে ট্র্যাফিক এনক্রিপ্ট করা থাকে, কিন্তু প্রক্সি এবং ব্যাকএন্ড সার্ভারের মধ্যে ট্র্যাফিক আনএনক্রিপ্টেড থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the primary benefit of SSL termination?",
+            "answer_en": "The primary benefit is performance. Decrypting SSL/TLS traffic is computationally expensive. Offloading this work from the backend application servers to a dedicated reverse proxy frees up the application servers to focus on their core logic."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Intermediate",
+        "sub_topic": "CI/CD",
+        "question_en": "What is a 'pipeline' in the context of CI/CD?",
+        "question_bn": "CI/CD-এর প্রসঙ্গে 'পাইপলাইন' কী?",
+        "details": {
+            "what_is_en": "A pipeline is an automated series of steps that takes code from version control all the way to deployment. It typically includes stages like building, testing, and deploying.",
+            "what_is_bn": "পাইপলাইন হলো একটি স্বয়ংক্রিয় ধাপের সিরিজ যা ভার্সন কন্ট্রোল থেকে কোড নিয়ে ডেপ্লয়মেন্ট পর্যন্ত পৌঁছে দেয়। এতে সাধারণত বিল্ড, টেস্ট এবং ডেপ্লয় করার মতো স্টেজ অন্তর্ভুক্ত থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "What does it mean for a pipeline to 'fail'?",
+            "answer_en": "A pipeline 'fails' if any of its critical steps (like a compilation error during the build stage or a failed test in the testing stage) do not complete successfully. A failed pipeline prevents the code from being deployed, ensuring that broken code does not reach production."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Advanced",
+        "sub_topic": "Deployment Strategies",
+        "question_en": "What is a Blue-Green deployment?",
+        "question_bn": "ব্লু-গ্রিন ডেপ্লয়মেন্ট কী?",
+        "details": {
+            "what_is_en": "A Blue-Green deployment is a release strategy where you have two identical production environments: 'Blue' (the current live version) and 'Green' (the new version). Traffic is switched from Blue to Green to release the new version.",
+            "what_is_bn": "ব্লু-গ্রিন ডেপ্লয়মেন্ট একটি রিলিজ কৌশল যেখানে আপনার দুটি একই রকম প্রোডাকশন এনভায়রনমেন্ট থাকে: 'ব্লু' (বর্তমান লাইভ সংস্করণ) এবং 'গ্রিন' (নতুন সংস্করণ)। নতুন সংস্করণ রিলিজ করার জন্য ট্র্যাফিক ব্লু থেকে গ্রিনে সুইচ করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a major advantage of Blue-Green deployment?",
+            "answer_en": "The major advantage is that it allows for instant, zero-downtime rollback. If a problem is detected in the Green environment after the switch, you can immediately switch traffic back to the stable Blue environment."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Intermediate",
+        "sub_topic": "Docker",
+        "question_en": "What is a Docker Registry?",
+        "question_bn": "ডকার রেজিস্ট্রি কী?",
+        "details": {
+            "what_is_en": "A Docker Registry is a storage and distribution system for Docker images. Docker Hub is the default public registry, but you can also host your own private registry.",
+            "what_is_bn": "ডকার রেজিস্ট্রি হলো ডকার ইমেজের জন্য একটি স্টোরেজ এবং ডিস্ট্রিবিউশন সিস্টেম। ডকার হাব হলো ডিফল্ট পাবলিক রেজিস্ট্রি, তবে আপনি নিজের ব্যক্তিগত রেজিস্ট্রিও হোস্ট করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `docker push` and `docker pull`?",
+            "answer_en": "`docker pull` is used to download an image or a repository from a registry. `docker push` is used to upload an image or a repository to a registry."
+        }
+    }
+]

@@ -1,0 +1,752 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is React?",
+        "question_bn": "React কী?",
+        "details": {
+            "what_is_en": "React is a declarative, efficient, and flexible JavaScript library for building user interfaces, based on a component architecture.",
+            "what_is_bn": "React একটি ডিক্লেয়ারেটিভ, কার্যকরী এবং ফ্লেক্সিবল জাভাস্ক্রিপ্ট লাইব্রেরি যা ইউজার ইন্টারফেস (UI) তৈরির জন্য ব্যবহৃত হয় এবং এটি কম্পোনেন্ট-ভিত্তিক আর্কিটেকচারের উপর ভিত্তি করে তৈরি।"
+        },
+        "vip_qa": {
+            "question_en": "React is often called a 'library' and not a 'framework'. What is the key distinction?",
+            "answer_en": "The key distinction is 'inversion of control'. A **Framework** dictates your application's architecture and calls your code. A **Library** is a set of tools that you call when you need them. React is a library because it's focused on the UI layer and doesn't impose rules on other aspects like routing or state management."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is JSX?",
+        "question_bn": "JSX কী?",
+        "details": {
+            "what_is_en": "JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like markup inside a JavaScript file. It makes creating React elements more intuitive.",
+            "what_is_bn": "JSX (JavaScript XML) হলো জাভাস্ক্রিপ্টের একটি সিনট্যাক্স এক্সটেনশন যা আপনাকে জাভাস্ক্রিপ্ট ফাইলের ভেতরে HTML-এর মতো কোড লিখতে দেয়। এটি React এলিমেন্ট তৈরি করাকে আরও সহজ করে তোলে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between a React Element and a React Component?",
+            "answer_en": "A **React Element** is a light, immutable object that describes what you want to see on the screen (e.g., `<p>Hello</p>`). A **React Component** is a function or a class that acts as a blueprint for elements. In short: a component *produces* elements."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Beginner",
+        "sub_topic": "Components & Props",
+        "question_en": "What is the difference between state and props?",
+        "question_bn": "State এবং props এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**Props** (properties) are read-only and are passed from a parent component to a child component. **State** is a component's private, mutable data that can change over time. A change in state triggers a re-render.",
+            "what_is_bn": "**Props** (প্রপার্টি) প্যারেন্ট কম্পোনেন্ট থেকে চাইল্ডে পাঠানো হয় এবং এটি রিড-অনলি। **State** একটি কম্পোনেন্টের নিজস্ব পরিবর্তনশীল ডেটা, যা পরিবর্তন হলে কম্পোনেন্টটি পুনরায় রেন্ডার হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is 'prop drilling' and what are the common solutions to avoid it?",
+            "answer_en": "**Prop drilling** is passing props down through multiple layers of nested components that don't need the props themselves. **Solutions:** 1. **Context API:** React's built-in solution for sharing global data. 2. **State Management Libraries (Redux, Zustand):** For complex, frequently updating global state."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Beginner",
+        "sub_topic": "Hooks",
+        "question_en": "What is the `useState` hook?",
+        "question_bn": "`useState` হুক কী?",
+        "details": {
+            "what_is_en": "The `useState` hook is a function that lets you add React state to functional components. It returns a pair: the current state value and a function that lets you update it.",
+            "what_is_bn": "`useState` হুক একটি ফাংশন যা আপনাকে ফাংশনাল কম্পোনেন্টে React state যোগ করতে দেয়। এটি একটি জোড়া রিটার্ন করে: বর্তমান state-এর মান এবং সেই মান আপডেট করার জন্য একটি ফাংশন।"
+        },
+        "vip_qa": {
+            "question_en": "Why should you never mutate state directly in React (e.g., `myState.property = 'new'`)?",
+            "answer_en": "You should never mutate state directly because React relies on the state setter function (e.g., `setMyState`) to know that a change has occurred. Modifying the state directly won't trigger a re-render, leading to an inconsistent UI."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Beginner",
+        "sub_topic": "Lists and Keys",
+        "question_en": "Why are `key`s important when rendering a list in React?",
+        "question_bn": "React-এ লিস্ট রেন্ডার করার জন্য `key` কেন গুরুত্বপূর্ণ?",
+        "details": {
+            "what_is_en": "`key`s are special string attributes that you need to include when creating lists of elements. Keys help React identify which items have changed, are added, or are removed.",
+            "what_is_bn": "`key` একটি বিশেষ অ্যাট্রিবিউট যা লিস্টের আইটেমগুলোকে শনাক্ত করতে React-কে সাহায্য করে, যা UI আপডেটকে অপ্টিমাইজ করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is it a bad practice to use an array's index as a `key` if the list can be reordered or filtered?",
+            "answer_en": "Using an index as a key is an anti-pattern for dynamic lists. If an item is added or removed, the indices of other items change. React uses keys to track element identity, so it can lead to incorrect DOM updates and buggy behavior, especially if the list items have their own state."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Beginner",
+        "sub_topic": "Event Handling",
+        "question_en": "How do you handle events in React?",
+        "question_bn": "React-এ ইভেন্ট কীভাবে হ্যান্ডেল করবেন?",
+        "details": {
+            "what_is_en": "React events are named using camelCase, like `onClick` instead of `onclick`. You pass a function as the event handler, rather than a string.",
+            "what_is_bn": "React ইভেন্টগুলো camelCase ব্যবহার করে নামকরণ করা হয়, যেমন `onclick`-এর পরিবর্তে `onClick`। আপনি ইভেন্ট হ্যান্ডলার হিসাবে একটি স্ট্রিংয়ের পরিবর্তে একটি ফাংশন পাস করেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is the 'SyntheticEvent' in React?",
+            "answer_en": "A `SyntheticEvent` is a cross-browser wrapper around the browser's native event. It has the same interface as the browser's native event, including `stopPropagation()` and `preventDefault()`, but works identically across all browsers."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Beginner",
+        "sub_topic": "Conditional Rendering",
+        "question_en": "What is conditional rendering in React?",
+        "question_bn": "React-এ কন্ডিশনাল রেন্ডারিং কী?",
+        "details": {
+            "what_is_en": "Conditional rendering is the process of displaying different UI markup based on certain conditions. This can be achieved using `if` statements or the ternary operator.",
+            "what_is_bn": "কন্ডিশনাল রেন্ডারিং হলো নির্দিষ্ট শর্তের উপর ভিত্তি করে ভিন্ন UI মার্কআপ প্রদর্শন করার প্রক্রিয়া। এটি `if` স্টেটমেন্ট বা টারনারি অপারেটর ব্যবহার করে করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a common way to conditionally render a component using the logical `&&` operator?",
+            "answer_en": "You can use the `&&` operator for a concise way to render a component only if a condition is true. For example: `isLoggedIn && <Dashboard />`. This works because in JavaScript, `true && expression` always evaluates to `expression`."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Intermediate",
+        "sub_topic": "Hooks",
+        "question_en": "What is the `useEffect` Hook?",
+        "question_bn": "`useEffect` হুক কী?",
+        "details": {
+            "what_is_en": "`useEffect` is a hook that lets you perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM.",
+            "what_is_bn": "`useEffect` একটি হুক যা ফাংশনাল কম্পোনেন্টে side effects (যেমন ডেটা ফেচ করা বা DOM পরিবর্তন করা) পারফর্ম করার সুযোগ দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the purpose of the `useEffect` dependency array and the behavior for each case: 1) no array, 2) an empty array `[]`, and 3) an array with values `[dep]`.",
+            "answer_en": "1) **No array**: The effect runs after every render. 2) **Empty array `[]`**: The effect runs only once, after the initial render. 3) **Array with values `[dep]`**: The effect runs after the initial render and will re-run only if any value in the array has changed."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Intermediate",
+        "sub_topic": "State Management",
+        "question_en": "How do you lift state up in React?",
+        "question_bn": "React-এ state কীভাবে 'lift up' করা হয়?",
+        "details": {
+            "what_is_en": "'Lifting state up' is a pattern where you move the state from a child component to its closest common ancestor when multiple child components need to share and sync with that state.",
+            "what_is_bn": "যখন একাধিক চাইল্ড কম্পোনেন্টের মধ্যে state শেয়ার করার প্রয়োজন হয়, তখন সেই state-কে তাদের নিকটতম কমন প্যারেন্ট কম্পোনেন্টে স্থানান্তর করাকে 'lifting state up' বলে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the typical data flow in a React application after lifting state up?",
+            "answer_en": "The data flow becomes **unidirectional** or **one-way**. The shared state lives in the parent. The parent passes the state down to children as props and also passes down callback functions to allow children to update the state."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Intermediate",
+        "sub_topic": "Forms",
+        "question_en": "What is the difference between a controlled and an uncontrolled component?",
+        "question_bn": "কন্ট্রোলড এবং আনকন্ট্রোলড কম্পোনেন্টের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "In a **controlled component**, form data is handled by React state (using `value` and `onChange`). In an **uncontrolled component**, form data is handled by the DOM itself (using refs to get the value when needed).",
+            "what_is_bn": "**কন্ট্রোলড কম্পোনেন্টে**, ফর্ম ডেটা React state দ্বারা নিয়ন্ত্রিত হয়। **আনকন্ট্রোলড কম্পোনেন্টে**, ফর্ম ডেটা DOM নিজেই নিয়ন্ত্রণ করে (ref ব্যবহার করে)।"
+        },
+        "vip_qa": {
+            "question_en": "In what scenario might an uncontrolled component be a better choice?",
+            "answer_en": "An uncontrolled component can be better when integrating with non-React code or on very simple forms. A file input (`<input type=\"file\">`) is inherently uncontrolled because its value can only be set by a user."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Intermediate",
+        "sub_topic": "Context API",
+        "question_en": "What is the React Context API?",
+        "question_bn": "React Context API কী?",
+        "details": {
+            "what_is_en": "The Context API provides a way to pass data through the component tree without having to pass props down manually at every level.",
+            "what_is_bn": "Context API কম্পোনেন্ট ট্রি-এর মাধ্যমে ডেটা পাস করার একটি উপায় প্রদান করে, যেখানে প্রতি স্তরে ম্যানুয়ালি props পাস করার প্রয়োজন হয় না।"
+        },
+        "vip_qa": {
+            "question_en": "When should you use Context API versus a state management library like Redux?",
+            "answer_en": "Use Context API for low-frequency updates of simple global data, like theme or user authentication. Use Redux for complex, high-frequency state changes that are shared across many components, as it provides more powerful tools for debugging and managing state logic."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Intermediate",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is the Virtual DOM?",
+        "question_bn": "ভার্চুয়াল DOM কী?",
+        "details": {
+            "what_is_en": "The Virtual DOM is a programming concept where a virtual representation of a UI is kept in memory and synced with the 'real' DOM. This is a step that happens between the render function being called and the displaying of elements on the screen.",
+            "what_is_bn": "ভার্চুয়াল DOM হলো একটি প্রোগ্রামিং ধারণা যেখানে UI-এর একটি ভার্চুয়াল প্রতিরূপ মেমরিতে রাখা হয় এবং 'আসল' DOM-এর সাথে সিঙ্ক করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How does the Virtual DOM improve performance?",
+            "answer_en": "When a component's state changes, React updates the Virtual DOM first. It then compares the updated Virtual DOM with a snapshot of the Virtual DOM before the update, a process called 'diffing'. It then only updates the specific objects in the real DOM that have changed, which is much faster than re-rendering the entire DOM."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Intermediate",
+        "sub_topic": "Hooks",
+        "question_en": "What is the `useRef` hook?",
+        "question_bn": "`useRef` হুক কী?",
+        "details": {
+            "what_is_en": "`useRef` returns a mutable ref object whose `.current` property is initialized to the passed argument. The returned object will persist for the full lifetime of the component.",
+            "what_is_bn": "`useRef` একটি পরিবর্তনযোগ্য ref অবজেক্ট রিটার্ন করে যার `.current` প্রপার্টি পাস করা আর্গুমেন্ট দিয়ে ইনিশিয়ালাইজ করা হয়। এই অবজেক্টটি কম্পোনেন্টের পুরো জীবনকাল ধরে টিকে থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the two main use cases for `useRef`?",
+            "answer_en": "1. **Accessing DOM nodes:** To directly interact with a DOM element (e.g., to focus an input). 2. **Storing a mutable value:** To keep track of a value that can change without causing a re-render, such as a timer ID or a previous state value."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Intermediate",
+        "sub_topic": "Class Components",
+        "question_en": "What is the difference between a functional component and a class component?",
+        "question_bn": "ফাংশনাল কম্পোনেন্ট এবং ক্লাস কম্পোনেন্টের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "Functional components are simple JavaScript functions that accept props and return JSX. Class components are ES6 classes that extend `React.Component` and have a `render()` method.",
+            "what_is_bn": "ফাংশনাল কম্পোনেন্ট হলো সহজ জাভাস্ক্রিপ্ট ফাংশন যা props গ্রহণ করে এবং JSX রিটার্ন করে। ক্লাস কম্পোনেন্ট হলো ES6 ক্লাস যা `React.Component` কে এক্সটেন্ড করে এবং একটি `render()` মেথড থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "With the introduction of Hooks, is there any reason to still use class components?",
+            "answer_en": "For new projects, functional components with Hooks are the standard. However, class components are still necessary for one specific feature not yet available in Hooks: **Error Boundaries**."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Advanced",
+        "sub_topic": "Performance",
+        "question_en": "What is `React.memo`?",
+        "question_bn": "`React.memo` কী?",
+        "details": {
+            "what_is_en": "`React.memo` is a higher-order component that memoizes a component. If the component's props are the same, React will skip re-rendering the component and reuse the last rendered result.",
+            "what_is_bn": "`React.memo` একটি হায়ার-অর্ডার কম্পোনেন্ট যা একটি কম্পোনেন্টকে মেমোইজ করে। যদি কম্পোনেন্টের props একই থাকে, React কম্পোনেন্টটি পুনরায় রেন্ডার করা এড়িয়ে যায় এবং সর্বশেষ রেন্ডার করা ফলাফলটি পুনরায় ব্যবহার করে।"
+        },
+        "vip_qa": {
+            "question_en": "When can `React.memo` hurt performance?",
+            "answer_en": "`React.memo` can hurt performance if the props it's comparing are complex objects or functions that are re-created on every render. The shallow comparison check itself has a cost, and if it always fails, you've added overhead for no benefit."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Advanced",
+        "sub_topic": "Performance",
+        "question_en": "What is the difference between `useMemo` and `useCallback`?",
+        "question_bn": "`useMemo` এবং `useCallback` হুকের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`useMemo` memoizes a **value**, re-computing it only when its dependencies change. `useCallback` memoizes a **function**, returning the same function instance if its dependencies haven't changed.",
+            "what_is_bn": "`useMemo` একটি মানকে (value) মেমোইজ করে, যা শুধুমাত্র তার ডিপেন্ডেন্সি পরিবর্তন হলে পুনরায় গণনা করা হয়। `useCallback` একটি ফাংশনকে মেমোইজ করে, যা ডিপেন্ডেন্সি পরিবর্তন না হলে একই ফাংশন ইনস্ট্যান্স রিটার্ন করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is wrapping every function in `useCallback` considered an anti-pattern?",
+            "answer_en": "It's premature optimization. `useCallback` has its own overhead. It should only be used when passing a function to a memoized child component (`React.memo`) to prevent re-renders, or when the function is a dependency of another hook like `useEffect`."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Advanced",
+        "sub_topic": "Hooks",
+        "question_en": "What is the `useReducer` hook?",
+        "question_bn": "`useReducer` হুক কী?",
+        "details": {
+            "what_is_en": "`useReducer` is an alternative to `useState` for managing more complex state logic. It is typically used when you have complex state transitions or when the next state depends on the previous one.",
+            "what_is_bn": "`useReducer` হলো `useState`-এর একটি বিকল্প যা জটিল state লজিক ম্যানেজ করতে ব্যবহৃত হয়। এটি সাধারণত জটিল state ট্রানজিশনের ক্ষেত্রে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "When would you choose `useReducer` over `useState`?",
+            "answer_en": "Choose `useReducer` when: 1. Your state is a complex object or array. 2. The logic for updating the state is complex. 3. Changing one piece of state requires changing another. `useReducer` centralizes this logic in a single reducer function."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Advanced",
+        "sub_topic": "Advanced Patterns",
+        "question_en": "What is a Custom Hook?",
+        "question_bn": "কাস্টম হুক কী?",
+        "details": {
+            "what_is_en": "A Custom Hook is a JavaScript function whose name starts with 'use' and that can call other Hooks. It's a way to extract and reuse stateful logic from a component.",
+            "what_is_bn": "কাস্টম হুক হলো একটি জাভাস্ক্রিপ্ট ফাংশন যার নাম 'use' দিয়ে শুরু হয় এবং এটি অন্যান্য হুক কল করতে পারে। এটি কম্পোনেন্টের stateful লজিক পুনঃব্যবহার করার একটি উপায়।"
+        },
+        "vip_qa": {
+            "question_en": "What are the advantages of Custom Hooks over older patterns like HOCs and Render Props?",
+            "answer_en": "Custom Hooks offer significant advantages: they don't introduce extra layers of components in the tree ('wrapper hell'), the data flow is more explicit, and they are easier to compose and test since they are just functions."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Intermediate",
+        "sub_topic": "Components & Props",
+        "question_en": "What is the `children` prop?",
+        "question_bn": "`children` prop কী?",
+        "details": {
+            "what_is_en": "`props.children` is a special prop that contains the content between the opening and closing tags of a component. It allows components to be composed together.",
+            "what_is_bn": "`props.children` একটি বিশেষ prop যা একটি কম্পোনেন্টের ওপেনিং এবং ক্লোজিং ট্যাগের মাঝের কন্টেন্ট ধারণ করে। এটি কম্পোনেন্টগুলোকে একসাথে কম্পোজ করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "How can you use component composition with the `children` prop to avoid prop drilling?",
+            "answer_en": "Instead of passing data down multiple levels, you can pass the final component that needs the data directly as a child. The intermediate components just render `props.children` without needing to know about the data."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Advanced",
+        "sub_topic": "Error Handling",
+        "question_en": "What are Error Boundaries?",
+        "question_bn": "এরর বাউন্ডারি কী?",
+        "details": {
+            "what_is_en": "Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.",
+            "what_is_bn": "এরর বাউন্ডারি হলো React কম্পোনেন্ট যা তাদের চাইল্ড কম্পোনেন্ট ট্রি-এর যেকোনো জায়গায় জাভাস্ক্রিপ্ট এরর ধরে, সেই এরর লগ করে এবং ক্র্যাশ হওয়া কম্পোনেন্ট ট্রি-এর পরিবর্তে একটি ফলব্যাক UI দেখায়।"
+        },
+        "vip_qa": {
+            "question_en": "What kind of errors do Error Boundaries NOT catch?",
+            "answer_en": "Error Boundaries do not catch errors for: 1. Event handlers. 2. Asynchronous code (e.g. `setTimeout` or `requestAnimationFrame` callbacks). 3. Server-side rendering. 4. Errors thrown in the error boundary itself."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Beginner",
+        "sub_topic": "Fragments",
+        "question_en": "What are React Fragments?",
+        "question_bn": "React ফ্র্যাগমেন্ট কী?",
+        "details": {
+            "what_is_en": "Fragments let you group a list of children without adding extra nodes to the DOM. You can use `<React.Fragment>` or the shorter `<>` syntax.",
+            "what_is_bn": "ফ্র্যাগমেন্ট আপনাকে DOM-এ অতিরিক্ত নোড যোগ না করে চাইল্ডদের একটি তালিকা গ্রুপ করতে দেয়। আপনি `<React.Fragment>` বা সংক্ষিপ্ত `<>` সিনট্যাক্স ব্যবহার করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "When is the shorter `<>` syntax not usable?",
+            "answer_en": "The shorter `<>` syntax does not support the `key` attribute. So, if you are rendering a list of fragments, you must use the explicit `<React.Fragment key={item.id}>` syntax."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Intermediate",
+        "sub_topic": "Styling",
+        "question_en": "What are different ways to style a React component?",
+        "question_bn": "React কম্পোনেন্ট স্টাইল করার বিভিন্ন উপায় কী কী?",
+        "details": {
+            "what_is_en": "Common ways include: 1. Inline styles with an object. 2. Regular CSS with classNames. 3. CSS Modules. 4. CSS-in-JS libraries like Styled Components.",
+            "what_is_bn": "সাধারণ উপায়গুলো হলো: ১. অবজেক্ট দিয়ে ইনলাইন স্টাইল। ২. className দিয়ে সাধারণ CSS। ৩. CSS মডিউল। ৪. Styled Components-এর মতো CSS-in-JS লাইব্রেরি।"
+        },
+        "vip_qa": {
+            "question_en": "What problem do CSS Modules solve?",
+            "answer_en": "CSS Modules solve the problem of global scope in CSS. They automatically generate unique class names for each component, ensuring that styles for one component do not accidentally affect another."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Advanced",
+        "sub_topic": "Portals",
+        "question_en": "What are React Portals?",
+        "question_bn": "React পোর্টাল কী?",
+        "details": {
+            "what_is_en": "Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.",
+            "what_is_bn": "পোর্টাল হলো একটি প্রথম-শ্রেণীর উপায় যা চাইল্ডদেরকে প্যারেন্ট কম্পোনেন্টের DOM হায়ারার্কির বাইরে থাকা একটি DOM নোডে রেন্ডার করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a common use case for Portals?",
+            "answer_en": "A common use case is for components that need to break out of their container, such as modals, tooltips, or dialog boxes. This helps avoid complex `z-index` and `overflow` issues."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Intermediate",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is 'reconciliation' in React?",
+        "question_bn": "React-এ 'reconciliation' কী?",
+        "details": {
+            "what_is_en": "Reconciliation is the algorithm React uses to compare two Virtual DOM trees (the previous one and the new one) to find the differences and efficiently update the browser's DOM.",
+            "what_is_bn": "Reconciliation হলো সেই অ্যালগরিদম যা React দুটি ভার্চুয়াল DOM ট্রি তুলনা করে পার্থক্য খুঁজে বের করে এবং ব্রাউজারের DOM-কে দক্ষতার সাথে আপডেট করে।"
+        },
+        "vip_qa": {
+            "question_en": "How does the `key` prop play a crucial role in the reconciliation process for lists?",
+            "answer_en": "The `key` prop gives elements a stable identity. When a list is re-rendered, React uses the keys to match children in the original tree with children in the subsequent tree, which makes the diffing algorithm much more efficient."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Advanced",
+        "sub_topic": "Performance",
+        "question_en": "What is code splitting in React?",
+        "question_bn": "React-এ কোড স্প্লিটিং কী?",
+        "details": {
+            "what_is_en": "Code splitting is a feature supported by bundlers like Webpack which can create multiple bundles that can be dynamically loaded at runtime. This helps improve initial load performance.",
+            "what_is_bn": "কোড স্প্লিটিং Webpack-এর মতো বান্ডলার দ্বারা সমর্থিত একটি বৈশিষ্ট্য যা একাধিক বান্ডেল তৈরি করতে পারে যা রানটাইমে ডাইনামিকভাবে লোড করা যায়। এটি প্রাথমিক লোড পারফরম্যান্স উন্নত করতে সাহায্য করে।"
+        },
+        "vip_qa": {
+            "question_en": "How do you implement code splitting in React?",
+            "answer_en": "You can implement code splitting using `React.lazy()` and `React.Suspense`. `React.lazy()` lets you render a dynamic import as a regular component. `React.Suspense` lets you specify a loading indicator while the lazy component is being loaded."
+        }
+    },
+    {
+        "id": 26,
+        "level": "Intermediate",
+        "sub_topic": "Hooks",
+        "question_en": "What are the Rules of Hooks?",
+        "question_bn": "হুকের নিয়মগুলো কী কী?",
+        "details": {
+            "what_is_en": "There are two main rules: 1. Only call Hooks at the top level (not inside loops, conditions, or nested functions). 2. Only call Hooks from React function components.",
+            "what_is_bn": "দুটি প্রধান নিয়ম আছে: ১. শুধুমাত্র টপ লেভেলে হুক কল করুন (লুপ, কন্ডিশন বা নেস্টেড ফাংশনের ভিতরে নয়)। ২. শুধুমাত্র React ফাংশন কম্পোনেন্ট থেকে হুক কল করুন।"
+        },
+        "vip_qa": {
+            "question_en": "Why must Hooks be called in the same order on every render?",
+            "answer_en": "React relies on the call order of Hooks to associate state with the correct `useState` or `useEffect` call. Calling them inside conditions would change this order between renders and lead to bugs."
+        }
+    },
+    {
+        "id": 27,
+        "level": "Advanced",
+        "sub_topic": "Advanced Patterns",
+        "question_en": "What is a Higher-Order Component (HOC)?",
+        "question_bn": "হায়ার-অর্ডার কম্পোনেন্ট (HOC) কী?",
+        "details": {
+            "what_is_en": "A HOC is an advanced pattern in React for reusing component logic. It is a function that takes a component and returns a new component with additional props or behavior.",
+            "what_is_bn": "HOC হলো কম্পোনেন্ট লজিক পুনঃব্যবহারের জন্য React-এর একটি উন্নত প্যাটার্ন। এটি একটি ফাংশন যা একটি কম্পোনেন্ট নেয় এবং অতিরিক্ত props বা আচরণ সহ একটি নতুন কম্পোনেন্ট রিটার্ন করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why have Custom Hooks largely replaced HOCs in modern React?",
+            "answer_en": "Custom Hooks solve the same problems as HOCs but in a simpler way. They don't introduce extra component nesting ('wrapper hell') and the logic is more explicit and easier to trace, making the code cleaner."
+        }
+    },
+    {
+        "id": 28,
+        "level": "Beginner",
+        "sub_topic": "CRA",
+        "question_en": "What is Create React App?",
+        "question_bn": "ক্রিয়েট রিঅ্যাক্ট অ্যাপ কী?",
+        "details": {
+            "what_is_en": "Create React App (CRA) is an officially supported way to create single-page React applications. It sets up a modern web app by running one command with no configuration.",
+            "what_is_bn": "ক্রিয়েট রিঅ্যাক্ট অ্যাপ (CRA) হলো সিঙ্গেল-পেজ React অ্যাপ্লিকেশন তৈরি করার একটি অফিসিয়াল উপায়। এটি কোনো কনফিগারেশন ছাড়াই একটি কমান্ডে একটি আধুনিক ওয়েব অ্যাপ সেট আপ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the modern alternative to Create React App recommended by the React team?",
+            "answer_en": "The React team now recommends using production-grade React frameworks like Next.js or Remix instead of CRA for new projects, as they provide more features like routing and server-side rendering out of the box."
+        }
+    },
+    {
+        "id": 29,
+        "level": "Intermediate",
+        "sub_topic": "React Router",
+        "question_en": "What is React Router?",
+        "question_bn": "রিঅ্যাক্ট রাউটার কী?",
+        "details": {
+            "what_is_en": "React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.",
+            "what_is_bn": "রিঅ্যাক্ট রাউটার হলো React-এ রাউটিংয়ের জন্য একটি স্ট্যান্ডার্ড লাইব্রেরি। এটি একটি React অ্যাপ্লিকেশনের বিভিন্ন কম্পোনেন্টের ভিউগুলির মধ্যে নেভিগেশন সক্ষম করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `<Link>` and `<a>` in React Router?",
+            "answer_en": "`<a>` tags will cause a full page reload when clicked. `<Link>` components from React Router will intercept the click and update the URL without a full page reload, providing a faster, single-page application experience."
+        }
+    },
+    {
+        "id": 30,
+        "level": "Advanced",
+        "sub_topic": "Hooks",
+        "question_en": "What is the purpose of the cleanup function returned by `useEffect`?",
+        "question_bn": "`useEffect` দ্বারা রিটার্ন করা ক্লিনআপ ফাংশনের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The optional function returned by `useEffect` is a cleanup function. It runs when the component unmounts, or before the effect runs again, to clean up side effects like subscriptions or timers.",
+            "what_is_bn": "`useEffect` দ্বারা রিটার্ন করা ঐচ্ছিক ফাংশনটি একটি ক্লিনআপ ফাংশন। এটি কম্পোনেন্ট আনমাউন্ট হওয়ার সময় বা ইফেক্টটি পুনরায় চলার আগে সাবস্ক্রিপশন বা টাইমারের মতো সাইড ইফেক্ট পরিষ্কার করার জন্য রান হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why is it important to clean up effects?",
+            "answer_en": "It's crucial for preventing memory leaks. For example, if you set up a subscription in `useEffect` and don't clean it up when the component unmounts, the subscription will remain in memory, leading to bugs and performance issues."
+        }
+    },
+    {
+        "id": 31,
+        "level": "Beginner",
+        "sub_topic": "Components & Props",
+        "question_en": "What are props in React?",
+        "question_bn": "React-এ props কী?",
+        "details": {
+            "what_is_en": "Props (short for properties) are arguments passed into React components. They are passed to components via HTML attributes and are read-only.",
+            "what_is_bn": "Props (প্রপার্টিজের সংক্ষিপ্ত রূপ) হলো React কম্পোনেন্টে পাস করা আর্গুমেন্ট। এগুলি HTML অ্যাট্রিবিউটের মাধ্যমে কম্পোনেন্টে পাস করা হয় এবং এগুলি রিড-অনলি।"
+        },
+        "vip_qa": {
+            "question_en": "What are `defaultProps`?",
+            "answer_en": "`defaultProps` is a property on a component class or function that can be defined to set default values for the props. They are used for props that are not passed, but are not for props that are `null`."
+        }
+    },
+    {
+        "id": 32,
+        "level": "Intermediate",
+        "sub_topic": "Hooks",
+        "question_en": "What does the `useContext` hook do?",
+        "question_bn": "`useContext` হুকের কাজ কী?",
+        "details": {
+            "what_is_en": "`useContext` accepts a context object (the value returned from `React.createContext`) and returns the current context value for that context. It lets you subscribe to React context without introducing nesting.",
+            "what_is_bn": "`useContext` একটি কনটেক্সট অবজেক্ট গ্রহণ করে এবং সেই কনটেক্সটের বর্তমান মান রিটার্ন করে। এটি আপনাকে নেস্টিং ছাড়াই React কনটেক্সটে সাবস্ক্রাইব করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "How does `useContext` trigger a re-render?",
+            "answer_en": "When the value of the `Provider` component wrapping the component tree updates, the `useContext` hook will trigger a re-render in any component that uses it, with the latest context value."
+        }
+    },
+    {
+        "id": 33,
+        "level": "Advanced",
+        "sub_topic": "Testing",
+        "question_en": "What is Jest?",
+        "question_bn": "Jest কী?",
+        "details": {
+            "what_is_en": "Jest is a popular JavaScript testing framework often used with React. It provides a test runner, assertion library, and mocking capabilities out of the box.",
+            "what_is_bn": "Jest একটি জনপ্রিয় জাভাস্ক্রিপ্ট টেস্টিং ফ্রেমওয়ার্ক যা প্রায়শই React-এর সাথে ব্যবহৃত হয়। এটি একটি টেস্ট রানার, অ্যাসারশন লাইব্রেরি এবং মকিং ক্ষমতা প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the role of React Testing Library alongside Jest?",
+            "answer_en": "Jest provides the general testing framework. React Testing Library provides utilities specifically for testing React components in a way that resembles how users interact with them, encouraging better testing practices."
+        }
+    },
+    {
+        "id": 34,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What does it mean for components to be 'composable'?",
+        "question_bn": "কম্পোনেন্ট 'কম্পোজেবল' হওয়ার মানে কী?",
+        "details": {
+            "what_is_en": "Composability is the ability to combine smaller, independent components to create more complex UIs. It's a core principle of React.",
+            "what_is_bn": "কম্পোজেবিলিটি হলো ছোট, স্বাধীন কম্পোনেন্টগুলিকে একত্রিত করে আরও জটিল UI তৈরি করার ক্ষমতা। এটি React-এর একটি মূল নীতি।"
+        },
+        "vip_qa": {
+            "question_en": "How does the `children` prop facilitate composition?",
+            "answer_en": "The `children` prop allows a component to act as a generic container. A parent can pass any component or JSX as a child, allowing for flexible and reusable layouts like sidebars or dialog boxes."
+        }
+    },
+    {
+        "id": 35,
+        "level": "Intermediate",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is the difference between `useEffect` and `useLayoutEffect`?",
+        "question_bn": "`useEffect` এবং `useLayoutEffect`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "They have the same signature, but `useEffect` runs asynchronously after the render is painted to the screen, while `useLayoutEffect` runs synchronously after all DOM mutations but before the browser has painted.",
+            "what_is_bn": "তাদের সিগনেচার একই, কিন্তু `useEffect` স্ক্রিনে রেন্ডার হওয়ার পরে অ্যাসিঙ্ক্রোনাসভাবে চলে, আর `useLayoutEffect` সমস্ত DOM মিউটেশনের পরে কিন্তু ব্রাউজার পেইন্ট করার আগে সিঙ্ক্রোনাসভাবে চলে।"
+        },
+        "vip_qa": {
+            "question_en": "When should you prefer `useLayoutEffect` over `useEffect`?",
+            "answer_en": "You should almost always use `useEffect`. Only use `useLayoutEffect` when you need to make DOM measurements (like getting the scroll position) and then synchronously re-render to prevent the user from seeing a flicker."
+        }
+    },
+    {
+        "id": 36,
+        "level": "Beginner",
+        "sub_topic": "Props",
+        "question_en": "How do you pass a number or boolean as a prop?",
+        "question_bn": "আপনি কীভাবে একটি সংখ্যা বা বুলিয়ানকে prop হিসাবে পাস করবেন?",
+        "details": {
+            "what_is_en": "To pass a non-string value like a number or boolean, you must wrap it in curly braces `{}`. For example, `<MyComponent age={30} isStudent={true} />`.",
+            "what_is_bn": "সংখ্যা বা বুলিয়ানের মতো একটি নন-স্ট্রিং মান পাস করতে, আপনাকে অবশ্যই এটি কার্লি ব্রেস `{}`-এর মধ্যে রাখতে হবে। যেমন, `<MyComponent age={30} isStudent={true} />`।"
+        },
+        "vip_qa": {
+            "question_en": "What happens if you pass a boolean prop without a value, like `<MyComponent isStudent />`?",
+            "answer_en": "If you pass a prop with no value, it defaults to `true`. So, `<MyComponent isStudent />` is equivalent to `<MyComponent isStudent={true} />`."
+        }
+    },
+    {
+        "id": 37,
+        "level": "Intermediate",
+        "sub_topic": "Class Components",
+        "question_en": "What is the purpose of the `constructor` in a React class component?",
+        "question_bn": "React ক্লাস কম্পোনেন্টে `constructor`-এর উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The constructor is used for two main purposes: initializing local state by assigning an object to `this.state`, and binding event handler methods to an instance.",
+            "what_is_bn": "কনস্ট্রাক্টর দুটি প্রধান উদ্দেশ্যে ব্যবহৃত হয়: `this.state`-এ একটি অবজেক্ট অ্যাসাইন করে লোকাল স্টেট ইনিশিয়ালাইজ করা এবং ইভেন্ট হ্যান্ডলার মেথডগুলিকে একটি ইনস্ট্যান্সের সাথে বাইন্ড করা।"
+        },
+        "vip_qa": {
+            "question_en": "Why do you need to call `super(props)` in the constructor?",
+            "answer_en": "You must call `super(props)` before any other statement. Otherwise, `this.props` will be undefined in the constructor, which can lead to bugs."
+        }
+    },
+    {
+        "id": 38,
+        "level": "Advanced",
+        "sub_topic": "Reconciliation",
+        "question_en": "What is the 'diffing' algorithm?",
+        "question_bn": "'ডিফিং' অ্যালগরিদম কী?",
+        "details": {
+            "what_is_en": "The 'diffing' algorithm is the core part of reconciliation. It's the process React uses to compare the old Virtual DOM tree with the new one to find the minimum number of operations needed to update the real DOM.",
+            "what_is_bn": "'ডিফিং' অ্যালগরিদম হলো রিকনসিলিয়েশনের মূল অংশ। এটি সেই প্রক্রিয়া যা React পুরানো ভার্চুয়াল DOM ট্রি-এর সাথে নতুনটি তুলনা করে আসল DOM আপডেট করার জন্য প্রয়োজনীয় ন্যূনতম অপারেশনের সংখ্যা খুঁজে বের করে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the two main assumptions React makes for its diffing algorithm to be fast?",
+            "answer_en": "1. Two elements of different types will produce different trees. 2. The developer can hint at which child elements may be stable across different renders with a `key` prop."
+        }
+    },
+    {
+        "id": 39,
+        "level": "Intermediate",
+        "sub_topic": "State",
+        "question_en": "What is the difference between `setState` being synchronous or asynchronous?",
+        "question_bn": "`setState` সিঙ্ক্রোনাস বা অ্যাসিঙ্ক্রোনাস হওয়ার মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "In React, `setState` calls are asynchronous and batched for performance. This means the state may not update immediately after `setState` is called.",
+            "what_is_bn": "React-এ, `setState` কলগুলি পারফরম্যান্সের জন্য অ্যাসিঙ্ক্রোনাস এবং ব্যাচড হয়। এর মানে হলো `setState` কল করার সাথে সাথেই স্টেট আপডেট নাও হতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "If you need to update state based on the previous state, what form of `setState` should you use?",
+            "answer_en": "You should use the functional update form: `setState(prevState => ({...prevState, count: prevState.count + 1}))`. This ensures you are working with the most up-to-date state value."
+        }
+    },
+    {
+        "id": 40,
+        "level": "Advanced",
+        "sub_topic": "Advanced Patterns",
+        "question_en": "What are Render Props?",
+        "question_bn": "রেন্ডার প্রপস কী?",
+        "details": {
+            "what_is_en": "A 'render prop' is a technique for sharing code between React components using a prop whose value is a function that returns a React element.",
+            "what_is_bn": "রেন্ডার প্রপ হলো React কম্পোনেন্টগুলির মধ্যে কোড শেয়ার করার একটি কৌশল, যেখানে একটি প্রপের মান হিসাবে একটি ফাংশন পাস করা হয় যা একটি React এলিমেন্ট রিটার্ন করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why are Custom Hooks generally preferred over the render prop pattern today?",
+            "answer_en": "Custom Hooks provide a much cleaner and more direct way to share stateful logic without the extra nesting and component boilerplate that the render prop pattern often requires."
+        }
+    },
+    {
+        "id": 41,
+        "level": "Intermediate",
+        "sub_topic": "Component Lifecycle",
+        "question_en": "What are the three main lifecycle phases of a class component?",
+        "question_bn": "ক্লাস কম্পোনেন্টের তিনটি প্রধান লাইফসাইকেল ফেজ কী কী?",
+        "details": {
+            "what_is_en": "The three phases are: Mounting (being inserted into the DOM), Updating (re-rendering due to prop or state changes), and Unmounting (being removed from the DOM).",
+            "what_is_bn": "তিনটি ফেজ হলো: মাউন্টিং (DOM-এ প্রবেশ করানো), আপডেটিং (prop বা state পরিবর্তনের কারণে পুনরায় রেন্ডার হওয়া), এবং আনমাউন্টিং (DOM থেকে সরানো)।"
+        },
+        "vip_qa": {
+            "question_en": "Which `useEffect` setup mimics `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`?",
+            "answer_en": "- `componentDidMount`: `useEffect(() => {}, [])` (empty dependency array). - `componentDidUpdate`: `useEffect(() => {}, [dep])` (with dependencies). - `componentWillUnmount`: The cleanup function returned from `useEffect`."
+        }
+    },
+    {
+        "id": 42,
+        "level": "Advanced",
+        "sub_topic": "Strict Mode",
+        "question_en": "What is `React.StrictMode`?",
+        "question_bn": "`React.StrictMode` কী?",
+        "details": {
+            "what_is_en": "`StrictMode` is a tool for highlighting potential problems in an application. Like `Fragment`, it does not render any visible UI. It activates additional checks and warnings for its descendants.",
+            "what_is_bn": "`StrictMode` একটি অ্যাপ্লিকেশনের সম্ভাব্য সমস্যাগুলি তুলে ধরার একটি টুল। এটি কোনো দৃশ্যমান UI রেন্ডার করে না এবং এর ডিসেন্ড্যান্টদের জন্য অতিরিক্ত চেক এবং ওয়ার্নিং সক্রিয় করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is one common side effect of using `StrictMode` in development?",
+            "answer_en": "In development mode, `StrictMode` intentionally double-invokes some functions (like render methods and `useEffect`) to help you find side effects. You will often see `console.log` statements from `useEffect` appear twice."
+        }
+    },
+    {
+        "id": 43,
+        "level": "Intermediate",
+        "sub_topic": "Props",
+        "question_en": "How can you validate props?",
+        "question_bn": "আপনি props কীভাবে ভ্যালিডেট করতে পারেন?",
+        "details": {
+            "what_is_en": "You can use the `prop-types` library to add type checking to your components' props. This provides warnings in the console if a prop of the wrong type is passed.",
+            "what_is_bn": "আপনি `prop-types` লাইব্রেরি ব্যবহার করে আপনার কম্পোনেন্টের props-এ টাইপ চেকিং যোগ করতে পারেন। ভুল টাইপের prop পাস করা হলে এটি কনসোলে ওয়ার্নিং দেখায়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the modern alternative to `prop-types`?",
+            "answer_en": "TypeScript is the modern, preferred alternative. It provides static type checking at compile time, which is more robust than the runtime checks offered by `prop-types`."
+        }
+    },
+    {
+        "id": 44,
+        "level": "Beginner",
+        "sub_topic": "Component Naming",
+        "question_en": "Why must React component names start with a capital letter?",
+        "question_bn": "React কম্পোনেন্টের নাম কেন বড় হাতের অক্ষর দিয়ে শুরু হতে হবে?",
+        "details": {
+            "what_is_en": "React treats components starting with a lowercase letter as regular HTML tags. For JSX to recognize an element as a custom React component, its name must be capitalized.",
+            "what_is_bn": "React ছোট হাতের অক্ষর দিয়ে শুরু হওয়া কম্পোনেন্টকে সাধারণ HTML ট্যাগ হিসাবে বিবেচনা করে। JSX একটি এলিমেন্টকে কাস্টম React কম্পোনেন্ট হিসাবে চিনতে হলে, তার নাম অবশ্যই ক্যাপিটালাইজড হতে হবে।"
+        },
+        "vip_qa": {
+            "question_en": "What would happen if you tried to render `<myComponent />`?",
+            "answer_en": "React would think you are trying to render an HTML tag named 'mycomponent' and would likely render nothing or throw a warning, as it's not a standard HTML tag."
+        }
+    },
+    {
+        "id": 45,
+        "level": "Advanced",
+        "sub_topic": "State Management",
+        "question_en": "What is Redux?",
+        "question_bn": "Redux কী?",
+        "details": {
+            "what_is_en": "Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments, and are easy to test.",
+            "what_is_bn": "Redux জাভাস্ক্রিপ্ট অ্যাপ্লিকেশনের জন্য একটি অনুমানযোগ্য স্টেট কন্টেইনার। এটি আপনাকে এমন অ্যাপ্লিকেশন লিখতে সাহায্য করে যা সামঞ্জস্যপূর্ণভাবে আচরণ করে এবং পরীক্ষা করা সহজ।"
+        },
+        "vip_qa": {
+            "question_en": "What are the three core principles of Redux?",
+            "answer_en": "1. **Single source of truth:** The state of your whole application is stored in a single object tree. 2. **State is read-only:** The only way to change the state is to dispatch an action. 3. **Changes are made with pure functions:** Reducers are pure functions that take the previous state and an action, and return the next state."
+        }
+    },
+    {
+        "id": 46,
+        "level": "Intermediate",
+        "sub_topic": "Hooks",
+        "question_en": "Can you call a Hook inside a conditional statement?",
+        "question_bn": "আপনি কি একটি কন্ডিশনাল স্টেটমেন্টের ভিতরে হুক কল করতে পারেন?",
+        "details": {
+            "what_is_en": "No, you cannot. This violates the first Rule of Hooks. Hooks must be called at the top level of your component to ensure they are called in the same order every render.",
+            "what_is_bn": "না, আপনি পারবেন না। এটি হুকের প্রথম নিয়ম লঙ্ঘন করে। হুকগুলি আপনার কম্পোনেন্টের টপ লেভেলে কল করতে হবে যাতে তারা প্রতিটি রেন্ডারে একই ক্রমে কল হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How would you conditionally run an effect?",
+            "answer_en": "You should not put the `useEffect` call inside a condition. Instead, put the conditional logic *inside* the effect. For example: `useEffect(() => { if (shouldRun) { ... } }, [shouldRun]);`."
+        }
+    },
+    {
+        "id": 47,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is the entry point file in a standard Create React App project?",
+        "question_bn": "একটি স্ট্যান্ডার্ড ক্রিয়েট রিঅ্যাক্ট অ্যাপ প্রজেক্টে এন্ট্রি পয়েন্ট ফাইল কোনটি?",
+        "details": {
+            "what_is_en": "The entry point is typically `src/index.js` (or `.tsx`). This is where `ReactDOM.createRoot().render()` is called to attach the main `App` component to the DOM.",
+            "what_is_bn": "এন্ট্রি পয়েন্ট সাধারণত `src/index.js` (বা `.tsx`) হয়। এখানেই `ReactDOM.createRoot().render()` কল করে প্রধান `App` কম্পোনেন্টটিকে DOM-এর সাথে যুক্ত করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the purpose of the `public/index.html` file in this setup?",
+            "answer_en": "The `public/index.html` file is the HTML page that is served to the browser. It contains a single DOM node, usually `<div id=\"root\"></div>`, which serves as the mounting point for the entire React application."
+        }
+    },
+    {
+        "id": 48,
+        "level": "Advanced",
+        "sub_topic": "Hooks",
+        "question_en": "What is a 'stale closure' in the context of React hooks?",
+        "question_bn": "React হুকের প্রসঙ্গে 'stale closure' কী?",
+        "details": {
+            "what_is_en": "A stale closure occurs when a closure (like a function inside `useEffect`) captures a state or prop value from a previous render and doesn't have the updated value from the current render.",
+            "what_is_bn": "একটি stale closure তখন ঘটে যখন একটি ক্লোজার (যেমন `useEffect`-এর ভিতরের একটি ফাংশন) পূর্ববর্তী রেন্ডার থেকে একটি স্টেট বা প্রপ মান ক্যাপচার করে এবং বর্তমান রেন্ডারের আপডেট করা মানটি পায় না।"
+        },
+        "vip_qa": {
+            "question_en": "How do you solve the stale closure problem in `useEffect`?",
+            "answer_en": "You solve it by including the state or prop value in the dependency array of `useEffect`. This ensures that the effect function is re-created with the latest values whenever those dependencies change."
+        }
+    },
+    {
+        "id": 49,
+        "level": "Intermediate",
+        "sub_topic": "Fragments",
+        "question_en": "What problem do Fragments solve?",
+        "question_bn": "ফ্র্যাগমেন্ট কোন সমস্যার সমাধান করে?",
+        "details": {
+            "what_is_en": "JSX expressions must have one parent element. Fragments solve this by letting you group multiple elements without adding an extra, unnecessary `<div>` to the DOM.",
+            "what_is_bn": "JSX এক্সপ্রেশনের একটি প্যারেন্ট এলিমেন্ট থাকতে হবে। ফ্র্যাগমেন্ট এই সমস্যার সমাধান করে আপনাকে DOM-এ একটি অতিরিক্ত, অপ্রয়োজনীয় `<div>` যোগ না করে একাধিক এলিমেন্ট গ্রুপ করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Besides cleaner HTML, what is a practical layout problem that Fragments can solve?",
+            "answer_en": "Fragments are essential when working with CSS Flexbox or Grid, where an extra wrapper `<div>` could break the intended layout by disrupting the direct child relationship between the container and its items."
+        }
+    },
+    {
+        "id": 50,
+        "level": "Advanced",
+        "sub_topic": "Fiber",
+        "question_en": "What is React Fiber?",
+        "question_bn": "রিঅ্যাক্ট ফাইবার কী?",
+        "details": {
+            "what_is_en": "React Fiber is a complete, backward-compatible rewrite of React's old reconciliation algorithm. Its main goal is to enable incremental rendering of the virtual DOM.",
+            "what_is_bn": "রিঅ্যাক্ট ফাইবার হলো React-এর পুরানো রিকনসিলিয়েশন অ্যালগরিদমের একটি সম্পূর্ণ, পশ্চাৎ-সামঞ্জস্যপূর্ণ পুনর্লিখন। এর প্রধান লক্ষ্য হলো ভার্চুয়াল DOM-এর ইনক্রিমেন্টাল রেন্ডারিং সক্ষম করা।"
+        },
+        "vip_qa": {
+            "question_en": "What user-facing features did the Fiber architecture enable?",
+            "answer_en": "The Fiber architecture was a foundational change that enabled features like error boundaries, fragments, portals, and the scheduling of updates with different priorities, which is crucial for features like `Suspense`."
+        }
+    }
+]

@@ -1,0 +1,377 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is Express.js?",
+        "question_bn": "Express.js কী?",
+        "details": {
+            "what_is_en": "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+            "what_is_bn": "Express.js হলো একটি মিনিম্যাল এবং ফ্লেক্সিবল Node.js ওয়েব অ্যাপ্লিকেশন ফ্রেমওয়ার্ক যা ওয়েব এবং মোবাইল অ্যাপ্লিকেশনের জন্য শক্তিশালী ফিচার প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why use a framework like Express instead of Node.js's built-in `http` module?",
+            "answer_en": "The built-in `http` module is very low-level. Express provides a layer of abstraction on top of it, simplifying tasks like routing, handling request/response objects, and managing middleware, which makes building web applications significantly faster and more organized."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Intermediate",
+        "sub_topic": "Middleware",
+        "question_en": "What is middleware in Express.js?",
+        "question_bn": "Express.js-এ মিডলওয়্যার কী?",
+        "details": {
+            "what_is_en": "Middleware is a function that has access to the request (`req`), response (`res`), and the `next()` function. It can execute code, modify request/response objects, or end the request-response cycle.",
+            "what_is_bn": "মিডলওয়্যার হলো এমন একটি ফাংশন যা একটি HTTP রিকোয়েস্ট এবং রেসপন্স সাইকেলের মধ্যে অবস্থান করে এবং `req`, `res`, ও `next()` ফাংশনে অ্যাক্সেস পায়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the importance of the order in which middleware is defined?",
+            "answer_en": "The order is extremely important because middleware functions are executed sequentially. The first middleware that is called gets the request first, and it must call `next()` to pass control to the next middleware in the stack. This is crucial for tasks like authentication, which must run before the route handler."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Intermediate",
+        "sub_topic": "Middleware",
+        "question_en": "What is the purpose of the `next()` function?",
+        "question_bn": "`next()` ফাংশনের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The `next()` function is used to pass control to the next middleware function in the stack. If it's not called, the request will be left hanging.",
+            "what_is_bn": "`next()` ফাংশনটি স্ট্যাকের পরবর্তী মিডলওয়্যার ফাংশনে কন্ট্রোল পাস করার জন্য ব্যবহৃত হয়। যদি এটি কল করা না হয়, তাহলে রিকোয়েস্টটি আটকে থাকবে।"
+        },
+        "vip_qa": {
+            "question_en": "How do you pass an error to Express's error-handling middleware?",
+            "answer_en": "You pass an error by calling `next()` with an argument. For example: `next(new Error('Something went wrong'))`. Express will then skip all other middleware and go directly to the error-handling middleware."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Beginner",
+        "sub_topic": "Routing",
+        "question_en": "How do you define a route in Express?",
+        "question_bn": "Express-এ একটি রাউট কীভাবে সংজ্ঞায়িত করবেন?",
+        "details": {
+            "what_is_en": "You define a route using the structure `app.METHOD(PATH, HANDLER)`, where `METHOD` is an HTTP request method (like `get`, `post`), `PATH` is a path on the server, and `HANDLER` is the function executed when the route is matched.",
+            "what_is_bn": "আপনি `app.METHOD(PATH, HANDLER)` কাঠামো ব্যবহার করে একটি রাউট সংজ্ঞায়িত করেন, যেখানে `METHOD` হলো একটি HTTP রিকোয়েস্ট মেথড (`get`, `post`), `PATH` হলো সার্ভারের একটি পাথ, এবং `HANDLER` হলো রাউট ম্যাচ করলে এক্সিকিউট হওয়া ফাংশন।"
+        },
+        "vip_qa": {
+            "question_en": "What is the purpose of `express.Router()`?",
+            "answer_en": "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Intermediate",
+        "sub_topic": "Request & Response",
+        "question_en": "What is the difference between `req.params`, `req.query`, and `req.body`?",
+        "question_bn": "`req.params`, `req.query`, এবং `req.body`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**`req.params`** contains route parameters from the URL path (e.g., `/users/:id`). **`req.query`** contains query string parameters from the URL (e.g., `/search?term=node`). **`req.body`** contains the payload of an incoming request.",
+            "what_is_bn": "**`req.params`** URL পাথের রাউট প্যারামিটার ধারণ করে। **`req.query`** URL-এর কোয়েরি স্ট্রিং প্যারামিটার ধারণ করে। **`req.body`** ইনকামিং রিকোয়েস্টের পেলোড ধারণ করে।"
+        },
+        "vip_qa": {
+            "question_en": "Which built-in middleware is required to parse JSON in `req.body`?",
+            "answer_en": "You must use the `express.json()` middleware. Without it, `req.body` will be `undefined` for requests with a `Content-Type` of `application/json`."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Advanced",
+        "sub_topic": "Error Handling",
+        "question_en": "How do you implement centralized error handling in Express?",
+        "question_bn": "Express-এ কেন্দ্রীয়ভাবে এরর হ্যান্ডেলিং কীভাবে করবেন?",
+        "details": {
+            "what_is_en": "By defining a special error-handling middleware function that has four arguments: `(err, req, res, next)`. This middleware must be defined after all other `app.use()` and routes calls.",
+            "what_is_bn": "একটি বিশেষ এরর-হ্যান্ডেলিং মিডলওয়্যার ফাংশন দিয়ে এটি করা হয়, যার চারটি আর্গুমেন্ট (`err, req, res, next`) থাকে। এটি সব রাউটের শেষে ডিফাইন করতে হয়।"
+        },
+        "vip_qa": {
+            "question_en": "In an asynchronous route handler, why must you wrap your code in a `try...catch` block and call `next(error)`?",
+            "answer_en": "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs and you don't catch it, the request will hang. You must explicitly pass the error to the error-handling middleware by calling `next(error)`."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Beginner",
+        "sub_topic": "Request & Response",
+        "question_en": "What is the difference between `res.send()` and `res.json()`?",
+        "question_bn": "`res.send()` এবং `res.json()`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`res.send()` can send various types of responses (string, buffer, object). `res.json()` specifically sends a JSON response and ensures the correct `Content-Type` header (`application/json`) is set.",
+            "what_is_bn": "`res.send()` বিভিন্ন ধরণের রেসপন্স পাঠাতে পারে (স্ট্রিং, বাফার, অবজেক্ট)। `res.json()` বিশেষভাবে একটি JSON রেসপন্স পাঠায় এবং সঠিক `Content-Type` হেডার (`application/json`) সেট করা নিশ্চিত করে।"
+        },
+        "vip_qa": {
+            "question_en": "What happens if you pass an object to `res.send()`?",
+            "answer_en": "If you pass an object or array to `res.send()`, Express is smart enough to treat it like `res.json()`. It will automatically stringify the object and set the `Content-Type` header to `application/json`."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Intermediate",
+        "sub_topic": "Middleware",
+        "question_en": "How do you serve static files in Express?",
+        "question_bn": "Express-এ স্ট্যাটিক ফাইল কীভাবে পরিবেশন করবেন?",
+        "details": {
+            "what_is_en": "You use the `express.static` built-in middleware. For example, `app.use(express.static('public'))` will serve files from the `public` directory.",
+            "what_is_bn": "আপনি `express.static` বিল্ট-ইন মিডলওয়্যার ব্যবহার করেন। উদাহরণস্বরূপ, `app.use(express.static('public'))` `public` ডিরেক্টরি থেকে ফাইল পরিবেশন করবে।"
+        },
+        "vip_qa": {
+            "question_en": "Can you use more than one static directory?",
+            "answer_en": "Yes, you can. You can call `express.static` multiple times. Express will look for a file in the directories in the order that you defined them. For example: `app.use(express.static('public')); app.use(express.static('assets'));`"
+        }
+    },
+    {
+        "id": 9,
+        "level": "Intermediate",
+        "sub_topic": "Middleware",
+        "question_en": "What are the different types of middleware?",
+        "question_bn": "মিডলওয়্যারের বিভিন্ন প্রকার কী কী?",
+        "details": {
+            "what_is_en": "The main types are: Application-level, Router-level, Built-in, Third-party, and Error-handling middleware.",
+            "what_is_bn": "প্রধান প্রকারগুলি হলো: অ্যাপ্লিকেশন-লেভেল, রাউটার-লেভেল, বিল্ট-ইন, থার্ড-পার্টি, এবং এরর-হ্যান্ডেলিং মিডলওয়্যার।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between Application-level and Router-level middleware?",
+            "answer_en": "Application-level middleware is bound to the app object using `app.use()` or `app.METHOD()`. Router-level middleware is bound to an instance of `express.Router()` and only applies to the routes defined by that router instance."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Beginner",
+        "sub_topic": "Setup",
+        "question_en": "How do you start an Express server?",
+        "question_bn": "আপনি একটি Express সার্ভার কীভাবে শুরু করবেন?",
+        "details": {
+            "what_is_en": "You start an Express server by calling the `app.listen()` method, providing a port number and an optional callback function that runs once the server starts listening.",
+            "what_is_bn": "আপনি `app.listen()` মেথড কল করে একটি Express সার্ভার শুরু করেন, যেখানে একটি পোর্ট নম্বর এবং একটি ঐচ্ছিক কলব্যাক ফাংশন প্রদান করা হয় যা সার্ভার শোনা শুরু করলে একবার চলে।"
+        },
+        "vip_qa": {
+            "question_en": "What does `app.listen()` actually do behind the scenes?",
+            "answer_en": "`app.listen()` is a convenience method that is identical to Node's `http.createServer(app).listen()`."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Intermediate",
+        "sub_topic": "Third-party Middleware",
+        "question_en": "What is the `cors` middleware used for?",
+        "question_bn": "`cors` মিডলওয়্যার কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `cors` middleware is used to enable Cross-Origin Resource Sharing (CORS). It allows a web page from one domain to access resources on a different domain.",
+            "what_is_bn": "`cors` মিডলওয়্যারটি ক্রস-অরিজিন রিসোর্স শেয়ারিং (CORS) সক্ষম করতে ব্যবহৃত হয়। এটি একটি ডোমেনের ওয়েব পেজকে অন্য ডোমেনের রিসোর্স অ্যাক্সেস করার অনুমতি দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "How can you configure `cors` to only allow requests from a specific origin?",
+            "answer_en": "You can pass a configuration object to the `cors()` middleware. For example: `app.use(cors({ origin: 'https://example.com' }))`."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Intermediate",
+        "sub_topic": "Third-party Middleware",
+        "question_en": "What is `helmet` middleware?",
+        "question_bn": "`helmet` মিডলওয়্যার কী?",
+        "details": {
+            "what_is_en": "`helmet` helps secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help protect against some well-known web vulnerabilities.",
+            "what_is_bn": "`helmet` বিভিন্ন HTTP হেডার সেট করে আপনার Express অ্যাপগুলিকে সুরক্ষিত করতে সাহায্য করে। এটি কিছু পরিচিত ওয়েব দুর্বলতার বিরুদ্ধে সুরক্ষা দিতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "Name one specific HTTP header that `helmet` sets and explain what it does.",
+            "answer_en": "One header it sets is `X-Frame-Options: DENY`, which helps prevent clickjacking attacks by stopping your site from being embedded in an `<iframe>`."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Beginner",
+        "sub_topic": "Request & Response",
+        "question_en": "How do you set a status code on a response?",
+        "question_bn": "একটি রেসপন্সে স্ট্যাটাস কোড কীভাবে সেট করবেন?",
+        "details": {
+            "what_is_en": "You can use the `res.status()` method to set the HTTP status code. It can be chained with other response methods, like `res.status(404).send('Not Found')`.",
+            "what_is_bn": "আপনি HTTP স্ট্যাটাস কোড সেট করতে `res.status()` মেথড ব্যবহার করতে পারেন। এটি অন্যান্য রেসপন্স মেথডের সাথে চেইন করা যেতে পারে, যেমন `res.status(404).send('Not Found')`।"
+        },
+        "vip_qa": {
+            "question_en": "What happens if you don't set a status code?",
+            "answer_en": "If you do not set a status code, Express will default to a status code of 200 (OK)."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Intermediate",
+        "sub_topic": "Routing",
+        "question_en": "What does `app.all()` do?",
+        "question_bn": "`app.all()` কী কাজ করে?",
+        "details": {
+            "what_is_en": "`app.all()` is a special routing method that is used to load middleware functions at a path for all HTTP request methods (GET, POST, PUT, DELETE, etc.).",
+            "what_is_bn": "`app.all()` একটি বিশেষ রাউটিং মেথড যা সমস্ত HTTP রিকোয়েস্ট মেথডের জন্য একটি পাথে মিডলওয়্যার ফাংশন লোড করতে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a good use case for `app.all()`?",
+            "answer_en": "A good use case is for validating route parameters. For example, `app.all('/api/users/:id', validateUser)` would run the `validateUser` middleware for any request to that path, regardless of the HTTP method."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Intermediate",
+        "sub_topic": "Template Engines",
+        "question_en": "What is a template engine and how do you use one with Express?",
+        "question_bn": "টেমপ্লেট ইঞ্জিন কী এবং Express-এর সাথে এটি কীভাবে ব্যবহার করবেন?",
+        "details": {
+            "what_is_en": "A template engine enables you to use static template files in your application. At runtime, the template engine replaces variables in a template file with actual values, and transforms the template into an HTML file sent to the client.",
+            "what_is_bn": "টেমপ্লেট ইঞ্জিন আপনাকে আপনার অ্যাপ্লিকেশনে স্ট্যাটিক টেমপ্লেট ফাইল ব্যবহার করতে দেয়। রানটাইমে, টেমপ্লেট ইঞ্জিন টেমপ্লেট ফাইলের ভেরিয়েবলগুলিকে আসল মান দিয়ে প্রতিস্থাপন করে এবং টেমপ্লেটটিকে একটি HTML ফাইলে রূপান্তরিত করে ক্লায়েন্টকে পাঠায়।"
+        },
+        "vip_qa": {
+            "question_en": "How do you configure and render a view with a template engine like EJS?",
+            "answer_en": "You first set the view engine using `app.set('view engine', 'ejs')`. Then, you use the `res.render()` method to render a template, passing it the name of the view and an object with data. For example: `res.render('profile', { user: userData })`."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Intermediate",
+        "sub_topic": "Third-party Middleware",
+        "question_en": "What is `morgan` middleware used for?",
+        "question_bn": "`morgan` মিডলওয়্যার কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "`morgan` is a popular third-party middleware used for logging HTTP requests. It provides different logging formats out of the box.",
+            "what_is_bn": "`morgan` একটি জনপ্রিয় থার্ড-পার্টি মিডলওয়্যার যা HTTP রিকোয়েস্ট লগ করার জন্য ব্যবহৃত হয়। এটি বিভিন্ন লগিং ফরম্যাট প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is logging requests important, especially in a development environment?",
+            "answer_en": "Logging requests is crucial for debugging. It allows you to see exactly which requests are hitting your server, what their status codes are, and how long they took to respond, which helps in identifying issues quickly."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "How do you create an Express application?",
+        "question_bn": "আপনি একটি Express অ্যাপ্লিকেশন কীভাবে তৈরি করবেন?",
+        "details": {
+            "what_is_en": "You create an Express application by calling the top-level `express()` function exported by the Express module. `const express = require('express'); const app = express();`",
+            "what_is_bn": "আপনি Express মডিউল দ্বারা এক্সপোর্ট করা টপ-লেভেল `express()` ফাংশন কল করে একটি Express অ্যাপ্লিকেশন তৈরি করেন। `const express = require('express'); const app = express();`"
+        },
+        "vip_qa": {
+            "question_en": "Is the `app` object an instance of an Express class?",
+            "answer_en": "Not exactly. The `express` module's default export is a function, not a class. When you call `express()`, this function returns a new app object, which is a mix of a function and an object."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Advanced",
+        "sub_topic": "Scaffolding",
+        "question_en": "What is the Express application generator?",
+        "question_bn": "Express অ্যাপ্লিকেশন জেনারেটর কী?",
+        "details": {
+            "what_is_en": "The application generator is a command-line tool, `express-generator`, used to quickly create a basic application skeleton for an Express app.",
+            "what_is_bn": "অ্যাপ্লিকেশন জেনারেটর একটি কমান্ড-লাইন টুল, `express-generator`, যা একটি Express অ্যাপের জন্য দ্রুত একটি বেসিক অ্যাপ্লিকেশন স্কেলিটন তৈরি করতে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why might a developer choose *not* to use the generator?",
+            "answer_en": "Many developers prefer to build their application structure from scratch. This gives them complete control over the project structure and dependencies, avoiding the boilerplate that they might not need from the generator."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Intermediate",
+        "sub_topic": "Request & Response",
+        "question_en": "How can you get the IP address of a client?",
+        "question_bn": "আপনি একজন ক্লায়েন্টের IP ঠিকানা কীভাবে পেতে পারেন?",
+        "details": {
+            "what_is_en": "The client's IP address is available on the request object via the `req.ip` property.",
+            "what_is_bn": "ক্লায়েন্টের IP ঠিকানা `req.ip` প্রপার্টির মাধ্যমে রিকোয়েস্ট অবজেক্টে উপলব্ধ থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "Why might `req.ip` not be the true end-user's IP address?",
+            "answer_en": "If the application is behind a reverse proxy (like Nginx or a load balancer), `req.ip` will return the IP address of the proxy. To get the true user IP, you must enable the 'trust proxy' setting in Express and then read the `X-Forwarded-For` header."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Intermediate",
+        "sub_topic": "Request & Response",
+        "question_en": "What is the `res.redirect()` method used for?",
+        "question_bn": "`res.redirect()` মেথড কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `res.redirect()` method is used to redirect the client to a different URL. It sets the HTTP status code to 302 (Found) by default.",
+            "what_is_bn": "`res.redirect()` মেথডটি ক্লায়েন্টকে একটি ভিন্ন URL-এ রিডাইরেক্ট করতে ব্যবহৃত হয়। এটি ডিফল্টভাবে HTTP স্ট্যাটাস কোড 302 (Found) সেট করে।"
+        },
+        "vip_qa": {
+            "question_en": "How can you specify a different status code for the redirect?",
+            "answer_en": "You can pass the status code as the first argument. For a permanent redirect, which is better for SEO, you should use a 301 status code: `res.redirect(301, '/new-location');`."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Beginner",
+        "sub_topic": "Routing",
+        "question_en": "How do you handle a 404 (Not Found) error?",
+        "question_bn": "আপনি একটি 404 (Not Found) এরর কীভাবে হ্যান্ডেল করবেন?",
+        "details": {
+            "what_is_en": "You can handle 404 errors by placing a middleware function at the very end of your middleware and route stack. This middleware will catch any request that wasn't handled by a previous route.",
+            "what_is_bn": "আপনি আপনার মিডলওয়্যার এবং রাউট স্ট্যাকের একেবারে শেষে একটি মিডলওয়্যার ফাংশন রেখে 404 এরর হ্যান্ডেল করতে পারেন। এই মিডলওয়্যারটি পূর্ববর্তী কোনো রাউট দ্বারা হ্যান্ডেল না হওয়া যেকোনো রিকোয়েস্ট ধরবে।"
+        },
+        "vip_qa": {
+            "question_en": "What status code should this 404 handler send back?",
+            "answer_en": "It should set the status to 404 and then send a response, for example: `res.status(404).send('Sorry, that page cannot be found!');`."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Intermediate",
+        "sub_topic": "Request & Response",
+        "question_en": "How do you set response headers?",
+        "question_bn": "আপনি রেসপন্স হেডার কীভাবে সেট করবেন?",
+        "details": {
+            "what_is_en": "You can use the `res.set()` or `res.header()` methods to set HTTP response headers. For example, `res.set('Content-Type', 'text/html');`.",
+            "what_is_bn": "আপনি HTTP রেসপন্স হেডার সেট করতে `res.set()` বা `res.header()` মেথড ব্যবহার করতে পারেন। যেমন, `res.set('Content-Type', 'text/html');`।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `res.set()` and `res.append()`?",
+            "answer_en": "`res.set()` will set a header, overwriting any existing header with the same name. `res.append()` will append a new value to an existing header, which is useful for headers that can have multiple values, like `Link`."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Advanced",
+        "sub_topic": "Architecture",
+        "question_en": "How would you structure a large Express application?",
+        "question_bn": "আপনি একটি বড় Express অ্যাপ্লিকেশন কীভাবে গঠন করবেন?",
+        "details": {
+            "what_is_en": "A common approach is to separate concerns into different directories, such as `routes`, `controllers`, `models`, and `middleware`. This makes the application more modular and easier to maintain.",
+            "what_is_bn": "একটি সাধারণ পদ্ধতি হলো বিভিন্ন ডিরেক্টরিতে কনসার্নগুলি আলাদা করা, যেমন `routes`, `controllers`, `models`, এবং `middleware`। এটি অ্যাপ্লিকেশনটিকে আরও মডুলার এবং রক্ষণাবেক্ষণ করা সহজ করে তোলে।"
+        },
+        "vip_qa": {
+            "question_en": "In this structure, what is the responsibility of a 'controller'?",
+            "answer_en": "The 'controller' contains the actual logic for handling a request. The route definition simply maps a URL path to a specific controller function. This separates the routing declaration from the business logic."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Intermediate",
+        "sub_topic": "Request & Response",
+        "question_en": "How do you handle cookies in Express?",
+        "question_bn": "Express-এ কুকি কীভাবে হ্যান্ডেল করবেন?",
+        "details": {
+            "what_is_en": "You typically use a third-party middleware like `cookie-parser`. Once configured, you can access incoming cookies on `req.cookies` and set outgoing cookies with `res.cookie()`.",
+            "what_is_bn": "আপনি সাধারণত `cookie-parser`-এর মতো একটি থার্ড-পার্টি মিডলওয়্যার ব্যবহার করেন। কনফিগার করার পরে, আপনি `req.cookies`-এ ইনকামিং কুকি অ্যাক্সেস করতে পারেন এবং `res.cookie()` দিয়ে আউটগোয়িং কুকি সেট করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'signed' cookie and why would you use one?",
+            "answer_en": "A signed cookie is a cookie that has a signature attached to it. This signature allows the server to detect if the cookie has been tampered with on the client side. It does not encrypt the data, but it ensures its integrity."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Advanced",
+        "sub_topic": "Performance",
+        "question_en": "How can you improve the performance of an Express application?",
+        "question_bn": "আপনি একটি Express অ্যাপ্লিকেশনের পারফরম্যান্স কীভাবে উন্নত করতে পারেন?",
+        "details": {
+            "what_is_en": "Performance can be improved by using caching, enabling Gzip compression, using a reverse proxy like Nginx to serve static files, and running the Node.js process in cluster mode.",
+            "what_is_bn": "ক্যাশিং ব্যবহার করে, Gzip কম্প্রেশন সক্ষম করে, স্ট্যাটিক ফাইল পরিবেশন করার জন্য Nginx-এর মতো একটি রিভার্স প্রক্সি ব্যবহার করে এবং Node.js প্রসেসকে ক্লাস্টার মোডে চালিয়ে পারফরম্যান্স উন্নত করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "What does Gzip compression do?",
+            "answer_en": "Gzip compression reduces the size of the response body before it is sent to the client. This significantly reduces the amount of data that needs to be transferred over the network, resulting in faster page loads."
+        }
+    }
+]

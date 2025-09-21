@@ -1,0 +1,452 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "Core Concepts",
+        "question_en": "What is Git?",
+        "question_bn": "Git কী?",
+        "details": {
+            "what_is_en": "Git is a distributed version control system (DVCS) used to track changes in source code during software development. It allows multiple developers to work together on a project.",
+            "what_is_bn": "Git হলো একটি ডিস্ট্রিবিউটেড ভার্সন কন্ট্রোল সিস্টেম (DVCS) যা সফটওয়্যার ডেভেলপমেন্টের সময় সোর্স কোডের পরিবর্তন ট্র্যাক করতে ব্যবহৃত হয়। এটি একাধিক ডেভেলপারকে একসাথে একটি প্রকল্পে কাজ করার সুযোগ দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between a distributed VCS like Git and a centralized VCS like SVN?",
+            "answer_en": "In a centralized VCS (like SVN), there is a single central server that contains all the versioned files. In a distributed VCS (like Git), every developer has a full copy of the entire repository history on their local machine, allowing for offline work and better performance."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "Core Concepts",
+        "question_en": "What is the difference between Git and GitHub?",
+        "question_bn": "Git এবং GitHub-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**Git** is the version control system software that you install and run on your local machine. **GitHub** is a cloud-based hosting service for Git repositories that provides collaboration features.",
+            "what_is_bn": "**Git** হলো ভার্সন কন্ট্রোল সিস্টেম সফটওয়্যার যা আপনি আপনার লোকাল মেশিনে ইনস্টল করেন। **GitHub** হলো Git রিপোজিটরিগুলির জন্য একটি ক্লাউড-ভিত্তিক হোস্টিং পরিষেবা যা কোলাবোরেশন ফিচার প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "Can you use Git without GitHub (or a similar service)?",
+            "answer_en": "Yes, absolutely. Git is a completely independent tool that you can use entirely on your local machine. Services like GitHub make collaborating with others and managing remote backups significantly easier, but they are not required to use Git."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Beginner",
+        "sub_topic": "Workflow",
+        "question_en": "Explain the three main areas of a Git project.",
+        "question_bn": "একটি Git প্রজেক্টের তিনটি প্রধান এলাকা ব্যাখ্যা করুন।",
+        "details": {
+            "what_is_en": "The three areas are: 1. **Working Directory:** Your project folder with all the current files. 2. **Staging Area (Index):** An intermediate area where you prepare the changes for the next commit. 3. **Repository (.git):** Where Git permanently stores all the committed snapshots of your project.",
+            "what_is_bn": "তিনটি এলাকা হলো: ১. **ওয়ার্কিং ডিরেক্টরি:** আপনার প্রজেক্ট ফোল্ডার। ২. **স্টেজিং এরিয়া (ইনডেক্স):** পরবর্তী কমিটের জন্য পরিবর্তন প্রস্তুত করার একটি মধ্যবর্তী এলাকা। ৩. **রিপোজিটরি (.git):** যেখানে Git আপনার প্রজেক্টের সমস্ত কমিট করা স্ন্যাপশট স্থায়ীভাবে সংরক্ষণ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the purpose of the Staging Area?",
+            "answer_en": "The Staging Area allows you to be selective about what you include in your next commit. It lets you craft specific, atomic commits by adding only related changes, even if you have many unrelated changes in your working directory."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Beginner",
+        "sub_topic": "Branching",
+        "question_en": "What is a branch in Git?",
+        "question_bn": "Git-এ ব্রাঞ্চ কী?",
+        "details": {
+            "what_is_en": "A branch is an independent line of development. It acts as a pointer to a specific commit. Branches allow you to work on new features or bug fixes without affecting the main codebase.",
+            "what_is_bn": "ব্রাঞ্চ হলো ডেভেলপমেন্টের একটি স্বাধীন লাইন। এটি একটি নির্দিষ্ট কমিটের দিকে একটি পয়েন্টার হিসাবে কাজ করে। ব্রাঞ্চ আপনাকে মূল কোডবেসকে প্রভাবিত না করে নতুন ফিচার বা বাগ ফিক্সে কাজ করার অনুমতি দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why is it a best practice to work on features in separate branches instead of directly on the `main` branch?",
+            "answer_en": "Working in separate branches isolates new work from the stable codebase. This allows for parallel development, easier code reviews via Pull Requests, and ensures that the `main` branch always contains production-ready code."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Intermediate",
+        "sub_topic": "Merging",
+        "question_en": "What is a merge conflict?",
+        "question_bn": "মার্জ কনফ্লিক্ট কী?",
+        "details": {
+            "what_is_en": "A merge conflict occurs when Git is unable to automatically resolve differences in code between two commits, typically when two branches have modified the same line in the same file.",
+            "what_is_bn": "মার্জ কনফ্লিক্ট তখন ঘটে যখন Git দুটি ভিন্ন ব্রাঞ্চের পরিবর্তনগুলোকে স্বয়ংক্রিয়ভাবে একত্রিত করতে পারে না, সাধারণত যখন দুটি ব্রাঞ্চ একই ফাইলের একই লাইনে পরিবর্তন করে।"
+        },
+        "vip_qa": {
+            "question_en": "How do you resolve a merge conflict?",
+            "answer_en": "To resolve a conflict, you must manually edit the conflicted file to choose which changes to keep. After editing, you use `git add` to mark the conflict as resolved, and then you complete the merge with `git commit`."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Advanced",
+        "sub_topic": "Branching & Merging",
+        "question_en": "What is the fundamental difference between `git merge` and `git rebase`?",
+        "question_bn": "`git merge` এবং `git rebase`-এর মধ্যে মূল পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`git merge` integrates changes by creating a new 'merge commit' that has two parents, preserving the history of both branches. `git rebase` re-applies commits from your feature branch on top of the target branch, creating a clean, linear history.",
+            "what_is_bn": "`git merge` একটি নতুন 'মার্জ কমিট' তৈরি করে পরিবর্তনগুলিকে একত্রিত করে, যা উভয় ব্রাঞ্চের ইতিহাস সংরক্ষণ করে। `git rebase` আপনার ফিচার ব্রাঞ্চের কমিটগুলিকে টার্গেট ব্রাঞ্চের উপরে পুনরায় প্রয়োগ করে, একটি পরিষ্কার, রৈখিক ইতিহাস তৈরি করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the 'golden rule of rebasing'?",
+            "answer_en": "The golden rule is: **never rebase a public, shared branch** (like `main` or `develop`). Rebasing rewrites commit history, which can cause major problems for collaborators who have based their work on the original history."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Advanced",
+        "sub_topic": "History Management",
+        "question_en": "What is the difference between `git reset` and `git revert`?",
+        "question_bn": "`git reset` এবং `git revert`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`git reset` moves the HEAD pointer to a previous commit, effectively erasing the commits that came after it (destructive). `git revert` undoes a commit by creating a new commit that applies the inverse changes (non-destructive).",
+            "what_is_bn": "`git reset` হেড পয়েন্টারকে একটি পূর্ববর্তী কমিটে নিয়ে যায়, যা তার পরের কমিটগুলিকে মুছে ফেলে (ধ্বংসাত্মক)। `git revert` একটি নতুন কমিট তৈরি করে একটি কমিটকে আনডু করে (অ-ধ্বংসাত্মক)।"
+        },
+        "vip_qa": {
+            "question_en": "Which command is safer to use on a shared public branch and why?",
+            "answer_en": "`git revert` is the safer option. `git reset` rewrites the commit history, which is a destructive action on a shared branch. `git revert` is non-destructive; it appends a new commit that undoes changes, making it the correct choice for public branches."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Intermediate",
+        "sub_topic": "Working with Remotes",
+        "question_en": "What is the difference between `git fetch` and `git pull`?",
+        "question_bn": "`git fetch` এবং `git pull`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`git fetch` downloads new data from a remote repository but doesn't integrate any of it into your working files. `git pull` is a combination of `git fetch` followed by `git merge`.",
+            "what_is_bn": "`git fetch` একটি রিমোট রিপোজিটরি থেকে নতুন ডেটা ডাউনলোড করে কিন্তু আপনার ওয়ার্কিং ফাইলগুলিতে এটি একত্রিত করে না। `git pull` হলো `git fetch` এবং তারপর `git merge`-এর একটি সংমিশ্রণ।"
+        },
+        "vip_qa": {
+            "question_en": "When might you prefer to use `git fetch` instead of `git pull`?",
+            "answer_en": "You should use `git fetch` when you want to see what changes others have made on the remote before you merge those changes into your local branch. It gives you a chance to review the updates first."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Beginner",
+        "sub_topic": "GitHub",
+        "question_en": "What is a Pull Request (PR)?",
+        "question_bn": "পুল রিকোয়েস্ট (PR) কী?",
+        "details": {
+            "what_is_en": "A Pull Request is a feature of hosting platforms like GitHub that lets you tell others about changes you've pushed to a branch in a repository. It's a way to propose and discuss changes before merging them.",
+            "what_is_bn": "পুল রিকোয়েস্ট হলো GitHub-এর মতো হোস্টিং প্ল্যাটফর্মের একটি ফিচার যা আপনাকে একটি রিপোজিটরির একটি ব্রাঞ্চে করা পরিবর্তনগুলি সম্পর্কে অন্যদের জানাতে দেয়। এটি পরিবর্তনগুলিকে মার্জ করার আগে প্রস্তাব এবং আলোচনা করার একটি উপায়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the typical workflow for a Pull Request?",
+            "answer_en": "The typical workflow is: 1. Create a new feature branch. 2. Make your commits. 3. Push the branch to the remote. 4. Open a Pull Request on GitHub. 5. Team members review the code and discuss changes. 6. Once approved, the PR is merged into the main branch."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Intermediate",
+        "sub_topic": "Commands",
+        "question_en": "What does `git stash` do?",
+        "question_bn": "`git stash` কী কাজ করে?",
+        "details": {
+            "what_is_en": "`git stash` temporarily shelves (or stashes) your modified, tracked files in the working directory, allowing you to switch contexts and work on something else.",
+            "what_is_bn": "`git stash` আপনার ওয়ার্কিং ডিরেক্টরিতে পরিবর্তন করা ফাইলগুলোকে একটি স্ট্যাকে সাময়িকভাবে সংরক্ষণ করে, যাতে আপনি অন্য কোনো ব্রাঞ্চে কাজ করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "Describe a common workflow where `git stash` is very useful.",
+            "answer_en": "A common scenario is when you are in the middle of a feature and an urgent bug fix is required on the `main` branch. You can `git stash` your unfinished work, switch to `main`, fix the bug, and then return to your feature branch and use `git stash pop` to reapply your changes."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Beginner",
+        "sub_topic": "Core Concepts",
+        "question_en": "What is a 'commit'?",
+        "question_bn": "'কমিট' কী?",
+        "details": {
+            "what_is_en": "A commit is a snapshot of your staged changes at a specific point in time. Each commit has a unique ID and a commit message describing the changes.",
+            "what_is_bn": "কমিট হলো একটি নির্দিষ্ট সময়ে আপনার স্টেজিং এরিয়ার পরিবর্তনগুলির একটি স্ন্যাপশট। প্রতিটি কমিটের একটি ইউনিক আইডি এবং পরিবর্তনগুলি বর্ণনা করার জন্য একটি কমিট মেসেজ থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is it important to write good commit messages?",
+            "answer_en": "Good commit messages are crucial for understanding the history of a project. They help other developers (and your future self) understand *why* a change was made, which is essential for debugging and maintenance."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Intermediate",
+        "sub_topic": "History Management",
+        "question_en": "What is `git log`?",
+        "question_bn": "`git log` কী?",
+        "details": {
+            "what_is_en": "`git log` is a command that shows a history of all the commits in a repository, starting from the most recent one.",
+            "what_is_bn": "`git log` একটি কমান্ড যা একটি রিপোজিটরিতে সমস্ত কমিটের ইতিহাস দেখায়, সবচেয়ে সাম্প্রতিকটি থেকে শুরু করে।"
+        },
+        "vip_qa": {
+            "question_en": "How can you view the log as a graph with a one-line summary for each commit?",
+            "answer_en": "You can use flags to format the output. A very useful alias is `git log --graph --oneline --decorate --all`."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Intermediate",
+        "sub_topic": "GitHub",
+        "question_en": "What is the difference between cloning and forking a repository?",
+        "question_bn": "রিপোজিটরি ক্লোন করা এবং ফর্ক করার মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**Cloning** creates a local copy of a repository on your machine. **Forking** creates a copy of a repository on your own GitHub account.",
+            "what_is_bn": "**ক্লোনিং** আপনার মেশিনে একটি রিপোজিটরির একটি লোকাল কপি তৈরি করে। **ফর্কিং** আপনার নিজের GitHub অ্যাকাউন্টে একটি রিপোজিটরির একটি কপি তৈরি করে।"
+        },
+        "vip_qa": {
+            "question_en": "When contributing to an open-source project you don't have write access to, which should you do first?",
+            "answer_en": "You should first **fork** the repository. This creates a copy under your control. You can then **clone** your fork, make changes, push to your fork, and finally open a Pull Request back to the original repository."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Advanced",
+        "sub_topic": "History Management",
+        "question_en": "What is `git cherry-pick`?",
+        "question_bn": "`git cherry-pick` কী?",
+        "details": {
+            "what_is_en": "`git cherry-pick` is a command used to apply a specific commit from one branch onto another branch. It's useful when you only need one or two specific commits from a feature branch instead of merging the entire branch.",
+            "what_is_bn": "`git cherry-pick` একটি কমান্ড যা একটি ব্রাঞ্চ থেকে একটি নির্দিষ্ট কমিটকে অন্য ব্রাঞ্চে প্রয়োগ করতে ব্যবহৃত হয়। এটি তখন দরকারি যখন আপনার পুরো ব্রাঞ্চটি মার্জ করার পরিবর্তে একটি ফিচার ব্রাঞ্চ থেকে শুধুমাত্র এক বা দুটি নির্দিষ্ট কমিট প্রয়োজন।"
+        },
+        "vip_qa": {
+            "question_en": "Does `cherry-pick` move the commit?",
+            "answer_en": "No, it doesn't move the commit. It creates a **new commit** on the target branch that has the same content and commit message as the original commit. The new commit will have a new commit hash."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Beginner",
+        "sub_topic": "Configuration",
+        "question_en": "What is the `.gitignore` file?",
+        "question_bn": "`.gitignore` ফাইল কী?",
+        "details": {
+            "what_is_en": "The `.gitignore` file is a text file that tells Git which files or folders to ignore in a project. Ignored files will not be tracked by Git.",
+            "what_is_bn": "`.gitignore` ফাইলটি একটি টেক্সট ফাইল যা Git-কে বলে যে একটি প্রজেক্টে কোন ফাইল বা ফোল্ডারগুলি উপেক্ষা করতে হবে। উপেক্ষা করা ফাইলগুলি Git দ্বারা ট্র্যাক করা হবে না।"
+        },
+        "vip_qa": {
+            "question_en": "What are some common files or folders you would add to a `.gitignore` file?",
+            "answer_en": "Common entries include dependency folders (like `node_modules`), compiled code (like `dist` or `build` folders), environment variable files (`.env`), and OS-specific files (like `.DS_Store`)."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Advanced",
+        "sub_topic": "History Management",
+        "question_en": "What is `git reflog` and when is it useful?",
+        "question_bn": "`git reflog` কী এবং কখন এটি দরকারী?",
+        "details": {
+            "what_is_en": "`git reflog` (reference log) records almost every change you make to the tips of branches and other references in your repository. It's a log of where your HEAD has been.",
+            "what_is_bn": "`git reflog` (রেফারেন্স লগ) আপনার রিপোজিটরিতে ব্রাঞ্চ এবং অন্যান্য রেফারেন্সের প্রায় প্রতিটি পরিবর্তন রেকর্ড করে। এটি আপনার HEAD কোথায় ছিল তার একটি লগ।"
+        },
+        "vip_qa": {
+            "question_en": "How can `reflog` be used as a safety net?",
+            "answer_en": "It's an incredibly useful safety net for recovering 'lost' commits. If you accidentally delete a branch or perform a destructive `git reset`, you can use `git reflog` to find the hash of the commit you were on before the mistake and restore it."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Intermediate",
+        "sub_topic": "GitHub Features",
+        "question_en": "What are GitHub Actions?",
+        "question_bn": "GitHub অ্যাকশন কী?",
+        "details": {
+            "what_is_en": "GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline right from GitHub.",
+            "what_is_bn": "GitHub অ্যাকশন হলো একটি কন্টিনিউয়াস ইন্টিগ্রেশন এবং কন্টিনিউয়াস ডেলিভারি (CI/CD) প্ল্যাটফর্ম যা আপনাকে আপনার বিল্ড, টেস্ট এবং ডেপ্লয়মেন্ট পাইপলাইন সরাসরি GitHub থেকে স্বয়ংক্রিয়ভাবে পরিচালনা করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "How are GitHub Actions workflows defined?",
+            "answer_en": "Workflows are defined in YAML files located in the `.github/workflows` directory of your repository. These files specify the events that trigger the workflow (e.g., a push to the main branch) and the jobs and steps to be executed."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Beginner",
+        "sub_topic": "Working with Remotes",
+        "question_en": "What is a 'remote' in Git?",
+        "question_bn": "Git-এ 'রিমোট' কী?",
+        "details": {
+            "what_is_en": "A remote is a common repository that all team members use to exchange their changes. The default name for the remote repository when you clone is 'origin'.",
+            "what_is_bn": "রিমোট হলো একটি সাধারণ রিপোজিটরি যা দলের সমস্ত সদস্যরা তাদের পরিবর্তনগুলি আদান-প্রদান করতে ব্যবহার করে। যখন আপনি ক্লোন করেন তখন রিমোট রিপোজিটরির ডিফল্ট নাম হলো 'origin'।"
+        },
+        "vip_qa": {
+            "question_en": "Can you have more than one remote for a single local repository?",
+            "answer_en": "Yes, you can configure multiple remotes. A common use case is having your own fork as `origin` and the original upstream repository as `upstream`, which allows you to easily pull updates from the original project."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Advanced",
+        "sub_topic": "Internals",
+        "question_en": "What are the three main types of objects in Git?",
+        "question_bn": "Git-এ তিনটি প্রধান ধরণের অবজেক্ট কী কী?",
+        "details": {
+            "what_is_en": "The three main object types are: **Blobs** (store file content), **Trees** (store directory content, linking to blobs and other trees), and **Commits** (point to a tree and contain metadata like author and message).",
+            "what_is_bn": "তিনটি প্রধান অবজেক্ট হলো: **ব্লব** (ফাইলের বিষয়বস্তু সংরক্ষণ করে), **ট্রি** (ডিরেক্টরির বিষয়বস্তু সংরক্ষণ করে), এবং **কমিট** (একটি ট্রি-কে নির্দেশ করে এবং মেটাডেটা ধারণ করে)।"
+        },
+        "vip_qa": {
+            "question_en": "How are these objects referenced?",
+            "answer_en": "Every object in Git is identified by a unique 40-character SHA-1 hash of its content. This is what makes Git's history immutable; changing the content of any object would change its hash, and consequently the hash of every subsequent commit."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Intermediate",
+        "sub_topic": "Commands",
+        "question_en": "What does the `git remote -v` command do?",
+        "question_bn": "`git remote -v` কমান্ড কী কাজ করে?",
+        "details": {
+            "what_is_en": "This command lists all the remote repositories configured for your local repository, along with their URLs.",
+            "what_is_bn": "এই কমান্ডটি আপনার লোকাল রিপোজিটরির জন্য কনফিগার করা সমস্ত রিমোট রিপোজিটরি এবং তাদের URL গুলি তালিকাভুক্ত করে।"
+        },
+        "vip_qa": {
+            "question_en": "How would you change the URL of the 'origin' remote?",
+            "answer_en": "You would use the command `git remote set-url origin <new-url>`."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Advanced",
+        "sub_topic": "History Management",
+        "question_en": "What is an interactive rebase (`git rebase -i`)?",
+        "question_bn": "ইন্টারেক্টিভ রিবেস (`git rebase -i`) কী?",
+        "details": {
+            "what_is_en": "Interactive rebase is a powerful tool that allows you to modify commits in various ways before pushing them. You can reorder, edit, squash (combine), or delete commits.",
+            "what_is_bn": "ইন্টারেক্টিভ রিবেস একটি শক্তিশালী টুল যা আপনাকে পুশ করার আগে বিভিন্ন উপায়ে কমিটগুলি পরিবর্তন করতে দেয়। আপনি কমিটগুলি পুনরায় সাজাতে, সম্পাদনা করতে, স্কোয়াশ (একত্রিত) করতে বা মুছতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is a common use case for squashing commits?",
+            "answer_en": "A common use case is to clean up your commit history before creating a Pull Request. You can squash multiple small, work-in-progress commits (like 'fix typo', 'wip') into a single, meaningful commit that represents the entire feature."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Intermediate",
+        "sub_topic": "GitHub Features",
+        "question_en": "What is GitHub Pages?",
+        "question_bn": "GitHub পেজেস কী?",
+        "details": {
+            "what_is_en": "GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.",
+            "what_is_bn": "GitHub পেজেস একটি স্ট্যাটিক সাইট হোস্টিং পরিষেবা যা সরাসরি GitHub-এর একটি রিপোজিটরি থেকে HTML, CSS, এবং JavaScript ফাইল নেয় এবং একটি ওয়েবসাইট প্রকাশ করে।"
+        },
+        "vip_qa": {
+            "question_en": "From which branch can you typically deploy a GitHub Pages site?",
+            "answer_en": "You can configure it to deploy from the `main` or `master` branch (often from a `/docs` folder within it) or from a dedicated branch, which is commonly named `gh-pages`."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Beginner",
+        "sub_topic": "Commands",
+        "question_en": "What is `git status`?",
+        "question_bn": "`git status` কী?",
+        "details": {
+            "what_is_en": "The `git status` command displays the state of the working directory and the staging area. It shows which files are modified, which are staged, and which are untracked.",
+            "what_is_bn": "`git status` কমান্ডটি ওয়ার্কিং ডিরেক্টরি এবং স্টেজিং এরিয়ার অবস্থা প্রদর্শন করে। এটি দেখায় কোন ফাইলগুলি পরিবর্তিত হয়েছে, কোনগুলি স্টেজ করা হয়েছে এবং কোনগুলি আনট্র্যাকড।"
+        },
+        "vip_qa": {
+            "question_en": "What does it mean for a file to be 'untracked'?",
+            "answer_en": "An untracked file is a file in your working directory that Git has not seen before and is not in its tracking database. It will not be included in commits until you explicitly add it with `git add`."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Intermediate",
+        "sub_topic": "Commands",
+        "question_en": "What does `git checkout -b <branch-name>` do?",
+        "question_bn": "`git checkout -b <branch-name>` কী কাজ করে?",
+        "details": {
+            "what_is_en": "This is a shorthand command that creates a new branch named `<branch-name>` and immediately switches to it.",
+            "what_is_bn": "এটি একটি শর্টহ্যান্ড কমান্ড যা `<branch-name>` নামে একটি নতুন ব্রাঞ্চ তৈরি করে এবং অবিলম্বে সেই ব্রাঞ্চে সুইচ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the modern equivalent of this command using `git switch`?",
+            "answer_en": "The modern equivalent is `git switch -c <branch-name>`. The `git switch` and `git restore` commands were introduced to separate the overloaded responsibilities of `git checkout`."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Advanced",
+        "sub_topic": "History Management",
+        "question_en": "What is `git bisect`?",
+        "question_bn": "`git bisect` কী?",
+        "details": {
+            "what_is_en": "`git bisect` is a powerful debugging tool that uses a binary search algorithm to find the specific commit that introduced a bug in your project's history.",
+            "what_is_bn": "`git bisect` একটি শক্তিশালী ডিবাগিং টুল যা আপনার প্রজেক্টের ইতিহাসে কোন নির্দিষ্ট কমিটটি বাগ তৈরি করেছে তা খুঁজে বের করার জন্য বাইনারি সার্চ অ্যালগরিদম ব্যবহার করে।"
+        },
+        "vip_qa": {
+            "question_en": "How does the `git bisect` process work?",
+            "answer_en": "You start by telling it a 'good' commit (where the bug didn't exist) and a 'bad' commit (where it does). Git then checks out a commit in the middle and asks you if it's good or bad. By repeating this process, it quickly narrows down the range until it finds the exact commit that introduced the regression."
+        }
+    },
+    {
+        "id": 26,
+        "level": "Intermediate",
+        "sub_topic": "Branching",
+        "question_en": "What is the 'HEAD' in Git?",
+        "question_bn": "Git-এ 'HEAD' কী?",
+        "details": {
+            "what_is_en": "HEAD is a pointer or reference to the currently checked-out commit. Most of the time, HEAD points to the tip of the current branch.",
+            "what_is_bn": "HEAD হলো বর্তমানে চেক-আউট করা কমিটের একটি পয়েন্টার বা রেফারেন্স। বেশিরভাগ সময়, HEAD বর্তমান ব্রাঞ্চের শীর্ষে নির্দেশ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'detached HEAD' state?",
+            "answer_en": "A detached HEAD state occurs when you check out a specific commit hash directly, instead of a branch. In this state, any new commits you make will not belong to any branch, and they can be lost if you switch to another branch."
+        }
+    },
+    {
+        "id": 27,
+        "level": "Beginner",
+        "sub_topic": "Commands",
+        "question_en": "What is the `git add` command used for?",
+        "question_bn": "`git add` কমান্ড কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `git add` command is used to move changes from the working directory to the staging area, preparing them to be included in the next commit.",
+            "what_is_bn": "`git add` কমান্ডটি ওয়ার্কিং ডিরেক্টরি থেকে পরিবর্তনগুলিকে স্টেজিং এরিয়াতে নিয়ে যাওয়ার জন্য ব্যবহৃত হয়, যা সেগুলিকে পরবর্তী কমিটে অন্তর্ভুক্ত করার জন্য প্রস্তুত করে।"
+        },
+        "vip_qa": {
+            "question_en": "How can you add only a part of a modified file to the staging area?",
+            "answer_en": "You can use the interactive patching mode with the command `git add -p`. This will show you each chunk of changes in the file and ask you one by one if you want to stage it."
+        }
+    },
+    {
+        "id": 28,
+        "level": "Advanced",
+        "sub_topic": "Commands",
+        "question_en": "What is `git blame`?",
+        "question_bn": "`git blame` কী?",
+        "details": {
+            "what_is_en": "The `git blame` command is used to examine the contents of a file line by line and see which commit and author last modified each line.",
+            "what_is_bn": "`git blame` কমান্ডটি একটি ফাইলের বিষয়বস্তু লাইন বাই লাইন পরীক্ষা করতে এবং কোন কমিট এবং লেখক প্রতিটি লাইন শেষবার পরিবর্তন করেছে তা দেখতে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "When is `git blame` particularly useful?",
+            "answer_en": "It's particularly useful for debugging and understanding context. When you find a confusing or buggy line of code, `git blame` can help you identify who wrote it and which commit it was part of, so you can investigate the original intent."
+        }
+    },
+    {
+        "id": 29,
+        "level": "Intermediate",
+        "sub_topic": "Tags",
+        "question_en": "What are Git tags?",
+        "question_bn": "Git ট্যাগ কী?",
+        "details": {
+            "what_is_en": "A Git tag is a marker used to point to a specific commit in the repository's history. They are typically used to mark release points (e.g., v1.0, v2.0).",
+            "what_is_bn": "Git ট্যাগ হলো একটি মার্কার যা রিপোজিটরির ইতিহাসে একটি নির্দিষ্ট কমিটকে নির্দেশ করতে ব্যবহৃত হয়। এগুলি সাধারণত রিলিজ পয়েন্ট চিহ্নিত করতে ব্যবহৃত হয় (যেমন, v1.0, v2.0)।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between a lightweight tag and an annotated tag?",
+            "answer_en": "A **lightweight tag** is just a pointer to a commit. An **annotated tag** is a full object in the Git database that can contain a message, author, and date, and can be signed for security. Annotated tags are recommended for official releases."
+        }
+    },
+    {
+        "id": 30,
+        "level": "Intermediate",
+        "sub_topic": "GitHub Features",
+        "question_en": "What are GitHub Issues?",
+        "question_bn": "GitHub ইস্যু কী?",
+        "details": {
+            "what_is_en": "GitHub Issues are a tool for tracking tasks, enhancements, and bugs for your projects on GitHub. They are a great way to manage work and have discussions about the project.",
+            "what_is_bn": "GitHub ইস্যু হলো GitHub-এ আপনার প্রজেক্টের জন্য টাস্ক, উন্নতি এবং বাগ ট্র্যাক করার একটি টুল। এটি কাজ পরিচালনা এবং প্রজেক্ট সম্পর্কে আলোচনা করার একটি দুর্দান্ত উপায়।"
+        },
+        "vip_qa": {
+            "question_en": "How can you link a Pull Request to an Issue?",
+            "answer_en": "You can link a PR to an issue by including a keyword like `closes`, `fixes`, or `resolves` followed by the issue number in the PR description (e.g., `Closes #42`). When the PR is merged, GitHub will automatically close the linked issue."
+        }
+    }
+]

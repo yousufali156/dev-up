@@ -1,0 +1,752 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "CSS Basics",
+        "question_en": "What is CSS?",
+        "question_bn": "CSS কী?",
+        "details": {
+            "what_is_en": "CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.",
+            "what_is_bn": "CSS (ক্যাসকেডিং স্টাইল শীটস) হলো একটি স্টাইল শীট ভাষা যা HTML এর মতো মার্কআপ ভাষায় লেখা ডকুমেন্টের প্রেজেন্টেশন বর্ণনা করতে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What does the term 'Cascading' mean in CSS?",
+            "answer_en": "'Cascading' refers to the algorithm that determines how styles are applied to an element when multiple rules could apply. It's a priority scheme based on specificity, importance (`!important`), and source order."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "Selectors",
+        "question_en": "What are the three basic ways to apply CSS styles?",
+        "question_bn": "CSS স্টাইল প্রয়োগ করার তিনটি মৌলিক উপায় কী কী?",
+        "details": {
+            "what_is_en": "1. Inline (using the 'style' attribute). 2. Internal (using a `<style>` tag in the `<head>`). 3. External (linking to an external .css file).",
+            "what_is_bn": "১. ইনলাইন ('style' অ্যাট্রিবিউট ব্যবহার করে)। ২. ইন্টারনাল (<head> এ `<style>` ট্যাগ ব্যবহার করে)। ৩. এক্সটার্নাল (একটি .css ফাইলের সাথে লিঙ্ক করে)।"
+        },
+        "vip_qa": {
+            "question_en": "Which method is considered best practice for a large website and why?",
+            "answer_en": "External stylesheets are the best practice because they separate content from presentation, allow for reusability across multiple pages, and improve performance through browser caching."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Beginner",
+        "sub_topic": "Selectors",
+        "question_en": "What is the difference between an ID selector and a class selector?",
+        "question_bn": "ID সিলেক্টর এবং ক্লাস সিলেক্টরের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "An ID selector (`#id`) is used to select one unique element. A class selector (`.class`) can be used to select and style multiple elements.",
+            "what_is_bn": "একটি ID সিলেক্টর (`#id`) একটি ইউনিক এলিমেন্ট নির্বাচন করতে ব্যবহৃত হয়। একটি ক্লাস সিলেক্টর (`.class`) একাধিক এলিমেন্ট নির্বাচন এবং স্টাইল করতে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Which has a higher specificity, an ID selector or a class selector? Why is this important?",
+            "answer_en": "An ID selector has a much higher specificity. This is important because if two rules target the same element, the one with the more specific selector will be applied, regardless of its order in the stylesheet."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Beginner",
+        "sub_topic": "The Box Model",
+        "question_en": "What is the CSS Box Model?",
+        "question_bn": "CSS বক্স মডেল কী?",
+        "details": {
+            "what_is_en": "In CSS, every HTML element is treated as a rectangular box. The box model consists of four parts, from innermost to outermost: Content, Padding, Border, and Margin.",
+            "what_is_bn": "CSS-এ প্রতিটি HTML এলিমেন্ট একটি আয়তক্ষেত্রাকার বক্স হিসেবে বিবেচিত হয়। বক্স মডেলটি চারটি অংশ নিয়ে গঠিত: কন্টেন্ট, প্যাডিং, বর্ডার, এবং মার্জিন।"
+        },
+        "vip_qa": {
+            "question_en": "What does `box-sizing: border-box;` do, and why is it considered a best practice?",
+            "answer_en": "By default, an element's `width` and `height` properties only apply to its content. `box-sizing: border-box;` changes this so that the `width` and `height` properties include the content, padding, and border, making layouts much more intuitive."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Beginner",
+        "sub_topic": "Colors",
+        "question_en": "What are the different ways to specify colors in CSS?",
+        "question_bn": "CSS-এ রং নির্দিষ্ট করার বিভিন্ন উপায় কী কী?",
+        "details": {
+            "what_is_en": "Colors can be specified using color names (e.g., 'red'), HEX values (e.g., #FF0000), RGB values (e.g., rgb(255, 0, 0)), and HSL values (e.g., hsl(0, 100%, 50%)).",
+            "what_is_bn": "রং নির্দিষ্ট করার জন্য রঙের নাম ('red'), HEX মান (#FF0000), RGB মান (rgb(255, 0, 0)), এবং HSL মান (hsl(0, 100%, 50%)) ব্যবহার করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the advantage of using RGBA or HSLA over RGB or HSL?",
+            "answer_en": "RGBA and HSLA include an 'alpha' channel, which allows you to specify the opacity of the color. This is useful for creating semi-transparent backgrounds or text effects."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Beginner",
+        "sub_topic": "Units",
+        "question_en": "What is the difference between `px`, `em`, and `rem` units?",
+        "question_bn": "`px`, `em`, এবং `rem` ইউনিটের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`px` is a fixed-size unit. `em` is relative to the font-size of its direct parent element. `rem` (root em) is relative to the font-size of the root (`<html>`) element.",
+            "what_is_bn": "`px` একটি নির্দিষ্ট আকারের ইউনিট। `em` তার প্যারেন্ট এলিমেন্টের ফন্ট-সাইজের উপর নির্ভরশীল। `rem` রুট (`<html>`) এলিমেন্টের ফন্ট-সাইজের উপর নির্ভরশীল।"
+        },
+        "vip_qa": {
+            "question_en": "Why is `rem` generally preferred for scalable and responsive typography?",
+            "answer_en": "`rem` is preferred because you can scale the typography of the entire website up or down by simply changing the font-size on the `<html>` element, avoiding the compounding issues of nested `em` units."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Beginner",
+        "sub_topic": "Typography",
+        "question_en": "What is the `font-family` property used for?",
+        "question_bn": "`font-family` প্রপার্টি কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `font-family` property specifies the font for an element. You can list multiple font names as a 'fallback' system.",
+            "what_is_bn": "`font-family` প্রপার্টি একটি এলিমেন্টের জন্য ফন্ট নির্দিষ্ট করে। আপনি একটি 'ফলব্যাক' সিস্টেম হিসাবে একাধিক ফন্টের নাম তালিকাভুক্ত করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "Why is it important to include a generic font family (like `sans-serif` or `serif`) at the end of a `font-family` list?",
+            "answer_en": "Including a generic family ensures that if none of the specified fonts are available on the user's system, the browser will use its default font from that generic category, maintaining a consistent look."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Intermediate",
+        "sub_topic": "Positioning",
+        "question_en": "What are the different values for the `position` property?",
+        "question_bn": "`position` প্রপার্টির বিভিন্ন মান কী কী?",
+        "details": {
+            "what_is_en": "The main values are `static` (default), `relative`, `absolute`, `fixed`, and `sticky`.",
+            "what_is_bn": "প্রধান মানগুলো হলো `static` (ডিফল্ট), `relative`, `absolute`, `fixed`, এবং `sticky`।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `position: absolute` and `position: fixed`?",
+            "answer_en": "`position: absolute` positions the element relative to its nearest *positioned* ancestor. `position: fixed` positions the element relative to the *viewport*, meaning it stays in the same place even when the page is scrolled."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Intermediate",
+        "sub_topic": "Flexbox",
+        "question_en": "What is Flexbox?",
+        "question_bn": "Flexbox কী?",
+        "details": {
+            "what_is_en": "Flexbox is a one-dimensional layout model that helps arrange, align, and distribute space among items in a container, even when their size is unknown.",
+            "what_is_bn": "Flexbox একটি এক-মাত্রিক লেআউট মডেল যা একটি কন্টেইনারের মধ্যে আইটেমগুলোকে সাজাতে, প্রান্তিককরণ করতে এবং তাদের মধ্যে স্পেস বণ্টন করতে সাহায্য করে।"
+        },
+        "vip_qa": {
+            "question_en": "What's the difference between `justify-content` and `align-items` in Flexbox?",
+            "answer_en": "`justify-content` aligns items along the main axis (the direction of `flex-direction`). `align-items` aligns items along the cross axis (the axis perpendicular to the main axis)."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Intermediate",
+        "sub_topic": "Grid",
+        "question_en": "What is CSS Grid?",
+        "question_bn": "CSS Grid কী?",
+        "details": {
+            "what_is_en": "CSS Grid is a two-dimensional layout system that allows you to arrange content in rows and columns, making complex layouts easier to build.",
+            "what_is_bn": "CSS Grid একটি দ্বি-মাত্রিক লেআউট সিস্টেম যা কন্টেন্টকে সারি এবং কলামে সাজাতে ব্যবহৃত হয়, যা জটিল লেআউট তৈরি করা সহজ করে।"
+        },
+        "vip_qa": {
+            "question_en": "When should you use Flexbox versus CSS Grid?",
+            "answer_en": "Use **Flexbox** for one-dimensional layouts (aligning items in a single row or column). Use **CSS Grid** for two-dimensional layouts (arranging items in both rows and columns simultaneously). They are often used together."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Intermediate",
+        "sub_topic": "Selectors",
+        "question_en": "What is the difference between a pseudo-class and a pseudo-element?",
+        "question_bn": "Pseudo-class এবং pseudo-element এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "A **pseudo-class** is used to define a special state of an element (e.g., `:hover`, `:focus`). A **pseudo-element** is used to style a specific part of an element (e.g., `::before`, `::after`).",
+            "what_is_bn": "**Pseudo-class** একটি এলিমেন্টের বিশেষ অবস্থাকে সিলেক্ট করে (যেমন `:hover`)। **Pseudo-element** একটি এলিমেন্টের নির্দিষ্ট অংশকে স্টাইল করে (যেমন `::before`)।"
+        },
+        "vip_qa": {
+            "question_en": "Why do modern pseudo-elements use a double colon (`::`) instead of a single colon (`:`)?",
+            "answer_en": "The double colon (`::`) was introduced in CSS3 to distinguish pseudo-elements from pseudo-classes. While browsers support a single colon for backward compatibility, using the double colon is the modern, correct syntax."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Intermediate",
+        "sub_topic": "Responsive Design",
+        "question_en": "What are media queries?",
+        "question_bn": "মিডিয়া কোয়েরি কী?",
+        "details": {
+            "what_is_en": "Media queries are a CSS3 feature that allows you to apply different styles for different devices or conditions, such as screen width, height, or orientation.",
+            "what_is_bn": "মিডিয়া কোয়েরি হলো একটি CSS3 ফিচার যা আপনাকে বিভিন্ন ডিভাইস বা শর্তের (যেমন স্ক্রিনের প্রস্থ) জন্য ভিন্ন স্টাইল প্রয়োগ করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between a 'mobile-first' and 'desktop-first' approach to writing media queries?",
+            "answer_en": "In a **'mobile-first'** approach, you write base CSS for mobile screens and use `min-width` media queries for larger screens. In **'desktop-first'**, you do the opposite. Mobile-first is the modern best practice."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Advanced",
+        "sub_topic": "Specificity",
+        "question_en": "What is CSS Specificity?",
+        "question_bn": "CSS Specificity কী?",
+        "details": {
+            "what_is_en": "Specificity is the algorithm used by browsers to determine which CSS rule is the most specific and therefore should be applied to an element when multiple conflicting rules exist.",
+            "what_is_bn": "Specificity হলো একটি নিয়ম যা ব্রাউজারকে নির্ধারণ করতে সাহায্য করে যে, যদি একাধিক CSS রুল একই এলিমেন্টের উপর প্রযোজ্য হয় তবে কোন রুলটি প্রয়োগ হবে।"
+        },
+        "vip_qa": {
+            "question_en": "What is `!important` and why should its use be generally avoided?",
+            "answer_en": "`!important` is a rule that overrides all other specificity rules. It should be avoided because it breaks the natural cascading flow of CSS, making the code extremely difficult to debug and maintain."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Intermediate",
+        "sub_topic": "Positioning",
+        "question_en": "What does the `z-index` property do?",
+        "question_bn": "`z-index` প্রপার্টির কাজ কী?",
+        "details": {
+            "what_is_en": "The `z-index` property specifies the stack order of a positioned element. An element with a greater stack order is always in front of an element with a lower stack order.",
+            "what_is_bn": "`z-index` প্রপার্টি একটি পজিশনড এলিমেন্টের স্ট্যাক অর্ডার নির্দিষ্ট করে। বেশি স্ট্যাক অর্ডারের একটি এলিমেন্ট সবসময় কম স্ট্যাক অর্ডারের এলিমেন্টের সামনে থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'stacking context' and how does it relate to `z-index`?",
+            "answer_en": "A stacking context is a group of elements with a common parent that move together along the z-axis. An element's `z-index` only has meaning within its parent stacking context. A child element can never be layered on top of a different element if its parent has a lower `z-index`."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Advanced",
+        "sub_topic": "Custom Properties",
+        "question_en": "What are CSS Custom Properties (Variables)?",
+        "question_bn": "CSS Custom Properties (ভ্যারিয়েবল) কী?",
+        "details": {
+            "what_is_en": "CSS Custom Properties are entities defined by CSS authors which contain specific values to be reused. They are set using custom property notation (e.g., `--main-color: black;`) and accessed using `var()`.",
+            "what_is_bn": "CSS Custom Properties হলো CSS-এর মধ্যে সংজ্ঞায়িত ভ্যারিয়েবল যা ডকুমেন্টের মধ্যে পুনঃব্যবহার করা যায়। এগুলি `--` দিয়ে শুরু হয় এবং `var()` ফাংশন দিয়ে ব্যবহার করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a key advantage of CSS Custom Properties over pre-processor variables (like in Sass)?",
+            "answer_en": "The key advantage is that CSS Custom Properties are **live and dynamic** in the browser's DOM. This means they can be accessed and manipulated with JavaScript in real-time, which is impossible for pre-processor variables."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Intermediate",
+        "sub_topic": "Transitions",
+        "question_en": "What is a CSS transition?",
+        "question_bn": "CSS ট্রানজিশন কী?",
+        "details": {
+            "what_is_en": "CSS transitions allow you to smoothly change property values over a given duration, such as changing the color of an element when a user hovers over it.",
+            "what_is_bn": "CSS ট্রানজিশন আপনাকে নির্দিষ্ট সময়ের মধ্যে প্রপার্টির মান মসৃণভাবে পরিবর্তন করতে দেয়, যেমন হোভার করার সময় এলিমেন্টের রঙ পরিবর্তন করা।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between a transition and an animation?",
+            "answer_en": "A transition is typically triggered by a state change (like `:hover`) and animates from a start state to an end state. An animation, defined with `@keyframes`, can have multiple steps and can run without a user-triggered state change."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Advanced",
+        "sub_topic": "Animations",
+        "question_en": "What are CSS keyframes?",
+        "question_bn": "CSS কীফ্রেম কী?",
+        "details": {
+            "what_is_en": "The `@keyframes` rule is used to define the steps in a CSS animation. You can specify the styles for specific points in the animation, like 0% (or `from`) and 100% (or `to`), and points in between.",
+            "what_is_bn": "`@keyframes` রুলটি একটি CSS অ্যানিমেশনের ধাপগুলো নির্ধারণ করতে ব্যবহৃত হয়। আপনি অ্যানিমেশনের নির্দিষ্ট পয়েন্টের জন্য স্টাইল নির্দিষ্ট করতে পারেন, যেমন 0% (বা `from`) এবং 100% (বা `to`)।"
+        },
+        "vip_qa": {
+            "question_en": "What does the `animation-fill-mode` property do?",
+            "answer_en": "`animation-fill-mode` specifies a style for the element when the animation is not playing (before it starts, after it ends, or both). For example, `forwards` will make the element retain the style values from the last keyframe."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Intermediate",
+        "sub_topic": "Display Property",
+        "question_en": "What is the difference between `display: none` and `visibility: hidden`?",
+        "question_bn": "`display: none` এবং `visibility: hidden` এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`display: none` removes the element from the document layout entirely. `visibility: hidden` hides the element, but it still takes up space in the layout.",
+            "what_is_bn": "`display: none` এলিমেন্টটিকে ডকুমেন্ট লেআউট থেকে সম্পূর্ণভাবে সরিয়ে দেয়। `visibility: hidden` এলিমেন্টটিকে লুকিয়ে রাখে, কিন্তু এটি লেআউটে জায়গা দখল করে থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "Which property would you use if you want to animate an element fading out, and why?",
+            "answer_en": "You would use `visibility: hidden` in combination with `opacity: 0`. An element with `display: none` cannot be transitioned or animated because it is not rendered at all."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Advanced",
+        "sub_topic": "Preprocessors",
+        "question_en": "What is a CSS preprocessor?",
+        "question_bn": "CSS প্রিপ্রসেসর কী?",
+        "details": {
+            "what_is_en": "A CSS preprocessor is a scripting language that extends CSS and gets compiled into regular CSS. Examples include Sass, Less, and Stylus. They add features like variables, nesting, and mixins.",
+            "what_is_bn": "CSS প্রিপ্রসেসর হলো একটি স্ক্রিপ্টিং ভাষা যা CSS-কে প্রসারিত করে এবং নিয়মিত CSS-এ কম্পাইল হয়। উদাহরণস্বরূপ Sass, Less এবং Stylus। এটি ভ্যারিয়েবল, নেস্টিং এবং মিক্সিনের মতো ফিচার যোগ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'mixin' in Sass?",
+            "answer_en": "A mixin is a block of CSS declarations that you can reuse throughout your site. It's similar to a function in a programming language, and you can even pass arguments to it to make it more flexible."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Intermediate",
+        "sub_topic": "Selectors",
+        "question_en": "What is the universal selector (`*`) and when might you use it?",
+        "question_bn": "ইউনিভার্সাল সিলেক্টর (`*`) কী এবং কখন এটি ব্যবহার করা যেতে পারে?",
+        "details": {
+            "what_is_en": "The universal selector (`*`) selects all HTML elements on the page. It's often used in CSS resets to apply a baseline style to all elements.",
+            "what_is_bn": "ইউনিভার্সাল সিলেক্টর (`*`) পেজের সমস্ত HTML এলিমেন্ট নির্বাচন করে। এটি প্রায়ই CSS রিসেটে সমস্ত এলিমেন্টে একটি বেসলাইন স্টাইল প্রয়োগ করতে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why should the universal selector be used with caution?",
+            "answer_en": "It should be used with caution because it has a performance cost. Applying a rule to every single element on the page can be slow, especially on large, complex pages. It's generally better to use more specific selectors."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Intermediate",
+        "sub_topic": "Flexbox",
+        "question_en": "What does the `flex-wrap` property do?",
+        "question_bn": "`flex-wrap` প্রপার্টির কাজ কী?",
+        "details": {
+            "what_is_en": "By default, flex items try to fit onto one line. The `flex-wrap` property allows the items to wrap onto multiple lines if there is not enough space.",
+            "what_is_bn": "ডিফল্টভাবে, ফ্লেক্স আইটেমগুলো এক লাইনে ফিট করার চেষ্টা করে। `flex-wrap` প্রপার্টি আইটেমগুলোকে পর্যাপ্ত জায়গা না থাকলে একাধিক লাইনে র‍্যাপ করার অনুমতি দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the shorthand property for `flex-direction` and `flex-wrap`?",
+            "answer_en": "The shorthand property is `flex-flow`. For example, `flex-flow: row wrap;` sets the direction to row and allows wrapping."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Advanced",
+        "sub_topic": "Grid",
+        "question_en": "What is the `fr` unit in CSS Grid?",
+        "question_bn": "CSS Grid-এ `fr` ইউনিট কী?",
+        "details": {
+            "what_is_en": "The `fr` unit represents a fraction of the available space in the grid container. It allows you to create flexible grid layouts that distribute space proportionally.",
+            "what_is_bn": "`fr` ইউনিট গ্রিড কন্টেইনারে উপলব্ধ জায়গার একটি ভগ্নাংশকে প্রতিনিধিত্ব করে। এটি আপনাকে নমনীয় গ্রিড লেআউট তৈরি করতে দেয় যা সমানুপাতিকভাবে স্থান বণ্টন করে।"
+        },
+        "vip_qa": {
+            "question_en": "If you have a grid defined as `grid-template-columns: 1fr 2fr;`, how is the space distributed?",
+            "answer_en": "The available space is divided into 3 equal parts (1 + 2). The first column will take up 1 part, and the second column will take up 2 parts. The second column will be twice as wide as the first."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Intermediate",
+        "sub_topic": "Transforms",
+        "question_en": "What does the CSS `transform` property do?",
+        "question_bn": "CSS `transform` প্রপার্টির কাজ কী?",
+        "details": {
+            "what_is_en": "The `transform` property allows you to move, rotate, scale, and skew elements in 2D or 3D space.",
+            "what_is_bn": "`transform` প্রপার্টি আপনাকে এলিমেন্টগুলোকে 2D বা 3D স্পেসে সরানো, ঘোরানো, স্কেল করা এবং বাঁকানোতে অনুমতি দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between moving an element with `transform: translate()` versus using position properties like `left` or `top`?",
+            "answer_en": "Using `transform: translate()` is more performant. It moves the element on the GPU without triggering a browser reflow or repaint of the surrounding elements, resulting in smoother animations."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Intermediate",
+        "sub_topic": "Selectors",
+        "question_en": "What are attribute selectors?",
+        "question_bn": "অ্যাট্রিবিউট সিলেক্টর কী?",
+        "details": {
+            "what_is_en": "Attribute selectors select elements based on the presence or value of a given attribute. For example, `[type=\"text\"]` selects all input elements with `type=\"text\"`.",
+            "what_is_bn": "অ্যাট্রিবিউট সিলেক্টর একটি নির্দিষ্ট অ্যাট্রিবিউটের উপস্থিতি বা মানের উপর ভিত্তি করে এলিমেন্ট নির্বাচন করে। যেমন, `[type=\"text\"]` সমস্ত `type=\"text\"` সহ ইনপুট এলিমেন্ট নির্বাচন করে।"
+        },
+        "vip_qa": {
+            "question_en": "How can you select an element whose attribute value *starts with* a certain string?",
+            "answer_en": "You can use the `^` symbol in the attribute selector. For example, `a[href^=\"https\"]` will select all anchor tags whose `href` attribute value starts with 'https'."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Advanced",
+        "sub_topic": "Layout",
+        "question_en": "What is BEM?",
+        "question_bn": "BEM কী?",
+        "details": {
+            "what_is_en": "BEM (Block, Element, Modifier) is a methodology for naming CSS classes to create reusable and maintainable components. It helps avoid selector conflicts in large projects.",
+            "what_is_bn": "BEM (ব্লক, এলিমেন্ট, মডিফায়ার) হলো CSS ক্লাসগুলির নামকরণের একটি পদ্ধতি যা পুনঃব্যবহারযোগ্য এবং রক্ষণাবেক্ষণযোগ্য কম্পোনেন্ট তৈরি করতে সাহায্য করে।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example of a BEM class name structure.",
+            "answer_en": "An example would be `.card__title--large`. Here, `.card` is the Block, `__title` is the Element, and `--large` is the Modifier."
+        }
+    },
+    {
+        "id": 26,
+        "level": "Beginner",
+        "sub_topic": "Selectors",
+        "question_en": "How do you group selectors?",
+        "question_bn": "আপনি সিলেক্টর গ্রুপ কীভাবে করবেন?",
+        "details": {
+            "what_is_en": "You can group selectors by separating them with a comma. This allows you to apply the same style to multiple selectors without repeating the code.",
+            "what_is_bn": "আপনি কমা দিয়ে সিলেক্টরগুলো আলাদা করে গ্রুপ করতে পারেন। এটি আপনাকে কোড পুনরাবৃত্তি না করে একাধিক সিলেক্টরে একই স্টাইল প্রয়োগ করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the specificity of a grouped selector like `h1, .title`?",
+            "answer_en": "The specificity is calculated for each selector in the group individually. The grouping itself does not increase the specificity. `h1` has its own low specificity, and `.title` has its own separate, higher specificity."
+        }
+    },
+    {
+        "id": 27,
+        "level": "Intermediate",
+        "sub_topic": "Box Model",
+        "question_en": "What is collapsing margins?",
+        "question_bn": "মার্জিন কলাপ্সিং কী?",
+        "details": {
+            "what_is_en": "Collapsing margins is when the vertical margins of two adjacent block-level elements combine into a single margin, which is the size of the larger of the two margins.",
+            "what_is_bn": "মার্জিন কলাপ্সিং হলো যখন দুটি সংলগ্ন ব্লক-স্তরের এলিমেন্টের উল্লম্ব মার্জিন একত্রিত হয়ে একটি একক মার্জিনে পরিণত হয়, যা দুটি মার্জিনের মধ্যে বড়টির আকারের সমান।"
+        },
+        "vip_qa": {
+            "question_en": "In what scenarios do margins not collapse?",
+            "answer_en": "Margins do not collapse for floated or absolutely positioned elements, elements with `overflow` other than `visible`, or elements inside a Flexbox or Grid container."
+        }
+    },
+    {
+        "id": 28,
+        "level": "Beginner",
+        "sub_topic": "Display Property",
+        "question_en": "What is the difference between `inline`, `block`, and `inline-block`?",
+        "question_bn": "`inline`, `block`, এবং `inline-block`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`inline` elements do not start on a new line and only take up as much width as necessary. `block` elements start on a new line and take up the full width. `inline-block` is like `inline` but allows you to set a width and height.",
+            "what_is_bn": "`inline` এলিমেন্ট নতুন লাইনে শুরু হয় না। `block` এলিমেন্ট নতুন লাইনে শুরু হয় এবং সম্পূর্ণ প্রস্থ নেয়। `inline-block` হলো `inline`-এর মতো কিন্তু এতে width এবং height সেট করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "Which of these display types respect top and bottom margins?",
+            "answer_en": "`block` and `inline-block` elements respect top and bottom margins. `inline` elements do not; any top or bottom margin applied to them will have no effect."
+        }
+    },
+    {
+        "id": 29,
+        "level": "Advanced",
+        "sub_topic": "Performance",
+        "question_en": "What is 'critical CSS'?",
+        "question_bn": "'ক্রিটিক্যাল CSS' কী?",
+        "details": {
+            "what_is_en": "Critical CSS is the minimal set of CSS required to render the visible part of the page (the 'above-the-fold' content).",
+            "what_is_bn": "ক্রিটিক্যাল CSS হলো পেজের দৃশ্যমান অংশ (above-the-fold content) রেন্ডার করার জন্য প্রয়োজনীয় ন্যূনতম CSS।"
+        },
+        "vip_qa": {
+            "question_en": "How does inlining critical CSS improve perceived performance?",
+            "answer_en": "By inlining the critical CSS directly in a `<style>` tag in the `<head>`, the browser can start rendering the visible part of the page immediately without waiting to download an external stylesheet. The rest of the CSS is then loaded asynchronously."
+        }
+    },
+    {
+        "id": 30,
+        "level": "Intermediate",
+        "sub_topic": "Pseudo-elements",
+        "question_en": "What is the `content` property used for?",
+        "question_bn": "`content` প্রপার্টি কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `content` property is used with the `::before` and `::after` pseudo-elements to insert generated content into a page from CSS.",
+            "what_is_bn": "`content` প্রপার্টি `::before` এবং `::after` pseudo-element-এর সাথে ব্যবহার করা হয় CSS থেকে পেজে কন্টেন্ট যুক্ত করার জন্য।"
+        },
+        "vip_qa": {
+            "question_en": "Can the content generated by `::before` and `::after` be selected by the user?",
+            "answer_en": "Generally, no. The content inserted via the `content` property is not part of the DOM, so it cannot be selected by the user's cursor. However, some modern browsers are starting to allow it."
+        }
+    },
+    {
+        "id": 31,
+        "level": "Advanced",
+        "sub_topic": "Layout",
+        "question_en": "What is a CSS Reset or Normalize.css?",
+        "question_bn": "CSS রিসেট বা Normalize.css কী?",
+        "details": {
+            "what_is_en": "They are stylesheets that aim to make browser rendering more consistent. A 'Reset' aggressively removes all default browser styling, while 'Normalize' preserves useful defaults and corrects bugs.",
+            "what_is_bn": "এগুলো এমন স্টাইলশিট যা ব্রাউজার রেন্ডারিংকে আরও সামঞ্জস্যপূর্ণ করতে ব্যবহৃত হয়। 'রিসেট' সমস্ত ডিফল্ট স্টাইল সরিয়ে দেয়, আর 'নর্মালাইজ' দরকারি ডিফল্টগুলি রেখে বাগ সংশোধন করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why would you choose Normalize.css over a traditional CSS Reset?",
+            "answer_en": "Normalize.css is often preferred because it's less aggressive. It keeps useful defaults (like headings having different font sizes) and provides a better starting point, whereas a full reset forces you to redefine every single style from scratch."
+        }
+    },
+    {
+        "id": 32,
+        "level": "Intermediate",
+        "sub_topic": "Selectors",
+        "question_en": "What is the child combinator (`>`)?",
+        "question_bn": "চাইল্ড কম্বিনেটর (`>`) কী?",
+        "details": {
+            "what_is_en": "The child combinator (`>`) selects only the direct children of an element. For example, `ul > li` selects only `<li>` elements that are direct children of a `<ul>`.",
+            "what_is_bn": "চাইল্ড কম্বিনেটর (`>`) শুধুমাত্র একটি এলিমেন্টের সরাসরি চাইল্ডদের নির্বাচন করে। যেমন, `ul > li` শুধুমাত্র `<ul>`-এর সরাসরি চাইল্ড `<li>` এলিমেন্ট নির্বাচন করে।"
+        },
+        "vip_qa": {
+            "question_en": "How is this different from the descendant combinator (a space)?",
+            "answer_en": "The descendant combinator (`ul li`) is less strict. It selects all `<li>` elements that are anywhere inside a `<ul>`, no matter how deeply nested they are."
+        }
+    },
+    {
+        "id": 33,
+        "level": "Advanced",
+        "sub_topic": "Layout",
+        "question_en": "What problem does `display: contents` solve?",
+        "question_bn": "`display: contents` কী সমস্যার সমাধান করে?",
+        "details": {
+            "what_is_en": "The `display: contents` declaration causes an element's box to be removed, but its child elements are kept. The element effectively disappears from the layout, and its children behave as direct children of the element's parent.",
+            "what_is_bn": "`display: contents` একটি এলিমেন্টের বক্সকে সরিয়ে দেয়, কিন্তু তার চাইল্ড এলিমেন্টগুলো রেখে দেয়। এলিমেন্টটি লেআউট থেকে অদৃশ্য হয়ে যায় এবং এর চাইল্ডরা প্যারেন্টের সরাসরি চাইল্ড হিসাবে আচরণ করে।"
+        },
+        "vip_qa": {
+            "question_en": "Provide a practical use case for `display: contents` in a Flexbox or Grid layout.",
+            "answer_en": "It's great for when a semantic wrapper element is breaking your layout. By applying `display: contents` to the wrapper, you remove it from the layout tree, allowing its children to become direct flex or grid items of the grandparent, achieving the desired visual layout."
+        }
+    },
+    {
+        "id": 34,
+        "level": "Intermediate",
+        "sub_topic": "Functions",
+        "question_en": "What is the `calc()` function in CSS?",
+        "question_bn": "CSS-এ `calc()` ফাংশন কী?",
+        "details": {
+            "what_is_en": "The `calc()` function allows you to perform mathematical calculations right within CSS property values. You can mix different units, like `width: calc(100% - 80px);`.",
+            "what_is_bn": "`calc()` ফাংশন আপনাকে CSS প্রপার্টির মানের মধ্যে গাণিতিক গণনা করতে দেয়। আপনি বিভিন্ন ইউনিট মিশ্রিত করতে পারেন, যেমন `width: calc(100% - 80px);`।"
+        },
+        "vip_qa": {
+            "question_en": "What is a powerful use case for `calc()` with CSS Custom Properties?",
+            "answer_en": "You can use `calc()` to dynamically adjust layouts. For example, you can define a custom property `--gutter: 20px;` and then use `width: calc(50% - var(--gutter));`. This allows you to change the gutter width in one place and have all related calculations update automatically."
+        }
+    },
+    {
+        "id": 35,
+        "level": "Beginner",
+        "sub_topic": "Typography",
+        "question_en": "How do you make text bold in CSS?",
+        "question_bn": "CSS-এ টেক্সট বোল্ড কীভাবে করবেন?",
+        "details": {
+            "what_is_en": "You can make text bold by using the `font-weight` property. For example, `font-weight: bold;` or `font-weight: 700;`.",
+            "what_is_bn": "আপনি `font-weight` প্রপার্টি ব্যবহার করে টেক্সট বোল্ড করতে পারেন। যেমন, `font-weight: bold;` বা `font-weight: 700;`।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `font-weight: bold` and `font-weight: 700`?",
+            "answer_en": "They are often equivalent. `bold` is a keyword, while `700` is a numeric value on the font weight scale (100-900). Using the numeric value gives you more granular control if the font family supports different weights (e.g., 600 for semi-bold)."
+        }
+    },
+    {
+        "id": 36,
+        "level": "Intermediate",
+        "sub_topic": "Overflow",
+        "question_en": "What does the `overflow` property control?",
+        "question_bn": "`overflow` প্রপার্টি কী নিয়ন্ত্রণ করে?",
+        "details": {
+            "what_is_en": "The `overflow` property controls what happens to content that is too big to fit into an element's box. Common values are `visible`, `hidden`, `scroll`, and `auto`.",
+            "what_is_bn": "`overflow` প্রপার্টি নিয়ন্ত্রণ করে যে কন্টেন্ট একটি এলিমেন্টের বক্সে ফিট করার জন্য খুব বড় হলে কী ঘটবে। সাধারণ মানগুলো হলো `visible`, `hidden`, `scroll`, এবং `auto`।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `overflow: scroll` and `overflow: auto`?",
+            "answer_en": "`scroll` will always show scrollbars, even if the content fits. `auto` is smarter; it will only show scrollbars if the content actually overflows."
+        }
+    },
+    {
+        "id": 37,
+        "level": "Beginner",
+        "sub_topic": "Backgrounds",
+        "question_en": "How do you add a background image to an element?",
+        "question_bn": "আপনি একটি এলিমেন্টে ব্যাকগ্রাউন্ড ইমেজ কীভাবে যোগ করবেন?",
+        "details": {
+            "what_is_en": "You use the `background-image` property with a URL. For example: `background-image: url('path/to/image.jpg');`.",
+            "what_is_bn": "আপনি `background-image` প্রপার্টি একটি URL সহ ব্যবহার করবেন। উদাহরণস্বরূপ: `background-image: url('path/to/image.jpg');`।"
+        },
+        "vip_qa": {
+            "question_en": "How can you prevent a background image from repeating?",
+            "answer_en": "You can use the `background-repeat` property and set its value to `no-repeat`. For example, `background-repeat: no-repeat;`."
+        }
+    },
+    {
+        "id": 38,
+        "level": "Intermediate",
+        "sub_topic": "Filters",
+        "question_en": "What is the CSS `filter` property?",
+        "question_bn": "CSS `filter` প্রপার্টি কী?",
+        "details": {
+            "what_is_en": "The `filter` property lets you apply graphical effects like blur, brightness, contrast, and grayscale to an element.",
+            "what_is_bn": "`filter` প্রপার্টি আপনাকে একটি এলিমেন্টে ব্লার, ব্রাইটনেস, কনট্রাস্ট এবং গ্রেস্কেলের মতো গ্রাফিক্যাল ইফেক্ট প্রয়োগ করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Can the `filter` property be animated?",
+            "answer_en": "Yes, the `filter` property is animatable. You can create smooth transitions between different filter states, for example, transitioning an image from grayscale to full color on hover."
+        }
+    },
+    {
+        "id": 39,
+        "level": "Advanced",
+        "sub_topic": "Selectors",
+        "question_en": "What does the `:not()` pseudo-class do?",
+        "question_bn": "`:not()` pseudo-class কী কাজ করে?",
+        "details": {
+            "what_is_en": "The `:not()` pseudo-class is a negation pseudo-class that takes a simple selector as an argument. It selects an element that is NOT represented by the argument.",
+            "what_is_bn": "`:not()` একটি নেগেশন pseudo-class যা আর্গুমেন্ট হিসাবে একটি সাধারণ সিলেক্টর নেয়। এটি এমন একটি এলিমেন্ট নির্বাচন করে যা আর্গুমেন্ট দ্বারা উপস্থাপিত হয় না।"
+        },
+        "vip_qa": {
+            "question_en": "Give a practical example of when `:not()` is useful.",
+            "answer_en": "It's useful for styling all elements except a specific one. For example, `nav a:not(.active)` would apply a style to all links in a navigation bar except for the one that has the `.active` class."
+        }
+    },
+    {
+        "id": 40,
+        "level": "Beginner",
+        "sub_topic": "Borders",
+        "question_en": "How do you create a rounded border in CSS?",
+        "question_bn": "CSS-এ গোলাকার বর্ডার কীভাবে তৈরি করবেন?",
+        "details": {
+            "what_is_en": "You can create rounded borders using the `border-radius` property. For example, `border-radius: 10px;` will give the element corners with a 10px radius.",
+            "what_is_bn": "আপনি `border-radius` প্রপার্টি ব্যবহার করে গোলাকার বর্ডার তৈরি করতে পারেন। যেমন, `border-radius: 10px;` এলিমেন্টের কোণগুলিকে 10px ব্যাসার্ধ দেবে।"
+        },
+        "vip_qa": {
+            "question_en": "How can you use `border-radius` to create a perfect circle?",
+            "answer_en": "To create a perfect circle, you need a square element (equal width and height) and then set `border-radius: 50%;`."
+        }
+    },
+    {
+        "id": 41,
+        "level": "Intermediate",
+        "sub_topic": "Positioning",
+        "question_en": "What is `position: sticky`?",
+        "question_bn": "`position: sticky` কী?",
+        "details": {
+            "what_is_en": "`position: sticky` is a hybrid of `relative` and `fixed`. The element is treated as `relative` until it crosses a specified threshold (e.g., `top: 0`), at which point it becomes `fixed`.",
+            "what_is_bn": "`position: sticky` হলো `relative` এবং `fixed`-এর একটি সংকর। এলিমেন্টটি `relative` হিসাবে বিবেচিত হয় যতক্ষণ না এটি একটি নির্দিষ্ট থ্রেশহোল্ড (যেমন, `top: 0`) অতিক্রম করে, তখন এটি `fixed` হয়ে যায়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a common use case for `position: sticky`?",
+            "answer_en": "A very common use case is for creating navigation bars that scroll with the page initially but then 'stick' to the top of the viewport once the user scrolls past them."
+        }
+    },
+    {
+        "id": 42,
+        "level": "Beginner",
+        "sub_topic": "Specificity",
+        "question_en": "What is inheritance in CSS?",
+        "question_bn": "CSS-এ ইনহেরিটেন্স কী?",
+        "details": {
+            "what_is_en": "Inheritance is the mechanism by which some CSS properties, when applied to a parent element, are also passed down to its child elements.",
+            "what_is_bn": "ইনহেরিটেন্স হলো এমন একটি প্রক্রিয়া যার মাধ্যমে কিছু CSS প্রপার্টি, যখন একটি প্যারেন্ট এলিমেন্টে প্রয়োগ করা হয়, তখন তার চাইল্ড এলিমেন্টগুলিতেও স্থানান্তরিত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Are all properties inherited? Give an example of a property that isn't.",
+            "answer_en": "No, not all properties are inherited. Typographical properties like `font-family`, `color`, and `font-size` are typically inherited. Box model properties like `border`, `padding`, and `margin` are not inherited."
+        }
+    },
+    {
+        "id": 43,
+        "level": "Advanced",
+        "sub_topic": "Grid",
+        "question_en": "What is `grid-auto-flow`?",
+        "question_bn": "`grid-auto-flow` কী?",
+        "details": {
+            "what_is_en": "The `grid-auto-flow` property controls how auto-placed items are inserted into the grid. The default is `row`, which fills each row before moving to the next.",
+            "what_is_bn": "`grid-auto-flow` প্রপার্টি নিয়ন্ত্রণ করে যে অটো-প্লেসড আইটেমগুলি কীভাবে গ্রিডে ঢোকানো হয়। ডিফল্ট হলো `row`, যা পরবর্তী সারিতে যাওয়ার আগে প্রতিটি সারি পূরণ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What does `grid-auto-flow: dense;` do?",
+            "answer_en": "The `dense` value tells the grid's auto-placement algorithm to attempt to fill in holes in the grid. If a smaller item appears later, it can be moved back to fill an earlier gap, leading to a more compact layout."
+        }
+    },
+    {
+        "id": 44,
+        "level": "Intermediate",
+        "sub_topic": "Units",
+        "question_en": "What are viewport units (`vw`, `vh`)?",
+        "question_bn": "ভিউপোর্ট ইউনিট (`vw`, `vh`) কী?",
+        "details": {
+            "what_is_en": "Viewport units are relative to the size of the viewport (the browser window). `1vw` is 1% of the viewport's width, and `1vh` is 1% of the viewport's height.",
+            "what_is_bn": "ভিউপোর্ট ইউনিটগুলি ভিউপোর্টের (ব্রাউজার উইন্ডো) আকারের সাথে সম্পর্কিত। `1vw` হলো ভিউপোর্টের প্রস্থের 1%, এবং `1vh` হলো ভিউপোর্টের উচ্চতার 1%।"
+        },
+        "vip_qa": {
+            "question_en": "What is a great use case for viewport units?",
+            "answer_en": "They are excellent for creating full-screen sections. For example, setting `height: 100vh;` on a hero section will make it always take up the full height of the browser window, regardless of the device."
+        }
+    },
+    {
+        "id": 45,
+        "level": "Advanced",
+        "sub_topic": "Selectors",
+        "question_en": "What is the adjacent sibling combinator (`+`)?",
+        "question_bn": "অ্যাডজাসেন্ট সিবলিং কম্বিনেটর (`+`) কী?",
+        "details": {
+            "what_is_en": "The adjacent sibling combinator (`+`) selects an element that is the very next sibling of a specified element. For example, `h1 + p` selects the first `<p>` element that immediately follows an `<h1>`.",
+            "what_is_bn": "অ্যাডজাসেন্ট সিবলিং কম্বিনেটর (`+`) একটি নির্দিষ্ট এলিমেন্টের ঠিক পরবর্তী সিবলিং এলিমেন্ট নির্বাচন করে। যেমন, `h1 + p` একটি `<h1>`-এর ঠিক পরে আসা প্রথম `<p>` এলিমেন্টকে নির্বাচন করে।"
+        },
+        "vip_qa": {
+            "question_en": "How does it differ from the general sibling combinator (`~`)?",
+            "answer_en": "The general sibling combinator (`~`) is less strict. `h1 ~ p` will select all `<p>` elements that are siblings of and come after an `<h1>`, not just the one immediately following it."
+        }
+    },
+    {
+        "id": 46,
+        "level": "Intermediate",
+        "sub_topic": "Box Shadow",
+        "question_en": "How do you create a box shadow in CSS?",
+        "question_bn": "CSS-এ বক্স শ্যাডো কীভাবে তৈরি করবেন?",
+        "details": {
+            "what_is_en": "You use the `box-shadow` property. It takes values for horizontal offset, vertical offset, blur radius, spread radius, and color.",
+            "what_is_bn": "আপনি `box-shadow` প্রপার্টি ব্যবহার করবেন। এটি হরাইজন্টাল অফসেট, ভার্টিকাল অফসেট, ব্লার রেডিয়াস, স্প্রেড রেডিয়াস এবং রঙের জন্য মান নেয়।"
+        },
+        "vip_qa": {
+            "question_en": "How do you create an 'inset' shadow?",
+            "answer_en": "You can create an inner shadow (inset) by adding the `inset` keyword as the first value in the `box-shadow` declaration. This makes the shadow appear inside the element's border."
+        }
+    },
+    {
+        "id": 47,
+        "level": "Advanced",
+        "sub_topic": "Clipping & Masking",
+        "question_en": "What is the `clip-path` property?",
+        "question_bn": "`clip-path` প্রপার্টি কী?",
+        "details": {
+            "what_is_en": "The `clip-path` property creates a clipping region that determines what part of an element is shown. Parts that are inside the region are shown, while those outside are hidden.",
+            "what_is_bn": "`clip-path` প্রপার্টি একটি ক্লিপিং অঞ্চল তৈরি করে যা নির্ধারণ করে একটি এলিমেন্টের কোন অংশ দেখানো হবে। অঞ্চলের ভেতরের অংশগুলি দেখানো হয়, আর বাইরের অংশগুলি লুকিয়ে রাখা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a common use for `clip-path`?",
+            "answer_en": "It's commonly used to create non-rectangular shapes. You can use basic shapes like `circle()` or `polygon()` to clip images or divs into interesting shapes like hexagons or stars."
+        }
+    },
+    {
+        "id": 48,
+        "level": "Intermediate",
+        "sub_topic": "Opacity",
+        "question_en": "What is the `opacity` property?",
+        "question_bn": "`opacity` প্রপার্টি কী?",
+        "details": {
+            "what_is_en": "The `opacity` property specifies the transparency level of an element. The value ranges from 0.0 (fully transparent) to 1.0 (fully opaque).",
+            "what_is_bn": "`opacity` প্রপার্টি একটি এলিমেন্টের স্বচ্ছতার স্তর নির্দিষ্ট করে। এর মান 0.0 (সম্পূর্ণ স্বচ্ছ) থেকে 1.0 (সম্পূর্ণ অস্বচ্ছ) পর্যন্ত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How does setting `opacity` on a parent element affect its child elements?",
+            "answer_en": "Setting `opacity` on a parent element affects all of its child elements. You cannot make a child element more opaque than its parent. This is a key difference from using RGBA colors for transparency."
+        }
+    },
+    {
+        "id": 49,
+        "level": "Advanced",
+        "sub_topic": "Feature Queries",
+        "question_en": "What are feature queries (`@supports`)?",
+        "question_bn": "ফিচার কোয়েরি (`@supports`) কী?",
+        "details": {
+            "what_is_en": "Feature queries, using the `@supports` at-rule, allow you to test if a browser supports a specific CSS property-value pair and apply styles conditionally.",
+            "what_is_bn": "ফিচার কোয়েরি, `@supports` রুল ব্যবহার করে, আপনাকে পরীক্ষা করতে দেয় যে একটি ব্রাউজার একটি নির্দিষ্ট CSS প্রপার্টি-মান জোড়া সমর্থন করে কিনা এবং শর্তসাপেক্ষে স্টাইল প্রয়োগ করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Provide a practical use case for `@supports`.",
+            "answer_en": "It's used for progressive enhancement. For example, you could provide a basic layout using floats, and then, inside `@supports (display: grid)`, override it with a more advanced CSS Grid layout for browsers that support it."
+        }
+    },
+    {
+        "id": 50,
+        "level": "Intermediate",
+        "sub_topic": "Layout",
+        "question_en": "What is the 'float' property used for?",
+        "question_bn": "'float' প্রপার্টির কাজ কী?",
+        "details": {
+            "what_is_en": "The `float` property specifies that an element should be taken out of the normal flow and placed along the left or right side of its container, allowing text and inline elements to wrap around it.",
+            "what_is_bn": "`float` প্রপার্টি নির্দিষ্ট করে যে একটি এলিমেন্টকে স্বাভাবিক ফ্লো থেকে বের করে তার কন্টেইনারের বাম বা ডান দিকে স্থাপন করা উচিত, যাতে টেক্সট এবং ইনলাইন এলিমেন্টগুলি তার চারপাশে র‍্যাপ করতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is `float` generally not used for modern page layouts?",
+            "answer_en": "While `float` is still useful for wrapping text around images, it's not ideal for complex page layouts. Modern tools like Flexbox and CSS Grid provide far more powerful and predictable control over layout without the side effects of floats, such as needing to be 'cleared'."
+        }
+    }
+]

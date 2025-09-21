@@ -1,0 +1,452 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is MongoDB?",
+        "question_bn": "MongoDB কী?",
+        "details": {
+            "what_is_en": "MongoDB is a source-available, cross-platform, document-oriented NoSQL database program. It uses JSON-like documents with optional schemas.",
+            "what_is_bn": "MongoDB একটি সোর্স-অ্যাভেইলেবল, ক্রস-প্ল্যাটফর্ম, ডকুমেন্ট-ভিত্তিক NoSQL ডেটাবেস প্রোগ্রাম। এটি ঐচ্ছিক স্কিমা সহ JSON-এর মতো ডকুমেন্ট ব্যবহার করে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the main advantages of a document-oriented database like MongoDB over a traditional relational database (SQL)?",
+            "answer_en": "The main advantages are: 1. **Flexible Schema:** You can have documents with different fields in the same collection. 2. **Scalability:** It's designed for horizontal scaling (sharding). 3. **Performance:** It's generally faster for large amounts of unstructured data and for read/write operations."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "Explain the relationship between a Database, a Collection, and a Document.",
+        "question_bn": "ডেটাবেস, কালেকশন, এবং ডকুমেন্টের মধ্যে সম্পর্ক ব্যাখ্যা করুন।",
+        "details": {
+            "what_is_en": "A **Database** is a container for collections. A **Collection** is a group of MongoDB documents, equivalent to a table in a relational database. A **Document** is a single record, stored in BSON format, which is a key-value pair structure.",
+            "what_is_bn": "একটি **ডেটাবেস** হলো কালেকশনের কন্টেইনার। একটি **কালেকশন** হলো MongoDB ডকুমেন্টের একটি গ্রুপ, যা রিলেশনাল ডেটাবেসের টেবিলের সমতুল্য। একটি **ডকুমেন্ট** হলো একটি একক রেকর্ড, যা BSON ফরম্যাটে সংরক্ষিত থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "Does a collection enforce a schema?",
+            "answer_en": "By default, no. MongoDB collections have a **dynamic schema**, meaning documents within the same collection do not need to have the same fields. However, you can enforce a schema using MongoDB's schema validation features or at the application level with an ODM like Mongoose."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Intermediate",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is BSON?",
+        "question_bn": "BSON কী?",
+        "details": {
+            "what_is_en": "BSON stands for Binary JSON. It is a binary-encoded serialization of JSON-like documents that MongoDB uses to store data.",
+            "what_is_bn": "BSON এর অর্থ হলো বাইনারি JSON। এটি JSON-এর মতো ডকুমেন্টের একটি বাইনারি-এনকোডেড সিরিয়ালাইজেশন যা MongoDB ডেটা সংরক্ষণের জন্য ব্যবহার করে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the advantages of BSON over JSON for a database?",
+            "answer_en": "BSON has several advantages: 1. **More Data Types:** It supports data types not available in JSON, like `Date`, `ObjectId`, and binary data. 2. **Efficiency:** It's designed to be lightweight and fast for computer systems to parse and traverse."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Intermediate",
+        "sub_topic": "Data Modeling",
+        "question_en": "What is the difference between embedding and referencing documents?",
+        "question_bn": "ডকুমেন্ট এম্বেড করা এবং রেফারেন্স করার মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**Embedding** (Denormalization): You store related data within a single document. **Referencing** (Normalization): You store references (like an `ObjectId`) to documents in other collections.",
+            "what_is_bn": "**এম্বেডিং** (ডেনরমালাইজেশন): আপনি সম্পর্কিত ডেটা একটি একক ডকুমেন্টের মধ্যে সংরক্ষণ করেন। **রেফারেন্সিং** (নরমালাইজেশন): আপনি অন্য কালেকশনের ডকুমেন্টের রেফারেন্স (যেমন `ObjectId`) সংরক্ষণ করেন।"
+        },
+        "vip_qa": {
+            "question_en": "When would you choose to embed data, and when would you choose to reference it?",
+            "answer_en": "You should **embed** data when the relationship is 'contains' (e.g., comments within a blog post) and you need fast read performance. You should **reference** data when the relationship is 'uses' (e.g., an author of many books) to avoid data duplication and manage large datasets."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Intermediate",
+        "sub_topic": "Indexing",
+        "question_en": "What is an index in MongoDB?",
+        "question_bn": "MongoDB-তে ইনডেক্স কী?",
+        "details": {
+            "what_is_en": "An index is a special data structure that stores a small portion of the collection's data in an easy-to-traverse form. Indexes improve the speed of query operations.",
+            "what_is_bn": "ইনডেক্স হলো একটি বিশেষ ডেটা স্ট্রাকচার যা কালেকশনের ডেটার একটি ছোট অংশকে সহজে ট্র্যাভার্স করার মতো আকারে সংরক্ষণ করে। ইনডেক্স কোয়েরি অপারেশনের গতি উন্নত করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a compound index and why does the order of fields in it matter?",
+            "answer_en": "A **compound index** is an index on multiple fields. The order of fields is very important because the query must include the prefix fields of the index to be efficient. An index on `{ userid: 1, score: -1 }` cannot efficiently support a query that only filters on `score`."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Advanced",
+        "sub_topic": "Aggregation",
+        "question_en": "What is the MongoDB Aggregation Pipeline?",
+        "question_bn": "MongoDB অ্যাগ্রিগেশন পাইপলাইন কী?",
+        "details": {
+            "what_is_en": "The Aggregation Pipeline is a framework for data aggregation modeled on the concept of data processing pipelines. Documents enter a multi-stage pipeline that transforms them into an aggregated result.",
+            "what_is_bn": "অ্যাগ্রিগেশন পাইপলাইন হলো ডেটা অ্যাগ্রিগেশনের একটি ফ্রেমওয়ার্ক যা একাধিক ধাপে (stages) ডেটা প্রসেস করে একটি গণনা করা ফলাফল প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the purpose of the `$match`, `$group`, and `$lookup` stages.",
+            "answer_en": "`$match` filters the documents to pass only the documents that match the specified condition(s). `$group` groups documents by some specified expression and applies an accumulator expression to each group. `$lookup` performs a left outer join to another collection."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Beginner",
+        "sub_topic": "CRUD Operations",
+        "question_en": "How do you find all documents in a collection?",
+        "question_bn": "একটি কালেকশনের সমস্ত ডকুমেন্ট কীভাবে খুঁজে বের করবেন?",
+        "details": {
+            "what_is_en": "You can find all documents by using the `find()` method with an empty query object. For example, `db.collection.find({})`.",
+            "what_is_bn": "আপনি একটি খালি কোয়েরি অবজেক্ট সহ `find()` মেথড ব্যবহার করে সমস্ত ডকুমেন্ট খুঁজে পেতে পারেন। যেমন, `db.collection.find({})`।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'projection' in a find query?",
+            "answer_en": "A projection is an optional second argument to the `find()` method that specifies which fields to include or exclude from the returned documents. For example, `db.users.find({}, { name: 1, email: 1, _id: 0 })`."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Intermediate",
+        "sub_topic": "Queries",
+        "question_en": "What is the difference between `updateOne()` and `updateMany()`?",
+        "question_bn": "`updateOne()` এবং `updateMany()`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`updateOne()` updates a single document that matches the filter criteria. `updateMany()` updates all documents that match the filter criteria.",
+            "what_is_bn": "`updateOne()` ফিল্টার শর্তের সাথে মিলে যাওয়া একটি একক ডকুমেন্ট আপডেট করে। `updateMany()` ফিল্টার শর্তের সাথে মিলে যাওয়া সমস্ত ডকুমেন্ট আপডেট করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is an 'upsert' operation?",
+            "answer_en": "An 'upsert' is an operation that will either update a document if it exists or insert a new document if it does not exist. You can perform an upsert by setting the `upsert: true` option in an update operation."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Advanced",
+        "sub_topic": "Replication",
+        "question_en": "What is a replica set?",
+        "question_bn": "রেপ্লিকা সেট কী?",
+        "details": {
+            "what_is_en": "A replica set is a group of MongoDB servers that maintain the same data set, providing redundancy and high availability.",
+            "what_is_bn": "রেপ্লিকা সেট হলো MongoDB সার্ভারের একটি গ্রুপ যা একই ডেটা সেট বজায় রাখে, যা রিডানডেন্সি এবং উচ্চ প্রাপ্যতা প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between a primary and a secondary node in a replica set?",
+            "answer_en": "The **primary** node receives all write operations. The **secondary** nodes replicate the primary's data. If the primary becomes unavailable, the replica set holds an election to choose a new primary from the secondaries."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Advanced",
+        "sub_topic": "Sharding",
+        "question_en": "What is sharding in MongoDB?",
+        "question_bn": "MongoDB-তে শার্ডিং কী?",
+        "details": {
+            "what_is_en": "Sharding is a method for distributing data across multiple machines. MongoDB uses sharding to support deployments with very large data sets and high throughput operations (horizontal scaling).",
+            "what_is_bn": "শার্ডিং হলো একাধিক মেশিনে ডেটা বিতরণ করার একটি পদ্ধতি। MongoDB খুব বড় ডেটা সেট এবং উচ্চ থ্রুপুট অপারেশন (হরাইজন্টাল স্কেলিং) সহ ডেপ্লয়মেন্ট সমর্থন করতে শার্ডিং ব্যবহার করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'shard key' and why is choosing a good one important?",
+            "answer_en": "A shard key is a field that MongoDB uses to distribute a collection's documents across shards. Choosing a good shard key is crucial for performance, as it ensures an even distribution of data and workload across the cluster."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Intermediate",
+        "sub_topic": "Queries",
+        "question_en": "What does the `$in` operator do?",
+        "question_bn": "`$in` অপারেটরের কাজ কী?",
+        "details": {
+            "what_is_en": "The `$in` operator selects documents where the value of a field equals any value in the specified array.",
+            "what_is_bn": "`$in` অপারেটরটি সেইসব ডকুমেন্ট নির্বাচন করে যেখানে একটি ফিল্ডের মান নির্দিষ্ট অ্যারের যেকোনো মানের সমান।"
+        },
+        "vip_qa": {
+            "question_en": "How is `$in` different from the `$or` operator?",
+            "answer_en": "`$in` is used to match multiple values for a *single* field. `$or` is more general and is used to specify a disjunction of query clauses, which can be on *different* fields."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is the `_id` field?",
+        "question_bn": "`_id` ফিল্ড কী?",
+        "details": {
+            "what_is_en": "Every document in a collection must have a unique `_id` field that acts as its primary key. If you don't provide one, MongoDB automatically generates a unique `ObjectId`.",
+            "what_is_bn": "একটি কালেকশনের প্রতিটি ডকুমেন্টের একটি ইউনিক `_id` ফিল্ড থাকতে হবে যা তার প্রাইমারি কী হিসাবে কাজ করে। আপনি যদি একটি প্রদান না করেন, MongoDB স্বয়ংক্রিয়ভাবে একটি ইউনিক `ObjectId` তৈরি করে।"
+        },
+        "vip_qa": {
+            "question_en": "What information is encoded in a MongoDB `ObjectId`?",
+            "answer_en": "An `ObjectId` is a 12-byte value that is highly likely to be unique. It's composed of a 4-byte timestamp, a 5-byte random value, and a 3-byte incrementing counter."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Advanced",
+        "sub_topic": "Transactions",
+        "question_en": "Does MongoDB support ACID transactions?",
+        "question_bn": "MongoDB কি ACID ট্রানজেকশন সমর্থন করে?",
+        "details": {
+            "what_is_en": "Yes, MongoDB supports multi-document ACID transactions. This allows you to execute a sequence of operations that are guaranteed to either all succeed or all fail.",
+            "what_is_bn": "হ্যাঁ, MongoDB মাল্টি-ডকুমেন্ট ACID ট্রানজেকশন সমর্থন করে। এটি আপনাকে একাধিক অপারেশনের একটি ক্রম এক্সিকিউট করতে দেয় যা হয় সব সফল হবে বা সব ব্যর্থ হবে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a prerequisite for using transactions in MongoDB?",
+            "answer_en": "To use transactions, you must be using a MongoDB replica set or a sharded cluster. Transactions are not supported on standalone server deployments."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Intermediate",
+        "sub_topic": "Indexing",
+        "question_en": "What is a unique index?",
+        "question_bn": "ইউনিক ইনডেক্স কী?",
+        "details": {
+            "what_is_en": "A unique index ensures that the indexed fields do not store duplicate values; i.e., enforces uniqueness for a field or a combination of fields.",
+            "what_is_bn": "ইউনিক ইনডেক্স নিশ্চিত করে যে ইনডেক্স করা ফিল্ডগুলিতে ডুপ্লিকেট মান সংরক্ষণ করা হয় না; অর্থাৎ, একটি ফিল্ড বা ফিল্ডের সংমিশ্রণের জন্য ইউনিকনেস প্রয়োগ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What happens if you try to insert a document that violates a unique index?",
+            "answer_en": "The insert operation will fail and MongoDB will return a duplicate key error (E11000)."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Advanced",
+        "sub_topic": "Performance",
+        "question_en": "How can you analyze the performance of a query in MongoDB?",
+        "question_bn": "MongoDB-তে একটি কোয়েরির পারফরম্যান্স কীভাবে বিশ্লেষণ করতে পারেন?",
+        "details": {
+            "what_is_en": "You can use the `explain()` method on a cursor. It provides detailed information about the query plan, including which indexes were used and how many documents were scanned.",
+            "what_is_bn": "আপনি একটি কার্সারে `explain()` মেথড ব্যবহার করতে পারেন। এটি কোয়েরি প্ল্যান সম্পর্কে বিস্তারিত তথ্য প্রদান করে, যার মধ্যে কোন ইনডেক্স ব্যবহার করা হয়েছে এবং কতগুলি ডকুমেন্ট স্ক্যান করা হয়েছে তা অন্তর্ভুক্ত থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "In an `explain()` result, what is the difference between `totalDocsExamined` and `totalKeysExamined`?",
+            "answer_en": "`totalKeysExamined` is the number of index entries scanned. `totalDocsExamined` is the number of documents scanned. An efficient query will have these numbers very close to the number of documents returned."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Beginner",
+        "sub_topic": "CRUD Operations",
+        "question_en": "How do you delete documents from a collection?",
+        "question_bn": "একটি কালেকশন থেকে ডকুমেন্ট কীভাবে মুছবেন?",
+        "details": {
+            "what_is_en": "You can use the `deleteOne()` method to delete a single document that matches a filter, or `deleteMany()` to delete all documents that match a filter.",
+            "what_is_bn": "আপনি একটি ফিল্টারের সাথে মিলে যাওয়া একটি একক ডকুমেন্ট মুছতে `deleteOne()` মেথড বা একটি ফিল্টারের সাথে মিলে যাওয়া সমস্ত ডকুমেন্ট মুছতে `deleteMany()` মেথড ব্যবহার করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What happens if you call `deleteMany({})`?",
+            "answer_en": "Calling `deleteMany({})` with an empty filter object will delete all documents in the collection. This is a destructive operation and should be used with extreme caution."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Intermediate",
+        "sub_topic": "Operators",
+        "question_en": "What is the `$set` update operator used for?",
+        "question_bn": "`$set` আপডেট অপারেটর কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `$set` operator replaces the value of a field with the specified value. If the field does not exist, `$set` will add a new field with the specified value.",
+            "what_is_bn": "`$set` অপারেটর একটি ফিল্ডের মান নির্দিষ্ট মান দিয়ে প্রতিস্থাপন করে। যদি ফিল্ডটি বিদ্যমান না থাকে, `$set` নির্দিষ্ট মান সহ একটি নতুন ফিল্ড যোগ করবে।"
+        },
+        "vip_qa": {
+            "question_en": "How is this different from passing an entire object to an update operation without any operators?",
+            "answer_en": "If you pass an update object without any operators (like `$set`), MongoDB will perform a full replacement of the document, deleting all existing fields and replacing them with the fields in the new object (except for the `_id`)."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Advanced",
+        "sub_topic": "Capped Collections",
+        "question_en": "What is a capped collection?",
+        "question_bn": "ক্যাপড কালেকশন কী?",
+        "details": {
+            "what_is_en": "A capped collection is a fixed-size collection that automatically overwrites its oldest entries when it reaches its maximum size. It maintains insertion order.",
+            "what_is_bn": "ক্যাপড কালেকশন হলো একটি নির্দিষ্ট আকারের কালেকশন যা তার সর্বোচ্চ আকারে পৌঁছালে স্বয়ংক্রিয়ভাবে তার সবচেয়ে পুরানো এন্ট্রিগুলি ওভাররাইট করে। এটি ইনসার্শন অর্ডার বজায় রাখে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a common use case for a capped collection?",
+            "answer_en": "A common use case is for storing high-volume log data. Because the collection has a fixed size, you don't have to worry about it growing indefinitely, and old log entries are automatically purged."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Intermediate",
+        "sub_topic": "Queries",
+        "question_en": "How do you perform a text search in MongoDB?",
+        "question_bn": "MongoDB-তে টেক্সট সার্চ কীভাবে করবেন?",
+        "details": {
+            "what_is_en": "You first need to create a `text` index on the fields you want to search. Then, you can use the `$text` operator in your query with a `$search` string.",
+            "what_is_bn": "আপনাকে প্রথমে যে ফিল্ডগুলিতে সার্চ করতে চান সেগুলিতে একটি `text` ইনডেক্স তৈরি করতে হবে। তারপর, আপনি আপনার কোয়েরিতে `$search` স্ট্রিং সহ `$text` অপারেটর ব্যবহার করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "Can a collection have more than one text index?",
+            "answer_en": "No, a collection can have at most one text index. The index can cover multiple fields, but you cannot create multiple text indexes on the same collection."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Intermediate",
+        "sub_topic": "Operators",
+        "question_en": "What does the `$exists` operator do?",
+        "question_bn": "`$exists` অপারেটরের কাজ কী?",
+        "details": {
+            "what_is_en": "The `$exists` operator matches documents that have (or do not have) a specified field. For example, `db.inventory.find({ qty: { $exists: true } })`.",
+            "what_is_bn": "`$exists` অপারেটরটি সেইসব ডকুমেন্ট ম্যাচ করে যেগুলিতে একটি নির্দিষ্ট ফিল্ড আছে (বা নেই)। যেমন, `db.inventory.find({ qty: { $exists: true } })`।"
+        },
+        "vip_qa": {
+            "question_en": "How would you find documents where a field exists but its value is `null`?",
+            "answer_en": "You would use a query that checks for both conditions: `db.collection.find({ myField: { $exists: true, $eq: null } })`."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Beginner",
+        "sub_topic": "Data Modeling",
+        "question_en": "How do you model a one-to-many relationship?",
+        "question_bn": "আপনি একটি ওয়ান-টু-মেনি সম্পর্ক কীভাবে মডেল করবেন?",
+        "details": {
+            "what_is_en": "You can either embed the 'many' side as an array of subdocuments in the 'one' side, or you can reference the 'one' side's ID from each of the 'many' documents.",
+            "what_is_bn": "আপনি 'মেনি' দিকটিকে 'ওয়ান' দিকের সাবডকুমেন্টের একটি অ্যারে হিসাবে এম্বেড করতে পারেন, অথবা আপনি 'মেনি' ডকুমেন্টগুলির প্রত্যেকটি থেকে 'ওয়ান' দিকের আইডি রেফারেন্স করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "Which approach is better for a 'one-to-bazillion' relationship (e.g., a popular product and its millions of log entries)?",
+            "answer_en": "For a 'one-to-bazillion' relationship, you should always use referencing. Embedding would create a massive, unbounded document for the 'one' side, which is a major anti-pattern and would hit MongoDB's 16MB document size limit."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Advanced",
+        "sub_topic": "Aggregation",
+        "question_en": "What is the `$unwind` stage in an aggregation pipeline?",
+        "question_bn": "অ্যাগ্রিগেশন পাইপলাইনে `$unwind` স্টেজ কী?",
+        "details": {
+            "what_is_en": "The `$unwind` stage deconstructs an array field from the input documents to output a document for each element. Each output document is the input document with the value of the array field replaced by the element.",
+            "what_is_bn": "`$unwind` স্টেজটি ইনপুট ডকুমেন্ট থেকে একটি অ্যারে ফিল্ডকে ডিকনস্ট্রাক্ট করে প্রতিটি এলিমেন্টের জন্য একটি ডকুমেন্ট আউটপুট করে। প্রতিটি আউটপুট ডকুমেন্ট হলো ইনপুট ডকুমেন্ট যেখানে অ্যারে ফিল্ডের মান এলিমেন্ট দ্বারা প্রতিস্থাপিত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why is `$unwind` often used before a `$group` stage?",
+            "answer_en": "It's used to treat each element of an array as an individual document so that you can group and perform aggregations based on the values within the array. For example, to calculate the average score for each tag in a `tags` array."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Intermediate",
+        "sub_topic": "Queries",
+        "question_en": "How do you query for a value inside an array?",
+        "question_bn": "একটি অ্যারের ভিতরের একটি মানের জন্য কীভাবে কোয়েরি করবেন?",
+        "details": {
+            "what_is_en": "You can query for a value directly. For example, `db.collection.find({ tags: 'red' })` will find all documents where the `tags` array contains the string 'red'.",
+            "what_is_bn": "আপনি সরাসরি একটি মানের জন্য কোয়েরি করতে পারেন। যেমন, `db.collection.find({ tags: 'red' })` সেইসব ডকুমেন্ট খুঁজে বের করবে যেখানে `tags` অ্যারেতে 'red' স্ট্রিংটি রয়েছে।"
+        },
+        "vip_qa": {
+            "question_en": "How do you query for documents where an array field contains ALL of the specified values?",
+            "answer_en": "You use the `$all` operator. For example: `db.collection.find({ tags: { $all: ['red', 'blue'] } })` will find documents where the `tags` array contains both 'red' and 'blue'."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Advanced",
+        "sub_topic": "Operators",
+        "question_en": "What does the `$elemMatch` operator do?",
+        "question_bn": "`$elemMatch` অপারেটরের কাজ কী?",
+        "details": {
+            "what_is_en": "The `$elemMatch` operator matches documents that contain an array field with at least one element that matches all the specified query criteria.",
+            "what_is_bn": "`$elemMatch` অপারেটরটি সেইসব ডকুমেন্ট ম্যাচ করে যেগুলিতে একটি অ্যারে ফিল্ড রয়েছে যার অন্তত একটি এলিমেন্ট সমস্ত নির্দিষ্ট কোয়েরি শর্তের সাথে মেলে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is `$elemMatch` necessary when querying an array of objects?",
+            "answer_en": "It's necessary to ensure that a single subdocument meets all criteria. A simple query like `find({ results: { $gte: 80, $lt: 85 } })` could match a document where one result is 90 and another is 70. `find({ results: { $elemMatch: { $gte: 80, $lt: 85 } } })` ensures a single result element satisfies both conditions."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Beginner",
+        "sub_topic": "Tools",
+        "question_en": "What is MongoDB Compass?",
+        "question_bn": "MongoDB কম্পাস কী?",
+        "details": {
+            "what_is_en": "MongoDB Compass is the official graphical user interface (GUI) for MongoDB. It allows you to visualize and explore your data, run queries, and optimize performance.",
+            "what_is_bn": "MongoDB কম্পাস হলো MongoDB-এর জন্য অফিসিয়াল গ্রাফিক্যাল ইউজার ইন্টারফেস (GUI)। এটি আপনাকে আপনার ডেটা ভিজ্যুয়ালাইজ এবং এক্সপ্লোর করতে, কোয়েরি চালাতে এবং পারফরম্যান্স অপটিমাইজ করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a key feature of Compass for developers?",
+            "answer_en": "One of its most useful features is the visual `explain` plan, which helps developers understand how their queries are being executed and identify performance bottlenecks. It also has a built-in schema visualization tool."
+        }
+    },
+    {
+        "id": 26,
+        "level": "Intermediate",
+        "sub_topic": "Operators",
+        "question_en": "What does the `$inc` update operator do?",
+        "question_bn": "`$inc` আপডেট অপারেটরের কাজ কী?",
+        "details": {
+            "what_is_en": "The `$inc` operator increments a field by a specified value. If the field does not exist, it creates the field and sets it to the specified value.",
+            "what_is_bn": "`$inc` অপারেটর একটি ফিল্ডকে নির্দিষ্ট মান দ্বারা বৃদ্ধি করে। যদি ফিল্ডটি বিদ্যমান না থাকে, তবে এটি ফিল্ডটি তৈরি করে এবং এটিকে নির্দিষ্ট মানে সেট করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is using `$inc` better than reading a value, incrementing it in the application, and then writing it back?",
+            "answer_en": "Using `$inc` is better because it's an atomic operation. This prevents race conditions where two separate processes might read the same value and overwrite each other's updates, leading to incorrect data."
+        }
+    },
+    {
+        "id": 27,
+        "level": "Advanced",
+        "sub_topic": "Security",
+        "question_en": "What is role-based access control (RBAC)?",
+        "question_bn": "রোল-ভিত্তিক অ্যাক্সেস কন্ট্রোল (RBAC) কী?",
+        "details": {
+            "what_is_en": "RBAC is a method of restricting network access based on the roles of individual users within an enterprise. In MongoDB, you can create roles that grant a set of privileges, and then assign those roles to users.",
+            "what_is_bn": "RBAC হলো একটি প্রতিষ্ঠানে ব্যক্তিগত ব্যবহারকারীদের ভূমিকার উপর ভিত্তি করে নেটওয়ার্ক অ্যাক্সেস সীমাবদ্ধ করার একটি পদ্ধতি। MongoDB-তে, আপনি রোল তৈরি করতে পারেন যা কিছু প্রিভিলেজ প্রদান করে এবং তারপর সেই রোলগুলি ব্যবহারকারীদেরকে অ্যাসাইন করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'privilege' in MongoDB's security model?",
+            "answer_en": "A privilege is a combination of a specified resource (like a database or collection) and a permitted action (like `find` or `insert`). A role is essentially a collection of these privileges."
+        }
+    },
+    {
+        "id": 28,
+        "level": "Intermediate",
+        "sub_topic": "Operators",
+        "question_en": "What do the `$push` and `$pop` operators do?",
+        "question_bn": "`$push` এবং `$pop` অপারেটরের কাজ কী?",
+        "details": {
+            "what_is_en": "The `$push` operator appends a specified value to an array. The `$pop` operator removes either the first or the last element of an array.",
+            "what_is_bn": "`$push` অপারেটর একটি নির্দিষ্ট মান একটি অ্যারেতে যুক্ত করে। `$pop` অপারেটর একটি অ্যারের প্রথম বা শেষ এলিমেন্টটি সরিয়ে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `$push` and `$addToSet`?",
+            "answer_en": "`$push` will add an item to an array regardless of whether it already exists. `$addToSet` will only add the item to the array if it does not already exist, ensuring all items in the array are unique."
+        }
+    },
+    {
+        "id": 29,
+        "level": "Beginner",
+        "sub_topic": "Queries",
+        "question_en": "What does a cursor do in MongoDB?",
+        "question_bn": "MongoDB-তে একটি কার্সার কী কাজ করে?",
+        "details": {
+            "what_is_en": "When you execute a `find()` query, MongoDB returns a cursor, which is a pointer to the result set. You can then iterate through the cursor to retrieve the documents.",
+            "what_is_bn": "যখন আপনি একটি `find()` কোয়েরি এক্সিকিউট করেন, MongoDB একটি কার্সার রিটার্ন করে, যা ফলাফল সেটের একটি পয়েন্টার। আপনি তারপর ডকুমেন্টগুলি পুনরুদ্ধার করতে কার্সারের মাধ্যমে ইটারেট করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "Why is using a cursor more memory-efficient than fetching all results at once?",
+            "answer_en": "A cursor fetches documents from the database in batches. This prevents the need to load the entire result set into the application's memory at once, which is crucial for queries that return a very large number of documents."
+        }
+    },
+    {
+        "id": 30,
+        "level": "Advanced",
+        "sub_topic": "Indexes",
+        "question_en": "What is a covered query?",
+        "question_bn": "কভার্ড কোয়েরি কী?",
+        "details": {
+            "what_is_en": "A covered query is a query where MongoDB can satisfy the entire query (both the query criteria and the returned fields) using only the data from an index, without having to look at the actual documents.",
+            "what_is_bn": "কভার্ড কোয়েরি হলো এমন একটি কোয়েরি যেখানে MongoDB শুধুমাত্র একটি ইনডেক্সের ডেটা ব্যবহার করে সম্পূর্ণ কোয়েরিটি (কোয়েরির শর্ত এবং রিটার্ন করা ফিল্ড উভয়ই) সন্তুষ্ট করতে পারে, আসল ডকুমেন্টগুলি না দেখেই।"
+        },
+        "vip_qa": {
+            "question_en": "What are the two conditions for a query to be a covered query?",
+            "answer_en": "1. All fields in the query filter must be part of an index. 2. All fields returned in the projection must also be in the same index. (Note: The `_id` field is returned by default and must also be in the index or explicitly excluded)."
+        }
+    }
+]

@@ -1,0 +1,527 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is Next.js?",
+        "question_bn": "Next.js কী?",
+        "details": {
+            "what_is_en": "Next.js is a production-ready React framework that enables features like Server-Side Rendering (SSR), Static Site Generation (SSG), and more, making it easier to build fast and SEO-friendly web applications.",
+            "what_is_bn": "Next.js হলো একটি প্রোডাকশন-রেডি React ফ্রেমওয়ার্ক যা সার্ভার-সাইড রেন্ডারিং (SSR) এবং স্ট্যাটিক সাইট জেনারেশন (SSG)-এর মতো ফিচারগুলো সক্ষম করে, যা দ্রুত এবং SEO-বান্ধব ওয়েব অ্যাপ্লিকেশন তৈরি করা সহজ করে তোলে।"
+        },
+        "vip_qa": {
+            "question_en": "What key problems does Next.js solve compared to a client-side React app created with Create React App (CRA)?",
+            "answer_en": "Next.js primarily solves two major problems of client-side React apps: 1. **Poor SEO:** Since the initial HTML is empty, search engine crawlers struggle to index the content. Next.js pre-renders the HTML on the server, making it fully indexable. 2. **Slow Initial Load:** Users have to wait for the entire JavaScript bundle to download and execute before seeing any content. Next.js sends fully rendered HTML, improving the perceived performance."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "Rendering",
+        "question_en": "What is the difference between SSR and SSG?",
+        "question_bn": "SSR এবং SSG-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**SSR (Server-Side Rendering):** The HTML for a page is generated on the server for each request. **SSG (Static Site Generation):** The HTML for a page is generated once at build time.",
+            "what_is_bn": "**SSR (সার্ভার-সাইড রেন্ডারিং):** প্রতিটি রিকোয়েস্টের জন্য সার্ভারে পেজের HTML তৈরি হয়। **SSG (স্ট্যাটিক সাইট জেনারেশন):** বিল্ড টাইমে একবারই পেজের HTML তৈরি হয়।"
+        },
+        "vip_qa": {
+            "question_en": "When would you choose SSR over SSG?",
+            "answer_en": "You should choose SSR when the page content is highly dynamic and personalized for each user, and it must be up-to-date on every request. A good example is a user dashboard or a social media feed."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Intermediate",
+        "sub_topic": "Rendering",
+        "question_en": "What is Incremental Static Regeneration (ISR)?",
+        "question_bn": "ইনক্রিমেন্টাল স্ট্যাটিক রিজেনারেশন (ISR) কী?",
+        "details": {
+            "what_is_en": "ISR is a hybrid rendering strategy that allows you to update static pages *after* the site has been built. It serves the cached static page and re-generates it in the background after a certain time interval.",
+            "what_is_bn": "ISR একটি হাইব্রিড রেন্ডারিং কৌশল যা আপনাকে সাইট বিল্ড হওয়ার *পরেও* স্ট্যাটিক পেজ আপডেট করতে দেয়। এটি ক্যাশ করা স্ট্যাটিক পেজটি পরিবেশন করে এবং একটি নির্দিষ্ট সময় পর ব্যাকগ্রাউন্ডে এটি পুনরায় তৈরি করে।"
+        },
+        "vip_qa": {
+            "question_en": "How do you implement ISR in the Pages Router?",
+            "answer_en": "You implement ISR by adding a `revalidate` property (with a time in seconds) to the object returned by `getStaticProps`. For example: `return { props: { data }, revalidate: 60 }`."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Intermediate",
+        "sub_topic": "App Router",
+        "question_en": "What are React Server Components (RSCs)?",
+        "question_bn": "React সার্ভার কম্পোনেন্টস (RSCs) কী?",
+        "details": {
+            "what_is_en": "RSCs are a new type of component introduced by React that run exclusively on the server. They never ship JavaScript to the client, which helps reduce the client-side bundle size.",
+            "what_is_bn": "RSC হলো React দ্বারা প্রবর্তিত একটি নতুন ধরণের কম্পোনেন্ট যা শুধুমাত্র সার্ভারে রান হয়। এগুলি ক্লায়েন্টে কোনো JavaScript পাঠায় না, যা ক্লায়েন্ট-সাইড বান্ডেলের আকার কমাতে সাহায্য করে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the main benefits of using RSCs?",
+            "answer_en": "The main benefits are: 1. **Zero Client-Side JavaScript:** Reduces the amount of code sent to the browser. 2. **Direct Backend Access:** They can securely access databases, internal services, and filesystems directly on the server without needing an API layer."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Intermediate",
+        "sub_topic": "App Router",
+        "question_en": "What is the difference between a Server Component and a Client Component?",
+        "question_bn": "সার্ভার কম্পোনেন্ট এবং ক্লায়েন্ট কম্পোনেন্টের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "In the App Router, components are Server Components by default. To make a component a **Client Component**, you must add the `'use client'` directive at the top. Client Components can use state, effects, and event listeners, while Server Components cannot.",
+            "what_is_bn": "অ্যাপ রাউটারে, কম্পোনেন্টগুলি ডিফল্টভাবে সার্ভার কম্পোনেন্ট হয়। একটি কম্পোনেন্টকে **ক্লায়েন্ট কম্পোনেন্ট** করতে হলে, আপনাকে ফাইলের শুরুতে `'use client'` ডিরেক্টিভ যোগ করতে হবে। ক্লায়েন্ট কম্পোনেন্ট state, effects, এবং event listeners ব্যবহার করতে পারে, যা সার্ভার কম্পোনেন্ট পারে না।"
+        },
+        "vip_qa": {
+            "question_en": "Can you import a Server Component into a Client Component? Explain the pattern.",
+            "answer_en": "You **cannot** directly import a Server Component into a Client Component's file. However, you **can** pass a Server Component as a `prop` (specifically `children`) to a Client Component. This allows you to 'slot' server-rendered content inside an interactive client-side layout."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Intermediate",
+        "sub_topic": "App Router",
+        "question_en": "How do you fetch data in the App Router?",
+        "question_bn": "অ্যাপ রাউটারে ডেটা ফেচ কীভাবে করবেন?",
+        "details": {
+            "what_is_en": "In Server Components, you can simply use `async/await` directly within the component to fetch data. There is no need for special functions like `getServerSideProps` or `getStaticProps`.",
+            "what_is_bn": "সার্ভার কম্পোনেন্টে, আপনি ডেটা ফেচ করার জন্য সরাসরি কম্পোনেন্টের ভিতরে `async/await` ব্যবহার করতে পারেন। এর জন্য `getServerSideProps` বা `getStaticProps`-এর মতো বিশেষ ফাংশনের প্রয়োজন নেই।"
+        },
+        "vip_qa": {
+            "question_en": "How does Next.js handle caching for `fetch` requests in Server Components?",
+            "answer_en": "Next.js extends the native `fetch` API to allow you to configure caching behavior on a per-request basis. By default, fetches are cached (`cache: 'force-cache'`). You can change this with options like `{ cache: 'no-store' }` for dynamic data or `{ next: { revalidate: 3600 } }` for ISR."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Intermediate",
+        "sub_topic": "Pages Router",
+        "question_en": "What is the difference between `getStaticProps` and `getServerSideProps`?",
+        "question_bn": "`getStaticProps` এবং `getServerSideProps`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`getStaticProps` fetches data at build time to pre-render a page as static HTML (SSG). `getServerSideProps` fetches data on each request from the server to render the page (SSR).",
+            "what_is_bn": "`getStaticProps` বিল্ড টাইমে ডেটা ফেচ করে (SSG)। `getServerSideProps` প্রতিটি রিকোয়েস্টের সময় সার্ভারে ডেটা ফেচ করে (SSR)।"
+        },
+        "vip_qa": {
+            "question_en": "Can you use `getStaticProps` on a page that has a dynamic route like `/posts/[id]`?",
+            "answer_en": "Yes, but you must also use `getStaticPaths` to tell Next.js which paths to pre-render at build time. `getStaticPaths` must return an object with a `paths` array."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Advanced",
+        "sub_topic": "App Router",
+        "question_en": "What are Server Actions?",
+        "question_bn": "সার্ভার অ্যাকশন কী?",
+        "details": {
+            "what_is_en": "Server Actions are asynchronous functions that are declared on the server and can be called from either Server or Client Components. They are typically used for data mutations, like form submissions.",
+            "what_is_bn": "সার্ভার অ্যাকশন হলো অ্যাসিঙ্ক্রোনাস ফাংশন যা সার্ভারে ডিক্লেয়ার করা হয় এবং সার্ভার বা ক্লায়েন্ট কম্পোনেন্ট থেকে কল করা যায়। এগুলি সাধারণত ডেটা মিউটেশন, যেমন ফর্ম জমা দেওয়ার জন্য ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the benefit of using Server Actions over traditional API routes for form submissions?",
+            "answer_en": "Server Actions simplify data mutations by removing the need to manually create API endpoints. You can define the server-side logic directly in your component or a separate file and call it from your form, leading to less boilerplate code."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Beginner",
+        "sub_topic": "Routing",
+        "question_en": "How does file-based routing work in Next.js?",
+        "question_bn": "Next.js-এ ফাইল-ভিত্তিক রাউটিং কীভাবে কাজ করে?",
+        "details": {
+            "what_is_en": "Next.js uses the file system to define routes. Each file inside the `pages` directory (or a `page.js` file inside the `app` directory) automatically becomes a route that maps to the file path.",
+            "what_is_bn": "Next.js রাউট নির্ধারণ করতে ফাইল সিস্টেম ব্যবহার করে। `pages` ডিরেক্টরির ভিতরের প্রতিটি ফাইল (অথবা `app` ডিরেক্টরির ভিতরের একটি `page.js` ফাইল) স্বয়ংক্রিয়ভাবে একটি রাউটে পরিণত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How do you create a dynamic route segment?",
+            "answer_en": "You create a dynamic route by wrapping a file or folder name in square brackets. For example, `app/blog/[slug]/page.js` creates a dynamic route where `slug` can be any value."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Intermediate",
+        "sub_topic": "Optimization",
+        "question_en": "What is the `next/image` component?",
+        "question_bn": "`next/image` কম্পোনেন্ট কী?",
+        "details": {
+            "what_is_en": "The `next/image` component is an extension of the HTML `<img>` element, evolved for the modern web. It includes a variety of built-in performance optimizations.",
+            "what_is_bn": "`next/image` কম্পোনেন্টটি HTML `<img>` এলিমেন্টের একটি এক্সটেনশন যা আধুনিক ওয়েবের জন্য তৈরি। এতে বিভিন্ন বিল্ট-ইন পারফরম্যান্স অপটিমাইজেশন রয়েছে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the key optimizations provided by the `next/image` component?",
+            "answer_en": "Key optimizations include: 1. **Image Resizing:** Automatically serves smaller images for smaller devices. 2. **Modern Formats:** Converts images to modern formats like WebP. 3. **Lazy Loading:** Images are loaded only when they enter the viewport. 4. **Preventing Cumulative Layout Shift (CLS):** Automatically reserves space for the image before it loads."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Intermediate",
+        "sub_topic": "App Router",
+        "question_en": "What is the purpose of `layout.js` and `template.js` files in the App Router?",
+        "question_bn": "অ্যাপ রাউটারে `layout.js` এবং `template.js` ফাইলের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "A `layout.js` file defines a UI that is shared between multiple pages. A layout preserves state and does not re-render. A `template.js` is similar, but it creates a new instance for each child on navigation, meaning state is not preserved.",
+            "what_is_bn": "`layout.js` ফাইলটি একাধিক পেজের মধ্যে শেয়ার করা একটি UI নির্ধারণ করে। একটি লেআউট স্টেট সংরক্ষণ করে এবং পুনরায় রেন্ডার হয় না। `template.js` একই রকম, তবে এটি নেভিগেশনের সময় প্রতিটি চাইল্ডের জন্য একটি নতুন ইনস্ট্যান্স তৈরি করে, যার মানে স্টেট সংরক্ষিত হয় না।"
+        },
+        "vip_qa": {
+            "question_en": "When would you use `template.js` over `layout.js`?",
+            "answer_en": "You would use `template.js` when you need to re-run effects (`useEffect`) or re-fetch data on every navigation to a route within that template, or when you need to re-initialize state."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Intermediate",
+        "sub_topic": "API Routes",
+        "question_en": "What are API Routes (or Route Handlers)?",
+        "question_bn": "API রাউট (বা রাউট হ্যান্ডলার) কী?",
+        "details": {
+            "what_is_en": "They allow you to create backend API endpoints as part of your Next.js application. In the Pages Router, any file inside `pages/api` is an endpoint. In the App Router, a `route.js` file serves this purpose.",
+            "what_is_bn": "এগুলি আপনাকে আপনার Next.js অ্যাপ্লিকেশনের অংশ হিসাবে ব্যাকএন্ড API এন্ডপয়েন্ট তৈরি করতে দেয়। পেজ রাউটারে, `pages/api`-এর ভেতরের যেকোনো ফাইল একটি এন্ডপয়েন্ট। অ্যাপ রাউটারে, একটি `route.js` ফাইল এই কাজটি করে।"
+        },
+        "vip_qa": {
+            "question_en": "When would you use Next.js API Routes versus a separate backend server (e.g., with Express)?",
+            "answer_en": "Use Next.js API Routes for simpler tasks tied to your frontend, like form submissions or acting as a proxy. Build a separate backend for complex, data-intensive applications, or when you need to serve multiple clients (e.g., web and mobile)."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Advanced",
+        "sub_topic": "Middleware",
+        "question_en": "What is Middleware in Next.js?",
+        "question_bn": "Next.js-এ মিডলওয়্যার কী?",
+        "details": {
+            "what_is_en": "Middleware allows you to run code before a request is completed. Based on the incoming request, you can modify the response by rewriting, redirecting, modifying headers, or streaming.",
+            "what_is_bn": "মিডলওয়্যার আপনাকে একটি রিকোয়েস্ট সম্পন্ন হওয়ার আগে কোড চালানোর অনুমতি দেয়। আগত রিকোয়েস্টের উপর ভিত্তি করে, আপনি রেসপন্স পরিবর্তন করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "Where does Middleware run and what is a common use case?",
+            "answer_en": "Middleware runs on a special runtime called the 'Edge Runtime', which is very fast and lightweight. Common use cases include authentication, A/B testing, and handling internationalization (i18n) routing."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Beginner",
+        "sub_topic": "Styling",
+        "question_en": "How can you style Next.js applications?",
+        "question_bn": "Next.js অ্যাপ্লিকেশন স্টাইল কীভাবে করবেন?",
+        "details": {
+            "what_is_en": "Next.js has built-in support for several styling methods, including global CSS, CSS Modules for component-level styles, and Sass. It also works seamlessly with popular libraries like Tailwind CSS.",
+            "what_is_bn": "Next.js গ্লোবাল CSS, কম্পোনেন্ট-স্তরের স্টাইলের জন্য CSS মডিউল এবং Sass সহ বিভিন্ন স্টাইলিং পদ্ধতি সমর্থন করে। এটি Tailwind CSS-এর মতো জনপ্রিয় লাইব্রেরির সাথেও কাজ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the advantage of using CSS Modules in a Next.js project?",
+            "answer_en": "CSS Modules automatically generate unique class names for your styles, scoping them locally to the component. This prevents class name collisions, which can be a major issue in large applications with many CSS files."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Intermediate",
+        "sub_topic": "Optimization",
+        "question_en": "What is the `next/font` component?",
+        "question_bn": "`next/font` কম্পোনেন্ট কী?",
+        "details": {
+            "what_is_en": "`next/font` is a component that automatically optimizes your local and Google fonts. It inlines font CSS at build time, eliminating an extra network request for improved performance.",
+            "what_is_bn": "`next/font` একটি কম্পোনেন্ট যা স্বয়ংক্রিয়ভাবে আপনার লোকাল এবং গুগল ফন্ট অপটিমাইজ করে। এটি বিল্ড টাইমে ফন্ট CSS ইনলাইন করে, যা পারফরম্যান্স উন্নত করতে একটি অতিরিক্ত নেটওয়ার্ক রিকোয়েস্ট দূর করে।"
+        },
+        "vip_qa": {
+            "question_en": "How does `next/font` help prevent Cumulative Layout Shift (CLS)?",
+            "answer_en": "By self-hosting the font files and preloading them, `next/font` ensures that the font is available when the page is first rendered. This prevents the 'flash' of a fallback font being replaced by the custom font, which would cause a layout shift."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Advanced",
+        "sub_topic": "App Router",
+        "question_en": "What are Parallel Routes?",
+        "question_bn": "প্যারালাল রাউট কী?",
+        "details": {
+            "what_is_en": "Parallel Routes allow you to simultaneously render one or more pages within the same layout. They are defined using named 'slots'.",
+            "what_is_bn": "প্যারালাল রাউট আপনাকে একই লেআউটের মধ্যে এক বা একাধিক পেজ একসাথে রেন্ডার করতে দেয়। এগুলি নামযুক্ত 'স্লট' ব্যবহার করে সংজ্ঞায়িত করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a practical use case for Parallel Routes?",
+            "answer_en": "A great use case is for dashboards. You can have separate, independent sections of the dashboard (like team activity, user settings, and analytics) each rendered in its own parallel route, with its own loading and error states."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Advanced",
+        "sub_topic": "App Router",
+        "question_en": "What are Intercepting Routes?",
+        "question_bn": "ইন্টারসেপ্টিং রাউট কী?",
+        "details": {
+            "what_is_en": "Intercepting Routes allow you to load a route from another part of your application within the current layout. This is useful when you want to show the content of a route without a full page navigation.",
+            "what_is_bn": "ইন্টারসেপ্টিং রাউট আপনাকে আপনার অ্যাপ্লিকেশনের অন্য অংশ থেকে একটি রাউট বর্তমান লেআউটের মধ্যে লোড করতে দেয়। এটি পূর্ণ পেজ নেভিগেশন ছাড়াই একটি রাউটের বিষয়বস্তু দেখানোর জন্য দরকারী।"
+        },
+        "vip_qa": {
+            "question_en": "What is a common user experience pattern implemented with Intercepting Routes?",
+            "answer_en": "A very common pattern is showing a modal. When a user clicks a link, you can 'intercept' the navigation and show the content in a modal overlay. However, if the user refreshes the page or navigates directly to the URL, the full page for that route is rendered instead."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Intermediate",
+        "sub_topic": "Environment Variables",
+        "question_en": "How do you use environment variables in Next.js?",
+        "question_bn": "Next.js-এ এনভায়রনমেন্ট ভেরিয়েবল কীভাবে ব্যবহার করবেন?",
+        "details": {
+            "what_is_en": "You can add environment variables by creating a `.env.local` file in the root of your project. By default, they are only available on the server-side.",
+            "what_is_bn": "আপনি আপনার প্রজেক্টের রুটে একটি `.env.local` ফাইল তৈরি করে এনভায়রনমেন্ট ভেরিয়েবল যোগ করতে পারেন। ডিফল্টভাবে, এগুলি শুধুমাত্র সার্ভার-সাইডে উপলব্ধ থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "How do you expose an environment variable to the browser?",
+            "answer_en": "To expose a variable to the browser, you need to prefix it with `NEXT_PUBLIC_`. For example, `NEXT_PUBLIC_API_KEY` would be available in both server and client components."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Advanced",
+        "sub_topic": "App Router",
+        "question_en": "What are Route Groups?",
+        "question_bn": "রাউট গ্রুপ কী?",
+        "details": {
+            "what_is_en": "A route group is a way to organize your routes into groups without affecting the URL path. This is done by wrapping a folder's name in parentheses, e.g., `(marketing)`.",
+            "what_is_bn": "রাউট গ্রুপ হলো URL পাথকে প্রভাবিত না করে আপনার রাউটগুলিকে গ্রুপে সংগঠিত করার একটি উপায়। এটি একটি ফোল্ডারের নামকে প্যারেনথেসিসের মধ্যে রেখে করা হয়, যেমন `(marketing)`।"
+        },
+        "vip_qa": {
+            "question_en": "What is the primary use case for Route Groups?",
+            "answer_en": "The primary use case is to opt-in a segment of routes into a specific layout. For example, you can create a `(marketing)/layout.js` to create a layout that only applies to the routes inside the `(marketing)` folder."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Intermediate",
+        "sub_topic": "Optimization",
+        "question_en": "What is Dynamic Import in Next.js?",
+        "question_bn": "Next.js-এ ডাইনামিক ইম্পোর্ট কী?",
+        "details": {
+            "what_is_en": "Dynamic import allows you to import JavaScript modules (including React components) lazily, only when they are needed. This is a form of code splitting.",
+            "what_is_bn": "ডাইনামিক ইম্পোর্ট আপনাকে জাভাস্ক্রিপ্ট মডিউল (React কম্পোনেন্ট সহ) প্রয়োজন অনুযায়ী অলসভাবে ইম্পোর্ট করতে দেয়। এটি কোড স্প্লিটিংয়ের একটি রূপ।"
+        },
+        "vip_qa": {
+            "question_en": "How can you use dynamic import to prevent a component from being rendered on the server?",
+            "answer_en": "You can use the `ssr: false` option with `next/dynamic`. For example: `const MyComponent = dynamic(() => import('../components/MyComponent'), { ssr: false })`. This is useful for components that rely on browser-only APIs like `window`."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Intermediate",
+        "sub_topic": "App Router",
+        "question_en": "What is the purpose of the `loading.js` file?",
+        "question_bn": "`loading.js` ফাইলের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The `loading.js` file allows you to create a loading UI that is automatically shown to the user while the content of a route segment is loading. It's built on top of React Suspense.",
+            "what_is_bn": "`loading.js` ফাইল আপনাকে একটি লোডিং UI তৈরি করতে দেয় যা একটি রাউট সেগমেন্টের কন্টেন্ট লোড হওয়ার সময় ব্যবহারকারীকে স্বয়ংক্রিয়ভাবে দেখানো হয়। এটি React Suspense-এর উপর ভিত্তি করে তৈরি।"
+        },
+        "vip_qa": {
+            "question_en": "What is 'Streaming' in the context of the App Router?",
+            "answer_en": "Streaming allows you to break down the page into smaller chunks and progressively send them from the server to the client. With `loading.js`, the server can immediately send the static parts of the layout and the loading UI, and then 'stream' in the dynamic content as it becomes ready, improving perceived performance."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Intermediate",
+        "sub_topic": "App Router",
+        "question_en": "How do you handle errors in the App Router?",
+        "question_bn": "অ্যাপ রাউটারে এরর কীভাবে হ্যান্ডেল করবেন?",
+        "details": {
+            "what_is_en": "You can handle errors by creating an `error.js` file within a route segment. This file defines a UI boundary that will be displayed if an error occurs in that segment or any of its nested children.",
+            "what_is_bn": "আপনি একটি রাউট সেগমেন্টের মধ্যে একটি `error.js` ফাইল তৈরি করে এরর হ্যান্ডেল করতে পারেন। এই ফাইলটি একটি UI বাউন্ডারি নির্ধারণ করে যা সেই সেগমেন্ট বা তার কোনো চাইল্ডে এরর ঘটলে প্রদর্শিত হবে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a key requirement for a component defined in `error.js`?",
+            "answer_en": "An `error.js` component **must be a Client Component**. You need to add the `'use client'` directive at the top. This is because it relies on state and effects to handle the error and provide functionality like a 'Retry' button."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Beginner",
+        "sub_topic": "Linking & Navigation",
+        "question_en": "What is the `<Link>` component?",
+        "question_bn": "`<Link>` কম্পোনেন্ট কী?",
+        "details": {
+            "what_is_en": "The `<Link>` component from `next/link` is used to enable client-side navigation between routes in a Next.js application.",
+            "what_is_bn": "`next/link`-এর `<Link>` কম্পোনেন্টটি একটি Next.js অ্যাপ্লিকেশনের রাউটগুলির মধ্যে ক্লায়েন্ট-সাইড নেভিগেশন সক্ষম করতে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How does `<Link>` improve performance?",
+            "answer_en": "The `<Link>` component automatically **prefetches** the code for the linked page when it enters the viewport. This means that by the time the user clicks the link, the destination page is often already loaded, making the navigation feel instantaneous."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Intermediate",
+        "sub_topic": "Deployment",
+        "question_en": "What is Vercel?",
+        "question_bn": "Vercel কী?",
+        "details": {
+            "what_is_en": "Vercel is the company that created Next.js. It's a cloud platform for frontend frameworks and static sites, designed to provide the best performance and developer experience for Next.js apps.",
+            "what_is_bn": "Vercel হলো সেই কোম্পানি যা Next.js তৈরি করেছে। এটি ফ্রন্টএন্ড ফ্রেমওয়ার্ক এবং স্ট্যাটিক সাইটের জন্য একটি ক্লাউড প্ল্যাটফর্ম, যা Next.js অ্যাপগুলির জন্য সেরা পারফরম্যান্স এবং ডেভেলপার অভিজ্ঞতা প্রদানের জন্য ডিজাইন করা হয়েছে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is Vercel the preferred platform for deploying Next.js applications?",
+            "answer_en": "Because Vercel created Next.js, the platform is perfectly optimized to support all of Next.js's features out-of-the-box (SSR, SSG, ISR, Server Components, Middleware, etc.) with zero configuration and superior performance."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Advanced",
+        "sub_topic": "Routing",
+        "question_en": "What are Catch-all Routes?",
+        "question_bn": "ক্যাচ-অল রাউট কী?",
+        "details": {
+            "what_is_en": "Catch-all routes are a type of dynamic route that can match multiple path segments. They are defined by adding three dots inside the square brackets, e.g., `[...slug]`.js.",
+            "what_is_bn": "ক্যাচ-অল রাউট হলো এক ধরণের ডাইনামিক রাউট যা একাধিক পাথ সেগমেন্ট ম্যাচ করতে পারে। এগুলি স্কোয়ার ব্র্যাকেটের ভিতরে তিনটি ডট যোগ করে সংজ্ঞায়িত করা হয়, যেমন `[...slug]`.js।"
+        },
+        "vip_qa": {
+            "question_en": "What is an Optional Catch-all Route and how is it defined?",
+            "answer_en": "An Optional Catch-all Route is defined with double square brackets (`[[...slug]]`). It behaves the same as a catch-all but also matches the route without any parameters (e.g., `/docs` in addition to `/docs/a/b/c`)."
+        }
+    },
+    {
+        "id": 26,
+        "level": "Intermediate",
+        "sub_topic": "App Router",
+        "question_en": "What is the purpose of the `useRouter` hook?",
+        "question_bn": "`useRouter` হুকের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The `useRouter` hook from `next/navigation` allows you to programmatically trigger navigation from within Client Components.",
+            "what_is_bn": "`next/navigation`-এর `useRouter` হুক আপনাকে ক্লায়েন্ট কম্পোনেন্টের ভিতর থেকে প্রোগ্রাম্যাটিকভাবে নেভিগেশন ট্রিগার করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `router.push()` and `router.replace()`?",
+            "answer_en": "`router.push()` adds the new URL to the browser's history stack, so the user can use the back button. `router.replace()` replaces the current URL in the history stack, so the back button will not take the user back to the previous page."
+        }
+    },
+    {
+        "id": 27,
+        "level": "Intermediate",
+        "sub_topic": "Scripts",
+        "question_en": "What is the `next/script` component?",
+        "question_bn": "`next/script` কম্পোনেন্ট কী?",
+        "details": {
+            "what_is_en": "The `next/script` component is an extension of the HTML `<script>` tag that provides built-in optimizations for loading third-party scripts.",
+            "what_is_bn": "`next/script` কম্পোনেন্টটি HTML `<script>` ট্যাগের একটি এক্সটেনশন যা থার্ড-পার্টি স্ক্রিপ্ট লোড করার জন্য বিল্ট-ইন অপটিমাইজেশন প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "What does the `strategy` prop do in `next/script`?",
+            "answer_en": "The `strategy` prop controls when the third-party script should be loaded. Options include `beforeInteractive` (before the page is interactive), `afterInteractive` (default, after the page is interactive), and `lazyOnload` (during browser idle time)."
+        }
+    },
+    {
+        "id": 28,
+        "level": "Intermediate",
+        "sub_topic": "App Router",
+        "question_en": "How do you access URL search parameters in the App Router?",
+        "question_bn": "অ্যাপ রাউটারে URL সার্চ প্যারামিটার কীভাবে অ্যাক্সেস করবেন?",
+        "details": {
+            "what_is_en": "In a Server Component, you can access search parameters through the `searchParams` prop passed to the page. In a Client Component, you use the `useSearchParams` hook.",
+            "what_is_bn": "সার্ভার কম্পোনেন্টে, আপনি পেজে পাস করা `searchParams` প্রপের মাধ্যমে সার্চ প্যারামিটার অ্যাক্সেস করতে পারেন। ক্লায়েন্ট কম্পোনেন্টে, আপনি `useSearchParams` হুক ব্যবহার করবেন।"
+        },
+        "vip_qa": {
+            "question_en": "Why is `useSearchParams` a hook?",
+            "answer_en": "It's a hook because it reads from the client-side URL. Any component that needs to read the current URL must be a Client Component, as the full URL is a client-side concern and not available during server-side pre-rendering."
+        }
+    },
+    {
+        "id": 29,
+        "level": "Advanced",
+        "sub_topic": "Rendering",
+        "question_en": "What is 'hydration' in the context of React and Next.js?",
+        "question_bn": "React এবং Next.js-এর প্রসঙ্গে 'হাইড্রেশন' কী?",
+        "details": {
+            "what_is_en": "Hydration is the process of attaching event listeners to the DOM nodes of a server-rendered HTML page to make it fully interactive on the client-side, turning a static page into a dynamic application.",
+            "what_is_bn": "হাইড্রেশন হলো সার্ভার-রেন্ডার করা HTML পেজের DOM নোডগুলিতে ইভেন্ট লিসেনার সংযুক্ত করার প্রক্রিয়া, যাতে এটি ক্লায়েন্ট-সাইডে সম্পূর্ণ ইন্টারেক্টিভ হয়ে ওঠে।"
+        },
+        "vip_qa": {
+            "question_en": "What can cause a 'hydration error'?",
+            "answer_en": "A hydration error occurs when the initial UI rendered on the server does not match the initial UI rendered on the client. This can be caused by using browser-only APIs like `window` during the initial server render or having a timestamp that differs between server and client."
+        }
+    },
+    {
+        "id": 30,
+        "level": "Advanced",
+        "sub_topic": "App Router",
+        "question_en": "What is the purpose of the `generateStaticParams` function?",
+        "question_bn": "`generateStaticParams` ফাংশনের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "`generateStaticParams` is the App Router equivalent of `getStaticPaths`. It is used with dynamic route segments to define a list of route segments that should be statically generated at build time.",
+            "what_is_bn": "`generateStaticParams` হলো `getStaticPaths`-এর অ্যাপ রাউটারের সমতুল্য। এটি ডাইনামিক রাউট সেগমেন্টের সাথে ব্যবহৃত হয় যা বিল্ড টাইমে স্ট্যাটিকভাবে জেনারেট করা উচিত এমন রাউট সেগমেন্টের তালিকা নির্ধারণ করতে।"
+        },
+        "vip_qa": {
+            "question_en": "Does `generateStaticParams` replace `getStaticProps` as well?",
+            "answer_en": "No. In the App Router, data fetching is done directly inside the Server Component with `async/await`. `generateStaticParams` only provides the *parameters* (like the `slug`) for the pages to be generated; the page component itself is responsible for fetching its own data using that parameter."
+        }
+    },
+    {
+        "id": 31,
+        "level": "Intermediate",
+        "sub_topic": "Head Metadata",
+        "question_en": "How do you manage the `<head>` tag in Next.js?",
+        "question_bn": "Next.js-এ `<head>` ট্যাগ কীভাবে ম্যানেজ করবেন?",
+        "details": {
+            "what_is_en": "In the Pages Router, you use the `next/head` component. In the App Router, Next.js has built-in support for a `metadata` object that you can export from a page or layout.",
+            "what_is_bn": "পেজ রাউটারে, আপনি `next/head` কম্পোনেন্ট ব্যবহার করেন। অ্যাপ রাউটারে, Next.js-এর একটি বিল্ট-ইন `metadata` অবজেক্ট রয়েছে যা আপনি একটি পেজ বা লেআউট থেকে এক্সপোর্ট করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "How can you generate dynamic metadata in the App Router?",
+            "answer_en": "You can export an async function named `generateMetadata` from a page. This function receives the `params` and `searchParams` and can fetch data to dynamically generate a metadata object (e.g., setting the title for a specific blog post)."
+        }
+    },
+    {
+        "id": 32,
+        "level": "Intermediate",
+        "sub_topic": "Next.js vs Other Frameworks",
+        "question_en": "How does Next.js compare to Remix?",
+        "question_bn": "Remix-এর সাথে Next.js-এর তুলনা কীভাবে করবেন?",
+        "details": {
+            "what_is_en": "Both are powerful React frameworks. Next.js has historically focused on flexible data fetching and rendering strategies (SSG, ISR). Remix focuses heavily on web standards and fundamentals like forms and actions, typically favoring a server-rendered approach.",
+            "what_is_bn": "দুটিই শক্তিশালী React ফ্রেমওয়ার্ক। Next.js ঐতিহাসিকভাবে ডেটা ফেচিং এবং রেন্ডারিং কৌশলগুলিতে ফোকাস করেছে। Remix ওয়েব স্ট্যান্ডার্ড এবং ফর্ম ও অ্যাকশনের মতো মৌলিক বিষয়গুলির উপর বেশি জোর দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "How did the Next.js App Router adopt concepts that were popular in Remix?",
+            "answer_en": "The Next.js App Router was heavily influenced by concepts popularized by Remix, particularly in its approach to data mutations with Server Actions (similar to Remix's actions) and its focus on nested layouts and co-locating data fetching with components."
+        }
+    },
+    {
+        "id": 33,
+        "level": "Advanced",
+        "sub_topic": "Edge Runtime",
+        "question_en": "What is the Edge Runtime?",
+        "question_bn": "এজ রানটাইম কী?",
+        "details": {
+            "what_is_en": "The Edge Runtime is a lightweight JavaScript runtime, based on Web APIs, that is designed to run code geographically close to the user (at the 'edge' of the network). Next.js Middleware runs on the Edge Runtime.",
+            "what_is_bn": "এজ রানটাইম একটি হালকা জাভাস্ক্রিপ্ট রানটাইম যা ব্যবহারকারীর কাছাকাছি (নেটওয়ার্কের 'এজ'-এ) কোড চালানোর জন্য ডিজাইন করা হয়েছে। Next.js মিডলওয়্যার এজ রানটাইমে চলে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a key limitation of the Edge Runtime compared to the Node.js runtime?",
+            "answer_en": "The Edge Runtime does not support all Node.js APIs. For example, you cannot directly access a filesystem or a traditional database connection pool from the Edge. It's designed for speed and is best for tasks like authentication and routing, not heavy backend processing."
+        }
+    },
+    {
+        "id": 34,
+        "level": "Intermediate",
+        "sub_topic": "Next.js CLI",
+        "question_en": "What does `next build` do?",
+        "question_bn": "`next build` কী করে?",
+        "details": {
+            "what_is_en": "The `next build` command creates a production-optimized version of your application. It bundles your code, optimizes assets, and generates static pages (for SSG).",
+            "what_is_bn": "`next build` কমান্ডটি আপনার অ্যাপ্লিকেশনের একটি প্রোডাকশন-অপটিমাইজড সংস্করণ তৈরি করে। এটি আপনার কোড বান্ডেল করে, অ্যাসেট অপটিমাইজ করে, এবং স্ট্যাটিক পেজ তৈরি করে।"
+        },
+        "vip_qa": {
+            "question_en": "After running `next build`, what command do you use to run the production server?",
+            "answer_en": "You use the `next start` command to start the production server. You should never use `next dev` in a production environment."
+        }
+    },
+    {
+        "id": 35,
+        "level": "Advanced",
+        "sub_topic": "App Router",
+        "question_en": "How can you revalidate data on-demand in the App Router?",
+        "question_bn": "অ্যাপ রাউটারে অন-ডিমান্ড ডেটা কীভাবে রিভ্যালিডেট করবেন?",
+        "details": {
+            "what_is_en": "You can use the `revalidatePath` or `revalidateTag` functions from `next/cache`. These can be called from within a Server Action or Route Handler to invalidate the cache for a specific path or tag.",
+            "what_is_bn": "আপনি `next/cache` থেকে `revalidatePath` বা `revalidateTag` ফাংশন ব্যবহার করতে পারেন। এগুলি একটি সার্ভার অ্যাকশন বা রাউট হ্যান্ডলারের ভিতর থেকে কল করে একটি নির্দিষ্ট পাথ বা ট্যাগের জন্য ক্যাশ ইনভ্যালিডেট করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "Why is `revalidateTag` considered more powerful than `revalidatePath`?",
+            "answer_en": "`revalidateTag` is more powerful because you can associate a fetch request with one or more tags. When you revalidate a tag, Next.js will invalidate the cache for *all* fetch requests that use that tag, across your entire application. This is great for revalidating all data related to a specific entity (e.g., a 'products' tag)."
+        }
+    }
+]

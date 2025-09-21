@@ -1,0 +1,527 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is Node.js?",
+        "question_bn": "Node.js কী?",
+        "details": {
+            "what_is_en": "Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside a web browser. It is built on Chrome's V8 JavaScript engine.",
+            "what_is_bn": "Node.js হলো একটি ওপেন-সোর্স, ক্রস-প্ল্যাটফর্ম জাভাস্ক্রিপ্ট রানটাইম এনভায়রনমেন্ট যা ওয়েব ব্রাউজারের বাইরে জাভাস্ক্রিপ্ট কোড এক্সিকিউট করে। এটি ক্রোমের V8 জাভাস্ক্রিপ্ট ইঞ্জিনের উপর নির্মিত।"
+        },
+        "vip_qa": {
+            "question_en": "Why is Node.js described as 'asynchronous and event-driven'?",
+            "answer_en": "It's described that way because its core architecture is built around a non-blocking I/O model and an event loop. Instead of waiting for an I/O operation to complete, Node.js registers a callback and moves on to the next task. When the operation finishes, an event is fired, and the callback is executed."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Intermediate",
+        "sub_topic": "Fundamentals",
+        "question_en": "Why is Node.js single-threaded yet highly performant?",
+        "question_bn": "Node.js সিঙ্গেল-থ্রেডেড হওয়া সত্ত্বেও কেন এত পারফরম্যান্ট?",
+        "details": {
+            "what_is_en": "Node.js uses a single-threaded event loop for its main operations but offloads heavy I/O tasks to a worker pool (libuv). This non-blocking I/O model allows it to handle thousands of concurrent connections efficiently.",
+            "what_is_bn": "Node.js তার প্রধান অপারেশনের জন্য একটি সিঙ্গেল-থ্রেডেড ইভেন্ট লুপ ব্যবহার করে, কিন্তু ভারী I/O কাজগুলি একটি ওয়ার্কার পুলে (libuv) অফলোড করে দেয়। এই নন-ব্লকিং I/O মডেলটি হাজার হাজার সমসাময়িক সংযোগ দক্ষতার সাথে পরিচালনা করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "For what type of application would Node.js be a poor choice, and why?",
+            "answer_en": "Node.js would be a poor choice for **CPU-bound applications** (e.g., video encoding, complex scientific calculations). A long-running, synchronous, CPU-intensive task will block the single main thread and the event loop, making the server unresponsive to all other requests."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Advanced",
+        "sub_topic": "Event Loop",
+        "question_en": "What are the different phases of the Node.js Event Loop?",
+        "question_bn": "Node.js ইভেন্ট লুপের বিভিন্ন ফেজগুলো কী কী?",
+        "details": {
+            "what_is_en": "The Event Loop consists of several phases that run in a cycle: Timers, Pending Callbacks, Poll, Check, and Close Callbacks.",
+            "what_is_bn": "ইভেন্ট লুপ কয়েকটি ফেজের একটি চক্র যা নির্দিষ্ট ক্রমে এক্সিকিউট হয়: টাইমার, পেন্ডিং কলব্যাক, পোল, চেক, এবং ক্লোজ কলব্যাক।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `setImmediate()`, `setTimeout(() => {}, 0)`, and `process.nextTick()`?",
+            "answer_en": "`process.nextTick()` has the highest priority and its queue is processed immediately after the current operation, before the event loop continues. `setTimeout(0)` schedules a callback for the Timers phase. `setImmediate()` schedules a callback for the Check phase, which runs after the Poll phase."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Intermediate",
+        "sub_topic": "Modules",
+        "question_en": "What is the difference between CommonJS (`require`) and ES Modules (`import`)?",
+        "question_bn": "CommonJS (`require`) এবং ES মডিউলের (`import`) মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**CommonJS** is synchronous; `require` statements load modules at runtime. **ES Modules** are asynchronous and are parsed statically before execution. ES Modules are the official standard for JavaScript.",
+            "what_is_bn": "**CommonJS** সিঙ্ক্রোনাস; `require` স্টেটমেন্ট রানটাইমে মডিউল লোড করে। **ES মডিউল** অ্যাসিঙ্ক্রোনাস এবং এক্সিকিউশনের আগে স্ট্যাটিক্যালি পার্স করা হয়। ES মডিউল জাভাস্ক্রিপ্টের জন্য অফিসিয়াল স্ট্যান্ডার্ড।"
+        },
+        "vip_qa": {
+            "question_en": "How can you use ES Modules in a traditional Node.js project?",
+            "answer_en": "There are two primary ways: 1. Add `\"type\": \"module\"` to your `package.json` file. 2. Use the `.mjs` file extension for files that you want to be treated as ES Modules."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Beginner",
+        "sub_topic": "NPM",
+        "question_en": "What is `package.json`?",
+        "question_bn": "`package.json` কী?",
+        "details": {
+            "what_is_en": "`package.json` is a file that resides at the root of any Node.js project. It holds metadata about the project, such as its name, version, and dependencies.",
+            "what_is_bn": "`package.json` একটি ফাইল যা যেকোনো Node.js প্রজেক্টের রুটে থাকে। এটি প্রজেক্ট সম্পর্কে মেটাডেটা ধারণ করে, যেমন এর নাম, সংস্করণ এবং ডিপেন্ডেন্সি।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `dependencies` and `devDependencies` in `package.json`?",
+            "answer_en": "`dependencies` are required for the application to run in production (e.g., Express, React). `devDependencies` are only needed for development and testing (e.g., Nodemon, Jest, ESLint)."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Intermediate",
+        "sub_topic": "Streams",
+        "question_en": "What are Streams in Node.js?",
+        "question_bn": "Node.js-এ স্ট্রিম কী?",
+        "details": {
+            "what_is_en": "Streams are objects that let you read data from a source or write data to a destination in continuous chunks. They are highly efficient for handling large amounts of data.",
+            "what_is_bn": "স্ট্রিম হলো অবজেক্ট যা আপনাকে একটি উৎস থেকে ডেটা পড়তে বা একটি গন্তব্যে ক্রমাগত খণ্ডে খণ্ডে (chunks) ডেটা লিখতে দেয়। বড় ডেটা হ্যান্ডেল করার জন্য এগুলি খুব কার্যকরী।"
+        },
+        "vip_qa": {
+            "question_en": "What is 'backpressure' in streams and how does `stream.pipe()` handle it?",
+            "answer_en": "Backpressure is when a readable stream is producing data faster than a writable stream can consume it. The `pipe()` method automatically handles this by pausing the readable stream and buffering data, which prevents memory overflows."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Intermediate",
+        "sub_topic": "Buffers",
+        "question_en": "What is a Buffer in Node.js?",
+        "question_bn": "Node.js-এ বাফার কী?",
+        "details": {
+            "what_is_en": "A Buffer is a temporary storage area in memory used for handling binary data, such as reading from a file or a network socket.",
+            "what_is_bn": "বাফার হলো মেমরিতে একটি অস্থায়ী স্টোরেজ এলাকা যা বাইনারি ডেটা হ্যান্ডেল করার জন্য ব্যবহৃত হয়, যেমন একটি ফাইল বা নেটওয়ার্ক সকেট থেকে পড়া।"
+        },
+        "vip_qa": {
+            "question_en": "Why are Buffers necessary in Node.js?",
+            "answer_en": "Buffers are necessary because native JavaScript does not have a good way to handle raw binary data. Buffers provide a low-level interface for interacting with octet streams in TCP streams, file system operations, and other contexts."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Intermediate",
+        "sub_topic": "Express.js",
+        "question_en": "What is middleware in Express.js?",
+        "question_bn": "Express.js-এ মিডলওয়্যার কী?",
+        "details": {
+            "what_is_en": "Middleware is a function that has access to the request (`req`), response (`res`), and the `next()` function in the application’s request-response cycle. It can execute code, make changes to the request and response objects, and end the cycle.",
+            "what_is_bn": "মিডলওয়্যার হলো এমন একটি ফাংশন যা অ্যাপ্লিকেশনের রিকোয়েস্ট-রেসপন্স সাইকেলে রিকোয়েস্ট (`req`), রেসপন্স (`res`), এবং `next()` ফাংশনে অ্যাক্সেস পায়। এটি কোড এক্সিকিউট করতে, রিকোয়েস্ট এবং রেসপন্স অবজেক্ট পরিবর্তন করতে এবং সাইকেল শেষ করতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the purpose of the `next()` function in middleware?",
+            "answer_en": "The `next()` function is used to pass control to the next middleware function in the stack. If it's not called, the request will be left hanging."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Intermediate",
+        "sub_topic": "Express.js",
+        "question_en": "How do you handle routing in Express?",
+        "question_bn": "Express-এ রাউটিং কীভাবে হ্যান্ডেল করবেন?",
+        "details": {
+            "what_is_en": "Routing is done using methods on the app object that correspond to HTTP methods, like `app.get()`, `app.post()`, etc. These methods take a path and a callback function.",
+            "what_is_bn": "রাউটিং অ্যাপ অবজেক্টের মেথড ব্যবহার করে করা হয় যা HTTP মেথডগুলির সাথে মিলে যায়, যেমন `app.get()`, `app.post()` ইত্যাদি। এই মেথডগুলি একটি পাথ এবং একটি কলব্যাক ফাংশন নেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the purpose of `express.Router()`?",
+            "answer_en": "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Advanced",
+        "sub_topic": "Express.js",
+        "question_en": "How do you implement centralized error handling in Express?",
+        "question_bn": "Express-এ কেন্দ্রীয়ভাবে এরর হ্যান্ডেলিং কীভাবে করবেন?",
+        "details": {
+            "what_is_en": "Centralized error handling is done by defining a special error-handling middleware function that has four arguments: `(err, req, res, next)`. This middleware must be defined after all other `app.use()` and routes calls.",
+            "what_is_bn": "এরর-হ্যান্ডেলিং মিডলওয়্যার ফাংশন দিয়ে এটি করা হয়, যার চারটি আর্গুমেন্ট (`err, req, res, next`) থাকে। এটি সব রাউটের শেষে ডিফাইন করতে হয়।"
+        },
+        "vip_qa": {
+            "question_en": "In an asynchronous route handler, why is it important to wrap your code in a `try...catch` block and call `next(error)`?",
+            "answer_en": "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs in an async operation and you don't catch it, the request will hang. You must explicitly pass the error to Express's error-handling middleware by calling `next(error)`."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Intermediate",
+        "sub_topic": "Core Modules",
+        "question_en": "What is the `path` module used for?",
+        "question_bn": "`path` মডিউল কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `path` module provides utilities for working with file and directory paths. It helps in creating cross-platform compatible paths.",
+            "what_is_bn": "`path` মডিউল ফাইল এবং ডিরেক্টরি পাথের সাথে কাজ করার জন্য ইউটিলিটি প্রদান করে। এটি ক্রস-প্ল্যাটফর্ম সামঞ্জস্যপূর্ণ পাথ তৈরি করতে সাহায্য করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `path.join()` and `path.resolve()`?",
+            "answer_en": "`path.join()` joins all given path segments together using the platform-specific separator. `path.resolve()` resolves a sequence of paths or path segments into an absolute path."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Intermediate",
+        "sub_topic": "Core Modules",
+        "question_en": "What is the difference between `fs.readFile()` and `fs.readFileSync()`?",
+        "question_bn": "`fs.readFile()` এবং `fs.readFileSync()` এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`fs.readFile()` is asynchronous and does not block the event loop. It takes a callback function. `fs.readFileSync()` is synchronous and blocks the event loop until the file has been read.",
+            "what_is_bn": "`fs.readFile()` অ্যাসিঙ্ক্রোনাস এবং ইভেন্ট লুপ ব্লক করে না। এটি একটি কলব্যাক ফাংশন নেয়। `fs.readFileSync()` সিঙ্ক্রোনাস এবং ফাইল পড়া শেষ না হওয়া পর্যন্ত ইভেন্ট লুপ ব্লক করে রাখে।"
+        },
+        "vip_qa": {
+            "question_en": "When would it ever be appropriate to use a synchronous method like `fs.readFileSync()`?",
+            "answer_en": "Synchronous methods are only appropriate during the application's startup phase, before the event loop starts processing requests. For example, reading a configuration file when the server first starts."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Advanced",
+        "sub_topic": "Child Processes",
+        "question_en": "What are worker threads in Node.js?",
+        "question_bn": "Node.js-এ ওয়ার্কার থ্রেড কী?",
+        "details": {
+            "what_is_en": "The `worker_threads` module allows you to run JavaScript code in parallel on separate threads. This is useful for performing CPU-intensive tasks without blocking the main event loop.",
+            "what_is_bn": "`worker_threads` মডিউল আপনাকে সমান্তরালভাবে আলাদা থ্রেডে জাভাস্ক্রিপ্ট কোড চালানোর সুযোগ দেয়। এটি প্রধান ইভেন্ট লুপ ব্লক না করে CPU-নিবিড় কাজ সম্পাদন করার জন্য দরকারী।"
+        },
+        "vip_qa": {
+            "question_en": "How does a worker thread differ from using `child_process.fork()`?",
+            "answer_en": "**`child_process.fork()`** creates a new Node.js process with its own memory. **`worker_threads`** operate within the same process and can share memory (e.g., using `SharedArrayBuffer`), making them much more lightweight and efficient for CPU-bound tasks."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Beginner",
+        "sub_topic": "Globals",
+        "question_en": "What is the `process` object?",
+        "question_bn": "`process` অবজেক্ট কী?",
+        "details": {
+            "what_is_en": "The `process` object is a global object that provides information about, and control over, the current Node.js process. It can be used to get environment variables or exit the current process.",
+            "what_is_bn": "`process` অবজেক্ট একটি গ্লোবাল অবজেক্ট যা বর্তমান Node.js প্রসেস সম্পর্কে তথ্য এবং নিয়ন্ত্রণ প্রদান করে। এটি এনভায়রনমেন্ট ভেরিয়েবল পেতে বা বর্তমান প্রসেস থেকে বের হতে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `process.exit()` and `process.kill()`?",
+            "answer_en": "`process.exit()` instructs Node.js to terminate the process synchronously. `process.kill()` sends a signal to the process (e.g., 'SIGTERM'). A process can have a listener for these signals and perform cleanup before terminating."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Intermediate",
+        "sub_topic": "Events",
+        "question_en": "What is the `EventEmitter` class?",
+        "question_bn": "`EventEmitter` ক্লাস কী?",
+        "details": {
+            "what_is_en": "The `EventEmitter` is a class in the `events` module that facilitates communication between objects in Node.js. Many core Node.js objects, like streams and HTTP requests, inherit from `EventEmitter`.",
+            "what_is_bn": "`EventEmitter` `events` মডিউলের একটি ক্লাস যা Node.js-এ অবজেক্টগুলির মধ্যে যোগাযোগ সহজ করে। স্ট্রিম এবং HTTP রিকোয়েস্টের মতো অনেক কোর Node.js অবজেক্ট `EventEmitter` থেকে ইনহেরিট করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `on()` and `once()` methods of an EventEmitter?",
+            "answer_en": "The `on()` method registers a listener that will be called every time the event is emitted. The `once()` method registers a listener that will be called at most once for a particular event, after which it is removed."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Beginner",
+        "sub_topic": "NPM",
+        "question_en": "What is the purpose of `package-lock.json`?",
+        "question_bn": "`package-lock.json`-এর উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "`package-lock.json` records the exact version of every installed dependency. This ensures that installations are consistent and repeatable across different machines.",
+            "what_is_bn": "`package-lock.json` প্রতিটি ইনস্টল করা ডিপেন্ডেন্সির সঠিক সংস্করণ রেকর্ড করে। এটি নিশ্চিত করে যে ইনস্টলেশনগুলি বিভিন্ন মেশিনে সামঞ্জস্যপূর্ণ এবং পুনরাবৃত্তিযোগ্য হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Should you ever manually edit `package-lock.json`?",
+            "answer_en": "No, you should never manually edit this file. It is automatically generated and managed by `npm` whenever you modify your `node_modules` tree or `package.json`."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Advanced",
+        "sub_topic": "Security",
+        "question_en": "What is a `require` cache?",
+        "question_bn": "`require` ক্যাশ কী?",
+        "details": {
+            "what_is_en": "When a module is required for the first time, Node.js caches it. Subsequent calls to `require()` for the same module will retrieve the cached version instead of reading the file again.",
+            "what_is_bn": "যখন একটি মডিউল প্রথমবার `require` করা হয়, Node.js সেটিকে ক্যাশ করে। একই মডিউলের জন্য পরবর্তী `require()` কলগুলি ফাইলটি পুনরায় পড়ার পরিবর্তে ক্যাশ করা সংস্করণটি পুনরুদ্ধার করে।"
+        },
+        "vip_qa": {
+            "question_en": "How can you bypass the `require` cache to re-load a module?",
+            "answer_en": "You can programmatically delete the key for that module from the `require.cache` object. For example: `delete require.cache[require.resolve('./myModule.js')]`. This is generally only done in specific testing scenarios."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Beginner",
+        "sub_topic": "HTTP",
+        "question_en": "How do you create a simple HTTP server in Node.js?",
+        "question_bn": "Node.js-এ একটি সাধারণ HTTP সার্ভার কীভাবে তৈরি করবেন?",
+        "details": {
+            "what_is_en": "You can create a simple HTTP server using the built-in `http` module. You use `http.createServer()` and provide a callback function that handles requests and responses.",
+            "what_is_bn": "আপনি বিল্ট-ইন `http` মডিউল ব্যবহার করে একটি সাধারণ HTTP সার্ভার তৈরি করতে পারেন। আপনি `http.createServer()` ব্যবহার করেন এবং একটি কলব্যাক ফাংশন প্রদান করেন যা রিকোয়েস্ট এবং রেসপন্স হ্যান্ডেল করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why do most developers use a framework like Express instead of the raw `http` module?",
+            "answer_en": "The raw `http` module is very low-level. Frameworks like Express provide a much richer feature set, including routing, middleware support, and template engines, which makes building web applications significantly faster and easier."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Intermediate",
+        "sub_topic": "NPM",
+        "question_en": "What does `npm install` do?",
+        "question_bn": "`npm install` কী করে?",
+        "details": {
+            "what_is_en": "`npm install` is a command used to install dependencies. If run without arguments in a project with a `package.json` file, it will install all dependencies listed in that file.",
+            "what_is_bn": "`npm install` একটি কমান্ড যা ডিপেন্ডেন্সি ইনস্টল করতে ব্যবহৃত হয়। যদি `package.json` ফাইল সহ একটি প্রজেক্টে কোনো আর্গুমেন্ট ছাড়াই রান করা হয়, তবে এটি সেই ফাইলে তালিকাভুক্ত সমস্ত ডিপেন্ডেন্সি ইনস্টল করবে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `npm install` and `npm ci`?",
+            "answer_en": "`npm install` can modify the `package-lock.json` file if dependencies have changed. `npm ci` (Clean Install) is meant for automated environments; it does a clean install based *only* on the `package-lock.json` and will fail if the lockfile is out of sync, ensuring a consistent build."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Advanced",
+        "sub_topic": "Streams",
+        "question_en": "What are the four types of streams in Node.js?",
+        "question_bn": "Node.js-এ চার ধরণের স্ট্রিম কী কী?",
+        "details": {
+            "what_is_en": "The four types are: Readable (for reading data), Writable (for writing data), Duplex (both readable and writable), and Transform (a type of duplex stream where the output is computed from the input).",
+            "what_is_bn": "চার প্রকার হলো: রিডেবল (ডেটা পড়ার জন্য), রাইটেবল (ডেটা লেখার জন্য), ডুপ্লেক্স (রিডেবল এবং রাইটেবল উভয়ই), এবং ট্রান্সফর্ম (এক ধরণের ডুপ্লেক্স স্ট্রিম যেখানে আউটপুট ইনপুট থেকে গণনা করা হয়)।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example of a Transform stream.",
+            "answer_en": "A common example is a `zlib` stream for compressing or decompressing data. It's a Transform stream because it reads raw data chunks and writes compressed/decompressed data chunks."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Intermediate",
+        "sub_topic": "Globals",
+        "question_en": "What is the difference between `__dirname` and `__filename`?",
+        "question_bn": "`__dirname` এবং `__filename`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`__dirname` is a global variable that returns the directory name of the currently executing script. `__filename` returns the file name of the currently executing script, including the full directory path.",
+            "what_is_bn": "`__dirname` একটি গ্লোবাল ভেরিয়েবল যা বর্তমানে এক্সিকিউট হওয়া স্ক্রিপ্টের ডিরেক্টরির নাম রিটার্ন করে। `__filename` সম্পূর্ণ ডিরেক্টরি পাথ সহ বর্তমানে এক্সিকিউট হওয়া স্ক্রিপ্টের ফাইলের নাম রিটার্ন করে।"
+        },
+        "vip_qa": {
+            "question_en": "Are `__dirname` and `__filename` available in ES Modules?",
+            "answer_en": "No, they are not. They are specific to the CommonJS module system. In ES Modules, you can get similar functionality using `import.meta.url`."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Beginner",
+        "sub_topic": "NPM",
+        "question_en": "What are semantic versioning (SemVer) numbers (e.g., `^1.2.3`)?",
+        "question_bn": "সিমান্টিক ভার্সনিং (SemVer) নম্বর (যেমন, `^1.2.3`) কী?",
+        "details": {
+            "what_is_en": "SemVer is a versioning scheme in the format MAJOR.MINOR.PATCH. The caret (`^`) symbol allows updates to the minor and patch versions, but not the major version.",
+            "what_is_bn": "SemVer হলো MAJOR.MINOR.PATCH ফরম্যাটে একটি ভার্সনিং স্কিম। ক্যারেট (`^`) চিহ্নটি মাইনর এবং প্যাচ সংস্করণে আপডেট করার অনুমতি দেয়, কিন্তু মেজর সংস্করণে নয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between the caret (`^`) and the tilde (`~`) symbols in `package.json`?",
+            "answer_en": "The caret (`^`) allows updates to the minor version (e.g., `^1.2.3` will match any `1.x.x` version from `1.2.3` up to, but not including, `2.0.0`). The tilde (`~`) is more restrictive and only allows updates to the patch version (e.g., `~1.2.3` will match any `1.2.x` version)."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Advanced",
+        "sub_topic": "Security",
+        "question_en": "What is prototype pollution?",
+        "question_bn": "প্রোটোটাইপ পলিউশন কী?",
+        "details": {
+            "what_is_en": "Prototype pollution is a vulnerability that occurs when an attacker can modify the `__proto__` property of an object, allowing them to add or modify properties on the global `Object.prototype`.",
+            "what_is_bn": "প্রোটোটাইপ পলিউশন একটি দুর্বলতা যা ঘটে যখন একজন আক্রমণকারী একটি অবজেক্টের `__proto__` প্রপার্টি পরিবর্তন করতে পারে, যা তাদের গ্লোবাল `Object.prototype`-এ প্রপার্টি যোগ বা পরিবর্তন করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "How can prototype pollution lead to security issues?",
+            "answer_en": "It can lead to serious issues like Denial of Service (DoS) by modifying standard object methods, or even Remote Code Execution (RCE) if properties that are later used in an unsafe way (like in `eval` or `child_process`) are modified."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Intermediate",
+        "sub_topic": "Express.js",
+        "question_en": "How do you access request body data in Express?",
+        "question_bn": "Express-এ রিকোয়েস্ট বডি ডেটা কীভাবে অ্যাক্সেস করবেন?",
+        "details": {
+            "what_is_en": "To access request body data, you first need to use a body-parsing middleware, like `express.json()`. Then the parsed data will be available on `req.body`.",
+            "what_is_bn": "রিকোয়েস্ট বডি ডেটা অ্যাক্সেস করতে, আপনাকে প্রথমে একটি বডি-পার্সিং মিডলওয়্যার ব্যবহার করতে হবে, যেমন `express.json()`। তারপরে পার্স করা ডেটা `req.body`-তে উপলব্ধ হবে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `express.json()` and `express.urlencoded()`?",
+            "answer_en": "`express.json()` is used to parse incoming requests with JSON payloads (common for APIs). `express.urlencoded()` is used to parse incoming requests with URL-encoded payloads (common for traditional HTML forms)."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Advanced",
+        "sub_topic": "Child Processes",
+        "question_en": "What is the difference between `spawn`, `fork`, and `exec` in the `child_process` module?",
+        "question_bn": "`child_process` মডিউলে `spawn`, `fork`, এবং `exec`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`spawn` launches a new process and streams data, suitable for large outputs. `exec` launches a process and buffers the output, suitable for short commands. `fork` is a special version of `spawn` for creating new Node.js processes.",
+            "what_is_bn": "`spawn` একটি নতুন প্রসেস চালু করে এবং ডেটা স্ট্রিম করে, যা বড় আউটপুটের জন্য উপযুক্ত। `exec` একটি প্রসেস চালু করে এবং আউটপুট বাফার করে, যা ছোট কমান্ডের জন্য উপযুক্ত। `fork` হলো নতুন Node.js প্রসেস তৈরি করার জন্য `spawn`-এর একটি বিশেষ সংস্করণ।"
+        },
+        "vip_qa": {
+            "question_en": "Why would you use `fork` over `spawn` to create a new Node.js process?",
+            "answer_en": "You would use `fork` because it establishes an IPC (Inter-Process Communication) channel between the parent and child processes, allowing them to send messages back and forth using `.send()`."
+        }
+    },
+    {
+        "id": 26,
+        "level": "Intermediate",
+        "sub_topic": "Environment Variables",
+        "question_en": "How do you manage environment variables in a Node.js application?",
+        "question_bn": "Node.js অ্যাপ্লিকেশনে এনভায়রনমেন্ট ভেরিয়েবল কীভাবে ম্যানেজ করবেন?",
+        "details": {
+            "what_is_en": "Environment variables are accessed via `process.env`. For development, it's common to use a `.env` file and a library like `dotenv` to load these variables into `process.env`.",
+            "what_is_bn": "এনভায়রনমেন্ট ভেরিয়েবল `process.env`-এর মাধ্যমে অ্যাক্সেস করা হয়। ডেভেলপমেন্টের জন্য, `.env` ফাইল এবং `dotenv`-এর মতো একটি লাইব্রেরি ব্যবহার করা সাধারণ।"
+        },
+        "vip_qa": {
+            "question_en": "Why should you not commit `.env` files to version control?",
+            "answer_en": "You should not commit `.env` files because they often contain sensitive credentials like API keys and database passwords. Instead, you should commit a `.env.example` file that shows the required variables without their values."
+        }
+    },
+    {
+        "id": 27,
+        "level": "Intermediate",
+        "sub_topic": "Debugging",
+        "question_en": "How can you debug a Node.js application?",
+        "question_bn": "আপনি একটি Node.js অ্যাপ্লিকেশন কীভাবে ডিবাগ করতে পারেন?",
+        "details": {
+            "what_is_en": "You can use Node.js's built-in debugger by running `node inspect your_file.js`. A more common way is to use the debugger in a code editor like VS Code, or by using Chrome DevTools.",
+            "what_is_bn": "আপনি `node inspect your_file.js` রান করে Node.js-এর বিল্ট-ইন ডিবাগার ব্যবহার করতে পারেন। একটি আরও সাধারণ উপায় হলো VS Code-এর মতো কোড এডিটরের ডিবাগার ব্যবহার করা, বা Chrome DevTools ব্যবহার করা।"
+        },
+        "vip_qa": {
+            "question_en": "How do you enable the inspector protocol to debug with Chrome DevTools?",
+            "answer_en": "You start your application with the `--inspect` flag (e.g., `node --inspect index.js`). Node.js will then print a WebSocket URL that you can open in Chrome DevTools to connect the debugger."
+        }
+    },
+    {
+        "id": 28,
+        "level": "Intermediate",
+        "sub_topic": "Express.js",
+        "question_en": "How do you serve static files in Express?",
+        "question_bn": "Express-এ স্ট্যাটিক ফাইল কীভাবে পরিবেশন করবেন?",
+        "details": {
+            "what_is_en": "You use the `express.static` built-in middleware. For example, `app.use(express.static('public'))` will serve files from the `public` directory.",
+            "what_is_bn": "আপনি `express.static` বিল্ট-ইন মিডলওয়্যার ব্যবহার করেন। উদাহরণস্বরূপ, `app.use(express.static('public'))` `public` ডিরেক্টরি থেকে ফাইল পরিবেশন করবে।"
+        },
+        "vip_qa": {
+            "question_en": "What if you want to serve static files from a route prefix, like `/static`?",
+            "answer_en": "You can specify a mount path as the first argument. For example: `app.use('/static', express.static('public'))`. Now, a file like `public/images/logo.png` would be accessible at `http://localhost:3000/static/images/logo.png`."
+        }
+    },
+    {
+        "id": 29,
+        "level": "Advanced",
+        "sub_topic": "Clustering",
+        "question_en": "What is the `cluster` module used for?",
+        "question_bn": "`cluster` মডিউল কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `cluster` module allows you to create child processes (workers) that all share the same server port. This enables you to take advantage of multi-core systems to handle a greater load of requests.",
+            "what_is_bn": "`cluster` মডিউল আপনাকে চাইল্ড প্রসেস (ওয়ার্কার) তৈরি করতে দেয় যা সব একই সার্ভার পোর্ট শেয়ার করে। এটি আপনাকে মাল্টি-কোর সিস্টেমের সুবিধা নিতে দেয় যাতে আরও বেশি রিকোয়েস্ট হ্যান্ডেল করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "How does the cluster module distribute incoming connections?",
+            "answer_en": "The master process listens on a port and accepts new connections. It then distributes them across the worker processes in a round-robin fashion. This is the default behavior, but the strategy can be changed."
+        }
+    },
+    {
+        "id": 30,
+        "level": "Intermediate",
+        "sub_topic": "Modules",
+        "question_en": "What is the difference between `module.exports` and `exports`?",
+        "question_bn": "`module.exports` এবং `exports`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`exports` is just a reference or a shorthand to `module.exports`. You can add properties to `exports` (e.g., `exports.myFunc = ...`), but if you reassign `exports` to a new object, the reference is broken.",
+            "what_is_bn": "`exports` শুধুমাত্র `module.exports`-এর একটি রেফারেন্স বা শর্টহ্যান্ড। আপনি `exports`-এ প্রপার্টি যোগ করতে পারেন, কিন্তু যদি আপনি `exports`-কে একটি নতুন অবজেক্টে পুনরায় অ্যাসাইন করেন, তবে রেফারেন্সটি ভেঙে যায়।"
+        },
+        "vip_qa": {
+            "question_en": "If you want to export a single class or function, which should you use?",
+            "answer_en": "You must use `module.exports`. For example: `module.exports = class MyClass {}`. You cannot achieve this by reassigning `exports` (e.g., `exports = class MyClass {}` will not work)."
+        }
+    },
+    {
+        "id": 31,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is libuv?",
+        "question_bn": "libuv কি?",
+        "details": {
+            "what_is_en": "Libuv is a multi-platform C library that provides support for asynchronous I/O based on an event loop. Node.js uses it to handle its non-blocking asynchronous operations.",
+            "what_is_bn": "Libuv একটি মাল্টি-প্ল্যাটফর্ম C লাইব্রেরি যা একটি ইভেন্ট লুপের উপর ভিত্তি করে অ্যাসিঙ্ক্রোনাস I/O এর জন্য সমর্থন প্রদান করে। Node.js তার নন-ব্লকিং অ্যাসিঙ্ক্রোনাস অপারেশনগুলি পরিচালনা করতে এটি ব্যবহার করে।"
+        },
+        "vip_qa": {
+            "question_en": "Besides the event loop, what other key feature does libuv provide to Node.js?",
+            "answer_en": "Libuv also manages the thread pool, which is used to handle expensive tasks like file I/O or DNS lookups that cannot be done asynchronously at the operating system level. This is how Node.js avoids blocking the main thread even for these tasks."
+        }
+    },
+    {
+        "id": 32,
+        "level": "Intermediate",
+        "sub_topic": "Error Handling",
+        "question_en": "What is the difference between operational errors and programmer errors?",
+        "question_bn": "অপারেশনাল এরর এবং প্রোগ্রামার এররের মধ্যে পার্থক্য কি?",
+        "details": {
+            "what_is_en": "Operational errors are runtime problems that are expected (e.g., 'file not found', 'invalid user input'). Programmer errors are bugs in the code that should be fixed (e.g., trying to read a property of `undefined`).",
+            "what_is_bn": "অপারেশনাল এরর হলো রানটাইম সমস্যা যা প্রত্যাশিত (যেমন, 'ফাইল পাওয়া যায়নি', 'অবৈধ ব্যবহারকারী ইনপুট')। প্রোগ্রামার এরর হলো কোডের বাগ যা ঠিক করা উচিত (যেমন, `undefined` এর একটি প্রপার্টি পড়ার চেষ্টা করা)।"
+        },
+        "vip_qa": {
+            "question_en": "How should you handle these two types of errors differently?",
+            "answer_en": "Operational errors should be handled gracefully (e.g., sending a 404 response). Programmer errors are exceptional; a common best practice is to crash the application immediately and restart it using a process manager like PM2 to ensure a clean state."
+        }
+    },
+    {
+        "id": 33,
+        "level": "Advanced",
+        "sub_topic": "V8 Engine",
+        "question_en": "What is the V8 engine?",
+        "question_bn": "V8 ইঞ্জিন কি?",
+        "details": {
+            "what_is_en": "V8 is Google's open-source high-performance JavaScript and WebAssembly engine, written in C++. It is used in Chrome and in Node.js, among others.",
+            "what_is_bn": "V8 হলো গুগলের ওপেন-সোর্স হাই-পারফরম্যান্স জাভাস্ক্রিপ্ট এবং ওয়েবঅ্যাসেম্বলি ইঞ্জিন, যা C++ এ লেখা। এটি Chrome এবং Node.js-এ ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How does V8's JIT (Just-In-Time) compiler help optimize code?",
+            "answer_en": "V8's JIT compiler, named TurboFan, analyzes and compiles JavaScript code into native machine code at runtime. It can make optimizations based on the types of data it sees, and even de-optimize code if its assumptions were wrong, leading to very high performance for frequently executed code paths."
+        }
+    },
+    {
+        "id": 34,
+        "level": "Beginner",
+        "sub_topic": "REPL",
+        "question_en": "What is REPL in Node.js?",
+        "question_bn": "Node.js-এ REPL কি?",
+        "details": {
+            "what_is_en": "REPL stands for Read-Eval-Print-Loop. It is an interactive shell that allows you to execute JavaScript code line by line and see the output immediately.",
+            "what_is_bn": "REPL এর অর্থ হলো Read-Eval-Print-Loop। এটি একটি ইন্টারেক্টিভ শেল যা আপনাকে লাইন বাই লাইন জাভাস্ক্রিপ্ট কোড এক্সিকিউট করতে এবং তাৎক্ষণিকভাবে আউটপুট দেখতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "How do you start the Node.js REPL?",
+            "answer_en": "You can start the REPL by simply typing `node` in your terminal and pressing Enter, without providing any filename."
+        }
+    },
+    {
+        "id": 35,
+        "level": "Intermediate",
+        "sub_topic": "NPM",
+        "question_en": "What is `npx`?",
+        "question_bn": "`npx` কি?",
+        "details": {
+            "what_is_en": "`npx` is a package runner tool that comes with npm. It allows you to execute a command from an npm package without having to install it globally or in your project's dependencies.",
+            "what_is_bn": "`npx` একটি প্যাকেজ রানার টুল যা npm এর সাথে আসে। এটি আপনাকে একটি npm প্যাকেজ থেকে একটি কমান্ড এক্সিকিউট করতে দেয়, প্যাকেজটি গ্লোবালি বা আপনার প্রজেক্টের ডিপেন্ডেন্সিতে ইনস্টল না করেই।"
+        },
+        "vip_qa": {
+            "question_en": "What is a common use case for `npx`?",
+            "answer_en": "A very common use case is for running scaffolding tools. For example, `npx create-react-app my-app` will download and run the `create-react-app` package to create a new project, without permanently installing the package on your system."
+        }
+    }
+]

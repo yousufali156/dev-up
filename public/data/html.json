@@ -1,0 +1,752 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "HTML Basics",
+        "question_en": "What is HTML?",
+        "question_bn": "HTML কী?",
+        "details": {
+            "what_is_en": "HTML (HyperText Markup Language) is the standard language used to create and structure the content of web pages.",
+            "what_is_bn": "HTML (হাইপার টেক্সট মার্কআপ ল্যাঙ্গুয়েজ) হলো ওয়েব পেজের কন্টেন্ট তৈরি এবং গঠন করার জন্য ব্যবহৃত স্ট্যান্ডার্ড ভাষা।"
+        },
+        "vip_qa": {
+            "question_en": "Why is HTML called a 'markup' language?",
+            "answer_en": "Because it uses tags to 'mark up' or annotate content to define its structure and meaning, rather than to perform programming logic."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "HTML Elements",
+        "question_en": "What is the difference between an HTML element and an HTML tag?",
+        "question_bn": "HTML এলিমেন্ট এবং HTML ট্যাগের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "A tag is the opening (<p>) or closing (</p>) part. An element is the complete unit, including the opening tag, the content, and the closing tag.",
+            "what_is_bn": "ট্যাগ হলো ওপেনিং (<p>) বা ক্লোজিং (</p>) অংশ। একটি এলিমেন্ট হলো ওপেনিং ট্যাগ, কন্টেন্ট এবং ক্লোজিং ট্যাগ—সবকিছু মিলিয়ে একটি পূর্ণাঙ্গ অংশ।"
+        },
+        "vip_qa": {
+            "question_en": "What distinguishes an empty element from a regular element? Provide examples.",
+            "answer_en": "A regular element has an opening tag, content, and a closing tag (e.g., <p>...</p>). An empty element has no content or closing tag and is self-closing (e.g., <br>, <img>, <hr>)."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Beginner",
+        "sub_topic": "HTML Attributes",
+        "question_en": "What is an HTML attribute?",
+        "question_bn": "HTML অ্যাট্রিবিউট কী?",
+        "details": {
+            "what_is_en": "Attributes provide additional information about HTML elements and are always specified in the opening tag.",
+            "what_is_bn": "অ্যাট্রিবিউট হলো HTML এলিমেন্টের অতিরিক্ত তথ্য, যা সবসময় ওপেনিং ট্যাগের ভেতরে লেখা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the purpose of the `data-*` attribute and what is its main advantage?",
+            "answer_en": "The `data-*` attributes are used to store custom data private to the page or application. Their main advantage is making custom data easily accessible to JavaScript without misusing standard attributes."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Beginner",
+        "sub_topic": "HTML Attributes",
+        "question_en": "What is the difference between `id` and `class` attributes?",
+        "question_bn": "`id` এবং `class` অ্যাট্রিবিউটের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`id` is used to uniquely identify a single element on a page, while `class` is used to group multiple elements for styling or behavior.",
+            "what_is_bn": "`id` একটি পেজে একটি নির্দিষ্ট এলিমেন্টকে ইউনিকভাবে শনাক্ত করতে ব্যবহৃত হয়, আর `class` একাধিক এলিমেন্টকে একই গ্রুপে ভাগ করতে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "In what scenario is it more logical to use a `class` instead of an `id`, and why?",
+            "answer_en": "Always use a `class` when you anticipate applying the same style or behavior to multiple elements. Since an `id` must be unique, it's not reusable. Using classes is a best practice for creating scalable CSS architecture."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Beginner",
+        "sub_topic": "Document Structure",
+        "question_en": "What is the purpose of the `<!DOCTYPE html>` declaration?",
+        "question_bn": "`<!DOCTYPE html>` ঘোষণার উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "It's an instruction to the web browser about what version of HTML the page is written in. For HTML5, this simple declaration is all that's needed to ensure the page renders in 'standards mode'.",
+            "what_is_bn": "এটি ওয়েব ব্রাউজারকে বলে দেয় যে পেজটি কোন HTML ভার্সনে লেখা হয়েছে। HTML5-এর জন্য, এটি পেজটিকে 'স্ট্যান্ডার্ড মোডে' রেন্ডার করা নিশ্চিত করে।"
+        },
+        "vip_qa": {
+            "question_en": "What happens if you omit the `<!DOCTYPE html>` declaration?",
+            "answer_en": "If the doctype is omitted, browsers enter 'Quirks Mode', attempting to emulate older browser behavior. This can lead to unpredictable and inconsistent rendering of CSS and layout across different browsers."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Beginner",
+        "sub_topic": "Headings",
+        "question_en": "How many heading levels are there in HTML?",
+        "question_bn": "HTML-এ কতগুলো হেডিং লেভেল আছে?",
+        "details": {
+            "what_is_en": "There are six heading levels, <h1> through <h6>. <h1> is the most important, and <h6> is the least.",
+            "what_is_bn": "HTML-এ ছয়টি হেডিং লেভেল রয়েছে, <h1> থেকে <h6> পর্যন্ত। <h1> সবচেয়ে গুরুত্বপূর্ণ এবং <h6> সবচেয়ে কম গুরুত্বপূর্ণ।"
+        },
+        "vip_qa": {
+            "question_en": "Why should you not skip heading levels (e.g., going from an <h1> to an <h3>)?",
+            "answer_en": "Skipping heading levels can confuse screen reader users and harm accessibility. It creates a disjointed outline of the page, making it difficult for assistive technologies to navigate the content."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Beginner",
+        "sub_topic": "Lists",
+        "question_en": "What are the three types of lists in HTML?",
+        "question_bn": "HTML-এ তিন ধরনের লিস্ট কী কী?",
+        "details": {
+            "what_is_en": "The three types are: 1. `<ol>` for ordered lists (numbered), 2. `<ul>` for unordered lists (bulleted), and 3. `<dl>` for description lists (term-description pairs).",
+            "what_is_bn": "তিন প্রকার লিস্ট হলো: ১. `<ol>` অর্ডার করা লিস্ট (সংখ্যাযুক্ত), ২. `<ul>` আনঅর্ডার করা লিস্ট (বুলেটযুক্ত), এবং ৩. `<dl>` বর্ণনা লিস্ট।"
+        },
+        "vip_qa": {
+            "question_en": "Can you nest lists within each other? How is it done correctly?",
+            "answer_en": "Yes, you can nest lists. To do so correctly, you must place the new `<ul>` or `<ol>` element inside an `<li>` element of the parent list. This is the correct semantic structure for creating sub-lists."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Beginner",
+        "sub_topic": "Links",
+        "question_en": "How do you create a hyperlink that opens in a new tab?",
+        "question_bn": "নতুন ট্যাবে খোলে এমন হাইপারলিঙ্ক কীভাবে তৈরি করবেন?",
+        "details": {
+            "what_is_en": "You use the `<a>` (anchor) tag with the `href` attribute for the URL and the `target=\"_blank\"` attribute to open it in a new tab.",
+            "what_is_bn": "`<a>` (অ্যাঙ্কর) ট্যাগের সাথে `href` অ্যাট্রিবিউট এবং `target=\"_blank\"` অ্যাট্রিবিউট ব্যবহার করে এটি করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What security vulnerability is associated with `target=\"_blank\"` and how do you fix it?",
+            "answer_en": "The vulnerability is called 'tabnabbing'. The new page gets access to the original page via `window.opener`, which it can use to redirect the original page to a malicious site. To fix this, you must add `rel=\"noopener noreferrer\"` to your `<a>` tags."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Beginner",
+        "sub_topic": "Images",
+        "question_en": "What does the `alt` attribute on an `<img>` tag do?",
+        "question_bn": "`<img>` ট্যাগে `alt` অ্যাট্রিবিউটের কাজ কী?",
+        "details": {
+            "what_is_en": "The `alt` (alternative text) attribute provides a textual description of an image. It is crucial for accessibility, as screen readers read it aloud, and it's also displayed if the image fails to load.",
+            "what_is_bn": "`alt` (বিকল্প টেক্সট) অ্যাট্রিবিউট একটি ছবির পাঠ্য বিবরণ প্রদান করে। এটি অ্যাক্সেসিবিলিটির জন্য অপরিহার্য, কারণ স্ক্রিন রিডার এটি পড়ে শোনায় এবং ছবি লোড না হলে এটি প্রদর্শিত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "When is it appropriate to use an empty `alt=\"\"` attribute?",
+            "answer_en": "An empty `alt` attribute should be used for images that are purely decorative. If an image does not convey meaningful content and is just for visual styling, an empty alt text tells screen readers to ignore it, preventing clutter."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Beginner",
+        "sub_topic": "Comments",
+        "question_en": "How do you write a comment in HTML?",
+        "question_bn": "HTML-এ কমেন্ট কীভাবে লেখেন?",
+        "details": {
+            "what_is_en": "HTML comments start with ``. The browser does not display comments, but they can help document your source code.",
+            "what_is_bn": "HTML কমেন্ট `` দিয়ে শেষ হয়। ব্রাউজার কমেন্ট প্রদর্শন করে না, তবে এটি সোর্স কোড ডকুমেন্ট করতে সাহায্য করে।"
+        },
+        "vip_qa": {
+            "question_en": "Can you have nested comments in HTML?",
+            "answer_en": "No, you cannot nest comments in HTML. The first `-->` sequence will close the entire comment block, which can lead to parts of your intended comment being rendered on the page."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Intermediate",
+        "sub_topic": "Semantic Tags",
+        "question_en": "What are semantic HTML tags?",
+        "question_bn": "সেম্যান্টিক HTML ট্যাগ কী?",
+        "details": {
+            "what_is_en": "Semantic tags are HTML tags that clearly describe their meaning to both the browser and the developer, such as `<header>`, `<article>`, `<nav>`, and `<footer>`.",
+            "what_is_bn": "সেম্যান্টিক ট্যাগগুলো এমন ট্যাগ যা ব্রাউজার এবং ডেভেলপার উভয়কেই নিজের কন্টেন্টের অর্থ স্পষ্টভাবে বুঝিয়ে দেয়, যেমন `<header>`, `<article>`, `<nav>`, এবং `<footer>`।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `<section>` and `<article>`? When would you use one over the other?",
+            "answer_en": "An `<article>` is for self-contained, independent content that could be distributed on its own (e.g., a blog post). A `<section>` is used to group related content within a document (e.g., an introduction section)."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Intermediate",
+        "sub_topic": "Semantic Tags",
+        "question_en": "What is the difference between `<b>` and `<strong>` tags?",
+        "question_bn": "`<b>` এবং `<strong>` ট্যাগের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "The `<b>` tag specifies bold text without any extra importance. The `<strong>` tag indicates that the text has strong importance, and browsers typically render it as bold.",
+            "what_is_bn": "`<b>` ট্যাগ কোনো অতিরিক্ত গুরুত্ব ছাড়াই টেক্সটকে বোল্ড করে। `<strong>` ট্যাগ নির্দেশ করে যে টেক্সটটির গুরুত্ব অনেক বেশি এবং ব্রাউজার সাধারণত এটিকে বোল্ড হিসেবে দেখায়।"
+        },
+        "vip_qa": {
+            "question_en": "For SEO and accessibility, which tag is better to use for important text?",
+            "answer_en": "The `<strong>` tag is better. It adds semantic meaning, signaling to search engines and screen readers that the content is important, whereas `<b>` is purely for visual styling."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Intermediate",
+        "sub_topic": "Forms",
+        "question_en": "What is the purpose of the `<label>` tag in a form?",
+        "question_bn": "ফর্মে `<label>` ট্যাগের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The `<label>` tag defines a label for form elements like `<input>`. It improves usability and accessibility because clicking on the label focuses the associated input.",
+            "what_is_bn": "`<label>` ট্যাগ `<input>`-এর মতো ফর্ম এলিমেন্টের জন্য একটি লেবেল ডিফাইন করে। এটি ব্যবহারযোগ্যতা এবং অ্যাক্সেসিবিলিটি উন্নত করে কারণ লেবেলে ক্লিক করলে সংশ্লিষ্ট ইনপুটটি ফোকাস হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What are the two ways to associate a `<label>` with an `<input>`, and which is generally better?",
+            "answer_en": "1. **Wrapping:** You can wrap the `<input>` inside the `<label>`. 2. **Using `for`/`id`:** Use the `for` attribute on the `<label>`, matching the `id` of the `<input>`. The `for`/`id` method is generally better as it's more robust for assistive technologies and allows flexible layouts."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Intermediate",
+        "sub_topic": "Forms",
+        "question_en": "What is the difference between GET and POST form methods?",
+        "question_bn": "GET এবং POST ফর্ম মেথডের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**GET** appends form data to the URL. **POST** sends form data in the HTTP request body. POST is more secure for sensitive data.",
+            "what_is_bn": "**GET** ফর্ম ডেটাকে URL-এর সাথে যুক্ত করে। **POST** ফর্ম ডেটাকে HTTP রিকোয়েস্টের বডিতে পাঠায়। সংবেদনশীল ডেটার জন্য POST বেশি নিরাপদ।"
+        },
+        "vip_qa": {
+            "question_en": "Which method is idempotent and what does that mean?",
+            "answer_en": "GET is idempotent. Idempotency means that making the same request multiple times will produce the same result as making it once. POST is not idempotent, as making the same request multiple times will typically create multiple resources."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Intermediate",
+        "sub_topic": "Tables",
+        "question_en": "What are the essential tags for creating a basic HTML table?",
+        "question_bn": "একটি বেসিক HTML টেবিল তৈরির জন্য প্রয়োজনীয় ট্যাগগুলো কী কী?",
+        "details": {
+            "what_is_en": "The essential tags are `<table>` to define the table, `<tr>` for table rows, `<th>` for table headers, and `<td>` for table data cells.",
+            "what_is_bn": "প্রয়োজনীয় ট্যাগগুলো হলো `<table>` (টেবিল), `<tr>` (সারি), `<th>` (হেডার), এবং `<td>` (ডেটা সেল)।"
+        },
+        "vip_qa": {
+            "question_en": "For accessibility and structure, what is the purpose of `<thead>`, `<tbody>`, and `<tfoot>` elements in a table?",
+            "answer_en": "These elements provide semantic structure. `<thead>` groups header content, `<tbody>` groups body content, and `<tfoot>` groups footer content. This is important for screen readers, styling, and allowing the browser to scroll the table body independently."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Intermediate",
+        "sub_topic": "Meta Tags",
+        "question_en": "What is the purpose of the `<meta>` tag in HTML?",
+        "question_bn": "HTML-এ `<meta>` ট্যাগের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The `<meta>` tag provides metadata about the HTML document, such as character set, page description, keywords, author, and viewport settings.",
+            "what_is_bn": "`<meta>` ট্যাগ HTML ডকুমেন্ট সম্পর্কে মেটাডেটা প্রদান করে, যেমন ক্যারেক্টার সেট, পেজের বর্ণনা, কীওয়ার্ড, লেখক এবং ভিউপোর্ট সেটিংস।"
+        },
+        "vip_qa": {
+            "question_en": "What does `<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">` do?",
+            "answer_en": "This viewport meta tag is essential for responsive web design. It tells the browser to set the width of the page to the device's screen width and to set the initial zoom level to 100%."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Intermediate",
+        "sub_topic": "HTML Entities",
+        "question_en": "What are HTML entities?",
+        "question_bn": "HTML এনটিটি কী?",
+        "details": {
+            "what_is_en": "HTML entities are used to display reserved characters (like `<`) or characters that are not on the keyboard. They start with an ampersand (&) and end with a semicolon (;).",
+            "what_is_bn": "HTML এনটিটি সংরক্ষিত অক্ষর (যেমন `<`) বা কীবোর্ডে নেই এমন অক্ষর প্রদর্শন করতে ব্যবহৃত হয়। এগুলি অ্যামপারস্যান্ড (&) দিয়ে শুরু হয় এবং সেমিকোলন (;) দিয়ে শেষ হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the entity for a non-breaking space and what is its use case?",
+            "answer_en": "The entity is `&nbsp;`. It's used to prevent a line break from happening at a specific point. For example, you might use it between a number and a unit (e.g., `10&nbsp;px`) to ensure they stay together on the same line."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Intermediate",
+        "sub_topic": "Character Encoding",
+        "question_en": "What does `<meta charset=\"UTF-8\">` specify?",
+        "question_bn": "`<meta charset=\"UTF-8\">` কী নির্দিষ্ট করে?",
+        "details": {
+            "what_is_en": "It specifies the character encoding for the HTML document. UTF-8 is a universal character set that includes almost all characters and symbols in the world.",
+            "what_is_bn": "এটি HTML ডকুমেন্টের জন্য ক্যারেক্টার এনকোডিং নির্দিষ্ট করে। UTF-8 একটি সার্বজনীন ক্যারেক্টার সেট যা বিশ্বের প্রায় সমস্ত অক্ষর এবং চিহ্ন অন্তর্ভুক্ত করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is it important to declare character encoding early in the `<head>` tag?",
+            "answer_en": "It should be declared as early as possible so the browser knows how to interpret the text characters correctly from the beginning. Declaring it late could cause the browser to re-parse the document, and it might incorrectly display some characters before the declaration is read."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Intermediate",
+        "sub_topic": "The DOM",
+        "question_en": "What is the HTML DOM?",
+        "question_bn": "HTML DOM কী?",
+        "details": {
+            "what_is_en": "The DOM (Document Object Model) is a programming interface that represents a web page as a tree of nodes and objects. It allows programs like JavaScript to access and manipulate the page's content and structure.",
+            "what_is_bn": "DOM (ডকুমেন্ট অবজেক্ট মডেল) হলো একটি প্রোগ্রামিং ইন্টারফেস, যা একটি ওয়েব পেজকে নোড এবং অবজেক্টের একটি ট্রি হিসেবে উপস্থাপন করে। এটি JavaScript-এর মতো প্রোগ্রামকে পেজের কন্টেন্ট এবং কাঠামো অ্যাক্সেস ও পরিবর্তন করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between the DOM and the Shadow DOM?",
+            "answer_en": "The **DOM** is the standard model for the entire document. The **Shadow DOM** is a web standard that allows for encapsulated DOM trees with their own styles and scripts. These encapsulated trees are attached to an element but are isolated from the main document DOM, which is the technology that powers Web Components."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Intermediate",
+        "sub_topic": "HTML vs XHTML",
+        "question_en": "What is the main difference between HTML and XHTML?",
+        "question_bn": "HTML এবং XHTML-এর মধ্যে প্রধান পার্থক্য কী?",
+        "details": {
+            "what_is_en": "XHTML (Extensible HyperText Markup Language) is a stricter, XML-based version of HTML. It requires all elements to be properly nested, closed, and in lowercase.",
+            "what_is_bn": "XHTML (এক্সটেনসিবল হাইপার টেক্সট মার্কআপ ল্যাঙ্গুয়েজ) হলো HTML-এর একটি কঠোর, XML-ভিত্তিক সংস্করণ। এতে সমস্ত এলিমেন্ট সঠিকভাবে নেস্টেড, বন্ধ এবং ছোট হাতের অক্ষরে থাকা আবশ্যক।"
+        },
+        "vip_qa": {
+            "question_en": "Is XHTML still relevant today?",
+            "answer_en": "Largely, no. With the advent of HTML5, which is more forgiving and has a robust error-handling specification, the need for XHTML's strictness has diminished. Most modern web development uses HTML5."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Advanced",
+        "sub_topic": "Media and Embedding",
+        "question_en": "What is the difference between `<img>`, `<picture>`, and CSS `background-image`?",
+        "question_bn": "`<img>`, `<picture>`, এবং `background-image`-এর মধ্যে কোনটি কখন ব্যবহার করবেন?",
+        "details": {
+            "what_is_en": "`<img>` is for content-critical images. `<picture>` is for responsive art direction (serving different images based on viewport). `background-image` is for purely decorative images.",
+            "what_is_bn": "`<img>` কন্টেন্টের অংশ হিসেবে ছবি দেখানোর জন্য। `<picture>` রেসপন্সিভ ডিজাইনের জন্য। `background-image` ডিজাইন বা ডেকোরেশনের জন্য।"
+        },
+        "vip_qa": {
+            "question_en": "For SEO, which method of adding an image is best?",
+            "answer_en": "The `<img>` tag is best for SEO because search engine crawlers can easily parse it and index the image, especially when a descriptive `alt` attribute is provided. Images added via CSS `background-image` are typically ignored by crawlers."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Advanced",
+        "sub_topic": "Media and Embedding",
+        "question_en": "What are two major security risks of using `<iframe>` and how can they be mitigated?",
+        "question_bn": "`<iframe>` ব্যবহারের দুটি প্রধান নিরাপত্তা ঝুঁকি কী এবং কীভাবে তা কমানো যায়?",
+        "details": {
+            "what_is_en": "Two main risks are Clickjacking and Cross-Site Scripting (XSS). They can be mitigated with HTTP headers and the `sandbox` attribute.",
+            "what_is_bn": "দুটি প্রধান ঝুঁকি হলো ক্লিকজ্যাকিং এবং ক্রস-সাইট স্ক্রিপ্টিং (XSS)। এগুলি HTTP হেডার এবং `sandbox` অ্যাট্রিবিউট দিয়ে কমানো যায়।"
+        },
+        "vip_qa": {
+            "question_en": "How does the `sandbox` attribute work to improve iframe security?",
+            "answer_en": "The `sandbox` attribute on an `<iframe>` enables a set of restrictions on the framed content. With an empty `sandbox` attribute, it blocks all scripts, form submissions, popups, etc. You can selectively re-enable features by adding values like `allow-scripts` or `allow-forms`."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Advanced",
+        "sub_topic": "Accessibility",
+        "question_en": "What is ARIA in HTML?",
+        "question_bn": "HTML-এ ARIA কী?",
+        "details": {
+            "what_is_en": "ARIA (Accessible Rich Internet Applications) is a set of attributes you can add to HTML elements to improve their accessibility for people who use assistive technologies like screen readers.",
+            "what_is_bn": "ARIA (এক্সেসিবল রিচ ইন্টারনেট অ্যাপ্লিকেশন) হলো কিছু অ্যাট্রিবিউট যা HTML এলিমেন্টে যোগ করে অ্যাসিস্টিভ টেকনোলজি ব্যবহারকারীদের জন্য অ্যাক্সেসিবিলিটি উন্নত করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the first rule of ARIA use?",
+            "answer_en": "The first rule is: 'If you can use a native HTML element or attribute with the semantics and behavior you require already built in, use it instead of re-purposing an element and adding an ARIA role, state, or property to make it accessible'."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Advanced",
+        "sub_topic": "HTML5 APIs",
+        "question_en": "What is the difference between LocalStorage and SessionStorage?",
+        "question_bn": "LocalStorage এবং SessionStorage-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "Both are web storage APIs. **LocalStorage** data persists even after the browser is closed. **SessionStorage** data is cleared when the page session ends (when the tab is closed).",
+            "what_is_bn": "দুটোই ওয়েব স্টোরেজ API। **LocalStorage**-এর ডেটা ব্রাউজার বন্ধ করার পরেও থেকে যায়। **SessionStorage**-এর ডেটা ট্যাব বন্ধ হলে মুছে যায়।"
+        },
+        "vip_qa": {
+            "question_en": "What are the security implications of storing a JWT in LocalStorage? What is a safer alternative?",
+            "answer_en": "Storing a JWT in LocalStorage is vulnerable to **Cross-Site Scripting (XSS)** attacks. A safer alternative is to store the JWT in an **`HttpOnly` cookie**. An `HttpOnly` cookie cannot be accessed by client-side JavaScript, mitigating this specific risk."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Advanced",
+        "sub_topic": "HTML5 APIs",
+        "question_en": "What is the Canvas element in HTML5?",
+        "question_bn": "HTML5-এ Canvas এলিমেন্ট কী?",
+        "details": {
+            "what_is_en": "The `<canvas>` element is used to draw graphics on a web page, such as graphs, game graphics, or other visual images, on the fly via scripting (usually JavaScript).",
+            "what_is_bn": "`<canvas>` এলিমেন্ট ওয়েব পেজে গ্রাফিক্স আঁকতে ব্যবহৃত হয়, যেমন গ্রাফ, গেম গ্রাফিক্স বা অন্যান্য ভিজ্যুয়াল ছবি, যা স্ক্রিপ্টিং (সাধারণত JavaScript) এর মাধ্যমে তৈরি করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the key difference between using `<canvas>` and SVG for graphics?",
+            "answer_en": "**Canvas** is pixel-based (raster) and controlled with JavaScript, ideal for dynamic animations and games. **SVG** is XML-based (vector), retains its object model in the DOM, and is better for static, scalable graphics like logos and charts where accessibility is key."
+        }
+    },
+    {
+        "id": 26,
+        "level": "Advanced",
+        "sub_topic": "Video and Audio",
+        "question_en": "What are some important attributes for the `<video>` tag?",
+        "question_bn": "`<video>` ট্যাগের জন্য কিছু গুরুত্বপূর্ণ অ্যাট্রিবিউট কী কী?",
+        "details": {
+            "what_is_en": "Important attributes include `src`, `controls` (to show play/pause buttons), `autoplay`, `muted` (often required for autoplay), `loop`, `poster` (an image shown before play), `width`, and `height`.",
+            "what_is_bn": "গুরুত্বপূর্ণ অ্যাট্রিবিউটগুলোর মধ্যে রয়েছে `src`, `controls` (প্লে/পজ বাটন দেখানোর জন্য), `autoplay`, `muted`, `loop`, `poster` (ভিডিওর থাম্বনেইল) `width`, এবং `height`।"
+        },
+        "vip_qa": {
+            "question_en": "How can you provide multiple video formats for better browser compatibility?",
+            "answer_en": "You can use multiple `<source>` elements inside the `<video>` tag. The browser will use the first format it supports. Example: `<video controls><source src=\"movie.mp4\" type=\"video/mp4\"><source src=\"movie.webm\" type=\"video/webm\"></video>`."
+        }
+    },
+    {
+        "id": 27,
+        "level": "Advanced",
+        "sub_topic": "SVG in HTML",
+        "question_en": "What are the two ways to use SVG in an HTML file?",
+        "question_bn": "HTML ফাইলে SVG ব্যবহারের দুটি উপায় কী কী?",
+        "details": {
+            "what_is_en": "You can use SVG **inline** by directly writing the `<svg>` code in the HTML, or you can use it as an external file with the `<img>` tag or CSS `background-image` property.",
+            "what_is_bn": "আপনি HTML-এ সরাসরি `<svg>` কোড লিখে **ইনলাইন** SVG ব্যবহার করতে পারেন, অথবা `<img>` ট্যাগ বা CSS `background-image` প্রপার্টি দিয়ে এটিকে একটি বাহ্যিক ফাইল হিসেবে ব্যবহার করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is the main advantage of using inline SVG over an `<img>` tag?",
+            "answer_en": "The main advantage of inline SVG is that its individual parts can be styled and manipulated with CSS and JavaScript. This allows for dynamic animations and interactive graphics, which is not possible when using an `<img>` tag to display the SVG."
+        }
+    },
+    {
+        "id": 28,
+        "level": "Advanced",
+        "sub_topic": "Web Workers",
+        "question_en": "What are Web Workers?",
+        "question_bn": "ওয়েব ওয়ার্কার কী?",
+        "details": {
+            "what_is_en": "Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface.",
+            "what_is_bn": "ওয়েব ওয়ার্কার হলো ব্যাকগ্রাউন্ড থ্রেডে স্ক্রিপ্ট চালানোর একটি সহজ উপায়। ওয়ার্কার থ্রেড ইউজার ইন্টারফেসে হস্তক্ষেপ না করে কাজ সম্পাদন করতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a major limitation of Web Workers?",
+            "answer_en": "A major limitation is that Web Workers do not have direct access to the DOM. They can only communicate with the main thread (which can access the DOM) by sending messages back and forth."
+        }
+    },
+    {
+        "id": 29,
+        "level": "Advanced",
+        "sub_topic": "Script Loading",
+        "question_en": "What is the difference between `async` and `defer` attributes in a `<script>` tag?",
+        "question_bn": "`<script>` ট্যাগে `async` এবং `defer` অ্যাট্রিবিউটের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**async** downloads the script while the HTML parsing continues and executes it as soon as it's downloaded, potentially blocking parsing. **defer** downloads the script while parsing but guarantees to execute it only after the HTML parsing is complete.",
+            "what_is_bn": "**async** HTML পার্সিংয়ের সময় স্ক্রিপ্ট ডাউনলোড করে এবং ডাউনলোড শেষ হলেই এক্সিকিউট করে। **defer** পার্সিংয়ের সময় ডাউনলোড করে কিন্তু HTML পার্সিং শেষ হওয়ার পরেই এক্সিকিউট করে।"
+        },
+        "vip_qa": {
+            "question_en": "If you have multiple deferred scripts, in what order do they execute?",
+            "answer_en": "Multiple deferred scripts are guaranteed to execute in the order they appear in the HTML document. This is not the case for async scripts, which execute in whatever order they finish downloading."
+        }
+    },
+    {
+        "id": 30,
+        "level": "Advanced",
+        "sub_topic": "Resource Hints",
+        "question_en": "What is the purpose of `<link rel=\"preload\">`?",
+        "question_bn": "`<link rel=\"preload\">`-এর উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "`<link rel=\"preload\">` is a resource hint that tells the browser to start fetching a resource early in the page load process because it will be needed soon.",
+            "what_is_bn": "`<link rel=\"preload\">` একটি রিসোর্স হিন্ট যা ব্রাউজারকে পেজ লোডের শুরুতে একটি রিসোর্স ফেচ করতে বলে, কারণ এটি শীঘ্রই প্রয়োজন হবে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `preload` and `prefetch`?",
+            "answer_en": "`preload` is for resources needed for the **current** page (high priority). `prefetch` is for resources that might be needed for **future** navigations (low priority). The browser fetches preloaded resources before prefetched ones."
+        }
+    },
+    {
+        "id": 31,
+        "level": "Beginner",
+        "sub_topic": "Forms",
+        "question_en": "What is the purpose of the 'name' attribute in an <input> tag?",
+        "question_bn": "<input> ট্যাগে 'name' অ্যাট্রিবিউটের কাজ কী?",
+        "details": {
+            "what_is_en": "The 'name' attribute is used to identify the form data after it is submitted to the server. Only form elements with a 'name' attribute will have their values passed when submitting a form.",
+            "what_is_bn": "ফর্মটি সার্ভারে সাবমিট করার পর ডেটা শনাক্ত করতে 'name' অ্যাট্রিবিউট ব্যবহৃত হয়। শুধুমাত্র 'name' অ্যাট্রিবিউটযুক্ত ফর্ম এলিমেন্টের মান সাবমিট করার সময় পাঠানো হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How does the 'name' attribute relate to radio buttons?",
+            "answer_en": "For radio buttons, all options in a group must have the same 'name' attribute. This ensures that only one radio button from that group can be selected at a time."
+        }
+    },
+    {
+        "id": 32,
+        "level": "Intermediate",
+        "sub_topic": "Forms",
+        "question_en": "What does the 'required' attribute do on a form input?",
+        "question_bn": "ফর্ম ইনপুটে 'required' অ্যাট্রিবিউটের কাজ কী?",
+        "details": {
+            "what_is_en": "The 'required' attribute is a boolean attribute that specifies that an input field must be filled out before submitting the form. This provides basic client-side validation.",
+            "what_is_bn": "'required' একটি বুলিয়ান অ্যাট্রিবিউট যা নির্দিষ্ট করে যে ফর্ম জমা দেওয়ার আগে একটি ইনপুট ফিল্ড অবশ্যই পূরণ করতে হবে। এটি বেসিক ক্লায়েন্ট-সাইড ভ্যালিডেশন প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "Is client-side validation with 'required' enough for security?",
+            "answer_en": "Absolutely not. Client-side validation is a user experience feature, not a security measure. A malicious user can easily bypass it. All data must always be validated again on the server-side."
+        }
+    },
+    {
+        "id": 33,
+        "level": "Beginner",
+        "sub_topic": "Document Structure",
+        "question_en": "What is the difference between the <head> and <body> sections of an HTML document?",
+        "question_bn": "HTML ডকুমেন্টের <head> এবং <body> অংশের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "The <head> section contains meta-information about the document (like title, scripts, styles) which is not displayed on the page. The <body> section contains the visible page content.",
+            "what_is_bn": "<head> অংশে ডকুমেন্ট সম্পর্কে মেটা-তথ্য থাকে (যেমন টাইটেল, স্ক্রিপ্ট, স্টাইল) যা পেজে প্রদর্শিত হয় না। <body> অংশে দৃশ্যমান পেজের বিষয়বস্তু থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "Where should the `<title>` tag be placed and why is it important?",
+            "answer_en": "The `<title>` tag must be placed inside the `<head>` section. It's important for SEO as search engines use it as the main title for the search result, and it's also what appears in the browser tab."
+        }
+    },
+    {
+        "id": 34,
+        "level": "Intermediate",
+        "sub_topic": "HTML5 Elements",
+        "question_en": "What is the purpose of the `<figure>` and `<figcaption>` elements?",
+        "question_bn": "`<figure>` এবং `<figcaption>` এলিমেন্টের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The `<figure>` tag is used to encapsulate self-contained content like images, diagrams, or code snippets. The `<figcaption>` tag provides a caption or legend for the `<figure>` element.",
+            "what_is_bn": "`<figure>` ট্যাগ ছবি, ডায়াগ্রাম বা কোড স্নিপেটের মতো স্বয়ংসম্পূর্ণ বিষয়বস্তু ধারণ করতে ব্যবহৃত হয়। `<figcaption>` ট্যাগ `<figure>` এলিমেন্টের জন্য একটি ক্যাপশন প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why use `<figure>` instead of just a `<div>` around an image and its caption?",
+            "answer_en": "Using `<figure>` provides a semantic connection between the content and its caption. This is beneficial for accessibility, as screen readers can announce the caption as being associated with the image, providing better context to the user."
+        }
+    },
+    {
+        "id": 35,
+        "level": "Beginner",
+        "sub_topic": "Styling",
+        "question_en": "What are the three ways to apply CSS styles to an HTML document?",
+        "question_bn": "HTML ডকুমেন্টে CSS স্টাইল প্রয়োগ করার তিনটি উপায় কী কী?",
+        "details": {
+            "what_is_en": "1. Inline (using the 'style' attribute). 2. Internal (using a `<style>` tag in the `<head>`). 3. External (linking to an external .css file using a `<link>` tag).",
+            "what_is_bn": "১. ইনলাইন ('style' অ্যাট্রিবিউট ব্যবহার করে)। ২. ইন্টারনাল (<head> এ `<style>` ট্যাগ ব্যবহার করে)। ৩. এক্সটার্নাল (<link> ট্যাগ ব্যবহার করে একটি .css ফাইলের সাথে লিঙ্ক করে)।"
+        },
+        "vip_qa": {
+            "question_en": "Which method is considered best practice for a large website and why?",
+            "answer_en": "External stylesheets are the best practice. They allow for separation of concerns (content vs. presentation), reusability of styles across multiple pages, and improved performance through browser caching of the CSS file."
+        }
+    },
+    {
+        "id": 36,
+        "level": "Intermediate",
+        "sub_topic": "Data Attributes",
+        "question_en": "How do you access a `data-*` attribute in JavaScript?",
+        "question_bn": "JavaScript-এ একটি `data-*` অ্যাট্রিবিউট কীভাবে অ্যাক্সেস করবেন?",
+        "details": {
+            "what_is_en": "You can access `data-*` attributes using the `dataset` property on the HTML element. For an attribute like `data-user-id`, you would use `element.dataset.userId`.",
+            "what_is_bn": "আপনি HTML এলিমেন্টের `dataset` প্রপার্টি ব্যবহার করে `data-*` অ্যাট্রিবিউট অ্যাক্সেস করতে পারেন। `data-user-id` এর মতো একটি অ্যাট্রিবিউটের জন্য, আপনি `element.dataset.userId` ব্যবহার করবেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between using `getAttribute('data-user-id')` and `element.dataset.userId`?",
+            "answer_en": "`getAttribute` is a general method for any attribute and returns a string. The `dataset` property is a specific API for `data-*` attributes, automatically converting kebab-case attribute names to camelCase property names, which is often more convenient."
+        }
+    },
+    {
+        "id": 37,
+        "level": "Intermediate",
+        "sub_topic": "Links",
+        "question_en": "How do you create a link that sends an email?",
+        "question_bn": "ইমেল পাঠায় এমন একটি লিঙ্ক কীভাবে তৈরি করবেন?",
+        "details": {
+            "what_is_en": "You use the anchor tag `<a>` with the `href` attribute set to `mailto:` followed by the email address, like `<a href=\"mailto:info@example.com\">Send Email</a>`.",
+            "what_is_bn": "`<a>` ট্যাগের `href` অ্যাট্রিবিউটে `mailto:` এবং তারপর ইমেল ঠিকানা ব্যবহার করে এটি করা হয়, যেমন `<a href=\"mailto:info@example.com\">ইমেল পাঠান</a>`।"
+        },
+        "vip_qa": {
+            "question_en": "How can you pre-fill the subject and body of the email using the `mailto` link?",
+            "answer_en": "You can add query parameters to the `mailto` link. Use `?subject=YourSubject` to set the subject and `&body=YourBodyText` to set the body content. For example: `mailto:info@example.com?subject=Inquiry&body=Hello`."
+        }
+    },
+    {
+        "id": 38,
+        "level": "Advanced",
+        "sub_topic": "Web Components",
+        "question_en": "What are HTML templates?",
+        "question_bn": "HTML টেমপ্লেট কী?",
+        "details": {
+            "what_is_en": "The `<template>` tag holds HTML content that is not rendered by the browser when the page loads but can be cloned and inserted into the DOM using JavaScript.",
+            "what_is_bn": "`<template>` ট্যাগে HTML কন্টেন্ট থাকে যা পেজ লোড হওয়ার সময় ব্রাউজার রেন্ডার করে না, কিন্তু JavaScript ব্যবহার করে ক্লোন করে DOM-এ যুক্ত করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "How are HTML templates related to Web Components?",
+            "answer_en": "HTML templates are a key part of the Web Components specification. They are often used to define the internal structure (the Shadow DOM) of a custom element in a clean and declarative way."
+        }
+    },
+    {
+        "id": 39,
+        "level": "Intermediate",
+        "sub_topic": "Forms",
+        "question_en": "What is the `placeholder` attribute used for?",
+        "question_bn": "`placeholder` অ্যাট্রিবিউট কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `placeholder` attribute provides a short hint or example text that describes the expected value of an input field. It is displayed in the field before the user enters a value.",
+            "what_is_bn": "`placeholder` অ্যাট্রিবিউট একটি সংক্ষিপ্ত ইঙ্গিত বা উদাহরণ টেক্সট প্রদান করে যা একটি ইনপুট ফিল্ডের প্রত্যাশিত মান বর্ণনা করে। এটি ব্যবহারকারী মান প্রবেশ করার আগে ফিল্ডে প্রদর্শিত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Should you use a `placeholder` as a replacement for a `<label>`?",
+            "answer_en": "No, you should never use a placeholder as a replacement for a `<label>`. Placeholders disappear once the user starts typing, which can make forms confusing. They also have poor color contrast by default, making them an accessibility issue."
+        }
+    },
+    {
+        "id": 40,
+        "level": "Advanced",
+        "sub_topic": "Performance",
+        "question_en": "What is content delivery network (CDN) and how does it relate to HTML?",
+        "question_bn": "কনটেন্ট ডেলিভারি নেটওয়ার্ক (CDN) কী এবং এটি HTML-এর সাথে কীভাবে সম্পর্কিত?",
+        "details": {
+            "what_is_en": "A CDN is a network of servers distributed globally that caches content closer to users. In HTML, you can link to assets like CSS, JavaScript libraries, and fonts hosted on a CDN to improve page load times.",
+            "what_is_bn": "CDN হলো বিশ্বব্যাপী বিস্তৃত সার্ভারের একটি নেটওয়ার্ক যা ব্যবহারকারীদের কাছাকাছি কন্টেন্ট ক্যাশ করে। HTML-এ, আপনি CDN-এ হোস্ট করা CSS, JavaScript লাইব্রেরি এবং ফন্টের মতো অ্যাসেট লিঙ্ক করে পেজ লোডের সময় উন্নত করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is a key benefit of using a CDN for popular libraries like jQuery or Bootstrap?",
+            "answer_en": "A major benefit is the high probability that the user's browser has already cached that exact file from visiting another website that uses the same CDN link. This means the browser doesn't have to download the file again, leading to very fast load times."
+        }
+    },
+    {
+        "id": 41,
+        "level": "Intermediate",
+        "sub_topic": "Tables",
+        "question_en": "How do you make a table cell span multiple columns or rows?",
+        "question_bn": "আপনি কীভাবে একটি টেবিল সেলকে একাধিক কলাম বা সারিতে বিস্তৃত করবেন?",
+        "details": {
+            "what_is_en": "You use the `colspan` attribute on a `<td>` or `<th>` to make it span multiple columns, and the `rowspan` attribute to make it span multiple rows.",
+            "what_is_bn": "আপনি একটি `<td>` বা `<th>`-কে একাধিক কলামে বিস্তৃত করতে `colspan` অ্যাট্রিবিউট এবং একাধিক সারিতে বিস্তৃত করতে `rowspan` অ্যাট্রিবিউট ব্যবহার করবেন।"
+        },
+        "vip_qa": {
+            "question_en": "If a cell spans two rows (`rowspan=\"2\"`), what happens to the cell directly below it in the next row's HTML code?",
+            "answer_en": "You must omit the `<td>` or `<th>` for that cell in the next row's HTML. The `rowspan` effectively pushes the cells in the subsequent row(s) to the right, so you don't declare a cell for the space it occupies."
+        }
+    },
+    {
+        "id": 42,
+        "level": "Beginner",
+        "sub_topic": "Document Structure",
+        "question_en": "What is the `title` tag used for?",
+        "question_bn": "`title` ট্যাগ কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `<title>` tag defines the title of the document, which is shown in the browser's title bar or in the page's tab. It is required in all HTML documents.",
+            "what_is_bn": "`<title>` ট্যাগ ডকুমেন্টের শিরোনাম নির্ধারণ করে, যা ব্রাউজারের টাইটেল বার বা পেজের ট্যাবে দেখানো হয়। এটি সকল HTML ডকুমেন্টে আবশ্যক।"
+        },
+        "vip_qa": {
+            "question_en": "Besides the browser tab, where else is the content of the `<title>` tag critically important?",
+            "answer_en": "The `<title>` tag is critically important for Search Engine Optimization (SEO). Search engines use its content as the main headline for a page in search results, so a descriptive and relevant title can significantly impact click-through rates."
+        }
+    },
+    {
+        "id": 43,
+        "level": "Intermediate",
+        "sub_topic": "HTML5 Elements",
+        "question_en": "What is the purpose of the `<details>` and `<summary>` elements?",
+        "question_bn": "`<details>` এবং `<summary>` এলিমেন্টের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "These elements are used to create a disclosure widget in which information is hidden or revealed. The content of `<summary>` is always visible as a heading, and clicking it toggles the visibility of the rest of the content inside `<details>`.",
+            "what_is_bn": "এই এলিমেন্টগুলো একটি ডিসক্লোজার উইজেট তৈরি করতে ব্যবহৃত হয় যেখানে তথ্য লুকানো বা প্রকাশ করা যায়। `<summary>`-এর বিষয়বস্তু সবসময় একটি শিরোনাম হিসাবে দৃশ্যমান থাকে এবং এটিতে ক্লিক করলে `<details>`-এর ভেতরের বাকি বিষয়বস্তুর দৃশ্যমানতা টগল হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a major advantage of using the native `<details>` element over a custom JavaScript-based accordion?",
+            "answer_en": "A major advantage is that it works without any JavaScript, making it more robust and accessible by default. It's a native browser feature, so it doesn't require extra code, which can improve performance and reduce maintenance."
+        }
+    },
+    {
+        "id": 44,
+        "level": "Beginner",
+        "sub_topic": "HTML Elements",
+        "question_en": "What is the difference between an ordered list (`<ol>`) and an unordered list (`<ul>`)?",
+        "question_bn": "অর্ডার করা লিস্ট (`<ol>`) এবং আনঅর্ডার করা লিস্ট (`<ul>`)-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "An ordered list (`<ol>`) displays items with numbers or letters, where the order matters. An unordered list (`<ul>`) displays items with bullet points, where the order does not matter.",
+            "what_is_bn": "একটি অর্ডার করা লিস্ট (`<ol>`) আইটেমগুলিকে সংখ্যা বা অক্ষর দিয়ে দেখায়, যেখানে ক্রম গুরুত্বপূর্ণ। একটি আনঅর্ডার করা লিস্ট (`<ul>`) আইটেমগুলিকে বুলেট পয়েন্ট দিয়ে দেখায়, যেখানে ক্রম গুরুত্বপূর্ণ নয়।"
+        },
+        "vip_qa": {
+            "question_en": "How can you change the numbering type of an ordered list (e.g., to Roman numerals)?",
+            "answer_en": "You can use the `type` attribute on the `<ol>` tag. For example, `<ol type=\"i\">` will use lowercase Roman numerals, `type=\"A\"` will use uppercase letters, and so on."
+        }
+    },
+    {
+        "id": 45,
+        "level": "Intermediate",
+        "sub_topic": "Forms",
+        "question_en": "What are some of the new input types introduced in HTML5?",
+        "question_bn": "HTML5-এ নতুন কিছু ইনপুট টাইপ কী কী?",
+        "details": {
+            "what_is_en": "HTML5 introduced several new input types, such as `email`, `url`, `tel`, `number`, `date`, `color`, `range`, and `search`.",
+            "what_is_bn": "HTML5 বেশ কিছু নতুন ইনপুট টাইপ চালু করেছে, যেমন `email`, `url`, `tel`, `number`, `date`, `color`, `range`, এবং `search`।"
+        },
+        "vip_qa": {
+            "question_en": "What is the primary benefit of using these new input types, like `type=\"email\"`?",
+            "answer_en": "The primary benefit is improved user experience, especially on mobile devices. For `type=\"email\"`, mobile browsers will show a keyboard optimized for email entry (with '@' and '.' keys). They also provide built-in client-side validation."
+        }
+    },
+    {
+        "id": 46,
+        "level": "Beginner",
+        "sub_topic": "HTML Basics",
+        "question_en": "What is the `div` tag used for?",
+        "question_bn": "`div` ট্যাগ কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `<div>` tag is a generic container element used to group other HTML elements together. It has no special meaning and is often used for styling or scripting purposes.",
+            "what_is_bn": "`<div>` ট্যাগ একটি জেনেরিক কন্টেইনার এলিমেন্ট যা অন্য HTML এলিমেন্টগুলিকে একসাথে গ্রুপ করতে ব্যবহৃত হয়। এর কোনো বিশেষ অর্থ নেই এবং প্রায়ই স্টাইলিং বা স্ক্রিপ্টিংয়ের উদ্দেশ্যে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is 'divitis' and why is it considered a bad practice?",
+            "answer_en": "'Divitis' is the excessive use of `<div>` tags when more semantic elements like `<nav>`, `<main>`, or `<article>` would be more appropriate. It's bad practice because it leads to less meaningful and less accessible HTML."
+        }
+    },
+    {
+        "id": 47,
+        "level": "Intermediate",
+        "sub_topic": "Links",
+        "question_en": "What is an anchor link (or bookmark link)?",
+        "question_bn": "অ্যাঙ্কর লিঙ্ক (বা বুকমার্ক লিঙ্ক) কী?",
+        "details": {
+            "what_is_en": "An anchor link is a link that jumps to a specific section of the same page. It's created by setting the `href` attribute to a hash symbol (`#`) followed by the `id` of the target element.",
+            "what_is_bn": "অ্যাঙ্কর লিঙ্ক হলো একটি লিঙ্ক যা একই পেজের একটি নির্দিষ্ট বিভাগে চলে যায়। এটি `href` অ্যাট্রিবিউটকে একটি হ্যাশ চিহ্ন (`#`) এবং তারপর টার্গেট এলিমেন্টের `id` দিয়ে তৈরি করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How do you create the target for an anchor link?",
+            "answer_en": "You create the target by adding a unique `id` attribute to the element you want to link to. For example, `<h2 id=\"section2\">Section 2</h2>` can be targeted by `<a href=\"#section2\">Jump to Section 2</a>`."
+        }
+    },
+    {
+        "id": 48,
+        "level": "Advanced",
+        "sub_topic": "HTML5 APIs",
+        "question_en": "What is the Geolocation API?",
+        "question_bn": "জিওলোকেশন API কী?",
+        "details": {
+            "what_is_en": "The Geolocation API allows websites to access a user's geographical location, but only with their explicit permission. It is accessed via the `navigator.geolocation` object.",
+            "what_is_bn": "জিওলোকেশন API ওয়েবসাইটগুলিকে ব্যবহারকারীর ভৌগোলিক অবস্থান অ্যাক্সেস করার অনুমতি দেয়, তবে শুধুমাত্র তাদের স্পষ্ট অনুমতি নিয়ে। এটি `navigator.geolocation` অবজেক্টের মাধ্যমে অ্যাক্সেস করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why should you always provide a fallback for features that use the Geolocation API?",
+            "answer_en": "You must provide a fallback because a user can deny the permission request, or their browser/device might not support the API. Without a fallback (e.g., allowing the user to manually enter their location), the feature would be completely broken for those users."
+        }
+    },
+    {
+        "id": 49,
+        "level": "Intermediate",
+        "sub_topic": "Media and Embedding",
+        "question_en": "What is the `poster` attribute on a `<video>` tag for?",
+        "question_bn": "`<video>` ট্যাগে `poster` অ্যাট্রিবিউটের কাজ কী?",
+        "details": {
+            "what_is_en": "The `poster` attribute specifies an image to be shown while the video is downloading, or until the user hits the play button. It acts as a thumbnail for the video.",
+            "what_is_bn": "`poster` অ্যাট্রিবিউট একটি ছবি নির্দিষ্ট করে যা ভিডিও ডাউনলোড হওয়ার সময় বা ব্যবহারকারী প্লে বোতামে ক্লিক করার আগ পর্যন্ত দেখানো হয়। এটি ভিডিওর জন্য একটি থাম্বনেইল হিসাবে কাজ করে।"
+        },
+        "vip_qa": {
+            "question_en": "From a performance perspective, why is using a `poster` a good idea?",
+            "answer_en": "Video files are typically very large. Using a small, optimized poster image allows the page to display a relevant visual quickly while the larger video file loads in the background. This improves the perceived performance of the page."
+        }
+    },
+    {
+        "id": 50,
+        "level": "Advanced",
+        "sub_topic": "Security",
+        "question_en": "What is Cross-Origin Resource Sharing (CORS)?",
+        "question_bn": "ক্রস-অরিজিন রিসোর্স শেয়ারিং (CORS) কী?",
+        "details": {
+            "what_is_en": "CORS is a security mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin.",
+            "what_is_bn": "CORS একটি নিরাপত্তা ব্যবস্থা যা অতিরিক্ত HTTP হেডার ব্যবহার করে ব্রাউজারকে বলে যে একটি নির্দিষ্ট অরিজিনে চলমান ওয়েব অ্যাপ্লিকেশনকে অন্য একটি অরিজিন থেকে নির্বাচিত রিসোর্স অ্যাক্সেস করার অনুমতি দিতে।"
+        },
+        "vip_qa": {
+            "question_en": "How does CORS relate to making an `XMLHttpRequest` or `fetch` call from HTML/JavaScript?",
+            "answer_en": "By default, browsers enforce the Same-Origin Policy, which prevents a script on one page from accessing data on another page with a different origin. If you try to `fetch` data from a different domain, the browser will make a pre-flight request, and the target server must respond with the correct CORS headers (like `Access-Control-Allow-Origin`) for the request to succeed."
+        }
+    }
+]

@@ -1,0 +1,1517 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "JavaScript Basics",
+        "question_en": "What is JavaScript?",
+        "question_bn": "JavaScript কী?",
+        "details": {
+            "what_is_en": "JavaScript is a high-level, dynamic programming language used to create interactive effects within web browsers.",
+            "what_is_bn": "JavaScript হলো একটি উচ্চ স্তরের ডাইনামিক প্রোগ্রামিং ভাষা যা ওয়েব ব্রাউজারে ইন্টারেক্টিভ এফেক্ট তৈরি করতে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why is JavaScript called a client-side scripting language?",
+            "answer_en": "Because it is executed in the user's browser rather than on the web server."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "Variables",
+        "question_en": "What is the difference between var, let, and const?",
+        "question_bn": "var, let এবং const এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "var is function-scoped, let and const are block-scoped. const cannot be reassigned after initialization.",
+            "what_is_bn": "var ফাংশন-স্কোপড, let এবং const ব্লক-স্কোপড। const একবার ইনিশিয়ালাইজ করার পরে পুনরায় অ্যাসাইন করা যায় না।"
+        },
+        "vip_qa": {
+            "question_en": "Which is safer to use between var, let, and const?",
+            "answer_en": "const is safest because it prevents reassignment, while let should be preferred over var due to block scoping."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Intermediate",
+        "sub_topic": "Data Types",
+        "question_en": "What are the primitive data types in JavaScript?",
+        "question_bn": "JavaScript এ primitive data types কী কী?",
+        "details": {
+            "what_is_en": "JavaScript has 7 primitive data types: string, number, bigint, boolean, undefined, symbol, and null.",
+            "what_is_bn": "JavaScript-এ ৭টি primitive data types আছে: string, number, bigint, boolean, undefined, symbol, এবং null।"
+        },
+        "vip_qa": {
+            "question_en": "Why are primitives immutable in JavaScript?",
+            "answer_en": "Because they are stored by value and cannot be altered directly after creation."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Intermediate",
+        "sub_topic": "Functions",
+        "question_en": "What is a JavaScript function?",
+        "question_bn": "JavaScript function কী?",
+        "details": {
+            "what_is_en": "A function is a block of code designed to perform a particular task, which can be invoked when needed.",
+            "what_is_bn": "একটি function হলো কোডের একটি ব্লক যা নির্দিষ্ট কাজ সম্পাদনের জন্য তৈরি করা হয় এবং প্রয়োজনে কল করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between function declaration and function expression?",
+            "answer_en": "Function declarations are hoisted while function expressions are not, which affects when they can be called."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Intermediate",
+        "sub_topic": "Scope",
+        "question_en": "What is the difference between local and global scope?",
+        "question_bn": "Local এবং global scope এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "Local scope is the context within a function where variables are accessible only inside it. Global scope is accessible anywhere in the code.",
+            "what_is_bn": "Local scope হলো function এর মধ্যে ভেরিয়েবলগুলো যেখানে শুধুমাত্র সেই function এর ভিতরে অ্যাক্সেস করা যায়। Global scope হলো যেকোনো স্থানে কোডে অ্যাক্সেস করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "Why should we avoid polluting the global scope?",
+            "answer_en": "Because it can lead to naming conflicts and harder-to-maintain code."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Intermediate",
+        "sub_topic": "Objects",
+        "question_en": "What is an object in JavaScript?",
+        "question_bn": "JavaScript এ object কী?",
+        "details": {
+            "what_is_en": "An object is a collection of properties, where each property is a key-value pair.",
+            "what_is_bn": "একটি object হলো property-এর collection, যেখানে প্রতিটি property একটি key-value pair।"
+        },
+        "vip_qa": {
+            "question_en": "How is an object different from an array?",
+            "answer_en": "An object uses key-value pairs for properties while an array uses numeric indices."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Intermediate",
+        "sub_topic": "Arrays",
+        "question_en": "How do you create an array in JavaScript?",
+        "question_bn": "JavaScript এ array কিভাবে তৈরি করবেন?",
+        "details": {
+            "what_is_en": "Arrays can be created using [] brackets or the Array constructor.",
+            "what_is_bn": "Arrays [] ব্র্যাকেট বা Array constructor ব্যবহার করে তৈরি করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between array and object?",
+            "answer_en": "Arrays are ordered collections accessed by index, objects are key-value pairs."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Intermediate",
+        "sub_topic": "Operators",
+        "question_en": "What is the difference between == and ===?",
+        "question_bn": "== এবং === এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "== compares values after type coercion, === compares both value and type without coercion.",
+            "what_is_bn": "== type coercion-এর পর values compare করে, === type এবং value উভয় compare করে।"
+        },
+        "vip_qa": {
+            "question_en": "Which should you generally use?",
+            "answer_en": "Use === to avoid unexpected type coercion."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Intermediate",
+        "sub_topic": "Modules",
+        "question_en": "What are JavaScript modules?",
+        "question_bn": "JavaScript modules কী?",
+        "details": {
+            "what_is_en": "Modules allow code to be divided into separate files and imported/exported where needed.",
+            "what_is_bn": "Modules কোডকে আলাদা ফাইলে ভাগ করার সুবিধা দেয় এবং যেখানে প্রয়োজন import/export করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between default and named exports?",
+            "answer_en": "Default export allows one per file, named exports allow multiple exports per file."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Intermediate",
+        "sub_topic": "Hoisting",
+        "question_en": "What is hoisting in JavaScript?",
+        "question_bn": "JavaScript এ hoisting কী?",
+        "details": {
+            "what_is_en": "Hoisting is JavaScript's default behavior of moving declarations to the top of the scope before code execution.",
+            "what_is_bn": "Hoisting হলো JavaScript-এর ডিফল্ট behavior যেখানে declarations code execution-এর আগে scope-এর উপরে move হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Which declarations are hoisted?",
+            "answer_en": "`var` and function declarations are hoisted and initialized with `undefined`. `let` and `const` are also hoisted but not initialized, creating a 'Temporal Dead Zone' (TDZ) where they cannot be accessed before their declaration."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Intermediate",
+        "sub_topic": "This Keyword",
+        "question_en": "What is the 'this' keyword in JavaScript?",
+        "question_bn": "JavaScript এ 'this' keyword কী?",
+        "details": {
+            "what_is_en": "'this' refers to the object that is executing the current function.",
+            "what_is_bn": "'this' বর্তমানে যে function execute হচ্ছে সেই object কে নির্দেশ করে।"
+        },
+        "vip_qa": {
+            "question_en": "Does 'this' behave differently in arrow functions?",
+            "answer_en": "Yes, arrow functions do not have their own 'this'; they inherit it from the enclosing scope."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Intermediate",
+        "sub_topic": "Destructuring",
+        "question_en": "What is destructuring in JavaScript?",
+        "question_bn": "JavaScript এ destructuring কী?",
+        "details": {
+            "what_is_en": "Destructuring is a syntax for unpacking values from arrays or properties from objects into distinct variables.",
+            "what_is_bn": "Destructuring হলো syntax যা array বা object থেকে values unpack করে আলাদা variables-এ রাখতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example of array destructuring.",
+            "answer_en": "const [a, b] = [1, 2]; // a becomes 1, b becomes 2"
+        }
+    },
+    {
+        "id": 13,
+        "level": "Intermediate",
+        "sub_topic": "Spread & Rest",
+        "question_en": "What are the spread and rest operators?",
+        "question_bn": "Spread এবং rest operators কী?",
+        "details": {
+            "what_is_en": "The spread operator (...) expands an iterable, while the rest operator collects multiple elements into an array.",
+            "what_is_bn": "Spread operator (...) iterable expand করে, rest operator multiple elements collect করে array-এ।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example of a rest parameter.",
+            "answer_en": "function sum(...numbers) { return numbers.reduce((a, b) => a + b, 0); }"
+        }
+    },
+    {
+        "id": 14,
+        "level": "Intermediate",
+        "sub_topic": "Template Literals",
+        "question_en": "How do you create multi-line strings in JavaScript?",
+        "question_bn": "JavaScript-এ multi-line string কিভাবে তৈরি করবেন?",
+        "details": {
+            "what_is_en": "Use template literals with backticks (`) to create multi-line strings.",
+            "what_is_bn": "Template literals এবং backticks (`) ব্যবহার করে multi-line string তৈরি করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "Can expressions be embedded in template literals?",
+            "answer_en": "Yes, using the `${expression}` syntax."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Intermediate",
+        "sub_topic": "String Methods",
+        "question_en": "What is the difference between slice, substring, and substr?",
+        "question_bn": "slice, substring, এবং substr এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "slice(start, end) supports negative indices. substring(start, end) swaps arguments if start > end. substr(start, length) uses a length for the second argument.",
+            "what_is_bn": "slice(start, end) negative index সমর্থন করে; substring(start, end) swap করে যদি start > end হয়; substr(start, length) দ্বিতীয় আর্গুমেন্ট হিসেবে length ব্যবহার করে।"
+        },
+        "vip_qa": {
+            "question_en": "Which one is deprecated?",
+            "answer_en": "`substr()` is considered a legacy feature and may be deprecated in the future. `slice()` and `substring()` are preferred."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Intermediate",
+        "sub_topic": "Array Methods",
+        "question_en": "What is the difference between map, filter, and forEach?",
+        "question_bn": "map, filter, এবং forEach এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`map()` returns a new array with results from a callback. `filter()` returns a new array with elements that pass a test. `forEach()` executes a function on each element without returning anything.",
+            "what_is_bn": "map একটি নতুন array return করে, filter শুধুমাত্র test পাস করা elements নিয়ে একটি নতুন array return করে, forEach কিছু return না করে প্রতিটি element এর উপর একটি function execute করে।"
+        },
+        "vip_qa": {
+            "question_en": "Which method should you use to transform array values?",
+            "answer_en": "Use `map()` to create a new array with transformed values."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Intermediate",
+        "sub_topic": "Array Methods",
+        "question_en": "What is Array.prototype.reduce used for?",
+        "question_bn": "Array.prototype.reduce কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `reduce()` method executes a user-supplied 'reducer' callback function on each element of the array, passing in the return value from the calculation on the preceding element. The final result is a single accumulated value.",
+            "what_is_bn": "`reduce()` মেথডটি অ্যারের প্রতিটি উপাদানের উপর একটি 'reducer' কলব্যাক ফাংশন চালায় এবং পূর্ববর্তী উপাদানের গণনার ফলাফল পাস করে। সমস্ত উপাদানের উপর রিডিউসার চালানোর চূড়ান্ত ফলাফল একটি একক মান।"
+        },
+        "vip_qa": {
+            "question_en": "Can you calculate the sum of an array of numbers using reduce?",
+            "answer_en": "Yes, like this: `const sum = [1, 2, 3].reduce((accumulator, currentValue) => accumulator + currentValue, 0);`"
+        }
+    },
+    {
+        "id": 18,
+        "level": "Intermediate",
+        "sub_topic": "Operators",
+        "question_en": "What's the difference between `instanceof` and `typeof` operators?",
+        "question_bn": "`instanceof` এবং `typeof` অপারেটরের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`typeof` returns a string indicating the type of the operand (e.g., 'string', 'number'). `instanceof` tests if the `prototype` property of a constructor appears anywhere in the prototype chain of an object.",
+            "what_is_bn": "`typeof` একটি স্ট্রিং প্রদান করে যা অপারেন্ডের টাইপ নির্দেশ করে (যেমন, 'string', 'number', 'object')। `instanceof` পরীক্ষা করে দেখে যে কোনও কনস্ট্রাক্টরের `prototype` বৈশিষ্ট্যটি কোনও অবজেক্টের প্রোটোটাইপ চেইনে আছে কিনা।"
+        },
+        "vip_qa": {
+            "question_en": "What does `typeof null` return?",
+            "answer_en": "It returns 'object', which is a well-known historical bug in JavaScript that can't be fixed due to backward compatibility issues."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Intermediate",
+        "sub_topic": "Object Methods",
+        "question_en": "Differentiate between Object.keys, Object.values, and Object.entries.",
+        "question_bn": "Object.keys, Object.values, এবং Object.entries এর মধ্যে পার্থক্য করুন।",
+        "details": {
+            "what_is_en": "`Object.keys()` returns an array of property names. `Object.values()` returns an array of property values. `Object.entries()` returns an array of [key, value] pairs.",
+            "what_is_bn": "`Object.keys()` একটি অবজেক্টের বৈশিষ্ট্যগুলোর নামের একটি অ্যারে প্রদান করে। `Object.values()` একটি অবজেক্টের বৈশিষ্ট্যগুলোর মানের একটি অ্যারে প্রদান করে। `Object.entries()` একটি অবজেক্টের [কী, মান] জোড়ার একটি অ্যারে প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "Are the results from these methods guaranteed to be in a specific order?",
+            "answer_en": "Yes, since ES2015, the order is based on the original insertion order of properties."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Intermediate",
+        "sub_topic": "Objects",
+        "question_en": "How do you check if a property exists in an object?",
+        "question_bn": "আপনি কীভাবে একটি অবজেক্টে কোনো বৈশিষ্ট্য আছে কিনা তা পরীক্ষা করবেন?",
+        "details": {
+            "what_is_en": "You can use the `in` operator (checks prototype chain), `Object.prototype.hasOwnProperty()` (checks own properties only), or check if `obj.prop !== undefined` (can be buggy).",
+            "what_is_bn": "আপনি `in` অপারেটর (প্রোটোটাইপ চেইন পরীক্ষা করে), `Object.prototype.hasOwnProperty()` (শুধুমাত্র নিজস্ব বৈশিষ্ট্য পরীক্ষা করে), অথবা `obj.prop !== undefined` ব্যবহার করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "Which method is the most reliable for checking for own properties?",
+            "answer_en": "`Object.prototype.hasOwnProperty.call(obj, prop)` or the newer `Object.hasOwn(obj, prop)` are the most reliable ways, as they avoid issues with objects that might have a property named 'hasOwnProperty'."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Intermediate",
+        "sub_topic": "JavaScript Basics",
+        "question_en": "What is 'Strict Mode' in JavaScript?",
+        "question_bn": "JavaScript-এ 'Strict Mode' কী?",
+        "details": {
+            "what_is_en": "Strict Mode is a way to opt into a restricted variant of JavaScript. It makes several changes to normal JavaScript semantics, such as eliminating some silent errors by throwing them.",
+            "what_is_bn": "স্ট্রিক্ট মোড জাভাস্ক্রিপ্টের একটি সীমাবদ্ধ সংস্করণ। এটি সাধারণ জাভাস্ক্রিপ্টে বেশ কিছু পরিবর্তন আনে, যেমন কিছু নীরব ত্রুটিকে থ্রো করে বাদ দেওয়া।"
+        },
+        "vip_qa": {
+            "question_en": "How do you enable strict mode?",
+            "answer_en": "By adding `'use strict';` at the beginning of a script or a function."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Advanced",
+        "sub_topic": "Asynchronous JS",
+        "question_en": "What is a Promise in JavaScript?",
+        "question_bn": "JavaScript এ Promise কী?",
+        "details": {
+            "what_is_en": "A Promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value.",
+            "what_is_bn": "Promise হলো একটি asynchronous operation-এর eventual success বা failure এবং তার result-এর প্রতিনিধিত্বকারী একটি object।"
+        },
+        "vip_qa": {
+            "question_en": "What are the states of a Promise?",
+            "answer_en": "A promise can be in one of three states: pending, fulfilled, or rejected."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Advanced",
+        "sub_topic": "Async/Await",
+        "question_en": "What is async/await in JavaScript?",
+        "question_bn": "JavaScript এ async/await কী?",
+        "details": {
+            "what_is_en": "Async/await is syntactic sugar built on top of Promises, making asynchronous code look and behave more like synchronous code.",
+            "what_is_bn": "Async/await হলো Promises-এর উপর ভিত্তি করে তৈরি একটি সিনট্যাক্স যা asynchronous code-কে synchronous কোডের মতো দেখতে এবং ব্যবহার করতে সাহায্য করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why use async/await over Promises?",
+            "answer_en": "It provides cleaner syntax, makes error handling with try...catch blocks easier, and improves code readability by avoiding long `.then()` chains."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Advanced",
+        "sub_topic": "Closures",
+        "question_en": "What is a closure in JavaScript?",
+        "question_bn": "JavaScript এ closure কী?",
+        "details": {
+            "what_is_en": "A closure is the combination of a function and the lexical environment within which that function was declared. It gives a function access to its outer function's scope even after the outer function has returned.",
+            "what_is_bn": "Closure হলো একটি ফাংশন এবং তার lexical environment-এর সংমিশ্রণ। এটি একটি ফাংশনকে তার বাইরের ফাংশনের scope-এ অ্যাক্সেস করার সুযোগ দেয়, এমনকি বাইরের ফাংশনটি return করার পরেও।"
+        },
+        "vip_qa": {
+            "question_en": "Why are closures useful?",
+            "answer_en": "They are useful for data privacy (creating private variables), function factories, and maintaining state in asynchronous operations."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Advanced",
+        "sub_topic": "Event Loop",
+        "question_en": "What is the JavaScript event loop?",
+        "question_bn": "JavaScript event loop কী?",
+        "details": {
+            "what_is_en": "The event loop is a mechanism that allows JavaScript to perform non-blocking asynchronous operations, by offloading operations to the system kernel whenever possible.",
+            "what_is_bn": "Event loop হলো একটি প্রক্রিয়া যা JavaScript-কে non-blocking asynchronous operations করতে দেয়। এটি কল স্ট্যাক এবং টাস্ক কিউ এর মধ্যে কাজ করে।"
+        },
+        "vip_qa": {
+            "question_en": "How does the event loop handle tasks?",
+            "answer_en": "It continuously checks if the call stack is empty. If it is, it takes the first task from the task queue (or microtask queue) and pushes it onto the stack to be executed."
+        }
+    },
+    {
+        "id": 26,
+        "level": "Advanced",
+        "sub_topic": "Prototypes",
+        "question_en": "What is a prototype in JavaScript?",
+        "question_bn": "JavaScript এ prototype কী?",
+        "details": {
+            "what_is_en": "A prototype is an object from which other objects inherit properties and methods. Every JavaScript object has a private property which holds a link to its prototype object.",
+            "what_is_bn": "Prototype হলো একটি object যেখান থেকে অন্য object গুলি properties এবং methods inherit করে। প্রতিটি JavaScript অবজেক্টের একটি প্রোটোটাইপ থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "What is prototype chaining?",
+            "answer_en": "Prototype chaining is the process of looking up a property on an object and, if not found, looking for it on its prototype, and so on, until the property is found or the end of the chain (null) is reached."
+        }
+    },
+    {
+        "id": 27,
+        "level": "Advanced",
+        "sub_topic": "Call, Apply, Bind",
+        "question_en": "What is the difference between call(), apply(), and bind()?",
+        "question_bn": "call(), apply(), এবং bind() এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "All three are used to set the 'this' context for a function. `call()` and `apply()` invoke the function immediately, while `bind()` returns a new function with the context bound.",
+            "what_is_bn": "তিনটিই একটি ফাংশনের 'this' context সেট করতে ব্যবহৃত হয়। `call()` এবং `apply()` ফাংশনটি অবিলম্বে কল করে, কিন্তু `bind()` একটি নতুন ফাংশন return করে যার context নির্দিষ্ট করা থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "How do `call()` and `apply()` differ in how they accept arguments?",
+            "answer_en": "`call()` accepts an argument list (e.g., `func.call(this, arg1, arg2)`), while `apply()` accepts a single array of arguments (e.g., `func.apply(this, [arg1, arg2])`)."
+        }
+    },
+    {
+        "id": 28,
+        "level": "Advanced",
+        "sub_topic": "Event Handling",
+        "question_en": "What is event delegation in JavaScript?",
+        "question_bn": "JavaScript এ event delegation কী?",
+        "details": {
+            "what_is_en": "Event delegation is a technique of handling events by assigning a single event listener to a parent element to manage events on its child elements, using event bubbling.",
+            "what_is_bn": "Event delegation হলো একটি কৌশল যেখানে প্রতিটি child element-এ event listener যোগ না করে, তাদের parent element-এ একটি listener যোগ করে event পরিচালনা করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why is event delegation useful?",
+            "answer_en": "It improves performance by reducing the number of event listeners and allows events to be handled for dynamically added child elements without attaching new listeners."
+        }
+    },
+    {
+        "id": 29,
+        "level": "Advanced",
+        "sub_topic": "Error Handling",
+        "question_en": "What is try...catch in JavaScript?",
+        "question_bn": "JavaScript এ try...catch কী?",
+        "details": {
+            "what_is_en": "`try...catch` is a statement used to handle exceptions in code. The `try` block contains code that may throw an error, and the `catch` block handles the error if one is thrown.",
+            "what_is_bn": "`try...catch` exceptions handle করতে ব্যবহৃত হয়। `try` অংশে সম্ভাব্য error কোড থাকে এবং `catch` অংশে error handle করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the purpose of the `finally` block?",
+            "answer_en": "The `finally` block always executes after the `try` and `catch` blocks, regardless of whether an error occurred or was caught. It's often used for cleanup code."
+        }
+    },
+    {
+        "id": 30,
+        "level": "Advanced",
+        "sub_topic": "Map, Set",
+        "question_en": "What is the difference between Map and Object?",
+        "question_bn": "Map এবং Object এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`Map` allows keys of any type (including objects and primitives) and maintains insertion order. `Object` keys are limited to strings and symbols and do not guarantee order.",
+            "what_is_bn": "`Map` যেকোনো ধরনের ডেটাকে key হিসেবে ব্যবহার করতে দেয় এবং insertion order বজায় রাখে। `Object`-এর key শুধুমাত্র string বা symbol হতে পারে এবং অর্ডারের কোনো নিশ্চয়তা নেই।"
+        },
+        "vip_qa": {
+            "question_en": "When should you use Map over an Object?",
+            "answer_en": "Use `Map` when you need non-string keys, need to maintain insertion order, or frequently add/remove key-value pairs, as `Map` is optimized for that."
+        }
+    },
+    {
+        "id": 31,
+        "level": "Advanced",
+        "sub_topic": "WeakMap & WeakSet",
+        "question_en": "What are WeakMap and WeakSet?",
+        "question_bn": "WeakMap এবং WeakSet কী?",
+        "details": {
+            "what_is_en": "WeakMap and WeakSet are collections that hold their items 'weakly'. This means that if an object stored in them has no other references, it can be garbage collected.",
+            "what_is_bn": "WeakMap এবং WeakSet হলো এমন collection যা তাদের আইটেমগুলোকে 'দুর্বলভাবে' ধরে রাখে। এর মানে হলো, যদি কোনো অবজেক্টের অন্য কোনো রেফারেন্স না থাকে, তবে সেটি garbage collector দ্বারা মেমরি থেকে মুছে ফেলা হতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "Why use WeakMap?",
+            "answer_en": "To associate metadata with an object without preventing that object from being garbage collected, which helps avoid memory leaks."
+        }
+    },
+    {
+        "id": 32,
+        "level": "Advanced",
+        "sub_topic": "SetTimeout & SetInterval",
+        "question_en": "What is the difference between setTimeout and setInterval?",
+        "question_bn": "setTimeout এবং setInterval এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`setTimeout` executes a function once after a specified delay. `setInterval` executes a function repeatedly at a set interval.",
+            "what_is_bn": "`setTimeout` একটি ফাংশনকে নির্দিষ্ট delay-এর পর একবার execute করে, `setInterval` নির্দিষ্ট interval-এ বারবার execute করে।"
+        },
+        "vip_qa": {
+            "question_en": "How can you stop a `setInterval` timer?",
+            "answer_en": "Use `clearInterval()` and pass it the ID that was returned by the `setInterval()` call."
+        }
+    },
+    {
+        "id": 33,
+        "level": "Advanced",
+        "sub_topic": "DOM Manipulation",
+        "question_en": "How do you select elements in the DOM?",
+        "question_bn": "DOM-এ element কিভাবে select করবেন?",
+        "details": {
+            "what_is_en": "You can use methods like `document.getElementById()`, `document.querySelector()`, `document.querySelectorAll()`, `getElementsByTagName()`, and `getElementsByClassName()`.",
+            "what_is_bn": "`document.getElementById()`, `querySelector()`, `querySelectorAll()` এবং অন্যান্য DOM methods ব্যবহার করে element select করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "Which is generally faster: `getElementById` or `querySelector`?",
+            "answer_en": "`getElementById()` is generally faster because it uses a direct lookup on the document's ID map, whereas `querySelector()` has to traverse the DOM based on a CSS selector."
+        }
+    },
+    {
+        "id": 34,
+        "level": "Advanced",
+        "sub_topic": "JSON",
+        "question_en": "What is JSON in JavaScript?",
+        "question_bn": "JavaScript এ JSON কী?",
+        "details": {
+            "what_is_en": "JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write and easy for machines to parse and generate.",
+            "what_is_bn": "JSON হলো একটি lightweight data-interchange format যা মানুষের পড়া এবং লেখা সহজ এবং মেশিনের জন্য পার্স করা সহজ।"
+        },
+        "vip_qa": {
+            "question_en": "How do you convert a JSON string to a JavaScript object?",
+            "answer_en": "Use the `JSON.parse(jsonString)` method."
+        }
+    },
+    {
+        "id": 35,
+        "level": "Advanced",
+        "sub_topic": "JSON",
+        "question_en": "How do you convert an object to a JSON string?",
+        "question_bn": "কিভাবে object কে JSON string এ convert করবেন?",
+        "details": {
+            "what_is_en": "Use the `JSON.stringify(object)` method.",
+            "what_is_bn": "`JSON.stringify(object)` ব্যবহার করে একটি object-কে JSON string-এ convert করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "Can JSON data types include functions or `undefined`?",
+            "answer_en": "No, JSON does not support functions or `undefined`. When stringifying, functions and `undefined` values are omitted (or converted to `null` if they are in an array)."
+        }
+    },
+    {
+        "id": 36,
+        "level": "Advanced",
+        "sub_topic": "Event Loop & Microtasks",
+        "question_en": "What is the difference between a macro-task and a micro-task?",
+        "question_bn": "JavaScript এ macro-task এবং micro-task এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "Macro-tasks (like `setTimeout`, I/O) are handled in the task queue. Micro-tasks (like Promise callbacks, `queueMicrotask`) have a higher priority and are executed after the current script and before the next macro-task.",
+            "what_is_bn": "Macro-task (যেমন `setTimeout`) টাস্ক কিউতে হ্যান্ডেল হয়। Micro-task (যেমন Promise callbacks) এর অগ্রাধিকার বেশি এবং বর্তমান স্ক্রিপ্ট শেষ হওয়ার পরে এবং পরবর্তী macro-task শুরু হওয়ার আগে কার্যকর হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Which executes first: a micro-task or a macro-task?",
+            "answer_en": "All tasks in the micro-task queue are executed before any single task from the macro-task queue is executed."
+        }
+    },
+    {
+        "id": 37,
+        "level": "Advanced",
+        "sub_topic": "Memory Management",
+        "question_en": "How does JavaScript handle memory management?",
+        "question_bn": "JavaScript কিভাবে memory manage করে?",
+        "details": {
+            "what_is_en": "JavaScript uses automatic memory management through garbage collection. Memory is allocated when objects are created and freed when they are no longer referenced.",
+            "what_is_bn": "JavaScript automatic garbage collection ব্যবহার করে মেমরি পরিচালনা করে, যেখানে আর referenced না থাকা objects-এর memory free করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What can cause memory leaks in JS?",
+            "answer_en": "Common causes include global variables, forgotten timers (`setInterval`), closures holding unnecessary references, and detached DOM elements that are still referenced in code."
+        }
+    },
+    {
+        "id": 38,
+        "level": "Advanced",
+        "sub_topic": "Symbols",
+        "question_en": "What is a Symbol in JavaScript?",
+        "question_bn": "JavaScript এ Symbol কী?",
+        "details": {
+            "what_is_en": "A Symbol is a unique and immutable primitive value that can be used as a key for an object property.",
+            "what_is_bn": "Symbol হলো একটি unique এবং immutable primitive value, যা object properties-এর key হিসেবে ব্যবহার হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why use a Symbol instead of a string for an object key?",
+            "answer_en": "To create non-enumerable properties or to avoid property name collisions between different libraries or parts of a codebase."
+        }
+    },
+    {
+        "id": 39,
+        "level": "Advanced",
+        "sub_topic": "Iterator & Generator",
+        "question_en": "What is a generator function in JavaScript?",
+        "question_bn": "JavaScript এ generator function কী?",
+        "details": {
+            "what_is_en": "A generator function (`function*`) can be paused and resumed. It returns a generator object and can yield multiple values sequentially using the `yield` keyword.",
+            "what_is_bn": "Generator function (`function*`) execution pause এবং resume করতে পারে। এটি `yield` কীওয়ার্ড ব্যবহার করে একাধিক মান return করতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "What symbol method allows an object to be iterable?",
+            "answer_en": "`Symbol.iterator`. If an object has this property, it is considered iterable and can be used with `for...of` loops and the spread operator."
+        }
+    },
+    {
+        "id": 40,
+        "level": "Advanced",
+        "sub_topic": "Promises",
+        "question_en": "What is `Promise.all`?",
+        "question_bn": "`Promise.all` কী?",
+        "details": {
+            "what_is_en": "`Promise.all` takes an array of Promises and resolves when all of them have resolved, returning an array of their results. It rejects if any of the promises reject.",
+            "what_is_bn": "`Promise.all` Promises-এর একটি অ্যারে নেয় এবং সব resolve হলে resolve হয়, এবং তাদের ফলাফলের একটি অ্যারে ফেরত দেয়। কোনো একটি reject করলে এটি reject হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `Promise.all` and `Promise.race`?",
+            "answer_en": "`Promise.race` resolves or rejects as soon as the *first* promise in the array resolves or rejects. `Promise.all` waits for *all* of them to resolve."
+        }
+    },
+    {
+        "id": 41,
+        "level": "Advanced",
+        "sub_topic": "Modules",
+        "question_en": "What is the difference between ES6 modules and CommonJS?",
+        "question_bn": "ES6 module এবং CommonJS এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "ES6 modules use `import`/`export` syntax, are statically analyzed, and are the standard for browsers. CommonJS uses `require()`/`module.exports`, is dynamic, and is the traditional module system for Node.js.",
+            "what_is_bn": "ES6 modules `import`/`export` ব্যবহার করে এবং statically analyze হয়। CommonJS `require()`/`module.exports` ব্যবহার করে এবং dynamic হয়, যা Node.js-এর জন্য ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Can ES6 modules be used in Node.js?",
+            "answer_en": "Yes, by using the `.mjs` file extension or by setting `\"type\": \"module\"` in the `package.json` file."
+        }
+    },
+    {
+        "id": 42,
+        "level": "Advanced",
+        "sub_topic": "Set & WeakSet",
+        "question_en": "What is the difference between Set and WeakSet?",
+        "question_bn": "Set এবং WeakSet এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`Set` can hold values of any type. `WeakSet` can only hold objects and holds them weakly, meaning they can be garbage collected if there are no other references.",
+            "what_is_bn": "`Set` যেকোনো ধরনের মান রাখতে পারে। `WeakSet` শুধুমাত্র অবজেক্ট রাখতে পারে এবং সেগুলোকে দুর্বলভাবে ধরে রাখে, যা garbage collection-এ সাহায্য করে।"
+        },
+        "vip_qa": {
+            "question_en": "Can you iterate over a `WeakSet`?",
+            "answer_en": "No, because its contents can be removed by the garbage collector at any time, `WeakSet` is not iterable."
+        }
+    },
+    {
+        "id": 43,
+        "level": "Advanced",
+        "sub_topic": "Proxy",
+        "question_en": "What is a Proxy in JavaScript?",
+        "question_bn": "JavaScript এ Proxy কী?",
+        "details": {
+            "what_is_en": "A `Proxy` object allows you to create a wrapper for another object, which can intercept and redefine fundamental operations for that object, like getting or setting properties.",
+            "what_is_bn": "Proxy একটি অবজেক্ট তৈরি করতে দেয় যা অন্য একটি অবজেক্টের get, set, delete-এর মতো operations-কে intercept এবং redefine করতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "Give a practical use-case of Proxy.",
+            "answer_en": "Validation (e.g., ensuring a property is a number before setting it), logging property access, or creating reactive objects in frameworks like Vue.js."
+        }
+    },
+    {
+        "id": 44,
+        "level": "Advanced",
+        "sub_topic": "Reflect API",
+        "question_en": "What is the Reflect API?",
+        "question_bn": "Reflect API কী?",
+        "details": {
+            "what_is_en": "`Reflect` is a built-in object that provides methods for interceptable JavaScript operations, often used in combination with Proxies.",
+            "what_is_bn": "`Reflect` একটি বিল্ট-ইন অবজেক্ট যা JavaScript operations-এর জন্য মেথড সরবরাহ করে, যা প্রায়ই Proxy-এর সাথে ব্যবহার করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How is `Reflect.get()` different from `obj.prop`?",
+            "answer_en": "`Reflect.get(obj, 'prop')` allows you to perform the default 'get' operation, which is useful inside a Proxy handler to avoid infinite recursion. It also allows specifying a different `receiver` for `this`."
+        }
+    },
+    {
+        "id": 45,
+        "level": "Advanced",
+        "sub_topic": "Debounce & Throttle",
+        "question_en": "What is the difference between debounce and throttle?",
+        "question_bn": "Debounce এবং throttle এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`debounce` ensures a function is called only after a certain amount of time has passed without it being called again. `throttle` ensures a function is called at most once per specified interval.",
+            "what_is_bn": "`debounce` একটি ফাংশনকে একটি নির্দিষ্ট সময় পর শুধু একবার execute করে। `throttle` একটি ফাংশনকে নির্দিষ্ট সময় ব্যবধানে সর্বাধিক একবার execute করে।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example use-case for each.",
+            "answer_en": "Debounce: Search bar input (wait until the user stops typing). Throttle: Window resize or scroll events (limit the rate of handler execution)."
+        }
+    },
+    {
+        "id": 46,
+        "level": "Advanced",
+        "sub_topic": "Event Propagation",
+        "question_en": "What is the difference between event bubbling and capturing?",
+        "question_bn": "Event bubbling এবং capturing এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "Capturing phase: The event travels from the root down to the target element. Bubbling phase: The event travels from the target element back up to the root.",
+            "what_is_bn": "Capturing: event parent থেকে target-এ যায়। Bubbling: event target থেকে parent-এ ফিরে আসে।"
+        },
+        "vip_qa": {
+            "question_en": "Which phase is the default for `addEventListener`?",
+            "answer_en": "The bubbling phase is the default. You can enable the capturing phase by setting the third argument of `addEventListener` to `true`."
+        }
+    },
+    {
+        "id": 47,
+        "level": "Advanced",
+        "sub_topic": "Functional Programming",
+        "question_en": "What is a pure function in JavaScript?",
+        "question_bn": "JavaScript এ pure function কী?",
+        "details": {
+            "what_is_en": "A pure function is a function that, given the same input, will always return the same output and has no side effects (e.g., doesn't modify external state).",
+            "what_is_bn": "Pure function একই input-এর জন্য সর্বদা একই output দেয় এবং এর কোনো side effects থাকে না (যেমন, বাইরের কোনো state পরিবর্তন করে না)।"
+        },
+        "vip_qa": {
+            "question_en": "Why are pure functions preferred in functional programming?",
+            "answer_en": "They are predictable, easier to test, and less prone to bugs because they don't depend on or affect outside state."
+        }
+    },
+    {
+        "id": 48,
+        "level": "Advanced",
+        "sub_topic": "Currying",
+        "question_en": "What is currying in JavaScript?",
+        "question_bn": "JavaScript-এ currying কী?",
+        "details": {
+            "what_is_en": "Currying is the process of transforming a function that takes multiple arguments into a sequence of nested functions, each taking a single argument.",
+            "what_is_bn": "Currying হলো একটি ফাংশনকে, যা একাধিক আর্গুমেন্ট নেয়, তাকে একাধিক nested ফাংশনে রূপান্তর করা, যেখানে প্রতিটি ফাংশন একটি করে আর্গুমেন্ট নেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why use currying?",
+            "answer_en": "It helps in creating more reusable and composable functions by allowing you to create specialized functions by partially applying arguments."
+        }
+    },
+    {
+        "id": 49,
+        "level": "Advanced",
+        "sub_topic": "Class & Inheritance",
+        "question_en": "What is class inheritance in JavaScript?",
+        "question_bn": "JavaScript-এ class inheritance কী?",
+        "details": {
+            "what_is_en": "Inheritance allows a new class (subclass) to be based on an existing class (superclass), inheriting its properties and methods, which can then be extended or overridden.",
+            "what_is_bn": "Inheritance একটি class-কে অন্য class-কে extend করতে দেয় এবং তার properties ও methods inherit করে, যা পরে পরিবর্তন বা পরিবর্ধন করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "How do you call a parent class constructor?",
+            "answer_en": "By using the `super()` method inside the child class's `constructor()`."
+        }
+    },
+    {
+        "id": 50,
+        "level": "Advanced",
+        "sub_topic": "Static Methods",
+        "question_en": "What are static methods in JavaScript classes?",
+        "question_bn": "JavaScript classes-এ static methods কী?",
+        "details": {
+            "what_is_en": "Static methods are defined on the class itself, not on instances of the class. They are called directly on the class: `ClassName.method()`.",
+            "what_is_bn": "Static methods class-এর নিজের উপর ডিফাইন করা হয়, instance-এর উপর নয়। এগুলো সরাসরি `ClassName.method()` দিয়ে কল করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Can static methods access instance properties (using `this`)?",
+            "answer_en": "No, because they are not called on an instance, `this` inside a static method refers to the class itself, not an instance. Therefore, they cannot access instance properties directly."
+        }
+    },
+    {
+        "id": 51,
+        "level": "Advanced",
+        "sub_topic": "Optional Chaining",
+        "question_en": "What is optional chaining in JavaScript?",
+        "question_bn": "JavaScript-এ optional chaining কী?",
+        "details": {
+            "what_is_en": "Optional chaining (`?.`) allows you to safely access deeply nested object properties without having to explicitly validate each level of the chain. If a reference is null or undefined, the expression short-circuits and returns `undefined`.",
+            "what_is_bn": "Optional chaining (`?.`) nested object properties-কে নিরাপদে অ্যাক্সেস করতে দেয়। যদি কোনো reference null বা undefined হয়, তবে error না দিয়ে `undefined` return করে।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example of optional chaining.",
+            "answer_en": "`const city = user?.address?.city;` // This won't throw an error if `user` or `user.address` is undefined."
+        }
+    },
+    {
+        "id": 52,
+        "level": "Advanced",
+        "sub_topic": "Nullish Coalescing",
+        "question_en": "What is the nullish coalescing operator (??) in JavaScript?",
+        "question_bn": "JavaScript-এ nullish coalescing operator (??) কী?",
+        "details": {
+            "what_is_en": "The nullish coalescing operator (`??`) is a logical operator that returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, and otherwise returns its left-hand side operand.",
+            "what_is_bn": "Nullish coalescing operator (`??`) একটি লজিক্যাল অপারেটর যা বাম পাশের অপারেন্ড `null` বা `undefined` হলে ডান পাশের অপারেন্ড return করে, অন্যথায় বাম পাশেরটিই return করে।"
+        },
+        "vip_qa": {
+            "question_en": "How is it different from the logical OR (`||`) operator?",
+            "answer_en": "The `||` operator returns the right-hand side for any 'falsy' value (like `0`, `''`, `false`), while `??` only does so for `null` or `undefined`."
+        }
+    },
+    {
+        "id": 53,
+        "level": "Advanced",
+        "sub_topic": "Dynamic Imports",
+        "question_en": "What are dynamic imports in JavaScript?",
+        "question_bn": "JavaScript-এ dynamic imports কী?",
+        "details": {
+            "what_is_en": "Dynamic imports allow modules to be loaded on-demand (asynchronously) at runtime using the `import()` function-like expression, which returns a promise.",
+            "what_is_bn": "Dynamic imports `import()` ফাংশন ব্যবহার করে runtime-এ modules-কে asynchronous-ভাবে লোড করার সুযোগ দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "When should you use dynamic imports?",
+            "answer_en": "To implement code-splitting in an application, which helps reduce the initial bundle size and improve load times by only loading code when it's needed."
+        }
+    },
+    {
+        "id": 54,
+        "level": "Advanced",
+        "sub_topic": "Top-level await",
+        "question_en": "What is top-level `await` in JavaScript?",
+        "question_bn": "JavaScript-এ top-level `await` কী?",
+        "details": {
+            "what_is_en": "Top-level `await` allows using the `await` keyword directly in modules, outside of an `async` function.",
+            "what_is_bn": "Top-level `await` একটি module-এর ভিতরে `async` ফাংশন ছাড়াই `await` কীওয়ার্ড ব্যবহার করার অনুমতি দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a major use case for top-level `await`?",
+            "answer_en": "It's useful for modules that need to perform asynchronous initialization, such as fetching data or connecting to a database, before they can be used by other modules."
+        }
+    },
+    {
+        "id": 55,
+        "level": "Advanced",
+        "sub_topic": "BigInt",
+        "question_en": "What is BigInt in JavaScript?",
+        "question_bn": "JavaScript-এ BigInt কী?",
+        "details": {
+            "what_is_en": "`BigInt` is a built-in object that provides a way to represent whole numbers larger than `Number.MAX_SAFE_INTEGER`.",
+            "what_is_bn": "`BigInt` একটি numeric type যা `Number.MAX_SAFE_INTEGER` এর চেয়ে বড় পূর্ণসংখ্যা represent করতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "How do you create a BigInt?",
+            "answer_en": "By appending `n` to the end of an integer literal (e.g., `123n`) or by calling the `BigInt()` constructor."
+        }
+    },
+    {
+        "id": 56,
+        "level": "Advanced",
+        "sub_topic": "globalThis",
+        "question_en": "What is `globalThis` in JavaScript?",
+        "question_bn": "JavaScript-এ `globalThis` কী?",
+        "details": {
+            "what_is_en": "`globalThis` provides a standard way to access the global `this` value across different JavaScript environments (e.g., browsers, Node.js, Web Workers).",
+            "what_is_bn": "`globalThis` সব ধরনের JavaScript environment-এ global object-কে অ্যাক্সেস করার একটি standard উপায় প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why not use `window` or `global` directly?",
+            "answer_en": "`window` is browser-specific and `global` is Node.js-specific. `globalThis` is environment-agnostic and works everywhere."
+        }
+    },
+    {
+        "id": 57,
+        "level": "Advanced",
+        "sub_topic": "Promise.any",
+        "question_en": "What is `Promise.any` in JavaScript?",
+        "question_bn": "JavaScript-এ `Promise.any` কী?",
+        "details": {
+            "what_is_en": "`Promise.any` takes an iterable of Promises and resolves as soon as any of the promises in the iterable fulfills. It rejects only if all promises reject.",
+            "what_is_bn": "`Promise.any` একটি iterable-এর মধ্যে যেকোনো একটি promise fulfill হলে resolve হয়, এবং সব reject করলেই কেবল reject হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How is it different from `Promise.race`?",
+            "answer_en": "`Promise.race` settles as soon as any promise settles (either fulfills or rejects). `Promise.any` waits for the first promise to *fulfill*, ignoring any rejected promises unless all of them reject."
+        }
+    },
+    {
+        "id": 58,
+        "level": "Advanced",
+        "sub_topic": "Logical Assignment",
+        "question_en": "What are logical assignment operators in JavaScript?",
+        "question_bn": "JavaScript-এ logical assignment operators কী?",
+        "details": {
+            "what_is_en": "Logical assignment operators combine logical operations (`||`, `&&`, `??`) with assignment. Examples include `||=`, `&&=`, and `??=`.",
+            "what_is_bn": "Logical assignment operators লজিক্যাল অপারেশন এবং অ্যাসাইনমেন্টকে একসাথে করে, যেমন `||=`, `&&=`, `??=`।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example of the nullish coalescing assignment (`??=`) operator.",
+            "answer_en": "`let x = null; x ??= 10;` // x becomes 10 because it was null. `let y = 5; y ??= 10;` // y remains 5."
+        }
+    },
+    {
+        "id": 59,
+        "level": "Advanced",
+        "sub_topic": "Private Class Fields",
+        "question_en": "What are private class fields in JavaScript?",
+        "question_bn": "JavaScript-এ private class fields কী?",
+        "details": {
+            "what_is_en": "Private class fields are properties or methods prefixed with a `#` symbol. They are only accessible from within the class body.",
+            "what_is_bn": "Private class fields `#` দিয়ে শুরু হয় এবং শুধুমাত্র class-এর ভেতর থেকে অ্যাক্সেস করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "Can subclasses access private fields from a parent class?",
+            "answer_en": "No, private fields are truly private to the class in which they are defined and cannot be accessed by subclasses."
+        }
+    },
+    {
+        "id": 60,
+        "level": "Advanced",
+        "sub_topic": "Structured Clone",
+        "question_en": "What is `structuredClone` in JavaScript?",
+        "question_bn": "JavaScript-এ `structuredClone` কী?",
+        "details": {
+            "what_is_en": "`structuredClone()` is a global function that creates a deep copy of a given value, including complex types like Maps, Sets, and even circular references.",
+            "what_is_bn": "`structuredClone` একটি global ফাংশন যা একটি মানের deep copy তৈরি করে, যার মধ্যে objects, arrays, এবং primitives অন্তর্ভুক্ত।"
+        },
+        "vip_qa": {
+            "question_en": "How is it better than `JSON.parse(JSON.stringify(obj))` for deep cloning?",
+            "answer_en": "`structuredClone()` can clone many more data types (like `Date`, `RegExp`, `Map`, `Set`) and correctly handles circular references, whereas the JSON method fails on these."
+        }
+    },
+    {
+        "id": 61,
+        "level": "Advanced",
+        "sub_topic": "Promise.allSettled",
+        "question_en": "What is `Promise.allSettled`?",
+        "question_bn": "`Promise.allSettled` কী?",
+        "details": {
+            "what_is_en": "`Promise.allSettled` waits for all promises in an iterable to settle (either fulfilled or rejected) and returns an array of objects describing the outcome of each promise.",
+            "what_is_bn": "`Promise.allSettled` সব promises settle (resolve বা reject) হওয়া পর্যন্ত অপেক্ষা করে এবং তাদের status সহ একটি array return করে।"
+        },
+        "vip_qa": {
+            "question_en": "When is it preferred over `Promise.all`?",
+            "answer_en": "When you need to know the result of every promise, regardless of whether some of them reject. `Promise.all` would short-circuit and reject immediately on the first failure."
+        }
+    },
+    {
+        "id": 62,
+        "level": "Advanced",
+        "sub_topic": "Web APIs",
+        "question_en": "How do Web Workers work and what are they used for?",
+        "question_bn": "ওয়েব ওয়ার্কার কীভাবে কাজ করে এবং কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface.",
+            "what_is_bn": "ওয়েব ওয়ার্কার হলো ব্যাকগ্রাউন্ড থ্রেডে স্ক্রিপ্ট চালানোর একটি উপায়। ওয়ার্কার থ্রেড UI-তে হস্তক্ষেপ না করে দীর্ঘ সময় ধরে চলা কাজ করতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "Can Web Workers access the DOM?",
+            "answer_en": "No, they run in a separate context and cannot directly access the DOM. They communicate with the main thread using the `postMessage()` method."
+        }
+    },
+    {
+        "id": 63,
+        "level": "Advanced",
+        "sub_topic": "Web APIs",
+        "question_en": "What are Service Workers?",
+        "question_bn": "সার্ভিস ওয়ার্কার কী?",
+        "details": {
+            "what_is_en": "A Service Worker is a script that your browser runs in the background, separate from a web page, enabling features like offline capabilities, push notifications, and background syncs.",
+            "what_is_bn": "সার্ভিস ওয়ার্কার হলো একটি স্ক্রিপ্ট যা ব্রাউজার ব্যাকগ্রাউন্ডে চালায়, যা অফলাইন ক্ষমতা, পুশ নোটিফিকেশন এবং ব্যাকগ্রাউন্ড সিঙ্কের মতো বৈশিষ্ট্যগুলি সক্ষম করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the lifecycle of a Service Worker?",
+            "answer_en": "The lifecycle includes Installation, Activation, and event handling (Fetch/Message). It can be in states like `installing`, `installed`, `activating`, `activated`, or `redundant`."
+        }
+    },
+    {
+        "id": 64,
+        "level": "Advanced",
+        "sub_topic": "Performance",
+        "question_en": "What is WebAssembly (WASM) and when should it be used with JavaScript?",
+        "question_bn": "ওয়েব অ্যাসেম্বলি (WASM) কী এবং কখন এটি জাভাস্ক্রিপ্টের সাথে ব্যবহার করা উচিত?",
+        "details": {
+            "what_is_en": "WebAssembly is a binary instruction format that runs in the browser. It's designed as a portable compilation target for high-level languages like C/C++/Rust.",
+            "what_is_bn": "ওয়েব অ্যাসেম্বলি হলো একটি বাইনারি নির্দেশ বিন্যাস যা ব্রাউজারে চলে। এটি C/C++/Rust-এর মতো উচ্চ-স্তরের ভাষাগুলির কম্পাইলেশনের জন্য একটি টার্গেট হিসেবে ডিজাইন করা হয়েছে।"
+        },
+        "vip_qa": {
+            "question_en": "Is WebAssembly intended to replace JavaScript?",
+            "answer_en": "No, it's designed to complement and run alongside JavaScript. It's best for CPU-intensive tasks like gaming, video editing, and simulations where performance is critical."
+        }
+    },
+    {
+        "id": 65,
+        "level": "Advanced",
+        "sub_topic": "Object Methods",
+        "question_en": "What is the difference between `Object.freeze()` and `Object.seal()`?",
+        "question_bn": "`Object.freeze()` এবং `Object.seal()` এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`Object.seal()` prevents adding/deleting properties but allows modifying existing ones. `Object.freeze()` does everything `seal()` does, but also makes all existing properties read-only.",
+            "what_is_bn": "`Object.seal()` নতুন বৈশিষ্ট্য যোগ বা মুছে ফেলা থেকে বিরত রাখে, কিন্তু বিদ্যমান বৈশিষ্ট্য পরিবর্তন করতে দেয়। `Object.freeze()` `seal()`-এর সব কাজ করে, এবং বৈশিষ্ট্যগুলোকে read-only করে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Does `Object.freeze()` provide deep immutability?",
+            "answer_en": "No, it's a shallow operation. If a property of a frozen object is another object, that nested object can still be modified."
+        }
+    },
+    {
+        "id": 66,
+        "level": "Advanced",
+        "sub_topic": "Concurrency",
+        "question_en": "What is a `SharedArrayBuffer`?",
+        "question_bn": "`SharedArrayBuffer` কী?",
+        "details": {
+            "what_is_en": "A `SharedArrayBuffer` object represents a fixed-length raw binary data buffer that can be shared across multiple Web Workers, allowing for true parallel processing.",
+            "what_is_bn": "`SharedArrayBuffer` অবজেক্টটি একটি স্থির-দৈর্ঘ্যের বাইনারি ডেটা বাফার, যা একাধিক ওয়েব ওয়ার্কার জুড়ে শেয়ার করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "What security implications arose from `SharedArrayBuffer`?",
+            "answer_en": "It was the primary vector for the Spectre and Meltdown vulnerabilities. To use it now, servers must send specific COOP and COEP headers to create a cross-origin isolated environment."
+        }
+    },
+    {
+        "id": 67,
+        "level": "Advanced",
+        "sub_topic": "Syntax",
+        "question_en": "What are Decorators in JavaScript?",
+        "question_bn": "জাভাস্ক্রিপ্টে ডেকোরেটর কী?",
+        "details": {
+            "what_is_en": "Decorators are a Stage 3 proposal for JavaScript that provide a way to add annotations and meta-programming syntax for classes and their members. They are functions prefixed with an `@` symbol.",
+            "what_is_bn": "ডেকোরেটর জাভাস্ক্রিপ্টের একটি স্টেজ 3 প্রস্তাবনা যা ক্লাস এবং মেথড সংজ্ঞা পরিবর্তন করার একটি উপায়। এগুলি ফাংশন যা একটি ক্লাস বা মেথডকে মোড়ানো হয় এবং একটি `@` চিহ্ন দিয়ে শুরু হয়।"
+        },
+        "vip_qa": {
+            "question_en": "In which popular framework are decorators heavily used?",
+            "answer_en": "Decorators are a core feature in TypeScript and are widely used in frameworks like Angular and NestJS for dependency injection, metadata, and more."
+        }
+    },
+    {
+        "id": 68,
+        "level": "Advanced",
+        "sub_topic": "Performance",
+        "question_en": "How does the V8 engine optimize JavaScript code?",
+        "question_bn": "V8 ইঞ্জিন কীভাবে জাভাস্ক্রিপ্ট কোড অপ্টিমাইজ করে?",
+        "details": {
+            "what_is_en": "V8 uses a Just-In-Time (JIT) compilation pipeline. It starts by interpreting the code with its Ignition interpreter and collects profiling data. 'Hot' functions are then sent to the TurboFan optimizing compiler to be compiled into highly-optimized machine code.",
+            "what_is_bn": "V8 একটি JIT কম্পাইলেশন পাইপলাইন ব্যবহার করে। এটি ইগনিশন ইন্টারপ্রেটার দিয়ে কোডটি ব্যাখ্যা করে এবং প্রোফাইলিং ডেটা সংগ্রহ করে। 'হট' ফাংশনগুলিকে টার্বোফ্যান কম্পাইলার দিয়ে অপ্টিমাইজড মেশিন কোডে পরিণত করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What can cause de-optimization in V8?",
+            "answer_en": "Changing the shape of an object (adding/deleting properties) after it has been optimized, or passing values of unexpected types can cause V8 to de-optimize the code back to slower bytecode."
+        }
+    },
+    {
+        "id": 69,
+        "level": "Advanced",
+        "sub_topic": "Build Tools",
+        "question_en": "What is 'tree shaking'?",
+        "question_bn": "'ট্রি শেকিং' কী?",
+        "details": {
+            "what_is_en": "Tree shaking is a term for dead code elimination. It relies on the static structure of ES modules (`import` and `export`) to detect which code is not being used and exclude it from the final bundle.",
+            "what_is_bn": "ট্রি শেকিং হলো ডেড কোড এলিমিনেশন। এটি ES মডিউলের স্ট্যাটিক কাঠামো ব্যবহার করে অব্যবহৃত কোড শনাক্ত করে এবং চূড়ান্ত বান্ডিল থেকে বাদ দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Which tools perform tree shaking?",
+            "answer_en": "Modern JavaScript bundlers like Webpack, Rollup, and Parcel perform tree shaking automatically, especially in production mode."
+        }
+    },
+    {
+        "id": 70,
+        "level": "Advanced",
+        "sub_topic": "Web APIs",
+        "question_en": "What are Server-Sent Events (SSE)?",
+        "question_bn": "সার্ভার-সেন্টেড ইভেন্টস (SSE) কী?",
+        "details": {
+            "what_is_en": "Server-Sent Events is a technology where a browser receives automatic updates from a server via an HTTP connection. It provides a one-way communication channel from the server to the client.",
+            "what_is_bn": "সার্ভার-সেন্টেড ইভেন্টস হলো একটি প্রযুক্তি যেখানে একটি ব্রাউজার সার্ভার থেকে স্বয়ংক্রিয়ভাবে আপডেট পায়। এটি সার্ভার থেকে ক্লায়েন্টে একমুখী যোগাযোগ চ্যানেল সরবরাহ করে।"
+        },
+        "vip_qa": {
+            "question_en": "How is SSE different from WebSockets?",
+            "answer_en": "SSE is a one-way communication channel (server to client) over standard HTTP. WebSockets provide a two-way (bidirectional) communication channel that is not based on HTTP after the initial handshake."
+        }
+    },
+    {
+        "id": 71,
+        "level": "Advanced",
+        "sub_topic": "Browser Storage",
+        "question_en": "What are the differences between localStorage, sessionStorage, and cookies?",
+        "question_bn": "localStorage, sessionStorage, এবং cookies এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`cookies` are sent with every HTTP request and have a small capacity (~4KB). `localStorage` has a larger capacity (~5-10MB) and persists until cleared. `sessionStorage` is similar to `localStorage` but is cleared when the page session ends (e.g., tab is closed).",
+            "what_is_bn": "`cookies` প্রতিটি HTTP অনুরোধের সাথে পাঠানো হয় এবং এর ক্ষমতা কম (~4KB)। `localStorage`-এর ক্ষমতা বেশি (~5-10MB) এবং এটি স্থায়ী। `sessionStorage` `localStorage`-এর মতো, তবে ট্যাব বন্ধ করলে মুছে যায়।"
+        },
+        "vip_qa": {
+            "question_en": "Which storage mechanism is most vulnerable to XSS attacks?",
+            "answer_en": "Cookies without the `HttpOnly` flag are vulnerable because they can be accessed by client-side scripts. `localStorage` and `sessionStorage` are also inherently accessible via scripts, making them vulnerable if a site has an XSS flaw."
+        }
+    },
+    {
+        "id": 72,
+        "level": "Advanced",
+        "sub_topic": "Web Security",
+        "question_en": "What is CORS (Cross-Origin Resource Sharing)?",
+        "question_bn": "CORS (ক্রস-অরিজিন রিসোর্স শেয়ারিং) কী?",
+        "details": {
+            "what_is_en": "CORS is a browser security mechanism that uses additional HTTP headers to allow a web application running at one origin to access selected resources from a different origin.",
+            "what_is_bn": "CORS একটি ব্রাউজার নিরাপত্তা ব্যবস্থা যা অতিরিক্ত HTTP হেডার ব্যবহার করে একটি ওয়েব অ্যাপ্লিকেশনকে অন্য অরিজিন থেকে রিসোর্স অ্যাক্সেস করার অনুমতি দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'preflight' request in CORS?",
+            "answer_en": "For certain requests (e.g., non-simple requests like PUT or DELETE), the browser first sends an HTTP request using the `OPTIONS` method to the server to determine if the actual request is safe to send. This initial `OPTIONS` request is called a preflight request."
+        }
+    },
+    {
+        "id": 73,
+        "level": "VIP",
+        "sub_topic": "Event Loop",
+        "question_en": "Explain the JavaScript event loop, call stack, and task queue.",
+        "question_bn": "JavaScript-এর event loop, call stack, এবং task queue ব্যাখ্যা করুন।",
+        "details": {
+            "what_is_en": "The Call Stack executes synchronous code. When an async operation is encountered, it's passed to a Web API. Once complete, its callback is placed in the Task Queue. The Event Loop's job is to move tasks from the Task Queue to the Call Stack once the stack is empty.",
+            "what_is_bn": "Call Stack synchronous কোড execute করে। async অপারেশন Web API-তে পাঠানো হয়। কাজ শেষে তার callback টাস্ক কিউতে যোগ হয়। Event Loop টাস্ক কিউ থেকে টাস্ক নিয়ে কল স্ট্যাকে পাঠায় যখন স্ট্যাক খালি থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between the microtask and macrotask queue?",
+            "answer_en": "Microtasks (e.g., promise `.then()` callbacks) have higher priority. The event loop will execute all tasks in the microtask queue after a script runs before executing any task from the macrotask (or task) queue (e.g., `setTimeout`)."
+        }
+    },
+    {
+        "id": 74,
+        "level": "VIP",
+        "sub_topic": "Closures",
+        "question_en": "What are closures in JavaScript and why are they a potential cause of memory leaks?",
+        "question_bn": "JavaScript-এ closures কী এবং কেন এটি মেমরি লিকের কারণ হতে পারে?",
+        "details": {
+            "what_is_en": "A closure is a function that remembers its outer lexical scope even when executed outside of that scope. It 'closes over' the variables of its parent function.",
+            "what_is_bn": "Closure হলো এমন একটি ফাংশন যা তার বাইরের lexical scope মনে রাখে, এমনকি সেই scope-এর বাইরে থেকে কল করা হলেও।"
+        },
+        "vip_qa": {
+            "question_en": "How can closures cause memory leaks?",
+            "answer_en": "If a closure holds a reference to a variable from its parent scope, that variable cannot be garbage collected. If the closure itself is long-lived (e.g., an event listener), it can prevent large objects from being freed from memory."
+        }
+    },
+    {
+        "id": 75,
+        "level": "VIP",
+        "sub_topic": "Hoisting",
+        "question_en": "Explain the concept of the Temporal Dead Zone (TDZ).",
+        "question_bn": "Temporal Dead Zone (TDZ) ধারণাটি ব্যাখ্যা করুন।",
+        "details": {
+            "what_is_en": "The TDZ is the period between entering a block scope and the declaration of a `let` or `const` variable within that scope. While the variable is hoisted, any attempt to access it before its declaration results in a `ReferenceError`.",
+            "what_is_bn": "`let` বা `const` ভেরিয়েবল তার scope-এর শুরুতে প্রবেশ করা থেকে শুরু করে তার declaration পর্যন্ত সময়কে TDZ বলে। এই সময়ে ভেরিয়েবলটিকে অ্যাক্সেস করার চেষ্টা করলে `ReferenceError` হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Does the TDZ apply to `var`?",
+            "answer_en": "No, it does not. `var` declarations are hoisted and initialized with `undefined`, so they can be accessed before their declaration without a `ReferenceError`."
+        }
+    },
+    {
+        "id": 76,
+        "level": "VIP",
+        "sub_topic": "Prototype Chain",
+        "question_en": "Explain how the prototype chain works and its performance implications.",
+        "question_bn": "প্রোটোটাইপ চেইন কীভাবে কাজ করে এবং এর পারফরম্যান্সের উপর প্রভাব কী?",
+        "details": {
+            "what_is_en": "When accessing a property on an object, JavaScript first checks the object itself. If not found, it checks the object's prototype, then the prototype's prototype, and so on, until it finds the property or reaches `null`.",
+            "what_is_bn": "একটি অবজেক্টের প্রোপার্টি অ্যাক্সেস করার সময়, জাভাস্ক্রিপ্ট প্রথমে অবজেক্টটি দেখে। না পেলে, তার প্রোটোটাইপ দেখে, এবং এভাবে চেইনের শেষ পর্যন্ত যেতে থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the performance implications of a long prototype chain?",
+            "answer_en": "A long prototype chain can negatively impact performance because property lookups have to traverse more objects. For performance-critical code, it's best to keep prototype chains short."
+        }
+    },
+    {
+        "id": 77,
+        "level": "VIP",
+        "sub_topic": "Async/Await",
+        "question_en": "How does `async/await` work under the hood?",
+        "question_bn": "`async/await` নেপথ্যে কিভাবে কাজ করে?",
+        "details": {
+            "what_is_en": "`async` functions are a form of syntactic sugar over generators and promises. An `async` function implicitly returns a promise. The `await` keyword pauses the execution of the async function (like `yield` in a generator) until the awaited promise settles.",
+            "what_is_bn": "`async` ফাংশন জেনারেটর এবং প্রমিসের উপর নির্মিত একটি সিনট্যাক্স। `async` ফাংশন একটি প্রমিস রিটার্ন করে। `await` কীওয়ার্ডটি `async` ফাংশনের এক্সিকিউশনকে পজ করে রাখে যতক্ষণ না প্রমিসটি সেটেল হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Can you `await` something that is not a promise?",
+            "answer_en": "Yes. If you `await` a non-promise value, it is implicitly wrapped in a resolved promise. For example, `await 10` will behave like `await Promise.resolve(10)`."
+        }
+    },
+    {
+        "id": 78,
+        "level": "VIP",
+        "sub_topic": "Memory Management",
+        "question_en": "Explain the Mark-and-Sweep algorithm for garbage collection.",
+        "question_bn": "গার্বেজ কালেকশনের জন্য Mark-and-Sweep অ্যালগরিদম ব্যাখ্যা করুন।",
+        "details": {
+            "what_is_en": "The algorithm works in two phases. 1) Mark phase: It starts from the root objects (e.g., global object) and traverses all reachable objects, marking them as 'alive'. 2) Sweep phase: It scans the entire memory heap and clears away any object that has not been marked.",
+            "what_is_bn": "অ্যালগরিদমটি দুটি ধাপে কাজ করে। ১) মার্ক ফেজ: এটি রুট অবজেক্ট থেকে শুরু করে সমস্ত পৌঁছানো যায় এমন অবজেক্টকে 'জীবিত' হিসাবে চিহ্নিত করে। ২) সুইপ ফেজ: এটি সম্পূর্ণ মেমরি হিপ স্ক্যান করে এবং অচিহ্নিত অবজেক্টগুলো পরিষ্কার করে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What problem does this solve compared to reference-counting garbage collection?",
+            "answer_en": "Mark-and-Sweep can handle circular references (e.g., two objects pointing to each other), which reference-counting algorithms cannot, thus preventing a common type of memory leak."
+        }
+    },
+    {
+        "id": 79,
+        "level": "VIP",
+        "sub_topic": "Deep vs Shallow Copy",
+        "question_en": "Explain deep copy vs. shallow copy in JavaScript.",
+        "question_bn": "JavaScript-এ deep copy এবং shallow copy ব্যাখ্যা করুন।",
+        "details": {
+            "what_is_en": "A shallow copy duplicates the top-level properties of an object, but nested objects are shared by reference. A deep copy duplicates every nested object, creating a completely independent clone.",
+            "what_is_bn": "Shallow copy একটি অবজেক্টের শুধুমাত্র top-level properties copy করে; nested অবজেক্টগুলো reference হিসেবে share হয়। Deep copy প্রতিটি nested অবজেক্টকে duplicate করে একটি সম্পূর্ণ স্বাধীন ক্লোন তৈরি করে।"
+        },
+        "vip_qa": {
+            "question_en": "How can you create a reliable deep copy in modern JavaScript?",
+            "answer_en": "The modern, built-in way is to use the `structuredClone()` global function. It handles complex data types and circular references, which older methods like `JSON.parse(JSON.stringify(obj))` cannot."
+        }
+    },
+    {
+        "id": 80,
+        "level": "VIP",
+        "sub_topic": "This Keyword",
+        "question_en": "Explain the four rules that determine the value of `this`.",
+        "question_bn": "`this`-এর মান নির্ধারণকারী চারটি নিয়ম ব্যাখ্যা করুন।",
+        "details": {
+            "what_is_en": "The value of `this` is determined by how a function is called: 1) Default Binding (global object, or `undefined` in strict mode). 2) Implicit Binding (the object the method is called on). 3) Explicit Binding (`call`, `apply`, `bind`). 4) `new` Binding (a newly created instance).",
+            "what_is_bn": "`this`-এর মান ফাংশনটি কীভাবে কল করা হয়েছে তার উপর নির্ভর করে: ১) ডিফল্ট বাইন্ডিং (গ্লোবাল অবজেক্ট)। ২) ইমপ্লিসিট বাইন্ডিং (যে অবজেক্টের উপর মেথড কল করা হয়েছে)। ৩) এক্সপ্লিসিট বাইন্ডিং (`call`, `apply`, `bind`)। ৪) `new` বাইন্ডিং (নতুন তৈরি করা ইনস্ট্যান্স)।"
+        },
+        "vip_qa": {
+            "question_en": "What is the order of precedence for these rules?",
+            "answer_en": "The order of precedence is: 1) `new` Binding, 2) Explicit Binding, 3) Implicit Binding, 4) Default Binding. Arrow functions are a special case that lexically binds `this` and ignores these rules."
+        }
+    },
+    {
+        "id": 81,
+        "level": "VIP",
+        "sub_topic": "JavaScript Engines",
+        "question_en": "What is Just-In-Time (JIT) Compilation?",
+        "question_bn": "Just-In-Time (JIT) কম্পাইলেশন কী?",
+        "details": {
+            "what_is_en": "JIT compilation is a hybrid approach used by modern JavaScript engines like V8. It starts by interpreting the code, but if it identifies 'hot' code paths (executed frequently), it compiles them into optimized machine code at runtime for much faster execution.",
+            "what_is_bn": "JIT কম্পাইলেশন একটি হাইব্রিড পদ্ধতি যা V8-এর মতো আধুনিক ইঞ্জিন ব্যবহার করে। এটি কোড ইন্টারপ্রেট করে শুরু করে, কিন্তু 'হট' কোড (যা ঘন ঘন চলে) শনাক্ত করে এবং সেটিকে রানটাইমে অপ্টিমাইজড মেশিন কোডে কম্পাইল করে।"
+        },
+        "vip_qa": {
+            "question_en": "How does this compare to traditional interpretation vs. compilation?",
+            "answer_en": "It combines the fast startup of an interpreter with the high performance of a compiler. It avoids the slow startup time of a traditional ahead-of-time (AOT) compiler."
+        }
+    },
+    {
+        "id": 82,
+        "level": "VIP",
+        "sub_topic": "Modules",
+        "question_en": "Explain the difference between ES Modules and CommonJS.",
+        "question_bn": "ES Modules এবং CommonJS-এর মধ্যে পার্থক্য ব্যাখ্যা করুন।",
+        "details": {
+            "what_is_en": "ES Modules (ESM) use `import`/`export`, are static (resolved at parse time), have live bindings, and are the official standard. CommonJS (CJS) uses `require`/`module.exports`, is dynamic (resolved at runtime), and caches values.",
+            "what_is_bn": "ES Modules `import`/`export` ব্যবহার করে, স্ট্যাটিক এবং এটি অফিসিয়াল স্ট্যান্ডার্ড। CommonJS `require`/`module.exports` ব্যবহার করে, ডাইনামিক এবং এটি Node.js-এর ঐতিহ্যগত মডিউল সিস্টেম।"
+        },
+        "vip_qa": {
+            "question_en": "What does it mean that ESM has 'live bindings'?",
+            "answer_en": "It means if the value of an exported variable changes in the original module, the imported value in other modules also updates to reflect that change. CommonJS caches the value at the time of `require`."
+        }
+    },
+    {
+        "id": 83,
+        "level": "VIP",
+        "sub_topic": "Event Delegation",
+        "question_en": "How would you implement event delegation from scratch?",
+        "question_bn": "আপনি কীভাবে স্ক্র্যাচ থেকে ইভেন্ট ডেলিগেশন বাস্তবায়ন করবেন?",
+        "details": {
+            "what_is_en": "You would attach a single event listener to a parent container. Inside the listener, you check the `event.target` property to see which child element originally triggered the event. You can then use `.closest()` to find the specific child element you care about and execute logic accordingly.",
+            "what_is_bn": "একটি প্যারেন্ট কন্টেইনারে একটি ইভেন্ট লিসেনার যোগ করতে হবে। লিসেনারের ভিতরে, `event.target` প্রোপার্টি ব্যবহার করে দেখতে হবে কোন চাইল্ড এলিমেন্ট ইভেন্টটি ট্রিগার করেছে। এরপর `.closest()` ব্যবহার করে নির্দিষ্ট চাইল্ড খুঁজে বের করে কাজ করা যায়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a potential pitfall of using `event.target`?",
+            "answer_en": "If the element that was clicked is nested inside the element you're listening for (e.g., an icon inside a button), `event.target` will be the innermost element (the icon). Using `event.target.closest('.button-class')` is a robust way to handle this."
+        }
+    },
+    {
+        "id": 84,
+        "level": "VIP",
+        "sub_topic": "Currying",
+        "question_en": "Implement a generic `curry` function.",
+        "question_bn": "একটি জেনেরিক `curry` ফাংশন ইমপ্লিমেন্ট করুন।",
+        "details": {
+            "what_is_en": "A `curry` function takes a function `fn` and returns a new function that will keep accepting arguments until it has received all the arguments `fn` expects, at which point it invokes `fn`.",
+            "what_is_bn": "একটি `curry` ফাংশন একটি ফাংশন `fn` নেয় এবং একটি নতুন ফাংশন রিটার্ন করে যা `fn`-এর সমস্ত আর্গুমেন্ট না পাওয়া পর্যন্ত আর্গুমেন্ট গ্রহণ করতে থাকে এবং তারপর `fn`-কে কল করে।"
+        },
+        "vip_qa": {
+            "question_en": "Provide the code for a `curry` function.",
+            "answer_en": "```javascript\nfunction curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) {\n      return fn.apply(this, args);\n    } else {\n      return function(...args2) {\n        return curried.apply(this, args.concat(args2));\n      }\n    }\n  };\n}\n```"
+        }
+    },
+    {
+        "id": 85,
+        "level": "VIP",
+        "sub_topic": "Debouncing",
+        "question_en": "Implement a `debounce` function.",
+        "question_bn": "একটি `debounce` ফাংশন ইমপ্লিমেন্ট করুন।",
+        "details": {
+            "what_is_en": "Debouncing prevents a function from being called too frequently. It ensures that the function is only executed after a specified amount of time has passed without any new calls.",
+            "what_is_bn": "Debouncing একটি ফাংশনকে ঘন ঘন কল করা থেকে বিরত রাখে। এটি নিশ্চিত করে যে ফাংশনটি একটি নির্দিষ্ট সময় পর শুধুমাত্র একবার কার্যকর হবে।"
+        },
+        "vip_qa": {
+            "question_en": "Provide the code for a `debounce` function.",
+            "answer_en": "```javascript\nfunction debounce(func, delay) {\n  let timeoutId;\n  return function(...args) {\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() => {\n      func.apply(this, args);\n    }, delay);\n  };\n}\n```"
+        }
+    },
+    {
+        "id": 86,
+        "level": "VIP",
+        "sub_topic": "Throttling",
+        "question_en": "Implement a `throttle` function.",
+        "question_bn": "একটি `throttle` ফাংশন ইমপ্লিমেন্ট করুন।",
+        "details": {
+            "what_is_en": "Throttling ensures that a function is executed at most once per specified time interval, regardless of how many times it's called.",
+            "what_is_bn": "Throttling নিশ্চিত করে যে একটি ফাংশন নির্দিষ্ট সময় ব্যবধানে সর্বাধিক একবার কার্যকর হবে।"
+        },
+        "vip_qa": {
+            "question_en": "Provide the code for a `throttle` function.",
+            "answer_en": "```javascript\nfunction throttle(func, limit) {\n  let inThrottle;\n  return function(...args) {\n    if (!inThrottle) {\n      func.apply(this, args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n}\n```"
+        }
+    },
+    {
+        "id": 87,
+        "level": "VIP",
+        "sub_topic": "Proxy",
+        "question_en": "What are Proxies and the Reflect API used for together?",
+        "question_bn": "Proxies এবং Reflect API একসাথে কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "Proxies allow you to intercept and customize operations on an object. The `Reflect` API provides a set of static methods whose names correspond to the internal methods that Proxies can trap.",
+            "what_is_bn": "Proxy একটি অবজেক্টের অপারেশনগুলিকে বাধাগ্রস্ত করতে এবং কাস্টমাইজ করতে দেয়। `Reflect` API সেই অপারেশনগুলির জন্য ডিফল্ট আচরণ সরবরাহ করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why should you use `Reflect` methods inside a Proxy handler?",
+            "answer_en": "Using `Reflect` methods (e.g., `Reflect.get`) inside a handler ensures that the original, default behavior is executed correctly, especially in complex cases involving inheritance and getters, preventing subtle bugs."
+        }
+    },
+    {
+        "id": 88,
+        "level": "VIP",
+        "sub_topic": "Symbol",
+        "question_en": "What are well-known Symbols?",
+        "question_bn": "Well-known Symbols কী?",
+        "details": {
+            "what_is_en": "Well-known Symbols are built-in Symbol values that are used as properties to expose internal language behaviors. They allow developers to hook into and customize certain aspects of JavaScript's default logic.",
+            "what_is_bn": "Well-known Symbols হলো বিল্ট-ইন Symbol যা জাভাস্ক্রিপ্টের অভ্যন্তরীণ আচরণকে কাস্টমাইজ করার জন্য ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example of a well-known Symbol.",
+            "answer_en": "`Symbol.iterator` is a well-known symbol. An object that has a function assigned to this symbol's key is considered iterable and can be used with `for...of` loops."
+        }
+    },
+    {
+        "id": 89,
+        "level": "VIP",
+        "sub_topic": "WeakMap",
+        "question_en": "What is the primary use case for WeakMap?",
+        "question_bn": "WeakMap-এর প্রধান ব্যবহার কী?",
+        "details": {
+            "what_is_en": "The primary use case for `WeakMap` is to associate private or hidden data with an object without preventing that object from being garbage collected.",
+            "what_is_bn": "`WeakMap`-এর প্রধান ব্যবহার হলো একটি অবজেক্টের সাথে ব্যক্তিগত ডেটা যুক্ত করা, এবং সেই অবজেক্টটিকে গার্বেজ সংগ্রহে বাধা না দেওয়া।"
+        },
+        "vip_qa": {
+            "question_en": "Why can't primitive values be keys in a WeakMap?",
+            "answer_en": "Because primitive values are not garbage collected. The purpose of a `WeakMap` is to allow its keys (which must be objects) to be collected, so allowing primitives would defeat its purpose."
+        }
+    },
+    {
+        "id": 90,
+        "level": "VIP",
+        "sub_topic": "Memory Leak",
+        "question_en": "How would you use Chrome DevTools to find a memory leak?",
+        "question_bn": "Chrome DevTools ব্যবহার করে কীভাবে মেমরি লিক খুঁজে বের করবেন?",
+        "details": {
+            "what_is_en": "You would use the Memory tab in DevTools. A common technique is to record a heap snapshot, perform an action that you suspect is causing a leak, record another snapshot, and then compare the two to find 'detached' DOM nodes or objects that should have been garbage collected.",
+            "what_is_bn": "DevTools-এর Memory ট্যাব ব্যবহার করতে হবে। একটি হিপ স্ন্যাপশট নিতে হবে, তারপর সন্দেহজনক কাজটি করে আরেকটি স্ন্যাপশট নিতে হবে। এরপর দুটি স্ন্যাপশট তুলনা করে ডিটাচড DOM নোড বা অপ্রয়োজনীয় অবজেক্ট খুঁজে বের করতে হবে।"
+        },
+        "vip_qa": {
+            "question_en": "What does a 'detached' DOM node in a heap snapshot indicate?",
+            "answer_en": "It indicates a DOM element that has been removed from the page's DOM tree but is still being held in memory by a reference in your JavaScript code, which is a classic memory leak."
+        }
+    },
+    {
+        "id": 91,
+        "level": "VIP",
+        "sub_topic": "Web Security",
+        "question_en": "Explain the Same-Origin Policy (SOP).",
+        "question_bn": "Same-Origin Policy (SOP) ব্যাখ্যা করুন।",
+        "details": {
+            "what_is_en": "The Same-Origin Policy is a critical security mechanism that restricts how a document or script loaded from one origin can interact with a resource from another origin. An origin is defined by the scheme, host, and port.",
+            "what_is_bn": "Same-Origin Policy একটি নিরাপত্তা ব্যবস্থা যা একটি অরিজিন থেকে লোড করা ডকুমেন্ট বা স্ক্রিপ্টকে অন্য অরিজিনের সম্পদের সাথে ইন্টারঅ্যাক্ট করতে বাধা দেয়। অরিজিন বলতে স্কিম, হোস্ট এবং পোর্ট বোঝায়।"
+        },
+        "vip_qa": {
+            "question_en": "How does CORS relate to the SOP?",
+            "answer_en": "CORS (Cross-Origin Resource Sharing) is a mechanism to relax the Same-Origin Policy. It allows servers to explicitly specify which other origins are allowed to access their resources, using HTTP headers."
+        }
+    },
+    {
+        "id": 92,
+        "level": "VIP",
+        "sub_topic": "Asynchronous JS",
+        "question_en": "How would you implement your own Promise from scratch?",
+        "question_bn": "আপনি কীভাবে স্ক্র্যাচ থেকে নিজের Promise বাস্তবায়ন করবেন?",
+        "details": {
+            "what_is_en": "Implementing a Promise involves creating a class that manages three states (`pending`, `fulfilled`, `rejected`), a value/reason, and queues of `then`/`catch` callbacks. The constructor takes an executor function with `resolve` and `reject` callbacks to change the state.",
+            "what_is_bn": "একটি Promise বাস্তবায়নের জন্য একটি ক্লাস তৈরি করতে হয় যা তিনটি অবস্থা (`pending`, `fulfilled`, `rejected`) পরিচালনা করে। এর কনস্ট্রাক্টর একটি এক্সিকিউটর ফাংশন নেয় যা `resolve` এবং `reject` কলব্যাক দিয়ে অবস্থা পরিবর্তন করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a key challenge in implementing a Promise?",
+            "answer_en": "Correctly handling the asynchronous resolution and chaining of `.then()` calls. The logic must ensure that callbacks are executed in the right order and that values are passed down the chain correctly, even when `then` is called on an already settled promise."
+        }
+    },
+    {
+        "id": 93,
+        "level": "VIP",
+        "sub_topic": "This Keyword",
+        "question_en": "What are potential issues with the `this` keyword and how do you solve them?",
+        "question_bn": "`this` কীওয়ার্ডের সাথে সম্ভাব্য সমস্যাগুলি কী কী এবং আপনি কীভাবে সেগুলি সমাধান করবেন?",
+        "details": {
+            "what_is_en": "The value of `this` can change unexpectedly depending on how a function is called (the call-site). A common issue is losing context in event handlers or callbacks. Solutions include using arrow functions, the `.bind()` method, or storing `this` in a variable (`const self = this;`).",
+            "what_is_bn": "ফাংশন কীভাবে কল করা হয় তার উপর নির্ভর করে `this`-এর মান পরিবর্তিত হতে পারে। সাধারণ সমস্যা হলো ইভেন্ট হ্যান্ডলার বা কলব্যাকে কনটেক্সট হারানো। সমাধান হলো অ্যারো ফাংশন, `.bind()` মেথড, বা `this`-কে ভেরিয়েবলে সংরক্ষণ করা।"
+        },
+        "vip_qa": {
+            "question_en": "In what situation would `.bind()` be preferable to an arrow function in a class?",
+            "answer_en": "In class components (like in older React), binding a method in the constructor (`this.handleClick = this.handleClick.bind(this)`) is often more performant than using an inline arrow function in the render method, as it prevents creating a new function on every render."
+        }
+    },
+    {
+        "id": 94,
+        "level": "VIP",
+        "sub_topic": "Objects",
+        "question_en": "How would you implement a deep clone function manually?",
+        "question_bn": "আপনি কীভাবে একটি ডিপ ক্লোন ফাংশন ম্যানুয়ালি বাস্তবায়ন করবেন?",
+        "details": {
+            "what_is_en": "A manual implementation would involve recursively traversing the object. For each property, if it's a primitive, copy it. If it's an object or array, create a new empty object/array and recursively call the clone function on its properties. You must also handle circular references to avoid an infinite loop.",
+            "what_is_bn": "একটি ম্যানুয়াল বাস্তবায়নে অবজেক্টটিকে পুনরাবৃত্তিমূলকভাবে ট্র্যাভার্স করতে হবে। প্রতিটি বৈশিষ্ট্যের জন্য, যদি এটি একটি প্রিমিটিভ হয় তবে এটি অনুলিপি করুন। যদি এটি একটি অবজেক্ট বা অ্যারে হয় তবে একটি নতুন অবজেক্ট/অ্যারে তৈরি করুন এবং এর বৈশিষ্ট্যগুলিতে পুনরাবৃত্তিমূলকভাবে ক্লোন ফাংশনটি কল করুন। বৃত্তাকার রেফারেন্সও হ্যান্ডেল করতে হবে।"
+        },
+        "vip_qa": {
+            "question_en": "How can you handle circular references in a manual deep clone?",
+            "answer_en": "By using a `Map` or `WeakMap` to keep track of objects that have already been visited. Before cloning an object, check if it's in the map. If it is, return the already-cloned reference. If not, add the new clone to the map and continue the recursion."
+        }
+    },
+    {
+        "id": 95,
+        "level": "VIP",
+        "sub_topic": "Concurrency",
+        "question_en": "What is the difference between concurrency and parallelism in JavaScript?",
+        "question_bn": "JavaScript-এর প্রসঙ্গে কনকারেন্সি এবং প্যারালালিজমের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "Concurrency is about dealing with multiple tasks at once by interleaving their execution on a single thread (via the event loop). Parallelism is about doing multiple tasks at once by running them on separate threads simultaneously (via Web Workers).",
+            "what_is_bn": "কনকারেন্সি হলো একটি সিঙ্গেল থ্রেডে একাধিক কাজকে পর্যায়ক্রমে চালানো (ইভেন্ট লুপের মাধ্যমে)। প্যারালালিজম হলো একাধিক থ্রেডে একযোগে একাধিক কাজ চালানো (ওয়েব ওয়ার্কারের মাধ্যমে)।"
+        },
+        "vip_qa": {
+            "question_en": "Is JavaScript single-threaded or multi-threaded?",
+            "answer_en": "The JavaScript runtime environment itself is single-threaded (it has one main thread and one call stack). However, environments like browsers and Node.js provide multi-threading capabilities through APIs like Web Workers, which allow for true parallelism."
+        }
+    },
+    {
+        "id": 96,
+        "level": "VIP",
+        "sub_topic": "Asynchronous JS",
+        "question_en": "How can you handle race conditions in asynchronous JavaScript?",
+        "question_bn": "অ্যাসিঙ্ক্রোনাস জাভাস্ক্রিপ্টে আপনি কীভাবে রেস কন্ডিশন পরিচালনা করতে পারেন?",
+        "details": {
+            "what_is_en": "A race condition occurs when the outcome of an operation depends on an unpredictable sequence of asynchronous events. It can be handled by properly chaining promises, using `async/await` to ensure sequential execution, or implementing cancellation logic.",
+            "what_is_bn": "রেস কন্ডিশন ঘটে যখন একটি অপারেশনের ফলাফল অনির্দেশ্য ঘটনার ক্রমের উপর নির্ভর করে। এটি সঠিকভাবে প্রমিজ চেইন করে, `async/await` ব্যবহার করে, অথবা বাতিলকরণ যুক্তি প্রয়োগ করে পরিচালনা করা যেতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "How can an `AbortController` help prevent race conditions with `fetch`?",
+            "answer_en": "Before making a new `fetch` request (e.g., from a search input), you can call `abort()` on the `AbortController` associated with the previous request. This cancels the ongoing fetch, ensuring that you only process the results from the latest request."
+        }
+    },
+    {
+        "id": 97,
+        "level": "VIP",
+        "sub_topic": "Web APIs",
+        "question_en": "Explain what WebSockets are and how they differ from HTTP.",
+        "question_bn": "ওয়েবসকেট কী এবং সেগুলি কীভাবে HTTP থেকে ভিন্ন তা ব্যাখ্যা করুন।",
+        "details": {
+            "what_is_en": "WebSockets provide a persistent, full-duplex communication channel over a single TCP connection. Unlike the request-response model of HTTP, WebSockets allow the server to push data to the client at any time, making it ideal for real-time applications.",
+            "what_is_bn": "ওয়েবসকেট একটি একক TCP সংযোগের উপর একটি স্থায়ী, দ্বিমুখী যোগাযোগ চ্যানেল সরবরাহ করে। HTTP-এর request-response মডেলের পরিবর্তে, ওয়েবসকেট সার্ভারকে ক্লায়েন্টের কাছে ডেটা পুশ করার অনুমতি দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "How does a WebSocket connection start?",
+            "answer_en": "It starts with a standard HTTP request from the client that includes an `Upgrade: websocket` header. If the server supports it, it responds with a 101 Switching Protocols status, and the connection is upgraded from HTTP to the WebSocket protocol."
+        }
+    },
+    {
+        "id": 98,
+        "level": "VIP",
+        "sub_topic": "Concurrency",
+        "question_en": "What is the `Atomics` object and when would you use it?",
+        "question_bn": "`Atomics` অবজেক্ট কী এবং আপনি কখন এটি ব্যবহার করবেন?",
+        "details": {
+            "what_is_en": "The `Atomics` object provides atomic operations as static methods. They are used with `SharedArrayBuffer` objects to perform operations that are guaranteed to be indivisible and uninterruptible by other threads.",
+            "what_is_bn": "`Atomics` অবজেক্টটি অ্যাটমিক অপারেশন সরবরাহ করে। এগুলি `SharedArrayBuffer` অবজেক্টের সাথে ব্যবহৃত হয় এমন অপারেশনগুলি সম্পাদন করার জন্য যা অন্য থ্রেড দ্বারা বাধাগ্রস্ত হয় না।"
+        },
+        "vip_qa": {
+            "question_en": "Why are atomic operations necessary with shared memory?",
+            "answer_en": "To prevent race conditions when multiple threads are reading and writing to the same memory location. Atomic operations ensure that a read-modify-write sequence completes without another thread interfering in the middle."
+        }
+    },
+    {
+        "id": 99,
+        "level": "VIP",
+        "sub_topic": "Performance",
+        "question_en": "How can you optimize the Critical Rendering Path?",
+        "question_bn": "আপনি কীভাবে Critical Rendering Path অপ্টিমাইজ করতে পারেন?",
+        "details": {
+            "what_is_en": "Optimization involves minimizing the number of resources on the critical path, reducing their size, and optimizing their loading order. Techniques include inlining critical CSS, deferring non-critical CSS, and using `async` or `defer` for JavaScript.",
+            "what_is_bn": "অপ্টিমাইজেশনে ক্রিটিকাল পাথের উপর সম্পদের সংখ্যা এবং আকার হ্রাস করা জড়িত। কৌশলগুলির মধ্যে রয়েছে ক্রিটিকাল CSS ইনলাইন করা, অ-ক্রিটিকাল CSS এবং JS স্থগিত করা।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `async` and `defer` on a `<script>` tag?",
+            "answer_en": "`async` downloads the script without blocking HTML parsing and executes it as soon as it's available, possibly out of order. `defer` downloads without blocking and executes the script only after the HTML parsing is complete, in the order they appear."
+        }
+    },
+    {
+        "id": 100,
+        "level": "VIP",
+        "sub_topic": "Web Security",
+        "question_en": "What is a Content Security Policy (CSP)?",
+        "question_bn": "কন্টেন্ট সিকিউরিটি পলিসি (CSP) কী?",
+        "details": {
+            "what_is_en": "CSP is an added layer of security that helps to detect and mitigate certain types of attacks, like Cross-Site Scripting (XSS). It's delivered via an HTTP header and allows you to specify which domains the browser should consider to be valid sources of executable scripts.",
+            "what_is_bn": "CSP একটি অতিরিক্ত নিরাপত্তা স্তর যা XSS-এর মতো আক্রমণ সনাক্ত এবং প্রশমিত করতে সহায়তা করে। এটি একটি HTTP হেডারের মাধ্যমে সরবরাহ করা হয় এবং কোন ডোমেন থেকে স্ক্রিপ্ট লোড করা যাবে তা নির্দিষ্ট করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why is `'unsafe-inline'` considered harmful in a CSP?",
+            "answer_en": "It allows the execution of inline `<script>` elements and `javascript:` URIs, which defeats the primary purpose of CSP in preventing XSS, as attackers can easily inject malicious inline scripts if they find a vulnerability."
+        }
+    },
+    {
+        "id": 101,
+        "level": "VIP",
+        "sub_topic": "System Design",
+        "question_en": "How would you design a highly scalable real-time chat application?",
+        "question_bn": "আপনি কীভাবে একটি অত্যন্ত স্কেলেবল রিয়েল-টাইম চ্যাট অ্যাপ্লিকেশন ডিজাইন করবেন?",
+        "details": {
+            "what_is_en": "The design would involve a Node.js backend with WebSockets (e.g., Socket.IO) for real-time communication. For scalability, you'd use a load balancer to distribute connections across multiple Node.js instances. A message broker like Redis Pub/Sub would be needed to broadcast messages between instances.",
+            "what_is_bn": "ডিজাইনটিতে রিয়েল-টাইম যোগাযোগের জন্য ওয়েবসকেট সহ একটি Node.js ব্যাকএন্ড জড়িত থাকবে। স্কেলেবিলিটির জন্য, একটি লোড ব্যালেন্সার এবং একাধিক Node.js ইনস্ট্যান্স ব্যবহার করতে হবে। ইনস্ট্যান্সগুলোর মধ্যে বার্তা আদান-প্রদানের জন্য Redis Pub/Sub-এর মতো একটি বার্তা ব্রোকারের প্রয়োজন হবে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the role of Redis Pub/Sub in this architecture?",
+            "answer_en": "When a user sends a message to one Node.js server, that server publishes the message to a Redis channel. All other Node.js servers are subscribed to that channel, so they receive the message and can push it to their connected clients. This ensures all users in a chat room see the message regardless of which server instance they are connected to."
+        }
+    }
+]

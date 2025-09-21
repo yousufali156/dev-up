@@ -1,0 +1,527 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is TypeScript?",
+        "question_bn": "TypeScript কী?",
+        "details": {
+            "what_is_en": "TypeScript is a statically typed superset of JavaScript that compiles to plain JavaScript. It adds optional static types, classes, and interfaces to the language.",
+            "what_is_bn": "TypeScript হলো JavaScript-এর একটি স্ট্যাটিক্যালি টাইপড সুপারসেট যা সাধারণ জাভাস্ক্রিপ্টে কম্পাইল হয়। এটি ভাষায় ঐচ্ছিক স্ট্যাটিক টাইপ, ক্লাস এবং ইন্টারফেস যোগ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the main advantages of using TypeScript over plain JavaScript?",
+            "answer_en": "The main advantages are: 1. **Static Type Checking:** Catches errors during development before the code is run. 2. **Better Tooling:** Enables rich autocompletion, navigation, and refactoring in code editors. 3. **Self-Documenting Code:** Type definitions make the code easier to read and understand."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "Basic Types",
+        "question_en": "What are the basic types available in TypeScript?",
+        "question_bn": "TypeScript-এ উপলব্ধ বেসিক টাইপগুলো কী কী?",
+        "details": {
+            "what_is_en": "The basic types include `number`, `string`, `boolean`, `null`, `undefined`, `any`, `unknown`, `void`, and `never`.",
+            "what_is_bn": "বেসিক টাইপগুলির মধ্যে রয়েছে `number`, `string`, `boolean`, `null`, `undefined`, `any`, `unknown`, `void`, এবং `never`।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `null` and `undefined`?",
+            "answer_en": "`undefined` means a variable has been declared but not yet assigned a value. `null` is an assignment value, meaning a variable has been explicitly set to have no value."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Intermediate",
+        "sub_topic": "Types",
+        "question_en": "What is the difference between `any` and `unknown`?",
+        "question_bn": "`any` এবং `unknown` এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**`any`** effectively turns off type checking for a variable. **`unknown`** is a type-safe counterpart. You cannot perform any operations on an `unknown` value without first performing a type check.",
+            "what_is_bn": "**`any`** একটি ভ্যারিয়েবলের জন্য টাইপ চেকিং বন্ধ করে দেয়। **`unknown`** হলো `any`-এর একটি টাইপ-সেফ বিকল্প, যেখানে কোনো অপারেশন করার আগে টাইপ চেক করতে হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why is it recommended to use `unknown` instead of `any` when dealing with data of an unknown shape (e.g., from an API response)?",
+            "answer_en": "Using `unknown` forces you to write safer code. With `any`, you can try to access any property and TypeScript won't complain, which can lead to runtime errors. With `unknown`, TypeScript forces you to explicitly check the type of the variable before you can work with it."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Intermediate",
+        "sub_topic": "Type Aliases & Interfaces",
+        "question_en": "What is the difference between an `interface` and a `type` alias?",
+        "question_bn": "`interface` এবং `type` alias-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "An **`interface`** is primarily for defining the shape of objects. A **`type`** alias is more versatile and can define primitives, unions, tuples, etc. Interfaces can also be merged, while types cannot.",
+            "what_is_bn": "**`interface`** প্রধানত অবজেক্টের আকার নির্ধারণের জন্য ব্যবহৃত হয়। **`type`** alias আরও বহুমুখী এবং প্রিমিটিভ, ইউনিয়ন, টুপল ইত্যাদি সংজ্ঞায়িত করতে পারে। ইন্টারফেস মার্জ করা যায়, কিন্তু টাইপ করা যায় না।"
+        },
+        "vip_qa": {
+            "question_en": "What is 'declaration merging' and which of the two supports it?",
+            "answer_en": "Declaration merging is when the compiler merges two or more separate declarations with the same name into a single definition. **Interfaces** support this, while `type` aliases do not. This allows you to extend an interface that might be defined in a third-party library."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Intermediate",
+        "sub_topic": "Generics",
+        "question_en": "What are Generics in TypeScript?",
+        "question_bn": "TypeScript-এ Generics কী?",
+        "details": {
+            "what_is_en": "Generics are a feature that allows you to create reusable components, functions, or classes that can work with a variety of types while maintaining type safety.",
+            "what_is_bn": "Generics হলো এমন একটি ফিচার যা আপনাকে পুনঃব্যবহারযোগ্য এবং টাইপ-সেফ কোড লিখতে দেয় যা বিভিন্ন ধরণের ডেটা নিয়ে কাজ করতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "Provide a practical example of a generic function and explain why it's better than using `any`.",
+            "answer_en": "A generic function maintains the relationship between input and output types: `function getFirst<T>(arr: T[]): T { return arr[0]; }`. If you call `getFirst([1, 2])`, TypeScript knows the return type is `number`. If you used `any`, TypeScript would lose all type information. Generics provide reusability without sacrificing type safety."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Beginner",
+        "sub_topic": "Types",
+        "question_en": "What is a Union Type?",
+        "question_bn": "ইউনিয়ন টাইপ কী?",
+        "details": {
+            "what_is_en": "A union type allows a variable to be one of several types. It is defined using the pipe (`|`) symbol. For example, `let id: string | number;`.",
+            "what_is_bn": "ইউনিয়ন টাইপ একটি ভেরিয়েবলকে বিভিন্ন টাইপের মধ্যে একটি হতে দেয়। এটি পাইপ (`|`) চিহ্ন ব্যবহার করে সংজ্ঞায়িত করা হয়। যেমন, `let id: string | number;`।"
+        },
+        "vip_qa": {
+            "question_en": "How do you narrow a union type to a specific type?",
+            "answer_en": "You can narrow the type using a type guard. For example, using `typeof id === 'string'` inside an `if` block will tell the TypeScript compiler that `id` is a string within that block."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Intermediate",
+        "sub_topic": "Enums",
+        "question_en": "What are Enums in TypeScript?",
+        "question_bn": "TypeScript-এ Enums কী?",
+        "details": {
+            "what_is_en": "Enums allow you to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases.",
+            "what_is_bn": "Enums আপনাকে কিছু নামযুক্ত ধ্রুবকের একটি সেট সংজ্ঞায়িত করতে দেয়। Enums ব্যবহার করলে কোডের উদ্দেশ্য বোঝা সহজ হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between a numeric enum and a string enum?",
+            "answer_en": "Numeric enums are number-based and auto-increment by default. They allow for reverse mapping (from value to name). String enums must be initialized with string values and do not have reverse mappings, which can make them more readable and predictable."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Beginner",
+        "sub_topic": "Configuration",
+        "question_en": "What is the `tsconfig.json` file?",
+        "question_bn": "`tsconfig.json` ফাইল কী?",
+        "details": {
+            "what_is_en": "The `tsconfig.json` file is the configuration file for a TypeScript project. It specifies the root files and the compiler options required to compile the project.",
+            "what_is_bn": "`tsconfig.json` ফাইলটি একটি TypeScript প্রজেক্টের কনফিগারেশন ফাইল। এটি প্রজেক্ট কম্পাইল করার জন্য প্রয়োজনীয় রুট ফাইল এবং কম্পাইলার অপশনগুলি নির্দিষ্ট করে।"
+        },
+        "vip_qa": {
+            "question_en": "What does the `strict: true` compiler option do?",
+            "answer_en": "Setting `strict: true` enables a wide range of strict type-checking options, such as `noImplicitAny`, `strictNullChecks`, and `alwaysStrict`. It is highly recommended for all new projects to catch more errors at compile time."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Advanced",
+        "sub_topic": "Utility Types",
+        "question_en": "What are Utility Types in TypeScript?",
+        "question_bn": "TypeScript-এ ইউটিলিটি টাইপ কী?",
+        "details": {
+            "what_is_en": "Utility Types are built-in type helpers that facilitate common type transformations. They let you create new types based on existing ones.",
+            "what_is_bn": "ইউটিলিটি টাইপ হলো বিল্ট-ইন টাইপ যা বিদ্যমান টাইপগুলোকে রূপান্তরিত করে নতুন টাইপ তৈরি করতে সাহায্য করে।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the use cases for `Partial<T>`, `Pick<T, K>`, and `Omit<T, K>`.",
+            "answer_en": "**`Partial<T>`:** Makes all properties of `T` optional. Useful for update functions. **`Pick<T, K>`:** Creates a type by picking a set of properties `K` from `T`. **`Omit<T, K>`:** Creates a type by removing a set of properties `K` from `T`."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Intermediate",
+        "sub_topic": "Type Assertion",
+        "question_en": "What is type assertion in TypeScript?",
+        "question_bn": "TypeScript-এ টাইপ অ্যাসারশন কী?",
+        "details": {
+            "what_is_en": "Type assertion is a way to tell the compiler 'trust me, I know what I'm doing.' It's like a type cast in other languages but performs no special checking or restructuring of data.",
+            "what_is_bn": "টাইপ অ্যাসারশন হলো কম্পাইলারকে বলার একটি উপায় যে আপনি ডেটার টাইপ সম্পর্কে নিশ্চিত। এটি অন্যান্য ভাষার টাইপ কাস্টিংয়ের মতো, তবে কোনো বিশেষ ডেটা চেকিং বা পুনর্গঠন করে না।"
+        },
+        "vip_qa": {
+            "question_en": "What are the two syntaxes for type assertion, and which one is preferred in `.tsx` files?",
+            "answer_en": "The two syntaxes are the angle-bracket syntax (`<string>myVar`) and the `as` syntax (`myVar as string`). The `as` syntax is preferred in `.tsx` (React) files because the angle-bracket syntax conflicts with JSX."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Intermediate",
+        "sub_topic": "Arrays & Tuples",
+        "question_en": "What is the difference between an Array and a Tuple in TypeScript?",
+        "question_bn": "TypeScript-এ অ্যারে এবং টুপলের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "An **Array** is a collection of elements of the same type (`string[]`). A **Tuple** is an array with a fixed number of elements where each element can have a different type (`[string, number]`).",
+            "what_is_bn": "**অ্যারে** হলো একই ধরণের এলিমেন্টের একটি সংগ্রহ (`string[]`)। **টুপল** হলো নির্দিষ্ট সংখ্যক এলিমেন্টের একটি অ্যারে যেখানে প্রতিটি এলিমেন্টের টাইপ ভিন্ন হতে পারে (`[string, number]`)।"
+        },
+        "vip_qa": {
+            "question_en": "What is a practical use case for a Tuple?",
+            "answer_en": "A common use case is for functions that return multiple values with different types. For example, React's `useState` hook returns a tuple: `[State, (newState: State) => void]`."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Advanced",
+        "sub_topic": "Type Guards",
+        "question_en": "What is a type guard?",
+        "question_bn": "টাইপ গার্ড কী?",
+        "details": {
+            "what_is_en": "A type guard is some expression that performs a runtime check that guarantees the type in some scope. Common type guards are `typeof`, `instanceof`, and the `in` operator.",
+            "what_is_bn": "টাইপ গার্ড হলো একটি এক্সপ্রেশন যা রানটাইমে একটি নির্দিষ্ট স্কোপে টাইপ নিশ্চিত করার জন্য একটি চেক সম্পাদন করে। সাধারণ টাইপ গার্ড হলো `typeof`, `instanceof` এবং `in` অপারেটর।"
+        },
+        "vip_qa": {
+            "question_en": "How do you create a custom type guard using a function?",
+            "answer_en": "You create a function whose return type is a *type predicate*. For example: `function isFish(pet: Fish | Bird): pet is Fish { return (pet as Fish).swim !== undefined; }`. The `pet is Fish` syntax is the type predicate."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Intermediate",
+        "sub_topic": "TypeScript with React",
+        "question_en": "How do you type props for a React component?",
+        "question_bn": "একটি React কম্পোনেন্টের জন্য props কীভাবে টাইপ করবেন?",
+        "details": {
+            "what_is_en": "You can define an `interface` or `type` alias for the props and then use it to type the props object in your functional component. E.g., `const MyComponent = (props: MyProps) => { ... }`.",
+            "what_is_bn": "আপনি props-এর জন্য একটি `interface` বা `type` alias সংজ্ঞায়িত করতে পারেন এবং তারপর আপনার ফাংশনাল কম্পোনেন্টে props অবজেক্ট টাইপ করতে এটি ব্যবহার করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is `React.FC` and why is its use sometimes discouraged?",
+            "answer_en": "`React.FC` (or `React.FunctionComponent`) is a generic type for functional components. It was discouraged because it implicitly added `children` to the props type, which was not always desired. In modern TypeScript, it's often simpler to type the props directly."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Intermediate",
+        "sub_topic": "Types",
+        "question_en": "What does the `never` type represent?",
+        "question_bn": "`never` টাইপ কীসের প্রতিনিধিত্ব করে?",
+        "details": {
+            "what_is_en": "The `never` type represents the type of values that never occur. It is used for functions that always throw an error or for functions that have an infinite loop.",
+            "what_is_bn": "`never` টাইপটি এমন মানগুলির প্রতিনিধিত্ব করে যা কখনও ঘটে না। এটি এমন ফাংশনগুলির জন্য ব্যবহৃত হয় যা সর্বদা একটি এরর থ্রো করে বা যেগুলির একটি অসীম লুপ রয়েছে।"
+        },
+        "vip_qa": {
+            "question_en": "How can `never` be useful for ensuring exhaustive checks in a switch statement?",
+            "answer_en": "In a switch statement over a union type, you can add a `default` case that assigns the variable to a function accepting `never`. If you later add a new member to the union but forget to handle it in the switch, TypeScript will throw a compile-time error because the variable is not of type `never`."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Advanced",
+        "sub_topic": "Advanced Types",
+        "question_en": "What are Mapped Types?",
+        "question_bn": "ম্যাপড টাইপ কী?",
+        "details": {
+            "what_is_en": "Mapped types allow you to create new types by transforming the properties of an existing type. You can make all properties readonly, optional, or change their type.",
+            "what_is_bn": "ম্যাপড টাইপ আপনাকে একটি বিদ্যমান টাইপের প্রপার্টিগুলি রূপান্তর করে নতুন টাইপ তৈরি করতে দেয়। আপনি সমস্ত প্রপার্টিকে readonly, optional করতে বা তাদের টাইপ পরিবর্তন করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "How are many of the built-in Utility Types like `Partial<T>` and `Readonly<T>` implemented?",
+            "answer_en": "They are implemented using mapped types. For example, `type Partial<T> = { [P in keyof T]?: T[P]; }`. This syntax iterates over all properties (`P`) in the type `T` and makes them optional (`?`)."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Intermediate",
+        "sub_topic": "Classes",
+        "question_en": "How do you define access modifiers like `public`, `private`, and `protected` in TypeScript classes?",
+        "question_bn": "TypeScript ক্লাসে `public`, `private`, এবং `protected` অ্যাক্সেস মডিফায়ার কীভাবে সংজ্ঞায়িত করবেন?",
+        "details": {
+            "what_is_en": "**`public`** (default): Accessible from anywhere. **`private`**: Accessible only within the class. **`protected`**: Accessible within the class and its subclasses.",
+            "what_is_bn": "**`public`** (ডিফল্ট): যেকোনো জায়গা থেকে অ্যাক্সেসযোগ্য। **`private`**: শুধুমাত্র ক্লাসের ভিতরে অ্যাক্সেসযোগ্য। **`protected`**: ক্লাস এবং তার সাবক্লাসের মধ্যে অ্যাক্সেসযোগ্য।"
+        },
+        "vip_qa": {
+            "question_en": "What is the 'parameter properties' shorthand in a class constructor?",
+            "answer_en": "It's a shorthand that lets you create and initialize a class member in one place. For example, `constructor(private name: string) {}` is a shortcut for declaring a private `name` property and initializing it from the constructor argument."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Advanced",
+        "sub_topic": "Advanced Types",
+        "question_en": "What are Conditional Types?",
+        "question_bn": "কন্ডিশনাল টাইপ কী?",
+        "details": {
+            "what_is_en": "Conditional types select one of two possible types based on a condition expressed as a type relationship test. They have the syntax `T extends U ? X : Y`.",
+            "what_is_bn": "কন্ডিশনাল টাইপ একটি শর্তের উপর ভিত্তি করে দুটি সম্ভাব্য টাইপের মধ্যে একটি নির্বাচন করে। তাদের সিনট্যাক্স হলো `T extends U ? X : Y`।"
+        },
+        "vip_qa": {
+            "question_en": "What is the `infer` keyword used for in conditional types?",
+            "answer_en": "The `infer` keyword is used within the `extends` clause of a conditional type to declaratively introduce a new generic type variable. It's often used to extract types from arrays, functions, or promises. For example, `type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;` extracts the return type `R` of a function."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Intermediate",
+        "sub_topic": "Types",
+        "question_en": "What is the difference between `void` and `never`?",
+        "question_bn": "`void` এবং `never`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**`void`** represents the return value of functions that do not return a value. **`never`** represents the return value of functions that never return (e.g., they always throw an error or have an infinite loop).",
+            "what_is_bn": "**`void`** এমন ফাংশনের রিটার্ন মানের প্রতিনিধিত্ব করে যা কোনো মান রিটার্ন করে না। **`never`** এমন ফাংশনের রিটার্ন মানের প্রতিনিধিত্ব করে যা কখনও রিটার্ন করে না।"
+        },
+        "vip_qa": {
+            "question_en": "Can a variable of type `never` be assigned any value?",
+            "answer_en": "No, a variable of type `never` cannot have any value assigned to it, not even `null` or `undefined`. However, `never` is assignable to every type."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Beginner",
+        "sub_topic": "Functions",
+        "question_en": "How do you specify a type for a function?",
+        "question_bn": "একটি ফাংশনের জন্য টাইপ কীভাবে নির্দিষ্ট করবেন?",
+        "details": {
+            "what_is_en": "You can specify types for the function's parameters and its return value. Example: `function add(a: number, b: number): number { return a + b; }`.",
+            "what_is_bn": "আপনি ফাংশনের প্যারামিটার এবং তার রিটার্ন মানের জন্য টাইপ নির্দিষ্ট করতে পারেন। উদাহরণ: `function add(a: number, b: number): number { return a + b; }`।"
+        },
+        "vip_qa": {
+            "question_en": "How would you define the type for a callback function that takes a string and returns nothing?",
+            "answer_en": "You can use a type alias with an arrow function syntax: `type StringCallback = (message: string) => void;`."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Advanced",
+        "sub_topic": "Utility Types",
+        "question_en": "What does the `Record<K, T>` utility type do?",
+        "question_bn": "`Record<K, T>` ইউটিলিটি টাইপের কাজ কী?",
+        "details": {
+            "what_is_en": "`Record<K, T>` constructs an object type with a set of properties `K` whose values are all of type `T`.",
+            "what_is_bn": "`Record<K, T>` একটি অবজেক্ট টাইপ তৈরি করে যার প্রপার্টিগুলির সেট `K` এবং তাদের সকলের মান `T` টাইপের হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Provide a practical example of when `Record<K, T>` is useful.",
+            "answer_en": "It's useful for defining a dictionary-like object where the keys are from a known set (like a string literal union type) and the values have a consistent shape. For example: `type PageInfo = { title: string }; type Pages = 'home' | 'about'; const nav: Record<Pages, PageInfo> = { home: { title: 'Home' }, about: { title: 'About' } };`"
+        }
+    },
+    {
+        "id": 21,
+        "level": "Intermediate",
+        "sub_topic": "TypeScript with React",
+        "question_en": "How do you type event handlers in React with TypeScript?",
+        "question_bn": "TypeScript দিয়ে React-এ ইভেন্ট হ্যান্ডলার কীভাবে টাইপ করবেন?",
+        "details": {
+            "what_is_en": "React provides its own event types. For example, a click event on a button would be typed as `React.MouseEvent<HTMLButtonElement>`.",
+            "what_is_bn": "React তার নিজস্ব ইভেন্ট টাইপ সরবরাহ করে। উদাহরণস্বরূপ, একটি বাটনে ক্লিক ইভেন্টকে `React.MouseEvent<HTMLButtonElement>` হিসাবে টাইপ করা হবে।"
+        },
+        "vip_qa": {
+            "question_en": "How do you type the `event` object in an `onChange` handler for an input element?",
+            "answer_en": "You would type it as `React.ChangeEvent<HTMLInputElement>`. This gives you typed access to properties like `event.target.value`."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Beginner",
+        "sub_topic": "Compilation",
+        "question_en": "How do you compile a TypeScript file?",
+        "question_bn": "আপনি একটি TypeScript ফাইল কীভাবে কম্পাইল করবেন?",
+        "details": {
+            "what_is_en": "You use the TypeScript compiler, `tsc`. Running `tsc myFile.ts` in the terminal will compile the file and produce a `myFile.js` JavaScript file.",
+            "what_is_bn": "আপনি TypeScript কম্পাইলার, `tsc` ব্যবহার করবেন। টার্মিনালে `tsc myFile.ts` রান করলে ফাইলটি কম্পাইল হবে এবং একটি `myFile.js` জাভাস্ক্রিপ্ট ফাইল তৈরি হবে।"
+        },
+        "vip_qa": {
+            "question_en": "What happens if you run `tsc` without any filenames in a project with a `tsconfig.json`?",
+            "answer_en": "Running `tsc` without any input files will compile all the TypeScript files in the project as specified by the `files`, `include`, and `exclude` options in the `tsconfig.json` file."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Intermediate",
+        "sub_topic": "Types",
+        "question_en": "What is an Intersection Type?",
+        "question_bn": "ইন্টারসেকশন টাইপ কী?",
+        "details": {
+            "what_is_en": "An intersection type combines multiple types into one. This allows you to add together existing types to get a single type that has all the features you need. It is defined using the ampersand (`&`) symbol.",
+            "what_is_bn": "ইন্টারসেকশন টাইপ একাধিক টাইপকে একত্রিত করে একটিতে পরিণত করে। এটি আপনাকে বিদ্যমান টাইপগুলিকে একসাথে যোগ করে একটি একক টাইপ পেতে দেয় যাতে আপনার প্রয়োজনীয় সমস্ত বৈশিষ্ট্য রয়েছে। এটি অ্যামপারস্যান্ড (`&`) চিহ্ন ব্যবহার করে সংজ্ঞায়িত করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "If two types in an intersection have a property with the same name but different types, what is the resulting type of that property?",
+            "answer_en": "The resulting property will have a type that is an intersection of the individual types. If the types are primitives (e.g., `string & number`), the result is `never`, as a value cannot be both at the same time."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Advanced",
+        "sub_topic": "Advanced Types",
+        "question_en": "What is the `keyof` type operator?",
+        "question_bn": "`keyof` টাইপ অপারেটর কী?",
+        "details": {
+            "what_is_en": "The `keyof` operator takes an object type and produces a string or numeric literal union of its keys.",
+            "what_is_bn": "`keyof` অপারেটর একটি অবজেক্ট টাইপ নেয় এবং তার কী-গুলির একটি স্ট্রিং বা নিউমেরিক লিটারাল ইউনিয়ন তৈরি করে।"
+        },
+        "vip_qa": {
+            "question_en": "How can `keyof` be used with generics to create a type-safe function for accessing object properties?",
+            "answer_en": "You can create a function like: `function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] { return obj[key]; }`. This ensures that the `key` passed to the function is actually a key of the `obj`, preventing runtime errors."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Advanced",
+        "sub_topic": "Decorators",
+        "question_en": "What are Decorators in TypeScript?",
+        "question_bn": "TypeScript-এ ডেকোরেটর কী?",
+        "details": {
+            "what_is_en": "Decorators are a special kind of declaration that can be attached to a class declaration, method, accessor, property, or parameter. Decorators use the form `@expression`.",
+            "what_is_bn": "ডেকোরেটর হলো এক ধরণের বিশেষ ডিক্লারেশন যা ক্লাস, মেথড, অ্যাকসেসর, প্রপার্টি বা প্যারামিটারে যুক্ত করা যায়। ডেকোরেটর `@expression` ফর্ম ব্যবহার করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the status of decorators in TypeScript and JavaScript?",
+            "answer_en": "Decorators are an experimental feature in TypeScript (you must enable the `experimentalDecorators` flag). They are a Stage 3 proposal for JavaScript, meaning they are close to being officially added to the language but are not yet standard."
+        }
+    },
+    {
+        "id": 26,
+        "level": "Beginner",
+        "sub_topic": "Types",
+        "question_en": "What is Type Inference?",
+        "question_bn": "টাইপ ইনফারেন্স কী?",
+        "details": {
+            "what_is_en": "Type inference is when TypeScript automatically determines and assigns a type to a variable based on its initial value, without you explicitly writing the type annotation.",
+            "what_is_bn": "টাইপ ইনফারেন্স হলো যখন TypeScript আপনার দ্বারা স্পষ্টভাবে টাইপ অ্যানোটেশন লেখা ছাড়াই একটি ভেরিয়েবলের প্রাথমিক মানের উপর ভিত্তি করে স্বয়ংক্রিয়ভাবে একটি টাইপ নির্ধারণ এবং অ্যাসাইন করে।"
+        },
+        "vip_qa": {
+            "question_en": "Is it a good practice to always rely on type inference?",
+            "answer_en": "It's good practice for simple variable initializations (`let name = 'Alice'`). However, it's a best practice to explicitly type function return values and object shapes to make the code clearer and prevent unintentional type changes."
+        }
+    },
+    {
+        "id": 27,
+        "level": "Intermediate",
+        "sub_topic": "Generics",
+        "question_en": "What are generic constraints?",
+        "question_bn": "জেনেরিক কনস্ট্রেইন্ট কী?",
+        "details": {
+            "what_is_en": "Generic constraints allow you to limit the types that can be passed as a type argument to a generic function. This is done using the `extends` keyword.",
+            "what_is_bn": "জেনেরিক কনস্ট্রেইন্ট আপনাকে জেনেরিক ফাংশনে টাইপ আর্গুমেন্ট হিসাবে পাস করা যেতে পারে এমন টাইপগুলিকে সীমাবদ্ধ করতে দেয়। এটি `extends` কীওয়ার্ড ব্যবহার করে করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example of a generic constraint.",
+            "answer_en": "You could constrain a generic function to only accept types that have a `.length` property: `function loggingIdentity<T extends { length: number }>(arg: T): T { console.log(arg.length); return arg; }`."
+        }
+    },
+    {
+        "id": 28,
+        "level": "Advanced",
+        "sub_topic": "Declaration Files",
+        "question_en": "What is a declaration file (`.d.ts`)?",
+        "question_bn": "ডিক্লারেশন ফাইল (`.d.ts`) কী?",
+        "details": {
+            "what_is_en": "A declaration file is a file that contains only type information. It is used to describe the shape of an existing JavaScript library to the TypeScript compiler, allowing you to use it in your TypeScript code with type safety.",
+            "what_is_bn": "ডিক্লারেশন ফাইল হলো একটি ফাইল যা শুধুমাত্র টাইপ তথ্য ধারণ করে। এটি একটি বিদ্যমান জাভাস্ক্রিপ্ট লাইব্রেরির আকার TypeScript কম্পাইলারকে বর্ণনা করতে ব্যবহৃত হয়, যা আপনাকে আপনার TypeScript কোডে টাইপ সেফটি সহ এটি ব্যবহার করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Where do you typically get declaration files for third-party libraries?",
+            "answer_en": "They are usually hosted on a community-managed repository called DefinitelyTyped and are installed from npm under the `@types/` scope. For example, to get types for React, you would run `npm install @types/react`."
+        }
+    },
+    {
+        "id": 29,
+        "level": "Intermediate",
+        "sub_topic": "Optional Chaining",
+        "question_en": "What is Optional Chaining in TypeScript?",
+        "question_bn": "TypeScript-এ অপশনাল চেইনিং কী?",
+        "details": {
+            "what_is_en": "Optional chaining (`?.`) allows you to safely access nested properties of an object without having to explicitly check if each reference in the chain is null or undefined.",
+            "what_is_bn": "অপশনাল চেইনিং (`?.`) আপনাকে একটি অবজেক্টের নেস্টেড প্রপার্টিগুলি নিরাপদে অ্যাক্সেস করতে দেয়, যেখানে চেইনের প্রতিটি রেফারেন্স null বা undefined কিনা তা স্পষ্টভাবে পরীক্ষা করার প্রয়োজন হয় না।"
+        },
+        "vip_qa": {
+            "question_en": "How does optional chaining work with function calls?",
+            "answer_en": "You can use it to conditionally call a function that may not exist. For example, `myCallback?.()`. This will only call `myCallback` if it is not `null` or `undefined`."
+        }
+    },
+    {
+        "id": 30,
+        "level": "Intermediate",
+        "sub_topic": "Nullish Coalescing",
+        "question_en": "What is the Nullish Coalescing operator (`??`)?",
+        "question_bn": "নালিশ কোয়েলেসিং অপারেটর (`??`) কী?",
+        "details": {
+            "what_is_en": "The nullish coalescing operator (`??`) is a logical operator that returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, and otherwise returns its left-hand side operand.",
+            "what_is_bn": "নালিশ কোয়েলেসিং অপারেটর (`??`) একটি লজিক্যাল অপারেটর যা তার বাম দিকের অপারেন্ড `null` বা `undefined` হলে ডান দিকের অপারেন্ড রিটার্ন করে, অন্যথায় বাম দিকের অপারেন্ড রিটার্ন করে।"
+        },
+        "vip_qa": {
+            "question_en": "How is `??` different from the logical OR (`||`) operator?",
+            "answer_en": "The logical OR (`||`) operator returns the right-hand side for any 'falsy' value (like `0`, `''`, `false`). The nullish coalescing operator (`??`) only triggers for `null` or `undefined`, which is useful when falsy values like `0` are valid inputs."
+        }
+    },
+    {
+        "id": 31,
+        "level": "Intermediate",
+        "sub_topic": "Classes",
+        "question_en": "What is an abstract class in TypeScript?",
+        "question_bn": "TypeScript-এ অ্যাবস্ট্রাক্ট ক্লাস কী?",
+        "details": {
+            "what_is_en": "Abstract classes are base classes from which other classes may be derived. They may not be instantiated directly. They can contain abstract methods, which must be implemented by the derived classes.",
+            "what_is_bn": "অ্যাবস্ট্রাক্ট ক্লাস হলো বেস ক্লাস যা থেকে অন্যান্য ক্লাস তৈরি করা যেতে পারে। এগুলি সরাসরি ইনস্ট্যানশিয়েট করা যায় না। এগুলিতে অ্যাবস্ট্রাক্ট মেথড থাকতে পারে, যা ডিরাইভড ক্লাস দ্বারা ইমপ্লিমেন্ট করতে হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the main purpose of using an abstract class?",
+            "answer_en": "The main purpose is to define a common structure and behavior that multiple related subclasses must share and implement, essentially creating a template for other classes."
+        }
+    },
+    {
+        "id": 32,
+        "level": "Advanced",
+        "sub_topic": "Literal Types",
+        "question_en": "What are literal types?",
+        "question_bn": "লিটারাল টাইপ কী?",
+        "details": {
+            "what_is_en": "Literal types allow you to specify the exact value a string, number, or boolean must have. For example, `type Status = 'success' | 'error';`.",
+            "what_is_bn": "লিটারাল টাইপ আপনাকে একটি স্ট্রিং, সংখ্যা বা বুলিয়ানের সঠিক মান নির্দিষ্ট করতে দেয়। উদাহরণস্বরূপ, `type Status = 'success' | 'error';`।"
+        },
+        "vip_qa": {
+            "question_en": "How are literal types commonly used with union types?",
+            "answer_en": "They are very commonly combined with union types to create a set of allowed, specific values for a variable. This is a powerful alternative to using enums for simple cases, providing strong type safety for known sets of strings or numbers."
+        }
+    },
+    {
+        "id": 33,
+        "level": "Intermediate",
+        "sub_topic": "Interfaces",
+        "question_en": "What are index signatures?",
+        "question_bn": "ইনডেক্স সিগনেচার কী?",
+        "details": {
+            "what_is_en": "An index signature is a way to type objects of unknown structure when you only know the key and value types. For example, `[key: string]: number;`.",
+            "what_is_bn": "ইনডেক্স সিগনেচার হলো অজানা কাঠামোর অবজেক্ট টাইপ করার একটি উপায় যখন আপনি কেবল কী এবং মানের টাইপ জানেন। উদাহরণস্বরূপ, `[key: string]: number;`।"
+        },
+        "vip_qa": {
+            "question_en": "What is a limitation of using index signatures?",
+            "answer_en": "A limitation is that all explicit properties in the type must also conform to the index signature's value type. For instance, if your index signature is `[key: string]: number;`, you cannot have a property like `name: string;` in the same type."
+        }
+    },
+    {
+        "id": 34,
+        "level": "Advanced",
+        "sub_topic": "Advanced Types",
+        "question_en": "What is the `satisfies` operator?",
+        "question_bn": "`satisfies` অপারেটর কী?",
+        "details": {
+            "what_is_en": "The `satisfies` operator is used to validate that an expression matches some type, without changing the resulting type of that expression. It lets you catch errors while preserving the specific inferred type.",
+            "what_is_bn": "`satisfies` অপারেটরটি একটি এক্সপ্রেশন কোনো টাইপের সাথে মেলে কিনা তা যাচাই করতে ব্যবহৃত হয়, তবে সেই এক্সপ্রেশনের ফলে প্রাপ্ত টাইপ পরিবর্তন না করে। এটি আপনাকে সুনির্দিষ্ট ইনফারড টাইপ সংরক্ষণ করার সময় এরর ধরতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example where `satisfies` is more useful than a standard type annotation.",
+            "answer_en": "Consider an object `const config = { theme: 'dark' } satisfies Record<string, 'dark' | 'light'>;`. Here, `satisfies` checks that `theme` is a valid value, but the inferred type of `config.theme` remains the specific literal `'dark'`, not the wider `'dark' | 'light'`."
+        }
+    },
+    {
+        "id": 35,
+        "level": "Intermediate",
+        "sub_topic": "TypeScript with React",
+        "question_en": "How do you type the state for the `useState` hook?",
+        "question_bn": "`useState` হুকের জন্য স্টেট কীভাবে টাইপ করবেন?",
+        "details": {
+            "what_is_en": "You can provide the type as a generic argument to the `useState` function. For example: `const [user, setUser] = useState<User | null>(null);`.",
+            "what_is_bn": "আপনি `useState` ফাংশনে একটি জেনেরিক আর্গুমেন্ট হিসাবে টাইপ সরবরাহ করতে পারেন। উদাহরণস্বরূপ: `const [user, setUser] = useState<User | null>(null);`।"
+        },
+        "vip_qa": {
+            "question_en": "Is it always necessary to provide an explicit generic type for `useState`?",
+            "answer_en": "No. If you provide an initial value, TypeScript can often infer the type correctly. For example, in `useState(0)`, TypeScript will correctly infer the type as `number`. You only need to provide an explicit type if the initial value is `null` or `undefined` but it will later hold a more specific type."
+        }
+    }
+]

@@ -1,0 +1,377 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is Mongoose?",
+        "question_bn": "Mongoose কী?",
+        "details": {
+            "what_is_en": "Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It provides a schema-based solution to model your application data and includes built-in type casting, validation, query building, and business logic hooks.",
+            "what_is_bn": "Mongoose হলো MongoDB এবং Node.js-এর জন্য একটি অবজেক্ট ডেটা মডেলিং (ODM) লাইব্রেরি। এটি আপনার অ্যাপ্লিকেশন ডেটা মডেল করার জন্য একটি স্কিমা-ভিত্তিক সমাধান প্রদান করে এবং এতে বিল্ট-ইন টাইপ কাস্টিং, ভ্যালিডেশন, কোয়েরি বিল্ডিং এবং বিজনেস লজিক হুক অন্তর্ভুক্ত থাকে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the main benefits of using Mongoose over the native MongoDB driver?",
+            "answer_en": "The main benefits are: 1. **Schema and Validation:** Enforces a rigid data structure and provides built-in validation. 2. **Middleware (Hooks):** Allows you to execute logic before or after database operations (e.g., password hashing). 3. **Population:** Easily fetch referenced documents from other collections. 4. **Abstraction:** Provides a cleaner, more readable API for common database operations."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "Schema & Models",
+        "question_en": "What is the difference between a Schema and a Model in Mongoose?",
+        "question_bn": "Mongoose-এ স্কিমা এবং মডেলের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "A **Schema** is a blueprint that defines the structure, data types, and validation rules for your documents. A **Model** is a constructor compiled from a Schema definition. An instance of a model represents a MongoDB document.",
+            "what_is_bn": "একটি **স্কিমা** হলো একটি ব্লুপ্রিন্ট যা আপনার ডকুমেন্টের কাঠামো, ডেটা টাইপ এবং ভ্যালিডেশন নিয়ম নির্ধারণ করে। একটি **মডেল** হলো একটি স্কিমা সংজ্ঞা থেকে কম্পাইল করা একটি কনস্ট্রাক্টর। একটি মডেলের ইনস্ট্যান্স একটি MongoDB ডকুমেন্টকে প্রতিনিধিত্ব করে।"
+        },
+        "vip_qa": {
+            "question_en": "How does a Mongoose Model relate to a MongoDB Collection?",
+            "answer_en": "A Mongoose model provides a structured interface to a specific MongoDB collection. By default, Mongoose will create a collection with a plural, lowercased version of your model name (e.g., a 'Book' model maps to a 'books' collection)."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Intermediate",
+        "sub_topic": "Population",
+        "question_en": "What is Population in Mongoose?",
+        "question_bn": "Mongoose-এ পপুলেশন কী?",
+        "details": {
+            "what_is_en": "Population is the process of automatically replacing the specified paths in a document with document(s) from other collection(s). It's Mongoose's way of performing a 'join'.",
+            "what_is_bn": "পপুলেশন হলো একটি ডকুমেন্টের নির্দিষ্ট পাথগুলিকে অন্য কালেকশন থেকে ডকুমেন্ট দিয়ে স্বয়ংক্রিয়ভাবে প্রতিস্থাপন করার প্রক্রিয়া। এটি Mongoose-এর 'join' করার একটি উপায়।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the trade-offs between embedding documents versus referencing (and using population).",
+            "answer_en": "**Embedding** (denormalization) leads to faster reads as all data is in one document, but it can cause data redundancy. **Referencing** (normalization) with population reduces data redundancy, but it requires extra database queries, which can be slower. The choice depends on your data access patterns."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Intermediate",
+        "sub_topic": "Middleware (Hooks)",
+        "question_en": "What are Mongoose middleware (hooks)?",
+        "question_bn": "Mongoose মিডলওয়্যার (হুক) কী?",
+        "details": {
+            "what_is_en": "Mongoose hooks are functions that are passed control during the execution of asynchronous functions like `save`, `validate`, `remove`, and query operations. There are 'pre' and 'post' hooks.",
+            "what_is_bn": "Mongoose হুক হলো এমন ফাংশন যা `save`, `validate`, `remove` এবং কোয়েরি অপারেশনের মতো অ্যাসিঙ্ক্রোনাস ফাংশন এক্সিকিউশনের সময় কন্ট্রোল পাস করে। 'pre' এবং 'post' হুক রয়েছে।"
+        },
+        "vip_qa": {
+            "question_en": "Provide a common use case for a `pre('save')` hook.",
+            "answer_en": "A very common use case is hashing a user's password before it is saved to the database. This ensures that plain-text passwords are never stored. For example: `userSchema.pre('save', async function() { this.password = await bcrypt.hash(this.password, 12); });`"
+        }
+    },
+    {
+        "id": 5,
+        "level": "Beginner",
+        "sub_topic": "Queries",
+        "question_en": "How do you create a new document in Mongoose?",
+        "question_bn": "Mongoose-এ একটি নতুন ডকুমেন্ট কীভাবে তৈরি করবেন?",
+        "details": {
+            "what_is_en": "You can create a new document by creating an instance of a model and calling `.save()` on it, or by using the static `Model.create()` method.",
+            "what_is_bn": "আপনি একটি মডেলের ইনস্ট্যান্স তৈরি করে এবং তাতে `.save()` কল করে, অথবা স্ট্যাটিক `Model.create()` মেথড ব্যবহার করে একটি নতুন ডকুমেন্ট তৈরি করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `new Model(data).save()` and `Model.create(data)`?",
+            "answer_en": "They are functionally very similar. `Model.create(data)` is essentially a shorthand for `new Model(data).save()`. The main difference is that `create()` returns a promise, making it convenient to use with `async/await`."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Intermediate",
+        "sub_topic": "Schema",
+        "question_en": "What are virtual properties in a Mongoose schema?",
+        "question_bn": "Mongoose স্কিমাতে ভার্চুয়াল প্রপার্টি কী?",
+        "details": {
+            "what_is_en": "Virtuals are document properties that you can get and set but that do not get persisted to MongoDB. They are typically used for computed properties.",
+            "what_is_bn": "ভার্চুয়াল হলো ডকুমেন্ট প্রপার্টি যা আপনি get এবং set করতে পারেন কিন্তু MongoDB-তে সংরক্ষিত হয় না। এগুলি সাধারণত কম্পিউটেড প্রপার্টিগুলির জন্য ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Give an example of when a virtual property would be useful.",
+            "answer_en": "A common example is creating a `fullName` virtual property from `firstName` and `lastName` fields. This allows you to access `user.fullName` without having to store redundant data in the database."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Intermediate",
+        "sub_topic": "Queries",
+        "question_en": "What is the difference between `findById()` and `findOne()`?",
+        "question_bn": "`findById()` এবং `findOne()` এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`findOne()` finds the first document that matches a given query object. `findById()` is a shorthand for `findOne({ _id: id })`.",
+            "what_is_bn": "`findOne()` একটি প্রদত্ত কোয়েরি অবজেক্টের সাথে মিলে যাওয়া প্রথম ডকুমেন্টটি খুঁজে বের করে। `findById()` হলো `findOne({ _id: id })`-এর একটি শর্টহ্যান্ড।"
+        },
+        "vip_qa": {
+            "question_en": "Which method is generally faster if you are querying by ID, and why?",
+            "answer_en": "`findById(id)` is generally preferred and can be slightly more optimized because it's a specific function for a common use case. It also handles casting the string `id` to a MongoDB `ObjectId` for you."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Beginner",
+        "sub_topic": "Schema",
+        "question_en": "How do you define a required field in a schema?",
+        "question_bn": "স্কিমাতে একটি আবশ্যকীয় ফিল্ড কীভাবে সংজ্ঞায়িত করবেন?",
+        "details": {
+            "what_is_en": "You can define a required field by setting the `required` property to `true` in the schema definition for that field.",
+            "what_is_bn": "আপনি সেই ফিল্ডের জন্য স্কিমা সংজ্ঞায় `required` প্রপার্টিকে `true` তে সেট করে একটি আবশ্যকীয় ফিল্ড সংজ্ঞায়িত করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "How can you provide a custom error message for a required field?",
+            "answer_en": "You can pass an array to the `required` property, with the second element being the custom error message. For example: `name: { type: String, required: [true, 'A user name is required'] }`."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Advanced",
+        "sub_topic": "Methods",
+        "question_en": "What is the difference between a static method and an instance method on a schema?",
+        "question_bn": "স্কিমাতে স্ট্যাটিক মেথড এবং ইনস্ট্যান্স মেথডের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "An **instance method** (`schema.methods`) operates on an individual document instance. A **static method** (`schema.statics`) operates on the Model itself.",
+            "what_is_bn": "একটি **ইনস্ট্যান্স মেথড** (`schema.methods`) একটি পৃথক ডকুমেন্ট ইনস্ট্যান্সের উপর কাজ করে। একটি **স্ট্যাটিক মেথড** (`schema.statics`) মডেলটির উপর কাজ করে।"
+        },
+        "vip_qa": {
+            "question_en": "Give a practical example for each type of method.",
+            "answer_en": "An **instance method** could be `user.comparePassword(password)`. A **static method** could be `User.findByEmail(email)`, which searches the entire `User` collection for a document."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Intermediate",
+        "sub_topic": "Queries",
+        "question_en": "How do you update a document in Mongoose?",
+        "question_bn": "Mongoose-এ একটি ডকুমেন্ট কীভাবে আপডেট করবেন?",
+        "details": {
+            "what_is_en": "You can use methods like `updateOne()`, `updateMany()`, or `findByIdAndUpdate()`. These methods take a filter object, an update object, and an optional options object.",
+            "what_is_bn": "আপনি `updateOne()`, `updateMany()`, বা `findByIdAndUpdate()` এর মতো মেথড ব্যবহার করতে পারেন। এই মেথডগুলি একটি ফিল্টার অবজেক্ট, একটি আপডেট অবজেক্ট এবং একটি ঐচ্ছিক অপশন অবজেক্ট নেয়।"
+        },
+        "vip_qa": {
+            "question_en": "By default, `findByIdAndUpdate` returns the document *before* the update. How do you get the updated document back?",
+            "answer_en": "You need to pass `{ new: true }` as the third argument (the options object) to the `findByIdAndUpdate` method."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Beginner",
+        "sub_topic": "Schema",
+        "question_en": "What is the `ObjectId` schema type?",
+        "question_bn": "`ObjectId` স্কিমা টাইপ কী?",
+        "details": {
+            "what_is_en": "The `ObjectId` schema type is used to store unique document identifiers. It is also used to create references to documents in other collections.",
+            "what_is_bn": "`ObjectId` স্কিমা টাইপটি ইউনিক ডকুমেন্ট শনাক্তকারী সংরক্ষণ করতে ব্যবহৃত হয়। এটি অন্য কালেকশনের ডকুমেন্টের রেফারেন্স তৈরি করতেও ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How do you define a reference to another model in a schema?",
+            "answer_en": "You define the `type` as `mongoose.Schema.Types.ObjectId` and add a `ref` property with the name of the model you are referencing. For example: `author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }`."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Advanced",
+        "sub_topic": "Aggregation",
+        "question_en": "How can you use MongoDB's Aggregation Framework with Mongoose?",
+        "question_bn": "Mongoose-এর সাথে MongoDB-এর অ্যাগ্রিগেশন ফ্রেমওয়ার্ক কীভাবে ব্যবহার করতে পারেন?",
+        "details": {
+            "what_is_en": "You can use the `Model.aggregate()` method, passing it an array of pipeline stages, just like you would with the native driver.",
+            "what_is_bn": "আপনি `Model.aggregate()` মেথড ব্যবহার করতে পারেন, যেখানে আপনি পাইপলাইন স্টেজের একটি অ্যারে পাস করবেন, ঠিক যেমন আপনি নেটিভ ড্রাইভারের সাথে করতেন।"
+        },
+        "vip_qa": {
+            "question_en": "Why would you use the Aggregation Framework's `$lookup` stage instead of Mongoose's `populate()`?",
+            "answer_en": "`$lookup` is more powerful and performant for complex joins. `populate()` is convenient but can be inefficient for large datasets. `$lookup` performs the join on the database server itself, returning all data in a single query, while `populate()` can sometimes issue multiple separate queries."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Intermediate",
+        "sub_topic": "Middleware (Hooks)",
+        "question_en": "What is the difference between a document middleware and a query middleware?",
+        "question_bn": "ডকুমেন্ট মিডলওয়্যার এবং কোয়েরি মিডলওয়্যারের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "A **document middleware** (e.g., `pre('save')`) runs on a specific document instance, and `this` refers to the document. A **query middleware** (e.g., `pre('find')`) runs on a query object, and `this` refers to the query.",
+            "what_is_bn": "একটি **ডকুমেন্ট মিডলওয়্যার** (যেমন, `pre('save')`) একটি নির্দিষ্ট ডকুমেন্ট ইনস্ট্যান্সের উপর চলে, এবং `this` ডকুমেন্টকে নির্দেশ করে। একটি **কোয়েরি মিডলওয়্যার** (যেমন, `pre('find')`) একটি কোয়েরি অবজেক্টের উপর চলে, এবং `this` কোয়েরিকে নির্দেশ করে।"
+        },
+        "vip_qa": {
+            "question_en": "If you wanted to automatically add a `isDeleted: false` condition to every `find` query, which type of middleware would you use?",
+            "answer_en": "You would use a `pre('find')` query middleware. Inside it, `this.where({ isDeleted: false });` would add the condition to the query before it is executed."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Beginner",
+        "sub_topic": "Connection",
+        "question_en": "How do you connect to a MongoDB database using Mongoose?",
+        "question_bn": "Mongoose ব্যবহার করে একটি MongoDB ডেটাবেসে কীভাবে সংযোগ করবেন?",
+        "details": {
+            "what_is_en": "You use the `mongoose.connect()` method, passing it the MongoDB connection string. It returns a promise that resolves on a successful connection.",
+            "what_is_bn": "আপনি `mongoose.connect()` মেথড ব্যবহার করেন, যেখানে আপনি MongoDB সংযোগ স্ট্রিং পাস করেন। এটি একটি প্রমিস রিটার্ন করে যা সফল সংযোগে রিজলভ হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is a good practice for handling connection events?",
+            "answer_en": "It's a good practice to listen for connection events like `connected`, `error`, and `disconnected` on `mongoose.connection`. This allows you to log the connection status and handle connection failures gracefully."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Advanced",
+        "sub_topic": "Schema",
+        "question_en": "What are discriminators in Mongoose?",
+        "question_bn": "Mongoose-এ ডিসক্রিমিনেটর কী?",
+        "details": {
+            "what_is_en": "Discriminators are a schema inheritance mechanism. They enable you to have multiple models with overlapping schemas on top of the same underlying MongoDB collection.",
+            "what_is_bn": "ডিসক্রিমিনেটর একটি স্কিমা ইনহেরিটেন্স মেকানিজম। এগুলি আপনাকে একই MongoDB কালেকশনের উপরে একাধিক মডেল রাখতে দেয় যাদের স্কিমাগুলি ওভারল্যাপিং হতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a common use case for discriminators?",
+            "answer_en": "A common use case is for modeling different types of events in a single collection. You could have a base `Event` schema and then create discriminator models like `ClickedLinkEvent` and `SignedUpEvent` that add their own specific fields."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Intermediate",
+        "sub_topic": "Validation",
+        "question_en": "How do you add a custom validator to a schema field?",
+        "question_bn": "আপনি একটি স্কিমা ফিল্ডে একটি কাস্টম ভ্যালিডেটর কীভাবে যোগ করবেন?",
+        "details": {
+            "what_is_en": "You can add a custom validator by providing a `validate` function in the schema options for a field. This function should return `true` for a valid value and `false` for an invalid one.",
+            "what_is_bn": "আপনি একটি ফিল্ডের জন্য স্কিমা অপশনে একটি `validate` ফাংশন প্রদান করে একটি কাস্টম ভ্যালিডেটর যোগ করতে পারেন। এই ফাংশনটি বৈধ মানের জন্য `true` এবং অবৈধ মানের জন্য `false` রিটার্ন করা উচিত।"
+        },
+        "vip_qa": {
+            "question_en": "How can you make a custom validator asynchronous?",
+            "answer_en": "You can make a validator asynchronous by having it return a promise. If the promise resolves, the validation passes. If it rejects, the validation fails."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Beginner",
+        "sub_topic": "Schema",
+        "question_en": "How do you set a default value for a schema field?",
+        "question_bn": "আপনি একটি স্কিমা ফিল্ডের জন্য একটি ডিফল্ট মান কীভাবে সেট করবেন?",
+        "details": {
+            "what_is_en": "You can set a default value by adding a `default` property to the schema options for that field. For example, `role: { type: String, default: 'user' }`.",
+            "what_is_bn": "আপনি সেই ফিল্ডের জন্য স্কিমা অপশনে একটি `default` প্রপার্টি যোগ করে একটি ডিফল্ট মান সেট করতে পারেন। যেমন, `role: { type: String, default: 'user' }`।"
+        },
+        "vip_qa": {
+            "question_en": "Can the default value be a function?",
+            "answer_en": "Yes, you can provide a function to the `default` property. This function will be executed and its return value will be used as the default. A common example is using `Date.now` for a `createdAt` field: `createdAt: { type: Date, default: Date.now }`."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Intermediate",
+        "sub_topic": "Indexes",
+        "question_en": "How do you define an index in a Mongoose schema?",
+        "question_bn": "Mongoose স্কিমাতে একটি ইনডেক্স কীভাবে সংজ্ঞায়িত করবেন?",
+        "details": {
+            "what_is_en": "You can define an index by setting the `index` property to `true` on a schema field. For example, `email: { type: String, index: true }`.",
+            "what_is_bn": "আপনি একটি স্কিমা ফিল্ডে `index` প্রপার্টিকে `true` তে সেট করে একটি ইনডেক্স সংজ্ঞায়িত করতে পারেন। যেমন, `email: { type: String, index: true }`।"
+        },
+        "vip_qa": {
+            "question_en": "How do you create a compound index?",
+            "answer_en": "You create a compound index by calling the `schema.index()` method and passing it an object defining the fields and their order (1 for ascending, -1 for descending). Example: `schema.index({ user: 1, score: -1 });`."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Advanced",
+        "sub_topic": "Transactions",
+        "question_en": "Does Mongoose support MongoDB transactions?",
+        "question_bn": "Mongoose কি MongoDB ট্রানজেকশন সমর্থন করে?",
+        "details": {
+            "what_is_en": "Yes, Mongoose supports ACID transactions. You can create a session and pass it to your queries to execute a series of operations as a single, atomic transaction.",
+            "what_is_bn": "হ্যাঁ, Mongoose ACID ট্রানজেকশন সমর্থন করে। আপনি একটি সেশন তৈরি করতে পারেন এবং আপনার কোয়েরিগুলিতে এটি পাস করে একাধিক অপারেশনকে একটি একক, অ্যাটমিক ট্রানজেকশন হিসাবে এক্সিকিউট করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is a prerequisite for using transactions in MongoDB?",
+            "answer_en": "To use transactions, you must be using a MongoDB replica set or a sharded cluster. Transactions are not supported on standalone server deployments."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Intermediate",
+        "sub_topic": "Queries",
+        "question_en": "What is method chaining in Mongoose queries?",
+        "question_bn": "Mongoose কোয়েরিতে মেথড চেইনিং কী?",
+        "details": {
+            "what_is_en": "Method chaining allows you to build up a complex query by calling multiple query builder methods on a model, such as `.find()`, `.where()`, `.sort()`, and `.limit()`.",
+            "what_is_bn": "মেথড চেইনিং আপনাকে একটি মডেলের উপর একাধিক কোয়েরি বিল্ডার মেথড কল করে একটি জটিল কোয়েরি তৈরি করতে দেয়, যেমন `.find()`, `.where()`, `.sort()`, এবং `.limit()`।"
+        },
+        "vip_qa": {
+            "question_en": "When is the database query actually executed when using method chaining?",
+            "answer_en": "The query is not executed until you call `.then()` on it, use it with `await`, or call the `.exec()` method. This allows you to build the query conditionally before sending it to the database."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Advanced",
+        "sub_topic": "Performance",
+        "question_en": "What is the `lean()` method used for?",
+        "question_bn": "`lean()` মেথড কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `lean()` method tells Mongoose to skip hydrating the result documents and return plain JavaScript objects instead of full Mongoose documents.",
+            "what_is_bn": "`lean()` মেথড Mongoose-কে বলে যে ফলাফল ডকুমেন্টগুলিকে হাইড্রেট করা এড়িয়ে যেতে এবং সম্পূর্ণ Mongoose ডকুমেন্টের পরিবর্তে সাধারণ জাভাস্ক্রিপ্ট অবজেক্ট রিটার্ন করতে।"
+        },
+        "vip_qa": {
+            "question_en": "Why does using `lean()` improve performance?",
+            "answer_en": "It improves performance because creating full Mongoose documents has overhead (they have methods, virtuals, etc.). For read-only operations where you don't need these features, `lean()` can be significantly faster and use less memory."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Intermediate",
+        "sub_topic": "Schema",
+        "question_en": "What does the `unique` option do in a schema?",
+        "question_bn": "স্কিমাতে `unique` অপশনের কাজ কী?",
+        "details": {
+            "what_is_en": "The `unique: true` option tells Mongoose to create a unique index for that field in MongoDB, ensuring that no two documents in the collection have the same value for that field.",
+            "what_is_bn": "`unique: true` অপশনটি Mongoose-কে MongoDB-তে সেই ফিল্ডের জন্য একটি ইউনিক ইনডেক্স তৈরি করতে বলে, যা নিশ্চিত করে যে কালেকশনের কোনো দুটি ডকুমেন্টের সেই ফিল্ডের জন্য একই মান নেই।"
+        },
+        "vip_qa": {
+            "question_en": "Is the `unique` option a validator?",
+            "answer_en": "No, it is not a validator. It is a helper for creating a unique index. Errors from duplicate keys come from the MongoDB driver, not from Mongoose's validation system, so they are handled differently."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Intermediate",
+        "sub_topic": "Schema",
+        "question_en": "How can you store an array of strings in a schema?",
+        "question_bn": "আপনি একটি স্কিমাতে স্ট্রিংয়ের একটি অ্যারে কীভাবে সংরক্ষণ করবেন?",
+        "details": {
+            "what_is_en": "You can store an array of strings by wrapping the type in square brackets. For example, `tags: [String]` or `tags: { type: [String] }`.",
+            "what_is_bn": "আপনি টাইপটিকে স্কোয়ার ব্র্যাকেটে রেখে স্ট্রিংয়ের একটি অ্যারে সংরক্ষণ করতে পারেন। যেমন, `tags: [String]` বা `tags: { type: [String] }`।"
+        },
+        "vip_qa": {
+            "question_en": "How would you store an array of embedded subdocuments?",
+            "answer_en": "You would define a separate schema for the subdocument and then use that schema inside the array brackets. For example: `const commentSchema = new Schema({ body: String }); const blogSchema = new Schema({ comments: [commentSchema] });`."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Advanced",
+        "sub_topic": "Middleware (Hooks)",
+        "question_en": "What is the difference between `pre('save')` and `pre('validate')` hooks?",
+        "question_bn": "`pre('save')` এবং `pre('validate')` হুকের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "`pre('validate')` runs before Mongoose's built-in validation. `pre('save')` runs after validation but before the document is saved to the database.",
+            "what_is_bn": "`pre('validate')` Mongoose-এর বিল্ট-ইন ভ্যালিডেশনের আগে চলে। `pre('save')` ভ্যালিডেশনের পরে কিন্তু ডকুমেন্ট ডেটাবেসে সেভ হওয়ার আগে চলে।"
+        },
+        "vip_qa": {
+            "question_en": "If you needed to format or sanitize a field before it gets validated, which hook would you use?",
+            "answer_en": "You would use the `pre('validate')` hook. This allows you to modify the data to ensure it will pass the validation rules defined in your schema."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is an ODM?",
+        "question_bn": "ODM কী?",
+        "details": {
+            "what_is_en": "ODM stands for Object Data Modeling. It is a technique of accessing a NoSQL database (like MongoDB) from an object-oriented language by mapping database records to objects in the application.",
+            "what_is_bn": "ODM এর অর্থ হলো অবজেক্ট ডেটা মডেলিং। এটি একটি NoSQL ডেটাবেস (যেমন MongoDB) একটি অবজেক্ট-ওরিয়েন্টেড ভাষা থেকে অ্যাক্সেস করার একটি কৌশল, যেখানে ডেটাবেস রেকর্ডগুলি অ্যাপ্লিকেশনের অবজেক্টে ম্যাপ করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the equivalent of an ODM for SQL databases?",
+            "answer_en": "The equivalent for SQL databases is an ORM (Object Relational Mapping). Libraries like Sequelize for Node.js or Hibernate for Java are examples of ORMs."
+        }
+    }
+]

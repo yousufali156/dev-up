@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "level": "Intermediate",
+        "sub_topic": "API Testing",
+        "question_en": "What is Postman?",
+        "question_bn": "Postman কী?",
+        "details": {
+            "what_is_en": "Postman is an API platform for developers to design, build, test, and iterate on their APIs. It provides a user-friendly interface for making HTTP requests.",
+            "what_is_bn": "Postman হলো ডেভেলপারদের জন্য একটি API প্ল্যাটফর্ম যা API ডিজাইন, বিল্ড, টেস্ট এবং পুনরাবৃত্তি করতে ব্যবহৃত হয়। এটি HTTP রিকোয়েস্ট পাঠানোর জন্য একটি ব্যবহারকারী-বান্ধব ইন্টারফেস প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "What are Postman 'Collections' and 'Environments'? Explain how using them together streamlines the API testing workflow.",
+            "answer_en": "**Collections** are groups of saved API requests. **Environments** are sets of key-value variables. By using them together, you can write your requests with variables like `{{baseURL}}`. Then, you can switch between environments (e.g., Development, Staging, Production) to run the same collection of tests against different servers without changing a single request."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "Project Management",
+        "question_en": "What is Agile methodology?",
+        "question_bn": "Agile মেথডোলজি কী?",
+        "details": {
+            "what_is_en": "Agile is an iterative approach to project management and software development that helps teams deliver value to their customers faster. Instead of a big-bang launch, an agile team delivers work in small, but consumable, increments.",
+            "what_is_bn": "Agile হলো প্রজেক্ট ম্যানেজমেন্ট এবং সফটওয়্যার ডেভেলপমেন্টের একটি পুনরাবৃত্তিমূলক পদ্ধতি যা দলগুলিকে দ্রুত গ্রাহকদের কাছে ভ্যালু সরবরাহ করতে সাহায্য করে। একটি বড় লঞ্চের পরিবর্তে, একটি Agile দল ছোট ছোট বৃদ্ধিতে কাজ সরবরাহ করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'Sprint' in the context of Scrum (a popular Agile framework)?",
+            "answer_en": "A Sprint is a short, time-boxed period (usually 1-4 weeks) during which a scrum team works to complete a set amount of work. At the end of the Sprint, the team aims to have a potentially shippable product increment."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Intermediate",
+        "sub_topic": "Project Management",
+        "question_en": "What is Jira?",
+        "question_bn": "Jira কী?",
+        "details": {
+            "what_is_en": "Jira is a popular project management and issue tracking tool developed by Atlassian. It is widely used by agile development teams to plan, track, and release software.",
+            "what_is_bn": "Jira হলো Atlassian দ্বারা তৈরি একটি জনপ্রিয় প্রজেক্ট ম্যানেজমেন্ট এবং ইস্যু ট্র্যাকিং টুল। এটি সফটওয়্যার পরিকল্পনা, ট্র্যাক এবং রিলিজ করার জন্য Agile ডেভেলপমেন্ট দলগুলি দ্বারা ব্যাপকভাবে ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "In an Agile workflow using Jira, what is the difference between an 'Epic', a 'Story', and a 'Task'?",
+            "answer_en": "They form a hierarchy. An **Epic** is a large body of work (e.g., 'Implement Payment Gateway'). An epic is broken down into smaller **Stories** (user-centric features). A Story is then broken down into technical **Tasks** for developers (e.g., 'Create payment API endpoint')."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Intermediate",
+        "sub_topic": "Build Tools",
+        "question_en": "What are the roles of Webpack and Babel?",
+        "question_bn": "Webpack এবং Babel-এর কাজ কী?",
+        "details": {
+            "what_is_en": "**Webpack** is a static module bundler that combines all project assets (JS, CSS, images) into optimized bundles for the browser. **Babel** is a JavaScript transpiler that converts modern JavaScript (ES6+) into backward-compatible versions (ES5).",
+            "what_is_bn": "**Webpack** একটি স্ট্যাটিক মডিউল বান্ডলার যা প্রজেক্টের সব অ্যাসেটকে একত্রিত করে। **Babel** একটি জাভাস্ক্রিপ্ট ট্রান্সপাইলার যা আধুনিক জাভাস্ক্রিপ্টকে পুরোনো ভার্সনে রূপান্তরিত করে।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the difference between a Webpack 'loader' and a 'plugin'.",
+            "answer_en": "**Loaders** work at the individual file level, transforming them before they are added to the dependency graph (e.g., `babel-loader` transforms a `.js` file). **Plugins** work at the bundle level and can modify the entire compilation process (e.g., `HtmlWebpackPlugin` generates an HTML file)."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Beginner",
+        "sub_topic": "Design Handoff",
+        "question_en": "What is Figma?",
+        "question_bn": "Figma কী?",
+        "details": {
+            "what_is_en": "Figma is a cloud-based design and prototyping tool for UI/UX design. It allows designers and developers to collaborate in real-time on web and mobile application mockups.",
+            "what_is_bn": "Figma একটি ক্লাউড-ভিত্তিক ডিজাইন এবং প্রোটোটাইপিং টুল যা UI/UX ডিজাইনের জন্য ব্যবহৃত হয়। এটি ডিজাইনার এবং ডেভেলপারদের রিয়েল-টাইমে ওয়েব এবং মোবাইল অ্যাপ্লিকেশন মকআপে সহযোগিতা করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "As a developer, what key information should you look for in a Figma handoff from a designer?",
+            "answer_en": "A developer should look for: 1. **Design System Specs:** Clear definitions of colors, typography, and spacing. 2. **Component States:** Designs for all interactive states (hover, focus, disabled). 3. **Layout and Grids:** Information on responsive grid systems. 4. **Exportable Assets:** Icons and images marked as exportable, preferably as SVG."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Beginner",
+        "sub_topic": "Code Editing",
+        "question_en": "What is VS Code?",
+        "question_bn": "VS Code কী?",
+        "details": {
+            "what_is_en": "Visual Studio Code is a lightweight but powerful source code editor developed by Microsoft. It comes with built-in support for JavaScript, TypeScript, and Node.js and has a rich ecosystem of extensions.",
+            "what_is_bn": "Visual Studio Code মাইক্রোসফটের তৈরি একটি হালকা কিন্তু শক্তিশালী সোর্স কোড এডিটর। এটি জাভাস্ক্রিপ্ট, টাইপস্ক্রিপ্ট এবং Node.js-এর জন্য বিল্ট-ইন সমর্থন সহ আসে এবং এক্সটেনশনের একটি সমৃদ্ধ ইকোসিস্টেম রয়েছে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the Command Palette in VS Code and why is it so useful?",
+            "answer_en": "The Command Palette (opened with `Ctrl+Shift+P` or `Cmd+Shift+P`) is a search bar that gives you access to all available commands in VS Code. It's incredibly useful because it allows you to perform almost any action without having to navigate through menus or memorize keyboard shortcuts."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Intermediate",
+        "sub_topic": "Code Quality",
+        "question_en": "What are ESLint and Prettier used for?",
+        "question_bn": "ESLint এবং Prettier কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "**ESLint** is a linter that analyzes your code to find and fix programming errors, style guide violations, and potential bugs. **Prettier** is a code formatter that enforces a consistent code style across your entire codebase.",
+            "what_is_bn": "**ESLint** একটি লিন্টার যা প্রোগ্রামিং এরর, স্টাইল গাইড লঙ্ঘন এবং সম্ভাব্য বাগ খুঁজে বের করে ও ঠিক করে। **Prettier** একটি কোড ফরমেটার যা আপনার পুরো কোডবেসে একটি সামঞ্জস্যপূর্ণ কোড স্টাইল প্রয়োগ করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is it beneficial to run these tools automatically, for example, with a pre-commit hook?",
+            "answer_en": "Running them automatically with a pre-commit hook (using tools like Husky) ensures that no inconsistent or error-prone code is ever committed to the repository. This maintains a high standard of code quality across the entire team without relying on individual discipline."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Intermediate",
+        "sub_topic": "Browser DevTools",
+        "question_en": "What are the main panels of the Chrome DevTools used by developers?",
+        "question_bn": "ডেভেলপারদের দ্বারা ব্যবহৃত Chrome DevTools-এর প্রধান প্যানেলগুলি কী কী?",
+        "details": {
+            "what_is_en": "The main panels are: **Elements** (to inspect and edit the DOM and CSS), **Console** (to run JavaScript and view logs), **Network** (to inspect network requests), and **Sources** (to debug JavaScript).",
+            "what_is_bn": "প্রধান প্যানেলগুলি হলো: **Elements** (DOM এবং CSS পরিদর্শন ও সম্পাদনা করতে), **Console** (জাভাস্ক্রিপ্ট চালানো এবং লগ দেখতে), **Network** (নেটওয়ার্ক রিকোয়েস্ট পরিদর্শন করতে), এবং **Sources** (জাভাস্ক্রিপ্ট ডিবাগ করতে)।"
+        },
+        "vip_qa": {
+            "question_en": "How can you use the Network panel to diagnose slow page loads?",
+            "answer_en": "The Network panel's 'waterfall' chart shows how long each asset (HTML, CSS, JS, images) takes to download. You can identify slow requests, large unoptimized images, or render-blocking resources that are delaying the page load."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Intermediate",
+        "sub_topic": "Build Tools",
+        "question_en": "What is Vite?",
+        "question_bn": "Vite কী?",
+        "details": {
+            "what_is_en": "Vite is a modern frontend build tool that provides an extremely fast development experience by leveraging native ES modules in the browser.",
+            "what_is_bn": "Vite একটি আধুনিক ফ্রন্টএন্ড বিল্ড টুল যা ব্রাউজারে নেটিভ ES মডিউল ব্যবহার করে একটি অত্যন্ত দ্রুত ডেভেলপমেন্ট অভিজ্ঞতা প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "Why is Vite's development server often faster to start than Webpack's?",
+            "answer_en": "Webpack bundles your entire application before starting the dev server. Vite, on the other hand, serves files on-demand as the browser requests them, using native ES module support. This means it doesn't have to pre-bundle everything, resulting in a near-instant server start time."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Intermediate",
+        "sub_topic": "Package Management",
+        "question_en": "What is the difference between `npm`, `yarn`, and `pnpm`?",
+        "question_bn": "`npm`, `yarn`, এবং `pnpm`-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "All three are package managers for JavaScript. `npm` is the default. `yarn` was created to improve on npm's speed and consistency. `pnpm` is a newer alternative that is very fast and disk-space efficient.",
+            "what_is_bn": "তিনটিই জাভাস্ক্রিপ্টের জন্য প্যাকেজ ম্যানেজার। `npm` ডিফল্ট। `yarn` গতি এবং সামঞ্জস্যের উন্নতির জন্য তৈরি করা হয়েছিল। `pnpm` একটি নতুন বিকল্প যা খুব দ্রুত এবং ডিস্ক-স্পেস সাশ্রয়ী।"
+        },
+        "vip_qa": {
+            "question_en": "How does `pnpm` save disk space compared to `npm` or `yarn`?",
+            "answer_en": "`npm` and `yarn` (v1) create a separate copy of each package inside every project's `node_modules` folder. `pnpm` uses a single, content-addressable store on the disk and then uses hard links to link packages into `node_modules`, preventing duplication and saving significant disk space."
+        }
+    },
+    {
+        "id": 11,
+        "level": "Beginner",
+        "sub_topic": "Documentation",
+        "question_en": "What is Markdown?",
+        "question_bn": "মার্কডাউন কী?",
+        "details": {
+            "what_is_en": "Markdown is a lightweight markup language with plain-text-formatting syntax. It is often used to write documentation, README files, and comments.",
+            "what_is_bn": "মার্কডাউন একটি হালকা মার্কআপ ভাষা যার সিনট্যাক্স প্লেইন-টেক্সট-ফরম্যাটিং। এটি প্রায়শই ডকুমেন্টেশন, README ফাইল এবং মন্তব্য লেখার জন্য ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How do you create a hyperlink in Markdown?",
+            "answer_en": "You create a hyperlink by wrapping the link text in square brackets `[]` and the URL in parentheses `()`. For example: `[Google](https://www.google.com)`."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Advanced",
+        "sub_topic": "Code Editing",
+        "question_en": "What is the purpose of the `launch.json` file in VS Code?",
+        "question_bn": "VS Code-এর `launch.json` ফাইলের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The `launch.json` file is used to configure the debugger in VS Code. It defines different 'launch configurations' that specify how to start a debugging session.",
+            "what_is_bn": "`launch.json` ফাইলটি VS Code-এর ডিবাগার কনফিগার করতে ব্যবহৃত হয়। এটি বিভিন্ন 'লঞ্চ কনফিগারেশন' সংজ্ঞায়িত করে যা একটি ডিবাগিং সেশন কীভাবে শুরু করতে হবে তা নির্দিষ্ট করে।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between a 'launch' and an 'attach' configuration?",
+            "answer_en": "A **'launch'** configuration will start your application and then attach the debugger to it. An **'attach'** configuration is used to connect the debugger to an already running process (for example, a Node.js server started with the `--inspect` flag)."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Intermediate",
+        "sub_topic": "Browser DevTools",
+        "question_en": "How can you debug JavaScript using the `debugger` statement?",
+        "question_bn": "`debugger` স্টেটমেন্ট ব্যবহার করে জাভাস্ক্রিপ্ট কীভাবে ডিবাগ করবেন?",
+        "details": {
+            "what_is_en": "Placing the `debugger;` statement in your JavaScript code will act as a breakpoint. If the browser's developer tools are open, execution will pause at that line, allowing you to inspect variables and step through the code.",
+            "what_is_bn": "আপনার জাভাস্ক্রিপ্ট কোডে `debugger;` স্টেটমেন্টটি রাখলে এটি একটি ব্রেকপয়েন্ট হিসাবে কাজ করবে। যদি ব্রাউজারের ডেভেলপার টুলস খোলা থাকে, তবে কোড এক্সিকিউশন সেই লাইনে থেমে যাবে, যা আপনাকে ভেরিয়েবল পরিদর্শন করতে এবং কোডের মাধ্যমে ধাপে ধাপে যেতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why is using `debugger` or breakpoints in the Sources panel better than using `console.log()` for complex debugging?",
+            "answer_en": "`console.log()` only shows you a value at a specific point in time. Breakpoints allow you to pause execution, inspect the entire call stack, see the values of all variables in scope, and execute code line-by-line, providing a much more powerful and interactive debugging experience."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Beginner",
+        "sub_topic": "Communication",
+        "question_en": "What is Slack?",
+        "question_bn": "Slack কী?",
+        "details": {
+            "what_is_en": "Slack is a popular business communication platform that offers features like chat rooms (channels) organized by topic, private groups, and direct messaging.",
+            "what_is_bn": "Slack একটি জনপ্রিয় ব্যবসায়িক যোগাযোগ প্ল্যাটফর্ম যা বিষয় অনুযায়ী সংগঠিত চ্যাট রুম (চ্যানেল), ব্যক্তিগত গ্রুপ এবং সরাসরি মেসেজিংয়ের মতো বৈশিষ্ট্যগুলি সরবরাহ করে।"
+        },
+        "vip_qa": {
+            "question_en": "How are integrations useful in Slack?",
+            "answer_en": "Integrations are very useful for automating workflows. For example, you can integrate GitHub to get notifications for new Pull Requests directly in a channel, or integrate Jira to get updates on task statuses, keeping the entire team informed in one place."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Intermediate",
+        "sub_topic": "Monorepos",
+        "question_en": "What is a monorepo?",
+        "question_bn": "মনোরেপো কী?",
+        "details": {
+            "what_is_en": "A monorepo is a version control strategy where code for many different projects is stored in the same repository.",
+            "what_is_bn": "মনোরেপো একটি ভার্সন কন্ট্রোল কৌশল যেখানে বিভিন্ন প্রকল্পের কোড একই রিপোজিটরিতে সংরক্ষণ করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What are some popular tools for managing a JavaScript monorepo?",
+            "answer_en": "Popular tools include Nx, Turborepo, and Lerna. These tools help manage dependencies between projects, run commands across the entire repo, and optimize build and test processes by only re-running tasks for code that has changed."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Intermediate",
+        "sub_topic": "Package Management",
+        "question_en": "What is a `package-lock.json` file?",
+        "question_bn": "`package-lock.json` ফাইল কী?",
+        "details": {
+            "what_is_en": "A `package-lock.json` file is automatically generated for any operations where npm modifies either the `node_modules` tree or `package.json`. It describes the exact tree that was generated, ensuring subsequent installs are able to generate identical trees.",
+            "what_is_bn": "`package-lock.json` ফাইলটি স্বয়ংক্রিয়ভাবে তৈরি হয় যখন npm `node_modules` ট্রি বা `package.json` পরিবর্তন করে। এটি তৈরি হওয়া সঠিক ট্রি-এর বর্ণনা দেয়, যা নিশ্চিত করে যে পরবর্তী ইনস্টলেশনগুলি একই রকম ট্রি তৈরি করতে সক্ষম।"
+        },
+        "vip_qa": {
+            "question_en": "Why is it important to commit the `package-lock.json` file to your repository?",
+            "answer_en": "Committing the lock file is crucial for team collaboration and CI/CD pipelines. It ensures that every developer and every build process installs the exact same version of every dependency, which prevents 'works on my machine' problems."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Advanced",
+        "sub_topic": "API Design",
+        "question_en": "What is the difference between REST and GraphQL?",
+        "question_bn": "REST এবং GraphQL-এর মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**REST** is an architectural style that uses multiple endpoints to fetch data. **GraphQL** is a query language for APIs that typically uses a single endpoint, allowing clients to request exactly the data they need.",
+            "what_is_bn": "**REST** একটি আর্কিটেকচারাল স্টাইল যা ডেটা আনার জন্য একাধিক এন্ডপয়েন্ট ব্যবহার করে। **GraphQL** API-এর জন্য একটি কোয়েরি ল্যাঙ্গুয়েজ যা সাধারণত একটি একক এন্ডপয়েন্ট ব্যবহার করে, ক্লায়েন্টদের তাদের প্রয়োজনীয় ডেটা ঠিকঠাকভাবে অনুরোধ করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What problem does GraphQL solve that is common in REST APIs?",
+            "answer_en": "GraphQL solves the problems of over-fetching (getting more data than you need) and under-fetching (having to make multiple requests to get all the data you need). With GraphQL, the client specifies the exact shape of the required data in a single request."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Beginner",
+        "sub_topic": "API Testing",
+        "question_en": "What are HTTP status codes?",
+        "question_bn": "HTTP স্ট্যাটাস কোড কী?",
+        "details": {
+            "what_is_en": "HTTP status codes are three-digit numbers returned by a server to indicate the status of a client's request. They are grouped into categories like 2xx (Success), 4xx (Client Error), and 5xx (Server Error).",
+            "what_is_bn": "HTTP স্ট্যাটাস কোড হলো তিন-অঙ্কের সংখ্যা যা একটি সার্ভার দ্বারা ক্লায়েন্টের রিকোয়েস্টের অবস্থা নির্দেশ করার জন্য রিটার্ন করা হয়। এগুলিকে 2xx (সাফল্য), 4xx (ক্লায়েন্ট এরর), এবং 5xx (সার্ভার এরর) এর মতো বিভাগে গ্রুপ করা হয়।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between a 401 Unauthorized and a 403 Forbidden error?",
+            "answer_en": "A **401 Unauthorized** error means the client must authenticate themselves to get the requested response. A **403 Forbidden** error means the client does not have access rights to the content, and authentication will not make a difference."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Intermediate",
+        "sub_topic": "Workflow",
+        "question_en": "What is a pre-commit hook?",
+        "question_bn": "প্রি-কমিট হুক কী?",
+        "details": {
+            "what_is_en": "A pre-commit hook is a Git hook that is run just before a commit is created. It is used to inspect the code being committed and can be used to run linters, formatters, or tests.",
+            "what_is_bn": "প্রি-কমিট হুক একটি Git হুক যা একটি কমিট তৈরি করার ঠিক আগে চালানো হয়। এটি কমিট করা কোড পরিদর্শন করতে ব্যবহৃত হয় এবং লিন্টার, ফরমেটার বা টেস্ট চালানোর জন্য ব্যবহার করা যেতে পারে।"
+        },
+        "vip_qa": {
+            "question_en": "What happens if a pre-commit hook script exits with a non-zero status?",
+            "answer_en": "If the script exits with a non-zero status (indicating an error, like a failed lint check or test), Git will abort the commit process. This ensures that code that does not meet the quality standards is never committed."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Advanced",
+        "sub_topic": "Authentication",
+        "question_en": "What is the difference between session-based authentication and token-based authentication?",
+        "question_bn": "সেশন-ভিত্তিক এবং টোকেন-ভিত্তিক প্রমাণীকরণের মধ্যে পার্থক্য কী?",
+        "details": {
+            "what_is_en": "**Session-based** authentication stores a session ID in a cookie on the client and keeps the session data on the server. **Token-based** authentication (like JWT) issues a self-contained token to the client, which is sent with each request.",
+            "what_is_bn": "**সেশন-ভিত্তিক** প্রমাণীকরণ ক্লায়েন্টের কুকিতে একটি সেশন আইডি সংরক্ষণ করে এবং সার্ভারে সেশন ডেটা রাখে। **টোকেন-ভিত্তিক** প্রমাণীকরণ (যেমন JWT) ক্লায়েন্টকে একটি স্ব-নির্ভর টোকেন প্রদান করে, যা প্রতিটি রিকোয়েস্টের সাথে পাঠানো হয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why is token-based authentication often preferred for modern, stateless APIs and microservices?",
+            "answer_en": "Token-based authentication is preferred because it's stateless. The server does not need to store any session information in its database or memory. The token itself contains all the necessary information for authentication, making it easier to scale horizontally."
+        }
+    }
+]

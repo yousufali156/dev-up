@@ -17,7 +17,7 @@ const HomeView: React.FC<HomeViewProps> = ({ language }) => {
   return (
     // মূল কন্টেইনার, যা ফ্লেক্সবক্স ব্যবহার করে কন্টেন্টকে সেন্টারে রাখছে।
     <div className="text-center flex flex-col items-center justify-center h-full">
-      
+
       {/* framer-motion দিয়ে ওয়েলকাম মেসেজের জন্য অ্যানিমেশন যোগ করা হয়েছে */}
       <motion.h1
         initial={{ y: -20, opacity: 0 }} // প্রাথমিক অবস্থা

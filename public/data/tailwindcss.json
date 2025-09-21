@@ -1,0 +1,452 @@
+[
+    {
+        "id": 1,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What is Tailwind CSS?",
+        "question_bn": "Tailwind CSS কী?",
+        "details": {
+            "what_is_en": "Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs directly in your markup, without writing traditional CSS.",
+            "what_is_bn": "Tailwind CSS একটি ইউটিলিটি-ফার্স্ট CSS ফ্রেমওয়ার্ক যা আপনাকে সরাসরি আপনার মার্কআপে কাস্টম ডিজাইন তৈরি করার জন্য নিম্ন-স্তরের ইউটিলিটি ক্লাস সরবরাহ করে, ঐতিহ্যবাহী CSS না লিখেই।"
+        },
+        "vip_qa": {
+            "question_en": "What does 'utility-first' mean and how does it differ from a component-based framework like Bootstrap?",
+            "answer_en": "'Utility-first' means you compose a design by applying small, single-purpose classes (e.g., `flex`, `pt-4`, `text-center`). This is different from Bootstrap, which provides pre-styled components (e.g., `.btn`, `.card`), giving you less design flexibility."
+        }
+    },
+    {
+        "id": 2,
+        "level": "Beginner",
+        "sub_topic": "Core Concepts",
+        "question_en": "How do you apply responsive styles in Tailwind?",
+        "question_bn": "Tailwind-এ রেসপন্সিভ স্টাইল কীভাবে প্রয়োগ করবেন?",
+        "details": {
+            "what_is_en": "You apply responsive styles by prefixing utility classes with breakpoint names. For example, `w-1/2 md:w-1/3` makes an element half-width on small screens and one-third width on medium screens and up.",
+            "what_is_bn": "আপনি ব্রেকপয়েন্টের নাম দিয়ে ইউটিলিটি ক্লাস প্রিফিক্স করে রেসপন্সিভ স্টাইল প্রয়োগ করেন। যেমন, `w-1/2 md:w-1/3` একটি এলিমেন্টকে ছোট স্ক্রিনে অর্ধেক এবং মাঝারি স্ক্রিন থেকে বড় স্ক্রিনে এক-তৃতীয়াংশ চওড়া করে।"
+        },
+        "vip_qa": {
+            "question_en": "Explain the 'mobile-first' approach in the context of Tailwind's responsive prefixes.",
+            "answer_en": "Tailwind is mobile-first by default. Utility classes without a prefix (e.g., `text-center`) apply to all screen sizes, starting from mobile. Prefixed utilities (e.g., `md:text-left`) then override the base styles at that specific breakpoint and larger."
+        }
+    },
+    {
+        "id": 3,
+        "level": "Beginner",
+        "sub_topic": "Core Concepts",
+        "question_en": "How do you handle states like hover and focus?",
+        "question_bn": "hover এবং focus-এর মতো স্টেট কীভাবে হ্যান্ডেল করবেন?",
+        "details": {
+            "what_is_en": "You can style elements in different states by prefixing utilities with the state name. For example, `bg-blue-500 hover:bg-blue-700`.",
+            "what_is_bn": "আপনি স্টেটের নাম দিয়ে ইউটিলিটি প্রিফিক্স করে বিভিন্ন স্টেটে এলিমেন্ট স্টাইল করতে পারেন। যেমন, `bg-blue-500 hover:bg-blue-700`।"
+        },
+        "vip_qa": {
+            "question_en": "How can you apply a style when a parent element is hovered (group-hover)?",
+            "answer_en": "You can use the `group` class on the parent element and then use the `group-hover:` prefix on a child element. For example, `<div class=\"group\"><p class=\"group-hover:text-red-500\">Text</p></div>`."
+        }
+    },
+    {
+        "id": 4,
+        "level": "Intermediate",
+        "sub_topic": "Configuration",
+        "question_en": "What is the purpose of the `tailwind.config.js` file?",
+        "question_bn": "`tailwind.config.js` ফাইলের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The `tailwind.config.js` file is where you customize your Tailwind CSS installation. You can configure your theme (colors, spacing, fonts), add plugins, and specify which files to scan for classes.",
+            "what_is_bn": "`tailwind.config.js` ফাইলটি আপনার Tailwind CSS ইনস্টলেশন কাস্টমাইজ করার জায়গা। আপনি আপনার থিম (রঙ, স্পেসিং, ফন্ট) কনফিগার করতে, প্লাগইন যোগ করতে এবং ক্লাসের জন্য কোন ফাইলগুলি স্ক্যান করতে হবে তা নির্দিষ্ট করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between placing customizations inside `theme` directly versus inside `theme.extend`?",
+            "answer_en": "Placing customizations directly inside `theme` will **completely replace** Tailwind's default values for that key. Placing them inside `theme.extend` will **add to or override** the defaults without removing the rest. Using `extend` is the recommended approach in almost all cases."
+        }
+    },
+    {
+        "id": 5,
+        "level": "Advanced",
+        "sub_topic": "JIT Compiler",
+        "question_en": "What is the Just-In-Time (JIT) Compiler in Tailwind?",
+        "question_bn": "Tailwind-এ জাস্ট-ইন-টাইম (JIT) কম্পাইলার কী?",
+        "details": {
+            "what_is_en": "The JIT compiler is an engine that generates your CSS on-demand by scanning your template files for classes, instead of generating all possible classes upfront.",
+            "what_is_bn": "JIT কম্পাইলার একটি ইঞ্জিন যা আপনার টেমপ্লেট ফাইলগুলি স্ক্যান করে শুধুমাত্র আপনার ব্যবহৃত ক্লাসগুলোর জন্য CSS তৈরি করে, আগে থেকে সব সম্ভাব্য ক্লাস তৈরি করার পরিবর্তে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the three main benefits of using the JIT compiler?",
+            "answer_en": "1. **Fast Build Times:** Since it only generates the CSS you need, builds are incredibly fast. 2. **Arbitrary Value Support:** You can use values not in your theme directly in your HTML (e.g., `w-[321px]`). 3. **All Variants Enabled:** All variants (like `focus-visible`, `disabled`) are enabled by default without increasing build size."
+        }
+    },
+    {
+        "id": 6,
+        "level": "Intermediate",
+        "sub_topic": "Directives",
+        "question_en": "What does the `@apply` directive do?",
+        "question_bn": "`@apply` ডাইরেক্টিভের কাজ কী?",
+        "details": {
+            "what_is_en": "The `@apply` directive lets you extract and reuse a set of utility classes by composing them into a custom CSS class in your stylesheet.",
+            "what_is_bn": "`@apply` ডাইরেক্টিভ আপনাকে আপনার স্টাইলশিটে একটি কাস্টম CSS ক্লাসের মধ্যে একাধিক ইউটিলিটি ক্লাসকে একত্রিত করার সুযোগ দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Why do many in the Tailwind community advise against overusing `@apply`?",
+            "answer_en": "Overusing `@apply` can recreate the problem Tailwind aims to solve: building a large, abstract CSS file that is separate from your markup. The recommended modern alternative is to create abstractions at the component level (e.g., a React `<Button>` component), keeping the utilities co-located."
+        }
+    },
+    {
+        "id": 7,
+        "level": "Beginner",
+        "sub_topic": "Setup",
+        "question_en": "What is the purpose of the `content` property in `tailwind.config.js`?",
+        "question_bn": "`tailwind.config.js`-এ `content` প্রপার্টির উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The `content` property tells Tailwind's JIT compiler which files to scan to find the utility classes you are using in your project.",
+            "what_is_bn": "`content` প্রপার্টি Tailwind-এর JIT কম্পাইলারকে বলে দেয় যে আপনার প্রজেক্টে ব্যবহৃত ইউটিলিটি ক্লাসগুলি খুঁজে বের করার জন্য কোন ফাইলগুলি স্ক্যান করতে হবে।"
+        },
+        "vip_qa": {
+            "question_en": "What happens if you forget to add a file path to the `content` array?",
+            "answer_en": "If a file path is missing, Tailwind will not scan that file. As a result, any utility classes used only in that file will not be included in the final CSS output, and those styles will appear broken."
+        }
+    },
+    {
+        "id": 8,
+        "level": "Intermediate",
+        "sub_topic": "Directives",
+        "question_en": "What are the `@tailwind` directives used for?",
+        "question_bn": "`@tailwind` ডাইরেক্টিভগুলো কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `@tailwind` directives are used to inject Tailwind's `base`, `components`, and `utilities` styles into your CSS file.",
+            "what_is_bn": "`@tailwind` ডাইরেক্টিভগুলি Tailwind-এর `base`, `components`, এবং `utilities` স্টাইলগুলি আপনার CSS ফাইলে ইনজেক্ট করার জন্য ব্যবহৃত হয়।"
+        },
+        "vip_qa": {
+            "question_en": "In which order should these directives be placed and why?",
+            "answer_en": "They must be in the order: `base`, `components`, `utilities`. This is to ensure the correct cascade, where utilities can override component styles, and component styles can override base styles."
+        }
+    },
+    {
+        "id": 9,
+        "level": "Intermediate",
+        "sub_topic": "Plugins",
+        "question_en": "What are Tailwind CSS plugins?",
+        "question_bn": "Tailwind CSS প্লাগইন কী?",
+        "details": {
+            "what_is_en": "Plugins are JavaScript packages that add new utilities, components, or variants to Tailwind, allowing you to extend its core functionality.",
+            "what_is_bn": "প্লাগইন হলো জাভাস্ক্রিপ্ট প্যাকেজ যা Tailwind-এ নতুন ইউটিলিটি, কম্পোনেন্ট বা ভ্যারিয়েন্ট যোগ করে, যা আপনাকে এর মূল কার্যকারিতা প্রসারিত করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "What are some official Tailwind plugins and what do they do?",
+            "answer_en": "Common official plugins include: `@tailwindcss/forms` which provides a basic reset for form styles, and `@tailwindcss/typography` which adds the `prose` class for styling blocks of rich text content like Markdown."
+        }
+    },
+    {
+        "id": 10,
+        "level": "Advanced",
+        "sub_topic": "Functions",
+        "question_en": "What is the `theme()` function in CSS?",
+        "question_bn": "CSS-এ `theme()` ফাংশন কী?",
+        "details": {
+            "what_is_en": "The `theme()` function allows you to access your Tailwind theme configuration values directly in your custom CSS.",
+            "what_is_bn": "`theme()` ফাংশন আপনাকে আপনার Tailwind থিম কনফিগারেশন মানগুলি সরাসরি আপনার কাস্টম CSS-এ অ্যাক্সেস করতে দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "Provide a use case for the `theme()` function.",
+            "answer_en": "It's useful when you need to use a theme value where a utility class isn't possible, like in a CSS gradient. Example: `background-image: linear-gradient(to right, theme('colors.blue.500'), theme('colors.purple.500'));`"
+        }
+    },
+    {
+        "id": 11,
+        "level": "Beginner",
+        "sub_topic": "Core Concepts",
+        "question_en": "How do you apply dark mode styles?",
+        "question_bn": "ডার্ক মোড স্টাইল কীভাবে প্রয়োগ করবেন?",
+        "details": {
+            "what_is_en": "You can apply dark mode styles by using the `dark:` prefix. For example, `bg-white dark:bg-black` will set a white background in light mode and a black background in dark mode.",
+            "what_is_bn": "আপনি `dark:` প্রিফিক্স ব্যবহার করে ডার্ক মোড স্টাইল প্রয়োগ করতে পারেন। যেমন, `bg-white dark:bg-black` লাইট মোডে সাদা এবং ডার্ক মোডে কালো ব্যাকগ্রাউন্ড সেট করবে।"
+        },
+        "vip_qa": {
+            "question_en": "What are the two strategies for enabling dark mode in the config file?",
+            "answer_en": "The two strategies are `class` and `media`. The `media` strategy uses the user's operating system preference (`prefers-color-scheme`). The `class` strategy (recommended) applies dark mode whenever a `.dark` class is present on a parent element (usually the `<html>` tag)."
+        }
+    },
+    {
+        "id": 12,
+        "level": "Advanced",
+        "sub_topic": "JIT Compiler",
+        "question_en": "What are arbitrary values?",
+        "question_bn": "আর্বিট্রারি ভ্যালু কী?",
+        "details": {
+            "what_is_en": "Arbitrary values allow you to use a custom, one-off value that is not part of your theme by using square bracket notation. For example, `top-[117px]`.",
+            "what_is_bn": "আর্বিট্রারি ভ্যালু আপনাকে আপনার থিমের অংশ নয় এমন একটি কাস্টম, এক-কালীন মান ব্যবহার করতে দেয় স্কোয়ার ব্র্যাকেট নোটেশন ব্যবহার করে। যেমন, `top-[117px]`।"
+        },
+        "vip_qa": {
+            "question_en": "Should you use arbitrary values frequently?",
+            "answer_en": "No, they should be used sparingly. Their purpose is for pixel-perfect, one-off adjustments. If you find yourself using the same arbitrary value repeatedly, it's a sign that you should add that value to your `tailwind.config.js` theme instead."
+        }
+    },
+    {
+        "id": 13,
+        "level": "Intermediate",
+        "sub_topic": "Directives",
+        "question_en": "What is the `@layer` directive used for?",
+        "question_bn": "`@layer` ডাইরেক্টিভ কীসের জন্য ব্যবহৃত হয়?",
+        "details": {
+            "what_is_en": "The `@layer` directive tells Tailwind which 'bucket' or layer a set of custom styles belongs to. The layers are `base`, `components`, and `utilities`.",
+            "what_is_bn": "`@layer` ডাইরেক্টিভ Tailwind-কে বলে যে এক সেট কাস্টম স্টাইল কোন 'বাকেট' বা লেয়ারের অন্তর্গত। লেয়ারগুলো হলো `base`, `components`, এবং `utilities`।"
+        },
+        "vip_qa": {
+            "question_en": "Why is it important to use `@layer` when adding custom component classes?",
+            "answer_en": "By placing your custom component styles in the `components` layer (e.g., `@layer components { .btn { ... } }`), you ensure that they can still be overridden by Tailwind's utility classes, preserving the utility-first workflow."
+        }
+    },
+    {
+        "id": 14,
+        "level": "Beginner",
+        "sub_topic": "Core Concepts",
+        "question_en": "How do you center an element horizontally?",
+        "question_bn": "একটি এলিমেন্টকে হরাইজন্টালি কীভাবে সেন্টার করবেন?",
+        "details": {
+            "what_is_en": "For block-level elements, you can use `mx-auto` (which sets margin-left and margin-right to auto). For flex containers, you can use `justify-center`.",
+            "what_is_bn": "ব্লক-লেভেল এলিমেন্টের জন্য, আপনি `mx-auto` ব্যবহার করতে পারেন। ফ্লেক্স কন্টেইনারের জন্য, আপনি `justify-center` ব্যবহার করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "How would you center an element both horizontally and vertically inside its parent?",
+            "answer_en": "The easiest way is to make the parent a flex container and use the classes `flex justify-center items-center`."
+        }
+    },
+    {
+        "id": 15,
+        "level": "Advanced",
+        "sub_topic": "Optimization",
+        "question_en": "What is 'purging' in Tailwind CSS?",
+        "question_bn": "Tailwind CSS-এ 'Purging' কী?",
+        "details": {
+            "what_is_en": "'Purging' is the process of removing all unused CSS classes from your final production build, resulting in the smallest possible file size.",
+            "what_is_bn": "'Purging' হলো আপনার চূড়ান্ত প্রোডাকশন বিল্ড থেকে সমস্ত অব্যবহৃত CSS ক্লাস সরিয়ে ফেলার প্রক্রিয়া, যার ফলে ফাইলের আকার সর্বনিম্ন হয়।"
+        },
+        "vip_qa": {
+            "question_en": "How is purging related to the JIT compiler?",
+            "answer_en": "The JIT compiler is essentially the evolution of purging. Instead of generating a massive CSS file and then removing unused classes, the JIT compiler works in reverse: it scans your files first and only generates the classes that you actually use."
+        }
+    },
+    {
+        "id": 16,
+        "level": "Intermediate",
+        "sub_topic": "Core Concepts",
+        "question_en": "How do you handle spacing (margin and padding) in Tailwind?",
+        "question_bn": "Tailwind-এ স্পেসিং (মার্জিন এবং প্যাডিং) কীভাবে হ্যান্ডেল করবেন?",
+        "details": {
+            "what_is_en": "You use utility classes like `p-` for padding and `m-` for margin, followed by a direction (e.g., `t` for top, `x` for horizontal) and a size from the spacing scale (e.g., `p-4`, `mx-2`).",
+            "what_is_bn": "আপনি প্যাডিংয়ের জন্য `p-` এবং মার্জিনের জন্য `m-` এর মতো ইউটিলিটি ক্লাস ব্যবহার করেন, তারপরে একটি দিক (যেমন, টপের জন্য `t`, হরাইজন্টালের জন্য `x`) এবং স্পেসিং স্কেল থেকে একটি আকার (যেমন, `p-4`, `mx-2`)।"
+        },
+        "vip_qa": {
+            "question_en": "What is a 'space-between' utility and how does it work?",
+            "answer_en": "The `space-x-{amount}` or `space-y-{amount}` utilities are a convenient way to add a consistent margin between child elements. It applies a margin to all but the first child, preventing extra space at the beginning of the container."
+        }
+    },
+    {
+        "id": 17,
+        "level": "Beginner",
+        "sub_topic": "Fundamentals",
+        "question_en": "What are the main criticisms of Tailwind CSS?",
+        "question_bn": "Tailwind CSS-এর প্রধান সমালোচনাগুলো কী কী?",
+        "details": {
+            "what_is_en": "The main criticism is that it leads to 'messy' HTML with very long class lists. Another is that it's 'just inline styles'.",
+            "what_is_bn": "প্রধান সমালোচনা হলো এটি খুব দীর্ঘ ক্লাস তালিকা সহ 'অগোছালো' HTML তৈরি করে। আরেকটি হলো এটি 'শুধু ইনলাইন স্টাইল'।"
+        },
+        "vip_qa": {
+            "question_en": "What is the counter-argument to the 'messy HTML' criticism?",
+            "answer_en": "The counter-argument is that in modern component-based frameworks (like React or Vue), these long class lists are encapsulated within reusable components. You write the long class list once inside the component, and then reuse the clean component everywhere else."
+        }
+    },
+    {
+        "id": 18,
+        "level": "Intermediate",
+        "sub_topic": "Configuration",
+        "question_en": "How can you add a custom font family in Tailwind?",
+        "question_bn": "Tailwind-এ একটি কাস্টম ফন্ট ফ্যামিলি কীভাবে যোগ করবেন?",
+        "details": {
+            "what_is_en": "You add it inside the `theme.extend.fontFamily` object in your `tailwind.config.js` file, providing a name and a list of font names.",
+            "what_is_bn": "আপনি এটি আপনার `tailwind.config.js` ফাইলের `theme.extend.fontFamily` অবজেক্টের ভিতরে যোগ করেন, একটি নাম এবং ফন্টের নামের তালিকা প্রদান করে।"
+        },
+        "vip_qa": {
+            "question_en": "If you add a custom font, where do you typically import the actual font file (e.g., from Google Fonts)?",
+            "answer_en": "You would import the font file in your main CSS file using `@import`, or in your main HTML file's `<head>` section using a `<link>` tag, just like you would in a project without Tailwind."
+        }
+    },
+    {
+        "id": 19,
+        "level": "Advanced",
+        "sub_topic": "Plugins",
+        "question_en": "How do you create your own Tailwind plugin?",
+        "question_bn": "আপনি নিজের Tailwind প্লাগইন কীভাবে তৈরি করবেন?",
+        "details": {
+            "what_is_en": "You create a plugin using the `plugin` function from `tailwindcss/plugin`. Inside this function, you can use APIs like `addUtilities`, `addComponents`, or `addVariant` to register your new styles.",
+            "what_is_bn": "আপনি `tailwindcss/plugin` থেকে `plugin` ফাংশন ব্যবহার করে একটি প্লাগইন তৈরি করেন। এই ফাংশনের ভিতরে, আপনি আপনার নতুন স্টাইল রেজিস্টার করতে `addUtilities`, `addComponents`, বা `addVariant`-এর মতো API ব্যবহার করতে পারেন।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `addUtilities` and `addComponents`?",
+            "answer_en": "`addUtilities` is for adding small, single-purpose utility classes. `addComponents` is for adding more complex, multi-layered component classes, like a custom `.card` or `.btn`."
+        }
+    },
+    {
+        "id": 20,
+        "level": "Intermediate",
+        "sub_topic": "Core Concepts",
+        "question_en": "How do you style the first or last item in a list?",
+        "question_bn": "একটি তালিকার প্রথম বা শেষ আইটেমটি কীভাবে স্টাইল করবেন?",
+        "details": {
+            "what_is_en": "You can use the `first:` and `last:` variants. For example, `li:first:pt-0` would remove the top padding from only the first list item.",
+            "what_is_bn": "আপনি `first:` এবং `last:` ভ্যারিয়েন্ট ব্যবহার করতে পারেন। উদাহরণস্বরূপ, `li:first:pt-0` শুধুমাত্র প্রথম তালিকা আইটেম থেকে টপ প্যাডিং সরিয়ে দেবে।"
+        },
+        "vip_qa": {
+            "question_en": "How would you style only the odd or even items?",
+            "answer_en": "You can use the `odd:` and `even:` variants, which correspond to the `:nth-child(odd)` and `:nth-child(even)` pseudo-classes. For example, `tr:odd:bg-gray-100`."
+        }
+    },
+    {
+        "id": 21,
+        "level": "Advanced",
+        "sub_topic": "Component Libraries",
+        "question_en": "What is Headless UI?",
+        "question_bn": "হেডলেস UI কী?",
+        "details": {
+            "what_is_en": "Headless UI is a library of completely unstyled, fully accessible UI components, designed to integrate perfectly with Tailwind CSS. It provides the behavior, while you provide the styles.",
+            "what_is_bn": "হেডলেস UI হলো সম্পূর্ণ স্টাইলবিহীন, সম্পূর্ণরূপে অ্যাক্সেসিবল UI কম্পোনেন্টের একটি লাইব্রেরি, যা Tailwind CSS-এর সাথে নিখুঁতভাবে সংহত করার জন্য ডিজাইন করা হয়েছে। এটি আচরণ প্রদান করে, আর আপনি স্টাইল প্রদান করেন।"
+        },
+        "vip_qa": {
+            "question_en": "Why would you choose Headless UI over a pre-styled component library like DaisyUI?",
+            "answer_en": "You would choose Headless UI when you need complete control over the design and appearance of your components, without having to override pre-existing styles. It's ideal for building a truly custom design system from the ground up."
+        }
+    },
+    {
+        "id": 22,
+        "level": "Intermediate",
+        "sub_topic": "Configuration",
+        "question_en": "What is the purpose of the `presets` option in the config file?",
+        "question_bn": "কনফিগারেশন ফাইলে `presets` অপশনের উদ্দেশ্য কী?",
+        "details": {
+            "what_is_en": "The `presets` option allows you to specify a different base configuration to start from, instead of Tailwind's default configuration.",
+            "what_is_bn": "`presets` অপশন আপনাকে Tailwind-এর ডিফল্ট কনফিগারেশনের পরিবর্তে একটি ভিন্ন বেস কনফিগারেশন থেকে শুরু করার অনুমতি দেয়।"
+        },
+        "vip_qa": {
+            "question_en": "When might you use a custom preset?",
+            "answer_en": "You might use a preset in a large organization to share a common base configuration (e.g., with company brand colors and fonts) across multiple Tailwind projects, ensuring design consistency."
+        }
+    },
+    {
+        "id": 23,
+        "level": "Beginner",
+        "sub_topic": "Grid",
+        "question_en": "How do you create a simple three-column grid?",
+        "question_bn": "আপনি কীভাবে একটি সাধারণ তিন-কলামের গ্রিড তৈরি করবেন?",
+        "details": {
+            "what_is_en": "You can create a three-column grid by applying `grid` to the parent and then `grid-cols-3`. Each direct child of the parent will become a grid item.",
+            "what_is_bn": "আপনি প্যারেন্টে `grid` এবং তারপরে `grid-cols-3` প্রয়োগ করে একটি তিন-কলামের গ্রিড তৈরি করতে পারেন। প্যারেন্টের প্রতিটি সরাসরি চাইল্ড একটি গ্রিড আইটেম হয়ে যাবে।"
+        },
+        "vip_qa": {
+            "question_en": "How would you make that same grid responsive, so it's one column on mobile and three columns on desktop?",
+            "answer_en": "You would use responsive prefixes: `grid grid-cols-1 lg:grid-cols-3`. This sets the default to one column and overrides it to three columns on large screens and up."
+        }
+    },
+    {
+        "id": 24,
+        "level": "Advanced",
+        "sub_topic": "JIT Compiler",
+        "question_en": "What are arbitrary variants?",
+        "question_bn": "আর্বিট্রারি ভ্যারিয়েন্ট কী?",
+        "details": {
+            "what_is_en": "Arbitrary variants let you create custom, one-off variants directly in your HTML using square brackets. For example, `[&_p]:text-red-500` would target all `<p>` tags inside the element.",
+            "what_is_bn": "আর্বিট্রারি ভ্যারিয়েন্ট আপনাকে সরাসরি আপনার HTML-এ স্কোয়ার ব্র্যাকেট ব্যবহার করে কাস্টম, এক-কালীন ভ্যারিয়েন্ট তৈরি করতে দেয়। যেমন, `[&_p]:text-red-500` এলিমেন্টের ভিতরের সমস্ত `<p>` ট্যাগকে টার্গেট করবে।"
+        },
+        "vip_qa": {
+            "question_en": "How could you use an arbitrary variant to style an element based on a `data` attribute?",
+            "answer_en": "You can use an attribute selector as the arbitrary variant. For example, `[&[data-state=open]]:bg-blue-200` would apply a blue background only when the element has the attribute `data-state=\"open\"`."
+        }
+    },
+    {
+        "id": 25,
+        "level": "Intermediate",
+        "sub_topic": "Core Concepts",
+        "question_en": "How do you add transitions in Tailwind?",
+        "question_bn": "Tailwind-এ ট্রানজিশন কীভাবে যোগ করবেন?",
+        "details": {
+            "what_is_en": "You add the `transition` utility class to an element, and then specify which properties should be transitioned and the duration, for example, `transition-colors duration-300`.",
+            "what_is_bn": "আপনি একটি এলিমেন্টে `transition` ইউটিলিটি ক্লাস যোগ করেন, এবং তারপরে কোন প্রপার্টিগুলি ট্রানজিশন করা হবে এবং সময়কাল নির্দিষ্ট করেন, যেমন, `transition-colors duration-300`।"
+        },
+        "vip_qa": {
+            "question_en": "What does the `ease-in-out` class do?",
+            "answer_en": "`ease-in-out` is a timing function class. It specifies that the transition should have a slow start and a slow end, creating a more natural-looking animation than a linear transition."
+        }
+    },
+    {
+        "id": 26,
+        "level": "Beginner",
+        "sub_topic": "Sizing",
+        "question_en": "How do you set an element's width and height?",
+        "question_bn": "আপনি একটি এলিমেন্টের প্রস্থ এবং উচ্চতা কীভাবে সেট করবেন?",
+        "details": {
+            "what_is_en": "You use the `w-` utility for width and `h-` for height, followed by a value from the sizing scale (e.g., `w-16`, `h-16`) or a percentage (e.g., `w-1/2`, `w-full`).",
+            "what_is_bn": "আপনি প্রস্থের জন্য `w-` এবং উচ্চতার জন্য `h-` ইউটিলিটি ব্যবহার করেন, তারপরে সাইজিং স্কেল থেকে একটি মান (যেমন, `w-16`, `h-16`) বা একটি শতাংশ (যেমন, `w-1/2`, `w-full`)।"
+        },
+        "vip_qa": {
+            "question_en": "What is the difference between `w-screen` and `w-full`?",
+            "answer_en": "`w-full` makes an element 100% of the width of its **parent container**. `w-screen` makes an element 100% of the width of the **viewport** (the screen)."
+        }
+    },
+    {
+        "id": 27,
+        "level": "Intermediate",
+        "sub_topic": "Transforms",
+        "question_en": "How do you rotate an element?",
+        "question_bn": "আপনি একটি এলিমেন্টকে কীভাবে ঘোরান?",
+        "details": {
+            "what_is_en": "You can rotate an element using the `rotate-` utility class, followed by a degree value. For example, `rotate-45` will rotate an element 45 degrees clockwise.",
+            "what_is_bn": "আপনি `rotate-` ইউটিলিটি ক্লাস ব্যবহার করে একটি এলিমেন্টকে ঘোরাতে পারেন, তারপরে একটি ডিগ্রি মান থাকে। যেমন, `rotate-45` একটি এলিমেন্টকে ঘড়ির কাঁটার দিকে ৪৫ ডিগ্রি ঘোরাবে।"
+        },
+        "vip_qa": {
+            "question_en": "How would you apply a transform only on hover?",
+            "answer_en": "You would combine the `hover:` variant with a transform utility. For example, `scale-100 hover:scale-110 transition-transform` would make an element scale up to 110% when hovered, with a smooth transition."
+        }
+    },
+    {
+        "id": 28,
+        "level": "Advanced",
+        "sub_topic": "Configuration",
+        "question_en": "What is the 'important' option in the config file?",
+        "question_bn": "কনফিগারেশন ফাইলে 'important' অপশনটি কী?",
+        "details": {
+            "what_is_en": "The `important` option lets you control whether Tailwind's utilities should be marked with `!important`. It can be set to a selector, like '#app', to increase the specificity of all utilities.",
+            "what_is_bn": "`important` অপশনটি আপনাকে নিয়ন্ত্রণ করতে দেয় যে Tailwind-এর ইউটিলিটিগুলিকে `!important` দিয়ে চিহ্নিত করা হবে কিনা। এটি একটি সিলেক্টরে সেট করা যেতে পারে, যেমন '#app', সমস্ত ইউটিলিটির স্পেসিফিসিটি বাড়ানোর জন্য।"
+        },
+        "vip_qa": {
+            "question_en": "Why would you use the `important` option with a selector?",
+            "answer_en": "This is most useful when using Tailwind in a project that already has existing CSS with high specificity that you need to override. By setting `important: '#app'`, all of Tailwind's classes will be scoped with a high-specificity selector (e.g., `#app .text-blue-500`), making them override the existing styles."
+        }
+    },
+    {
+        "id": 29,
+        "level": "Beginner",
+        "sub_topic": "Typography",
+        "question_en": "How do you change the text color?",
+        "question_bn": "আপনি টেক্সটের রঙ কীভাবে পরিবর্তন করবেন?",
+        "details": {
+            "what_is_en": "You use the `text-` utility class, followed by a color name and shade from the theme. For example, `text-red-500`.",
+            "what_is_bn": "আপনি `text-` ইউটিলিটি ক্লাস ব্যবহার করেন, তারপরে থিম থেকে একটি রঙের নাম এবং শেড থাকে। উদাহরণস্বরূপ, `text-red-500`।"
+        },
+        "vip_qa": {
+            "question_en": "How can you set the opacity of the text color?",
+            "answer_en": "You can set the opacity by adding a slash followed by a percentage value to the color utility. For example, `text-red-500/50` will apply the red-500 color with 50% opacity."
+        }
+    },
+    {
+        "id": 30,
+        "level": "Intermediate",
+        "sub_topic": "Core Concepts",
+        "question_en": "What is the `group` utility for?",
+        "question_bn": "`group` ইউটিলিটি কীসের জন্য?",
+        "details": {
+            "what_is_en": "The `group` class is used to style an element based on the state of a parent element. You add `group` to the parent and use variants like `group-hover` on the child.",
+            "what_is_bn": "`group` ক্লাসটি একটি প্যারেন্ট এলিমেন্টের অবস্থার উপর ভিত্তি করে একটি এলিমেন্টকে স্টাইল করতে ব্যবহৃত হয়। আপনি প্যারেন্টে `group` যোগ করেন এবং চাইল্ডে `group-hover`-এর মতো ভ্যারিয়েন্ট ব্যবহার করেন।"
+        },
+        "vip_qa": {
+            "question_en": "Can you have nested groups?",
+            "answer_en": "Yes. If you have nested groups, you can give them unique names using `group/{name}` (e.g., `group/item`) and then target them with variants like `group-hover/item:`."
+        }
+    }
+]
