@@ -24,7 +24,7 @@ const HomeView: React.FC<HomeViewProps> = ({ language }) => {
         animate={{ y: 0, opacity: 1 }}   // অ্যানিমেশনের শেষ অবস্থা
         className="text-5xl font-extrabold text-white mb-4"
       >
-        Welcome to SkillSphere
+        Welcome to Dev Up
       </motion.h1>
 
       {/* সাবটাইটেলের জন্য অ্যানিমেশন যোগ করা হয়েছে */}

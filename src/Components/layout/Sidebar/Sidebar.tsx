@@ -1,8 +1,11 @@
-import React from 'react';
+// Code line-by-line explanation in bangla
+
+
+import React from 'react'; 
 import { HomeIcon, CodeIcon, ExamIcon, ProfileIcon, LoginIcon } from '../../common/Icons/Icons';
 import type { MockUser } from '../../../types';
 
-// Defining a TypeScript interface for the Sidebar component's props.
+// Sidebar কম্পোনেন্টের props-এর জন্য একটি TypeScript interface তৈরি করা হয়েছে।
 interface SidebarProps {
     activeView: string;
     setActiveView: (view: string) => void;
@@ -25,7 +28,9 @@ export default function Sidebar({
     mockUser,
 }: SidebarProps) {
 
-    const NavButton = ({ view, icon, label }: { view: string; icon: JSX.Element; label: string }) => (
+    // 2. NavButton এর icon prop-এর টাইপ JSX.Element থেকে React.ReactNode-এ পরিবর্তন করা হয়েছে।
+    // এটি আরও ফ্লেক্সিবল এবং TypeScript-এর জন্য চেনা সহজ।
+    const NavButton = ({ view, icon, label }: { view: string; icon: React.ReactNode; label: string }) => (
         <button
             onClick={() => setActiveView(view)}
             className={`flex items-center px-4 py-2 rounded-lg transition-colors w-full text-left ${
@@ -38,9 +43,14 @@ export default function Sidebar({
 
     return (
         <aside className="w-72 bg-[#1F2937] p-6 border-r border-gray-700 flex-shrink-0 flex flex-col">
-            <div className="text-2xl font-bold text-white mb-8 flex items-center">
-                <span className="text-3xl mr-2">🚀</span> SkillSphere
-            </div>
+           <div className="text-4xl font-extrabold mb-8 flex items-center gap-2">
+  <span className="text-5xl animate-bounce">🚀</span>
+  <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 text-transparent bg-clip-text drop-shadow-lg">
+    Dev Up
+  </span>
+</div>
+
+
 
             <div className="mb-6 flex bg-gray-800 rounded-lg p-1">
                 <button
