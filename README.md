@@ -1,70 +1,99 @@
-# React + TypeScript + Vite
+# 🚀 Dev Up
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern developer productivity and management app built with **React + TypeScript + Vite**.  
+The goal of Dev Up is to boost your workflow, manage tasks/projects, and provide a sleek developer-friendly UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- ⚡ **Vite + React + TypeScript** for fast development  
+- 🎨 **TailwindCSS** styled UI with modern design  
+- 📂 **Modular Components** (Sidebar, Dashboard, etc.)  
+- 🔥 **Hot Reloading** and optimized builds  
+- 🛡️ Type-safe with **TypeScript**  
+- 📱 Fully **responsive design**  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📸 Preview
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+> Add screenshots or GIFs of your app here once you have them!  
+Example:  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+![Dev Up Preview](https://devupskills.vercel.app/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# dev-up
+- **Frontend:** React, TypeScript, Vite  
+- **Styling:** TailwindCSS  
+- **State Management:** React Hooks / Context API  
+- **Build Tooling:** Vite + ESBuild  
+- **Linting & Formatting:** ESLint, Prettier  
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/yousufali156/dev-up
+cd dev-up
+2️⃣ Install dependencies
+bash
+Copy code
+npm install
+3️⃣ Start development server
+bash
+Copy code
+npm run dev
+4️⃣ Build for production
+bash
+Copy code
+npm run build
+5️⃣ Preview production build
+bash
+Copy code
+npm run preview
+📂 Project Structure
+plaintext
+Copy code
+
+
+
+dev-up/ <br>
+├── src/<br>
+│   ├── App.tsx<br>
+│   ├── main.tsx<br>
+│   ├── Components/<br>
+│   │   └── layout/<br>
+│   │       └── Sidebar/<br>
+│   │           └── Sidebar.tsx<br>
+│   ├── assets/<br>
+│   └── styles/<br>
+├── tsconfig.json<br>
+├── vite.config.ts<br>
+└── package.json<br>
+
+<br> <br>
+
+
+🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+Feel free to fork this repo and submit a pull request.
+
+
+📜 License
+This project is licensed under the MIT License.
+See LICENSE for details.
+
+👨‍💻 Author
+Md. Yousuf Ali
+
+[🌐 Portfolio ](https://yousufali-portfolio.vercel.app/)
+
+[💼 LinkedIn](https://www.linkedin.com/in/yousufali156/)
+
+[🐙 GitHub](https://github.com/yousufali156)
