@@ -1,31 +1,30 @@
-# 🚀 Dev Up
+# 🚀 Dev Up  
 
-A modern developer productivity and management app built with **React + TypeScript + Vite**.  
-The goal of Dev Up is to boost your workflow, manage tasks/projects, and provide a sleek developer-friendly UI.
+A modern **developer productivity and management app** built with **React + TypeScript + Vite**.  
+The goal of **Dev Up** is to **boost your workflow, manage tasks/projects, and provide a sleek developer-friendly UI**.  
+
+🔗 **Live Demo:** [Dev Up](https://devupskills.vercel.app/)  
 
 ---
 
-## ✨ Features
+## ✨ Features  
 
-- ⚡ **Vite + React + TypeScript** for fast development  
-- 🎨 **TailwindCSS** styled UI with modern design  
+- ⚡ **Vite + React + TypeScript** for fast and type-safe development  
+- 🎨 **TailwindCSS** for a clean, responsive, and modern UI  
 - 📂 **Modular Components** (Sidebar, Dashboard, etc.)  
-- 🔥 **Hot Reloading** and optimized builds  
-- 🛡️ Type-safe with **TypeScript**  
-- 📱 Fully **responsive design**  
+- 🔥 **Hot Reloading** with optimized builds  
+- 🛡️ Type-safety across the project  
+- 📱 Fully **responsive design** for desktop & mobile  
 
 ---
 
-## 📸 Preview
+## 📸 Preview  
 
-> Add screenshots or GIFs of your app here once you have them!  
-Example:  
-
-![Dev Up Preview](https://devupskills.vercel.app/)
+![Dev Up Preview](https://i.ibb.co.com/fzd7Fdwm/devup.jpg)  
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack  
 
 - **Frontend:** React, TypeScript, Vite  
 - **Styling:** TailwindCSS  
@@ -89,11 +88,10 @@ Feel free to fork this repo and submit a pull request.
 This project is licensed under the MIT License.
 See LICENSE for details.
 
-👨‍💻 Author
-Md. Yousuf Ali
+## 👨‍💻 Author  
 
-[🌐 Portfolio ](https://yousufali-portfolio.vercel.app/)
+**Md. Yousuf Ali**  
 
-[💼 LinkedIn](https://www.linkedin.com/in/yousufali156/)
-
-[🐙 GitHub](https://github.com/yousufali156)
+- [🌐 Portfolio](https://yousufali-portfolio.vercel.app/)  
+- [💼 LinkedIn](https://www.linkedin.com/in/yousufali156/)  
+- [🐙 GitHub](https://github.com/yousufali156)  
