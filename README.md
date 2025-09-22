@@ -20,7 +20,7 @@ The goal of **Dev Up** is to **boost your workflow, manage tasks/projects, and p
 
 ## 📸 Preview  
 
-![Dev Up Preview](https://i.ibb.co.com/fzd7Fdwm/devup.jpg)  
+![Dev Up Preview](https://i.ibb.co/fzd7Fdwm/devup.jpg)  
 
 ---
 
@@ -38,7 +38,7 @@ The goal of **Dev Up** is to **boost your workflow, manage tasks/projects, and p
 
 ### 1️⃣ Clone the repo
 ```bash
-git clone https://github.com/yousufali156/dev-up
+git clone https://github.com/yousufali156/dev-up.git
 cd dev-up
 2️⃣ Install dependencies
 bash
@@ -57,41 +57,36 @@ bash
 Copy code
 npm run preview
 📂 Project Structure
-plaintext
+css
 Copy code
-
-
-
-dev-up/ <br>
-├── src/<br>
-│   ├── App.tsx<br>
-│   ├── main.tsx<br>
-│   ├── Components/<br>
-│   │   └── layout/<br>
-│   │       └── Sidebar/<br>
-│   │           └── Sidebar.tsx<br>
-│   ├── assets/<br>
-│   └── styles/<br>
-├── tsconfig.json<br>
-├── vite.config.ts<br>
-└── package.json<br>
-
-<br> <br>
-
-
+dev-up/
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── Components/
+│   │   └── layout/
+│   │       └── Sidebar/
+│   │           └── Sidebar.tsx
+│   ├── assets/
+│   └── styles/
+├── tsconfig.json
+├── vite.config.ts
+└── package.json
 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 Feel free to fork this repo and submit a pull request.
-
 
 📜 License
 This project is licensed under the MIT License.
 See LICENSE for details.
 
-## 👨‍💻 Author  
+👨‍💻 Author
+Md. Yousuf Ali
 
-**Md. Yousuf Ali**  
+🌐 Portfolio
 
-- [🌐 Portfolio](https://yousufali-portfolio.vercel.app/)  
-- [💼 LinkedIn](https://www.linkedin.com/in/yousufali156/)  
-- [🐙 GitHub](https://github.com/yousufali156)  
+💼 LinkedIn
+
+🐙 GitHub
+
+
