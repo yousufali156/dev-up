@@ -1,11 +1,18 @@
 // Code line-by-line explanation in bangla
+// এখন থেকে আমি আপনার প্রতিটি কোড লাইন বাই লাইন বাংলায় ব্যাখ্যা করব।
 
-
-import React from 'react'; 
+import React from 'react';
 import { HomeIcon, CodeIcon, ExamIcon, ProfileIcon, LoginIcon } from '../../common/Icons/Icons';
 import type { MockUser } from '../../../types';
 
-// Sidebar কম্পোনেন্টের props-এর জন্য একটি TypeScript interface তৈরি করা হয়েছে।
+// 1. ক্লোজ (X) আইকন SVG হিসেবে তৈরি করা হয়েছে।
+const CloseIcon = () => (
+    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+);
+
+// 2. SidebarProps interface আগের মতোই থাকছে।
 interface SidebarProps {
     activeView: string;
     setActiveView: (view: string) => void;
@@ -15,24 +22,28 @@ interface SidebarProps {
     topics: string[];
     handleLogin: () => void;
     mockUser: MockUser;
+    isSidebarOpen: boolean;
+    toggleSidebar: () => void;
 }
 
 export default function Sidebar({
     activeView,
-    setActiveView,
+    setActiveView, // 3. এই prop-টি App.tsx থেকে আসা handleViewChange ফাংশনটিকে রিসিভ করছে।
     isLoggedIn,
     language,
     setLanguage,
     topics,
     handleLogin,
     mockUser,
+    isSidebarOpen,
+    toggleSidebar,
 }: SidebarProps) {
 
-    // 2. NavButton এর icon prop-এর টাইপ JSX.Element থেকে React.ReactNode-এ পরিবর্তন করা হয়েছে।
-    // এটি আরও ফ্লেক্সিবল এবং TypeScript-এর জন্য চেনা সহজ।
+    // 4. NavButton এখন সরাসরি App.tsx থেকে আসা setActiveView ফাংশনটি কল করবে।
+    // এর ফলে অপ্রয়োজনীয় handleNavigation ফাংশনটির আর প্রয়োজন নেই।
     const NavButton = ({ view, icon, label }: { view: string; icon: React.ReactNode; label: string }) => (
         <button
-            onClick={() => setActiveView(view)}
+            onClick={() => setActiveView(view)} // 5. মূল পরিবর্তনটি এখানে। এখন এটি সরাসরি props থেকে আসা ফাংশনকে কল করছে।
             className={`flex items-center px-4 py-2 rounded-lg transition-colors w-full text-left ${
                 activeView === view ? 'bg-[#4F46E5] text-white' : 'text-gray-300 hover:bg-gray-700'
             }`}
@@ -42,15 +53,20 @@ export default function Sidebar({
     );
 
     return (
-        <aside className="w-72 bg-[#1F2937] p-6 border-r border-gray-700 flex-shrink-0 flex flex-col">
-           <div className="text-4xl font-extrabold mb-8 flex items-center gap-2">
-  <span className="text-5xl animate-bounce">🚀</span>
-  <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 text-transparent bg-clip-text drop-shadow-lg">
-    Dev Up
-  </span>
-</div>
-
-
+        // 6. সাইডবারের className মোবাইল রেসপন্সিভ করার জন্য আগের মতোই থাকছে।
+        <aside className={`fixed inset-y-0 left-0 z-40 w-72 bg-[#1F2937] p-6 border-r border-gray-700 flex-shrink-0 flex flex-col transition-transform duration-300 ease-in-out md:relative md:translate-x-0 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+            <div className="flex justify-between items-center mb-8">
+                <div className="text-4xl font-extrabold flex items-center gap-2">
+                    <span className="text-5xl">🚀</span>
+                    <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 text-transparent bg-clip-text drop-shadow-lg">
+                        Dev Up
+                    </span>
+                </div>
+                {/* 7. এই ক্লোজ বাটনটি শুধু মোবাইল ভিউতে দেখা যাবে। */}
+                <button className="md:hidden text-gray-400 hover:text-white" onClick={toggleSidebar}>
+                    <CloseIcon />
+                </button>
+            </div>
 
             <div className="mb-6 flex bg-gray-800 rounded-lg p-1">
                 <button
@@ -97,3 +113,4 @@ export default function Sidebar({
         </aside>
     );
 }
+
