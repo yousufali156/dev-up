@@ -57,8 +57,8 @@ export default function QuestionCard({ question, language, isLoggedIn }: Questio
                         <span className={`text-xs font-semibold px-2 py-1 rounded-full text-white ${levelColor.replace('border', 'bg')}`}>
                             {question.level}
                         </span>
-                        <h3 className="text-xl font-bold text-gray-100 mt-2">
-                            {isVip && <LockIcon className="inline-block mr-1" />}
+                        <h3 className="text-xl font-bold text-gray-100 mt-2 flex items-center">
+                            {isVip && <LockIcon/>}
                             {currentQuestion}
                         </h3>
                     </div>
