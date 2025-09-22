@@ -8,7 +8,7 @@ export interface TopicData {
 
 // সাইডবারে দেখানোর জন্য টপিকের তালিকা।
 export const topicList: string[] = [
-    'HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'TypeScript', 'TailwindCSS', 
+    'interpersonal','HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'TypeScript', 'TailwindCSS', 
     'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'Git & GitHub', 
     'DevOps & Deployment', 'Development Tools & Workflow', 'AI & Content Creation'
 ];

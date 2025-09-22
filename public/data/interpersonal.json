@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "level": "Beginner",
+    "sub_topic": "Introduction & Motivation",
+    "question_en": "Tell me about yourself.",
+    "question_bn": "আপনার সম্পর্কে বলুন।",
+    "details": {
+      "what_is_en": "This is an ice-breaker. The interviewer wants to hear a concise summary of your background, skills, and passion, connecting them to the role you're applying for.",
+      "what_is_bn": "এটি একটি পরিচিতিমূলক প্রশ্ন। ইন্টারভিউয়ার আপনার পরিচয়, দক্ষতা এবং আগ্রহের একটি সংক্ষিপ্ত সারসংক্ষেপ শুনতে চান যা চাকরির সাথে সম্পর্কিত।"
+    },
+    "vip_qa": {
+      "question_en": "How does your background in Economics help you as a developer?",
+      "answer_en": "My background in Economics helps me understand the business logic behind a project and focus on creating features that provide real value to users, which is crucial for product success."
+    }
+  },
+  {
+    "id": 2,
+    "level": "Beginner",
+    "sub_topic": "Introduction & Motivation",
+    "question_en": "Why should we hire you?",
+    "question_bn": "কেন আপনাকে নেওয়া উচিত?",
+    "details": {
+      "what_is_en": "The interviewer is asking you to sell yourself. They want to know what unique value you bring based on your skills, experience, and attitude.",
+      "what_is_bn": "ইন্টারভিউয়ার আপনাকে নিজের যোগ্যতা প্রমাণ করতে বলছেন। তারা জানতে চায় আপনার দক্ষতা, অভিজ্ঞতা এবং মনোভাবের ভিত্তিতে আপনি কোম্পানিতে কী ভ্যালু যোগ করতে পারবেন।"
+    },
+    "vip_qa": {
+      "question_en": "What is the most important quality you'll bring to our team?",
+      "answer_en": "My combination of hands-on MERN stack experience from my projects and a strong, proactive learning mindset. I can start contributing quickly while also adapting to new challenges."
+    }
+  },
+  {
+    "id": 3,
+    "level": "Beginner",
+    "sub_topic": "Introduction & Motivation",
+    "question_en": "Why do you want to work with our company?",
+    "question_bn": "আপনি আমাদের কোম্পানিতে কেন কাজ করতে চান?",
+    "details": {
+      "what_is_en": "This question tests if you've done your research. They want to see genuine interest in their company's mission, products, or culture, not just any job.",
+      "what_is_bn": "এই প্রশ্নটি পরীক্ষা করে যে আপনি কোম্পানি সম্পর্কে গবেষণা করেছেন কিনা। তারা দেখতে চায় যে আপনার শুধুমাত্র একটি চাকরির প্রতি নয়, বরং তাদের কোম্পানির মিশন, পণ্য বা সংস্কৃতির প্রতিও আগ্রহ আছে।"
+    },
+    "vip_qa": {
+      "question_en": "Which of our company values resonates with you the most?",
+      "answer_en": "Your company's commitment to 'innovation and real-world impact' resonates with me, as I am passionate about using modern tech to build solutions that solve actual user problems."
+    }
+  },
+  {
+    "id": 4,
+    "level": "Intermediate",
+    "sub_topic": "Self-Assessment",
+    "question_en": "What are your weaknesses?",
+    "question_bn": "আপনার দুর্বল দিকগুলো কী?",
+    "details": {
+      "what_is_en": "The interviewer is looking for self-awareness and a commitment to personal growth. They want to see if you can identify areas for improvement.",
+      "what_is_bn": "ইন্টারভিউয়ার আপনার আত্ম-সচেতনতা এবং ব্যক্তিগত উন্নতির প্রতি আগ্রহ দেখতে চান। তারা দেখতে চায় আপনি উন্নতির জন্য নিজের দুর্বলতা চিহ্নিত করতে পারেন কিনা।"
+    },
+    "vip_qa": {
+      "question_en": "How are you actively working to improve one of those weaknesses?",
+      "answer_en": "To manage my tendency to overanalyze, I now break tasks into smaller chunks with specific deadlines. This helps me focus on completing the task efficiently instead of getting lost in minor details."
+    }
+  },
+  {
+    "id": 5,
+    "level": "Beginner",
+    "sub_topic": "Self-Assessment",
+    "question_en": "What is your biggest strength?",
+    "question_bn": "আপনার সবচেয়ে বড় শক্তি কী?",
+    "details": {
+      "what_is_en": "They want you to confidently identify what you're good at and how that strength will be an asset to their team and the role.",
+      "what_is_bn": "তারা চায় আপনি আত্মবিশ্বাসের সাথে বলুন আপনি কোন বিষয়ে দক্ষ এবং কীভাবে আপনার সেই শক্তি তাদের দলের জন্য মূল্যবান হবে।"
+    },
+    "vip_qa": {
+      "question_en": "Can you give an example of how your quick learning ability helped you in a project?",
+      "answer_en": "While building my 'DevTalks' project, I had to learn Stripe integration from scratch. I was able to learn the fundamentals and implement a secure payment system within a week by quickly going through the documentation."
+    }
+  },
+  {
+    "id": 6,
+    "level": "Intermediate",
+    "sub_topic": "Self-Assessment",
+    "question_en": "What skill makes you different from others?",
+    "question_bn": "কোন দক্ষতা আপনাকে অন্যদের থেকে আলাদা করে?",
+    "details": {
+      "what_is_en": "This is about your unique selling proposition. What specific combination of skills or perspectives do you have that other candidates might not?",
+      "what_is_bn": "এটি আপনার অনন্য যোগ্যতা সম্পর্কে। আপনার কোন নির্দিষ্ট দক্ষতা বা দৃষ্টিভঙ্গি আছে যা অন্য প্রার্থীদের নাও থাকতে পারে?"
+    },
+    "vip_qa": {
+      "question_en": "How does understanding the user's perspective make you a better developer?",
+      "answer_en": "It allows me to think beyond just writing code. I can anticipate user needs and suggest UI/UX improvements, which leads to building more intuitive and successful applications."
+    }
+  },
+  {
+    "id": 7,
+    "level": "Intermediate",
+    "sub_topic": "Situational & Behavioral",
+    "question_en": "What was your biggest professional mistake?",
+    "question_bn": "আপনার পেশাগত জীবনের সবচেয়ে বড় ভুল কী ছিল?",
+    "details": {
+      "what_is_en": "They want to assess your humility, accountability, and ability to learn from your errors. It's not about the mistake itself, but what you did after.",
+      "what_is_bn": "তারা আপনার নম্রতা, দায়িত্ববোধ এবং ভুল থেকে শেখার ক্ষমতা মূল্যায়ন করতে চায়। মূল বিষয় ভুলটি নয়, বরং আপনি এরপর কী করেছেন।"
+    },
+    "vip_qa": {
+      "question_en": "What specific lesson from that mistake do you apply to your work today?",
+      "answer_en": "The key lesson was that practical experience is crucial. Now, instead of waiting for perfection, I focus on iterative development and continuous learning on the job."
+    }
+  },
+  {
+    "id": 8,
+    "level": "Intermediate",
+    "sub_topic": "Situational & Behavioral",
+    "question_en": "Describe a situation where you failed. What did you learn?",
+    "question_bn": "এমন একটি পরিস্থিতি বর্ণনা করুন যেখানে আপনি ব্যর্থ হয়েছেন এবং কী শিখেছেন?",
+    "details": {
+      "what_is_en": "Similar to the 'mistake' question, this probes your resilience and problem-solving skills when things go wrong. Focus on the learning outcome.",
+      "what_is_bn": "'ভুল' বিষয়ক প্রশ্নের মতোই, এটি আপনার ঘুরে দাঁড়ানোর ক্ষমতা এবং সমস্যা সমাধানের দক্ষতা পরীক্ষা করে। মূল ফোকাস হলো আপনি কী শিখেছেন।"
+    },
+    "vip_qa": {
+      "question_en": "How do you ensure you don't repeat this failure in the future?",
+      "answer_en": "I've made server-side validation a mandatory part of my development checklist for any feature that involves user input. This ensures the same oversight doesn't happen again."
+    }
+  },
+  {
+    "id": 9,
+    "level": "Beginner",
+    "sub_topic": "Situational & Behavioral",
+    "question_en": "How do you handle a problem you don't know how to solve?",
+    "question_bn": "এমন সমস্যার ক্ষেত্রে কীভাবে কাজ করেন যার সমাধান আপনার কাছে নেই?",
+    "details": {
+      "what_is_en": "The interviewer wants to understand your problem-solving process. Are you resourceful, systematic, and willing to seek help?",
+      "what_is_bn": "ইন্টারভিউয়ার আপনার সমস্যা সমাধানের প্রক্রিয়া বুঝতে চান। আপনি কি সম্পদশালী, পদ্ধতিগত এবং সাহায্য চাইতে ইচ্ছুক?"
+    },
+    "vip_qa": {
+      "question_en": "At what point do you decide to ask a colleague for help?",
+      "answer_en": "I first spend a reasonable amount of time trying to solve it myself by breaking it down and researching. If I'm still stuck after that and my progress is blocked, I'll ask for help, presenting what I've already tried."
+    }
+  },
+  {
+    "id": 10,
+    "level": "Beginner",
+    "sub_topic": "Situational & Behavioral",
+    "question_en": "How do you handle criticism or feedback?",
+    "question_bn": "সমালোচনা বা ফিডব্যাক কীভাবে গ্রহণ করেন?",
+    "details": {
+      "what_is_en": "This assesses your coachability and emotional intelligence. They want to know if you can take feedback constructively without getting defensive.",
+      "what_is_bn": "এটি আপনার শেখার আগ্রহ এবং আবেগীয় বুদ্ধিমত্তা মূল্যায়ন করে। তারা জানতে চায় আপনি আত্মরক্ষা না করে গঠনমূলকভাবে প্রতিক্রিয়া গ্রহণ করতে পারেন কিনা।"
+    },
+    "vip_qa": {
+      "question_en": "Describe a time you received difficult feedback and how you acted on it.",
+      "answer_en": "In a code review, a peer pointed out that my code was not very reusable. Initially, I was a bit defensive, but then I took the feedback, learned about writing more modular components, and refactored my code. It ended up improving the project's quality."
+    }
+  },
+  {
+    "id": 11,
+    "level": "Intermediate",
+    "sub_topic": "Situational & Behavioral",
+    "question_en": "What do you do when you feel overwhelmed at work?",
+    "question_bn": "কাজের চাপ বেশি লাগলে কী করেন?",
+    "details": {
+      "what_is_en": "This question checks your stress management and prioritization skills. They want to see if you have healthy coping mechanisms.",
+      "what_is_bn": "এই প্রশ্নটি আপনার মানসিক চাপ এবং কাজকে অগ্রাধিকার দেওয়ার দক্ষতা পরীক্ষা করে। তারা দেখতে চায় আপনার সুস্থভাবে চাপ মোকাবেলা করার কৌশল আছে কিনা।"
+    },
+    "vip_qa": {
+      "question_en": "How do you communicate to your manager when you're feeling overwhelmed?",
+      "answer_en": "I would be transparent and say, 'I currently have tasks A, B, and C. To meet the deadline for A, I might need to deprioritize C or get some help.' This focuses on a solution rather than just the problem."
+    }
+  },
+  {
+    "id": 12,
+    "level": "Beginner",
+    "sub_topic": "Career Goals & Growth",
+    "question_en": "Where do you see yourself in the next 5 years?",
+    "question_bn": "আগামী ৫ বছরে নিজেকে কোথায় দেখতে চান?",
+    "details": {
+      "what_is_en": "The interviewer wants to understand your career ambitions and see if they align with the growth opportunities available at their company.",
+      "what_is_bn": "ইন্টারভিউয়ার আপনার ক্যারিয়ারের উচ্চাকাঙ্ক্ষা বুঝতে চান এবং দেখতে চান যে সেগুলি তাদের কোম্পানিতে উপলব্ধ সুযোগের সাথে মেলে কিনা।"
+    },
+    "vip_qa": {
+      "question_en": "What steps will you take to become a Tech Lead?",
+      "answer_en": "I plan to deepen my expertise in system design, take on more complex projects, and actively mentor junior developers to build my leadership and technical skills."
+    }
+  },
+  {
+    "id": 13,
+    "level": "Beginner",
+    "sub_topic": "Career Goals & Growth",
+    "question_en": "What are your career goals?",
+    "question_bn": "আপনার ক্যারিয়ার লক্ষ্য কি?",
+    "details": {
+      "what_is_en": "This is a more direct way of asking about your ambitions. They want to see if you have a plan for your professional development.",
+      "what_is_bn": "এটি আপনার উচ্চাকাঙ্ক্ষা সম্পর্কে জিজ্ঞাসা করার একটি সরাসরি উপায়। তারা দেখতে চায় আপনার পেশাগত উন্নতির জন্য কোনো পরিকল্পনা আছে কিনা।"
+    },
+    "vip_qa": {
+      "question_en": "How does this specific role fit into your long-term career goals?",
+      "answer_en": "This role is a crucial first step. It will allow me to gain the real-world experience needed to build a strong foundation, which is essential before I can grow into a lead developer role."
+    }
+  },
+  {
+    "id": 14,
+    "level": "Intermediate",
+    "sub_topic": "Career Goals & Growth",
+    "question_en": "How do you stay motivated over the long term?",
+    "question_bn": "দীর্ঘ সময় ধরে কীভাবে অনুপ্রাণিত থাকেন?",
+    "details": {
+      "what_is_en": "This question assesses your work ethic and internal drive. They want to know what keeps you engaged beyond just a paycheck.",
+      "what_is_bn": "এই প্রশ্নটি আপনার কাজের নীতি এবং অভ্যন্তরীণ প্রেরণা মূল্যায়ন করে। তারা জানতে চায় বেতনের বাইরে কী আপনাকে কাজে নিযুক্ত রাখে।"
+    },
+    "vip_qa": {
+      "question_en": "What do you do when you lose motivation for a specific task?",
+      "answer_en": "I try to understand the 'why' behind the task and how it contributes to the bigger picture. I also break it down into smaller, more manageable steps to create a sense of progress."
+    }
+  },
+  {
+    "id": 15,
+    "level": "Intermediate",
+    "sub_topic": "Career Goals & Growth",
+    "question_en": "What technologies are you most excited to work on?",
+    "question_bn": "ভবিষ্যতে কোন প্রযুক্তিতে কাজ করতে সবচেয়ে আগ্রহী?",
+    "details": {
+      "what_is_en": "This shows your passion for technology and whether your interests align with the company's tech stack or future direction.",
+      "what_is_bn": "এটি প্রযুক্তির প্রতি আপনার আবেগ এবং আপনার আগ্রহ কোম্পানির প্রযুক্তি বা ভবিষ্যতের দিকনির্দেশনার সাথে মেলে কিনা তা দেখায়।"
+    },
+    "vip_qa": {
+      "question_en": "How do you decide which new technology is worth learning?",
+      "answer_en": "I look for technologies that solve a real problem more efficiently than existing tools, have strong community support, and align with the industry's direction toward scalable and performant applications."
+    }
+  },
+  {
+    "id": 16,
+    "level": "Beginner",
+    "sub_topic": "Work Style & Quality",
+    "question_en": "How do you ensure the quality of your work?",
+    "question_bn": "আপনি কীভাবে আপনার কাজের মান নিশ্চিত করেন?",
+    "details": {
+      "what_is_en": "They want to know about your development practices. Do you follow standards, test your code, and care about maintainability?",
+      "what_is_bn": "তারা আপনার ডেভেলপমেন্ট অনুশীলন সম্পর্কে জানতে চায়। আপনি কি স্ট্যান্ডার্ড অনুসরণ করেন, আপনার কোড পরীক্ষা করেন এবং রক্ষণাবেক্ষণের বিষয়ে যত্নশীল?"
+    },
+    "vip_qa": {
+      "question_en": "Why is peer code review important to you?",
+      "answer_en": "It's crucial because it helps catch bugs I might have missed, provides a fresh perspective on my code, and is a great opportunity for both me and the reviewer to learn from each other."
+    }
+  },
+  {
+    "id": 17,
+    "level": "Beginner",
+    "sub_topic": "Introduction & Motivation",
+    "question_en": "Why are you looking for a job change?",
+    "question_bn": "আপনি চাকরি পরিবর্তন করতে চাইছেন কেন?",
+    "details": {
+      "what_is_en": "The interviewer wants to understand your motivation for leaving your current situation and what you are looking for in your next role.",
+      "what_is_bn": "ইন্টারভিউয়ার আপনার বর্তমান পরিস্থিতি ছেড়ে যাওয়ার কারণ এবং আপনি আপনার পরবর্তী ভূমিকায় কী খুঁজছেন তা বুঝতে চান।"
+    },
+    "vip_qa": {
+      "question_en": "What is the single most important thing you are looking for in a new role?",
+      "answer_en": "I'm looking for an opportunity to be part of a professional team where I can contribute to real-world applications and get mentorship to accelerate my growth as a developer."
+    }
+  },
+  {
+    "id": 18,
+    "level": "Advanced",
+    "sub_topic": "Team Dynamics",
+    "question_en": "Describe a time you disagreed with a decision made by your manager.",
+    "question_bn": "আপনার ম্যানেজারের কোনো সিদ্ধান্তের সাথে আপনি একমত ছিলেন না, এমন একটি ঘটনা বর্ণনা করুন।",
+    "details": {
+      "what_is_en": "This assesses your ability to handle conflict with authority. Can you be professional, respectful, and persuasive even when disagreeing with your boss?",
+      "what_is_bn": "এটি কর্তৃপক্ষের সাথে মতবিরোধ সামলানোর আপনার ক্ষমতা মূল্যায়ন করে। আপনি কি আপনার বসের সাথে দ্বিমত পোষণ করার সময়ও পেশাদার, শ্রদ্ধাশীল এবং যুক্তিসঙ্গত হতে পারেন?"
+    },
+    "vip_qa": {
+      "question_en": "What did you do when your manager didn't change their decision after your discussion?",
+      "answer_en": "Once I had presented my case and they made the final call, I committed to their decision and did my best to make it successful. It's important to disagree and commit."
+    }
+  },
+  {
+    "id": 19,
+    "level": "Intermediate",
+    "sub_topic": "Work Style & Quality",
+    "question_en": "How do you balance speed with quality?",
+    "question_bn": "দ্রুত কাজ এবং কোডের মানের মধ্যে আপনি কীভাবে ভারসাম্য রক্ষা করেন?",
+    "details": {
+      "what_is_en": "This is a classic software development question. They want to see if you are pragmatic and understand that trade-offs are sometimes necessary.",
+      "what_is_bn": "এটি একটি ক্লাসিক সফটওয়্যার ডেভেলপমেন্ট প্রশ্ন। তারা দেখতে চায় আপনি বাস্তববাদী কিনা এবং বোঝেন কিনা যে কখনও কখনও আপস করা প্রয়োজন।"
+    },
+    "vip_qa": {
+      "question_en": "How do you handle 'technical debt'?",
+      "answer_en": "I believe in addressing it proactively. If I have to take a shortcut for a deadline, I immediately create a ticket to refactor the code later. Leaving technical debt unmanaged slows down future development."
+    }
+  },
+  {
+    "id": 20,
+    "level": "Intermediate",
+    "sub_topic": "Situational & Behavioral",
+    "question_en": "Give an example of a time you took initiative.",
+    "question_bn": "এমন একটি উদাহরণ দিন যেখানে আপনি নিজে থেকে উদ্যোগ নিয়েছেন।",
+    "details": {
+      "what_is_en": "They want to see if you are a proactive problem-solver who goes beyond their assigned tasks to add value.",
+      "what_is_bn": "তারা দেখতে চায় আপনি কি একজন সক্রিয় সমস্যা সমাধানকারী, যিনি আপনার নির্ধারিত কাজের বাইরে গিয়েও ভ্যালু যোগ করেন।"
+    },
+    "vip_qa": {
+      "question_en": "What was the result of your initiative?",
+      "answer_en": "By proactively indexing our MongoDB collections in my 'DevTalks' project, I improved API performance by about 30%, which led to a noticeably better user experience."
+    }
+  },
+  {
+    "id": 21,
+    "level": "Beginner",
+    "sub_topic": "Team Dynamics",
+    "question_en": "How do you contribute to a positive team culture?",
+    "question_bn": "আপনি কীভাবে একটি ইতিবাচক টিম সংস্কৃতিতে অবদান রাখেন?",
+    "details": {
+      "what_is_en": "This question assesses your teamwork and interpersonal skills. They want to know if you will be a good addition to their team environment.",
+      "what_is_bn": "এই প্রশ্নটি আপনার দলবদ্ধভাবে কাজ করার এবং আন্তঃব্যক্তিক দক্ষতা মূল্যায়ন করে। তারা জানতে চায় আপনি তাদের দলের পরিবেশের জন্য একটি ভাল সংযোজন হবেন কিনা।"
+    },
+    "vip_qa": {
+      "question_en": "What do you do when you see a teammate struggling?",
+      "answer_en": "I offer to help in a supportive way, perhaps by asking, 'Is there anything I can do to help?' or 'Would you like to talk through the problem together?'"
+    }
+  },
+  {
+    "id": 22,
+    "level": "Intermediate",
+    "sub_topic": "Career Goals & Growth",
+    "question_en": "What is something new you have learned recently?",
+    "question_bn": "সম্প্রতি নতুন কী শিখেছেন?",
+    "details": {
+      "what_is_en": "This shows that you are a continuous learner and are actively keeping your skills up-to-date in a fast-changing industry.",
+      "what_is_bn": "এটি দেখায় যে আপনি একজন নিরন্তর শিক্ষার্থী এবং দ্রুত পরিবর্তনশীল এই শিল্পে সক্রিয়ভাবে আপনার দক্ষতা আপডেট রাখছেন।"
+    },
+    "vip_qa": {
+      "question_en": "How did you apply that new skill in a practical way?",
+      "answer_en": "I immediately applied my TypeScript knowledge to my 'CourseHub' project. This helped reduce runtime errors and made the codebase much easier to maintain and refactor."
+    }
+  },
+  {
+    "id": 23,
+    "level": "Intermediate",
+    "sub_topic": "Situational & Behavioral",
+    "question_en": "How do you handle ambiguous or incomplete requirements?",
+    "question_bn": "আপনি কীভাবে অস্পষ্ট বা অসম্পূর্ণ প্রয়োজনীয়তা সামলান?",
+    "details": {
+      "what_is_en": "They want to assess your communication skills and proactiveness. Do you wait to be told what to do, or do you seek clarity?",
+      "what_is_bn": "তারা আপনার যোগাযোগ দক্ষতা এবং সক্রিয়তা মূল্যায়ন করতে চায়। আপনি কি নির্দেশনার জন্য অপেক্ষা করেন, নাকি নিজে থেকে বিষয়টি স্পষ্ট করার চেষ্টা করেন?"
+    },
+    "vip_qa": {
+      "question_en": "What do you do if the project manager is unavailable to provide clarity?",
+      "answer_en": "I would document my assumptions and share them with the team. I would then work on another priority task while waiting for them, or build the feature based on the most logical assumption, making it easy to change later."
+    }
+  },
+  {
+    "id": 24,
+    "level": "Beginner",
+    "sub_topic": "Work Style & Quality",
+    "question_en": "What does 'taking ownership' mean to you?",
+    "question_bn": "একটি প্রকল্পের 'মালিকানা নেওয়া' বলতে আপনি কী বোঝেন?",
+    "details": {
+      "what_is_en": "This question assesses your sense of responsibility and accountability. They want to know if you are committed to the success of your work.",
+      "what_is_bn": "এই প্রশ্নটি আপনার দায়িত্ববোধ এবং জবাবদিহিতা মূল্যায়ন করে। তারা জানতে চায় আপনি আপনার কাজের সাফল্যের প্রতি প্রতিশ্রুতিবদ্ধ কিনা।"
+    },
+    "vip_qa": {
+      "question_en": "How does taking ownership benefit the team?",
+      "answer_en": "When everyone takes ownership, it leads to higher quality work because we all care about the final outcome. It also reduces the need for micromanagement and builds trust within the team."
+    }
+  },
+  {
+    "id": 25,
+    "level": "Advanced",
+    "sub_topic": "Situational & Behavioral",
+    "question_en": "Tell me about a high-pressure situation you've faced.",
+    "question_bn": "আপনি সম্মুখীন হয়েছেন এমন একটি উচ্চ-চাপের পরিস্থিতি সম্পর্কে বলুন।",
+    "details": {
+      "what_is_en": "They want to see how you perform under stress. Can you stay calm, think logically, and work effectively when the stakes are high?",
+      "what_is_bn": "তারা দেখতে চায় আপনি চাপের মধ্যে কেমন কাজ করেন। আপনি কি শান্ত থাকতে, যুক্তিযুক্তভাবে চিন্তা করতে এবং কার্যকরভাবে কাজ করতে পারেন যখন পরিস্থিতি কঠিন থাকে?"
+    },
+    "vip_qa": {
+      "question_en": "What did you learn about yourself from that high-pressure situation?",
+      "answer_en": "I learned that I can remain calm and methodical under pressure by focusing on a step-by-step process. It taught me the importance of not letting stress cloud my problem-solving abilities."
+    }
+  },
+  {
+    "id": 26,
+    "level": "Intermediate",
+    "sub_topic": "Technical & Behavioral",
+    "question_en": "How would you approach working on a large, legacy codebase?",
+    "question_bn": "আপনি কীভাবে একটি বড়, পুরোনো (legacy) কোডবেসে কাজ শুরু করবেন?",
+    "details": {
+      "what_is_en": "This question tests your patience, strategy, and respect for existing code. They want to know if you can contribute without breaking things.",
+      "what_is_bn": "এই প্রশ্নটি আপনার ধৈর্য, কৌশল এবং বিদ্যমান কোডের প্রতি সম্মান পরীক্ষা করে। তারা জানতে চায় আপনি কিছু না ভেঙে অবদান রাখতে পারবেন কিনা।"
+    },
+    "vip_qa": {
+      "question_en": "What is the first thing you would do when assigned a bug in a legacy system?",
+      "answer_en": "The first thing I would do is try to replicate the bug consistently. Then I would use logging and debugging tools to trace the flow of data and identify the specific part of the code causing the issue before attempting any fix."
+    }
+  },
+  {
+    "id": 27,
+    "level": "Intermediate",
+    "sub_topic": "Technical & Behavioral",
+    "question_en": "How do you incorporate security into your development process?",
+    "question_bn": "আপনি আপনার ডেভেলপমেন্ট প্রক্রিয়ায় নিরাপত্তা কীভাবে অন্তর্ভুক্ত করেন?",
+    "details": {
+      "what_is_en": "They want to see if you have a security-first mindset. Do you think about potential vulnerabilities as you code?",
+      "what_is_bn": "তারা দেখতে চায় আপনার নিরাপত্তা-প্রথম মানসিকতা আছে কিনা। আপনি কি কোড করার সময় সম্ভাব্য দুর্বলতা সম্পর্কে চিন্তা করেন?"
+    },
+    "vip_qa": {
+      "question_en": "What is one common security vulnerability you always check for?",
+      "answer_en": "I always check for Cross-Site Scripting (XSS) vulnerabilities by ensuring that any user-generated content is properly sanitized before it is rendered on a page."
+    }
+  },
+  {
+    "id": 28,
+    "level": "Beginner",
+    "sub_topic": "Team Dynamics",
+    "question_en": "How would your colleagues describe you?",
+    "question_bn": "আপনার সহকর্মীরা আপনাকে কীভাবে বর্ণনা করবে?",
+    "details": {
+      "what_is_en": "This question provides insight into your work style and interpersonal skills from an outside perspective.",
+      "what_is_bn": "এই প্রশ্নটি বাইরের দৃষ্টিভঙ্গি থেকে আপনার কাজের ধরন এবং আন্তঃব্যক্তিক দক্ষতা সম্পর্কে ধারণা দেয়।"
+    },
+    "vip_qa": {
+      "question_en": "What would they say is the best part about working with you?",
+      "answer_en": "They would likely say that I am reliable. When I commit to a task, I see it through to completion, and I'm always ready to help if they need support."
+    }
+  },
+  {
+    "id": 29,
+    "level": "Intermediate",
+    "sub_topic": "Team Dynamics",
+    "question_en": "What do you look for in a manager?",
+    "question_bn": "আপনি একজন ম্যানেজারের মধ্যে কী কী গুণাবলী খোঁজেন?",
+    "details": {
+      "what_is_en": "This helps the interviewer understand what kind of work environment you thrive in and if you would be a good fit for their management style.",
+      "what_is_bn": "এটি ইন্টারভিউয়ারকে বুঝতে সাহায্য করে যে আপনি কোন ধরনের কাজের পরিবেশে উন্নতি করেন এবং আপনি তাদের পরিচালনার শৈলীর জন্য উপযুক্ত হবেন কিনা।"
+    },
+    "vip_qa": {
+      "question_en": "How do you prefer to receive feedback from your manager?",
+      "answer_en": "I prefer regular, direct, and constructive feedback. A mix of scheduled one-on-ones and immediate feedback on specific tasks works best for me as it helps me learn and adjust quickly."
+    }
+  },
+  {
+    "id": 30,
+    "level": "Beginner",
+    "sub_topic": "Work Style & Quality",
+    "question_en": "How do you handle repetitive or less exciting tasks?",
+    "question_bn": "আপনি পুনরাবৃত্তিমূলক বা কম আকর্ষণীয় কাজ কীভাবে সামলান?",
+    "details": {
+      "what_is_en": "This assesses your professionalism and attitude. They want to know if you can stay motivated and deliver quality work even on mundane tasks.",
+      "what_is_bn": "এটি আপনার পেশাদারিত্ব এবং মনোভাব মূল্যায়ন করে। তারা জানতে চায় আপনি কি সাধারণ কাজেও অনুপ্রাণিত থাকতে এবং মানসম্মত কাজ করতে পারেন কিনা।"
+    },
+    "vip_qa": {
+      "question_en": "Can you give an example of a repetitive task you automated?",
+      "answer_en": "In one project, I had to manually create component boilerplate files (CSS, Test, Storybook) every time. I wrote a simple command-line script to automate this process, which saved me and the team a lot of time."
+    }
+  }
+]
