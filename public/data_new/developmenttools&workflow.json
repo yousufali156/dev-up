@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "question": "What is Postman?",
+      "options": [
+        "A developer should look for: 1. **Design System Specs:** Clear definitions of colors, typography, and spacing. 2. **Component States:** Designs for all interactive states (hover, focus, disabled). 3. **Layout and Grids:** Information on responsive grid systems. 4. **Exportable Assets:** Icons and images marked as exportable, preferably as SVG.",
+        "A Sprint is a short, time-boxed period (usually 1-4 weeks) during which a scrum team works to complete a set amount of work. At the end of the Sprint, the team aims to have a potentially shippable product increment.",
+        "**Collections** are groups of saved API requests. **Environments** are sets of key-value variables. By using them together, you can write your requests with variables like `{{baseURL}}`. Then, you can switch between environments (e.g., Development, Staging, Production) to run the same collection of tests against different servers without changing a single request.",
+        "Popular tools include Nx, Turborepo, and Lerna. These tools help manage dependencies between projects, run commands across the entire repo, and optimize build and test processes by only re-running tasks for code that has changed."
+      ],
+      "answer": "**Collections** are groups of saved API requests. **Environments** are sets of key-value variables. By using them together, you can write your requests with variables like `{{baseURL}}`. Then, you can switch between environments (e.g., Development, Staging, Production) to run the same collection of tests against different servers without changing a single request."
+    },
+    {
+      "question": "What is Agile methodology?",
+      "options": [
+        "If the script exits with a non-zero status (indicating an error, like a failed lint check or test), Git will abort the commit process. This ensures that code that does not meet the quality standards is never committed.",
+        "They form a hierarchy. An **Epic** is a large body of work (e.g., 'Implement Payment Gateway'). An epic is broken down into smaller **Stories** (user-centric features). A Story is then broken down into technical **Tasks** for developers (e.g., 'Create payment API endpoint').",
+        "A Sprint is a short, time-boxed period (usually 1-4 weeks) during which a scrum team works to complete a set amount of work. At the end of the Sprint, the team aims to have a potentially shippable product increment.",
+        "Popular tools include Nx, Turborepo, and Lerna. These tools help manage dependencies between projects, run commands across the entire repo, and optimize build and test processes by only re-running tasks for code that has changed."
+      ],
+      "answer": "A Sprint is a short, time-boxed period (usually 1-4 weeks) during which a scrum team works to complete a set amount of work. At the end of the Sprint, the team aims to have a potentially shippable product increment."
+    },
+    {
+      "question": "What is Jira?",
+      "options": [
+        "They form a hierarchy. An **Epic** is a large body of work (e.g., 'Implement Payment Gateway'). An epic is broken down into smaller **Stories** (user-centric features). A Story is then broken down into technical **Tasks** for developers (e.g., 'Create payment API endpoint').",
+        "A developer should look for: 1. **Design System Specs:** Clear definitions of colors, typography, and spacing. 2. **Component States:** Designs for all interactive states (hover, focus, disabled). 3. **Layout and Grids:** Information on responsive grid systems. 4. **Exportable Assets:** Icons and images marked as exportable, preferably as SVG.",
+        "`npm` and `yarn` (v1) create a separate copy of each package inside every project's `node_modules` folder. `pnpm` uses a single, content-addressable store on the disk and then uses hard links to link packages into `node_modules`, preventing duplication and saving significant disk space.",
+        "A **401 Unauthorized** error means the client must authenticate themselves to get the requested response. A **403 Forbidden** error means the client does not have access rights to the content, and authentication will not make a difference."
+      ],
+      "answer": "They form a hierarchy. An **Epic** is a large body of work (e.g., 'Implement Payment Gateway'). An epic is broken down into smaller **Stories** (user-centric features). A Story is then broken down into technical **Tasks** for developers (e.g., 'Create payment API endpoint')."
+    },
+    {
+      "question": "What are the roles of Webpack and Babel?",
+      "options": [
+        "**Loaders** work at the individual file level, transforming them before they are added to the dependency graph (e.g., `babel-loader` transforms a `.js` file). **Plugins** work at the bundle level and can modify the entire compilation process (e.g., `HtmlWebpackPlugin` generates an HTML file).",
+        "GraphQL solves the problems of over-fetching (getting more data than you need) and under-fetching (having to make multiple requests to get all the data you need). With GraphQL, the client specifies the exact shape of the required data in a single request.",
+        "A Sprint is a short, time-boxed period (usually 1-4 weeks) during which a scrum team works to complete a set amount of work. At the end of the Sprint, the team aims to have a potentially shippable product increment.",
+        "A **'launch'** configuration will start your application and then attach the debugger to it. An **'attach'** configuration is used to connect the debugger to an already running process (for example, a Node.js server started with the `--inspect` flag)."
+      ],
+      "answer": "**Loaders** work at the individual file level, transforming them before they are added to the dependency graph (e.g., `babel-loader` transforms a `.js` file). **Plugins** work at the bundle level and can modify the entire compilation process (e.g., `HtmlWebpackPlugin` generates an HTML file)."
+    },
+    {
+      "question": "What is Figma?",
+      "options": [
+        "A developer should look for: 1. **Design System Specs:** Clear definitions of colors, typography, and spacing. 2. **Component States:** Designs for all interactive states (hover, focus, disabled). 3. **Layout and Grids:** Information on responsive grid systems. 4. **Exportable Assets:** Icons and images marked as exportable, preferably as SVG.",
+        "A Sprint is a short, time-boxed period (usually 1-4 weeks) during which a scrum team works to complete a set amount of work. At the end of the Sprint, the team aims to have a potentially shippable product increment.",
+        "A **401 Unauthorized** error means the client must authenticate themselves to get the requested response. A **403 Forbidden** error means the client does not have access rights to the content, and authentication will not make a difference.",
+        "**Loaders** work at the individual file level, transforming them before they are added to the dependency graph (e.g., `babel-loader` transforms a `.js` file). **Plugins** work at the bundle level and can modify the entire compilation process (e.g., `HtmlWebpackPlugin` generates an HTML file)."
+      ],
+      "answer": "A developer should look for: 1. **Design System Specs:** Clear definitions of colors, typography, and spacing. 2. **Component States:** Designs for all interactive states (hover, focus, disabled). 3. **Layout and Grids:** Information on responsive grid systems. 4. **Exportable Assets:** Icons and images marked as exportable, preferably as SVG."
+    },
+    {
+      "question": "What is VS Code?",
+      "options": [
+        "`console.log()` only shows you a value at a specific point in time. Breakpoints allow you to pause execution, inspect the entire call stack, see the values of all variables in scope, and execute code line-by-line, providing a much more powerful and interactive debugging experience.",
+        "The Command Palette (opened with `Ctrl+Shift+P` or `Cmd+Shift+P`) is a search bar that gives you access to all available commands in VS Code. It's incredibly useful because it allows you to perform almost any action without having to navigate through menus or memorize keyboard shortcuts.",
+        "You create a hyperlink by wrapping the link text in square brackets `[]` and the URL in parentheses `()`. For example: `[Google](https://www.google.com)`.",
+        "A **'launch'** configuration will start your application and then attach the debugger to it. An **'attach'** configuration is used to connect the debugger to an already running process (for example, a Node.js server started with the `--inspect` flag)."
+      ],
+      "answer": "The Command Palette (opened with `Ctrl+Shift+P` or `Cmd+Shift+P`) is a search bar that gives you access to all available commands in VS Code. It's incredibly useful because it allows you to perform almost any action without having to navigate through menus or memorize keyboard shortcuts."
+    },
+    {
+      "question": "What are ESLint and Prettier used for?",
+      "options": [
+        "You create a hyperlink by wrapping the link text in square brackets `[]` and the URL in parentheses `()`. For example: `[Google](https://www.google.com)`.",
+        "A **401 Unauthorized** error means the client must authenticate themselves to get the requested response. A **403 Forbidden** error means the client does not have access rights to the content, and authentication will not make a difference.",
+        "Running them automatically with a pre-commit hook (using tools like Husky) ensures that no inconsistent or error-prone code is ever committed to the repository. This maintains a high standard of code quality across the entire team without relying on individual discipline.",
+        "`console.log()` only shows you a value at a specific point in time. Breakpoints allow you to pause execution, inspect the entire call stack, see the values of all variables in scope, and execute code line-by-line, providing a much more powerful and interactive debugging experience."
+      ],
+      "answer": "Running them automatically with a pre-commit hook (using tools like Husky) ensures that no inconsistent or error-prone code is ever committed to the repository. This maintains a high standard of code quality across the entire team without relying on individual discipline."
+    },
+    {
+      "question": "What are the main panels of the Chrome DevTools used by developers?",
+      "options": [
+        "**Loaders** work at the individual file level, transforming them before they are added to the dependency graph (e.g., `babel-loader` transforms a `.js` file). **Plugins** work at the bundle level and can modify the entire compilation process (e.g., `HtmlWebpackPlugin` generates an HTML file).",
+        "Committing the lock file is crucial for team collaboration and CI/CD pipelines. It ensures that every developer and every build process installs the exact same version of every dependency, which prevents 'works on my machine' problems.",
+        "Token-based authentication is preferred because it's stateless. The server does not need to store any session information in its database or memory. The token itself contains all the necessary information for authentication, making it easier to scale horizontally.",
+        "The Network panel's 'waterfall' chart shows how long each asset (HTML, CSS, JS, images) takes to download. You can identify slow requests, large unoptimized images, or render-blocking resources that are delaying the page load."
+      ],
+      "answer": "The Network panel's 'waterfall' chart shows how long each asset (HTML, CSS, JS, images) takes to download. You can identify slow requests, large unoptimized images, or render-blocking resources that are delaying the page load."
+    },
+    {
+      "question": "What is Vite?",
+      "options": [
+        "Popular tools include Nx, Turborepo, and Lerna. These tools help manage dependencies between projects, run commands across the entire repo, and optimize build and test processes by only re-running tasks for code that has changed.",
+        "Integrations are very useful for automating workflows. For example, you can integrate GitHub to get notifications for new Pull Requests directly in a channel, or integrate Jira to get updates on task statuses, keeping the entire team informed in one place.",
+        "Webpack bundles your entire application before starting the dev server. Vite, on the other hand, serves files on-demand as the browser requests them, using native ES module support. This means it doesn't have to pre-bundle everything, resulting in a near-instant server start time.",
+        "Token-based authentication is preferred because it's stateless. The server does not need to store any session information in its database or memory. The token itself contains all the necessary information for authentication, making it easier to scale horizontally."
+      ],
+      "answer": "Webpack bundles your entire application before starting the dev server. Vite, on the other hand, serves files on-demand as the browser requests them, using native ES module support. This means it doesn't have to pre-bundle everything, resulting in a near-instant server start time."
+    },
+    {
+      "question": "What is the difference between `npm`, `yarn`, and `pnpm`?",
+      "options": [
+        "**Collections** are groups of saved API requests. **Environments** are sets of key-value variables. By using them together, you can write your requests with variables like `{{baseURL}}`. Then, you can switch between environments (e.g., Development, Staging, Production) to run the same collection of tests against different servers without changing a single request.",
+        "A developer should look for: 1. **Design System Specs:** Clear definitions of colors, typography, and spacing. 2. **Component States:** Designs for all interactive states (hover, focus, disabled). 3. **Layout and Grids:** Information on responsive grid systems. 4. **Exportable Assets:** Icons and images marked as exportable, preferably as SVG.",
+        "`npm` and `yarn` (v1) create a separate copy of each package inside every project's `node_modules` folder. `pnpm` uses a single, content-addressable store on the disk and then uses hard links to link packages into `node_modules`, preventing duplication and saving significant disk space.",
+        "A Sprint is a short, time-boxed period (usually 1-4 weeks) during which a scrum team works to complete a set amount of work. At the end of the Sprint, the team aims to have a potentially shippable product increment."
+      ],
+      "answer": "`npm` and `yarn` (v1) create a separate copy of each package inside every project's `node_modules` folder. `pnpm` uses a single, content-addressable store on the disk and then uses hard links to link packages into `node_modules`, preventing duplication and saving significant disk space."
+    },
+    {
+      "question": "What is Markdown?",
+      "options": [
+        "You create a hyperlink by wrapping the link text in square brackets `[]` and the URL in parentheses `()`. For example: `[Google](https://www.google.com)`.",
+        "Integrations are very useful for automating workflows. For example, you can integrate GitHub to get notifications for new Pull Requests directly in a channel, or integrate Jira to get updates on task statuses, keeping the entire team informed in one place.",
+        "**Loaders** work at the individual file level, transforming them before they are added to the dependency graph (e.g., `babel-loader` transforms a `.js` file). **Plugins** work at the bundle level and can modify the entire compilation process (e.g., `HtmlWebpackPlugin` generates an HTML file).",
+        "If the script exits with a non-zero status (indicating an error, like a failed lint check or test), Git will abort the commit process. This ensures that code that does not meet the quality standards is never committed."
+      ],
+      "answer": "You create a hyperlink by wrapping the link text in square brackets `[]` and the URL in parentheses `()`. For example: `[Google](https://www.google.com)`."
+    },
+    {
+      "question": "What is the purpose of the `launch.json` file in VS Code?",
+      "options": [
+        "A **'launch'** configuration will start your application and then attach the debugger to it. An **'attach'** configuration is used to connect the debugger to an already running process (for example, a Node.js server started with the `--inspect` flag).",
+        "`console.log()` only shows you a value at a specific point in time. Breakpoints allow you to pause execution, inspect the entire call stack, see the values of all variables in scope, and execute code line-by-line, providing a much more powerful and interactive debugging experience.",
+        "Committing the lock file is crucial for team collaboration and CI/CD pipelines. It ensures that every developer and every build process installs the exact same version of every dependency, which prevents 'works on my machine' problems.",
+        "Webpack bundles your entire application before starting the dev server. Vite, on the other hand, serves files on-demand as the browser requests them, using native ES module support. This means it doesn't have to pre-bundle everything, resulting in a near-instant server start time."
+      ],
+      "answer": "A **'launch'** configuration will start your application and then attach the debugger to it. An **'attach'** configuration is used to connect the debugger to an already running process (for example, a Node.js server started with the `--inspect` flag)."
+    },
+    {
+      "question": "How can you debug JavaScript using the `debugger` statement?",
+      "options": [
+        "Token-based authentication is preferred because it's stateless. The server does not need to store any session information in its database or memory. The token itself contains all the necessary information for authentication, making it easier to scale horizontally.",
+        "The Command Palette (opened with `Ctrl+Shift+P` or `Cmd+Shift+P`) is a search bar that gives you access to all available commands in VS Code. It's incredibly useful because it allows you to perform almost any action without having to navigate through menus or memorize keyboard shortcuts.",
+        "Integrations are very useful for automating workflows. For example, you can integrate GitHub to get notifications for new Pull Requests directly in a channel, or integrate Jira to get updates on task statuses, keeping the entire team informed in one place.",
+        "`console.log()` only shows you a value at a specific point in time. Breakpoints allow you to pause execution, inspect the entire call stack, see the values of all variables in scope, and execute code line-by-line, providing a much more powerful and interactive debugging experience."
+      ],
+      "answer": "`console.log()` only shows you a value at a specific point in time. Breakpoints allow you to pause execution, inspect the entire call stack, see the values of all variables in scope, and execute code line-by-line, providing a much more powerful and interactive debugging experience."
+    },
+    {
+      "question": "What is Slack?",
+      "options": [
+        "Webpack bundles your entire application before starting the dev server. Vite, on the other hand, serves files on-demand as the browser requests them, using native ES module support. This means it doesn't have to pre-bundle everything, resulting in a near-instant server start time.",
+        "Integrations are very useful for automating workflows. For example, you can integrate GitHub to get notifications for new Pull Requests directly in a channel, or integrate Jira to get updates on task statuses, keeping the entire team informed in one place.",
+        "**Collections** are groups of saved API requests. **Environments** are sets of key-value variables. By using them together, you can write your requests with variables like `{{baseURL}}`. Then, you can switch between environments (e.g., Development, Staging, Production) to run the same collection of tests against different servers without changing a single request.",
+        "Token-based authentication is preferred because it's stateless. The server does not need to store any session information in its database or memory. The token itself contains all the necessary information for authentication, making it easier to scale horizontally."
+      ],
+      "answer": "Integrations are very useful for automating workflows. For example, you can integrate GitHub to get notifications for new Pull Requests directly in a channel, or integrate Jira to get updates on task statuses, keeping the entire team informed in one place."
+    },
+    {
+      "question": "What is a monorepo?",
+      "options": [
+        "GraphQL solves the problems of over-fetching (getting more data than you need) and under-fetching (having to make multiple requests to get all the data you need). With GraphQL, the client specifies the exact shape of the required data in a single request.",
+        "`console.log()` only shows you a value at a specific point in time. Breakpoints allow you to pause execution, inspect the entire call stack, see the values of all variables in scope, and execute code line-by-line, providing a much more powerful and interactive debugging experience.",
+        "A **'launch'** configuration will start your application and then attach the debugger to it. An **'attach'** configuration is used to connect the debugger to an already running process (for example, a Node.js server started with the `--inspect` flag).",
+        "Popular tools include Nx, Turborepo, and Lerna. These tools help manage dependencies between projects, run commands across the entire repo, and optimize build and test processes by only re-running tasks for code that has changed."
+      ],
+      "answer": "Popular tools include Nx, Turborepo, and Lerna. These tools help manage dependencies between projects, run commands across the entire repo, and optimize build and test processes by only re-running tasks for code that has changed."
+    },
+    {
+      "question": "What is a `package-lock.json` file?",
+      "options": [
+        "The Command Palette (opened with `Ctrl+Shift+P` or `Cmd+Shift+P`) is a search bar that gives you access to all available commands in VS Code. It's incredibly useful because it allows you to perform almost any action without having to navigate through menus or memorize keyboard shortcuts.",
+        "Committing the lock file is crucial for team collaboration and CI/CD pipelines. It ensures that every developer and every build process installs the exact same version of every dependency, which prevents 'works on my machine' problems.",
+        "Webpack bundles your entire application before starting the dev server. Vite, on the other hand, serves files on-demand as the browser requests them, using native ES module support. This means it doesn't have to pre-bundle everything, resulting in a near-instant server start time.",
+        "Running them automatically with a pre-commit hook (using tools like Husky) ensures that no inconsistent or error-prone code is ever committed to the repository. This maintains a high standard of code quality across the entire team without relying on individual discipline."
+      ],
+      "answer": "Committing the lock file is crucial for team collaboration and CI/CD pipelines. It ensures that every developer and every build process installs the exact same version of every dependency, which prevents 'works on my machine' problems."
+    },
+    {
+      "question": "What is the difference between REST and GraphQL?",
+      "options": [
+        "Running them automatically with a pre-commit hook (using tools like Husky) ensures that no inconsistent or error-prone code is ever committed to the repository. This maintains a high standard of code quality across the entire team without relying on individual discipline.",
+        "A **'launch'** configuration will start your application and then attach the debugger to it. An **'attach'** configuration is used to connect the debugger to an already running process (for example, a Node.js server started with the `--inspect` flag).",
+        "**Loaders** work at the individual file level, transforming them before they are added to the dependency graph (e.g., `babel-loader` transforms a `.js` file). **Plugins** work at the bundle level and can modify the entire compilation process (e.g., `HtmlWebpackPlugin` generates an HTML file).",
+        "GraphQL solves the problems of over-fetching (getting more data than you need) and under-fetching (having to make multiple requests to get all the data you need). With GraphQL, the client specifies the exact shape of the required data in a single request."
+      ],
+      "answer": "GraphQL solves the problems of over-fetching (getting more data than you need) and under-fetching (having to make multiple requests to get all the data you need). With GraphQL, the client specifies the exact shape of the required data in a single request."
+    },
+    {
+      "question": "What are HTTP status codes?",
+      "options": [
+        "A **401 Unauthorized** error means the client must authenticate themselves to get the requested response. A **403 Forbidden** error means the client does not have access rights to the content, and authentication will not make a difference.",
+        "`npm` and `yarn` (v1) create a separate copy of each package inside every project's `node_modules` folder. `pnpm` uses a single, content-addressable store on the disk and then uses hard links to link packages into `node_modules`, preventing duplication and saving significant disk space.",
+        "They form a hierarchy. An **Epic** is a large body of work (e.g., 'Implement Payment Gateway'). An epic is broken down into smaller **Stories** (user-centric features). A Story is then broken down into technical **Tasks** for developers (e.g., 'Create payment API endpoint').",
+        "GraphQL solves the problems of over-fetching (getting more data than you need) and under-fetching (having to make multiple requests to get all the data you need). With GraphQL, the client specifies the exact shape of the required data in a single request."
+      ],
+      "answer": "A **401 Unauthorized** error means the client must authenticate themselves to get the requested response. A **403 Forbidden** error means the client does not have access rights to the content, and authentication will not make a difference."
+    },
+    {
+      "question": "What is a pre-commit hook?",
+      "options": [
+        "If the script exits with a non-zero status (indicating an error, like a failed lint check or test), Git will abort the commit process. This ensures that code that does not meet the quality standards is never committed.",
+        "They form a hierarchy. An **Epic** is a large body of work (e.g., 'Implement Payment Gateway'). An epic is broken down into smaller **Stories** (user-centric features). A Story is then broken down into technical **Tasks** for developers (e.g., 'Create payment API endpoint').",
+        "**Loaders** work at the individual file level, transforming them before they are added to the dependency graph (e.g., `babel-loader` transforms a `.js` file). **Plugins** work at the bundle level and can modify the entire compilation process (e.g., `HtmlWebpackPlugin` generates an HTML file).",
+        "Popular tools include Nx, Turborepo, and Lerna. These tools help manage dependencies between projects, run commands across the entire repo, and optimize build and test processes by only re-running tasks for code that has changed."
+      ],
+      "answer": "If the script exits with a non-zero status (indicating an error, like a failed lint check or test), Git will abort the commit process. This ensures that code that does not meet the quality standards is never committed."
+    },
+    {
+      "question": "What is the difference between session-based authentication and token-based authentication?",
+      "options": [
+        "Webpack bundles your entire application before starting the dev server. Vite, on the other hand, serves files on-demand as the browser requests them, using native ES module support. This means it doesn't have to pre-bundle everything, resulting in a near-instant server start time.",
+        "A Sprint is a short, time-boxed period (usually 1-4 weeks) during which a scrum team works to complete a set amount of work. At the end of the Sprint, the team aims to have a potentially shippable product increment.",
+        "They form a hierarchy. An **Epic** is a large body of work (e.g., 'Implement Payment Gateway'). An epic is broken down into smaller **Stories** (user-centric features). A Story is then broken down into technical **Tasks** for developers (e.g., 'Create payment API endpoint').",
+        "Token-based authentication is preferred because it's stateless. The server does not need to store any session information in its database or memory. The token itself contains all the necessary information for authentication, making it easier to scale horizontally."
+      ],
+      "answer": "Token-based authentication is preferred because it's stateless. The server does not need to store any session information in its database or memory. The token itself contains all the necessary information for authentication, making it easier to scale horizontally."
+    }
+  ]
+}

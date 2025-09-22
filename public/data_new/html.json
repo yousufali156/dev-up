@@ -1,0 +1,504 @@
+{
+  "questions": [
+    {
+      "question": "What is HTML?",
+      "options": [
+        "Because it uses tags to 'mark up' or annotate content to define its structure and meaning, rather than to perform programming logic.",
+        "The main advantage of inline SVG is that its individual parts can be styled and manipulated with CSS and JavaScript. This allows for dynamic animations and interactive graphics, which is not possible when using an `<img>` tag to display the SVG.",
+        "'Divitis' is the excessive use of `<div>` tags when more semantic elements like `<nav>`, `<main>`, or `<article>` would be more appropriate. It's bad practice because it leads to less meaningful and less accessible HTML.",
+        "Storing a JWT in LocalStorage is vulnerable to **Cross-Site Scripting (XSS)** attacks. A safer alternative is to store the JWT in an **`HttpOnly` cookie**. An `HttpOnly` cookie cannot be accessed by client-side JavaScript, mitigating this specific risk."
+      ],
+      "answer": "Because it uses tags to 'mark up' or annotate content to define its structure and meaning, rather than to perform programming logic."
+    },
+    {
+      "question": "What is the difference between an HTML element and an HTML tag?",
+      "options": [
+        "A regular element has an opening tag, content, and a closing tag (e.g., <p>...</p>). An empty element has no content or closing tag and is self-closing (e.g., <br>, <img>, <hr>).",
+        "The first rule is: 'If you can use a native HTML element or attribute with the semantics and behavior you require already built in, use it instead of re-purposing an element and adding an ARIA role, state, or property to make it accessible'.",
+        "GET is idempotent. Idempotency means that making the same request multiple times will produce the same result as making it once. POST is not idempotent, as making the same request multiple times will typically create multiple resources.",
+        "Storing a JWT in LocalStorage is vulnerable to **Cross-Site Scripting (XSS)** attacks. A safer alternative is to store the JWT in an **`HttpOnly` cookie**. An `HttpOnly` cookie cannot be accessed by client-side JavaScript, mitigating this specific risk."
+      ],
+      "answer": "A regular element has an opening tag, content, and a closing tag (e.g., <p>...</p>). An empty element has no content or closing tag and is self-closing (e.g., <br>, <img>, <hr>)."
+    },
+    {
+      "question": "What is an HTML attribute?",
+      "options": [
+        "The `data-*` attributes are used to store custom data private to the page or application. Their main advantage is making custom data easily accessible to JavaScript without misusing standard attributes.",
+        "Absolutely not. Client-side validation is a user experience feature, not a security measure. A malicious user can easily bypass it. All data must always be validated again on the server-side.",
+        "Yes, you can nest lists. To do so correctly, you must place the new `<ul>` or `<ol>` element inside an `<li>` element of the parent list. This is the correct semantic structure for creating sub-lists.",
+        "Using `<figure>` provides a semantic connection between the content and its caption. This is beneficial for accessibility, as screen readers can announce the caption as being associated with the image, providing better context to the user."
+      ],
+      "answer": "The `data-*` attributes are used to store custom data private to the page or application. Their main advantage is making custom data easily accessible to JavaScript without misusing standard attributes."
+    },
+    {
+      "question": "What is the difference between `id` and `class` attributes?",
+      "options": [
+        "It should be declared as early as possible so the browser knows how to interpret the text characters correctly from the beginning. Declaring it late could cause the browser to re-parse the document, and it might incorrectly display some characters before the declaration is read.",
+        "`preload` is for resources needed for the **current** page (high priority). `prefetch` is for resources that might be needed for **future** navigations (low priority). The browser fetches preloaded resources before prefetched ones.",
+        "Multiple deferred scripts are guaranteed to execute in the order they appear in the HTML document. This is not the case for async scripts, which execute in whatever order they finish downloading.",
+        "Always use a `class` when you anticipate applying the same style or behavior to multiple elements. Since an `id` must be unique, it's not reusable. Using classes is a best practice for creating scalable CSS architecture."
+      ],
+      "answer": "Always use a `class` when you anticipate applying the same style or behavior to multiple elements. Since an `id` must be unique, it's not reusable. Using classes is a best practice for creating scalable CSS architecture."
+    },
+    {
+      "question": "What is the purpose of the `<!DOCTYPE html>` declaration?",
+      "options": [
+        "No, you cannot nest comments in HTML. The first `-->` sequence will close the entire comment block, which can lead to parts of your intended comment being rendered on the page.",
+        "If the doctype is omitted, browsers enter 'Quirks Mode', attempting to emulate older browser behavior. This can lead to unpredictable and inconsistent rendering of CSS and layout across different browsers.",
+        "For radio buttons, all options in a group must have the same 'name' attribute. This ensures that only one radio button from that group can be selected at a time.",
+        "The primary benefit is improved user experience, especially on mobile devices. For `type=\"email\"`, mobile browsers will show a keyboard optimized for email entry (with '@' and '.' keys). They also provide built-in client-side validation."
+      ],
+      "answer": "If the doctype is omitted, browsers enter 'Quirks Mode', attempting to emulate older browser behavior. This can lead to unpredictable and inconsistent rendering of CSS and layout across different browsers."
+    },
+    {
+      "question": "How many heading levels are there in HTML?",
+      "options": [
+        "Skipping heading levels can confuse screen reader users and harm accessibility. It creates a disjointed outline of the page, making it difficult for assistive technologies to navigate the content.",
+        "Video files are typically very large. Using a small, optimized poster image allows the page to display a relevant visual quickly while the larger video file loads in the background. This improves the perceived performance of the page.",
+        "This viewport meta tag is essential for responsive web design. It tells the browser to set the width of the page to the device's screen width and to set the initial zoom level to 100%.",
+        "You must provide a fallback because a user can deny the permission request, or their browser/device might not support the API. Without a fallback (e.g., allowing the user to manually enter their location), the feature would be completely broken for those users."
+      ],
+      "answer": "Skipping heading levels can confuse screen reader users and harm accessibility. It creates a disjointed outline of the page, making it difficult for assistive technologies to navigate the content."
+    },
+    {
+      "question": "What are the three types of lists in HTML?",
+      "options": [
+        "You create the target by adding a unique `id` attribute to the element you want to link to. For example, `<h2 id=\"section2\">Section 2</h2>` can be targeted by `<a href=\"#section2\">Jump to Section 2</a>`.",
+        "Yes, you can nest lists. To do so correctly, you must place the new `<ul>` or `<ol>` element inside an `<li>` element of the parent list. This is the correct semantic structure for creating sub-lists.",
+        "Always use a `class` when you anticipate applying the same style or behavior to multiple elements. Since an `id` must be unique, it's not reusable. Using classes is a best practice for creating scalable CSS architecture.",
+        "The vulnerability is called 'tabnabbing'. The new page gets access to the original page via `window.opener`, which it can use to redirect the original page to a malicious site. To fix this, you must add `rel=\"noopener noreferrer\"` to your `<a>` tags."
+      ],
+      "answer": "Yes, you can nest lists. To do so correctly, you must place the new `<ul>` or `<ol>` element inside an `<li>` element of the parent list. This is the correct semantic structure for creating sub-lists."
+    },
+    {
+      "question": "How do you create a hyperlink that opens in a new tab?",
+      "options": [
+        "Storing a JWT in LocalStorage is vulnerable to **Cross-Site Scripting (XSS)** attacks. A safer alternative is to store the JWT in an **`HttpOnly` cookie**. An `HttpOnly` cookie cannot be accessed by client-side JavaScript, mitigating this specific risk.",
+        "Video files are typically very large. Using a small, optimized poster image allows the page to display a relevant visual quickly while the larger video file loads in the background. This improves the perceived performance of the page.",
+        "The vulnerability is called 'tabnabbing'. The new page gets access to the original page via `window.opener`, which it can use to redirect the original page to a malicious site. To fix this, you must add `rel=\"noopener noreferrer\"` to your `<a>` tags.",
+        "No, you cannot nest comments in HTML. The first `-->` sequence will close the entire comment block, which can lead to parts of your intended comment being rendered on the page."
+      ],
+      "answer": "The vulnerability is called 'tabnabbing'. The new page gets access to the original page via `window.opener`, which it can use to redirect the original page to a malicious site. To fix this, you must add `rel=\"noopener noreferrer\"` to your `<a>` tags."
+    },
+    {
+      "question": "What does the `alt` attribute on an `<img>` tag do?",
+      "options": [
+        "Skipping heading levels can confuse screen reader users and harm accessibility. It creates a disjointed outline of the page, making it difficult for assistive technologies to navigate the content.",
+        "An empty `alt` attribute should be used for images that are purely decorative. If an image does not convey meaningful content and is just for visual styling, an empty alt text tells screen readers to ignore it, preventing clutter.",
+        "Multiple deferred scripts are guaranteed to execute in the order they appear in the HTML document. This is not the case for async scripts, which execute in whatever order they finish downloading.",
+        "If the doctype is omitted, browsers enter 'Quirks Mode', attempting to emulate older browser behavior. This can lead to unpredictable and inconsistent rendering of CSS and layout across different browsers."
+      ],
+      "answer": "An empty `alt` attribute should be used for images that are purely decorative. If an image does not convey meaningful content and is just for visual styling, an empty alt text tells screen readers to ignore it, preventing clutter."
+    },
+    {
+      "question": "How do you write a comment in HTML?",
+      "options": [
+        "No, you cannot nest comments in HTML. The first `-->` sequence will close the entire comment block, which can lead to parts of your intended comment being rendered on the page.",
+        "A major benefit is the high probability that the user's browser has already cached that exact file from visiting another website that uses the same CDN link. This means the browser doesn't have to download the file again, leading to very fast load times.",
+        "**Canvas** is pixel-based (raster) and controlled with JavaScript, ideal for dynamic animations and games. **SVG** is XML-based (vector), retains its object model in the DOM, and is better for static, scalable graphics like logos and charts where accessibility is key.",
+        "The `<strong>` tag is better. It adds semantic meaning, signaling to search engines and screen readers that the content is important, whereas `<b>` is purely for visual styling."
+      ],
+      "answer": "No, you cannot nest comments in HTML. The first `-->` sequence will close the entire comment block, which can lead to parts of your intended comment being rendered on the page."
+    },
+    {
+      "question": "What are semantic HTML tags?",
+      "options": [
+        "You can use multiple `<source>` elements inside the `<video>` tag. The browser will use the first format it supports. Example: `<video controls><source src=\"movie.mp4\" type=\"video/mp4\"><source src=\"movie.webm\" type=\"video/webm\"></video>`.",
+        "By default, browsers enforce the Same-Origin Policy, which prevents a script on one page from accessing data on another page with a different origin. If you try to `fetch` data from a different domain, the browser will make a pre-flight request, and the target server must respond with the correct CORS headers (like `Access-Control-Allow-Origin`) for the request to succeed.",
+        "It should be declared as early as possible so the browser knows how to interpret the text characters correctly from the beginning. Declaring it late could cause the browser to re-parse the document, and it might incorrectly display some characters before the declaration is read.",
+        "An `<article>` is for self-contained, independent content that could be distributed on its own (e.g., a blog post). A `<section>` is used to group related content within a document (e.g., an introduction section)."
+      ],
+      "answer": "An `<article>` is for self-contained, independent content that could be distributed on its own (e.g., a blog post). A `<section>` is used to group related content within a document (e.g., an introduction section)."
+    },
+    {
+      "question": "What is the difference between `<b>` and `<strong>` tags?",
+      "options": [
+        "The `<strong>` tag is better. It adds semantic meaning, signaling to search engines and screen readers that the content is important, whereas `<b>` is purely for visual styling.",
+        "The `data-*` attributes are used to store custom data private to the page or application. Their main advantage is making custom data easily accessible to JavaScript without misusing standard attributes.",
+        "`getAttribute` is a general method for any attribute and returns a string. The `dataset` property is a specific API for `data-*` attributes, automatically converting kebab-case attribute names to camelCase property names, which is often more convenient.",
+        "The `<title>` tag is critically important for Search Engine Optimization (SEO). Search engines use its content as the main headline for a page in search results, so a descriptive and relevant title can significantly impact click-through rates."
+      ],
+      "answer": "The `<strong>` tag is better. It adds semantic meaning, signaling to search engines and screen readers that the content is important, whereas `<b>` is purely for visual styling."
+    },
+    {
+      "question": "What is the purpose of the `<label>` tag in a form?",
+      "options": [
+        "The `sandbox` attribute on an `<iframe>` enables a set of restrictions on the framed content. With an empty `sandbox` attribute, it blocks all scripts, form submissions, popups, etc. You can selectively re-enable features by adding values like `allow-scripts` or `allow-forms`.",
+        "Multiple deferred scripts are guaranteed to execute in the order they appear in the HTML document. This is not the case for async scripts, which execute in whatever order they finish downloading.",
+        "1. **Wrapping:** You can wrap the `<input>` inside the `<label>`. 2. **Using `for`/`id`:** Use the `for` attribute on the `<label>`, matching the `id` of the `<input>`. The `for`/`id` method is generally better as it's more robust for assistive technologies and allows flexible layouts.",
+        "These elements provide semantic structure. `<thead>` groups header content, `<tbody>` groups body content, and `<tfoot>` groups footer content. This is important for screen readers, styling, and allowing the browser to scroll the table body independently."
+      ],
+      "answer": "1. **Wrapping:** You can wrap the `<input>` inside the `<label>`. 2. **Using `for`/`id`:** Use the `for` attribute on the `<label>`, matching the `id` of the `<input>`. The `for`/`id` method is generally better as it's more robust for assistive technologies and allows flexible layouts."
+    },
+    {
+      "question": "What is the difference between GET and POST form methods?",
+      "options": [
+        "GET is idempotent. Idempotency means that making the same request multiple times will produce the same result as making it once. POST is not idempotent, as making the same request multiple times will typically create multiple resources.",
+        "A major benefit is the high probability that the user's browser has already cached that exact file from visiting another website that uses the same CDN link. This means the browser doesn't have to download the file again, leading to very fast load times.",
+        "Largely, no. With the advent of HTML5, which is more forgiving and has a robust error-handling specification, the need for XHTML's strictness has diminished. Most modern web development uses HTML5.",
+        "You must omit the `<td>` or `<th>` for that cell in the next row's HTML. The `rowspan` effectively pushes the cells in the subsequent row(s) to the right, so you don't declare a cell for the space it occupies."
+      ],
+      "answer": "GET is idempotent. Idempotency means that making the same request multiple times will produce the same result as making it once. POST is not idempotent, as making the same request multiple times will typically create multiple resources."
+    },
+    {
+      "question": "What are the essential tags for creating a basic HTML table?",
+      "options": [
+        "The main advantage of inline SVG is that its individual parts can be styled and manipulated with CSS and JavaScript. This allows for dynamic animations and interactive graphics, which is not possible when using an `<img>` tag to display the SVG.",
+        "You create the target by adding a unique `id` attribute to the element you want to link to. For example, `<h2 id=\"section2\">Section 2</h2>` can be targeted by `<a href=\"#section2\">Jump to Section 2</a>`.",
+        "A major limitation is that Web Workers do not have direct access to the DOM. They can only communicate with the main thread (which can access the DOM) by sending messages back and forth.",
+        "These elements provide semantic structure. `<thead>` groups header content, `<tbody>` groups body content, and `<tfoot>` groups footer content. This is important for screen readers, styling, and allowing the browser to scroll the table body independently."
+      ],
+      "answer": "These elements provide semantic structure. `<thead>` groups header content, `<tbody>` groups body content, and `<tfoot>` groups footer content. This is important for screen readers, styling, and allowing the browser to scroll the table body independently."
+    },
+    {
+      "question": "What is the purpose of the `<meta>` tag in HTML?",
+      "options": [
+        "This viewport meta tag is essential for responsive web design. It tells the browser to set the width of the page to the device's screen width and to set the initial zoom level to 100%.",
+        "The `<img>` tag is best for SEO because search engine crawlers can easily parse it and index the image, especially when a descriptive `alt` attribute is provided. Images added via CSS `background-image` are typically ignored by crawlers.",
+        "The `<title>` tag must be placed inside the `<head>` section. It's important for SEO as search engines use it as the main title for the search result, and it's also what appears in the browser tab.",
+        "**Canvas** is pixel-based (raster) and controlled with JavaScript, ideal for dynamic animations and games. **SVG** is XML-based (vector), retains its object model in the DOM, and is better for static, scalable graphics like logos and charts where accessibility is key."
+      ],
+      "answer": "This viewport meta tag is essential for responsive web design. It tells the browser to set the width of the page to the device's screen width and to set the initial zoom level to 100%."
+    },
+    {
+      "question": "What are HTML entities?",
+      "options": [
+        "Skipping heading levels can confuse screen reader users and harm accessibility. It creates a disjointed outline of the page, making it difficult for assistive technologies to navigate the content.",
+        "The entity is `&nbsp;`. It's used to prevent a line break from happening at a specific point. For example, you might use it between a number and a unit (e.g., `10&nbsp;px`) to ensure they stay together on the same line.",
+        "An `<article>` is for self-contained, independent content that could be distributed on its own (e.g., a blog post). A `<section>` is used to group related content within a document (e.g., an introduction section).",
+        "This viewport meta tag is essential for responsive web design. It tells the browser to set the width of the page to the device's screen width and to set the initial zoom level to 100%."
+      ],
+      "answer": "The entity is `&nbsp;`. It's used to prevent a line break from happening at a specific point. For example, you might use it between a number and a unit (e.g., `10&nbsp;px`) to ensure they stay together on the same line."
+    },
+    {
+      "question": "What does `<meta charset=\"UTF-8\">` specify?",
+      "options": [
+        "The `<title>` tag must be placed inside the `<head>` section. It's important for SEO as search engines use it as the main title for the search result, and it's also what appears in the browser tab.",
+        "If the doctype is omitted, browsers enter 'Quirks Mode', attempting to emulate older browser behavior. This can lead to unpredictable and inconsistent rendering of CSS and layout across different browsers.",
+        "It should be declared as early as possible so the browser knows how to interpret the text characters correctly from the beginning. Declaring it late could cause the browser to re-parse the document, and it might incorrectly display some characters before the declaration is read.",
+        "You must omit the `<td>` or `<th>` for that cell in the next row's HTML. The `rowspan` effectively pushes the cells in the subsequent row(s) to the right, so you don't declare a cell for the space it occupies."
+      ],
+      "answer": "It should be declared as early as possible so the browser knows how to interpret the text characters correctly from the beginning. Declaring it late could cause the browser to re-parse the document, and it might incorrectly display some characters before the declaration is read."
+    },
+    {
+      "question": "What is the HTML DOM?",
+      "options": [
+        "The **DOM** is the standard model for the entire document. The **Shadow DOM** is a web standard that allows for encapsulated DOM trees with their own styles and scripts. These encapsulated trees are attached to an element but are isolated from the main document DOM, which is the technology that powers Web Components.",
+        "An empty `alt` attribute should be used for images that are purely decorative. If an image does not convey meaningful content and is just for visual styling, an empty alt text tells screen readers to ignore it, preventing clutter.",
+        "It should be declared as early as possible so the browser knows how to interpret the text characters correctly from the beginning. Declaring it late could cause the browser to re-parse the document, and it might incorrectly display some characters before the declaration is read.",
+        "You create the target by adding a unique `id` attribute to the element you want to link to. For example, `<h2 id=\"section2\">Section 2</h2>` can be targeted by `<a href=\"#section2\">Jump to Section 2</a>`."
+      ],
+      "answer": "The **DOM** is the standard model for the entire document. The **Shadow DOM** is a web standard that allows for encapsulated DOM trees with their own styles and scripts. These encapsulated trees are attached to an element but are isolated from the main document DOM, which is the technology that powers Web Components."
+    },
+    {
+      "question": "What is the main difference between HTML and XHTML?",
+      "options": [
+        "Largely, no. With the advent of HTML5, which is more forgiving and has a robust error-handling specification, the need for XHTML's strictness has diminished. Most modern web development uses HTML5.",
+        "The main advantage of inline SVG is that its individual parts can be styled and manipulated with CSS and JavaScript. This allows for dynamic animations and interactive graphics, which is not possible when using an `<img>` tag to display the SVG.",
+        "GET is idempotent. Idempotency means that making the same request multiple times will produce the same result as making it once. POST is not idempotent, as making the same request multiple times will typically create multiple resources.",
+        "The primary benefit is improved user experience, especially on mobile devices. For `type=\"email\"`, mobile browsers will show a keyboard optimized for email entry (with '@' and '.' keys). They also provide built-in client-side validation."
+      ],
+      "answer": "Largely, no. With the advent of HTML5, which is more forgiving and has a robust error-handling specification, the need for XHTML's strictness has diminished. Most modern web development uses HTML5."
+    },
+    {
+      "question": "What is the difference between `<img>`, `<picture>`, and CSS `background-image`?",
+      "options": [
+        "The `<img>` tag is best for SEO because search engine crawlers can easily parse it and index the image, especially when a descriptive `alt` attribute is provided. Images added via CSS `background-image` are typically ignored by crawlers.",
+        "The `sandbox` attribute on an `<iframe>` enables a set of restrictions on the framed content. With an empty `sandbox` attribute, it blocks all scripts, form submissions, popups, etc. You can selectively re-enable features by adding values like `allow-scripts` or `allow-forms`.",
+        "Skipping heading levels can confuse screen reader users and harm accessibility. It creates a disjointed outline of the page, making it difficult for assistive technologies to navigate the content.",
+        "Always use a `class` when you anticipate applying the same style or behavior to multiple elements. Since an `id` must be unique, it's not reusable. Using classes is a best practice for creating scalable CSS architecture."
+      ],
+      "answer": "The `<img>` tag is best for SEO because search engine crawlers can easily parse it and index the image, especially when a descriptive `alt` attribute is provided. Images added via CSS `background-image` are typically ignored by crawlers."
+    },
+    {
+      "question": "What are two major security risks of using `<iframe>` and how can they be mitigated?",
+      "options": [
+        "The **DOM** is the standard model for the entire document. The **Shadow DOM** is a web standard that allows for encapsulated DOM trees with their own styles and scripts. These encapsulated trees are attached to an element but are isolated from the main document DOM, which is the technology that powers Web Components.",
+        "You can add query parameters to the `mailto` link. Use `?subject=YourSubject` to set the subject and `&body=YourBodyText` to set the body content. For example: `mailto:info@example.com?subject=Inquiry&body=Hello`.",
+        "The `sandbox` attribute on an `<iframe>` enables a set of restrictions on the framed content. With an empty `sandbox` attribute, it blocks all scripts, form submissions, popups, etc. You can selectively re-enable features by adding values like `allow-scripts` or `allow-forms`.",
+        "If the doctype is omitted, browsers enter 'Quirks Mode', attempting to emulate older browser behavior. This can lead to unpredictable and inconsistent rendering of CSS and layout across different browsers."
+      ],
+      "answer": "The `sandbox` attribute on an `<iframe>` enables a set of restrictions on the framed content. With an empty `sandbox` attribute, it blocks all scripts, form submissions, popups, etc. You can selectively re-enable features by adding values like `allow-scripts` or `allow-forms`."
+    },
+    {
+      "question": "What is ARIA in HTML?",
+      "options": [
+        "`getAttribute` is a general method for any attribute and returns a string. The `dataset` property is a specific API for `data-*` attributes, automatically converting kebab-case attribute names to camelCase property names, which is often more convenient.",
+        "You must provide a fallback because a user can deny the permission request, or their browser/device might not support the API. Without a fallback (e.g., allowing the user to manually enter their location), the feature would be completely broken for those users.",
+        "The primary benefit is improved user experience, especially on mobile devices. For `type=\"email\"`, mobile browsers will show a keyboard optimized for email entry (with '@' and '.' keys). They also provide built-in client-side validation.",
+        "The first rule is: 'If you can use a native HTML element or attribute with the semantics and behavior you require already built in, use it instead of re-purposing an element and adding an ARIA role, state, or property to make it accessible'."
+      ],
+      "answer": "The first rule is: 'If you can use a native HTML element or attribute with the semantics and behavior you require already built in, use it instead of re-purposing an element and adding an ARIA role, state, or property to make it accessible'."
+    },
+    {
+      "question": "What is the difference between LocalStorage and SessionStorage?",
+      "options": [
+        "External stylesheets are the best practice. They allow for separation of concerns (content vs. presentation), reusability of styles across multiple pages, and improved performance through browser caching of the CSS file.",
+        "A major limitation is that Web Workers do not have direct access to the DOM. They can only communicate with the main thread (which can access the DOM) by sending messages back and forth.",
+        "`getAttribute` is a general method for any attribute and returns a string. The `dataset` property is a specific API for `data-*` attributes, automatically converting kebab-case attribute names to camelCase property names, which is often more convenient.",
+        "Storing a JWT in LocalStorage is vulnerable to **Cross-Site Scripting (XSS)** attacks. A safer alternative is to store the JWT in an **`HttpOnly` cookie**. An `HttpOnly` cookie cannot be accessed by client-side JavaScript, mitigating this specific risk."
+      ],
+      "answer": "Storing a JWT in LocalStorage is vulnerable to **Cross-Site Scripting (XSS)** attacks. A safer alternative is to store the JWT in an **`HttpOnly` cookie**. An `HttpOnly` cookie cannot be accessed by client-side JavaScript, mitigating this specific risk."
+    },
+    {
+      "question": "What is the Canvas element in HTML5?",
+      "options": [
+        "By default, browsers enforce the Same-Origin Policy, which prevents a script on one page from accessing data on another page with a different origin. If you try to `fetch` data from a different domain, the browser will make a pre-flight request, and the target server must respond with the correct CORS headers (like `Access-Control-Allow-Origin`) for the request to succeed.",
+        "Storing a JWT in LocalStorage is vulnerable to **Cross-Site Scripting (XSS)** attacks. A safer alternative is to store the JWT in an **`HttpOnly` cookie**. An `HttpOnly` cookie cannot be accessed by client-side JavaScript, mitigating this specific risk.",
+        "Skipping heading levels can confuse screen reader users and harm accessibility. It creates a disjointed outline of the page, making it difficult for assistive technologies to navigate the content.",
+        "**Canvas** is pixel-based (raster) and controlled with JavaScript, ideal for dynamic animations and games. **SVG** is XML-based (vector), retains its object model in the DOM, and is better for static, scalable graphics like logos and charts where accessibility is key."
+      ],
+      "answer": "**Canvas** is pixel-based (raster) and controlled with JavaScript, ideal for dynamic animations and games. **SVG** is XML-based (vector), retains its object model in the DOM, and is better for static, scalable graphics like logos and charts where accessibility is key."
+    },
+    {
+      "question": "What are some important attributes for the `<video>` tag?",
+      "options": [
+        "A major limitation is that Web Workers do not have direct access to the DOM. They can only communicate with the main thread (which can access the DOM) by sending messages back and forth.",
+        "The `<strong>` tag is better. It adds semantic meaning, signaling to search engines and screen readers that the content is important, whereas `<b>` is purely for visual styling.",
+        "You can use multiple `<source>` elements inside the `<video>` tag. The browser will use the first format it supports. Example: `<video controls><source src=\"movie.mp4\" type=\"video/mp4\"><source src=\"movie.webm\" type=\"video/webm\"></video>`.",
+        "Absolutely not. Client-side validation is a user experience feature, not a security measure. A malicious user can easily bypass it. All data must always be validated again on the server-side."
+      ],
+      "answer": "You can use multiple `<source>` elements inside the `<video>` tag. The browser will use the first format it supports. Example: `<video controls><source src=\"movie.mp4\" type=\"video/mp4\"><source src=\"movie.webm\" type=\"video/webm\"></video>`."
+    },
+    {
+      "question": "What are the two ways to use SVG in an HTML file?",
+      "options": [
+        "Because it uses tags to 'mark up' or annotate content to define its structure and meaning, rather than to perform programming logic.",
+        "The main advantage of inline SVG is that its individual parts can be styled and manipulated with CSS and JavaScript. This allows for dynamic animations and interactive graphics, which is not possible when using an `<img>` tag to display the SVG.",
+        "An `<article>` is for self-contained, independent content that could be distributed on its own (e.g., a blog post). A `<section>` is used to group related content within a document (e.g., an introduction section).",
+        "GET is idempotent. Idempotency means that making the same request multiple times will produce the same result as making it once. POST is not idempotent, as making the same request multiple times will typically create multiple resources."
+      ],
+      "answer": "The main advantage of inline SVG is that its individual parts can be styled and manipulated with CSS and JavaScript. This allows for dynamic animations and interactive graphics, which is not possible when using an `<img>` tag to display the SVG."
+    },
+    {
+      "question": "What are Web Workers?",
+      "options": [
+        "The `<title>` tag is critically important for Search Engine Optimization (SEO). Search engines use its content as the main headline for a page in search results, so a descriptive and relevant title can significantly impact click-through rates.",
+        "Always use a `class` when you anticipate applying the same style or behavior to multiple elements. Since an `id` must be unique, it's not reusable. Using classes is a best practice for creating scalable CSS architecture.",
+        "A major limitation is that Web Workers do not have direct access to the DOM. They can only communicate with the main thread (which can access the DOM) by sending messages back and forth.",
+        "A major advantage is that it works without any JavaScript, making it more robust and accessible by default. It's a native browser feature, so it doesn't require extra code, which can improve performance and reduce maintenance."
+      ],
+      "answer": "A major limitation is that Web Workers do not have direct access to the DOM. They can only communicate with the main thread (which can access the DOM) by sending messages back and forth."
+    },
+    {
+      "question": "What is the difference between `async` and `defer` attributes in a `<script>` tag?",
+      "options": [
+        "Largely, no. With the advent of HTML5, which is more forgiving and has a robust error-handling specification, the need for XHTML's strictness has diminished. Most modern web development uses HTML5.",
+        "`getAttribute` is a general method for any attribute and returns a string. The `dataset` property is a specific API for `data-*` attributes, automatically converting kebab-case attribute names to camelCase property names, which is often more convenient.",
+        "Multiple deferred scripts are guaranteed to execute in the order they appear in the HTML document. This is not the case for async scripts, which execute in whatever order they finish downloading.",
+        "The `<title>` tag is critically important for Search Engine Optimization (SEO). Search engines use its content as the main headline for a page in search results, so a descriptive and relevant title can significantly impact click-through rates."
+      ],
+      "answer": "Multiple deferred scripts are guaranteed to execute in the order they appear in the HTML document. This is not the case for async scripts, which execute in whatever order they finish downloading."
+    },
+    {
+      "question": "What is the purpose of `<link rel=\"preload\">`?",
+      "options": [
+        "No, you cannot nest comments in HTML. The first `-->` sequence will close the entire comment block, which can lead to parts of your intended comment being rendered on the page.",
+        "`preload` is for resources needed for the **current** page (high priority). `prefetch` is for resources that might be needed for **future** navigations (low priority). The browser fetches preloaded resources before prefetched ones.",
+        "An empty `alt` attribute should be used for images that are purely decorative. If an image does not convey meaningful content and is just for visual styling, an empty alt text tells screen readers to ignore it, preventing clutter.",
+        "The entity is `&nbsp;`. It's used to prevent a line break from happening at a specific point. For example, you might use it between a number and a unit (e.g., `10&nbsp;px`) to ensure they stay together on the same line."
+      ],
+      "answer": "`preload` is for resources needed for the **current** page (high priority). `prefetch` is for resources that might be needed for **future** navigations (low priority). The browser fetches preloaded resources before prefetched ones."
+    },
+    {
+      "question": "What is the purpose of the 'name' attribute in an <input> tag?",
+      "options": [
+        "The **DOM** is the standard model for the entire document. The **Shadow DOM** is a web standard that allows for encapsulated DOM trees with their own styles and scripts. These encapsulated trees are attached to an element but are isolated from the main document DOM, which is the technology that powers Web Components.",
+        "A major limitation is that Web Workers do not have direct access to the DOM. They can only communicate with the main thread (which can access the DOM) by sending messages back and forth.",
+        "The main advantage of inline SVG is that its individual parts can be styled and manipulated with CSS and JavaScript. This allows for dynamic animations and interactive graphics, which is not possible when using an `<img>` tag to display the SVG.",
+        "For radio buttons, all options in a group must have the same 'name' attribute. This ensures that only one radio button from that group can be selected at a time."
+      ],
+      "answer": "For radio buttons, all options in a group must have the same 'name' attribute. This ensures that only one radio button from that group can be selected at a time."
+    },
+    {
+      "question": "What does the 'required' attribute do on a form input?",
+      "options": [
+        "You must omit the `<td>` or `<th>` for that cell in the next row's HTML. The `rowspan` effectively pushes the cells in the subsequent row(s) to the right, so you don't declare a cell for the space it occupies.",
+        "Storing a JWT in LocalStorage is vulnerable to **Cross-Site Scripting (XSS)** attacks. A safer alternative is to store the JWT in an **`HttpOnly` cookie**. An `HttpOnly` cookie cannot be accessed by client-side JavaScript, mitigating this specific risk.",
+        "Absolutely not. Client-side validation is a user experience feature, not a security measure. A malicious user can easily bypass it. All data must always be validated again on the server-side.",
+        "HTML templates are a key part of the Web Components specification. They are often used to define the internal structure (the Shadow DOM) of a custom element in a clean and declarative way."
+      ],
+      "answer": "Absolutely not. Client-side validation is a user experience feature, not a security measure. A malicious user can easily bypass it. All data must always be validated again on the server-side."
+    },
+    {
+      "question": "What is the difference between the <head> and <body> sections of an HTML document?",
+      "options": [
+        "The `<title>` tag must be placed inside the `<head>` section. It's important for SEO as search engines use it as the main title for the search result, and it's also what appears in the browser tab.",
+        "GET is idempotent. Idempotency means that making the same request multiple times will produce the same result as making it once. POST is not idempotent, as making the same request multiple times will typically create multiple resources.",
+        "`getAttribute` is a general method for any attribute and returns a string. The `dataset` property is a specific API for `data-*` attributes, automatically converting kebab-case attribute names to camelCase property names, which is often more convenient.",
+        "External stylesheets are the best practice. They allow for separation of concerns (content vs. presentation), reusability of styles across multiple pages, and improved performance through browser caching of the CSS file."
+      ],
+      "answer": "The `<title>` tag must be placed inside the `<head>` section. It's important for SEO as search engines use it as the main title for the search result, and it's also what appears in the browser tab."
+    },
+    {
+      "question": "What is the purpose of the `<figure>` and `<figcaption>` elements?",
+      "options": [
+        "Using `<figure>` provides a semantic connection between the content and its caption. This is beneficial for accessibility, as screen readers can announce the caption as being associated with the image, providing better context to the user.",
+        "**Canvas** is pixel-based (raster) and controlled with JavaScript, ideal for dynamic animations and games. **SVG** is XML-based (vector), retains its object model in the DOM, and is better for static, scalable graphics like logos and charts where accessibility is key.",
+        "The **DOM** is the standard model for the entire document. The **Shadow DOM** is a web standard that allows for encapsulated DOM trees with their own styles and scripts. These encapsulated trees are attached to an element but are isolated from the main document DOM, which is the technology that powers Web Components.",
+        "The primary benefit is improved user experience, especially on mobile devices. For `type=\"email\"`, mobile browsers will show a keyboard optimized for email entry (with '@' and '.' keys). They also provide built-in client-side validation."
+      ],
+      "answer": "Using `<figure>` provides a semantic connection between the content and its caption. This is beneficial for accessibility, as screen readers can announce the caption as being associated with the image, providing better context to the user."
+    },
+    {
+      "question": "What are the three ways to apply CSS styles to an HTML document?",
+      "options": [
+        "External stylesheets are the best practice. They allow for separation of concerns (content vs. presentation), reusability of styles across multiple pages, and improved performance through browser caching of the CSS file.",
+        "If the doctype is omitted, browsers enter 'Quirks Mode', attempting to emulate older browser behavior. This can lead to unpredictable and inconsistent rendering of CSS and layout across different browsers.",
+        "Video files are typically very large. Using a small, optimized poster image allows the page to display a relevant visual quickly while the larger video file loads in the background. This improves the perceived performance of the page.",
+        "You can add query parameters to the `mailto` link. Use `?subject=YourSubject` to set the subject and `&body=YourBodyText` to set the body content. For example: `mailto:info@example.com?subject=Inquiry&body=Hello`."
+      ],
+      "answer": "External stylesheets are the best practice. They allow for separation of concerns (content vs. presentation), reusability of styles across multiple pages, and improved performance through browser caching of the CSS file."
+    },
+    {
+      "question": "How do you access a `data-*` attribute in JavaScript?",
+      "options": [
+        "GET is idempotent. Idempotency means that making the same request multiple times will produce the same result as making it once. POST is not idempotent, as making the same request multiple times will typically create multiple resources.",
+        "`getAttribute` is a general method for any attribute and returns a string. The `dataset` property is a specific API for `data-*` attributes, automatically converting kebab-case attribute names to camelCase property names, which is often more convenient.",
+        "The first rule is: 'If you can use a native HTML element or attribute with the semantics and behavior you require already built in, use it instead of re-purposing an element and adding an ARIA role, state, or property to make it accessible'.",
+        "You must omit the `<td>` or `<th>` for that cell in the next row's HTML. The `rowspan` effectively pushes the cells in the subsequent row(s) to the right, so you don't declare a cell for the space it occupies."
+      ],
+      "answer": "`getAttribute` is a general method for any attribute and returns a string. The `dataset` property is a specific API for `data-*` attributes, automatically converting kebab-case attribute names to camelCase property names, which is often more convenient."
+    },
+    {
+      "question": "How do you create a link that sends an email?",
+      "options": [
+        "The `data-*` attributes are used to store custom data private to the page or application. Their main advantage is making custom data easily accessible to JavaScript without misusing standard attributes.",
+        "'Divitis' is the excessive use of `<div>` tags when more semantic elements like `<nav>`, `<main>`, or `<article>` would be more appropriate. It's bad practice because it leads to less meaningful and less accessible HTML.",
+        "You can add query parameters to the `mailto` link. Use `?subject=YourSubject` to set the subject and `&body=YourBodyText` to set the body content. For example: `mailto:info@example.com?subject=Inquiry&body=Hello`.",
+        "You must omit the `<td>` or `<th>` for that cell in the next row's HTML. The `rowspan` effectively pushes the cells in the subsequent row(s) to the right, so you don't declare a cell for the space it occupies."
+      ],
+      "answer": "You can add query parameters to the `mailto` link. Use `?subject=YourSubject` to set the subject and `&body=YourBodyText` to set the body content. For example: `mailto:info@example.com?subject=Inquiry&body=Hello`."
+    },
+    {
+      "question": "What are HTML templates?",
+      "options": [
+        "Using `<figure>` provides a semantic connection between the content and its caption. This is beneficial for accessibility, as screen readers can announce the caption as being associated with the image, providing better context to the user.",
+        "HTML templates are a key part of the Web Components specification. They are often used to define the internal structure (the Shadow DOM) of a custom element in a clean and declarative way.",
+        "Because it uses tags to 'mark up' or annotate content to define its structure and meaning, rather than to perform programming logic.",
+        "The `<title>` tag must be placed inside the `<head>` section. It's important for SEO as search engines use it as the main title for the search result, and it's also what appears in the browser tab."
+      ],
+      "answer": "HTML templates are a key part of the Web Components specification. They are often used to define the internal structure (the Shadow DOM) of a custom element in a clean and declarative way."
+    },
+    {
+      "question": "What is the `placeholder` attribute used for?",
+      "options": [
+        "The `<title>` tag is critically important for Search Engine Optimization (SEO). Search engines use its content as the main headline for a page in search results, so a descriptive and relevant title can significantly impact click-through rates.",
+        "No, you should never use a placeholder as a replacement for a `<label>`. Placeholders disappear once the user starts typing, which can make forms confusing. They also have poor color contrast by default, making them an accessibility issue.",
+        "You can add query parameters to the `mailto` link. Use `?subject=YourSubject` to set the subject and `&body=YourBodyText` to set the body content. For example: `mailto:info@example.com?subject=Inquiry&body=Hello`.",
+        "The main advantage of inline SVG is that its individual parts can be styled and manipulated with CSS and JavaScript. This allows for dynamic animations and interactive graphics, which is not possible when using an `<img>` tag to display the SVG."
+      ],
+      "answer": "No, you should never use a placeholder as a replacement for a `<label>`. Placeholders disappear once the user starts typing, which can make forms confusing. They also have poor color contrast by default, making them an accessibility issue."
+    },
+    {
+      "question": "What is content delivery network (CDN) and how does it relate to HTML?",
+      "options": [
+        "A major benefit is the high probability that the user's browser has already cached that exact file from visiting another website that uses the same CDN link. This means the browser doesn't have to download the file again, leading to very fast load times.",
+        "Video files are typically very large. Using a small, optimized poster image allows the page to display a relevant visual quickly while the larger video file loads in the background. This improves the perceived performance of the page.",
+        "If the doctype is omitted, browsers enter 'Quirks Mode', attempting to emulate older browser behavior. This can lead to unpredictable and inconsistent rendering of CSS and layout across different browsers.",
+        "A regular element has an opening tag, content, and a closing tag (e.g., <p>...</p>). An empty element has no content or closing tag and is self-closing (e.g., <br>, <img>, <hr>)."
+      ],
+      "answer": "A major benefit is the high probability that the user's browser has already cached that exact file from visiting another website that uses the same CDN link. This means the browser doesn't have to download the file again, leading to very fast load times."
+    },
+    {
+      "question": "How do you make a table cell span multiple columns or rows?",
+      "options": [
+        "You can add query parameters to the `mailto` link. Use `?subject=YourSubject` to set the subject and `&body=YourBodyText` to set the body content. For example: `mailto:info@example.com?subject=Inquiry&body=Hello`.",
+        "The `<title>` tag must be placed inside the `<head>` section. It's important for SEO as search engines use it as the main title for the search result, and it's also what appears in the browser tab.",
+        "You must omit the `<td>` or `<th>` for that cell in the next row's HTML. The `rowspan` effectively pushes the cells in the subsequent row(s) to the right, so you don't declare a cell for the space it occupies.",
+        "A major limitation is that Web Workers do not have direct access to the DOM. They can only communicate with the main thread (which can access the DOM) by sending messages back and forth."
+      ],
+      "answer": "You must omit the `<td>` or `<th>` for that cell in the next row's HTML. The `rowspan` effectively pushes the cells in the subsequent row(s) to the right, so you don't declare a cell for the space it occupies."
+    },
+    {
+      "question": "What is the `title` tag used for?",
+      "options": [
+        "The `<title>` tag is critically important for Search Engine Optimization (SEO). Search engines use its content as the main headline for a page in search results, so a descriptive and relevant title can significantly impact click-through rates.",
+        "`getAttribute` is a general method for any attribute and returns a string. The `dataset` property is a specific API for `data-*` attributes, automatically converting kebab-case attribute names to camelCase property names, which is often more convenient.",
+        "If the doctype is omitted, browsers enter 'Quirks Mode', attempting to emulate older browser behavior. This can lead to unpredictable and inconsistent rendering of CSS and layout across different browsers.",
+        "The entity is `&nbsp;`. It's used to prevent a line break from happening at a specific point. For example, you might use it between a number and a unit (e.g., `10&nbsp;px`) to ensure they stay together on the same line."
+      ],
+      "answer": "The `<title>` tag is critically important for Search Engine Optimization (SEO). Search engines use its content as the main headline for a page in search results, so a descriptive and relevant title can significantly impact click-through rates."
+    },
+    {
+      "question": "What is the purpose of the `<details>` and `<summary>` elements?",
+      "options": [
+        "A major advantage is that it works without any JavaScript, making it more robust and accessible by default. It's a native browser feature, so it doesn't require extra code, which can improve performance and reduce maintenance.",
+        "By default, browsers enforce the Same-Origin Policy, which prevents a script on one page from accessing data on another page with a different origin. If you try to `fetch` data from a different domain, the browser will make a pre-flight request, and the target server must respond with the correct CORS headers (like `Access-Control-Allow-Origin`) for the request to succeed.",
+        "The `data-*` attributes are used to store custom data private to the page or application. Their main advantage is making custom data easily accessible to JavaScript without misusing standard attributes.",
+        "You create the target by adding a unique `id` attribute to the element you want to link to. For example, `<h2 id=\"section2\">Section 2</h2>` can be targeted by `<a href=\"#section2\">Jump to Section 2</a>`."
+      ],
+      "answer": "A major advantage is that it works without any JavaScript, making it more robust and accessible by default. It's a native browser feature, so it doesn't require extra code, which can improve performance and reduce maintenance."
+    },
+    {
+      "question": "What is the difference between an ordered list (`<ol>`) and an unordered list (`<ul>`)?",
+      "options": [
+        "You can use the `type` attribute on the `<ol>` tag. For example, `<ol type=\"i\">` will use lowercase Roman numerals, `type=\"A\"` will use uppercase letters, and so on.",
+        "The main advantage of inline SVG is that its individual parts can be styled and manipulated with CSS and JavaScript. This allows for dynamic animations and interactive graphics, which is not possible when using an `<img>` tag to display the SVG.",
+        "The **DOM** is the standard model for the entire document. The **Shadow DOM** is a web standard that allows for encapsulated DOM trees with their own styles and scripts. These encapsulated trees are attached to an element but are isolated from the main document DOM, which is the technology that powers Web Components.",
+        "Skipping heading levels can confuse screen reader users and harm accessibility. It creates a disjointed outline of the page, making it difficult for assistive technologies to navigate the content."
+      ],
+      "answer": "You can use the `type` attribute on the `<ol>` tag. For example, `<ol type=\"i\">` will use lowercase Roman numerals, `type=\"A\"` will use uppercase letters, and so on."
+    },
+    {
+      "question": "What are some of the new input types introduced in HTML5?",
+      "options": [
+        "The primary benefit is improved user experience, especially on mobile devices. For `type=\"email\"`, mobile browsers will show a keyboard optimized for email entry (with '@' and '.' keys). They also provide built-in client-side validation.",
+        "'Divitis' is the excessive use of `<div>` tags when more semantic elements like `<nav>`, `<main>`, or `<article>` would be more appropriate. It's bad practice because it leads to less meaningful and less accessible HTML.",
+        "Skipping heading levels can confuse screen reader users and harm accessibility. It creates a disjointed outline of the page, making it difficult for assistive technologies to navigate the content.",
+        "You can use the `type` attribute on the `<ol>` tag. For example, `<ol type=\"i\">` will use lowercase Roman numerals, `type=\"A\"` will use uppercase letters, and so on."
+      ],
+      "answer": "The primary benefit is improved user experience, especially on mobile devices. For `type=\"email\"`, mobile browsers will show a keyboard optimized for email entry (with '@' and '.' keys). They also provide built-in client-side validation."
+    },
+    {
+      "question": "What is the `div` tag used for?",
+      "options": [
+        "For radio buttons, all options in a group must have the same 'name' attribute. This ensures that only one radio button from that group can be selected at a time.",
+        "HTML templates are a key part of the Web Components specification. They are often used to define the internal structure (the Shadow DOM) of a custom element in a clean and declarative way.",
+        "'Divitis' is the excessive use of `<div>` tags when more semantic elements like `<nav>`, `<main>`, or `<article>` would be more appropriate. It's bad practice because it leads to less meaningful and less accessible HTML.",
+        "If the doctype is omitted, browsers enter 'Quirks Mode', attempting to emulate older browser behavior. This can lead to unpredictable and inconsistent rendering of CSS and layout across different browsers."
+      ],
+      "answer": "'Divitis' is the excessive use of `<div>` tags when more semantic elements like `<nav>`, `<main>`, or `<article>` would be more appropriate. It's bad practice because it leads to less meaningful and less accessible HTML."
+    },
+    {
+      "question": "What is an anchor link (or bookmark link)?",
+      "options": [
+        "Largely, no. With the advent of HTML5, which is more forgiving and has a robust error-handling specification, the need for XHTML's strictness has diminished. Most modern web development uses HTML5.",
+        "By default, browsers enforce the Same-Origin Policy, which prevents a script on one page from accessing data on another page with a different origin. If you try to `fetch` data from a different domain, the browser will make a pre-flight request, and the target server must respond with the correct CORS headers (like `Access-Control-Allow-Origin`) for the request to succeed.",
+        "An empty `alt` attribute should be used for images that are purely decorative. If an image does not convey meaningful content and is just for visual styling, an empty alt text tells screen readers to ignore it, preventing clutter.",
+        "You create the target by adding a unique `id` attribute to the element you want to link to. For example, `<h2 id=\"section2\">Section 2</h2>` can be targeted by `<a href=\"#section2\">Jump to Section 2</a>`."
+      ],
+      "answer": "You create the target by adding a unique `id` attribute to the element you want to link to. For example, `<h2 id=\"section2\">Section 2</h2>` can be targeted by `<a href=\"#section2\">Jump to Section 2</a>`."
+    },
+    {
+      "question": "What is the Geolocation API?",
+      "options": [
+        "The **DOM** is the standard model for the entire document. The **Shadow DOM** is a web standard that allows for encapsulated DOM trees with their own styles and scripts. These encapsulated trees are attached to an element but are isolated from the main document DOM, which is the technology that powers Web Components.",
+        "External stylesheets are the best practice. They allow for separation of concerns (content vs. presentation), reusability of styles across multiple pages, and improved performance through browser caching of the CSS file.",
+        "This viewport meta tag is essential for responsive web design. It tells the browser to set the width of the page to the device's screen width and to set the initial zoom level to 100%.",
+        "You must provide a fallback because a user can deny the permission request, or their browser/device might not support the API. Without a fallback (e.g., allowing the user to manually enter their location), the feature would be completely broken for those users."
+      ],
+      "answer": "You must provide a fallback because a user can deny the permission request, or their browser/device might not support the API. Without a fallback (e.g., allowing the user to manually enter their location), the feature would be completely broken for those users."
+    },
+    {
+      "question": "What is the `poster` attribute on a `<video>` tag for?",
+      "options": [
+        "Video files are typically very large. Using a small, optimized poster image allows the page to display a relevant visual quickly while the larger video file loads in the background. This improves the perceived performance of the page.",
+        "You create the target by adding a unique `id` attribute to the element you want to link to. For example, `<h2 id=\"section2\">Section 2</h2>` can be targeted by `<a href=\"#section2\">Jump to Section 2</a>`.",
+        "If the doctype is omitted, browsers enter 'Quirks Mode', attempting to emulate older browser behavior. This can lead to unpredictable and inconsistent rendering of CSS and layout across different browsers.",
+        "GET is idempotent. Idempotency means that making the same request multiple times will produce the same result as making it once. POST is not idempotent, as making the same request multiple times will typically create multiple resources."
+      ],
+      "answer": "Video files are typically very large. Using a small, optimized poster image allows the page to display a relevant visual quickly while the larger video file loads in the background. This improves the perceived performance of the page."
+    },
+    {
+      "question": "What is Cross-Origin Resource Sharing (CORS)?",
+      "options": [
+        "Using `<figure>` provides a semantic connection between the content and its caption. This is beneficial for accessibility, as screen readers can announce the caption as being associated with the image, providing better context to the user.",
+        "The **DOM** is the standard model for the entire document. The **Shadow DOM** is a web standard that allows for encapsulated DOM trees with their own styles and scripts. These encapsulated trees are attached to an element but are isolated from the main document DOM, which is the technology that powers Web Components.",
+        "By default, browsers enforce the Same-Origin Policy, which prevents a script on one page from accessing data on another page with a different origin. If you try to `fetch` data from a different domain, the browser will make a pre-flight request, and the target server must respond with the correct CORS headers (like `Access-Control-Allow-Origin`) for the request to succeed.",
+        "An `<article>` is for self-contained, independent content that could be distributed on its own (e.g., a blog post). A `<section>` is used to group related content within a document (e.g., an introduction section)."
+      ],
+      "answer": "By default, browsers enforce the Same-Origin Policy, which prevents a script on one page from accessing data on another page with a different origin. If you try to `fetch` data from a different domain, the browser will make a pre-flight request, and the target server must respond with the correct CORS headers (like `Access-Control-Allow-Origin`) for the request to succeed."
+    }
+  ]
+}

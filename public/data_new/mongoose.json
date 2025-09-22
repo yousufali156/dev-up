@@ -1,0 +1,254 @@
+{
+  "questions": [
+    {
+      "question": "What is Mongoose?",
+      "options": [
+        "You need to pass `{ new: true }` as the third argument (the options object) to the `findByIdAndUpdate` method.",
+        "It's a good practice to listen for connection events like `connected`, `error`, and `disconnected` on `mongoose.connection`. This allows you to log the connection status and handle connection failures gracefully.",
+        "You would use a `pre('find')` query middleware. Inside it, `this.where({ isDeleted: false });` would add the condition to the query before it is executed.",
+        "The main benefits are: 1. **Schema and Validation:** Enforces a rigid data structure and provides built-in validation. 2. **Middleware (Hooks):** Allows you to execute logic before or after database operations (e.g., password hashing). 3. **Population:** Easily fetch referenced documents from other collections. 4. **Abstraction:** Provides a cleaner, more readable API for common database operations."
+      ],
+      "answer": "The main benefits are: 1. **Schema and Validation:** Enforces a rigid data structure and provides built-in validation. 2. **Middleware (Hooks):** Allows you to execute logic before or after database operations (e.g., password hashing). 3. **Population:** Easily fetch referenced documents from other collections. 4. **Abstraction:** Provides a cleaner, more readable API for common database operations."
+    },
+    {
+      "question": "What is the difference between a Schema and a Model in Mongoose?",
+      "options": [
+        "No, it is not a validator. It is a helper for creating a unique index. Errors from duplicate keys come from the MongoDB driver, not from Mongoose's validation system, so they are handled differently.",
+        "Yes, you can provide a function to the `default` property. This function will be executed and its return value will be used as the default. A common example is using `Date.now` for a `createdAt` field: `createdAt: { type: Date, default: Date.now }`.",
+        "A very common use case is hashing a user's password before it is saved to the database. This ensures that plain-text passwords are never stored. For example: `userSchema.pre('save', async function() { this.password = await bcrypt.hash(this.password, 12); });`",
+        "A Mongoose model provides a structured interface to a specific MongoDB collection. By default, Mongoose will create a collection with a plural, lowercased version of your model name (e.g., a 'Book' model maps to a 'books' collection)."
+      ],
+      "answer": "A Mongoose model provides a structured interface to a specific MongoDB collection. By default, Mongoose will create a collection with a plural, lowercased version of your model name (e.g., a 'Book' model maps to a 'books' collection)."
+    },
+    {
+      "question": "What is Population in Mongoose?",
+      "options": [
+        "You would use a `pre('find')` query middleware. Inside it, `this.where({ isDeleted: false });` would add the condition to the query before it is executed.",
+        "**Embedding** (denormalization) leads to faster reads as all data is in one document, but it can cause data redundancy. **Referencing** (normalization) with population reduces data redundancy, but it requires extra database queries, which can be slower. The choice depends on your data access patterns.",
+        "A common use case is for modeling different types of events in a single collection. You could have a base `Event` schema and then create discriminator models like `ClickedLinkEvent` and `SignedUpEvent` that add their own specific fields.",
+        "The main benefits are: 1. **Schema and Validation:** Enforces a rigid data structure and provides built-in validation. 2. **Middleware (Hooks):** Allows you to execute logic before or after database operations (e.g., password hashing). 3. **Population:** Easily fetch referenced documents from other collections. 4. **Abstraction:** Provides a cleaner, more readable API for common database operations."
+      ],
+      "answer": "**Embedding** (denormalization) leads to faster reads as all data is in one document, but it can cause data redundancy. **Referencing** (normalization) with population reduces data redundancy, but it requires extra database queries, which can be slower. The choice depends on your data access patterns."
+    },
+    {
+      "question": "What are Mongoose middleware (hooks)?",
+      "options": [
+        "A very common use case is hashing a user's password before it is saved to the database. This ensures that plain-text passwords are never stored. For example: `userSchema.pre('save', async function() { this.password = await bcrypt.hash(this.password, 12); });`",
+        "`$lookup` is more powerful and performant for complex joins. `populate()` is convenient but can be inefficient for large datasets. `$lookup` performs the join on the database server itself, returning all data in a single query, while `populate()` can sometimes issue multiple separate queries.",
+        "An **instance method** could be `user.comparePassword(password)`. A **static method** could be `User.findByEmail(email)`, which searches the entire `User` collection for a document.",
+        "You create a compound index by calling the `schema.index()` method and passing it an object defining the fields and their order (1 for ascending, -1 for descending). Example: `schema.index({ user: 1, score: -1 });`."
+      ],
+      "answer": "A very common use case is hashing a user's password before it is saved to the database. This ensures that plain-text passwords are never stored. For example: `userSchema.pre('save', async function() { this.password = await bcrypt.hash(this.password, 12); });`"
+    },
+    {
+      "question": "How do you create a new document in Mongoose?",
+      "options": [
+        "They are functionally very similar. `Model.create(data)` is essentially a shorthand for `new Model(data).save()`. The main difference is that `create()` returns a promise, making it convenient to use with `async/await`.",
+        "`findById(id)` is generally preferred and can be slightly more optimized because it's a specific function for a common use case. It also handles casting the string `id` to a MongoDB `ObjectId` for you.",
+        "A common use case is for modeling different types of events in a single collection. You could have a base `Event` schema and then create discriminator models like `ClickedLinkEvent` and `SignedUpEvent` that add their own specific fields.",
+        "The query is not executed until you call `.then()` on it, use it with `await`, or call the `.exec()` method. This allows you to build the query conditionally before sending it to the database."
+      ],
+      "answer": "They are functionally very similar. `Model.create(data)` is essentially a shorthand for `new Model(data).save()`. The main difference is that `create()` returns a promise, making it convenient to use with `async/await`."
+    },
+    {
+      "question": "What are virtual properties in a Mongoose schema?",
+      "options": [
+        "The equivalent for SQL databases is an ORM (Object Relational Mapping). Libraries like Sequelize for Node.js or Hibernate for Java are examples of ORMs.",
+        "They are functionally very similar. `Model.create(data)` is essentially a shorthand for `new Model(data).save()`. The main difference is that `create()` returns a promise, making it convenient to use with `async/await`.",
+        "Yes, you can provide a function to the `default` property. This function will be executed and its return value will be used as the default. A common example is using `Date.now` for a `createdAt` field: `createdAt: { type: Date, default: Date.now }`.",
+        "A common example is creating a `fullName` virtual property from `firstName` and `lastName` fields. This allows you to access `user.fullName` without having to store redundant data in the database."
+      ],
+      "answer": "A common example is creating a `fullName` virtual property from `firstName` and `lastName` fields. This allows you to access `user.fullName` without having to store redundant data in the database."
+    },
+    {
+      "question": "What is the difference between `findById()` and `findOne()`?",
+      "options": [
+        "Yes, you can provide a function to the `default` property. This function will be executed and its return value will be used as the default. A common example is using `Date.now` for a `createdAt` field: `createdAt: { type: Date, default: Date.now }`.",
+        "`findById(id)` is generally preferred and can be slightly more optimized because it's a specific function for a common use case. It also handles casting the string `id` to a MongoDB `ObjectId` for you.",
+        "It's a good practice to listen for connection events like `connected`, `error`, and `disconnected` on `mongoose.connection`. This allows you to log the connection status and handle connection failures gracefully.",
+        "You create a compound index by calling the `schema.index()` method and passing it an object defining the fields and their order (1 for ascending, -1 for descending). Example: `schema.index({ user: 1, score: -1 });`."
+      ],
+      "answer": "`findById(id)` is generally preferred and can be slightly more optimized because it's a specific function for a common use case. It also handles casting the string `id` to a MongoDB `ObjectId` for you."
+    },
+    {
+      "question": "How do you define a required field in a schema?",
+      "options": [
+        "A common example is creating a `fullName` virtual property from `firstName` and `lastName` fields. This allows you to access `user.fullName` without having to store redundant data in the database.",
+        "You can pass an array to the `required` property, with the second element being the custom error message. For example: `name: { type: String, required: [true, 'A user name is required'] }`.",
+        "You can make a validator asynchronous by having it return a promise. If the promise resolves, the validation passes. If it rejects, the validation fails.",
+        "You would define a separate schema for the subdocument and then use that schema inside the array brackets. For example: `const commentSchema = new Schema({ body: String }); const blogSchema = new Schema({ comments: [commentSchema] });`."
+      ],
+      "answer": "You can pass an array to the `required` property, with the second element being the custom error message. For example: `name: { type: String, required: [true, 'A user name is required'] }`."
+    },
+    {
+      "question": "What is the difference between a static method and an instance method on a schema?",
+      "options": [
+        "You would use the `pre('validate')` hook. This allows you to modify the data to ensure it will pass the validation rules defined in your schema.",
+        "An **instance method** could be `user.comparePassword(password)`. A **static method** could be `User.findByEmail(email)`, which searches the entire `User` collection for a document.",
+        "You can make a validator asynchronous by having it return a promise. If the promise resolves, the validation passes. If it rejects, the validation fails.",
+        "You would use a `pre('find')` query middleware. Inside it, `this.where({ isDeleted: false });` would add the condition to the query before it is executed."
+      ],
+      "answer": "An **instance method** could be `user.comparePassword(password)`. A **static method** could be `User.findByEmail(email)`, which searches the entire `User` collection for a document."
+    },
+    {
+      "question": "How do you update a document in Mongoose?",
+      "options": [
+        "The main benefits are: 1. **Schema and Validation:** Enforces a rigid data structure and provides built-in validation. 2. **Middleware (Hooks):** Allows you to execute logic before or after database operations (e.g., password hashing). 3. **Population:** Easily fetch referenced documents from other collections. 4. **Abstraction:** Provides a cleaner, more readable API for common database operations.",
+        "You define the `type` as `mongoose.Schema.Types.ObjectId` and add a `ref` property with the name of the model you are referencing. For example: `author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }`.",
+        "You need to pass `{ new: true }` as the third argument (the options object) to the `findByIdAndUpdate` method.",
+        "`$lookup` is more powerful and performant for complex joins. `populate()` is convenient but can be inefficient for large datasets. `$lookup` performs the join on the database server itself, returning all data in a single query, while `populate()` can sometimes issue multiple separate queries."
+      ],
+      "answer": "You need to pass `{ new: true }` as the third argument (the options object) to the `findByIdAndUpdate` method."
+    },
+    {
+      "question": "What is the `ObjectId` schema type?",
+      "options": [
+        "The equivalent for SQL databases is an ORM (Object Relational Mapping). Libraries like Sequelize for Node.js or Hibernate for Java are examples of ORMs.",
+        "You define the `type` as `mongoose.Schema.Types.ObjectId` and add a `ref` property with the name of the model you are referencing. For example: `author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }`.",
+        "`$lookup` is more powerful and performant for complex joins. `populate()` is convenient but can be inefficient for large datasets. `$lookup` performs the join on the database server itself, returning all data in a single query, while `populate()` can sometimes issue multiple separate queries.",
+        "No, it is not a validator. It is a helper for creating a unique index. Errors from duplicate keys come from the MongoDB driver, not from Mongoose's validation system, so they are handled differently."
+      ],
+      "answer": "You define the `type` as `mongoose.Schema.Types.ObjectId` and add a `ref` property with the name of the model you are referencing. For example: `author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }`."
+    },
+    {
+      "question": "How can you use MongoDB's Aggregation Framework with Mongoose?",
+      "options": [
+        "**Embedding** (denormalization) leads to faster reads as all data is in one document, but it can cause data redundancy. **Referencing** (normalization) with population reduces data redundancy, but it requires extra database queries, which can be slower. The choice depends on your data access patterns.",
+        "You define the `type` as `mongoose.Schema.Types.ObjectId` and add a `ref` property with the name of the model you are referencing. For example: `author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }`.",
+        "`$lookup` is more powerful and performant for complex joins. `populate()` is convenient but can be inefficient for large datasets. `$lookup` performs the join on the database server itself, returning all data in a single query, while `populate()` can sometimes issue multiple separate queries.",
+        "A common use case is for modeling different types of events in a single collection. You could have a base `Event` schema and then create discriminator models like `ClickedLinkEvent` and `SignedUpEvent` that add their own specific fields."
+      ],
+      "answer": "`$lookup` is more powerful and performant for complex joins. `populate()` is convenient but can be inefficient for large datasets. `$lookup` performs the join on the database server itself, returning all data in a single query, while `populate()` can sometimes issue multiple separate queries."
+    },
+    {
+      "question": "What is the difference between a document middleware and a query middleware?",
+      "options": [
+        "The equivalent for SQL databases is an ORM (Object Relational Mapping). Libraries like Sequelize for Node.js or Hibernate for Java are examples of ORMs.",
+        "Yes, you can provide a function to the `default` property. This function will be executed and its return value will be used as the default. A common example is using `Date.now` for a `createdAt` field: `createdAt: { type: Date, default: Date.now }`.",
+        "No, it is not a validator. It is a helper for creating a unique index. Errors from duplicate keys come from the MongoDB driver, not from Mongoose's validation system, so they are handled differently.",
+        "You would use a `pre('find')` query middleware. Inside it, `this.where({ isDeleted: false });` would add the condition to the query before it is executed."
+      ],
+      "answer": "You would use a `pre('find')` query middleware. Inside it, `this.where({ isDeleted: false });` would add the condition to the query before it is executed."
+    },
+    {
+      "question": "How do you connect to a MongoDB database using Mongoose?",
+      "options": [
+        "The main benefits are: 1. **Schema and Validation:** Enforces a rigid data structure and provides built-in validation. 2. **Middleware (Hooks):** Allows you to execute logic before or after database operations (e.g., password hashing). 3. **Population:** Easily fetch referenced documents from other collections. 4. **Abstraction:** Provides a cleaner, more readable API for common database operations.",
+        "You create a compound index by calling the `schema.index()` method and passing it an object defining the fields and their order (1 for ascending, -1 for descending). Example: `schema.index({ user: 1, score: -1 });`.",
+        "It's a good practice to listen for connection events like `connected`, `error`, and `disconnected` on `mongoose.connection`. This allows you to log the connection status and handle connection failures gracefully.",
+        "A Mongoose model provides a structured interface to a specific MongoDB collection. By default, Mongoose will create a collection with a plural, lowercased version of your model name (e.g., a 'Book' model maps to a 'books' collection)."
+      ],
+      "answer": "It's a good practice to listen for connection events like `connected`, `error`, and `disconnected` on `mongoose.connection`. This allows you to log the connection status and handle connection failures gracefully."
+    },
+    {
+      "question": "What are discriminators in Mongoose?",
+      "options": [
+        "The equivalent for SQL databases is an ORM (Object Relational Mapping). Libraries like Sequelize for Node.js or Hibernate for Java are examples of ORMs.",
+        "You need to pass `{ new: true }` as the third argument (the options object) to the `findByIdAndUpdate` method.",
+        "A common use case is for modeling different types of events in a single collection. You could have a base `Event` schema and then create discriminator models like `ClickedLinkEvent` and `SignedUpEvent` that add their own specific fields.",
+        "The query is not executed until you call `.then()` on it, use it with `await`, or call the `.exec()` method. This allows you to build the query conditionally before sending it to the database."
+      ],
+      "answer": "A common use case is for modeling different types of events in a single collection. You could have a base `Event` schema and then create discriminator models like `ClickedLinkEvent` and `SignedUpEvent` that add their own specific fields."
+    },
+    {
+      "question": "How do you add a custom validator to a schema field?",
+      "options": [
+        "The main benefits are: 1. **Schema and Validation:** Enforces a rigid data structure and provides built-in validation. 2. **Middleware (Hooks):** Allows you to execute logic before or after database operations (e.g., password hashing). 3. **Population:** Easily fetch referenced documents from other collections. 4. **Abstraction:** Provides a cleaner, more readable API for common database operations.",
+        "You would use a `pre('find')` query middleware. Inside it, `this.where({ isDeleted: false });` would add the condition to the query before it is executed.",
+        "You would define a separate schema for the subdocument and then use that schema inside the array brackets. For example: `const commentSchema = new Schema({ body: String }); const blogSchema = new Schema({ comments: [commentSchema] });`.",
+        "You can make a validator asynchronous by having it return a promise. If the promise resolves, the validation passes. If it rejects, the validation fails."
+      ],
+      "answer": "You can make a validator asynchronous by having it return a promise. If the promise resolves, the validation passes. If it rejects, the validation fails."
+    },
+    {
+      "question": "How do you set a default value for a schema field?",
+      "options": [
+        "You can pass an array to the `required` property, with the second element being the custom error message. For example: `name: { type: String, required: [true, 'A user name is required'] }`.",
+        "An **instance method** could be `user.comparePassword(password)`. A **static method** could be `User.findByEmail(email)`, which searches the entire `User` collection for a document.",
+        "A common example is creating a `fullName` virtual property from `firstName` and `lastName` fields. This allows you to access `user.fullName` without having to store redundant data in the database.",
+        "Yes, you can provide a function to the `default` property. This function will be executed and its return value will be used as the default. A common example is using `Date.now` for a `createdAt` field: `createdAt: { type: Date, default: Date.now }`."
+      ],
+      "answer": "Yes, you can provide a function to the `default` property. This function will be executed and its return value will be used as the default. A common example is using `Date.now` for a `createdAt` field: `createdAt: { type: Date, default: Date.now }`."
+    },
+    {
+      "question": "How do you define an index in a Mongoose schema?",
+      "options": [
+        "It's a good practice to listen for connection events like `connected`, `error`, and `disconnected` on `mongoose.connection`. This allows you to log the connection status and handle connection failures gracefully.",
+        "You would use the `pre('validate')` hook. This allows you to modify the data to ensure it will pass the validation rules defined in your schema.",
+        "You create a compound index by calling the `schema.index()` method and passing it an object defining the fields and their order (1 for ascending, -1 for descending). Example: `schema.index({ user: 1, score: -1 });`.",
+        "`findById(id)` is generally preferred and can be slightly more optimized because it's a specific function for a common use case. It also handles casting the string `id` to a MongoDB `ObjectId` for you."
+      ],
+      "answer": "You create a compound index by calling the `schema.index()` method and passing it an object defining the fields and their order (1 for ascending, -1 for descending). Example: `schema.index({ user: 1, score: -1 });`."
+    },
+    {
+      "question": "Does Mongoose support MongoDB transactions?",
+      "options": [
+        "They are functionally very similar. `Model.create(data)` is essentially a shorthand for `new Model(data).save()`. The main difference is that `create()` returns a promise, making it convenient to use with `async/await`.",
+        "Yes, you can provide a function to the `default` property. This function will be executed and its return value will be used as the default. A common example is using `Date.now` for a `createdAt` field: `createdAt: { type: Date, default: Date.now }`.",
+        "It improves performance because creating full Mongoose documents has overhead (they have methods, virtuals, etc.). For read-only operations where you don't need these features, `lean()` can be significantly faster and use less memory.",
+        "To use transactions, you must be using a MongoDB replica set or a sharded cluster. Transactions are not supported on standalone server deployments."
+      ],
+      "answer": "To use transactions, you must be using a MongoDB replica set or a sharded cluster. Transactions are not supported on standalone server deployments."
+    },
+    {
+      "question": "What is method chaining in Mongoose queries?",
+      "options": [
+        "The query is not executed until you call `.then()` on it, use it with `await`, or call the `.exec()` method. This allows you to build the query conditionally before sending it to the database.",
+        "No, it is not a validator. It is a helper for creating a unique index. Errors from duplicate keys come from the MongoDB driver, not from Mongoose's validation system, so they are handled differently.",
+        "The main benefits are: 1. **Schema and Validation:** Enforces a rigid data structure and provides built-in validation. 2. **Middleware (Hooks):** Allows you to execute logic before or after database operations (e.g., password hashing). 3. **Population:** Easily fetch referenced documents from other collections. 4. **Abstraction:** Provides a cleaner, more readable API for common database operations.",
+        "**Embedding** (denormalization) leads to faster reads as all data is in one document, but it can cause data redundancy. **Referencing** (normalization) with population reduces data redundancy, but it requires extra database queries, which can be slower. The choice depends on your data access patterns."
+      ],
+      "answer": "The query is not executed until you call `.then()` on it, use it with `await`, or call the `.exec()` method. This allows you to build the query conditionally before sending it to the database."
+    },
+    {
+      "question": "What is the `lean()` method used for?",
+      "options": [
+        "You would use a `pre('find')` query middleware. Inside it, `this.where({ isDeleted: false });` would add the condition to the query before it is executed.",
+        "It improves performance because creating full Mongoose documents has overhead (they have methods, virtuals, etc.). For read-only operations where you don't need these features, `lean()` can be significantly faster and use less memory.",
+        "A common example is creating a `fullName` virtual property from `firstName` and `lastName` fields. This allows you to access `user.fullName` without having to store redundant data in the database.",
+        "You define the `type` as `mongoose.Schema.Types.ObjectId` and add a `ref` property with the name of the model you are referencing. For example: `author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }`."
+      ],
+      "answer": "It improves performance because creating full Mongoose documents has overhead (they have methods, virtuals, etc.). For read-only operations where you don't need these features, `lean()` can be significantly faster and use less memory."
+    },
+    {
+      "question": "What does the `unique` option do in a schema?",
+      "options": [
+        "No, it is not a validator. It is a helper for creating a unique index. Errors from duplicate keys come from the MongoDB driver, not from Mongoose's validation system, so they are handled differently.",
+        "It improves performance because creating full Mongoose documents has overhead (they have methods, virtuals, etc.). For read-only operations where you don't need these features, `lean()` can be significantly faster and use less memory.",
+        "You would use the `pre('validate')` hook. This allows you to modify the data to ensure it will pass the validation rules defined in your schema.",
+        "You can pass an array to the `required` property, with the second element being the custom error message. For example: `name: { type: String, required: [true, 'A user name is required'] }`."
+      ],
+      "answer": "No, it is not a validator. It is a helper for creating a unique index. Errors from duplicate keys come from the MongoDB driver, not from Mongoose's validation system, so they are handled differently."
+    },
+    {
+      "question": "How can you store an array of strings in a schema?",
+      "options": [
+        "You define the `type` as `mongoose.Schema.Types.ObjectId` and add a `ref` property with the name of the model you are referencing. For example: `author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }`.",
+        "You would define a separate schema for the subdocument and then use that schema inside the array brackets. For example: `const commentSchema = new Schema({ body: String }); const blogSchema = new Schema({ comments: [commentSchema] });`.",
+        "You can pass an array to the `required` property, with the second element being the custom error message. For example: `name: { type: String, required: [true, 'A user name is required'] }`.",
+        "Yes, you can provide a function to the `default` property. This function will be executed and its return value will be used as the default. A common example is using `Date.now` for a `createdAt` field: `createdAt: { type: Date, default: Date.now }`."
+      ],
+      "answer": "You would define a separate schema for the subdocument and then use that schema inside the array brackets. For example: `const commentSchema = new Schema({ body: String }); const blogSchema = new Schema({ comments: [commentSchema] });`."
+    },
+    {
+      "question": "What is the difference between `pre('save')` and `pre('validate')` hooks?",
+      "options": [
+        "Yes, you can provide a function to the `default` property. This function will be executed and its return value will be used as the default. A common example is using `Date.now` for a `createdAt` field: `createdAt: { type: Date, default: Date.now }`.",
+        "You define the `type` as `mongoose.Schema.Types.ObjectId` and add a `ref` property with the name of the model you are referencing. For example: `author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }`.",
+        "No, it is not a validator. It is a helper for creating a unique index. Errors from duplicate keys come from the MongoDB driver, not from Mongoose's validation system, so they are handled differently.",
+        "You would use the `pre('validate')` hook. This allows you to modify the data to ensure it will pass the validation rules defined in your schema."
+      ],
+      "answer": "You would use the `pre('validate')` hook. This allows you to modify the data to ensure it will pass the validation rules defined in your schema."
+    },
+    {
+      "question": "What is an ODM?",
+      "options": [
+        "`$lookup` is more powerful and performant for complex joins. `populate()` is convenient but can be inefficient for large datasets. `$lookup` performs the join on the database server itself, returning all data in a single query, while `populate()` can sometimes issue multiple separate queries.",
+        "It's a good practice to listen for connection events like `connected`, `error`, and `disconnected` on `mongoose.connection`. This allows you to log the connection status and handle connection failures gracefully.",
+        "You need to pass `{ new: true }` as the third argument (the options object) to the `findByIdAndUpdate` method.",
+        "The equivalent for SQL databases is an ORM (Object Relational Mapping). Libraries like Sequelize for Node.js or Hibernate for Java are examples of ORMs."
+      ],
+      "answer": "The equivalent for SQL databases is an ORM (Object Relational Mapping). Libraries like Sequelize for Node.js or Hibernate for Java are examples of ORMs."
+    }
+  ]
+}

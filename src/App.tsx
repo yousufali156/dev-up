@@ -1,6 +1,4 @@
-// Code line-by-line explanation in bangla
-// এখন থেকে আমি আপনার প্রতিটি কোড লাইন বাই লাইন বাংলায় ব্যাখ্যা করব।
-
+// Import necessary hooks and components from React and other libraries.
 import { useState, useEffect } from 'react';
 import HomeView from './views/HomeView';
 import TopicView from './views/TopicView';
@@ -10,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { fetchAllSkillData, topicList, type TopicData } from './data/loader';
 import type { MockUser } from './types';
 import Sidebar from './Components/layout/Sidebar/Sidebar';
+import Footer from './Components/layout/Footer/Footer';
 
 const mockUser: MockUser = {
     profilePic: 'https://i.pravatar.cc/150?u=yousuf',
@@ -20,44 +19,19 @@ const mockUser: MockUser = {
     questionsBookmarked: 25,
 };
 
-// 1. হ্যামবার্গার আইকন কম্পোনেন্ট।
-const HamburgerIcon = () => (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-    </svg>
-);
-
-// 2. মোবাইল নেভিগেশন বারের জন্য লোগো কম্পোনেন্ট।
-const MobileNavLogo = () => (
-    <div className="text-2xl font-extrabold flex items-center gap-2">
-        <span className="text-3xl">🚀</span>
-        <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 text-transparent bg-clip-text">
-            Dev Up
-        </span>
-    </div>
-);
-
-// 3. ভাষা পরিবর্তনের জন্য একটি নতুন টগল বাটন কম্পোনেন্ট তৈরি করা হয়েছে।
-const LanguageToggle = ({ language, setLanguage }: { language: 'en' | 'bn'; setLanguage: (lang: 'en' | 'bn') => void; }) => (
-    <div className="flex bg-gray-800 rounded-lg p-1 text-sm">
-        <button
-            onClick={() => setLanguage('en')}
-            className={`px-3 py-1 rounded ${language === 'en' ? 'bg-[#4F46E5]' : ''}`}
-        >
-            EN
-        </button>
-        <button
-            onClick={() => setLanguage('bn')}
-            className={`px-3 py-1 rounded ${language === 'bn' ? 'bg-[#4F46E5]' : ''}`}
-        >
-            BN
-        </button>
-    </div>
-);
+const HamburgerIcon = () => (<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>);
+const MobileNavLogo = () => (<div className="text-2xl font-extrabold flex items-center gap-2"><span className="text-3xl">🚀</span><span className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 text-transparent bg-clip-text">Dev Up</span></div>);
+const LanguageToggle = ({ language, setLanguage }: { language: 'en' | 'bn'; setLanguage: (lang: 'en' | 'bn') => void; }) => (<div className="flex bg-gray-800 rounded-lg p-1 text-sm"><button onClick={() => setLanguage('en')} className={`px-3 py-1 rounded ${language === 'en' ? 'bg-[#4F46E5]' : ''}`}>EN</button><button onClick={() => setLanguage('bn')} className={`px-3 py-1 rounded ${language === 'bn' ? 'bg-[#4F46E5]' : ''}`}>BN</button></div>);
 
 export default function App() {
     const [activeView, setActiveView] = useState<string>('home');
-    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+
+    // ❗️ পরিবর্তন ১: isLoggedIn স্টেট এখন localStorage থেকে তার প্রাথমিক মান নিচ্ছে।
+    // অ্যাপ চালু হওয়ার সময় এটি চেক করবে ব্যবহারকারী আগে লগইন করা ছিল কিনা।
+    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(() => {
+        return localStorage.getItem('isUserLoggedIn') === 'true';
+    });
+
     const [language, setLanguage] = useState<'en' | 'bn'>('bn');
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [skillData, setSkillData] = useState<TopicData[]>([]);
@@ -73,11 +47,16 @@ export default function App() {
         loadData();
     }, []);
 
+    // ❗️ পরিবর্তন ২: handleLogin ফাংশনে localStorage-এ লগইন অবস্থা সেভ করা হচ্ছে।
     const handleLogin = () => {
+        localStorage.setItem('isUserLoggedIn', 'true'); // লগইন অবস্থা ব্রাউজারে সেভ করা হলো।
         setIsLoggedIn(true);
         handleViewChange('profile');
     };
+
+    // ❗️ পরিবর্তন ৩: handleLogout ফাংশনে localStorage থেকে লগইন অবস্থা মুছে ফেলা হচ্ছে।
     const handleLogout = () => {
+        localStorage.removeItem('isUserLoggedIn'); // লগআউট করার সময় সেভ করা ডেটা মুছে ফেলা হলো।
         setIsLoggedIn(false);
         handleViewChange('home');
     };
@@ -88,7 +67,7 @@ export default function App() {
             setIsSidebarOpen(false);
         }
     };
-    
+
     const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
     const renderView = () => {
@@ -102,17 +81,20 @@ export default function App() {
         switch (activeView) {
             case 'home': return <HomeView language={language} />;
             case 'profile': return isLoggedIn ? <ProfileView user={mockUser} onLogout={handleLogout} language={language} /> : <HomeView language={language} />;
-            case 'exam': return <ExamView language={language} />;
+            case 'exam':
+                return <ExamView
+                    language={language}
+                    isLoggedIn={isLoggedIn}
+                    handleViewChange={handleViewChange}
+                />;
             default: return <HomeView language={language} />;
         }
     };
 
     return (
         <div className="h-screen bg-[#111827] text-white font-sans">
-            {/* 4. মোবাইল নেভিগেশন বারটি আপডেট করা হয়েছে। */}
             <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-[#1F2937] p-4 flex justify-between items-center border-b border-gray-700">
                 <MobileNavLogo />
-                {/* 5. এই div-টি ভাষা টগল এবং মেনু আইকনকে একসাথে রাখার জন্য ব্যবহার করা হয়েছে। */}
                 <div className="flex items-center gap-4">
                     <LanguageToggle language={language} setLanguage={setLanguage} />
                     <button className="text-white" onClick={toggleSidebar}>
@@ -120,10 +102,8 @@ export default function App() {
                     </button>
                 </div>
             </header>
-
             <div className="flex h-full">
                 {isSidebarOpen && <div className="fixed inset-0 bg-black bg-opacity-60 z-30 md:hidden" onClick={toggleSidebar}></div>}
-
                 <Sidebar
                     activeView={activeView}
                     setActiveView={handleViewChange}
@@ -150,6 +130,7 @@ export default function App() {
                     </AnimatePresence>
                 </main>
             </div>
+            <Footer />
         </div>
     );
 }

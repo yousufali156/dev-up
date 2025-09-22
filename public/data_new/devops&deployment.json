@@ -1,0 +1,254 @@
+{
+  "questions": [
+    {
+      "question": "What is DevOps?",
+      "options": [
+        "A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. It's the blueprint for building Docker images.",
+        "C.A.L.M.S. stands for: **C**ulture (collaboration), **A**utomation (automating everything), **L**ean (eliminating waste), **M**easurement (measuring everything), and **S**haring (sharing ideas and feedback).",
+        "1. **Load Balancing:** It can distribute traffic across multiple Node.js instances. 2. **SSL Termination:** It can handle HTTPS decryption, offloading that work from the Node.js app. 3. **Serving Static Content:** Nginx is highly efficient at serving static files. 4. **Security:** It acts as an additional layer of security.",
+        "A **VM** virtualizes the hardware, meaning each VM has its own guest operating system. A **container** virtualizes the operating system, meaning containers share the host OS kernel. This makes containers much more lightweight, faster to start, and less resource-intensive than VMs."
+      ],
+      "answer": "C.A.L.M.S. stands for: **C**ulture (collaboration), **A**utomation (automating everything), **L**ean (eliminating waste), **M**easurement (measuring everything), and **S**haring (sharing ideas and feedback)."
+    },
+    {
+      "question": "What is CI/CD?",
+      "options": [
+        "Heroku and Vercel are examples of **PaaS** (Platform as a Service). They manage the underlying infrastructure (servers, OS, networking), allowing developers to focus solely on deploying and managing their applications.",
+        "In **Continuous Delivery**, every change is automatically built, tested, and pushed to a non-production environment, but the final deployment to production requires manual approval. In **Continuous Deployment**, every change that passes all stages of the pipeline is automatically released to production.",
+        "`docker pull` is used to download an image or a repository from a registry. `docker push` is used to upload an image or a repository to a registry.",
+        "It's extremely useful for creating a consistent development environment. You can define your entire application stack (e.g., a Node.js app, a MongoDB database, and a Redis cache) in a single `docker-compose.yml` file and spin up the entire environment with one command (`docker-compose up`)."
+      ],
+      "answer": "In **Continuous Delivery**, every change is automatically built, tested, and pushed to a non-production environment, but the final deployment to production requires manual approval. In **Continuous Deployment**, every change that passes all stages of the pipeline is automatically released to production."
+    },
+    {
+      "question": "What is Docker?",
+      "options": [
+        "A **VM** virtualizes the hardware, meaning each VM has its own guest operating system. A **container** virtualizes the operating system, meaning containers share the host OS kernel. This makes containers much more lightweight, faster to start, and less resource-intensive than VMs.",
+        "Heroku and Vercel are examples of **PaaS** (Platform as a Service). They manage the underlying infrastructure (servers, OS, networking), allowing developers to focus solely on deploying and managing their applications.",
+        "1. **Encryption:** Protects data integrity and privacy. 2. **Authentication:** Verifies that users are communicating with the correct website. 3. **SEO:** Search engines use HTTPS as a positive ranking signal.",
+        "A key metric to monitor is **latency**, specifically the 95th or 99th percentile response time. This tells you the response time for the slowest 5% or 1% of your requests, which is often a better indicator of user-perceived performance than the average response time."
+      ],
+      "answer": "A **VM** virtualizes the hardware, meaning each VM has its own guest operating system. A **container** virtualizes the operating system, meaning containers share the host OS kernel. This makes containers much more lightweight, faster to start, and less resource-intensive than VMs."
+    },
+    {
+      "question": "What is the difference between a Docker Image and a Docker Container?",
+      "options": [
+        "A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. It's the blueprint for building Docker images.",
+        "A software firewall is installed on an individual computer, while a hardware firewall is a physical device that sits between your network and the internet, protecting all devices on the network.",
+        "In a microservices architecture, an API Gateway simplifies the client. Instead of having to know the endpoint for dozens of different services, the client makes all its requests to the single, stable gateway, which then handles the internal routing.",
+        "A workflow is a configurable automated process made up of one or more 'jobs'. Workflows are defined by a YAML file in the `.github/workflows` directory of a repository."
+      ],
+      "answer": "A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. It's the blueprint for building Docker images."
+    },
+    {
+      "question": "What is a Reverse Proxy?",
+      "options": [
+        "Cluster mode allows you to run multiple instances of your application across all available CPU cores. This multiplies the application's ability to handle incoming requests without any code changes, taking full advantage of the server's hardware.",
+        "1. **Load Balancing:** It can distribute traffic across multiple Node.js instances. 2. **SSL Termination:** It can handle HTTPS decryption, offloading that work from the Node.js app. 3. **Serving Static Content:** Nginx is highly efficient at serving static files. 4. **Security:** It acts as an additional layer of security.",
+        "In a pipeline, one job (the 'build' job) will create the artifacts, and a later job (the 'deploy' job) will download those artifacts and deploy them to a server. This ensures the exact same code that was tested is what gets deployed.",
+        "A key metric to monitor is **latency**, specifically the 95th or 99th percentile response time. This tells you the response time for the slowest 5% or 1% of your requests, which is often a better indicator of user-perceived performance than the average response time."
+      ],
+      "answer": "1. **Load Balancing:** It can distribute traffic across multiple Node.js instances. 2. **SSL Termination:** It can handle HTTPS decryption, offloading that work from the Node.js app. 3. **Serving Static Content:** Nginx is highly efficient at serving static files. 4. **Security:** It acts as an additional layer of security."
+    },
+    {
+      "question": "What are Vercel and Netlify?",
+      "options": [
+        "A **VM** virtualizes the hardware, meaning each VM has its own guest operating system. A **container** virtualizes the operating system, meaning containers share the host OS kernel. This makes containers much more lightweight, faster to start, and less resource-intensive than VMs.",
+        "Vercel is the company that created Next.js. As a result, the platform is perfectly optimized to support all of Next.js's features out-of-the-box (SSR, SSG, ISR, etc.) with zero configuration and the best possible performance.",
+        "An 'A' record is the most basic type of DNS record. It maps a domain name directly to an IPv4 address.",
+        "A major advantage is cost efficiency. You pay only for the compute time you consume—there is no charge when your code is not running. This contrasts with traditional servers that you pay for 24/7, regardless of usage."
+      ],
+      "answer": "Vercel is the company that created Next.js. As a result, the platform is perfectly optimized to support all of Next.js's features out-of-the-box (SSR, SSG, ISR, etc.) with zero configuration and the best possible performance."
+    },
+    {
+      "question": "What is SSL/TLS and why is HTTPS important?",
+      "options": [
+        "A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. It's the blueprint for building Docker images.",
+        "1. **Encryption:** Protects data integrity and privacy. 2. **Authentication:** Verifies that users are communicating with the correct website. 3. **SEO:** Search engines use HTTPS as a positive ranking signal.",
+        "Heroku and Vercel are examples of **PaaS** (Platform as a Service). They manage the underlying infrastructure (servers, OS, networking), allowing developers to focus solely on deploying and managing their applications.",
+        "An 'A' record is the most basic type of DNS record. It maps a domain name directly to an IPv4 address."
+      ],
+      "answer": "1. **Encryption:** Protects data integrity and privacy. 2. **Authentication:** Verifies that users are communicating with the correct website. 3. **SEO:** Search engines use HTTPS as a positive ranking signal."
+    },
+    {
+      "question": "What is GitHub Actions?",
+      "options": [
+        "A workflow is a configurable automated process made up of one or more 'jobs'. Workflows are defined by a YAML file in the `.github/workflows` directory of a repository.",
+        "Popular tools include Terraform, AWS CloudFormation, and Ansible. They allow you to define your entire cloud infrastructure in code, which can be version-controlled and automated.",
+        "A major advantage is cost efficiency. You pay only for the compute time you consume—there is no charge when your code is not running. This contrasts with traditional servers that you pay for 24/7, regardless of usage.",
+        "A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. It's the blueprint for building Docker images."
+      ],
+      "answer": "A workflow is a configurable automated process made up of one or more 'jobs'. Workflows are defined by a YAML file in the `.github/workflows` directory of a repository."
+    },
+    {
+      "question": "What is DNS?",
+      "options": [
+        "An 'A' record is the most basic type of DNS record. It maps a domain name directly to an IPv4 address.",
+        "1. **Encryption:** Protects data integrity and privacy. 2. **Authentication:** Verifies that users are communicating with the correct website. 3. **SEO:** Search engines use HTTPS as a positive ranking signal.",
+        "In a pipeline, one job (the 'build' job) will create the artifacts, and a later job (the 'deploy' job) will download those artifacts and deploy them to a server. This ensures the exact same code that was tested is what gets deployed.",
+        "Popular tools include Terraform, AWS CloudFormation, and Ansible. They allow you to define your entire cloud infrastructure in code, which can be version-controlled and automated."
+      ],
+      "answer": "An 'A' record is the most basic type of DNS record. It maps a domain name directly to an IPv4 address."
+    },
+    {
+      "question": "What is PM2?",
+      "options": [
+        "1. **Encryption:** Protects data integrity and privacy. 2. **Authentication:** Verifies that users are communicating with the correct website. 3. **SEO:** Search engines use HTTPS as a positive ranking signal.",
+        "Volumes are managed by Docker and are isolated from the host machine's file system, making them more portable and preventing accidental modification from other processes. They are the recommended way to manage a database's data.",
+        "Cluster mode allows you to run multiple instances of your application across all available CPU cores. This multiplies the application's ability to handle incoming requests without any code changes, taking full advantage of the server's hardware.",
+        "Popular tools include Terraform, AWS CloudFormation, and Ansible. They allow you to define your entire cloud infrastructure in code, which can be version-controlled and automated."
+      ],
+      "answer": "Cluster mode allows you to run multiple instances of your application across all available CPU cores. This multiplies the application's ability to handle incoming requests without any code changes, taking full advantage of the server's hardware."
+    },
+    {
+      "question": "What is the difference between IaaS, PaaS, and SaaS?",
+      "options": [
+        "1. **Encryption:** Protects data integrity and privacy. 2. **Authentication:** Verifies that users are communicating with the correct website. 3. **SEO:** Search engines use HTTPS as a positive ranking signal.",
+        "Heroku and Vercel are examples of **PaaS** (Platform as a Service). They manage the underlying infrastructure (servers, OS, networking), allowing developers to focus solely on deploying and managing their applications.",
+        "Round-robin is one of the simplest load balancing algorithms. It forwards requests to each server in turn, in a cyclical order. Once it reaches the end of the list, it starts again from the beginning.",
+        "1. **Load Balancing:** It can distribute traffic across multiple Node.js instances. 2. **SSL Termination:** It can handle HTTPS decryption, offloading that work from the Node.js app. 3. **Serving Static Content:** Nginx is highly efficient at serving static files. 4. **Security:** It acts as an additional layer of security."
+      ],
+      "answer": "Heroku and Vercel are examples of **PaaS** (Platform as a Service). They manage the underlying infrastructure (servers, OS, networking), allowing developers to focus solely on deploying and managing their applications."
+    },
+    {
+      "question": "What is Docker Compose?",
+      "options": [
+        "Popular tools include Terraform, AWS CloudFormation, and Ansible. They allow you to define your entire cloud infrastructure in code, which can be version-controlled and automated.",
+        "It's extremely useful for creating a consistent development environment. You can define your entire application stack (e.g., a Node.js app, a MongoDB database, and a Redis cache) in a single `docker-compose.yml` file and spin up the entire environment with one command (`docker-compose up`).",
+        "Hard-coding configuration is bad for security (it exposes secrets in your codebase) and flexibility (you have to change the code to change a configuration). Environment variables allow you to separate configuration from code.",
+        "A key metric to monitor is **latency**, specifically the 95th or 99th percentile response time. This tells you the response time for the slowest 5% or 1% of your requests, which is often a better indicator of user-perceived performance than the average response time."
+      ],
+      "answer": "It's extremely useful for creating a consistent development environment. You can define your entire application stack (e.g., a Node.js app, a MongoDB database, and a Redis cache) in a single `docker-compose.yml` file and spin up the entire environment with one command (`docker-compose up`)."
+    },
+    {
+      "question": "What is Load Balancing?",
+      "options": [
+        "Round-robin is one of the simplest load balancing algorithms. It forwards requests to each server in turn, in a cyclical order. Once it reaches the end of the list, it starts again from the beginning.",
+        "In **Continuous Delivery**, every change is automatically built, tested, and pushed to a non-production environment, but the final deployment to production requires manual approval. In **Continuous Deployment**, every change that passes all stages of the pipeline is automatically released to production.",
+        "Volumes are managed by Docker and are isolated from the host machine's file system, making them more portable and preventing accidental modification from other processes. They are the recommended way to manage a database's data.",
+        "A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. It's the blueprint for building Docker images."
+      ],
+      "answer": "Round-robin is one of the simplest load balancing algorithms. It forwards requests to each server in turn, in a cyclical order. Once it reaches the end of the list, it starts again from the beginning."
+    },
+    {
+      "question": "What are environment variables and why are they important?",
+      "options": [
+        "A key metric to monitor is **latency**, specifically the 95th or 99th percentile response time. This tells you the response time for the slowest 5% or 1% of your requests, which is often a better indicator of user-perceived performance than the average response time.",
+        "`docker pull` is used to download an image or a repository from a registry. `docker push` is used to upload an image or a repository to a registry.",
+        "Hard-coding configuration is bad for security (it exposes secrets in your codebase) and flexibility (you have to change the code to change a configuration). Environment variables allow you to separate configuration from code.",
+        "Popular tools include Terraform, AWS CloudFormation, and Ansible. They allow you to define your entire cloud infrastructure in code, which can be version-controlled and automated."
+      ],
+      "answer": "Hard-coding configuration is bad for security (it exposes secrets in your codebase) and flexibility (you have to change the code to change a configuration). Environment variables allow you to separate configuration from code."
+    },
+    {
+      "question": "What is Serverless computing?",
+      "options": [
+        "Popular tools include Terraform, AWS CloudFormation, and Ansible. They allow you to define your entire cloud infrastructure in code, which can be version-controlled and automated.",
+        "A major advantage is cost efficiency. You pay only for the compute time you consume—there is no charge when your code is not running. This contrasts with traditional servers that you pay for 24/7, regardless of usage.",
+        "A key metric to monitor is **latency**, specifically the 95th or 99th percentile response time. This tells you the response time for the slowest 5% or 1% of your requests, which is often a better indicator of user-perceived performance than the average response time.",
+        "A workflow is a configurable automated process made up of one or more 'jobs'. Workflows are defined by a YAML file in the `.github/workflows` directory of a repository."
+      ],
+      "answer": "A major advantage is cost efficiency. You pay only for the compute time you consume—there is no charge when your code is not running. This contrasts with traditional servers that you pay for 24/7, regardless of usage."
+    },
+    {
+      "question": "What is a Docker Volume?",
+      "options": [
+        "1. **Load Balancing:** It can distribute traffic across multiple Node.js instances. 2. **SSL Termination:** It can handle HTTPS decryption, offloading that work from the Node.js app. 3. **Serving Static Content:** Nginx is highly efficient at serving static files. 4. **Security:** It acts as an additional layer of security.",
+        "Volumes are managed by Docker and are isolated from the host machine's file system, making them more portable and preventing accidental modification from other processes. They are the recommended way to manage a database's data.",
+        "In **Continuous Delivery**, every change is automatically built, tested, and pushed to a non-production environment, but the final deployment to production requires manual approval. In **Continuous Deployment**, every change that passes all stages of the pipeline is automatically released to production.",
+        "Cluster mode allows you to run multiple instances of your application across all available CPU cores. This multiplies the application's ability to handle incoming requests without any code changes, taking full advantage of the server's hardware."
+      ],
+      "answer": "Volumes are managed by Docker and are isolated from the host machine's file system, making them more portable and preventing accidental modification from other processes. They are the recommended way to manage a database's data."
+    },
+    {
+      "question": "What is a 'build artifact'?",
+      "options": [
+        "A key metric to monitor is **latency**, specifically the 95th or 99th percentile response time. This tells you the response time for the slowest 5% or 1% of your requests, which is often a better indicator of user-perceived performance than the average response time.",
+        "Vercel is the company that created Next.js. As a result, the platform is perfectly optimized to support all of Next.js's features out-of-the-box (SSR, SSG, ISR, etc.) with zero configuration and the best possible performance.",
+        "In a pipeline, one job (the 'build' job) will create the artifacts, and a later job (the 'deploy' job) will download those artifacts and deploy them to a server. This ensures the exact same code that was tested is what gets deployed.",
+        "An 'A' record is the most basic type of DNS record. It maps a domain name directly to an IPv4 address."
+      ],
+      "answer": "In a pipeline, one job (the 'build' job) will create the artifacts, and a later job (the 'deploy' job) will download those artifacts and deploy them to a server. This ensures the exact same code that was tested is what gets deployed."
+    },
+    {
+      "question": "What is Infrastructure as Code (IaC)?",
+      "options": [
+        "A **VM** virtualizes the hardware, meaning each VM has its own guest operating system. A **container** virtualizes the operating system, meaning containers share the host OS kernel. This makes containers much more lightweight, faster to start, and less resource-intensive than VMs.",
+        "Popular tools include Terraform, AWS CloudFormation, and Ansible. They allow you to define your entire cloud infrastructure in code, which can be version-controlled and automated.",
+        "Cluster mode allows you to run multiple instances of your application across all available CPU cores. This multiplies the application's ability to handle incoming requests without any code changes, taking full advantage of the server's hardware.",
+        "`docker pull` is used to download an image or a repository from a registry. `docker push` is used to upload an image or a repository to a registry."
+      ],
+      "answer": "Popular tools include Terraform, AWS CloudFormation, and Ansible. They allow you to define your entire cloud infrastructure in code, which can be version-controlled and automated."
+    },
+    {
+      "question": "What is a firewall?",
+      "options": [
+        "A software firewall is installed on an individual computer, while a hardware firewall is a physical device that sits between your network and the internet, protecting all devices on the network.",
+        "Popular tools include Terraform, AWS CloudFormation, and Ansible. They allow you to define your entire cloud infrastructure in code, which can be version-controlled and automated.",
+        "1. **Load Balancing:** It can distribute traffic across multiple Node.js instances. 2. **SSL Termination:** It can handle HTTPS decryption, offloading that work from the Node.js app. 3. **Serving Static Content:** Nginx is highly efficient at serving static files. 4. **Security:** It acts as an additional layer of security.",
+        "A major advantage is cost efficiency. You pay only for the compute time you consume—there is no charge when your code is not running. This contrasts with traditional servers that you pay for 24/7, regardless of usage."
+      ],
+      "answer": "A software firewall is installed on an individual computer, while a hardware firewall is a physical device that sits between your network and the internet, protecting all devices on the network."
+    },
+    {
+      "question": "What is the difference between monitoring and logging?",
+      "options": [
+        "In **Continuous Delivery**, every change is automatically built, tested, and pushed to a non-production environment, but the final deployment to production requires manual approval. In **Continuous Deployment**, every change that passes all stages of the pipeline is automatically released to production.",
+        "A key metric to monitor is **latency**, specifically the 95th or 99th percentile response time. This tells you the response time for the slowest 5% or 1% of your requests, which is often a better indicator of user-perceived performance than the average response time.",
+        "Volumes are managed by Docker and are isolated from the host machine's file system, making them more portable and preventing accidental modification from other processes. They are the recommended way to manage a database's data.",
+        "Cluster mode allows you to run multiple instances of your application across all available CPU cores. This multiplies the application's ability to handle incoming requests without any code changes, taking full advantage of the server's hardware."
+      ],
+      "answer": "A key metric to monitor is **latency**, specifically the 95th or 99th percentile response time. This tells you the response time for the slowest 5% or 1% of your requests, which is often a better indicator of user-perceived performance than the average response time."
+    },
+    {
+      "question": "What is an API Gateway?",
+      "options": [
+        "In a microservices architecture, an API Gateway simplifies the client. Instead of having to know the endpoint for dozens of different services, the client makes all its requests to the single, stable gateway, which then handles the internal routing.",
+        "Volumes are managed by Docker and are isolated from the host machine's file system, making them more portable and preventing accidental modification from other processes. They are the recommended way to manage a database's data.",
+        "A key metric to monitor is **latency**, specifically the 95th or 99th percentile response time. This tells you the response time for the slowest 5% or 1% of your requests, which is often a better indicator of user-perceived performance than the average response time.",
+        "The primary benefit is performance. Decrypting SSL/TLS traffic is computationally expensive. Offloading this work from the backend application servers to a dedicated reverse proxy frees up the application servers to focus on their core logic."
+      ],
+      "answer": "In a microservices architecture, an API Gateway simplifies the client. Instead of having to know the endpoint for dozens of different services, the client makes all its requests to the single, stable gateway, which then handles the internal routing."
+    },
+    {
+      "question": "What is SSL Termination?",
+      "options": [
+        "Heroku and Vercel are examples of **PaaS** (Platform as a Service). They manage the underlying infrastructure (servers, OS, networking), allowing developers to focus solely on deploying and managing their applications.",
+        "The major advantage is that it allows for instant, zero-downtime rollback. If a problem is detected in the Green environment after the switch, you can immediately switch traffic back to the stable Blue environment.",
+        "Hard-coding configuration is bad for security (it exposes secrets in your codebase) and flexibility (you have to change the code to change a configuration). Environment variables allow you to separate configuration from code.",
+        "The primary benefit is performance. Decrypting SSL/TLS traffic is computationally expensive. Offloading this work from the backend application servers to a dedicated reverse proxy frees up the application servers to focus on their core logic."
+      ],
+      "answer": "The primary benefit is performance. Decrypting SSL/TLS traffic is computationally expensive. Offloading this work from the backend application servers to a dedicated reverse proxy frees up the application servers to focus on their core logic."
+    },
+    {
+      "question": "What is a 'pipeline' in the context of CI/CD?",
+      "options": [
+        "A pipeline 'fails' if any of its critical steps (like a compilation error during the build stage or a failed test in the testing stage) do not complete successfully. A failed pipeline prevents the code from being deployed, ensuring that broken code does not reach production.",
+        "Popular tools include Terraform, AWS CloudFormation, and Ansible. They allow you to define your entire cloud infrastructure in code, which can be version-controlled and automated.",
+        "C.A.L.M.S. stands for: **C**ulture (collaboration), **A**utomation (automating everything), **L**ean (eliminating waste), **M**easurement (measuring everything), and **S**haring (sharing ideas and feedback).",
+        "In **Continuous Delivery**, every change is automatically built, tested, and pushed to a non-production environment, but the final deployment to production requires manual approval. In **Continuous Deployment**, every change that passes all stages of the pipeline is automatically released to production."
+      ],
+      "answer": "A pipeline 'fails' if any of its critical steps (like a compilation error during the build stage or a failed test in the testing stage) do not complete successfully. A failed pipeline prevents the code from being deployed, ensuring that broken code does not reach production."
+    },
+    {
+      "question": "What is a Blue-Green deployment?",
+      "options": [
+        "The major advantage is that it allows for instant, zero-downtime rollback. If a problem is detected in the Green environment after the switch, you can immediately switch traffic back to the stable Blue environment.",
+        "In **Continuous Delivery**, every change is automatically built, tested, and pushed to a non-production environment, but the final deployment to production requires manual approval. In **Continuous Deployment**, every change that passes all stages of the pipeline is automatically released to production.",
+        "Heroku and Vercel are examples of **PaaS** (Platform as a Service). They manage the underlying infrastructure (servers, OS, networking), allowing developers to focus solely on deploying and managing their applications.",
+        "A software firewall is installed on an individual computer, while a hardware firewall is a physical device that sits between your network and the internet, protecting all devices on the network."
+      ],
+      "answer": "The major advantage is that it allows for instant, zero-downtime rollback. If a problem is detected in the Green environment after the switch, you can immediately switch traffic back to the stable Blue environment."
+    },
+    {
+      "question": "What is a Docker Registry?",
+      "options": [
+        "Vercel is the company that created Next.js. As a result, the platform is perfectly optimized to support all of Next.js's features out-of-the-box (SSR, SSG, ISR, etc.) with zero configuration and the best possible performance.",
+        "In a pipeline, one job (the 'build' job) will create the artifacts, and a later job (the 'deploy' job) will download those artifacts and deploy them to a server. This ensures the exact same code that was tested is what gets deployed.",
+        "`docker pull` is used to download an image or a repository from a registry. `docker push` is used to upload an image or a repository to a registry.",
+        "An 'A' record is the most basic type of DNS record. It maps a domain name directly to an IPv4 address."
+      ],
+      "answer": "`docker pull` is used to download an image or a repository from a registry. `docker push` is used to upload an image or a repository to a registry."
+    }
+  ]
+}

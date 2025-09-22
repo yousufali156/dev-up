@@ -1,0 +1,504 @@
+{
+  "questions": [
+    {
+      "question": "What is React?",
+      "options": [
+        "The key distinction is 'inversion of control'. A **Framework** dictates your application's architecture and calls your code. A **Library** is a set of tools that you call when you need them. React is a library because it's focused on the UI layer and doesn't impose rules on other aspects like routing or state management.",
+        "You solve it by including the state or prop value in the dependency array of `useEffect`. This ensures that the effect function is re-created with the latest values whenever those dependencies change.",
+        "A `SyntheticEvent` is a cross-browser wrapper around the browser's native event. It has the same interface as the browser's native event, including `stopPropagation()` and `preventDefault()`, but works identically across all browsers.",
+        "The React team now recommends using production-grade React frameworks like Next.js or Remix instead of CRA for new projects, as they provide more features like routing and server-side rendering out of the box."
+      ],
+      "answer": "The key distinction is 'inversion of control'. A **Framework** dictates your application's architecture and calls your code. A **Library** is a set of tools that you call when you need them. React is a library because it's focused on the UI layer and doesn't impose rules on other aspects like routing or state management."
+    },
+    {
+      "question": "What is JSX?",
+      "options": [
+        "React relies on the call order of Hooks to associate state with the correct `useState` or `useEffect` call. Calling them inside conditions would change this order between renders and lead to bugs.",
+        "You can use the `&&` operator for a concise way to render a component only if a condition is true. For example: `isLoggedIn && <Dashboard />`. This works because in JavaScript, `true && expression` always evaluates to `expression`.",
+        "A **React Element** is a light, immutable object that describes what you want to see on the screen (e.g., `<p>Hello</p>`). A **React Component** is a function or a class that acts as a blueprint for elements. In short: a component *produces* elements.",
+        "1. **Accessing DOM nodes:** To directly interact with a DOM element (e.g., to focus an input). 2. **Storing a mutable value:** To keep track of a value that can change without causing a re-render, such as a timer ID or a previous state value."
+      ],
+      "answer": "A **React Element** is a light, immutable object that describes what you want to see on the screen (e.g., `<p>Hello</p>`). A **React Component** is a function or a class that acts as a blueprint for elements. In short: a component *produces* elements."
+    },
+    {
+      "question": "What is the difference between state and props?",
+      "options": [
+        "The `public/index.html` file is the HTML page that is served to the browser. It contains a single DOM node, usually `<div id=\"root\"></div>`, which serves as the mounting point for the entire React application.",
+        "You solve it by including the state or prop value in the dependency array of `useEffect`. This ensures that the effect function is re-created with the latest values whenever those dependencies change.",
+        "**Prop drilling** is passing props down through multiple layers of nested components that don't need the props themselves. **Solutions:** 1. **Context API:** React's built-in solution for sharing global data. 2. **State Management Libraries (Redux, Zustand):** For complex, frequently updating global state.",
+        "It's premature optimization. `useCallback` has its own overhead. It should only be used when passing a function to a memoized child component (`React.memo`) to prevent re-renders, or when the function is a dependency of another hook like `useEffect`."
+      ],
+      "answer": "**Prop drilling** is passing props down through multiple layers of nested components that don't need the props themselves. **Solutions:** 1. **Context API:** React's built-in solution for sharing global data. 2. **State Management Libraries (Redux, Zustand):** For complex, frequently updating global state."
+    },
+    {
+      "question": "What is the `useState` hook?",
+      "options": [
+        "When the value of the `Provider` component wrapping the component tree updates, the `useContext` hook will trigger a re-render in any component that uses it, with the latest context value.",
+        "You should never mutate state directly because React relies on the state setter function (e.g., `setMyState`) to know that a change has occurred. Modifying the state directly won't trigger a re-render, leading to an inconsistent UI.",
+        "1. **Accessing DOM nodes:** To directly interact with a DOM element (e.g., to focus an input). 2. **Storing a mutable value:** To keep track of a value that can change without causing a re-render, such as a timer ID or a previous state value.",
+        "`<a>` tags will cause a full page reload when clicked. `<Link>` components from React Router will intercept the click and update the URL without a full page reload, providing a faster, single-page application experience."
+      ],
+      "answer": "You should never mutate state directly because React relies on the state setter function (e.g., `setMyState`) to know that a change has occurred. Modifying the state directly won't trigger a re-render, leading to an inconsistent UI."
+    },
+    {
+      "question": "Why are `key`s important when rendering a list in React?",
+      "options": [
+        "Using an index as a key is an anti-pattern for dynamic lists. If an item is added or removed, the indices of other items change. React uses keys to track element identity, so it can lead to incorrect DOM updates and buggy behavior, especially if the list items have their own state.",
+        "`React.memo` can hurt performance if the props it's comparing are complex objects or functions that are re-created on every render. The shallow comparison check itself has a cost, and if it always fails, you've added overhead for no benefit.",
+        "You solve it by including the state or prop value in the dependency array of `useEffect`. This ensures that the effect function is re-created with the latest values whenever those dependencies change.",
+        "You can use the `&&` operator for a concise way to render a component only if a condition is true. For example: `isLoggedIn && <Dashboard />`. This works because in JavaScript, `true && expression` always evaluates to `expression`."
+      ],
+      "answer": "Using an index as a key is an anti-pattern for dynamic lists. If an item is added or removed, the indices of other items change. React uses keys to track element identity, so it can lead to incorrect DOM updates and buggy behavior, especially if the list items have their own state."
+    },
+    {
+      "question": "How do you handle events in React?",
+      "options": [
+        "A `SyntheticEvent` is a cross-browser wrapper around the browser's native event. It has the same interface as the browser's native event, including `stopPropagation()` and `preventDefault()`, but works identically across all browsers.",
+        "`defaultProps` is a property on a component class or function that can be defined to set default values for the props. They are used for props that are not passed, but are not for props that are `null`.",
+        "Custom Hooks solve the same problems as HOCs but in a simpler way. They don't introduce extra component nesting ('wrapper hell') and the logic is more explicit and easier to trace, making the code cleaner.",
+        "A **React Element** is a light, immutable object that describes what you want to see on the screen (e.g., `<p>Hello</p>`). A **React Component** is a function or a class that acts as a blueprint for elements. In short: a component *produces* elements."
+      ],
+      "answer": "A `SyntheticEvent` is a cross-browser wrapper around the browser's native event. It has the same interface as the browser's native event, including `stopPropagation()` and `preventDefault()`, but works identically across all browsers."
+    },
+    {
+      "question": "What is conditional rendering in React?",
+      "options": [
+        "You can use the `&&` operator for a concise way to render a component only if a condition is true. For example: `isLoggedIn && <Dashboard />`. This works because in JavaScript, `true && expression` always evaluates to `expression`.",
+        "In development mode, `StrictMode` intentionally double-invokes some functions (like render methods and `useEffect`) to help you find side effects. You will often see `console.log` statements from `useEffect` appear twice.",
+        "React would think you are trying to render an HTML tag named 'mycomponent' and would likely render nothing or throw a warning, as it's not a standard HTML tag.",
+        "TypeScript is the modern, preferred alternative. It provides static type checking at compile time, which is more robust than the runtime checks offered by `prop-types`."
+      ],
+      "answer": "You can use the `&&` operator for a concise way to render a component only if a condition is true. For example: `isLoggedIn && <Dashboard />`. This works because in JavaScript, `true && expression` always evaluates to `expression`."
+    },
+    {
+      "question": "What is the `useEffect` Hook?",
+      "options": [
+        "Jest provides the general testing framework. React Testing Library provides utilities specifically for testing React components in a way that resembles how users interact with them, encouraging better testing practices.",
+        "Custom Hooks provide a much cleaner and more direct way to share stateful logic without the extra nesting and component boilerplate that the render prop pattern often requires.",
+        "- `componentDidMount`: `useEffect(() => {}, [])` (empty dependency array). - `componentDidUpdate`: `useEffect(() => {}, [dep])` (with dependencies). - `componentWillUnmount`: The cleanup function returned from `useEffect`.",
+        "1) **No array**: The effect runs after every render. 2) **Empty array `[]`**: The effect runs only once, after the initial render. 3) **Array with values `[dep]`**: The effect runs after the initial render and will re-run only if any value in the array has changed."
+      ],
+      "answer": "1) **No array**: The effect runs after every render. 2) **Empty array `[]`**: The effect runs only once, after the initial render. 3) **Array with values `[dep]`**: The effect runs after the initial render and will re-run only if any value in the array has changed."
+    },
+    {
+      "question": "How do you lift state up in React?",
+      "options": [
+        "1. **Accessing DOM nodes:** To directly interact with a DOM element (e.g., to focus an input). 2. **Storing a mutable value:** To keep track of a value that can change without causing a re-render, such as a timer ID or a previous state value.",
+        "The data flow becomes **unidirectional** or **one-way**. The shared state lives in the parent. The parent passes the state down to children as props and also passes down callback functions to allow children to update the state.",
+        "It's crucial for preventing memory leaks. For example, if you set up a subscription in `useEffect` and don't clean it up when the component unmounts, the subscription will remain in memory, leading to bugs and performance issues.",
+        "Instead of passing data down multiple levels, you can pass the final component that needs the data directly as a child. The intermediate components just render `props.children` without needing to know about the data."
+      ],
+      "answer": "The data flow becomes **unidirectional** or **one-way**. The shared state lives in the parent. The parent passes the state down to children as props and also passes down callback functions to allow children to update the state."
+    },
+    {
+      "question": "What is the difference between a controlled and an uncontrolled component?",
+      "options": [
+        "1) **No array**: The effect runs after every render. 2) **Empty array `[]`**: The effect runs only once, after the initial render. 3) **Array with values `[dep]`**: The effect runs after the initial render and will re-run only if any value in the array has changed.",
+        "1. Two elements of different types will produce different trees. 2. The developer can hint at which child elements may be stable across different renders with a `key` prop.",
+        "When a component's state changes, React updates the Virtual DOM first. It then compares the updated Virtual DOM with a snapshot of the Virtual DOM before the update, a process called 'diffing'. It then only updates the specific objects in the real DOM that have changed, which is much faster than re-rendering the entire DOM.",
+        "An uncontrolled component can be better when integrating with non-React code or on very simple forms. A file input (`<input type=\"file\">`) is inherently uncontrolled because its value can only be set by a user."
+      ],
+      "answer": "An uncontrolled component can be better when integrating with non-React code or on very simple forms. A file input (`<input type=\"file\">`) is inherently uncontrolled because its value can only be set by a user."
+    },
+    {
+      "question": "What is the React Context API?",
+      "options": [
+        "TypeScript is the modern, preferred alternative. It provides static type checking at compile time, which is more robust than the runtime checks offered by `prop-types`.",
+        "You can use the `&&` operator for a concise way to render a component only if a condition is true. For example: `isLoggedIn && <Dashboard />`. This works because in JavaScript, `true && expression` always evaluates to `expression`.",
+        "Use Context API for low-frequency updates of simple global data, like theme or user authentication. Use Redux for complex, high-frequency state changes that are shared across many components, as it provides more powerful tools for debugging and managing state logic.",
+        "It's premature optimization. `useCallback` has its own overhead. It should only be used when passing a function to a memoized child component (`React.memo`) to prevent re-renders, or when the function is a dependency of another hook like `useEffect`."
+      ],
+      "answer": "Use Context API for low-frequency updates of simple global data, like theme or user authentication. Use Redux for complex, high-frequency state changes that are shared across many components, as it provides more powerful tools for debugging and managing state logic."
+    },
+    {
+      "question": "What is the Virtual DOM?",
+      "options": [
+        "1) **No array**: The effect runs after every render. 2) **Empty array `[]`**: The effect runs only once, after the initial render. 3) **Array with values `[dep]`**: The effect runs after the initial render and will re-run only if any value in the array has changed.",
+        "When a component's state changes, React updates the Virtual DOM first. It then compares the updated Virtual DOM with a snapshot of the Virtual DOM before the update, a process called 'diffing'. It then only updates the specific objects in the real DOM that have changed, which is much faster than re-rendering the entire DOM.",
+        "Choose `useReducer` when: 1. Your state is a complex object or array. 2. The logic for updating the state is complex. 3. Changing one piece of state requires changing another. `useReducer` centralizes this logic in a single reducer function.",
+        "`<a>` tags will cause a full page reload when clicked. `<Link>` components from React Router will intercept the click and update the URL without a full page reload, providing a faster, single-page application experience."
+      ],
+      "answer": "When a component's state changes, React updates the Virtual DOM first. It then compares the updated Virtual DOM with a snapshot of the Virtual DOM before the update, a process called 'diffing'. It then only updates the specific objects in the real DOM that have changed, which is much faster than re-rendering the entire DOM."
+    },
+    {
+      "question": "What is the `useRef` hook?",
+      "options": [
+        "1. **Accessing DOM nodes:** To directly interact with a DOM element (e.g., to focus an input). 2. **Storing a mutable value:** To keep track of a value that can change without causing a re-render, such as a timer ID or a previous state value.",
+        "When a component's state changes, React updates the Virtual DOM first. It then compares the updated Virtual DOM with a snapshot of the Virtual DOM before the update, a process called 'diffing'. It then only updates the specific objects in the real DOM that have changed, which is much faster than re-rendering the entire DOM.",
+        "1. **Single source of truth:** The state of your whole application is stored in a single object tree. 2. **State is read-only:** The only way to change the state is to dispatch an action. 3. **Changes are made with pure functions:** Reducers are pure functions that take the previous state and an action, and return the next state.",
+        "You must call `super(props)` before any other statement. Otherwise, `this.props` will be undefined in the constructor, which can lead to bugs."
+      ],
+      "answer": "1. **Accessing DOM nodes:** To directly interact with a DOM element (e.g., to focus an input). 2. **Storing a mutable value:** To keep track of a value that can change without causing a re-render, such as a timer ID or a previous state value."
+    },
+    {
+      "question": "What is the difference between a functional component and a class component?",
+      "options": [
+        "**Prop drilling** is passing props down through multiple layers of nested components that don't need the props themselves. **Solutions:** 1. **Context API:** React's built-in solution for sharing global data. 2. **State Management Libraries (Redux, Zustand):** For complex, frequently updating global state.",
+        "For new projects, functional components with Hooks are the standard. However, class components are still necessary for one specific feature not yet available in Hooks: **Error Boundaries**.",
+        "The `key` prop gives elements a stable identity. When a list is re-rendered, React uses the keys to match children in the original tree with children in the subsequent tree, which makes the diffing algorithm much more efficient.",
+        "The key distinction is 'inversion of control'. A **Framework** dictates your application's architecture and calls your code. A **Library** is a set of tools that you call when you need them. React is a library because it's focused on the UI layer and doesn't impose rules on other aspects like routing or state management."
+      ],
+      "answer": "For new projects, functional components with Hooks are the standard. However, class components are still necessary for one specific feature not yet available in Hooks: **Error Boundaries**."
+    },
+    {
+      "question": "What is `React.memo`?",
+      "options": [
+        "A `SyntheticEvent` is a cross-browser wrapper around the browser's native event. It has the same interface as the browser's native event, including `stopPropagation()` and `preventDefault()`, but works identically across all browsers.",
+        "`React.memo` can hurt performance if the props it's comparing are complex objects or functions that are re-created on every render. The shallow comparison check itself has a cost, and if it always fails, you've added overhead for no benefit.",
+        "React would think you are trying to render an HTML tag named 'mycomponent' and would likely render nothing or throw a warning, as it's not a standard HTML tag.",
+        "TypeScript is the modern, preferred alternative. It provides static type checking at compile time, which is more robust than the runtime checks offered by `prop-types`."
+      ],
+      "answer": "`React.memo` can hurt performance if the props it's comparing are complex objects or functions that are re-created on every render. The shallow comparison check itself has a cost, and if it always fails, you've added overhead for no benefit."
+    },
+    {
+      "question": "What is the difference between `useMemo` and `useCallback`?",
+      "options": [
+        "You should almost always use `useEffect`. Only use `useLayoutEffect` when you need to make DOM measurements (like getting the scroll position) and then synchronously re-render to prevent the user from seeing a flicker.",
+        "It's premature optimization. `useCallback` has its own overhead. It should only be used when passing a function to a memoized child component (`React.memo`) to prevent re-renders, or when the function is a dependency of another hook like `useEffect`.",
+        "It's crucial for preventing memory leaks. For example, if you set up a subscription in `useEffect` and don't clean it up when the component unmounts, the subscription will remain in memory, leading to bugs and performance issues.",
+        "The React team now recommends using production-grade React frameworks like Next.js or Remix instead of CRA for new projects, as they provide more features like routing and server-side rendering out of the box."
+      ],
+      "answer": "It's premature optimization. `useCallback` has its own overhead. It should only be used when passing a function to a memoized child component (`React.memo`) to prevent re-renders, or when the function is a dependency of another hook like `useEffect`."
+    },
+    {
+      "question": "What is the `useReducer` hook?",
+      "options": [
+        "The Fiber architecture was a foundational change that enabled features like error boundaries, fragments, portals, and the scheduling of updates with different priorities, which is crucial for features like `Suspense`.",
+        "Custom Hooks solve the same problems as HOCs but in a simpler way. They don't introduce extra component nesting ('wrapper hell') and the logic is more explicit and easier to trace, making the code cleaner.",
+        "You solve it by including the state or prop value in the dependency array of `useEffect`. This ensures that the effect function is re-created with the latest values whenever those dependencies change.",
+        "Choose `useReducer` when: 1. Your state is a complex object or array. 2. The logic for updating the state is complex. 3. Changing one piece of state requires changing another. `useReducer` centralizes this logic in a single reducer function."
+      ],
+      "answer": "Choose `useReducer` when: 1. Your state is a complex object or array. 2. The logic for updating the state is complex. 3. Changing one piece of state requires changing another. `useReducer` centralizes this logic in a single reducer function."
+    },
+    {
+      "question": "What is a Custom Hook?",
+      "options": [
+        "Jest provides the general testing framework. React Testing Library provides utilities specifically for testing React components in a way that resembles how users interact with them, encouraging better testing practices.",
+        "Custom Hooks offer significant advantages: they don't introduce extra layers of components in the tree ('wrapper hell'), the data flow is more explicit, and they are easier to compose and test since they are just functions.",
+        "- `componentDidMount`: `useEffect(() => {}, [])` (empty dependency array). - `componentDidUpdate`: `useEffect(() => {}, [dep])` (with dependencies). - `componentWillUnmount`: The cleanup function returned from `useEffect`.",
+        "In development mode, `StrictMode` intentionally double-invokes some functions (like render methods and `useEffect`) to help you find side effects. You will often see `console.log` statements from `useEffect` appear twice."
+      ],
+      "answer": "Custom Hooks offer significant advantages: they don't introduce extra layers of components in the tree ('wrapper hell'), the data flow is more explicit, and they are easier to compose and test since they are just functions."
+    },
+    {
+      "question": "What is the `children` prop?",
+      "options": [
+        "Instead of passing data down multiple levels, you can pass the final component that needs the data directly as a child. The intermediate components just render `props.children` without needing to know about the data.",
+        "A common use case is for components that need to break out of their container, such as modals, tooltips, or dialog boxes. This helps avoid complex `z-index` and `overflow` issues.",
+        "When the value of the `Provider` component wrapping the component tree updates, the `useContext` hook will trigger a re-render in any component that uses it, with the latest context value.",
+        "You should almost always use `useEffect`. Only use `useLayoutEffect` when you need to make DOM measurements (like getting the scroll position) and then synchronously re-render to prevent the user from seeing a flicker."
+      ],
+      "answer": "Instead of passing data down multiple levels, you can pass the final component that needs the data directly as a child. The intermediate components just render `props.children` without needing to know about the data."
+    },
+    {
+      "question": "What are Error Boundaries?",
+      "options": [
+        "Error Boundaries do not catch errors for: 1. Event handlers. 2. Asynchronous code (e.g. `setTimeout` or `requestAnimationFrame` callbacks). 3. Server-side rendering. 4. Errors thrown in the error boundary itself.",
+        "You can use the `&&` operator for a concise way to render a component only if a condition is true. For example: `isLoggedIn && <Dashboard />`. This works because in JavaScript, `true && expression` always evaluates to `expression`.",
+        "You should almost always use `useEffect`. Only use `useLayoutEffect` when you need to make DOM measurements (like getting the scroll position) and then synchronously re-render to prevent the user from seeing a flicker.",
+        "1) **No array**: The effect runs after every render. 2) **Empty array `[]`**: The effect runs only once, after the initial render. 3) **Array with values `[dep]`**: The effect runs after the initial render and will re-run only if any value in the array has changed."
+      ],
+      "answer": "Error Boundaries do not catch errors for: 1. Event handlers. 2. Asynchronous code (e.g. `setTimeout` or `requestAnimationFrame` callbacks). 3. Server-side rendering. 4. Errors thrown in the error boundary itself."
+    },
+    {
+      "question": "What are React Fragments?",
+      "options": [
+        "Custom Hooks solve the same problems as HOCs but in a simpler way. They don't introduce extra component nesting ('wrapper hell') and the logic is more explicit and easier to trace, making the code cleaner.",
+        "You should almost always use `useEffect`. Only use `useLayoutEffect` when you need to make DOM measurements (like getting the scroll position) and then synchronously re-render to prevent the user from seeing a flicker.",
+        "Fragments are essential when working with CSS Flexbox or Grid, where an extra wrapper `<div>` could break the intended layout by disrupting the direct child relationship between the container and its items.",
+        "The shorter `<>` syntax does not support the `key` attribute. So, if you are rendering a list of fragments, you must use the explicit `<React.Fragment key={item.id}>` syntax."
+      ],
+      "answer": "The shorter `<>` syntax does not support the `key` attribute. So, if you are rendering a list of fragments, you must use the explicit `<React.Fragment key={item.id}>` syntax."
+    },
+    {
+      "question": "What are different ways to style a React component?",
+      "options": [
+        "The data flow becomes **unidirectional** or **one-way**. The shared state lives in the parent. The parent passes the state down to children as props and also passes down callback functions to allow children to update the state.",
+        "The React team now recommends using production-grade React frameworks like Next.js or Remix instead of CRA for new projects, as they provide more features like routing and server-side rendering out of the box.",
+        "You should use the functional update form: `setState(prevState => ({...prevState, count: prevState.count + 1}))`. This ensures you are working with the most up-to-date state value.",
+        "CSS Modules solve the problem of global scope in CSS. They automatically generate unique class names for each component, ensuring that styles for one component do not accidentally affect another."
+      ],
+      "answer": "CSS Modules solve the problem of global scope in CSS. They automatically generate unique class names for each component, ensuring that styles for one component do not accidentally affect another."
+    },
+    {
+      "question": "What are React Portals?",
+      "options": [
+        "When the value of the `Provider` component wrapping the component tree updates, the `useContext` hook will trigger a re-render in any component that uses it, with the latest context value.",
+        "React would think you are trying to render an HTML tag named 'mycomponent' and would likely render nothing or throw a warning, as it's not a standard HTML tag.",
+        "`defaultProps` is a property on a component class or function that can be defined to set default values for the props. They are used for props that are not passed, but are not for props that are `null`.",
+        "A common use case is for components that need to break out of their container, such as modals, tooltips, or dialog boxes. This helps avoid complex `z-index` and `overflow` issues."
+      ],
+      "answer": "A common use case is for components that need to break out of their container, such as modals, tooltips, or dialog boxes. This helps avoid complex `z-index` and `overflow` issues."
+    },
+    {
+      "question": "What is 'reconciliation' in React?",
+      "options": [
+        "You can implement code splitting using `React.lazy()` and `React.Suspense`. `React.lazy()` lets you render a dynamic import as a regular component. `React.Suspense` lets you specify a loading indicator while the lazy component is being loaded.",
+        "The `key` prop gives elements a stable identity. When a list is re-rendered, React uses the keys to match children in the original tree with children in the subsequent tree, which makes the diffing algorithm much more efficient.",
+        "Custom Hooks offer significant advantages: they don't introduce extra layers of components in the tree ('wrapper hell'), the data flow is more explicit, and they are easier to compose and test since they are just functions.",
+        "1) **No array**: The effect runs after every render. 2) **Empty array `[]`**: The effect runs only once, after the initial render. 3) **Array with values `[dep]`**: The effect runs after the initial render and will re-run only if any value in the array has changed."
+      ],
+      "answer": "The `key` prop gives elements a stable identity. When a list is re-rendered, React uses the keys to match children in the original tree with children in the subsequent tree, which makes the diffing algorithm much more efficient."
+    },
+    {
+      "question": "What is code splitting in React?",
+      "options": [
+        "You can implement code splitting using `React.lazy()` and `React.Suspense`. `React.lazy()` lets you render a dynamic import as a regular component. `React.Suspense` lets you specify a loading indicator while the lazy component is being loaded.",
+        "1. Two elements of different types will produce different trees. 2. The developer can hint at which child elements may be stable across different renders with a `key` prop.",
+        "TypeScript is the modern, preferred alternative. It provides static type checking at compile time, which is more robust than the runtime checks offered by `prop-types`.",
+        "You should use the functional update form: `setState(prevState => ({...prevState, count: prevState.count + 1}))`. This ensures you are working with the most up-to-date state value."
+      ],
+      "answer": "You can implement code splitting using `React.lazy()` and `React.Suspense`. `React.lazy()` lets you render a dynamic import as a regular component. `React.Suspense` lets you specify a loading indicator while the lazy component is being loaded."
+    },
+    {
+      "question": "What are the Rules of Hooks?",
+      "options": [
+        "When a component's state changes, React updates the Virtual DOM first. It then compares the updated Virtual DOM with a snapshot of the Virtual DOM before the update, a process called 'diffing'. It then only updates the specific objects in the real DOM that have changed, which is much faster than re-rendering the entire DOM.",
+        "React relies on the call order of Hooks to associate state with the correct `useState` or `useEffect` call. Calling them inside conditions would change this order between renders and lead to bugs.",
+        "An uncontrolled component can be better when integrating with non-React code or on very simple forms. A file input (`<input type=\"file\">`) is inherently uncontrolled because its value can only be set by a user.",
+        "The data flow becomes **unidirectional** or **one-way**. The shared state lives in the parent. The parent passes the state down to children as props and also passes down callback functions to allow children to update the state."
+      ],
+      "answer": "React relies on the call order of Hooks to associate state with the correct `useState` or `useEffect` call. Calling them inside conditions would change this order between renders and lead to bugs."
+    },
+    {
+      "question": "What is a Higher-Order Component (HOC)?",
+      "options": [
+        "When the value of the `Provider` component wrapping the component tree updates, the `useContext` hook will trigger a re-render in any component that uses it, with the latest context value.",
+        "You can use the `&&` operator for a concise way to render a component only if a condition is true. For example: `isLoggedIn && <Dashboard />`. This works because in JavaScript, `true && expression` always evaluates to `expression`.",
+        "Instead of passing data down multiple levels, you can pass the final component that needs the data directly as a child. The intermediate components just render `props.children` without needing to know about the data.",
+        "Custom Hooks solve the same problems as HOCs but in a simpler way. They don't introduce extra component nesting ('wrapper hell') and the logic is more explicit and easier to trace, making the code cleaner."
+      ],
+      "answer": "Custom Hooks solve the same problems as HOCs but in a simpler way. They don't introduce extra component nesting ('wrapper hell') and the logic is more explicit and easier to trace, making the code cleaner."
+    },
+    {
+      "question": "What is Create React App?",
+      "options": [
+        "The `public/index.html` file is the HTML page that is served to the browser. It contains a single DOM node, usually `<div id=\"root\"></div>`, which serves as the mounting point for the entire React application.",
+        "The React team now recommends using production-grade React frameworks like Next.js or Remix instead of CRA for new projects, as they provide more features like routing and server-side rendering out of the box.",
+        "A **React Element** is a light, immutable object that describes what you want to see on the screen (e.g., `<p>Hello</p>`). A **React Component** is a function or a class that acts as a blueprint for elements. In short: a component *produces* elements.",
+        "The shorter `<>` syntax does not support the `key` attribute. So, if you are rendering a list of fragments, you must use the explicit `<React.Fragment key={item.id}>` syntax."
+      ],
+      "answer": "The React team now recommends using production-grade React frameworks like Next.js or Remix instead of CRA for new projects, as they provide more features like routing and server-side rendering out of the box."
+    },
+    {
+      "question": "What is React Router?",
+      "options": [
+        "When a component's state changes, React updates the Virtual DOM first. It then compares the updated Virtual DOM with a snapshot of the Virtual DOM before the update, a process called 'diffing'. It then only updates the specific objects in the real DOM that have changed, which is much faster than re-rendering the entire DOM.",
+        "If you pass a prop with no value, it defaults to `true`. So, `<MyComponent isStudent />` is equivalent to `<MyComponent isStudent={true} />`.",
+        "`<a>` tags will cause a full page reload when clicked. `<Link>` components from React Router will intercept the click and update the URL without a full page reload, providing a faster, single-page application experience.",
+        "The `public/index.html` file is the HTML page that is served to the browser. It contains a single DOM node, usually `<div id=\"root\"></div>`, which serves as the mounting point for the entire React application."
+      ],
+      "answer": "`<a>` tags will cause a full page reload when clicked. `<Link>` components from React Router will intercept the click and update the URL without a full page reload, providing a faster, single-page application experience."
+    },
+    {
+      "question": "What is the purpose of the cleanup function returned by `useEffect`?",
+      "options": [
+        "It's crucial for preventing memory leaks. For example, if you set up a subscription in `useEffect` and don't clean it up when the component unmounts, the subscription will remain in memory, leading to bugs and performance issues.",
+        "When the value of the `Provider` component wrapping the component tree updates, the `useContext` hook will trigger a re-render in any component that uses it, with the latest context value.",
+        "When a component's state changes, React updates the Virtual DOM first. It then compares the updated Virtual DOM with a snapshot of the Virtual DOM before the update, a process called 'diffing'. It then only updates the specific objects in the real DOM that have changed, which is much faster than re-rendering the entire DOM.",
+        "1. **Single source of truth:** The state of your whole application is stored in a single object tree. 2. **State is read-only:** The only way to change the state is to dispatch an action. 3. **Changes are made with pure functions:** Reducers are pure functions that take the previous state and an action, and return the next state."
+      ],
+      "answer": "It's crucial for preventing memory leaks. For example, if you set up a subscription in `useEffect` and don't clean it up when the component unmounts, the subscription will remain in memory, leading to bugs and performance issues."
+    },
+    {
+      "question": "What are props in React?",
+      "options": [
+        "You should not put the `useEffect` call inside a condition. Instead, put the conditional logic *inside* the effect. For example: `useEffect(() => { if (shouldRun) { ... } }, [shouldRun]);`.",
+        "1. Two elements of different types will produce different trees. 2. The developer can hint at which child elements may be stable across different renders with a `key` prop.",
+        "You should almost always use `useEffect`. Only use `useLayoutEffect` when you need to make DOM measurements (like getting the scroll position) and then synchronously re-render to prevent the user from seeing a flicker.",
+        "`defaultProps` is a property on a component class or function that can be defined to set default values for the props. They are used for props that are not passed, but are not for props that are `null`."
+      ],
+      "answer": "`defaultProps` is a property on a component class or function that can be defined to set default values for the props. They are used for props that are not passed, but are not for props that are `null`."
+    },
+    {
+      "question": "What does the `useContext` hook do?",
+      "options": [
+        "CSS Modules solve the problem of global scope in CSS. They automatically generate unique class names for each component, ensuring that styles for one component do not accidentally affect another.",
+        "When the value of the `Provider` component wrapping the component tree updates, the `useContext` hook will trigger a re-render in any component that uses it, with the latest context value.",
+        "Use Context API for low-frequency updates of simple global data, like theme or user authentication. Use Redux for complex, high-frequency state changes that are shared across many components, as it provides more powerful tools for debugging and managing state logic.",
+        "The `children` prop allows a component to act as a generic container. A parent can pass any component or JSX as a child, allowing for flexible and reusable layouts like sidebars or dialog boxes."
+      ],
+      "answer": "When the value of the `Provider` component wrapping the component tree updates, the `useContext` hook will trigger a re-render in any component that uses it, with the latest context value."
+    },
+    {
+      "question": "What is Jest?",
+      "options": [
+        "You should never mutate state directly because React relies on the state setter function (e.g., `setMyState`) to know that a change has occurred. Modifying the state directly won't trigger a re-render, leading to an inconsistent UI.",
+        "Jest provides the general testing framework. React Testing Library provides utilities specifically for testing React components in a way that resembles how users interact with them, encouraging better testing practices.",
+        "The data flow becomes **unidirectional** or **one-way**. The shared state lives in the parent. The parent passes the state down to children as props and also passes down callback functions to allow children to update the state.",
+        "It's crucial for preventing memory leaks. For example, if you set up a subscription in `useEffect` and don't clean it up when the component unmounts, the subscription will remain in memory, leading to bugs and performance issues."
+      ],
+      "answer": "Jest provides the general testing framework. React Testing Library provides utilities specifically for testing React components in a way that resembles how users interact with them, encouraging better testing practices."
+    },
+    {
+      "question": "What does it mean for components to be 'composable'?",
+      "options": [
+        "You should never mutate state directly because React relies on the state setter function (e.g., `setMyState`) to know that a change has occurred. Modifying the state directly won't trigger a re-render, leading to an inconsistent UI.",
+        "The `children` prop allows a component to act as a generic container. A parent can pass any component or JSX as a child, allowing for flexible and reusable layouts like sidebars or dialog boxes.",
+        "A `SyntheticEvent` is a cross-browser wrapper around the browser's native event. It has the same interface as the browser's native event, including `stopPropagation()` and `preventDefault()`, but works identically across all browsers.",
+        "`React.memo` can hurt performance if the props it's comparing are complex objects or functions that are re-created on every render. The shallow comparison check itself has a cost, and if it always fails, you've added overhead for no benefit."
+      ],
+      "answer": "The `children` prop allows a component to act as a generic container. A parent can pass any component or JSX as a child, allowing for flexible and reusable layouts like sidebars or dialog boxes."
+    },
+    {
+      "question": "What is the difference between `useEffect` and `useLayoutEffect`?",
+      "options": [
+        "1. **Accessing DOM nodes:** To directly interact with a DOM element (e.g., to focus an input). 2. **Storing a mutable value:** To keep track of a value that can change without causing a re-render, such as a timer ID or a previous state value.",
+        "You should almost always use `useEffect`. Only use `useLayoutEffect` when you need to make DOM measurements (like getting the scroll position) and then synchronously re-render to prevent the user from seeing a flicker.",
+        "1. Two elements of different types will produce different trees. 2. The developer can hint at which child elements may be stable across different renders with a `key` prop.",
+        "Custom Hooks offer significant advantages: they don't introduce extra layers of components in the tree ('wrapper hell'), the data flow is more explicit, and they are easier to compose and test since they are just functions."
+      ],
+      "answer": "You should almost always use `useEffect`. Only use `useLayoutEffect` when you need to make DOM measurements (like getting the scroll position) and then synchronously re-render to prevent the user from seeing a flicker."
+    },
+    {
+      "question": "How do you pass a number or boolean as a prop?",
+      "options": [
+        "You should almost always use `useEffect`. Only use `useLayoutEffect` when you need to make DOM measurements (like getting the scroll position) and then synchronously re-render to prevent the user from seeing a flicker.",
+        "If you pass a prop with no value, it defaults to `true`. So, `<MyComponent isStudent />` is equivalent to `<MyComponent isStudent={true} />`.",
+        "Instead of passing data down multiple levels, you can pass the final component that needs the data directly as a child. The intermediate components just render `props.children` without needing to know about the data.",
+        "For new projects, functional components with Hooks are the standard. However, class components are still necessary for one specific feature not yet available in Hooks: **Error Boundaries**."
+      ],
+      "answer": "If you pass a prop with no value, it defaults to `true`. So, `<MyComponent isStudent />` is equivalent to `<MyComponent isStudent={true} />`."
+    },
+    {
+      "question": "What is the purpose of the `constructor` in a React class component?",
+      "options": [
+        "You should never mutate state directly because React relies on the state setter function (e.g., `setMyState`) to know that a change has occurred. Modifying the state directly won't trigger a re-render, leading to an inconsistent UI.",
+        "- `componentDidMount`: `useEffect(() => {}, [])` (empty dependency array). - `componentDidUpdate`: `useEffect(() => {}, [dep])` (with dependencies). - `componentWillUnmount`: The cleanup function returned from `useEffect`.",
+        "You must call `super(props)` before any other statement. Otherwise, `this.props` will be undefined in the constructor, which can lead to bugs.",
+        "1. **Single source of truth:** The state of your whole application is stored in a single object tree. 2. **State is read-only:** The only way to change the state is to dispatch an action. 3. **Changes are made with pure functions:** Reducers are pure functions that take the previous state and an action, and return the next state."
+      ],
+      "answer": "You must call `super(props)` before any other statement. Otherwise, `this.props` will be undefined in the constructor, which can lead to bugs."
+    },
+    {
+      "question": "What is the 'diffing' algorithm?",
+      "options": [
+        "An uncontrolled component can be better when integrating with non-React code or on very simple forms. A file input (`<input type=\"file\">`) is inherently uncontrolled because its value can only be set by a user.",
+        "In development mode, `StrictMode` intentionally double-invokes some functions (like render methods and `useEffect`) to help you find side effects. You will often see `console.log` statements from `useEffect` appear twice.",
+        "1. Two elements of different types will produce different trees. 2. The developer can hint at which child elements may be stable across different renders with a `key` prop.",
+        "React relies on the call order of Hooks to associate state with the correct `useState` or `useEffect` call. Calling them inside conditions would change this order between renders and lead to bugs."
+      ],
+      "answer": "1. Two elements of different types will produce different trees. 2. The developer can hint at which child elements may be stable across different renders with a `key` prop."
+    },
+    {
+      "question": "What is the difference between `setState` being synchronous or asynchronous?",
+      "options": [
+        "You should almost always use `useEffect`. Only use `useLayoutEffect` when you need to make DOM measurements (like getting the scroll position) and then synchronously re-render to prevent the user from seeing a flicker.",
+        "The key distinction is 'inversion of control'. A **Framework** dictates your application's architecture and calls your code. A **Library** is a set of tools that you call when you need them. React is a library because it's focused on the UI layer and doesn't impose rules on other aspects like routing or state management.",
+        "Jest provides the general testing framework. React Testing Library provides utilities specifically for testing React components in a way that resembles how users interact with them, encouraging better testing practices.",
+        "You should use the functional update form: `setState(prevState => ({...prevState, count: prevState.count + 1}))`. This ensures you are working with the most up-to-date state value."
+      ],
+      "answer": "You should use the functional update form: `setState(prevState => ({...prevState, count: prevState.count + 1}))`. This ensures you are working with the most up-to-date state value."
+    },
+    {
+      "question": "What are Render Props?",
+      "options": [
+        "Custom Hooks provide a much cleaner and more direct way to share stateful logic without the extra nesting and component boilerplate that the render prop pattern often requires.",
+        "`defaultProps` is a property on a component class or function that can be defined to set default values for the props. They are used for props that are not passed, but are not for props that are `null`.",
+        "An uncontrolled component can be better when integrating with non-React code or on very simple forms. A file input (`<input type=\"file\">`) is inherently uncontrolled because its value can only be set by a user.",
+        "**Prop drilling** is passing props down through multiple layers of nested components that don't need the props themselves. **Solutions:** 1. **Context API:** React's built-in solution for sharing global data. 2. **State Management Libraries (Redux, Zustand):** For complex, frequently updating global state."
+      ],
+      "answer": "Custom Hooks provide a much cleaner and more direct way to share stateful logic without the extra nesting and component boilerplate that the render prop pattern often requires."
+    },
+    {
+      "question": "What are the three main lifecycle phases of a class component?",
+      "options": [
+        "React would think you are trying to render an HTML tag named 'mycomponent' and would likely render nothing or throw a warning, as it's not a standard HTML tag.",
+        "You can implement code splitting using `React.lazy()` and `React.Suspense`. `React.lazy()` lets you render a dynamic import as a regular component. `React.Suspense` lets you specify a loading indicator while the lazy component is being loaded.",
+        "- `componentDidMount`: `useEffect(() => {}, [])` (empty dependency array). - `componentDidUpdate`: `useEffect(() => {}, [dep])` (with dependencies). - `componentWillUnmount`: The cleanup function returned from `useEffect`.",
+        "`React.memo` can hurt performance if the props it's comparing are complex objects or functions that are re-created on every render. The shallow comparison check itself has a cost, and if it always fails, you've added overhead for no benefit."
+      ],
+      "answer": "- `componentDidMount`: `useEffect(() => {}, [])` (empty dependency array). - `componentDidUpdate`: `useEffect(() => {}, [dep])` (with dependencies). - `componentWillUnmount`: The cleanup function returned from `useEffect`."
+    },
+    {
+      "question": "What is `React.StrictMode`?",
+      "options": [
+        "Jest provides the general testing framework. React Testing Library provides utilities specifically for testing React components in a way that resembles how users interact with them, encouraging better testing practices.",
+        "You must call `super(props)` before any other statement. Otherwise, `this.props` will be undefined in the constructor, which can lead to bugs.",
+        "- `componentDidMount`: `useEffect(() => {}, [])` (empty dependency array). - `componentDidUpdate`: `useEffect(() => {}, [dep])` (with dependencies). - `componentWillUnmount`: The cleanup function returned from `useEffect`.",
+        "In development mode, `StrictMode` intentionally double-invokes some functions (like render methods and `useEffect`) to help you find side effects. You will often see `console.log` statements from `useEffect` appear twice."
+      ],
+      "answer": "In development mode, `StrictMode` intentionally double-invokes some functions (like render methods and `useEffect`) to help you find side effects. You will often see `console.log` statements from `useEffect` appear twice."
+    },
+    {
+      "question": "How can you validate props?",
+      "options": [
+        "When the value of the `Provider` component wrapping the component tree updates, the `useContext` hook will trigger a re-render in any component that uses it, with the latest context value.",
+        "You should never mutate state directly because React relies on the state setter function (e.g., `setMyState`) to know that a change has occurred. Modifying the state directly won't trigger a re-render, leading to an inconsistent UI.",
+        "TypeScript is the modern, preferred alternative. It provides static type checking at compile time, which is more robust than the runtime checks offered by `prop-types`.",
+        "- `componentDidMount`: `useEffect(() => {}, [])` (empty dependency array). - `componentDidUpdate`: `useEffect(() => {}, [dep])` (with dependencies). - `componentWillUnmount`: The cleanup function returned from `useEffect`."
+      ],
+      "answer": "TypeScript is the modern, preferred alternative. It provides static type checking at compile time, which is more robust than the runtime checks offered by `prop-types`."
+    },
+    {
+      "question": "Why must React component names start with a capital letter?",
+      "options": [
+        "Fragments are essential when working with CSS Flexbox or Grid, where an extra wrapper `<div>` could break the intended layout by disrupting the direct child relationship between the container and its items.",
+        "Custom Hooks offer significant advantages: they don't introduce extra layers of components in the tree ('wrapper hell'), the data flow is more explicit, and they are easier to compose and test since they are just functions.",
+        "You can use the `&&` operator for a concise way to render a component only if a condition is true. For example: `isLoggedIn && <Dashboard />`. This works because in JavaScript, `true && expression` always evaluates to `expression`.",
+        "React would think you are trying to render an HTML tag named 'mycomponent' and would likely render nothing or throw a warning, as it's not a standard HTML tag."
+      ],
+      "answer": "React would think you are trying to render an HTML tag named 'mycomponent' and would likely render nothing or throw a warning, as it's not a standard HTML tag."
+    },
+    {
+      "question": "What is Redux?",
+      "options": [
+        "1. **Single source of truth:** The state of your whole application is stored in a single object tree. 2. **State is read-only:** The only way to change the state is to dispatch an action. 3. **Changes are made with pure functions:** Reducers are pure functions that take the previous state and an action, and return the next state.",
+        "1. Two elements of different types will produce different trees. 2. The developer can hint at which child elements may be stable across different renders with a `key` prop.",
+        "You must call `super(props)` before any other statement. Otherwise, `this.props` will be undefined in the constructor, which can lead to bugs.",
+        "`defaultProps` is a property on a component class or function that can be defined to set default values for the props. They are used for props that are not passed, but are not for props that are `null`."
+      ],
+      "answer": "1. **Single source of truth:** The state of your whole application is stored in a single object tree. 2. **State is read-only:** The only way to change the state is to dispatch an action. 3. **Changes are made with pure functions:** Reducers are pure functions that take the previous state and an action, and return the next state."
+    },
+    {
+      "question": "Can you call a Hook inside a conditional statement?",
+      "options": [
+        "You should not put the `useEffect` call inside a condition. Instead, put the conditional logic *inside* the effect. For example: `useEffect(() => { if (shouldRun) { ... } }, [shouldRun]);`.",
+        "The React team now recommends using production-grade React frameworks like Next.js or Remix instead of CRA for new projects, as they provide more features like routing and server-side rendering out of the box.",
+        "You can use the `&&` operator for a concise way to render a component only if a condition is true. For example: `isLoggedIn && <Dashboard />`. This works because in JavaScript, `true && expression` always evaluates to `expression`.",
+        "CSS Modules solve the problem of global scope in CSS. They automatically generate unique class names for each component, ensuring that styles for one component do not accidentally affect another."
+      ],
+      "answer": "You should not put the `useEffect` call inside a condition. Instead, put the conditional logic *inside* the effect. For example: `useEffect(() => { if (shouldRun) { ... } }, [shouldRun]);`."
+    },
+    {
+      "question": "What is the entry point file in a standard Create React App project?",
+      "options": [
+        "Custom Hooks offer significant advantages: they don't introduce extra layers of components in the tree ('wrapper hell'), the data flow is more explicit, and they are easier to compose and test since they are just functions.",
+        "Custom Hooks solve the same problems as HOCs but in a simpler way. They don't introduce extra component nesting ('wrapper hell') and the logic is more explicit and easier to trace, making the code cleaner.",
+        "The `public/index.html` file is the HTML page that is served to the browser. It contains a single DOM node, usually `<div id=\"root\"></div>`, which serves as the mounting point for the entire React application.",
+        "The Fiber architecture was a foundational change that enabled features like error boundaries, fragments, portals, and the scheduling of updates with different priorities, which is crucial for features like `Suspense`."
+      ],
+      "answer": "The `public/index.html` file is the HTML page that is served to the browser. It contains a single DOM node, usually `<div id=\"root\"></div>`, which serves as the mounting point for the entire React application."
+    },
+    {
+      "question": "What is a 'stale closure' in the context of React hooks?",
+      "options": [
+        "The React team now recommends using production-grade React frameworks like Next.js or Remix instead of CRA for new projects, as they provide more features like routing and server-side rendering out of the box.",
+        "An uncontrolled component can be better when integrating with non-React code or on very simple forms. A file input (`<input type=\"file\">`) is inherently uncontrolled because its value can only be set by a user.",
+        "`<a>` tags will cause a full page reload when clicked. `<Link>` components from React Router will intercept the click and update the URL without a full page reload, providing a faster, single-page application experience.",
+        "You solve it by including the state or prop value in the dependency array of `useEffect`. This ensures that the effect function is re-created with the latest values whenever those dependencies change."
+      ],
+      "answer": "You solve it by including the state or prop value in the dependency array of `useEffect`. This ensures that the effect function is re-created with the latest values whenever those dependencies change."
+    },
+    {
+      "question": "What problem do Fragments solve?",
+      "options": [
+        "Fragments are essential when working with CSS Flexbox or Grid, where an extra wrapper `<div>` could break the intended layout by disrupting the direct child relationship between the container and its items.",
+        "A common use case is for components that need to break out of their container, such as modals, tooltips, or dialog boxes. This helps avoid complex `z-index` and `overflow` issues.",
+        "- `componentDidMount`: `useEffect(() => {}, [])` (empty dependency array). - `componentDidUpdate`: `useEffect(() => {}, [dep])` (with dependencies). - `componentWillUnmount`: The cleanup function returned from `useEffect`.",
+        "1. **Accessing DOM nodes:** To directly interact with a DOM element (e.g., to focus an input). 2. **Storing a mutable value:** To keep track of a value that can change without causing a re-render, such as a timer ID or a previous state value."
+      ],
+      "answer": "Fragments are essential when working with CSS Flexbox or Grid, where an extra wrapper `<div>` could break the intended layout by disrupting the direct child relationship between the container and its items."
+    },
+    {
+      "question": "What is React Fiber?",
+      "options": [
+        "1. Two elements of different types will produce different trees. 2. The developer can hint at which child elements may be stable across different renders with a `key` prop.",
+        "You can use the `&&` operator for a concise way to render a component only if a condition is true. For example: `isLoggedIn && <Dashboard />`. This works because in JavaScript, `true && expression` always evaluates to `expression`.",
+        "The Fiber architecture was a foundational change that enabled features like error boundaries, fragments, portals, and the scheduling of updates with different priorities, which is crucial for features like `Suspense`.",
+        "Instead of passing data down multiple levels, you can pass the final component that needs the data directly as a child. The intermediate components just render `props.children` without needing to know about the data."
+      ],
+      "answer": "The Fiber architecture was a foundational change that enabled features like error boundaries, fragments, portals, and the scheduling of updates with different priorities, which is crucial for features like `Suspense`."
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "questions": [
+    {
+      "question": "Tell me about yourself.",
+      "options": [
+        "My background in Economics helps me understand the business logic behind a project and focus on creating features that provide real value to users, which is crucial for product success.",
+        "I learned that I can remain calm and methodical under pressure by focusing on a step-by-step process. It taught me the importance of not letting stress cloud my problem-solving abilities.",
+        "I immediately applied my TypeScript knowledge to my 'CourseHub' project. This helped reduce runtime errors and made the codebase much easier to maintain and refactor.",
+        "It's crucial because it helps catch bugs I might have missed, provides a fresh perspective on my code, and is a great opportunity for both me and the reviewer to learn from each other."
+      ],
+      "answer": "My background in Economics helps me understand the business logic behind a project and focus on creating features that provide real value to users, which is crucial for product success."
+    },
+    {
+      "question": "Why should we hire you?",
+      "options": [
+        "My combination of hands-on MERN stack experience from my projects and a strong, proactive learning mindset. I can start contributing quickly while also adapting to new challenges.",
+        "In a code review, a peer pointed out that my code was not very reusable. Initially, I was a bit defensive, but then I took the feedback, learned about writing more modular components, and refactored my code. It ended up improving the project's quality.",
+        "I believe in addressing it proactively. If I have to take a shortcut for a deadline, I immediately create a ticket to refactor the code later. Leaving technical debt unmanaged slows down future development.",
+        "When everyone takes ownership, it leads to higher quality work because we all care about the final outcome. It also reduces the need for micromanagement and builds trust within the team."
+      ],
+      "answer": "My combination of hands-on MERN stack experience from my projects and a strong, proactive learning mindset. I can start contributing quickly while also adapting to new challenges."
+    },
+    {
+      "question": "Why do you want to work with our company?",
+      "options": [
+        "I learned that I can remain calm and methodical under pressure by focusing on a step-by-step process. It taught me the importance of not letting stress cloud my problem-solving abilities.",
+        "I prefer regular, direct, and constructive feedback. A mix of scheduled one-on-ones and immediate feedback on specific tasks works best for me as it helps me learn and adjust quickly.",
+        "While building my 'DevTalks' project, I had to learn Stripe integration from scratch. I was able to learn the fundamentals and implement a secure payment system within a week by quickly going through the documentation.",
+        "Your company's commitment to 'innovation and real-world impact' resonates with me, as I am passionate about using modern tech to build solutions that solve actual user problems."
+      ],
+      "answer": "Your company's commitment to 'innovation and real-world impact' resonates with me, as I am passionate about using modern tech to build solutions that solve actual user problems."
+    },
+    {
+      "question": "What are your weaknesses?",
+      "options": [
+        "Once I had presented my case and they made the final call, I committed to their decision and did my best to make it successful. It's important to disagree and commit.",
+        "To manage my tendency to overanalyze, I now break tasks into smaller chunks with specific deadlines. This helps me focus on completing the task efficiently instead of getting lost in minor details.",
+        "I immediately applied my TypeScript knowledge to my 'CourseHub' project. This helped reduce runtime errors and made the codebase much easier to maintain and refactor.",
+        "By proactively indexing our MongoDB collections in my 'DevTalks' project, I improved API performance by about 30%, which led to a noticeably better user experience."
+      ],
+      "answer": "To manage my tendency to overanalyze, I now break tasks into smaller chunks with specific deadlines. This helps me focus on completing the task efficiently instead of getting lost in minor details."
+    },
+    {
+      "question": "What is your biggest strength?",
+      "options": [
+        "I'm looking for an opportunity to be part of a professional team where I can contribute to real-world applications and get mentorship to accelerate my growth as a developer.",
+        "While building my 'DevTalks' project, I had to learn Stripe integration from scratch. I was able to learn the fundamentals and implement a secure payment system within a week by quickly going through the documentation.",
+        "Your company's commitment to 'innovation and real-world impact' resonates with me, as I am passionate about using modern tech to build solutions that solve actual user problems.",
+        "I learned that I can remain calm and methodical under pressure by focusing on a step-by-step process. It taught me the importance of not letting stress cloud my problem-solving abilities."
+      ],
+      "answer": "While building my 'DevTalks' project, I had to learn Stripe integration from scratch. I was able to learn the fundamentals and implement a secure payment system within a week by quickly going through the documentation."
+    },
+    {
+      "question": "What skill makes you different from others?",
+      "options": [
+        "My background in Economics helps me understand the business logic behind a project and focus on creating features that provide real value to users, which is crucial for product success.",
+        "I believe in addressing it proactively. If I have to take a shortcut for a deadline, I immediately create a ticket to refactor the code later. Leaving technical debt unmanaged slows down future development.",
+        "It allows me to think beyond just writing code. I can anticipate user needs and suggest UI/UX improvements, which leads to building more intuitive and successful applications.",
+        "Once I had presented my case and they made the final call, I committed to their decision and did my best to make it successful. It's important to disagree and commit."
+      ],
+      "answer": "It allows me to think beyond just writing code. I can anticipate user needs and suggest UI/UX improvements, which leads to building more intuitive and successful applications."
+    },
+    {
+      "question": "What was your biggest professional mistake?",
+      "options": [
+        "The key lesson was that practical experience is crucial. Now, instead of waiting for perfection, I focus on iterative development and continuous learning on the job.",
+        "I try to understand the 'why' behind the task and how it contributes to the bigger picture. I also break it down into smaller, more manageable steps to create a sense of progress.",
+        "In one project, I had to manually create component boilerplate files (CSS, Test, Storybook) every time. I wrote a simple command-line script to automate this process, which saved me and the team a lot of time.",
+        "It allows me to think beyond just writing code. I can anticipate user needs and suggest UI/UX improvements, which leads to building more intuitive and successful applications."
+      ],
+      "answer": "The key lesson was that practical experience is crucial. Now, instead of waiting for perfection, I focus on iterative development and continuous learning on the job."
+    },
+    {
+      "question": "Describe a situation where you failed. What did you learn?",
+      "options": [
+        "I've made server-side validation a mandatory part of my development checklist for any feature that involves user input. This ensures the same oversight doesn't happen again.",
+        "In a code review, a peer pointed out that my code was not very reusable. Initially, I was a bit defensive, but then I took the feedback, learned about writing more modular components, and refactored my code. It ended up improving the project's quality.",
+        "The key lesson was that practical experience is crucial. Now, instead of waiting for perfection, I focus on iterative development and continuous learning on the job.",
+        "I prefer regular, direct, and constructive feedback. A mix of scheduled one-on-ones and immediate feedback on specific tasks works best for me as it helps me learn and adjust quickly."
+      ],
+      "answer": "I've made server-side validation a mandatory part of my development checklist for any feature that involves user input. This ensures the same oversight doesn't happen again."
+    },
+    {
+      "question": "How do you handle a problem you don't know how to solve?",
+      "options": [
+        "They would likely say that I am reliable. When I commit to a task, I see it through to completion, and I'm always ready to help if they need support.",
+        "I plan to deepen my expertise in system design, take on more complex projects, and actively mentor junior developers to build my leadership and technical skills.",
+        "I first spend a reasonable amount of time trying to solve it myself by breaking it down and researching. If I'm still stuck after that and my progress is blocked, I'll ask for help, presenting what I've already tried.",
+        "I prefer regular, direct, and constructive feedback. A mix of scheduled one-on-ones and immediate feedback on specific tasks works best for me as it helps me learn and adjust quickly."
+      ],
+      "answer": "I first spend a reasonable amount of time trying to solve it myself by breaking it down and researching. If I'm still stuck after that and my progress is blocked, I'll ask for help, presenting what I've already tried."
+    },
+    {
+      "question": "How do you handle criticism or feedback?",
+      "options": [
+        "It allows me to think beyond just writing code. I can anticipate user needs and suggest UI/UX improvements, which leads to building more intuitive and successful applications.",
+        "To manage my tendency to overanalyze, I now break tasks into smaller chunks with specific deadlines. This helps me focus on completing the task efficiently instead of getting lost in minor details.",
+        "In a code review, a peer pointed out that my code was not very reusable. Initially, I was a bit defensive, but then I took the feedback, learned about writing more modular components, and refactored my code. It ended up improving the project's quality.",
+        "I've made server-side validation a mandatory part of my development checklist for any feature that involves user input. This ensures the same oversight doesn't happen again."
+      ],
+      "answer": "In a code review, a peer pointed out that my code was not very reusable. Initially, I was a bit defensive, but then I took the feedback, learned about writing more modular components, and refactored my code. It ended up improving the project's quality."
+    },
+    {
+      "question": "What do you do when you feel overwhelmed at work?",
+      "options": [
+        "I would be transparent and say, 'I currently have tasks A, B, and C. To meet the deadline for A, I might need to deprioritize C or get some help.' This focuses on a solution rather than just the problem.",
+        "It's crucial because it helps catch bugs I might have missed, provides a fresh perspective on my code, and is a great opportunity for both me and the reviewer to learn from each other.",
+        "I first spend a reasonable amount of time trying to solve it myself by breaking it down and researching. If I'm still stuck after that and my progress is blocked, I'll ask for help, presenting what I've already tried.",
+        "I look for technologies that solve a real problem more efficiently than existing tools, have strong community support, and align with the industry's direction toward scalable and performant applications."
+      ],
+      "answer": "I would be transparent and say, 'I currently have tasks A, B, and C. To meet the deadline for A, I might need to deprioritize C or get some help.' This focuses on a solution rather than just the problem."
+    },
+    {
+      "question": "Where do you see yourself in the next 5 years?",
+      "options": [
+        "My combination of hands-on MERN stack experience from my projects and a strong, proactive learning mindset. I can start contributing quickly while also adapting to new challenges.",
+        "I prefer regular, direct, and constructive feedback. A mix of scheduled one-on-ones and immediate feedback on specific tasks works best for me as it helps me learn and adjust quickly.",
+        "I plan to deepen my expertise in system design, take on more complex projects, and actively mentor junior developers to build my leadership and technical skills.",
+        "While building my 'DevTalks' project, I had to learn Stripe integration from scratch. I was able to learn the fundamentals and implement a secure payment system within a week by quickly going through the documentation."
+      ],
+      "answer": "I plan to deepen my expertise in system design, take on more complex projects, and actively mentor junior developers to build my leadership and technical skills."
+    },
+    {
+      "question": "What are your career goals?",
+      "options": [
+        "I offer to help in a supportive way, perhaps by asking, 'Is there anything I can do to help?' or 'Would you like to talk through the problem together?'",
+        "By proactively indexing our MongoDB collections in my 'DevTalks' project, I improved API performance by about 30%, which led to a noticeably better user experience.",
+        "This role is a crucial first step. It will allow me to gain the real-world experience needed to build a strong foundation, which is essential before I can grow into a lead developer role.",
+        "I first spend a reasonable amount of time trying to solve it myself by breaking it down and researching. If I'm still stuck after that and my progress is blocked, I'll ask for help, presenting what I've already tried."
+      ],
+      "answer": "This role is a crucial first step. It will allow me to gain the real-world experience needed to build a strong foundation, which is essential before I can grow into a lead developer role."
+    },
+    {
+      "question": "How do you stay motivated over the long term?",
+      "options": [
+        "I try to understand the 'why' behind the task and how it contributes to the bigger picture. I also break it down into smaller, more manageable steps to create a sense of progress.",
+        "By proactively indexing our MongoDB collections in my 'DevTalks' project, I improved API performance by about 30%, which led to a noticeably better user experience.",
+        "It's crucial because it helps catch bugs I might have missed, provides a fresh perspective on my code, and is a great opportunity for both me and the reviewer to learn from each other.",
+        "This role is a crucial first step. It will allow me to gain the real-world experience needed to build a strong foundation, which is essential before I can grow into a lead developer role."
+      ],
+      "answer": "I try to understand the 'why' behind the task and how it contributes to the bigger picture. I also break it down into smaller, more manageable steps to create a sense of progress."
+    },
+    {
+      "question": "What technologies are you most excited to work on?",
+      "options": [
+        "I offer to help in a supportive way, perhaps by asking, 'Is there anything I can do to help?' or 'Would you like to talk through the problem together?'",
+        "I learned that I can remain calm and methodical under pressure by focusing on a step-by-step process. It taught me the importance of not letting stress cloud my problem-solving abilities.",
+        "I look for technologies that solve a real problem more efficiently than existing tools, have strong community support, and align with the industry's direction toward scalable and performant applications.",
+        "While building my 'DevTalks' project, I had to learn Stripe integration from scratch. I was able to learn the fundamentals and implement a secure payment system within a week by quickly going through the documentation."
+      ],
+      "answer": "I look for technologies that solve a real problem more efficiently than existing tools, have strong community support, and align with the industry's direction toward scalable and performant applications."
+    },
+    {
+      "question": "How do you ensure the quality of your work?",
+      "options": [
+        "It's crucial because it helps catch bugs I might have missed, provides a fresh perspective on my code, and is a great opportunity for both me and the reviewer to learn from each other.",
+        "This role is a crucial first step. It will allow me to gain the real-world experience needed to build a strong foundation, which is essential before I can grow into a lead developer role.",
+        "I've made server-side validation a mandatory part of my development checklist for any feature that involves user input. This ensures the same oversight doesn't happen again.",
+        "Your company's commitment to 'innovation and real-world impact' resonates with me, as I am passionate about using modern tech to build solutions that solve actual user problems."
+      ],
+      "answer": "It's crucial because it helps catch bugs I might have missed, provides a fresh perspective on my code, and is a great opportunity for both me and the reviewer to learn from each other."
+    },
+    {
+      "question": "Why are you looking for a job change?",
+      "options": [
+        "I plan to deepen my expertise in system design, take on more complex projects, and actively mentor junior developers to build my leadership and technical skills.",
+        "I'm looking for an opportunity to be part of a professional team where I can contribute to real-world applications and get mentorship to accelerate my growth as a developer.",
+        "This role is a crucial first step. It will allow me to gain the real-world experience needed to build a strong foundation, which is essential before I can grow into a lead developer role.",
+        "I believe in addressing it proactively. If I have to take a shortcut for a deadline, I immediately create a ticket to refactor the code later. Leaving technical debt unmanaged slows down future development."
+      ],
+      "answer": "I'm looking for an opportunity to be part of a professional team where I can contribute to real-world applications and get mentorship to accelerate my growth as a developer."
+    },
+    {
+      "question": "Describe a time you disagreed with a decision made by your manager.",
+      "options": [
+        "Your company's commitment to 'innovation and real-world impact' resonates with me, as I am passionate about using modern tech to build solutions that solve actual user problems.",
+        "Once I had presented my case and they made the final call, I committed to their decision and did my best to make it successful. It's important to disagree and commit.",
+        "By proactively indexing our MongoDB collections in my 'DevTalks' project, I improved API performance by about 30%, which led to a noticeably better user experience.",
+        "It's crucial because it helps catch bugs I might have missed, provides a fresh perspective on my code, and is a great opportunity for both me and the reviewer to learn from each other."
+      ],
+      "answer": "Once I had presented my case and they made the final call, I committed to their decision and did my best to make it successful. It's important to disagree and commit."
+    },
+    {
+      "question": "How do you balance speed with quality?",
+      "options": [
+        "In one project, I had to manually create component boilerplate files (CSS, Test, Storybook) every time. I wrote a simple command-line script to automate this process, which saved me and the team a lot of time.",
+        "By proactively indexing our MongoDB collections in my 'DevTalks' project, I improved API performance by about 30%, which led to a noticeably better user experience.",
+        "I believe in addressing it proactively. If I have to take a shortcut for a deadline, I immediately create a ticket to refactor the code later. Leaving technical debt unmanaged slows down future development.",
+        "I plan to deepen my expertise in system design, take on more complex projects, and actively mentor junior developers to build my leadership and technical skills."
+      ],
+      "answer": "I believe in addressing it proactively. If I have to take a shortcut for a deadline, I immediately create a ticket to refactor the code later. Leaving technical debt unmanaged slows down future development."
+    },
+    {
+      "question": "Give an example of a time you took initiative.",
+      "options": [
+        "I always check for Cross-Site Scripting (XSS) vulnerabilities by ensuring that any user-generated content is properly sanitized before it is rendered on a page.",
+        "I plan to deepen my expertise in system design, take on more complex projects, and actively mentor junior developers to build my leadership and technical skills.",
+        "By proactively indexing our MongoDB collections in my 'DevTalks' project, I improved API performance by about 30%, which led to a noticeably better user experience.",
+        "I offer to help in a supportive way, perhaps by asking, 'Is there anything I can do to help?' or 'Would you like to talk through the problem together?'"
+      ],
+      "answer": "By proactively indexing our MongoDB collections in my 'DevTalks' project, I improved API performance by about 30%, which led to a noticeably better user experience."
+    },
+    {
+      "question": "How do you contribute to a positive team culture?",
+      "options": [
+        "I plan to deepen my expertise in system design, take on more complex projects, and actively mentor junior developers to build my leadership and technical skills.",
+        "The first thing I would do is try to replicate the bug consistently. Then I would use logging and debugging tools to trace the flow of data and identify the specific part of the code causing the issue before attempting any fix.",
+        "My combination of hands-on MERN stack experience from my projects and a strong, proactive learning mindset. I can start contributing quickly while also adapting to new challenges.",
+        "I offer to help in a supportive way, perhaps by asking, 'Is there anything I can do to help?' or 'Would you like to talk through the problem together?'"
+      ],
+      "answer": "I offer to help in a supportive way, perhaps by asking, 'Is there anything I can do to help?' or 'Would you like to talk through the problem together?'"
+    },
+    {
+      "question": "What is something new you have learned recently?",
+      "options": [
+        "I immediately applied my TypeScript knowledge to my 'CourseHub' project. This helped reduce runtime errors and made the codebase much easier to maintain and refactor.",
+        "I would be transparent and say, 'I currently have tasks A, B, and C. To meet the deadline for A, I might need to deprioritize C or get some help.' This focuses on a solution rather than just the problem.",
+        "I would document my assumptions and share them with the team. I would then work on another priority task while waiting for them, or build the feature based on the most logical assumption, making it easy to change later.",
+        "In a code review, a peer pointed out that my code was not very reusable. Initially, I was a bit defensive, but then I took the feedback, learned about writing more modular components, and refactored my code. It ended up improving the project's quality."
+      ],
+      "answer": "I immediately applied my TypeScript knowledge to my 'CourseHub' project. This helped reduce runtime errors and made the codebase much easier to maintain and refactor."
+    },
+    {
+      "question": "How do you handle ambiguous or incomplete requirements?",
+      "options": [
+        "I would document my assumptions and share them with the team. I would then work on another priority task while waiting for them, or build the feature based on the most logical assumption, making it easy to change later.",
+        "I prefer regular, direct, and constructive feedback. A mix of scheduled one-on-ones and immediate feedback on specific tasks works best for me as it helps me learn and adjust quickly.",
+        "I immediately applied my TypeScript knowledge to my 'CourseHub' project. This helped reduce runtime errors and made the codebase much easier to maintain and refactor.",
+        "I try to understand the 'why' behind the task and how it contributes to the bigger picture. I also break it down into smaller, more manageable steps to create a sense of progress."
+      ],
+      "answer": "I would document my assumptions and share them with the team. I would then work on another priority task while waiting for them, or build the feature based on the most logical assumption, making it easy to change later."
+    },
+    {
+      "question": "What does 'taking ownership' mean to you?",
+      "options": [
+        "I offer to help in a supportive way, perhaps by asking, 'Is there anything I can do to help?' or 'Would you like to talk through the problem together?'",
+        "I immediately applied my TypeScript knowledge to my 'CourseHub' project. This helped reduce runtime errors and made the codebase much easier to maintain and refactor.",
+        "I believe in addressing it proactively. If I have to take a shortcut for a deadline, I immediately create a ticket to refactor the code later. Leaving technical debt unmanaged slows down future development.",
+        "When everyone takes ownership, it leads to higher quality work because we all care about the final outcome. It also reduces the need for micromanagement and builds trust within the team."
+      ],
+      "answer": "When everyone takes ownership, it leads to higher quality work because we all care about the final outcome. It also reduces the need for micromanagement and builds trust within the team."
+    },
+    {
+      "question": "Tell me about a high-pressure situation you've faced.",
+      "options": [
+        "I learned that I can remain calm and methodical under pressure by focusing on a step-by-step process. It taught me the importance of not letting stress cloud my problem-solving abilities.",
+        "I offer to help in a supportive way, perhaps by asking, 'Is there anything I can do to help?' or 'Would you like to talk through the problem together?'",
+        "I plan to deepen my expertise in system design, take on more complex projects, and actively mentor junior developers to build my leadership and technical skills.",
+        "In a code review, a peer pointed out that my code was not very reusable. Initially, I was a bit defensive, but then I took the feedback, learned about writing more modular components, and refactored my code. It ended up improving the project's quality."
+      ],
+      "answer": "I learned that I can remain calm and methodical under pressure by focusing on a step-by-step process. It taught me the importance of not letting stress cloud my problem-solving abilities."
+    },
+    {
+      "question": "How would you approach working on a large, legacy codebase?",
+      "options": [
+        "I try to understand the 'why' behind the task and how it contributes to the bigger picture. I also break it down into smaller, more manageable steps to create a sense of progress.",
+        "This role is a crucial first step. It will allow me to gain the real-world experience needed to build a strong foundation, which is essential before I can grow into a lead developer role.",
+        "The first thing I would do is try to replicate the bug consistently. Then I would use logging and debugging tools to trace the flow of data and identify the specific part of the code causing the issue before attempting any fix.",
+        "It's crucial because it helps catch bugs I might have missed, provides a fresh perspective on my code, and is a great opportunity for both me and the reviewer to learn from each other."
+      ],
+      "answer": "The first thing I would do is try to replicate the bug consistently. Then I would use logging and debugging tools to trace the flow of data and identify the specific part of the code causing the issue before attempting any fix."
+    },
+    {
+      "question": "How do you incorporate security into your development process?",
+      "options": [
+        "The first thing I would do is try to replicate the bug consistently. Then I would use logging and debugging tools to trace the flow of data and identify the specific part of the code causing the issue before attempting any fix.",
+        "I first spend a reasonable amount of time trying to solve it myself by breaking it down and researching. If I'm still stuck after that and my progress is blocked, I'll ask for help, presenting what I've already tried.",
+        "While building my 'DevTalks' project, I had to learn Stripe integration from scratch. I was able to learn the fundamentals and implement a secure payment system within a week by quickly going through the documentation.",
+        "I always check for Cross-Site Scripting (XSS) vulnerabilities by ensuring that any user-generated content is properly sanitized before it is rendered on a page."
+      ],
+      "answer": "I always check for Cross-Site Scripting (XSS) vulnerabilities by ensuring that any user-generated content is properly sanitized before it is rendered on a page."
+    },
+    {
+      "question": "How would your colleagues describe you?",
+      "options": [
+        "When everyone takes ownership, it leads to higher quality work because we all care about the final outcome. It also reduces the need for micromanagement and builds trust within the team.",
+        "I'm looking for an opportunity to be part of a professional team where I can contribute to real-world applications and get mentorship to accelerate my growth as a developer.",
+        "The first thing I would do is try to replicate the bug consistently. Then I would use logging and debugging tools to trace the flow of data and identify the specific part of the code causing the issue before attempting any fix.",
+        "They would likely say that I am reliable. When I commit to a task, I see it through to completion, and I'm always ready to help if they need support."
+      ],
+      "answer": "They would likely say that I am reliable. When I commit to a task, I see it through to completion, and I'm always ready to help if they need support."
+    },
+    {
+      "question": "What do you look for in a manager?",
+      "options": [
+        "I always check for Cross-Site Scripting (XSS) vulnerabilities by ensuring that any user-generated content is properly sanitized before it is rendered on a page.",
+        "I prefer regular, direct, and constructive feedback. A mix of scheduled one-on-ones and immediate feedback on specific tasks works best for me as it helps me learn and adjust quickly.",
+        "I immediately applied my TypeScript knowledge to my 'CourseHub' project. This helped reduce runtime errors and made the codebase much easier to maintain and refactor.",
+        "When everyone takes ownership, it leads to higher quality work because we all care about the final outcome. It also reduces the need for micromanagement and builds trust within the team."
+      ],
+      "answer": "I prefer regular, direct, and constructive feedback. A mix of scheduled one-on-ones and immediate feedback on specific tasks works best for me as it helps me learn and adjust quickly."
+    },
+    {
+      "question": "How do you handle repetitive or less exciting tasks?",
+      "options": [
+        "In one project, I had to manually create component boilerplate files (CSS, Test, Storybook) every time. I wrote a simple command-line script to automate this process, which saved me and the team a lot of time.",
+        "I'm looking for an opportunity to be part of a professional team where I can contribute to real-world applications and get mentorship to accelerate my growth as a developer.",
+        "Once I had presented my case and they made the final call, I committed to their decision and did my best to make it successful. It's important to disagree and commit.",
+        "They would likely say that I am reliable. When I commit to a task, I see it through to completion, and I'm always ready to help if they need support."
+      ],
+      "answer": "In one project, I had to manually create component boilerplate files (CSS, Test, Storybook) every time. I wrote a simple command-line script to automate this process, which saved me and the team a lot of time."
+    }
+  ]
+}

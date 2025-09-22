@@ -1,0 +1,354 @@
+{
+  "questions": [
+    {
+      "question": "What is TypeScript?",
+      "options": [
+        "Consider an object `const config = { theme: 'dark' } satisfies Record<string, 'dark' | 'light'>;`. Here, `satisfies` checks that `theme` is a valid value, but the inferred type of `config.theme` remains the specific literal `'dark'`, not the wider `'dark' | 'light'`.",
+        "No, a variable of type `never` cannot have any value assigned to it, not even `null` or `undefined`. However, `never` is assignable to every type.",
+        "The main advantages are: 1. **Static Type Checking:** Catches errors during development before the code is run. 2. **Better Tooling:** Enables rich autocompletion, navigation, and refactoring in code editors. 3. **Self-Documenting Code:** Type definitions make the code easier to read and understand.",
+        "Using `unknown` forces you to write safer code. With `any`, you can try to access any property and TypeScript won't complain, which can lead to runtime errors. With `unknown`, TypeScript forces you to explicitly check the type of the variable before you can work with it."
+      ],
+      "answer": "The main advantages are: 1. **Static Type Checking:** Catches errors during development before the code is run. 2. **Better Tooling:** Enables rich autocompletion, navigation, and refactoring in code editors. 3. **Self-Documenting Code:** Type definitions make the code easier to read and understand."
+    },
+    {
+      "question": "What are the basic types available in TypeScript?",
+      "options": [
+        "`undefined` means a variable has been declared but not yet assigned a value. `null` is an assignment value, meaning a variable has been explicitly set to have no value.",
+        "**`Partial<T>`:** Makes all properties of `T` optional. Useful for update functions. **`Pick<T, K>`:** Creates a type by picking a set of properties `K` from `T`. **`Omit<T, K>`:** Creates a type by removing a set of properties `K` from `T`.",
+        "They are implemented using mapped types. For example, `type Partial<T> = { [P in keyof T]?: T[P]; }`. This syntax iterates over all properties (`P`) in the type `T` and makes them optional (`?`).",
+        "You can narrow the type using a type guard. For example, using `typeof id === 'string'` inside an `if` block will tell the TypeScript compiler that `id` is a string within that block."
+      ],
+      "answer": "`undefined` means a variable has been declared but not yet assigned a value. `null` is an assignment value, meaning a variable has been explicitly set to have no value."
+    },
+    {
+      "question": "What is the difference between `any` and `unknown`?",
+      "options": [
+        "A generic function maintains the relationship between input and output types: `function getFirst<T>(arr: T[]): T { return arr[0]; }`. If you call `getFirst([1, 2])`, TypeScript knows the return type is `number`. If you used `any`, TypeScript would lose all type information. Generics provide reusability without sacrificing type safety.",
+        "Using `unknown` forces you to write safer code. With `any`, you can try to access any property and TypeScript won't complain, which can lead to runtime errors. With `unknown`, TypeScript forces you to explicitly check the type of the variable before you can work with it.",
+        "The main purpose is to define a common structure and behavior that multiple related subclasses must share and implement, essentially creating a template for other classes.",
+        "The main advantages are: 1. **Static Type Checking:** Catches errors during development before the code is run. 2. **Better Tooling:** Enables rich autocompletion, navigation, and refactoring in code editors. 3. **Self-Documenting Code:** Type definitions make the code easier to read and understand."
+      ],
+      "answer": "Using `unknown` forces you to write safer code. With `any`, you can try to access any property and TypeScript won't complain, which can lead to runtime errors. With `unknown`, TypeScript forces you to explicitly check the type of the variable before you can work with it."
+    },
+    {
+      "question": "What is the difference between an `interface` and a `type` alias?",
+      "options": [
+        "The main advantages are: 1. **Static Type Checking:** Catches errors during development before the code is run. 2. **Better Tooling:** Enables rich autocompletion, navigation, and refactoring in code editors. 3. **Self-Documenting Code:** Type definitions make the code easier to read and understand.",
+        "Declaration merging is when the compiler merges two or more separate declarations with the same name into a single definition. **Interfaces** support this, while `type` aliases do not. This allows you to extend an interface that might be defined in a third-party library.",
+        "The resulting property will have a type that is an intersection of the individual types. If the types are primitives (e.g., `string & number`), the result is `never`, as a value cannot be both at the same time.",
+        "In a switch statement over a union type, you can add a `default` case that assigns the variable to a function accepting `never`. If you later add a new member to the union but forget to handle it in the switch, TypeScript will throw a compile-time error because the variable is not of type `never`."
+      ],
+      "answer": "Declaration merging is when the compiler merges two or more separate declarations with the same name into a single definition. **Interfaces** support this, while `type` aliases do not. This allows you to extend an interface that might be defined in a third-party library."
+    },
+    {
+      "question": "What are Generics in TypeScript?",
+      "options": [
+        "You would type it as `React.ChangeEvent<HTMLInputElement>`. This gives you typed access to properties like `event.target.value`.",
+        "You can create a function like: `function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] { return obj[key]; }`. This ensures that the `key` passed to the function is actually a key of the `obj`, preventing runtime errors.",
+        "Running `tsc` without any input files will compile all the TypeScript files in the project as specified by the `files`, `include`, and `exclude` options in the `tsconfig.json` file.",
+        "A generic function maintains the relationship between input and output types: `function getFirst<T>(arr: T[]): T { return arr[0]; }`. If you call `getFirst([1, 2])`, TypeScript knows the return type is `number`. If you used `any`, TypeScript would lose all type information. Generics provide reusability without sacrificing type safety."
+      ],
+      "answer": "A generic function maintains the relationship between input and output types: `function getFirst<T>(arr: T[]): T { return arr[0]; }`. If you call `getFirst([1, 2])`, TypeScript knows the return type is `number`. If you used `any`, TypeScript would lose all type information. Generics provide reusability without sacrificing type safety."
+    },
+    {
+      "question": "What is a Union Type?",
+      "options": [
+        "Running `tsc` without any input files will compile all the TypeScript files in the project as specified by the `files`, `include`, and `exclude` options in the `tsconfig.json` file.",
+        "A common use case is for functions that return multiple values with different types. For example, React's `useState` hook returns a tuple: `[State, (newState: State) => void]`.",
+        "You can narrow the type using a type guard. For example, using `typeof id === 'string'` inside an `if` block will tell the TypeScript compiler that `id` is a string within that block.",
+        "You create a function whose return type is a *type predicate*. For example: `function isFish(pet: Fish | Bird): pet is Fish { return (pet as Fish).swim !== undefined; }`. The `pet is Fish` syntax is the type predicate."
+      ],
+      "answer": "You can narrow the type using a type guard. For example, using `typeof id === 'string'` inside an `if` block will tell the TypeScript compiler that `id` is a string within that block."
+    },
+    {
+      "question": "What are Enums in TypeScript?",
+      "options": [
+        "Numeric enums are number-based and auto-increment by default. They allow for reverse mapping (from value to name). String enums must be initialized with string values and do not have reverse mappings, which can make them more readable and predictable.",
+        "You can narrow the type using a type guard. For example, using `typeof id === 'string'` inside an `if` block will tell the TypeScript compiler that `id` is a string within that block.",
+        "They are implemented using mapped types. For example, `type Partial<T> = { [P in keyof T]?: T[P]; }`. This syntax iterates over all properties (`P`) in the type `T` and makes them optional (`?`).",
+        "A generic function maintains the relationship between input and output types: `function getFirst<T>(arr: T[]): T { return arr[0]; }`. If you call `getFirst([1, 2])`, TypeScript knows the return type is `number`. If you used `any`, TypeScript would lose all type information. Generics provide reusability without sacrificing type safety."
+      ],
+      "answer": "Numeric enums are number-based and auto-increment by default. They allow for reverse mapping (from value to name). String enums must be initialized with string values and do not have reverse mappings, which can make them more readable and predictable."
+    },
+    {
+      "question": "What is the `tsconfig.json` file?",
+      "options": [
+        "**`Partial<T>`:** Makes all properties of `T` optional. Useful for update functions. **`Pick<T, K>`:** Creates a type by picking a set of properties `K` from `T`. **`Omit<T, K>`:** Creates a type by removing a set of properties `K` from `T`.",
+        "The main purpose is to define a common structure and behavior that multiple related subclasses must share and implement, essentially creating a template for other classes.",
+        "Setting `strict: true` enables a wide range of strict type-checking options, such as `noImplicitAny`, `strictNullChecks`, and `alwaysStrict`. It is highly recommended for all new projects to catch more errors at compile time.",
+        "It's a shorthand that lets you create and initialize a class member in one place. For example, `constructor(private name: string) {}` is a shortcut for declaring a private `name` property and initializing it from the constructor argument."
+      ],
+      "answer": "Setting `strict: true` enables a wide range of strict type-checking options, such as `noImplicitAny`, `strictNullChecks`, and `alwaysStrict`. It is highly recommended for all new projects to catch more errors at compile time."
+    },
+    {
+      "question": "What are Utility Types in TypeScript?",
+      "options": [
+        "**`Partial<T>`:** Makes all properties of `T` optional. Useful for update functions. **`Pick<T, K>`:** Creates a type by picking a set of properties `K` from `T`. **`Omit<T, K>`:** Creates a type by removing a set of properties `K` from `T`.",
+        "You can narrow the type using a type guard. For example, using `typeof id === 'string'` inside an `if` block will tell the TypeScript compiler that `id` is a string within that block.",
+        "Declaration merging is when the compiler merges two or more separate declarations with the same name into a single definition. **Interfaces** support this, while `type` aliases do not. This allows you to extend an interface that might be defined in a third-party library.",
+        "The two syntaxes are the angle-bracket syntax (`<string>myVar`) and the `as` syntax (`myVar as string`). The `as` syntax is preferred in `.tsx` (React) files because the angle-bracket syntax conflicts with JSX."
+      ],
+      "answer": "**`Partial<T>`:** Makes all properties of `T` optional. Useful for update functions. **`Pick<T, K>`:** Creates a type by picking a set of properties `K` from `T`. **`Omit<T, K>`:** Creates a type by removing a set of properties `K` from `T`."
+    },
+    {
+      "question": "What is type assertion in TypeScript?",
+      "options": [
+        "You can use it to conditionally call a function that may not exist. For example, `myCallback?.()`. This will only call `myCallback` if it is not `null` or `undefined`.",
+        "In a switch statement over a union type, you can add a `default` case that assigns the variable to a function accepting `never`. If you later add a new member to the union but forget to handle it in the switch, TypeScript will throw a compile-time error because the variable is not of type `never`.",
+        "The two syntaxes are the angle-bracket syntax (`<string>myVar`) and the `as` syntax (`myVar as string`). The `as` syntax is preferred in `.tsx` (React) files because the angle-bracket syntax conflicts with JSX.",
+        "It's a shorthand that lets you create and initialize a class member in one place. For example, `constructor(private name: string) {}` is a shortcut for declaring a private `name` property and initializing it from the constructor argument."
+      ],
+      "answer": "The two syntaxes are the angle-bracket syntax (`<string>myVar`) and the `as` syntax (`myVar as string`). The `as` syntax is preferred in `.tsx` (React) files because the angle-bracket syntax conflicts with JSX."
+    },
+    {
+      "question": "What is the difference between an Array and a Tuple in TypeScript?",
+      "options": [
+        "Setting `strict: true` enables a wide range of strict type-checking options, such as `noImplicitAny`, `strictNullChecks`, and `alwaysStrict`. It is highly recommended for all new projects to catch more errors at compile time.",
+        "A common use case is for functions that return multiple values with different types. For example, React's `useState` hook returns a tuple: `[State, (newState: State) => void]`.",
+        "The resulting property will have a type that is an intersection of the individual types. If the types are primitives (e.g., `string & number`), the result is `never`, as a value cannot be both at the same time.",
+        "Numeric enums are number-based and auto-increment by default. They allow for reverse mapping (from value to name). String enums must be initialized with string values and do not have reverse mappings, which can make them more readable and predictable."
+      ],
+      "answer": "A common use case is for functions that return multiple values with different types. For example, React's `useState` hook returns a tuple: `[State, (newState: State) => void]`."
+    },
+    {
+      "question": "What is a type guard?",
+      "options": [
+        "The logical OR (`||`) operator returns the right-hand side for any 'falsy' value (like `0`, `''`, `false`). The nullish coalescing operator (`??`) only triggers for `null` or `undefined`, which is useful when falsy values like `0` are valid inputs.",
+        "Consider an object `const config = { theme: 'dark' } satisfies Record<string, 'dark' | 'light'>;`. Here, `satisfies` checks that `theme` is a valid value, but the inferred type of `config.theme` remains the specific literal `'dark'`, not the wider `'dark' | 'light'`.",
+        "The main purpose is to define a common structure and behavior that multiple related subclasses must share and implement, essentially creating a template for other classes.",
+        "You create a function whose return type is a *type predicate*. For example: `function isFish(pet: Fish | Bird): pet is Fish { return (pet as Fish).swim !== undefined; }`. The `pet is Fish` syntax is the type predicate."
+      ],
+      "answer": "You create a function whose return type is a *type predicate*. For example: `function isFish(pet: Fish | Bird): pet is Fish { return (pet as Fish).swim !== undefined; }`. The `pet is Fish` syntax is the type predicate."
+    },
+    {
+      "question": "How do you type props for a React component?",
+      "options": [
+        "Using `unknown` forces you to write safer code. With `any`, you can try to access any property and TypeScript won't complain, which can lead to runtime errors. With `unknown`, TypeScript forces you to explicitly check the type of the variable before you can work with it.",
+        "A common use case is for functions that return multiple values with different types. For example, React's `useState` hook returns a tuple: `[State, (newState: State) => void]`.",
+        "`React.FC` (or `React.FunctionComponent`) is a generic type for functional components. It was discouraged because it implicitly added `children` to the props type, which was not always desired. In modern TypeScript, it's often simpler to type the props directly.",
+        "In a switch statement over a union type, you can add a `default` case that assigns the variable to a function accepting `never`. If you later add a new member to the union but forget to handle it in the switch, TypeScript will throw a compile-time error because the variable is not of type `never`."
+      ],
+      "answer": "`React.FC` (or `React.FunctionComponent`) is a generic type for functional components. It was discouraged because it implicitly added `children` to the props type, which was not always desired. In modern TypeScript, it's often simpler to type the props directly."
+    },
+    {
+      "question": "What does the `never` type represent?",
+      "options": [
+        "`React.FC` (or `React.FunctionComponent`) is a generic type for functional components. It was discouraged because it implicitly added `children` to the props type, which was not always desired. In modern TypeScript, it's often simpler to type the props directly.",
+        "`undefined` means a variable has been declared but not yet assigned a value. `null` is an assignment value, meaning a variable has been explicitly set to have no value.",
+        "In a switch statement over a union type, you can add a `default` case that assigns the variable to a function accepting `never`. If you later add a new member to the union but forget to handle it in the switch, TypeScript will throw a compile-time error because the variable is not of type `never`.",
+        "Setting `strict: true` enables a wide range of strict type-checking options, such as `noImplicitAny`, `strictNullChecks`, and `alwaysStrict`. It is highly recommended for all new projects to catch more errors at compile time."
+      ],
+      "answer": "In a switch statement over a union type, you can add a `default` case that assigns the variable to a function accepting `never`. If you later add a new member to the union but forget to handle it in the switch, TypeScript will throw a compile-time error because the variable is not of type `never`."
+    },
+    {
+      "question": "What are Mapped Types?",
+      "options": [
+        "You can narrow the type using a type guard. For example, using `typeof id === 'string'` inside an `if` block will tell the TypeScript compiler that `id` is a string within that block.",
+        "They are usually hosted on a community-managed repository called DefinitelyTyped and are installed from npm under the `@types/` scope. For example, to get types for React, you would run `npm install @types/react`.",
+        "They are implemented using mapped types. For example, `type Partial<T> = { [P in keyof T]?: T[P]; }`. This syntax iterates over all properties (`P`) in the type `T` and makes them optional (`?`).",
+        "A common use case is for functions that return multiple values with different types. For example, React's `useState` hook returns a tuple: `[State, (newState: State) => void]`."
+      ],
+      "answer": "They are implemented using mapped types. For example, `type Partial<T> = { [P in keyof T]?: T[P]; }`. This syntax iterates over all properties (`P`) in the type `T` and makes them optional (`?`)."
+    },
+    {
+      "question": "How do you define access modifiers like `public`, `private`, and `protected` in TypeScript classes?",
+      "options": [
+        "A common use case is for functions that return multiple values with different types. For example, React's `useState` hook returns a tuple: `[State, (newState: State) => void]`.",
+        "They are very commonly combined with union types to create a set of allowed, specific values for a variable. This is a powerful alternative to using enums for simple cases, providing strong type safety for known sets of strings or numbers.",
+        "The main purpose is to define a common structure and behavior that multiple related subclasses must share and implement, essentially creating a template for other classes.",
+        "It's a shorthand that lets you create and initialize a class member in one place. For example, `constructor(private name: string) {}` is a shortcut for declaring a private `name` property and initializing it from the constructor argument."
+      ],
+      "answer": "It's a shorthand that lets you create and initialize a class member in one place. For example, `constructor(private name: string) {}` is a shortcut for declaring a private `name` property and initializing it from the constructor argument."
+    },
+    {
+      "question": "What are Conditional Types?",
+      "options": [
+        "Using `unknown` forces you to write safer code. With `any`, you can try to access any property and TypeScript won't complain, which can lead to runtime errors. With `unknown`, TypeScript forces you to explicitly check the type of the variable before you can work with it.",
+        "A limitation is that all explicit properties in the type must also conform to the index signature's value type. For instance, if your index signature is `[key: string]: number;`, you cannot have a property like `name: string;` in the same type.",
+        "It's a shorthand that lets you create and initialize a class member in one place. For example, `constructor(private name: string) {}` is a shortcut for declaring a private `name` property and initializing it from the constructor argument.",
+        "The `infer` keyword is used within the `extends` clause of a conditional type to declaratively introduce a new generic type variable. It's often used to extract types from arrays, functions, or promises. For example, `type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;` extracts the return type `R` of a function."
+      ],
+      "answer": "The `infer` keyword is used within the `extends` clause of a conditional type to declaratively introduce a new generic type variable. It's often used to extract types from arrays, functions, or promises. For example, `type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;` extracts the return type `R` of a function."
+    },
+    {
+      "question": "What is the difference between `void` and `never`?",
+      "options": [
+        "No, a variable of type `never` cannot have any value assigned to it, not even `null` or `undefined`. However, `never` is assignable to every type.",
+        "The `infer` keyword is used within the `extends` clause of a conditional type to declaratively introduce a new generic type variable. It's often used to extract types from arrays, functions, or promises. For example, `type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;` extracts the return type `R` of a function.",
+        "You can use it to conditionally call a function that may not exist. For example, `myCallback?.()`. This will only call `myCallback` if it is not `null` or `undefined`.",
+        "It's useful for defining a dictionary-like object where the keys are from a known set (like a string literal union type) and the values have a consistent shape. For example: `type PageInfo = { title: string }; type Pages = 'home' | 'about'; const nav: Record<Pages, PageInfo> = { home: { title: 'Home' }, about: { title: 'About' } };`"
+      ],
+      "answer": "No, a variable of type `never` cannot have any value assigned to it, not even `null` or `undefined`. However, `never` is assignable to every type."
+    },
+    {
+      "question": "How do you specify a type for a function?",
+      "options": [
+        "A common use case is for functions that return multiple values with different types. For example, React's `useState` hook returns a tuple: `[State, (newState: State) => void]`.",
+        "You can use a type alias with an arrow function syntax: `type StringCallback = (message: string) => void;`.",
+        "They are usually hosted on a community-managed repository called DefinitelyTyped and are installed from npm under the `@types/` scope. For example, to get types for React, you would run `npm install @types/react`.",
+        "`undefined` means a variable has been declared but not yet assigned a value. `null` is an assignment value, meaning a variable has been explicitly set to have no value."
+      ],
+      "answer": "You can use a type alias with an arrow function syntax: `type StringCallback = (message: string) => void;`."
+    },
+    {
+      "question": "What does the `Record<K, T>` utility type do?",
+      "options": [
+        "The two syntaxes are the angle-bracket syntax (`<string>myVar`) and the `as` syntax (`myVar as string`). The `as` syntax is preferred in `.tsx` (React) files because the angle-bracket syntax conflicts with JSX.",
+        "It's useful for defining a dictionary-like object where the keys are from a known set (like a string literal union type) and the values have a consistent shape. For example: `type PageInfo = { title: string }; type Pages = 'home' | 'about'; const nav: Record<Pages, PageInfo> = { home: { title: 'Home' }, about: { title: 'About' } };`",
+        "You create a function whose return type is a *type predicate*. For example: `function isFish(pet: Fish | Bird): pet is Fish { return (pet as Fish).swim !== undefined; }`. The `pet is Fish` syntax is the type predicate.",
+        "Decorators are an experimental feature in TypeScript (you must enable the `experimentalDecorators` flag). They are a Stage 3 proposal for JavaScript, meaning they are close to being officially added to the language but are not yet standard."
+      ],
+      "answer": "It's useful for defining a dictionary-like object where the keys are from a known set (like a string literal union type) and the values have a consistent shape. For example: `type PageInfo = { title: string }; type Pages = 'home' | 'about'; const nav: Record<Pages, PageInfo> = { home: { title: 'Home' }, about: { title: 'About' } };`"
+    },
+    {
+      "question": "How do you type event handlers in React with TypeScript?",
+      "options": [
+        "You would type it as `React.ChangeEvent<HTMLInputElement>`. This gives you typed access to properties like `event.target.value`.",
+        "In a switch statement over a union type, you can add a `default` case that assigns the variable to a function accepting `never`. If you later add a new member to the union but forget to handle it in the switch, TypeScript will throw a compile-time error because the variable is not of type `never`.",
+        "They are very commonly combined with union types to create a set of allowed, specific values for a variable. This is a powerful alternative to using enums for simple cases, providing strong type safety for known sets of strings or numbers.",
+        "You can use it to conditionally call a function that may not exist. For example, `myCallback?.()`. This will only call `myCallback` if it is not `null` or `undefined`."
+      ],
+      "answer": "You would type it as `React.ChangeEvent<HTMLInputElement>`. This gives you typed access to properties like `event.target.value`."
+    },
+    {
+      "question": "How do you compile a TypeScript file?",
+      "options": [
+        "The main purpose is to define a common structure and behavior that multiple related subclasses must share and implement, essentially creating a template for other classes.",
+        "Running `tsc` without any input files will compile all the TypeScript files in the project as specified by the `files`, `include`, and `exclude` options in the `tsconfig.json` file.",
+        "`undefined` means a variable has been declared but not yet assigned a value. `null` is an assignment value, meaning a variable has been explicitly set to have no value.",
+        "It's useful for defining a dictionary-like object where the keys are from a known set (like a string literal union type) and the values have a consistent shape. For example: `type PageInfo = { title: string }; type Pages = 'home' | 'about'; const nav: Record<Pages, PageInfo> = { home: { title: 'Home' }, about: { title: 'About' } };`"
+      ],
+      "answer": "Running `tsc` without any input files will compile all the TypeScript files in the project as specified by the `files`, `include`, and `exclude` options in the `tsconfig.json` file."
+    },
+    {
+      "question": "What is an Intersection Type?",
+      "options": [
+        "Decorators are an experimental feature in TypeScript (you must enable the `experimentalDecorators` flag). They are a Stage 3 proposal for JavaScript, meaning they are close to being officially added to the language but are not yet standard.",
+        "The two syntaxes are the angle-bracket syntax (`<string>myVar`) and the `as` syntax (`myVar as string`). The `as` syntax is preferred in `.tsx` (React) files because the angle-bracket syntax conflicts with JSX.",
+        "The resulting property will have a type that is an intersection of the individual types. If the types are primitives (e.g., `string & number`), the result is `never`, as a value cannot be both at the same time.",
+        "You can narrow the type using a type guard. For example, using `typeof id === 'string'` inside an `if` block will tell the TypeScript compiler that `id` is a string within that block."
+      ],
+      "answer": "The resulting property will have a type that is an intersection of the individual types. If the types are primitives (e.g., `string & number`), the result is `never`, as a value cannot be both at the same time."
+    },
+    {
+      "question": "What is the `keyof` type operator?",
+      "options": [
+        "It's a shorthand that lets you create and initialize a class member in one place. For example, `constructor(private name: string) {}` is a shortcut for declaring a private `name` property and initializing it from the constructor argument.",
+        "The main purpose is to define a common structure and behavior that multiple related subclasses must share and implement, essentially creating a template for other classes.",
+        "You can create a function like: `function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] { return obj[key]; }`. This ensures that the `key` passed to the function is actually a key of the `obj`, preventing runtime errors.",
+        "`undefined` means a variable has been declared but not yet assigned a value. `null` is an assignment value, meaning a variable has been explicitly set to have no value."
+      ],
+      "answer": "You can create a function like: `function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] { return obj[key]; }`. This ensures that the `key` passed to the function is actually a key of the `obj`, preventing runtime errors."
+    },
+    {
+      "question": "What are Decorators in TypeScript?",
+      "options": [
+        "A generic function maintains the relationship between input and output types: `function getFirst<T>(arr: T[]): T { return arr[0]; }`. If you call `getFirst([1, 2])`, TypeScript knows the return type is `number`. If you used `any`, TypeScript would lose all type information. Generics provide reusability without sacrificing type safety.",
+        "They are very commonly combined with union types to create a set of allowed, specific values for a variable. This is a powerful alternative to using enums for simple cases, providing strong type safety for known sets of strings or numbers.",
+        "Decorators are an experimental feature in TypeScript (you must enable the `experimentalDecorators` flag). They are a Stage 3 proposal for JavaScript, meaning they are close to being officially added to the language but are not yet standard.",
+        "It's useful for defining a dictionary-like object where the keys are from a known set (like a string literal union type) and the values have a consistent shape. For example: `type PageInfo = { title: string }; type Pages = 'home' | 'about'; const nav: Record<Pages, PageInfo> = { home: { title: 'Home' }, about: { title: 'About' } };`"
+      ],
+      "answer": "Decorators are an experimental feature in TypeScript (you must enable the `experimentalDecorators` flag). They are a Stage 3 proposal for JavaScript, meaning they are close to being officially added to the language but are not yet standard."
+    },
+    {
+      "question": "What is Type Inference?",
+      "options": [
+        "A common use case is for functions that return multiple values with different types. For example, React's `useState` hook returns a tuple: `[State, (newState: State) => void]`.",
+        "The two syntaxes are the angle-bracket syntax (`<string>myVar`) and the `as` syntax (`myVar as string`). The `as` syntax is preferred in `.tsx` (React) files because the angle-bracket syntax conflicts with JSX.",
+        "It's good practice for simple variable initializations (`let name = 'Alice'`). However, it's a best practice to explicitly type function return values and object shapes to make the code clearer and prevent unintentional type changes.",
+        "They are very commonly combined with union types to create a set of allowed, specific values for a variable. This is a powerful alternative to using enums for simple cases, providing strong type safety for known sets of strings or numbers."
+      ],
+      "answer": "It's good practice for simple variable initializations (`let name = 'Alice'`). However, it's a best practice to explicitly type function return values and object shapes to make the code clearer and prevent unintentional type changes."
+    },
+    {
+      "question": "What are generic constraints?",
+      "options": [
+        "It's a shorthand that lets you create and initialize a class member in one place. For example, `constructor(private name: string) {}` is a shortcut for declaring a private `name` property and initializing it from the constructor argument.",
+        "The resulting property will have a type that is an intersection of the individual types. If the types are primitives (e.g., `string & number`), the result is `never`, as a value cannot be both at the same time.",
+        "`React.FC` (or `React.FunctionComponent`) is a generic type for functional components. It was discouraged because it implicitly added `children` to the props type, which was not always desired. In modern TypeScript, it's often simpler to type the props directly.",
+        "You could constrain a generic function to only accept types that have a `.length` property: `function loggingIdentity<T extends { length: number }>(arg: T): T { console.log(arg.length); return arg; }`."
+      ],
+      "answer": "You could constrain a generic function to only accept types that have a `.length` property: `function loggingIdentity<T extends { length: number }>(arg: T): T { console.log(arg.length); return arg; }`."
+    },
+    {
+      "question": "What is a declaration file (`.d.ts`)?",
+      "options": [
+        "Setting `strict: true` enables a wide range of strict type-checking options, such as `noImplicitAny`, `strictNullChecks`, and `alwaysStrict`. It is highly recommended for all new projects to catch more errors at compile time.",
+        "They are usually hosted on a community-managed repository called DefinitelyTyped and are installed from npm under the `@types/` scope. For example, to get types for React, you would run `npm install @types/react`.",
+        "In a switch statement over a union type, you can add a `default` case that assigns the variable to a function accepting `never`. If you later add a new member to the union but forget to handle it in the switch, TypeScript will throw a compile-time error because the variable is not of type `never`.",
+        "A common use case is for functions that return multiple values with different types. For example, React's `useState` hook returns a tuple: `[State, (newState: State) => void]`."
+      ],
+      "answer": "They are usually hosted on a community-managed repository called DefinitelyTyped and are installed from npm under the `@types/` scope. For example, to get types for React, you would run `npm install @types/react`."
+    },
+    {
+      "question": "What is Optional Chaining in TypeScript?",
+      "options": [
+        "They are usually hosted on a community-managed repository called DefinitelyTyped and are installed from npm under the `@types/` scope. For example, to get types for React, you would run `npm install @types/react`.",
+        "It's good practice for simple variable initializations (`let name = 'Alice'`). However, it's a best practice to explicitly type function return values and object shapes to make the code clearer and prevent unintentional type changes.",
+        "You can use it to conditionally call a function that may not exist. For example, `myCallback?.()`. This will only call `myCallback` if it is not `null` or `undefined`.",
+        "You could constrain a generic function to only accept types that have a `.length` property: `function loggingIdentity<T extends { length: number }>(arg: T): T { console.log(arg.length); return arg; }`."
+      ],
+      "answer": "You can use it to conditionally call a function that may not exist. For example, `myCallback?.()`. This will only call `myCallback` if it is not `null` or `undefined`."
+    },
+    {
+      "question": "What is the Nullish Coalescing operator (`??`)?",
+      "options": [
+        "You can use it to conditionally call a function that may not exist. For example, `myCallback?.()`. This will only call `myCallback` if it is not `null` or `undefined`.",
+        "You can create a function like: `function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] { return obj[key]; }`. This ensures that the `key` passed to the function is actually a key of the `obj`, preventing runtime errors.",
+        "The logical OR (`||`) operator returns the right-hand side for any 'falsy' value (like `0`, `''`, `false`). The nullish coalescing operator (`??`) only triggers for `null` or `undefined`, which is useful when falsy values like `0` are valid inputs.",
+        "Setting `strict: true` enables a wide range of strict type-checking options, such as `noImplicitAny`, `strictNullChecks`, and `alwaysStrict`. It is highly recommended for all new projects to catch more errors at compile time."
+      ],
+      "answer": "The logical OR (`||`) operator returns the right-hand side for any 'falsy' value (like `0`, `''`, `false`). The nullish coalescing operator (`??`) only triggers for `null` or `undefined`, which is useful when falsy values like `0` are valid inputs."
+    },
+    {
+      "question": "What is an abstract class in TypeScript?",
+      "options": [
+        "In a switch statement over a union type, you can add a `default` case that assigns the variable to a function accepting `never`. If you later add a new member to the union but forget to handle it in the switch, TypeScript will throw a compile-time error because the variable is not of type `never`.",
+        "They are very commonly combined with union types to create a set of allowed, specific values for a variable. This is a powerful alternative to using enums for simple cases, providing strong type safety for known sets of strings or numbers.",
+        "The main purpose is to define a common structure and behavior that multiple related subclasses must share and implement, essentially creating a template for other classes.",
+        "You could constrain a generic function to only accept types that have a `.length` property: `function loggingIdentity<T extends { length: number }>(arg: T): T { console.log(arg.length); return arg; }`."
+      ],
+      "answer": "The main purpose is to define a common structure and behavior that multiple related subclasses must share and implement, essentially creating a template for other classes."
+    },
+    {
+      "question": "What are literal types?",
+      "options": [
+        "They are very commonly combined with union types to create a set of allowed, specific values for a variable. This is a powerful alternative to using enums for simple cases, providing strong type safety for known sets of strings or numbers.",
+        "The main purpose is to define a common structure and behavior that multiple related subclasses must share and implement, essentially creating a template for other classes.",
+        "They are usually hosted on a community-managed repository called DefinitelyTyped and are installed from npm under the `@types/` scope. For example, to get types for React, you would run `npm install @types/react`.",
+        "The `infer` keyword is used within the `extends` clause of a conditional type to declaratively introduce a new generic type variable. It's often used to extract types from arrays, functions, or promises. For example, `type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;` extracts the return type `R` of a function."
+      ],
+      "answer": "They are very commonly combined with union types to create a set of allowed, specific values for a variable. This is a powerful alternative to using enums for simple cases, providing strong type safety for known sets of strings or numbers."
+    },
+    {
+      "question": "What are index signatures?",
+      "options": [
+        "It's a shorthand that lets you create and initialize a class member in one place. For example, `constructor(private name: string) {}` is a shortcut for declaring a private `name` property and initializing it from the constructor argument.",
+        "A limitation is that all explicit properties in the type must also conform to the index signature's value type. For instance, if your index signature is `[key: string]: number;`, you cannot have a property like `name: string;` in the same type.",
+        "The resulting property will have a type that is an intersection of the individual types. If the types are primitives (e.g., `string & number`), the result is `never`, as a value cannot be both at the same time.",
+        "Decorators are an experimental feature in TypeScript (you must enable the `experimentalDecorators` flag). They are a Stage 3 proposal for JavaScript, meaning they are close to being officially added to the language but are not yet standard."
+      ],
+      "answer": "A limitation is that all explicit properties in the type must also conform to the index signature's value type. For instance, if your index signature is `[key: string]: number;`, you cannot have a property like `name: string;` in the same type."
+    },
+    {
+      "question": "What is the `satisfies` operator?",
+      "options": [
+        "No. If you provide an initial value, TypeScript can often infer the type correctly. For example, in `useState(0)`, TypeScript will correctly infer the type as `number`. You only need to provide an explicit type if the initial value is `null` or `undefined` but it will later hold a more specific type.",
+        "The two syntaxes are the angle-bracket syntax (`<string>myVar`) and the `as` syntax (`myVar as string`). The `as` syntax is preferred in `.tsx` (React) files because the angle-bracket syntax conflicts with JSX.",
+        "Consider an object `const config = { theme: 'dark' } satisfies Record<string, 'dark' | 'light'>;`. Here, `satisfies` checks that `theme` is a valid value, but the inferred type of `config.theme` remains the specific literal `'dark'`, not the wider `'dark' | 'light'`.",
+        "You can use it to conditionally call a function that may not exist. For example, `myCallback?.()`. This will only call `myCallback` if it is not `null` or `undefined`."
+      ],
+      "answer": "Consider an object `const config = { theme: 'dark' } satisfies Record<string, 'dark' | 'light'>;`. Here, `satisfies` checks that `theme` is a valid value, but the inferred type of `config.theme` remains the specific literal `'dark'`, not the wider `'dark' | 'light'`."
+    },
+    {
+      "question": "How do you type the state for the `useState` hook?",
+      "options": [
+        "You can use a type alias with an arrow function syntax: `type StringCallback = (message: string) => void;`.",
+        "No. If you provide an initial value, TypeScript can often infer the type correctly. For example, in `useState(0)`, TypeScript will correctly infer the type as `number`. You only need to provide an explicit type if the initial value is `null` or `undefined` but it will later hold a more specific type.",
+        "No, a variable of type `never` cannot have any value assigned to it, not even `null` or `undefined`. However, `never` is assignable to every type.",
+        "In a switch statement over a union type, you can add a `default` case that assigns the variable to a function accepting `never`. If you later add a new member to the union but forget to handle it in the switch, TypeScript will throw a compile-time error because the variable is not of type `never`."
+      ],
+      "answer": "No. If you provide an initial value, TypeScript can often infer the type correctly. For example, in `useState(0)`, TypeScript will correctly infer the type as `number`. You only need to provide an explicit type if the initial value is `null` or `undefined` but it will later hold a more specific type."
+    }
+  ]
+}

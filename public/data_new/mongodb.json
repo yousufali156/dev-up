@@ -1,0 +1,304 @@
+{
+  "questions": [
+    {
+      "question": "What is MongoDB?",
+      "options": [
+        "1. All fields in the query filter must be part of an index. 2. All fields returned in the projection must also be in the same index. (Note: The `_id` field is returned by default and must also be in the index or explicitly excluded).",
+        "The insert operation will fail and MongoDB will return a duplicate key error (E11000).",
+        "You would use a query that checks for both conditions: `db.collection.find({ myField: { $exists: true, $eq: null } })`.",
+        "The main advantages are: 1. **Flexible Schema:** You can have documents with different fields in the same collection. 2. **Scalability:** It's designed for horizontal scaling (sharding). 3. **Performance:** It's generally faster for large amounts of unstructured data and for read/write operations."
+      ],
+      "answer": "The main advantages are: 1. **Flexible Schema:** You can have documents with different fields in the same collection. 2. **Scalability:** It's designed for horizontal scaling (sharding). 3. **Performance:** It's generally faster for large amounts of unstructured data and for read/write operations."
+    },
+    {
+      "question": "Explain the relationship between a Database, a Collection, and a Document.",
+      "options": [
+        "The insert operation will fail and MongoDB will return a duplicate key error (E11000).",
+        "A shard key is a field that MongoDB uses to distribute a collection's documents across shards. Choosing a good shard key is crucial for performance, as it ensures an even distribution of data and workload across the cluster.",
+        "A cursor fetches documents from the database in batches. This prevents the need to load the entire result set into the application's memory at once, which is crucial for queries that return a very large number of documents.",
+        "By default, no. MongoDB collections have a **dynamic schema**, meaning documents within the same collection do not need to have the same fields. However, you can enforce a schema using MongoDB's schema validation features or at the application level with an ODM like Mongoose."
+      ],
+      "answer": "By default, no. MongoDB collections have a **dynamic schema**, meaning documents within the same collection do not need to have the same fields. However, you can enforce a schema using MongoDB's schema validation features or at the application level with an ODM like Mongoose."
+    },
+    {
+      "question": "What is BSON?",
+      "options": [
+        "It's necessary to ensure that a single subdocument meets all criteria. A simple query like `find({ results: { $gte: 80, $lt: 85 } })` could match a document where one result is 90 and another is 70. `find({ results: { $elemMatch: { $gte: 80, $lt: 85 } } })` ensures a single result element satisfies both conditions.",
+        "An 'upsert' is an operation that will either update a document if it exists or insert a new document if it does not exist. You can perform an upsert by setting the `upsert: true` option in an update operation.",
+        "BSON has several advantages: 1. **More Data Types:** It supports data types not available in JSON, like `Date`, `ObjectId`, and binary data. 2. **Efficiency:** It's designed to be lightweight and fast for computer systems to parse and traverse.",
+        "A **compound index** is an index on multiple fields. The order of fields is very important because the query must include the prefix fields of the index to be efficient. An index on `{ userid: 1, score: -1 }` cannot efficiently support a query that only filters on `score`."
+      ],
+      "answer": "BSON has several advantages: 1. **More Data Types:** It supports data types not available in JSON, like `Date`, `ObjectId`, and binary data. 2. **Efficiency:** It's designed to be lightweight and fast for computer systems to parse and traverse."
+    },
+    {
+      "question": "What is the difference between embedding and referencing documents?",
+      "options": [
+        "Calling `deleteMany({})` with an empty filter object will delete all documents in the collection. This is a destructive operation and should be used with extreme caution.",
+        "To use transactions, you must be using a MongoDB replica set or a sharded cluster. Transactions are not supported on standalone server deployments.",
+        "The main advantages are: 1. **Flexible Schema:** You can have documents with different fields in the same collection. 2. **Scalability:** It's designed for horizontal scaling (sharding). 3. **Performance:** It's generally faster for large amounts of unstructured data and for read/write operations.",
+        "You should **embed** data when the relationship is 'contains' (e.g., comments within a blog post) and you need fast read performance. You should **reference** data when the relationship is 'uses' (e.g., an author of many books) to avoid data duplication and manage large datasets."
+      ],
+      "answer": "You should **embed** data when the relationship is 'contains' (e.g., comments within a blog post) and you need fast read performance. You should **reference** data when the relationship is 'uses' (e.g., an author of many books) to avoid data duplication and manage large datasets."
+    },
+    {
+      "question": "What is an index in MongoDB?",
+      "options": [
+        "You would use a query that checks for both conditions: `db.collection.find({ myField: { $exists: true, $eq: null } })`.",
+        "An `ObjectId` is a 12-byte value that is highly likely to be unique. It's composed of a 4-byte timestamp, a 5-byte random value, and a 3-byte incrementing counter.",
+        "A **compound index** is an index on multiple fields. The order of fields is very important because the query must include the prefix fields of the index to be efficient. An index on `{ userid: 1, score: -1 }` cannot efficiently support a query that only filters on `score`.",
+        "You use the `$all` operator. For example: `db.collection.find({ tags: { $all: ['red', 'blue'] } })` will find documents where the `tags` array contains both 'red' and 'blue'."
+      ],
+      "answer": "A **compound index** is an index on multiple fields. The order of fields is very important because the query must include the prefix fields of the index to be efficient. An index on `{ userid: 1, score: -1 }` cannot efficiently support a query that only filters on `score`."
+    },
+    {
+      "question": "What is the MongoDB Aggregation Pipeline?",
+      "options": [
+        "To use transactions, you must be using a MongoDB replica set or a sharded cluster. Transactions are not supported on standalone server deployments.",
+        "`totalKeysExamined` is the number of index entries scanned. `totalDocsExamined` is the number of documents scanned. An efficient query will have these numbers very close to the number of documents returned.",
+        "`$match` filters the documents to pass only the documents that match the specified condition(s). `$group` groups documents by some specified expression and applies an accumulator expression to each group. `$lookup` performs a left outer join to another collection.",
+        "Calling `deleteMany({})` with an empty filter object will delete all documents in the collection. This is a destructive operation and should be used with extreme caution."
+      ],
+      "answer": "`$match` filters the documents to pass only the documents that match the specified condition(s). `$group` groups documents by some specified expression and applies an accumulator expression to each group. `$lookup` performs a left outer join to another collection."
+    },
+    {
+      "question": "How do you find all documents in a collection?",
+      "options": [
+        "A common use case is for storing high-volume log data. Because the collection has a fixed size, you don't have to worry about it growing indefinitely, and old log entries are automatically purged.",
+        "`$in` is used to match multiple values for a *single* field. `$or` is more general and is used to specify a disjunction of query clauses, which can be on *different* fields.",
+        "A projection is an optional second argument to the `find()` method that specifies which fields to include or exclude from the returned documents. For example, `db.users.find({}, { name: 1, email: 1, _id: 0 })`.",
+        "No, a collection can have at most one text index. The index can cover multiple fields, but you cannot create multiple text indexes on the same collection."
+      ],
+      "answer": "A projection is an optional second argument to the `find()` method that specifies which fields to include or exclude from the returned documents. For example, `db.users.find({}, { name: 1, email: 1, _id: 0 })`."
+    },
+    {
+      "question": "What is the difference between `updateOne()` and `updateMany()`?",
+      "options": [
+        "A common use case is for storing high-volume log data. Because the collection has a fixed size, you don't have to worry about it growing indefinitely, and old log entries are automatically purged.",
+        "An 'upsert' is an operation that will either update a document if it exists or insert a new document if it does not exist. You can perform an upsert by setting the `upsert: true` option in an update operation.",
+        "If you pass an update object without any operators (like `$set`), MongoDB will perform a full replacement of the document, deleting all existing fields and replacing them with the fields in the new object (except for the `_id`).",
+        "One of its most useful features is the visual `explain` plan, which helps developers understand how their queries are being executed and identify performance bottlenecks. It also has a built-in schema visualization tool."
+      ],
+      "answer": "An 'upsert' is an operation that will either update a document if it exists or insert a new document if it does not exist. You can perform an upsert by setting the `upsert: true` option in an update operation."
+    },
+    {
+      "question": "What is a replica set?",
+      "options": [
+        "A privilege is a combination of a specified resource (like a database or collection) and a permitted action (like `find` or `insert`). A role is essentially a collection of these privileges.",
+        "The main advantages are: 1. **Flexible Schema:** You can have documents with different fields in the same collection. 2. **Scalability:** It's designed for horizontal scaling (sharding). 3. **Performance:** It's generally faster for large amounts of unstructured data and for read/write operations.",
+        "It's used to treat each element of an array as an individual document so that you can group and perform aggregations based on the values within the array. For example, to calculate the average score for each tag in a `tags` array.",
+        "The **primary** node receives all write operations. The **secondary** nodes replicate the primary's data. If the primary becomes unavailable, the replica set holds an election to choose a new primary from the secondaries."
+      ],
+      "answer": "The **primary** node receives all write operations. The **secondary** nodes replicate the primary's data. If the primary becomes unavailable, the replica set holds an election to choose a new primary from the secondaries."
+    },
+    {
+      "question": "What is sharding in MongoDB?",
+      "options": [
+        "`totalKeysExamined` is the number of index entries scanned. `totalDocsExamined` is the number of documents scanned. An efficient query will have these numbers very close to the number of documents returned.",
+        "A shard key is a field that MongoDB uses to distribute a collection's documents across shards. Choosing a good shard key is crucial for performance, as it ensures an even distribution of data and workload across the cluster.",
+        "You would use a query that checks for both conditions: `db.collection.find({ myField: { $exists: true, $eq: null } })`.",
+        "`$push` will add an item to an array regardless of whether it already exists. `$addToSet` will only add the item to the array if it does not already exist, ensuring all items in the array are unique."
+      ],
+      "answer": "A shard key is a field that MongoDB uses to distribute a collection's documents across shards. Choosing a good shard key is crucial for performance, as it ensures an even distribution of data and workload across the cluster."
+    },
+    {
+      "question": "What does the `$in` operator do?",
+      "options": [
+        "`$in` is used to match multiple values for a *single* field. `$or` is more general and is used to specify a disjunction of query clauses, which can be on *different* fields.",
+        "One of its most useful features is the visual `explain` plan, which helps developers understand how their queries are being executed and identify performance bottlenecks. It also has a built-in schema visualization tool.",
+        "You use the `$all` operator. For example: `db.collection.find({ tags: { $all: ['red', 'blue'] } })` will find documents where the `tags` array contains both 'red' and 'blue'.",
+        "By default, no. MongoDB collections have a **dynamic schema**, meaning documents within the same collection do not need to have the same fields. However, you can enforce a schema using MongoDB's schema validation features or at the application level with an ODM like Mongoose."
+      ],
+      "answer": "`$in` is used to match multiple values for a *single* field. `$or` is more general and is used to specify a disjunction of query clauses, which can be on *different* fields."
+    },
+    {
+      "question": "What is the `_id` field?",
+      "options": [
+        "It's used to treat each element of an array as an individual document so that you can group and perform aggregations based on the values within the array. For example, to calculate the average score for each tag in a `tags` array.",
+        "An `ObjectId` is a 12-byte value that is highly likely to be unique. It's composed of a 4-byte timestamp, a 5-byte random value, and a 3-byte incrementing counter.",
+        "If you pass an update object without any operators (like `$set`), MongoDB will perform a full replacement of the document, deleting all existing fields and replacing them with the fields in the new object (except for the `_id`).",
+        "One of its most useful features is the visual `explain` plan, which helps developers understand how their queries are being executed and identify performance bottlenecks. It also has a built-in schema visualization tool."
+      ],
+      "answer": "An `ObjectId` is a 12-byte value that is highly likely to be unique. It's composed of a 4-byte timestamp, a 5-byte random value, and a 3-byte incrementing counter."
+    },
+    {
+      "question": "Does MongoDB support ACID transactions?",
+      "options": [
+        "It's necessary to ensure that a single subdocument meets all criteria. A simple query like `find({ results: { $gte: 80, $lt: 85 } })` could match a document where one result is 90 and another is 70. `find({ results: { $elemMatch: { $gte: 80, $lt: 85 } } })` ensures a single result element satisfies both conditions.",
+        "To use transactions, you must be using a MongoDB replica set or a sharded cluster. Transactions are not supported on standalone server deployments.",
+        "You should **embed** data when the relationship is 'contains' (e.g., comments within a blog post) and you need fast read performance. You should **reference** data when the relationship is 'uses' (e.g., an author of many books) to avoid data duplication and manage large datasets.",
+        "You would use a query that checks for both conditions: `db.collection.find({ myField: { $exists: true, $eq: null } })`."
+      ],
+      "answer": "To use transactions, you must be using a MongoDB replica set or a sharded cluster. Transactions are not supported on standalone server deployments."
+    },
+    {
+      "question": "What is a unique index?",
+      "options": [
+        "A **compound index** is an index on multiple fields. The order of fields is very important because the query must include the prefix fields of the index to be efficient. An index on `{ userid: 1, score: -1 }` cannot efficiently support a query that only filters on `score`.",
+        "The insert operation will fail and MongoDB will return a duplicate key error (E11000).",
+        "The main advantages are: 1. **Flexible Schema:** You can have documents with different fields in the same collection. 2. **Scalability:** It's designed for horizontal scaling (sharding). 3. **Performance:** It's generally faster for large amounts of unstructured data and for read/write operations.",
+        "`$match` filters the documents to pass only the documents that match the specified condition(s). `$group` groups documents by some specified expression and applies an accumulator expression to each group. `$lookup` performs a left outer join to another collection."
+      ],
+      "answer": "The insert operation will fail and MongoDB will return a duplicate key error (E11000)."
+    },
+    {
+      "question": "How can you analyze the performance of a query in MongoDB?",
+      "options": [
+        "A cursor fetches documents from the database in batches. This prevents the need to load the entire result set into the application's memory at once, which is crucial for queries that return a very large number of documents.",
+        "You would use a query that checks for both conditions: `db.collection.find({ myField: { $exists: true, $eq: null } })`.",
+        "An `ObjectId` is a 12-byte value that is highly likely to be unique. It's composed of a 4-byte timestamp, a 5-byte random value, and a 3-byte incrementing counter.",
+        "`totalKeysExamined` is the number of index entries scanned. `totalDocsExamined` is the number of documents scanned. An efficient query will have these numbers very close to the number of documents returned."
+      ],
+      "answer": "`totalKeysExamined` is the number of index entries scanned. `totalDocsExamined` is the number of documents scanned. An efficient query will have these numbers very close to the number of documents returned."
+    },
+    {
+      "question": "How do you delete documents from a collection?",
+      "options": [
+        "Using `$inc` is better because it's an atomic operation. This prevents race conditions where two separate processes might read the same value and overwrite each other's updates, leading to incorrect data.",
+        "No, a collection can have at most one text index. The index can cover multiple fields, but you cannot create multiple text indexes on the same collection.",
+        "Calling `deleteMany({})` with an empty filter object will delete all documents in the collection. This is a destructive operation and should be used with extreme caution.",
+        "The insert operation will fail and MongoDB will return a duplicate key error (E11000)."
+      ],
+      "answer": "Calling `deleteMany({})` with an empty filter object will delete all documents in the collection. This is a destructive operation and should be used with extreme caution."
+    },
+    {
+      "question": "What is the `$set` update operator used for?",
+      "options": [
+        "A **compound index** is an index on multiple fields. The order of fields is very important because the query must include the prefix fields of the index to be efficient. An index on `{ userid: 1, score: -1 }` cannot efficiently support a query that only filters on `score`.",
+        "A common use case is for storing high-volume log data. Because the collection has a fixed size, you don't have to worry about it growing indefinitely, and old log entries are automatically purged.",
+        "You should **embed** data when the relationship is 'contains' (e.g., comments within a blog post) and you need fast read performance. You should **reference** data when the relationship is 'uses' (e.g., an author of many books) to avoid data duplication and manage large datasets.",
+        "If you pass an update object without any operators (like `$set`), MongoDB will perform a full replacement of the document, deleting all existing fields and replacing them with the fields in the new object (except for the `_id`)."
+      ],
+      "answer": "If you pass an update object without any operators (like `$set`), MongoDB will perform a full replacement of the document, deleting all existing fields and replacing them with the fields in the new object (except for the `_id`)."
+    },
+    {
+      "question": "What is a capped collection?",
+      "options": [
+        "The main advantages are: 1. **Flexible Schema:** You can have documents with different fields in the same collection. 2. **Scalability:** It's designed for horizontal scaling (sharding). 3. **Performance:** It's generally faster for large amounts of unstructured data and for read/write operations.",
+        "Calling `deleteMany({})` with an empty filter object will delete all documents in the collection. This is a destructive operation and should be used with extreme caution.",
+        "The **primary** node receives all write operations. The **secondary** nodes replicate the primary's data. If the primary becomes unavailable, the replica set holds an election to choose a new primary from the secondaries.",
+        "A common use case is for storing high-volume log data. Because the collection has a fixed size, you don't have to worry about it growing indefinitely, and old log entries are automatically purged."
+      ],
+      "answer": "A common use case is for storing high-volume log data. Because the collection has a fixed size, you don't have to worry about it growing indefinitely, and old log entries are automatically purged."
+    },
+    {
+      "question": "How do you perform a text search in MongoDB?",
+      "options": [
+        "One of its most useful features is the visual `explain` plan, which helps developers understand how their queries are being executed and identify performance bottlenecks. It also has a built-in schema visualization tool.",
+        "`$push` will add an item to an array regardless of whether it already exists. `$addToSet` will only add the item to the array if it does not already exist, ensuring all items in the array are unique.",
+        "No, a collection can have at most one text index. The index can cover multiple fields, but you cannot create multiple text indexes on the same collection.",
+        "A **compound index** is an index on multiple fields. The order of fields is very important because the query must include the prefix fields of the index to be efficient. An index on `{ userid: 1, score: -1 }` cannot efficiently support a query that only filters on `score`."
+      ],
+      "answer": "No, a collection can have at most one text index. The index can cover multiple fields, but you cannot create multiple text indexes on the same collection."
+    },
+    {
+      "question": "What does the `$exists` operator do?",
+      "options": [
+        "A **compound index** is an index on multiple fields. The order of fields is very important because the query must include the prefix fields of the index to be efficient. An index on `{ userid: 1, score: -1 }` cannot efficiently support a query that only filters on `score`.",
+        "One of its most useful features is the visual `explain` plan, which helps developers understand how their queries are being executed and identify performance bottlenecks. It also has a built-in schema visualization tool.",
+        "The insert operation will fail and MongoDB will return a duplicate key error (E11000).",
+        "You would use a query that checks for both conditions: `db.collection.find({ myField: { $exists: true, $eq: null } })`."
+      ],
+      "answer": "You would use a query that checks for both conditions: `db.collection.find({ myField: { $exists: true, $eq: null } })`."
+    },
+    {
+      "question": "How do you model a one-to-many relationship?",
+      "options": [
+        "An 'upsert' is an operation that will either update a document if it exists or insert a new document if it does not exist. You can perform an upsert by setting the `upsert: true` option in an update operation.",
+        "Calling `deleteMany({})` with an empty filter object will delete all documents in the collection. This is a destructive operation and should be used with extreme caution.",
+        "For a 'one-to-bazillion' relationship, you should always use referencing. Embedding would create a massive, unbounded document for the 'one' side, which is a major anti-pattern and would hit MongoDB's 16MB document size limit.",
+        "`totalKeysExamined` is the number of index entries scanned. `totalDocsExamined` is the number of documents scanned. An efficient query will have these numbers very close to the number of documents returned."
+      ],
+      "answer": "For a 'one-to-bazillion' relationship, you should always use referencing. Embedding would create a massive, unbounded document for the 'one' side, which is a major anti-pattern and would hit MongoDB's 16MB document size limit."
+    },
+    {
+      "question": "What is the `$unwind` stage in an aggregation pipeline?",
+      "options": [
+        "You should **embed** data when the relationship is 'contains' (e.g., comments within a blog post) and you need fast read performance. You should **reference** data when the relationship is 'uses' (e.g., an author of many books) to avoid data duplication and manage large datasets.",
+        "It's used to treat each element of an array as an individual document so that you can group and perform aggregations based on the values within the array. For example, to calculate the average score for each tag in a `tags` array.",
+        "A **compound index** is an index on multiple fields. The order of fields is very important because the query must include the prefix fields of the index to be efficient. An index on `{ userid: 1, score: -1 }` cannot efficiently support a query that only filters on `score`.",
+        "One of its most useful features is the visual `explain` plan, which helps developers understand how their queries are being executed and identify performance bottlenecks. It also has a built-in schema visualization tool."
+      ],
+      "answer": "It's used to treat each element of an array as an individual document so that you can group and perform aggregations based on the values within the array. For example, to calculate the average score for each tag in a `tags` array."
+    },
+    {
+      "question": "How do you query for a value inside an array?",
+      "options": [
+        "A common use case is for storing high-volume log data. Because the collection has a fixed size, you don't have to worry about it growing indefinitely, and old log entries are automatically purged.",
+        "If you pass an update object without any operators (like `$set`), MongoDB will perform a full replacement of the document, deleting all existing fields and replacing them with the fields in the new object (except for the `_id`).",
+        "The main advantages are: 1. **Flexible Schema:** You can have documents with different fields in the same collection. 2. **Scalability:** It's designed for horizontal scaling (sharding). 3. **Performance:** It's generally faster for large amounts of unstructured data and for read/write operations.",
+        "You use the `$all` operator. For example: `db.collection.find({ tags: { $all: ['red', 'blue'] } })` will find documents where the `tags` array contains both 'red' and 'blue'."
+      ],
+      "answer": "You use the `$all` operator. For example: `db.collection.find({ tags: { $all: ['red', 'blue'] } })` will find documents where the `tags` array contains both 'red' and 'blue'."
+    },
+    {
+      "question": "What does the `$elemMatch` operator do?",
+      "options": [
+        "It's necessary to ensure that a single subdocument meets all criteria. A simple query like `find({ results: { $gte: 80, $lt: 85 } })` could match a document where one result is 90 and another is 70. `find({ results: { $elemMatch: { $gte: 80, $lt: 85 } } })` ensures a single result element satisfies both conditions.",
+        "It's used to treat each element of an array as an individual document so that you can group and perform aggregations based on the values within the array. For example, to calculate the average score for each tag in a `tags` array.",
+        "No, a collection can have at most one text index. The index can cover multiple fields, but you cannot create multiple text indexes on the same collection.",
+        "`$match` filters the documents to pass only the documents that match the specified condition(s). `$group` groups documents by some specified expression and applies an accumulator expression to each group. `$lookup` performs a left outer join to another collection."
+      ],
+      "answer": "It's necessary to ensure that a single subdocument meets all criteria. A simple query like `find({ results: { $gte: 80, $lt: 85 } })` could match a document where one result is 90 and another is 70. `find({ results: { $elemMatch: { $gte: 80, $lt: 85 } } })` ensures a single result element satisfies both conditions."
+    },
+    {
+      "question": "What is MongoDB Compass?",
+      "options": [
+        "One of its most useful features is the visual `explain` plan, which helps developers understand how their queries are being executed and identify performance bottlenecks. It also has a built-in schema visualization tool.",
+        "It's necessary to ensure that a single subdocument meets all criteria. A simple query like `find({ results: { $gte: 80, $lt: 85 } })` could match a document where one result is 90 and another is 70. `find({ results: { $elemMatch: { $gte: 80, $lt: 85 } } })` ensures a single result element satisfies both conditions.",
+        "A shard key is a field that MongoDB uses to distribute a collection's documents across shards. Choosing a good shard key is crucial for performance, as it ensures an even distribution of data and workload across the cluster.",
+        "The **primary** node receives all write operations. The **secondary** nodes replicate the primary's data. If the primary becomes unavailable, the replica set holds an election to choose a new primary from the secondaries."
+      ],
+      "answer": "One of its most useful features is the visual `explain` plan, which helps developers understand how their queries are being executed and identify performance bottlenecks. It also has a built-in schema visualization tool."
+    },
+    {
+      "question": "What does the `$inc` update operator do?",
+      "options": [
+        "By default, no. MongoDB collections have a **dynamic schema**, meaning documents within the same collection do not need to have the same fields. However, you can enforce a schema using MongoDB's schema validation features or at the application level with an ODM like Mongoose.",
+        "Using `$inc` is better because it's an atomic operation. This prevents race conditions where two separate processes might read the same value and overwrite each other's updates, leading to incorrect data.",
+        "To use transactions, you must be using a MongoDB replica set or a sharded cluster. Transactions are not supported on standalone server deployments.",
+        "`$in` is used to match multiple values for a *single* field. `$or` is more general and is used to specify a disjunction of query clauses, which can be on *different* fields."
+      ],
+      "answer": "Using `$inc` is better because it's an atomic operation. This prevents race conditions where two separate processes might read the same value and overwrite each other's updates, leading to incorrect data."
+    },
+    {
+      "question": "What is role-based access control (RBAC)?",
+      "options": [
+        "A privilege is a combination of a specified resource (like a database or collection) and a permitted action (like `find` or `insert`). A role is essentially a collection of these privileges.",
+        "A shard key is a field that MongoDB uses to distribute a collection's documents across shards. Choosing a good shard key is crucial for performance, as it ensures an even distribution of data and workload across the cluster.",
+        "`$in` is used to match multiple values for a *single* field. `$or` is more general and is used to specify a disjunction of query clauses, which can be on *different* fields.",
+        "Calling `deleteMany({})` with an empty filter object will delete all documents in the collection. This is a destructive operation and should be used with extreme caution."
+      ],
+      "answer": "A privilege is a combination of a specified resource (like a database or collection) and a permitted action (like `find` or `insert`). A role is essentially a collection of these privileges."
+    },
+    {
+      "question": "What do the `$push` and `$pop` operators do?",
+      "options": [
+        "`$match` filters the documents to pass only the documents that match the specified condition(s). `$group` groups documents by some specified expression and applies an accumulator expression to each group. `$lookup` performs a left outer join to another collection.",
+        "`$push` will add an item to an array regardless of whether it already exists. `$addToSet` will only add the item to the array if it does not already exist, ensuring all items in the array are unique.",
+        "`totalKeysExamined` is the number of index entries scanned. `totalDocsExamined` is the number of documents scanned. An efficient query will have these numbers very close to the number of documents returned.",
+        "If you pass an update object without any operators (like `$set`), MongoDB will perform a full replacement of the document, deleting all existing fields and replacing them with the fields in the new object (except for the `_id`)."
+      ],
+      "answer": "`$push` will add an item to an array regardless of whether it already exists. `$addToSet` will only add the item to the array if it does not already exist, ensuring all items in the array are unique."
+    },
+    {
+      "question": "What does a cursor do in MongoDB?",
+      "options": [
+        "A common use case is for storing high-volume log data. Because the collection has a fixed size, you don't have to worry about it growing indefinitely, and old log entries are automatically purged.",
+        "A cursor fetches documents from the database in batches. This prevents the need to load the entire result set into the application's memory at once, which is crucial for queries that return a very large number of documents.",
+        "1. All fields in the query filter must be part of an index. 2. All fields returned in the projection must also be in the same index. (Note: The `_id` field is returned by default and must also be in the index or explicitly excluded).",
+        "Using `$inc` is better because it's an atomic operation. This prevents race conditions where two separate processes might read the same value and overwrite each other's updates, leading to incorrect data."
+      ],
+      "answer": "A cursor fetches documents from the database in batches. This prevents the need to load the entire result set into the application's memory at once, which is crucial for queries that return a very large number of documents."
+    },
+    {
+      "question": "What is a covered query?",
+      "options": [
+        "1. All fields in the query filter must be part of an index. 2. All fields returned in the projection must also be in the same index. (Note: The `_id` field is returned by default and must also be in the index or explicitly excluded).",
+        "You should **embed** data when the relationship is 'contains' (e.g., comments within a blog post) and you need fast read performance. You should **reference** data when the relationship is 'uses' (e.g., an author of many books) to avoid data duplication and manage large datasets.",
+        "A projection is an optional second argument to the `find()` method that specifies which fields to include or exclude from the returned documents. For example, `db.users.find({}, { name: 1, email: 1, _id: 0 })`.",
+        "The main advantages are: 1. **Flexible Schema:** You can have documents with different fields in the same collection. 2. **Scalability:** It's designed for horizontal scaling (sharding). 3. **Performance:** It's generally faster for large amounts of unstructured data and for read/write operations."
+      ],
+      "answer": "1. All fields in the query filter must be part of an index. 2. All fields returned in the projection must also be in the same index. (Note: The `_id` field is returned by default and must also be in the index or explicitly excluded)."
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "questions": [
+    {
+      "question": "What is Git?",
+      "options": [
+        "No, it doesn't move the commit. It creates a **new commit** on the target branch that has the same content and commit message as the original commit. The new commit will have a new commit hash.",
+        "You would use the command `git remote set-url origin <new-url>`.",
+        "Yes, absolutely. Git is a completely independent tool that you can use entirely on your local machine. Services like GitHub make collaborating with others and managing remote backups significantly easier, but they are not required to use Git.",
+        "In a centralized VCS (like SVN), there is a single central server that contains all the versioned files. In a distributed VCS (like Git), every developer has a full copy of the entire repository history on their local machine, allowing for offline work and better performance."
+      ],
+      "answer": "In a centralized VCS (like SVN), there is a single central server that contains all the versioned files. In a distributed VCS (like Git), every developer has a full copy of the entire repository history on their local machine, allowing for offline work and better performance."
+    },
+    {
+      "question": "What is the difference between Git and GitHub?",
+      "options": [
+        "You should first **fork** the repository. This creates a copy under your control. You can then **clone** your fork, make changes, push to your fork, and finally open a Pull Request back to the original repository.",
+        "Yes, absolutely. Git is a completely independent tool that you can use entirely on your local machine. Services like GitHub make collaborating with others and managing remote backups significantly easier, but they are not required to use Git.",
+        "Every object in Git is identified by a unique 40-character SHA-1 hash of its content. This is what makes Git's history immutable; changing the content of any object would change its hash, and consequently the hash of every subsequent commit.",
+        "Yes, you can configure multiple remotes. A common use case is having your own fork as `origin` and the original upstream repository as `upstream`, which allows you to easily pull updates from the original project."
+      ],
+      "answer": "Yes, absolutely. Git is a completely independent tool that you can use entirely on your local machine. Services like GitHub make collaborating with others and managing remote backups significantly easier, but they are not required to use Git."
+    },
+    {
+      "question": "Explain the three main areas of a Git project.",
+      "options": [
+        "Working in separate branches isolates new work from the stable codebase. This allows for parallel development, easier code reviews via Pull Requests, and ensures that the `main` branch always contains production-ready code.",
+        "You can use flags to format the output. A very useful alias is `git log --graph --oneline --decorate --all`.",
+        "The Staging Area allows you to be selective about what you include in your next commit. It lets you craft specific, atomic commits by adding only related changes, even if you have many unrelated changes in your working directory.",
+        "In a centralized VCS (like SVN), there is a single central server that contains all the versioned files. In a distributed VCS (like Git), every developer has a full copy of the entire repository history on their local machine, allowing for offline work and better performance."
+      ],
+      "answer": "The Staging Area allows you to be selective about what you include in your next commit. It lets you craft specific, atomic commits by adding only related changes, even if you have many unrelated changes in your working directory."
+    },
+    {
+      "question": "What is a branch in Git?",
+      "options": [
+        "You can use flags to format the output. A very useful alias is `git log --graph --oneline --decorate --all`.",
+        "It's an incredibly useful safety net for recovering 'lost' commits. If you accidentally delete a branch or perform a destructive `git reset`, you can use `git reflog` to find the hash of the commit you were on before the mistake and restore it.",
+        "A common scenario is when you are in the middle of a feature and an urgent bug fix is required on the `main` branch. You can `git stash` your unfinished work, switch to `main`, fix the bug, and then return to your feature branch and use `git stash pop` to reapply your changes.",
+        "Working in separate branches isolates new work from the stable codebase. This allows for parallel development, easier code reviews via Pull Requests, and ensures that the `main` branch always contains production-ready code."
+      ],
+      "answer": "Working in separate branches isolates new work from the stable codebase. This allows for parallel development, easier code reviews via Pull Requests, and ensures that the `main` branch always contains production-ready code."
+    },
+    {
+      "question": "What is a merge conflict?",
+      "options": [
+        "Workflows are defined in YAML files located in the `.github/workflows` directory of your repository. These files specify the events that trigger the workflow (e.g., a push to the main branch) and the jobs and steps to be executed.",
+        "A **lightweight tag** is just a pointer to a commit. An **annotated tag** is a full object in the Git database that can contain a message, author, and date, and can be signed for security. Annotated tags are recommended for official releases.",
+        "Yes, absolutely. Git is a completely independent tool that you can use entirely on your local machine. Services like GitHub make collaborating with others and managing remote backups significantly easier, but they are not required to use Git.",
+        "To resolve a conflict, you must manually edit the conflicted file to choose which changes to keep. After editing, you use `git add` to mark the conflict as resolved, and then you complete the merge with `git commit`."
+      ],
+      "answer": "To resolve a conflict, you must manually edit the conflicted file to choose which changes to keep. After editing, you use `git add` to mark the conflict as resolved, and then you complete the merge with `git commit`."
+    },
+    {
+      "question": "What is the fundamental difference between `git merge` and `git rebase`?",
+      "options": [
+        "You would use the command `git remote set-url origin <new-url>`.",
+        "The golden rule is: **never rebase a public, shared branch** (like `main` or `develop`). Rebasing rewrites commit history, which can cause major problems for collaborators who have based their work on the original history.",
+        "A common scenario is when you are in the middle of a feature and an urgent bug fix is required on the `main` branch. You can `git stash` your unfinished work, switch to `main`, fix the bug, and then return to your feature branch and use `git stash pop` to reapply your changes.",
+        "Workflows are defined in YAML files located in the `.github/workflows` directory of your repository. These files specify the events that trigger the workflow (e.g., a push to the main branch) and the jobs and steps to be executed."
+      ],
+      "answer": "The golden rule is: **never rebase a public, shared branch** (like `main` or `develop`). Rebasing rewrites commit history, which can cause major problems for collaborators who have based their work on the original history."
+    },
+    {
+      "question": "What is the difference between `git reset` and `git revert`?",
+      "options": [
+        "The modern equivalent is `git switch -c <branch-name>`. The `git switch` and `git restore` commands were introduced to separate the overloaded responsibilities of `git checkout`.",
+        "`git revert` is the safer option. `git reset` rewrites the commit history, which is a destructive action on a shared branch. `git revert` is non-destructive; it appends a new commit that undoes changes, making it the correct choice for public branches.",
+        "It's an incredibly useful safety net for recovering 'lost' commits. If you accidentally delete a branch or perform a destructive `git reset`, you can use `git reflog` to find the hash of the commit you were on before the mistake and restore it.",
+        "Workflows are defined in YAML files located in the `.github/workflows` directory of your repository. These files specify the events that trigger the workflow (e.g., a push to the main branch) and the jobs and steps to be executed."
+      ],
+      "answer": "`git revert` is the safer option. `git reset` rewrites the commit history, which is a destructive action on a shared branch. `git revert` is non-destructive; it appends a new commit that undoes changes, making it the correct choice for public branches."
+    },
+    {
+      "question": "What is the difference between `git fetch` and `git pull`?",
+      "options": [
+        "You should first **fork** the repository. This creates a copy under your control. You can then **clone** your fork, make changes, push to your fork, and finally open a Pull Request back to the original repository.",
+        "You should use `git fetch` when you want to see what changes others have made on the remote before you merge those changes into your local branch. It gives you a chance to review the updates first.",
+        "A **lightweight tag** is just a pointer to a commit. An **annotated tag** is a full object in the Git database that can contain a message, author, and date, and can be signed for security. Annotated tags are recommended for official releases.",
+        "A detached HEAD state occurs when you check out a specific commit hash directly, instead of a branch. In this state, any new commits you make will not belong to any branch, and they can be lost if you switch to another branch."
+      ],
+      "answer": "You should use `git fetch` when you want to see what changes others have made on the remote before you merge those changes into your local branch. It gives you a chance to review the updates first."
+    },
+    {
+      "question": "What is a Pull Request (PR)?",
+      "options": [
+        "Every object in Git is identified by a unique 40-character SHA-1 hash of its content. This is what makes Git's history immutable; changing the content of any object would change its hash, and consequently the hash of every subsequent commit.",
+        "The modern equivalent is `git switch -c <branch-name>`. The `git switch` and `git restore` commands were introduced to separate the overloaded responsibilities of `git checkout`.",
+        "The typical workflow is: 1. Create a new feature branch. 2. Make your commits. 3. Push the branch to the remote. 4. Open a Pull Request on GitHub. 5. Team members review the code and discuss changes. 6. Once approved, the PR is merged into the main branch.",
+        "Working in separate branches isolates new work from the stable codebase. This allows for parallel development, easier code reviews via Pull Requests, and ensures that the `main` branch always contains production-ready code."
+      ],
+      "answer": "The typical workflow is: 1. Create a new feature branch. 2. Make your commits. 3. Push the branch to the remote. 4. Open a Pull Request on GitHub. 5. Team members review the code and discuss changes. 6. Once approved, the PR is merged into the main branch."
+    },
+    {
+      "question": "What does `git stash` do?",
+      "options": [
+        "No, it doesn't move the commit. It creates a **new commit** on the target branch that has the same content and commit message as the original commit. The new commit will have a new commit hash.",
+        "In a centralized VCS (like SVN), there is a single central server that contains all the versioned files. In a distributed VCS (like Git), every developer has a full copy of the entire repository history on their local machine, allowing for offline work and better performance.",
+        "It's particularly useful for debugging and understanding context. When you find a confusing or buggy line of code, `git blame` can help you identify who wrote it and which commit it was part of, so you can investigate the original intent.",
+        "A common scenario is when you are in the middle of a feature and an urgent bug fix is required on the `main` branch. You can `git stash` your unfinished work, switch to `main`, fix the bug, and then return to your feature branch and use `git stash pop` to reapply your changes."
+      ],
+      "answer": "A common scenario is when you are in the middle of a feature and an urgent bug fix is required on the `main` branch. You can `git stash` your unfinished work, switch to `main`, fix the bug, and then return to your feature branch and use `git stash pop` to reapply your changes."
+    },
+    {
+      "question": "What is a 'commit'?",
+      "options": [
+        "No, it doesn't move the commit. It creates a **new commit** on the target branch that has the same content and commit message as the original commit. The new commit will have a new commit hash.",
+        "The modern equivalent is `git switch -c <branch-name>`. The `git switch` and `git restore` commands were introduced to separate the overloaded responsibilities of `git checkout`.",
+        "Every object in Git is identified by a unique 40-character SHA-1 hash of its content. This is what makes Git's history immutable; changing the content of any object would change its hash, and consequently the hash of every subsequent commit.",
+        "Good commit messages are crucial for understanding the history of a project. They help other developers (and your future self) understand *why* a change was made, which is essential for debugging and maintenance."
+      ],
+      "answer": "Good commit messages are crucial for understanding the history of a project. They help other developers (and your future self) understand *why* a change was made, which is essential for debugging and maintenance."
+    },
+    {
+      "question": "What is `git log`?",
+      "options": [
+        "You start by telling it a 'good' commit (where the bug didn't exist) and a 'bad' commit (where it does). Git then checks out a commit in the middle and asks you if it's good or bad. By repeating this process, it quickly narrows down the range until it finds the exact commit that introduced the regression.",
+        "To resolve a conflict, you must manually edit the conflicted file to choose which changes to keep. After editing, you use `git add` to mark the conflict as resolved, and then you complete the merge with `git commit`.",
+        "You can link a PR to an issue by including a keyword like `closes`, `fixes`, or `resolves` followed by the issue number in the PR description (e.g., `Closes #42`). When the PR is merged, GitHub will automatically close the linked issue.",
+        "You can use flags to format the output. A very useful alias is `git log --graph --oneline --decorate --all`."
+      ],
+      "answer": "You can use flags to format the output. A very useful alias is `git log --graph --oneline --decorate --all`."
+    },
+    {
+      "question": "What is the difference between cloning and forking a repository?",
+      "options": [
+        "You should first **fork** the repository. This creates a copy under your control. You can then **clone** your fork, make changes, push to your fork, and finally open a Pull Request back to the original repository.",
+        "You can use the interactive patching mode with the command `git add -p`. This will show you each chunk of changes in the file and ask you one by one if you want to stage it.",
+        "Working in separate branches isolates new work from the stable codebase. This allows for parallel development, easier code reviews via Pull Requests, and ensures that the `main` branch always contains production-ready code.",
+        "In a centralized VCS (like SVN), there is a single central server that contains all the versioned files. In a distributed VCS (like Git), every developer has a full copy of the entire repository history on their local machine, allowing for offline work and better performance."
+      ],
+      "answer": "You should first **fork** the repository. This creates a copy under your control. You can then **clone** your fork, make changes, push to your fork, and finally open a Pull Request back to the original repository."
+    },
+    {
+      "question": "What is `git cherry-pick`?",
+      "options": [
+        "You can configure it to deploy from the `main` or `master` branch (often from a `/docs` folder within it) or from a dedicated branch, which is commonly named `gh-pages`.",
+        "An untracked file is a file in your working directory that Git has not seen before and is not in its tracking database. It will not be included in commits until you explicitly add it with `git add`.",
+        "No, it doesn't move the commit. It creates a **new commit** on the target branch that has the same content and commit message as the original commit. The new commit will have a new commit hash.",
+        "Working in separate branches isolates new work from the stable codebase. This allows for parallel development, easier code reviews via Pull Requests, and ensures that the `main` branch always contains production-ready code."
+      ],
+      "answer": "No, it doesn't move the commit. It creates a **new commit** on the target branch that has the same content and commit message as the original commit. The new commit will have a new commit hash."
+    },
+    {
+      "question": "What is the `.gitignore` file?",
+      "options": [
+        "A common use case is to clean up your commit history before creating a Pull Request. You can squash multiple small, work-in-progress commits (like 'fix typo', 'wip') into a single, meaningful commit that represents the entire feature.",
+        "In a centralized VCS (like SVN), there is a single central server that contains all the versioned files. In a distributed VCS (like Git), every developer has a full copy of the entire repository history on their local machine, allowing for offline work and better performance.",
+        "A detached HEAD state occurs when you check out a specific commit hash directly, instead of a branch. In this state, any new commits you make will not belong to any branch, and they can be lost if you switch to another branch.",
+        "Common entries include dependency folders (like `node_modules`), compiled code (like `dist` or `build` folders), environment variable files (`.env`), and OS-specific files (like `.DS_Store`)."
+      ],
+      "answer": "Common entries include dependency folders (like `node_modules`), compiled code (like `dist` or `build` folders), environment variable files (`.env`), and OS-specific files (like `.DS_Store`)."
+    },
+    {
+      "question": "What is `git reflog` and when is it useful?",
+      "options": [
+        "It's an incredibly useful safety net for recovering 'lost' commits. If you accidentally delete a branch or perform a destructive `git reset`, you can use `git reflog` to find the hash of the commit you were on before the mistake and restore it.",
+        "You start by telling it a 'good' commit (where the bug didn't exist) and a 'bad' commit (where it does). Git then checks out a commit in the middle and asks you if it's good or bad. By repeating this process, it quickly narrows down the range until it finds the exact commit that introduced the regression.",
+        "A detached HEAD state occurs when you check out a specific commit hash directly, instead of a branch. In this state, any new commits you make will not belong to any branch, and they can be lost if you switch to another branch.",
+        "No, it doesn't move the commit. It creates a **new commit** on the target branch that has the same content and commit message as the original commit. The new commit will have a new commit hash."
+      ],
+      "answer": "It's an incredibly useful safety net for recovering 'lost' commits. If you accidentally delete a branch or perform a destructive `git reset`, you can use `git reflog` to find the hash of the commit you were on before the mistake and restore it."
+    },
+    {
+      "question": "What are GitHub Actions?",
+      "options": [
+        "Workflows are defined in YAML files located in the `.github/workflows` directory of your repository. These files specify the events that trigger the workflow (e.g., a push to the main branch) and the jobs and steps to be executed.",
+        "A detached HEAD state occurs when you check out a specific commit hash directly, instead of a branch. In this state, any new commits you make will not belong to any branch, and they can be lost if you switch to another branch.",
+        "An untracked file is a file in your working directory that Git has not seen before and is not in its tracking database. It will not be included in commits until you explicitly add it with `git add`.",
+        "Common entries include dependency folders (like `node_modules`), compiled code (like `dist` or `build` folders), environment variable files (`.env`), and OS-specific files (like `.DS_Store`)."
+      ],
+      "answer": "Workflows are defined in YAML files located in the `.github/workflows` directory of your repository. These files specify the events that trigger the workflow (e.g., a push to the main branch) and the jobs and steps to be executed."
+    },
+    {
+      "question": "What is a 'remote' in Git?",
+      "options": [
+        "Working in separate branches isolates new work from the stable codebase. This allows for parallel development, easier code reviews via Pull Requests, and ensures that the `main` branch always contains production-ready code.",
+        "A common use case is to clean up your commit history before creating a Pull Request. You can squash multiple small, work-in-progress commits (like 'fix typo', 'wip') into a single, meaningful commit that represents the entire feature.",
+        "Yes, you can configure multiple remotes. A common use case is having your own fork as `origin` and the original upstream repository as `upstream`, which allows you to easily pull updates from the original project.",
+        "You should use `git fetch` when you want to see what changes others have made on the remote before you merge those changes into your local branch. It gives you a chance to review the updates first."
+      ],
+      "answer": "Yes, you can configure multiple remotes. A common use case is having your own fork as `origin` and the original upstream repository as `upstream`, which allows you to easily pull updates from the original project."
+    },
+    {
+      "question": "What are the three main types of objects in Git?",
+      "options": [
+        "To resolve a conflict, you must manually edit the conflicted file to choose which changes to keep. After editing, you use `git add` to mark the conflict as resolved, and then you complete the merge with `git commit`.",
+        "Yes, you can configure multiple remotes. A common use case is having your own fork as `origin` and the original upstream repository as `upstream`, which allows you to easily pull updates from the original project.",
+        "Every object in Git is identified by a unique 40-character SHA-1 hash of its content. This is what makes Git's history immutable; changing the content of any object would change its hash, and consequently the hash of every subsequent commit.",
+        "`git revert` is the safer option. `git reset` rewrites the commit history, which is a destructive action on a shared branch. `git revert` is non-destructive; it appends a new commit that undoes changes, making it the correct choice for public branches."
+      ],
+      "answer": "Every object in Git is identified by a unique 40-character SHA-1 hash of its content. This is what makes Git's history immutable; changing the content of any object would change its hash, and consequently the hash of every subsequent commit."
+    },
+    {
+      "question": "What does the `git remote -v` command do?",
+      "options": [
+        "A common use case is to clean up your commit history before creating a Pull Request. You can squash multiple small, work-in-progress commits (like 'fix typo', 'wip') into a single, meaningful commit that represents the entire feature.",
+        "You start by telling it a 'good' commit (where the bug didn't exist) and a 'bad' commit (where it does). Git then checks out a commit in the middle and asks you if it's good or bad. By repeating this process, it quickly narrows down the range until it finds the exact commit that introduced the regression.",
+        "You would use the command `git remote set-url origin <new-url>`.",
+        "You should use `git fetch` when you want to see what changes others have made on the remote before you merge those changes into your local branch. It gives you a chance to review the updates first."
+      ],
+      "answer": "You would use the command `git remote set-url origin <new-url>`."
+    },
+    {
+      "question": "What is an interactive rebase (`git rebase -i`)?",
+      "options": [
+        "You can use the interactive patching mode with the command `git add -p`. This will show you each chunk of changes in the file and ask you one by one if you want to stage it.",
+        "A detached HEAD state occurs when you check out a specific commit hash directly, instead of a branch. In this state, any new commits you make will not belong to any branch, and they can be lost if you switch to another branch.",
+        "In a centralized VCS (like SVN), there is a single central server that contains all the versioned files. In a distributed VCS (like Git), every developer has a full copy of the entire repository history on their local machine, allowing for offline work and better performance.",
+        "A common use case is to clean up your commit history before creating a Pull Request. You can squash multiple small, work-in-progress commits (like 'fix typo', 'wip') into a single, meaningful commit that represents the entire feature."
+      ],
+      "answer": "A common use case is to clean up your commit history before creating a Pull Request. You can squash multiple small, work-in-progress commits (like 'fix typo', 'wip') into a single, meaningful commit that represents the entire feature."
+    },
+    {
+      "question": "What is GitHub Pages?",
+      "options": [
+        "Yes, you can configure multiple remotes. A common use case is having your own fork as `origin` and the original upstream repository as `upstream`, which allows you to easily pull updates from the original project.",
+        "You can configure it to deploy from the `main` or `master` branch (often from a `/docs` folder within it) or from a dedicated branch, which is commonly named `gh-pages`.",
+        "In a centralized VCS (like SVN), there is a single central server that contains all the versioned files. In a distributed VCS (like Git), every developer has a full copy of the entire repository history on their local machine, allowing for offline work and better performance.",
+        "You should use `git fetch` when you want to see what changes others have made on the remote before you merge those changes into your local branch. It gives you a chance to review the updates first."
+      ],
+      "answer": "You can configure it to deploy from the `main` or `master` branch (often from a `/docs` folder within it) or from a dedicated branch, which is commonly named `gh-pages`."
+    },
+    {
+      "question": "What is `git status`?",
+      "options": [
+        "An untracked file is a file in your working directory that Git has not seen before and is not in its tracking database. It will not be included in commits until you explicitly add it with `git add`.",
+        "It's an incredibly useful safety net for recovering 'lost' commits. If you accidentally delete a branch or perform a destructive `git reset`, you can use `git reflog` to find the hash of the commit you were on before the mistake and restore it.",
+        "Good commit messages are crucial for understanding the history of a project. They help other developers (and your future self) understand *why* a change was made, which is essential for debugging and maintenance.",
+        "No, it doesn't move the commit. It creates a **new commit** on the target branch that has the same content and commit message as the original commit. The new commit will have a new commit hash."
+      ],
+      "answer": "An untracked file is a file in your working directory that Git has not seen before and is not in its tracking database. It will not be included in commits until you explicitly add it with `git add`."
+    },
+    {
+      "question": "What does `git checkout -b <branch-name>` do?",
+      "options": [
+        "The modern equivalent is `git switch -c <branch-name>`. The `git switch` and `git restore` commands were introduced to separate the overloaded responsibilities of `git checkout`.",
+        "You can use the interactive patching mode with the command `git add -p`. This will show you each chunk of changes in the file and ask you one by one if you want to stage it.",
+        "It's particularly useful for debugging and understanding context. When you find a confusing or buggy line of code, `git blame` can help you identify who wrote it and which commit it was part of, so you can investigate the original intent.",
+        "A **lightweight tag** is just a pointer to a commit. An **annotated tag** is a full object in the Git database that can contain a message, author, and date, and can be signed for security. Annotated tags are recommended for official releases."
+      ],
+      "answer": "The modern equivalent is `git switch -c <branch-name>`. The `git switch` and `git restore` commands were introduced to separate the overloaded responsibilities of `git checkout`."
+    },
+    {
+      "question": "What is `git bisect`?",
+      "options": [
+        "An untracked file is a file in your working directory that Git has not seen before and is not in its tracking database. It will not be included in commits until you explicitly add it with `git add`.",
+        "You start by telling it a 'good' commit (where the bug didn't exist) and a 'bad' commit (where it does). Git then checks out a commit in the middle and asks you if it's good or bad. By repeating this process, it quickly narrows down the range until it finds the exact commit that introduced the regression.",
+        "A common scenario is when you are in the middle of a feature and an urgent bug fix is required on the `main` branch. You can `git stash` your unfinished work, switch to `main`, fix the bug, and then return to your feature branch and use `git stash pop` to reapply your changes.",
+        "A **lightweight tag** is just a pointer to a commit. An **annotated tag** is a full object in the Git database that can contain a message, author, and date, and can be signed for security. Annotated tags are recommended for official releases."
+      ],
+      "answer": "You start by telling it a 'good' commit (where the bug didn't exist) and a 'bad' commit (where it does). Git then checks out a commit in the middle and asks you if it's good or bad. By repeating this process, it quickly narrows down the range until it finds the exact commit that introduced the regression."
+    },
+    {
+      "question": "What is the 'HEAD' in Git?",
+      "options": [
+        "`git revert` is the safer option. `git reset` rewrites the commit history, which is a destructive action on a shared branch. `git revert` is non-destructive; it appends a new commit that undoes changes, making it the correct choice for public branches.",
+        "You can link a PR to an issue by including a keyword like `closes`, `fixes`, or `resolves` followed by the issue number in the PR description (e.g., `Closes #42`). When the PR is merged, GitHub will automatically close the linked issue.",
+        "You start by telling it a 'good' commit (where the bug didn't exist) and a 'bad' commit (where it does). Git then checks out a commit in the middle and asks you if it's good or bad. By repeating this process, it quickly narrows down the range until it finds the exact commit that introduced the regression.",
+        "A detached HEAD state occurs when you check out a specific commit hash directly, instead of a branch. In this state, any new commits you make will not belong to any branch, and they can be lost if you switch to another branch."
+      ],
+      "answer": "A detached HEAD state occurs when you check out a specific commit hash directly, instead of a branch. In this state, any new commits you make will not belong to any branch, and they can be lost if you switch to another branch."
+    },
+    {
+      "question": "What is the `git add` command used for?",
+      "options": [
+        "You can configure it to deploy from the `main` or `master` branch (often from a `/docs` folder within it) or from a dedicated branch, which is commonly named `gh-pages`.",
+        "You should use `git fetch` when you want to see what changes others have made on the remote before you merge those changes into your local branch. It gives you a chance to review the updates first.",
+        "Every object in Git is identified by a unique 40-character SHA-1 hash of its content. This is what makes Git's history immutable; changing the content of any object would change its hash, and consequently the hash of every subsequent commit.",
+        "You can use the interactive patching mode with the command `git add -p`. This will show you each chunk of changes in the file and ask you one by one if you want to stage it."
+      ],
+      "answer": "You can use the interactive patching mode with the command `git add -p`. This will show you each chunk of changes in the file and ask you one by one if you want to stage it."
+    },
+    {
+      "question": "What is `git blame`?",
+      "options": [
+        "Common entries include dependency folders (like `node_modules`), compiled code (like `dist` or `build` folders), environment variable files (`.env`), and OS-specific files (like `.DS_Store`).",
+        "It's particularly useful for debugging and understanding context. When you find a confusing or buggy line of code, `git blame` can help you identify who wrote it and which commit it was part of, so you can investigate the original intent.",
+        "You can use the interactive patching mode with the command `git add -p`. This will show you each chunk of changes in the file and ask you one by one if you want to stage it.",
+        "You can link a PR to an issue by including a keyword like `closes`, `fixes`, or `resolves` followed by the issue number in the PR description (e.g., `Closes #42`). When the PR is merged, GitHub will automatically close the linked issue."
+      ],
+      "answer": "It's particularly useful for debugging and understanding context. When you find a confusing or buggy line of code, `git blame` can help you identify who wrote it and which commit it was part of, so you can investigate the original intent."
+    },
+    {
+      "question": "What are Git tags?",
+      "options": [
+        "No, it doesn't move the commit. It creates a **new commit** on the target branch that has the same content and commit message as the original commit. The new commit will have a new commit hash.",
+        "A **lightweight tag** is just a pointer to a commit. An **annotated tag** is a full object in the Git database that can contain a message, author, and date, and can be signed for security. Annotated tags are recommended for official releases.",
+        "A detached HEAD state occurs when you check out a specific commit hash directly, instead of a branch. In this state, any new commits you make will not belong to any branch, and they can be lost if you switch to another branch.",
+        "Yes, you can configure multiple remotes. A common use case is having your own fork as `origin` and the original upstream repository as `upstream`, which allows you to easily pull updates from the original project."
+      ],
+      "answer": "A **lightweight tag** is just a pointer to a commit. An **annotated tag** is a full object in the Git database that can contain a message, author, and date, and can be signed for security. Annotated tags are recommended for official releases."
+    },
+    {
+      "question": "What are GitHub Issues?",
+      "options": [
+        "No, it doesn't move the commit. It creates a **new commit** on the target branch that has the same content and commit message as the original commit. The new commit will have a new commit hash.",
+        "You can configure it to deploy from the `main` or `master` branch (often from a `/docs` folder within it) or from a dedicated branch, which is commonly named `gh-pages`.",
+        "You can link a PR to an issue by including a keyword like `closes`, `fixes`, or `resolves` followed by the issue number in the PR description (e.g., `Closes #42`). When the PR is merged, GitHub will automatically close the linked issue.",
+        "Yes, absolutely. Git is a completely independent tool that you can use entirely on your local machine. Services like GitHub make collaborating with others and managing remote backups significantly easier, but they are not required to use Git."
+      ],
+      "answer": "You can link a PR to an issue by including a keyword like `closes`, `fixes`, or `resolves` followed by the issue number in the PR description (e.g., `Closes #42`). When the PR is merged, GitHub will automatically close the linked issue."
+    }
+  ]
+}

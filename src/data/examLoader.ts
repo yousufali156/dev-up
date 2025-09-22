@@ -1,5 +1,34 @@
-// src/data/examLoader.ts
+// ========================= CONFIGURATION =========================
+// ❗️ ভবিষ্যতে নতুন টপিক যোগ করতে হলে শুধু নিচের এই অ্যারেতে একটি নতুন লাইন যোগ করুন।
+// =================================================================
 
+interface TopicConfig {
+  file: string; // JSON ফাইলের নাম।
+  topic: string; // টপিকের নাম যা UI-তে দেখানো হবে।
+}
+
+const examTopics: TopicConfig[] = [
+  { file: "javascript.json", topic: "JavaScript" },
+  { file: "react.json", topic: "React" },
+  { file: "nodejs.json", topic: "Node.js" },
+  { file: "expressjs.json", topic: "Express.js" },
+  { file: "mongodb.json", topic: "MongoDB" },
+  { file: "mongoose.json", topic: "Mongoose" },
+  { file: "nextjs.json", topic: "Next.js" },
+  { file: "typescript.json", topic: "TypeScript" },
+  { file: "html.json", topic: "HTML" },
+  { file: "css.json", topic: "CSS" },
+  { file: "git&github.json", topic: "Git & GitHub" },
+  { file: "devops&deployment.json", topic: "DevOps & Deployment" },
+  { file: "developmenttools&workflow.json", topic: "Dev Tools & Workflow" },
+  { file: "tailwindcss.json", topic: "TailwindCSS" },
+  { file: "interpersonal.json", topic: "Soft Skills" },
+  { file: "ai&contentcreation.json", topic: "AI & Content" },
+];
+
+// ======================= TYPE DEFINITIONS ========================
+
+// আমাদের অ্যাপ্লিকেশনের জন্য চূড়ান্ত Question টাইপ।
 export type Question = {
   id: string;
   question: string;
@@ -8,79 +37,63 @@ export type Question = {
   topic: string;
 };
 
-// Helper: নির্দিষ্ট JSON ফাইল থেকে সর্বোচ্চ ৫০টা প্রশ্ন আনা
-const fetchQuestionsFromFile = async (
-  file: string,
-  topic: string
-): Promise<Question[]> => {
-  const res = await fetch(`/data/${file}`);
-  const data = await res.json();
-
-  // ধরছি প্রতিটি JSON এ "questions" নামে অ্যারে আছে
-  return (data.questions || []).slice(0, 50).map((q: any, index: number) => ({
-    id: `${topic}-${index}`,
-    question: q.question,
-    options: q.options,
-    answer: q.answer,
-    topic,
-  }));
+// JSON ফাইলের ভেতরের ডেটার গঠন।
+type RawQuestion = {
+  question: string;
+  options: string[];
+  answer: string;
 };
 
-// সব JSON ফাইল থেকে প্রশ্ন লোড করার মেইন ফাংশন
-export const loadExamQuestions = async (): Promise<Question[]> => {
-  const files = [
-    { file: "javascript.json", topic: "JavaScript" },
-    { file: "react.json", topic: "React" },
-    { file: "nodejs.json", topic: "Node.js" },
-    { file: "expressjs.json", topic: "Express.js" },
-    { file: "mongodb.json", topic: "MongoDB" },
-    { file: "mongoose.json", topic: "Mongoose" },
-    { file: "nextjs.json", topic: "Next.js" },
-    { file: "typescript.json", topic: "TypeScript" },
-    { file: "html.json", topic: "HTML" },
-    { file: "css.json", topic: "CSS" },
-    { file: "git&github.json", topic: "Git & GitHub" },
-    { file: "devops&deployment.json", topic: "DevOps & Deployment" },
-    { file: "developmenttools&workflow.json", topic: "Dev Tools & Workflow" },
-    { file: "tailwindcss.json", topic: "TailwindCSS" },
-    { file: "interpersonal.json", topic: "Soft Skills" },
-    { file: "ai&contentcreation.json", topic: "AI & Content" },
-  ];
+// ======================= LOADER LOGIC ==========================
 
-  let allQuestions: Question[] = [];
+// একটি ফাইল থেকে প্রশ্ন আনা এবং ফরম্যাট করার জন্য হেল্পার ফাংশন।
+const fetchQuestionsFromFile = async ({ file, topic }: TopicConfig): Promise<Question[]> => {
+  try {
+    const response = await fetch(`/data_new/${file}`);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch ${file}: ${response.statusText}`);
+    }
+    const data: { questions?: RawQuestion[] } = await response.json();
 
-  for (const { file, topic } of files) {
-    const qs = await fetchQuestionsFromFile(file, topic);
-    allQuestions = [...allQuestions, ...qs];
+    // কাঁচা ডেটাকে আমাদের Question টাইপে ম্যাপ করা হচ্ছে।
+    return (data.questions || []).slice(0, 50).map((q, index) => ({
+      id: `${topic}-${index}`,
+      question: q.question,
+      options: q.options,
+      answer: q.answer,
+      topic,
+    }));
+  } catch (error) {
+    console.warn(`Could not load questions from ${file}.`, error);
+    return []; // কোনো ফাইল লোড হতে ব্যর্থ হলে খালি অ্যারে রিটার্ন করা হবে।
   }
+};
 
-  // 🔹 কিছু extra general প্রশ্ন অ্যাড করছি
-  const extra: Question[] = [
+// পরীক্ষার জন্য সব প্রশ্ন লোড করার মূল ফাংশন।
+export const loadExamQuestions = async (): Promise<Question[]> => {
+  // উপরের কনফিগারেশন তালিকা অনুযায়ী সব ফাইল থেকে প্রশ্ন আনা হচ্ছে।
+  const promises = examTopics.map(fetchQuestionsFromFile);
+  const results = await Promise.all(promises);
+  const allQuestions = results.flat();
+
+  // কিছু অতিরিক্ত সাধারণ প্রশ্ন যোগ করা হচ্ছে।
+  const extraGeneralQuestions: Question[] = [
     {
       id: "general-1",
-      question: "What is debugging and why is it important?",
-      options: [
-        "Fixing errors",
-        "Writing tests",
-        "Deploying apps",
-        "Adding features",
-      ],
+      question: "What is debugging and why is it important in software development?",
+      options: ["Fixing errors", "Writing tests", "Deploying apps", "Adding features"],
       answer: "Fixing errors",
       topic: "General",
     },
     {
       id: "general-2",
-      question: "Which one is a best practice for clean code?",
-      options: [
-        "Meaningful variable names",
-        "Global variables everywhere",
-        "Long functions",
-        "Ignoring comments",
-      ],
+      question: "Which of the following is a key principle of 'clean code'?",
+      options: ["Meaningful variable names", "Using global variables", "Creating very long functions", "Avoiding comments"],
       answer: "Meaningful variable names",
       topic: "General",
     },
   ];
 
-  return [...allQuestions, ...extra];
+  // সব প্রশ্নের একত্রিত তালিকা রিটার্ন করা হচ্ছে।
+  return [...allQuestions, ...extraGeneralQuestions];
 };

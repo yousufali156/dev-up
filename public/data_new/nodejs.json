@@ -1,0 +1,354 @@
+{
+  "questions": [
+    {
+      "question": "What is Node.js?",
+      "options": [
+        "It's described that way because its core architecture is built around a non-blocking I/O model and an event loop. Instead of waiting for an I/O operation to complete, Node.js registers a callback and moves on to the next task. When the operation finishes, an event is fired, and the callback is executed.",
+        "Buffers are necessary because native JavaScript does not have a good way to handle raw binary data. Buffers provide a low-level interface for interacting with octet streams in TCP streams, file system operations, and other contexts.",
+        "No, they are not. They are specific to the CommonJS module system. In ES Modules, you can get similar functionality using `import.meta.url`.",
+        "There are two primary ways: 1. Add `\"type\": \"module\"` to your `package.json` file. 2. Use the `.mjs` file extension for files that you want to be treated as ES Modules."
+      ],
+      "answer": "It's described that way because its core architecture is built around a non-blocking I/O model and an event loop. Instead of waiting for an I/O operation to complete, Node.js registers a callback and moves on to the next task. When the operation finishes, an event is fired, and the callback is executed."
+    },
+    {
+      "question": "Why is Node.js single-threaded yet highly performant?",
+      "options": [
+        "`dependencies` are required for the application to run in production (e.g., Express, React). `devDependencies` are only needed for development and testing (e.g., Nodemon, Jest, ESLint).",
+        "Node.js would be a poor choice for **CPU-bound applications** (e.g., video encoding, complex scientific calculations). A long-running, synchronous, CPU-intensive task will block the single main thread and the event loop, making the server unresponsive to all other requests.",
+        "No, they are not. They are specific to the CommonJS module system. In ES Modules, you can get similar functionality using `import.meta.url`.",
+        "`express.json()` is used to parse incoming requests with JSON payloads (common for APIs). `express.urlencoded()` is used to parse incoming requests with URL-encoded payloads (common for traditional HTML forms)."
+      ],
+      "answer": "Node.js would be a poor choice for **CPU-bound applications** (e.g., video encoding, complex scientific calculations). A long-running, synchronous, CPU-intensive task will block the single main thread and the event loop, making the server unresponsive to all other requests."
+    },
+    {
+      "question": "What are the different phases of the Node.js Event Loop?",
+      "options": [
+        "`process.nextTick()` has the highest priority and its queue is processed immediately after the current operation, before the event loop continues. `setTimeout(0)` schedules a callback for the Timers phase. `setImmediate()` schedules a callback for the Check phase, which runs after the Poll phase.",
+        "You can start the REPL by simply typing `node` in your terminal and pressing Enter, without providing any filename.",
+        "Node.js would be a poor choice for **CPU-bound applications** (e.g., video encoding, complex scientific calculations). A long-running, synchronous, CPU-intensive task will block the single main thread and the event loop, making the server unresponsive to all other requests.",
+        "It can lead to serious issues like Denial of Service (DoS) by modifying standard object methods, or even Remote Code Execution (RCE) if properties that are later used in an unsafe way (like in `eval` or `child_process`) are modified."
+      ],
+      "answer": "`process.nextTick()` has the highest priority and its queue is processed immediately after the current operation, before the event loop continues. `setTimeout(0)` schedules a callback for the Timers phase. `setImmediate()` schedules a callback for the Check phase, which runs after the Poll phase."
+    },
+    {
+      "question": "What is the difference between CommonJS (`require`) and ES Modules (`import`)?",
+      "options": [
+        "A very common use case is for running scaffolding tools. For example, `npx create-react-app my-app` will download and run the `create-react-app` package to create a new project, without permanently installing the package on your system.",
+        "The `next()` function is used to pass control to the next middleware function in the stack. If it's not called, the request will be left hanging.",
+        "You can programmatically delete the key for that module from the `require.cache` object. For example: `delete require.cache[require.resolve('./myModule.js')]`. This is generally only done in specific testing scenarios.",
+        "There are two primary ways: 1. Add `\"type\": \"module\"` to your `package.json` file. 2. Use the `.mjs` file extension for files that you want to be treated as ES Modules."
+      ],
+      "answer": "There are two primary ways: 1. Add `\"type\": \"module\"` to your `package.json` file. 2. Use the `.mjs` file extension for files that you want to be treated as ES Modules."
+    },
+    {
+      "question": "What is `package.json`?",
+      "options": [
+        "`process.exit()` instructs Node.js to terminate the process synchronously. `process.kill()` sends a signal to the process (e.g., 'SIGTERM'). A process can have a listener for these signals and perform cleanup before terminating.",
+        "The raw `http` module is very low-level. Frameworks like Express provide a much richer feature set, including routing, middleware support, and template engines, which makes building web applications significantly faster and easier.",
+        "`dependencies` are required for the application to run in production (e.g., Express, React). `devDependencies` are only needed for development and testing (e.g., Nodemon, Jest, ESLint).",
+        "Synchronous methods are only appropriate during the application's startup phase, before the event loop starts processing requests. For example, reading a configuration file when the server first starts."
+      ],
+      "answer": "`dependencies` are required for the application to run in production (e.g., Express, React). `devDependencies` are only needed for development and testing (e.g., Nodemon, Jest, ESLint)."
+    },
+    {
+      "question": "What are Streams in Node.js?",
+      "options": [
+        "A common example is a `zlib` stream for compressing or decompressing data. It's a Transform stream because it reads raw data chunks and writes compressed/decompressed data chunks.",
+        "There are two primary ways: 1. Add `\"type\": \"module\"` to your `package.json` file. 2. Use the `.mjs` file extension for files that you want to be treated as ES Modules.",
+        "`npm install` can modify the `package-lock.json` file if dependencies have changed. `npm ci` (Clean Install) is meant for automated environments; it does a clean install based *only* on the `package-lock.json` and will fail if the lockfile is out of sync, ensuring a consistent build.",
+        "Backpressure is when a readable stream is producing data faster than a writable stream can consume it. The `pipe()` method automatically handles this by pausing the readable stream and buffering data, which prevents memory overflows."
+      ],
+      "answer": "Backpressure is when a readable stream is producing data faster than a writable stream can consume it. The `pipe()` method automatically handles this by pausing the readable stream and buffering data, which prevents memory overflows."
+    },
+    {
+      "question": "What is a Buffer in Node.js?",
+      "options": [
+        "Buffers are necessary because native JavaScript does not have a good way to handle raw binary data. Buffers provide a low-level interface for interacting with octet streams in TCP streams, file system operations, and other contexts.",
+        "A very common use case is for running scaffolding tools. For example, `npx create-react-app my-app` will download and run the `create-react-app` package to create a new project, without permanently installing the package on your system.",
+        "The `on()` method registers a listener that will be called every time the event is emitted. The `once()` method registers a listener that will be called at most once for a particular event, after which it is removed.",
+        "You can specify a mount path as the first argument. For example: `app.use('/static', express.static('public'))`. Now, a file like `public/images/logo.png` would be accessible at `http://localhost:3000/static/images/logo.png`."
+      ],
+      "answer": "Buffers are necessary because native JavaScript does not have a good way to handle raw binary data. Buffers provide a low-level interface for interacting with octet streams in TCP streams, file system operations, and other contexts."
+    },
+    {
+      "question": "What is middleware in Express.js?",
+      "options": [
+        "The `next()` function is used to pass control to the next middleware function in the stack. If it's not called, the request will be left hanging.",
+        "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs in an async operation and you don't catch it, the request will hang. You must explicitly pass the error to Express's error-handling middleware by calling `next(error)`.",
+        "The master process listens on a port and accepts new connections. It then distributes them across the worker processes in a round-robin fashion. This is the default behavior, but the strategy can be changed.",
+        "The `on()` method registers a listener that will be called every time the event is emitted. The `once()` method registers a listener that will be called at most once for a particular event, after which it is removed."
+      ],
+      "answer": "The `next()` function is used to pass control to the next middleware function in the stack. If it's not called, the request will be left hanging."
+    },
+    {
+      "question": "How do you handle routing in Express?",
+      "options": [
+        "The caret (`^`) allows updates to the minor version (e.g., `^1.2.3` will match any `1.x.x` version from `1.2.3` up to, but not including, `2.0.0`). The tilde (`~`) is more restrictive and only allows updates to the patch version (e.g., `~1.2.3` will match any `1.2.x` version).",
+        "You can start the REPL by simply typing `node` in your terminal and pressing Enter, without providing any filename.",
+        "It's described that way because its core architecture is built around a non-blocking I/O model and an event loop. Instead of waiting for an I/O operation to complete, Node.js registers a callback and moves on to the next task. When the operation finishes, an event is fired, and the callback is executed.",
+        "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized."
+      ],
+      "answer": "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized."
+    },
+    {
+      "question": "How do you implement centralized error handling in Express?",
+      "options": [
+        "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs in an async operation and you don't catch it, the request will hang. You must explicitly pass the error to Express's error-handling middleware by calling `next(error)`.",
+        "`dependencies` are required for the application to run in production (e.g., Express, React). `devDependencies` are only needed for development and testing (e.g., Nodemon, Jest, ESLint).",
+        "The master process listens on a port and accepts new connections. It then distributes them across the worker processes in a round-robin fashion. This is the default behavior, but the strategy can be changed.",
+        "`process.nextTick()` has the highest priority and its queue is processed immediately after the current operation, before the event loop continues. `setTimeout(0)` schedules a callback for the Timers phase. `setImmediate()` schedules a callback for the Check phase, which runs after the Poll phase."
+      ],
+      "answer": "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs in an async operation and you don't catch it, the request will hang. You must explicitly pass the error to Express's error-handling middleware by calling `next(error)`."
+    },
+    {
+      "question": "What is the `path` module used for?",
+      "options": [
+        "It's described that way because its core architecture is built around a non-blocking I/O model and an event loop. Instead of waiting for an I/O operation to complete, Node.js registers a callback and moves on to the next task. When the operation finishes, an event is fired, and the callback is executed.",
+        "You must use `module.exports`. For example: `module.exports = class MyClass {}`. You cannot achieve this by reassigning `exports` (e.g., `exports = class MyClass {}` will not work).",
+        "It can lead to serious issues like Denial of Service (DoS) by modifying standard object methods, or even Remote Code Execution (RCE) if properties that are later used in an unsafe way (like in `eval` or `child_process`) are modified.",
+        "`path.join()` joins all given path segments together using the platform-specific separator. `path.resolve()` resolves a sequence of paths or path segments into an absolute path."
+      ],
+      "answer": "`path.join()` joins all given path segments together using the platform-specific separator. `path.resolve()` resolves a sequence of paths or path segments into an absolute path."
+    },
+    {
+      "question": "What is the difference between `fs.readFile()` and `fs.readFileSync()`?",
+      "options": [
+        "`npm install` can modify the `package-lock.json` file if dependencies have changed. `npm ci` (Clean Install) is meant for automated environments; it does a clean install based *only* on the `package-lock.json` and will fail if the lockfile is out of sync, ensuring a consistent build.",
+        "`process.exit()` instructs Node.js to terminate the process synchronously. `process.kill()` sends a signal to the process (e.g., 'SIGTERM'). A process can have a listener for these signals and perform cleanup before terminating.",
+        "Synchronous methods are only appropriate during the application's startup phase, before the event loop starts processing requests. For example, reading a configuration file when the server first starts.",
+        "A very common use case is for running scaffolding tools. For example, `npx create-react-app my-app` will download and run the `create-react-app` package to create a new project, without permanently installing the package on your system."
+      ],
+      "answer": "Synchronous methods are only appropriate during the application's startup phase, before the event loop starts processing requests. For example, reading a configuration file when the server first starts."
+    },
+    {
+      "question": "What are worker threads in Node.js?",
+      "options": [
+        "`npm install` can modify the `package-lock.json` file if dependencies have changed. `npm ci` (Clean Install) is meant for automated environments; it does a clean install based *only* on the `package-lock.json` and will fail if the lockfile is out of sync, ensuring a consistent build.",
+        "**`child_process.fork()`** creates a new Node.js process with its own memory. **`worker_threads`** operate within the same process and can share memory (e.g., using `SharedArrayBuffer`), making them much more lightweight and efficient for CPU-bound tasks.",
+        "A common example is a `zlib` stream for compressing or decompressing data. It's a Transform stream because it reads raw data chunks and writes compressed/decompressed data chunks.",
+        "A very common use case is for running scaffolding tools. For example, `npx create-react-app my-app` will download and run the `create-react-app` package to create a new project, without permanently installing the package on your system."
+      ],
+      "answer": "**`child_process.fork()`** creates a new Node.js process with its own memory. **`worker_threads`** operate within the same process and can share memory (e.g., using `SharedArrayBuffer`), making them much more lightweight and efficient for CPU-bound tasks."
+    },
+    {
+      "question": "What is the `process` object?",
+      "options": [
+        "A very common use case is for running scaffolding tools. For example, `npx create-react-app my-app` will download and run the `create-react-app` package to create a new project, without permanently installing the package on your system.",
+        "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs in an async operation and you don't catch it, the request will hang. You must explicitly pass the error to Express's error-handling middleware by calling `next(error)`.",
+        "`process.exit()` instructs Node.js to terminate the process synchronously. `process.kill()` sends a signal to the process (e.g., 'SIGTERM'). A process can have a listener for these signals and perform cleanup before terminating.",
+        "`path.join()` joins all given path segments together using the platform-specific separator. `path.resolve()` resolves a sequence of paths or path segments into an absolute path."
+      ],
+      "answer": "`process.exit()` instructs Node.js to terminate the process synchronously. `process.kill()` sends a signal to the process (e.g., 'SIGTERM'). A process can have a listener for these signals and perform cleanup before terminating."
+    },
+    {
+      "question": "What is the `EventEmitter` class?",
+      "options": [
+        "Operational errors should be handled gracefully (e.g., sending a 404 response). Programmer errors are exceptional; a common best practice is to crash the application immediately and restart it using a process manager like PM2 to ensure a clean state.",
+        "You would use `fork` because it establishes an IPC (Inter-Process Communication) channel between the parent and child processes, allowing them to send messages back and forth using `.send()`.",
+        "The `on()` method registers a listener that will be called every time the event is emitted. The `once()` method registers a listener that will be called at most once for a particular event, after which it is removed.",
+        "V8's JIT compiler, named TurboFan, analyzes and compiles JavaScript code into native machine code at runtime. It can make optimizations based on the types of data it sees, and even de-optimize code if its assumptions were wrong, leading to very high performance for frequently executed code paths."
+      ],
+      "answer": "The `on()` method registers a listener that will be called every time the event is emitted. The `once()` method registers a listener that will be called at most once for a particular event, after which it is removed."
+    },
+    {
+      "question": "What is the purpose of `package-lock.json`?",
+      "options": [
+        "You start your application with the `--inspect` flag (e.g., `node --inspect index.js`). Node.js will then print a WebSocket URL that you can open in Chrome DevTools to connect the debugger.",
+        "The caret (`^`) allows updates to the minor version (e.g., `^1.2.3` will match any `1.x.x` version from `1.2.3` up to, but not including, `2.0.0`). The tilde (`~`) is more restrictive and only allows updates to the patch version (e.g., `~1.2.3` will match any `1.2.x` version).",
+        "No, you should never manually edit this file. It is automatically generated and managed by `npm` whenever you modify your `node_modules` tree or `package.json`.",
+        "You should not commit `.env` files because they often contain sensitive credentials like API keys and database passwords. Instead, you should commit a `.env.example` file that shows the required variables without their values."
+      ],
+      "answer": "No, you should never manually edit this file. It is automatically generated and managed by `npm` whenever you modify your `node_modules` tree or `package.json`."
+    },
+    {
+      "question": "What is a `require` cache?",
+      "options": [
+        "You can programmatically delete the key for that module from the `require.cache` object. For example: `delete require.cache[require.resolve('./myModule.js')]`. This is generally only done in specific testing scenarios.",
+        "**`child_process.fork()`** creates a new Node.js process with its own memory. **`worker_threads`** operate within the same process and can share memory (e.g., using `SharedArrayBuffer`), making them much more lightweight and efficient for CPU-bound tasks.",
+        "The `next()` function is used to pass control to the next middleware function in the stack. If it's not called, the request will be left hanging.",
+        "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs in an async operation and you don't catch it, the request will hang. You must explicitly pass the error to Express's error-handling middleware by calling `next(error)`."
+      ],
+      "answer": "You can programmatically delete the key for that module from the `require.cache` object. For example: `delete require.cache[require.resolve('./myModule.js')]`. This is generally only done in specific testing scenarios."
+    },
+    {
+      "question": "How do you create a simple HTTP server in Node.js?",
+      "options": [
+        "The raw `http` module is very low-level. Frameworks like Express provide a much richer feature set, including routing, middleware support, and template engines, which makes building web applications significantly faster and easier.",
+        "Node.js would be a poor choice for **CPU-bound applications** (e.g., video encoding, complex scientific calculations). A long-running, synchronous, CPU-intensive task will block the single main thread and the event loop, making the server unresponsive to all other requests.",
+        "You start your application with the `--inspect` flag (e.g., `node --inspect index.js`). Node.js will then print a WebSocket URL that you can open in Chrome DevTools to connect the debugger.",
+        "Libuv also manages the thread pool, which is used to handle expensive tasks like file I/O or DNS lookups that cannot be done asynchronously at the operating system level. This is how Node.js avoids blocking the main thread even for these tasks."
+      ],
+      "answer": "The raw `http` module is very low-level. Frameworks like Express provide a much richer feature set, including routing, middleware support, and template engines, which makes building web applications significantly faster and easier."
+    },
+    {
+      "question": "What does `npm install` do?",
+      "options": [
+        "`dependencies` are required for the application to run in production (e.g., Express, React). `devDependencies` are only needed for development and testing (e.g., Nodemon, Jest, ESLint).",
+        "`npm install` can modify the `package-lock.json` file if dependencies have changed. `npm ci` (Clean Install) is meant for automated environments; it does a clean install based *only* on the `package-lock.json` and will fail if the lockfile is out of sync, ensuring a consistent build.",
+        "You should not commit `.env` files because they often contain sensitive credentials like API keys and database passwords. Instead, you should commit a `.env.example` file that shows the required variables without their values.",
+        "Node.js would be a poor choice for **CPU-bound applications** (e.g., video encoding, complex scientific calculations). A long-running, synchronous, CPU-intensive task will block the single main thread and the event loop, making the server unresponsive to all other requests."
+      ],
+      "answer": "`npm install` can modify the `package-lock.json` file if dependencies have changed. `npm ci` (Clean Install) is meant for automated environments; it does a clean install based *only* on the `package-lock.json` and will fail if the lockfile is out of sync, ensuring a consistent build."
+    },
+    {
+      "question": "What are the four types of streams in Node.js?",
+      "options": [
+        "A common example is a `zlib` stream for compressing or decompressing data. It's a Transform stream because it reads raw data chunks and writes compressed/decompressed data chunks.",
+        "You can specify a mount path as the first argument. For example: `app.use('/static', express.static('public'))`. Now, a file like `public/images/logo.png` would be accessible at `http://localhost:3000/static/images/logo.png`.",
+        "`npm install` can modify the `package-lock.json` file if dependencies have changed. `npm ci` (Clean Install) is meant for automated environments; it does a clean install based *only* on the `package-lock.json` and will fail if the lockfile is out of sync, ensuring a consistent build.",
+        "The caret (`^`) allows updates to the minor version (e.g., `^1.2.3` will match any `1.x.x` version from `1.2.3` up to, but not including, `2.0.0`). The tilde (`~`) is more restrictive and only allows updates to the patch version (e.g., `~1.2.3` will match any `1.2.x` version)."
+      ],
+      "answer": "A common example is a `zlib` stream for compressing or decompressing data. It's a Transform stream because it reads raw data chunks and writes compressed/decompressed data chunks."
+    },
+    {
+      "question": "What is the difference between `__dirname` and `__filename`?",
+      "options": [
+        "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized.",
+        "Synchronous methods are only appropriate during the application's startup phase, before the event loop starts processing requests. For example, reading a configuration file when the server first starts.",
+        "No, they are not. They are specific to the CommonJS module system. In ES Modules, you can get similar functionality using `import.meta.url`.",
+        "You must use `module.exports`. For example: `module.exports = class MyClass {}`. You cannot achieve this by reassigning `exports` (e.g., `exports = class MyClass {}` will not work)."
+      ],
+      "answer": "No, they are not. They are specific to the CommonJS module system. In ES Modules, you can get similar functionality using `import.meta.url`."
+    },
+    {
+      "question": "What are semantic versioning (SemVer) numbers (e.g., `^1.2.3`)?",
+      "options": [
+        "The `next()` function is used to pass control to the next middleware function in the stack. If it's not called, the request will be left hanging.",
+        "The caret (`^`) allows updates to the minor version (e.g., `^1.2.3` will match any `1.x.x` version from `1.2.3` up to, but not including, `2.0.0`). The tilde (`~`) is more restrictive and only allows updates to the patch version (e.g., `~1.2.3` will match any `1.2.x` version).",
+        "Operational errors should be handled gracefully (e.g., sending a 404 response). Programmer errors are exceptional; a common best practice is to crash the application immediately and restart it using a process manager like PM2 to ensure a clean state.",
+        "The `on()` method registers a listener that will be called every time the event is emitted. The `once()` method registers a listener that will be called at most once for a particular event, after which it is removed."
+      ],
+      "answer": "The caret (`^`) allows updates to the minor version (e.g., `^1.2.3` will match any `1.x.x` version from `1.2.3` up to, but not including, `2.0.0`). The tilde (`~`) is more restrictive and only allows updates to the patch version (e.g., `~1.2.3` will match any `1.2.x` version)."
+    },
+    {
+      "question": "What is prototype pollution?",
+      "options": [
+        "You can specify a mount path as the first argument. For example: `app.use('/static', express.static('public'))`. Now, a file like `public/images/logo.png` would be accessible at `http://localhost:3000/static/images/logo.png`.",
+        "It's described that way because its core architecture is built around a non-blocking I/O model and an event loop. Instead of waiting for an I/O operation to complete, Node.js registers a callback and moves on to the next task. When the operation finishes, an event is fired, and the callback is executed.",
+        "It can lead to serious issues like Denial of Service (DoS) by modifying standard object methods, or even Remote Code Execution (RCE) if properties that are later used in an unsafe way (like in `eval` or `child_process`) are modified.",
+        "The caret (`^`) allows updates to the minor version (e.g., `^1.2.3` will match any `1.x.x` version from `1.2.3` up to, but not including, `2.0.0`). The tilde (`~`) is more restrictive and only allows updates to the patch version (e.g., `~1.2.3` will match any `1.2.x` version)."
+      ],
+      "answer": "It can lead to serious issues like Denial of Service (DoS) by modifying standard object methods, or even Remote Code Execution (RCE) if properties that are later used in an unsafe way (like in `eval` or `child_process`) are modified."
+    },
+    {
+      "question": "How do you access request body data in Express?",
+      "options": [
+        "You should not commit `.env` files because they often contain sensitive credentials like API keys and database passwords. Instead, you should commit a `.env.example` file that shows the required variables without their values.",
+        "`express.json()` is used to parse incoming requests with JSON payloads (common for APIs). `express.urlencoded()` is used to parse incoming requests with URL-encoded payloads (common for traditional HTML forms).",
+        "It's described that way because its core architecture is built around a non-blocking I/O model and an event loop. Instead of waiting for an I/O operation to complete, Node.js registers a callback and moves on to the next task. When the operation finishes, an event is fired, and the callback is executed.",
+        "No, you should never manually edit this file. It is automatically generated and managed by `npm` whenever you modify your `node_modules` tree or `package.json`."
+      ],
+      "answer": "`express.json()` is used to parse incoming requests with JSON payloads (common for APIs). `express.urlencoded()` is used to parse incoming requests with URL-encoded payloads (common for traditional HTML forms)."
+    },
+    {
+      "question": "What is the difference between `spawn`, `fork`, and `exec` in the `child_process` module?",
+      "options": [
+        "You would use `fork` because it establishes an IPC (Inter-Process Communication) channel between the parent and child processes, allowing them to send messages back and forth using `.send()`.",
+        "The master process listens on a port and accepts new connections. It then distributes them across the worker processes in a round-robin fashion. This is the default behavior, but the strategy can be changed.",
+        "There are two primary ways: 1. Add `\"type\": \"module\"` to your `package.json` file. 2. Use the `.mjs` file extension for files that you want to be treated as ES Modules.",
+        "`dependencies` are required for the application to run in production (e.g., Express, React). `devDependencies` are only needed for development and testing (e.g., Nodemon, Jest, ESLint)."
+      ],
+      "answer": "You would use `fork` because it establishes an IPC (Inter-Process Communication) channel between the parent and child processes, allowing them to send messages back and forth using `.send()`."
+    },
+    {
+      "question": "How do you manage environment variables in a Node.js application?",
+      "options": [
+        "You can start the REPL by simply typing `node` in your terminal and pressing Enter, without providing any filename.",
+        "No, you should never manually edit this file. It is automatically generated and managed by `npm` whenever you modify your `node_modules` tree or `package.json`.",
+        "You should not commit `.env` files because they often contain sensitive credentials like API keys and database passwords. Instead, you should commit a `.env.example` file that shows the required variables without their values.",
+        "You can programmatically delete the key for that module from the `require.cache` object. For example: `delete require.cache[require.resolve('./myModule.js')]`. This is generally only done in specific testing scenarios."
+      ],
+      "answer": "You should not commit `.env` files because they often contain sensitive credentials like API keys and database passwords. Instead, you should commit a `.env.example` file that shows the required variables without their values."
+    },
+    {
+      "question": "How can you debug a Node.js application?",
+      "options": [
+        "You start your application with the `--inspect` flag (e.g., `node --inspect index.js`). Node.js will then print a WebSocket URL that you can open in Chrome DevTools to connect the debugger.",
+        "No, you should never manually edit this file. It is automatically generated and managed by `npm` whenever you modify your `node_modules` tree or `package.json`.",
+        "The raw `http` module is very low-level. Frameworks like Express provide a much richer feature set, including routing, middleware support, and template engines, which makes building web applications significantly faster and easier.",
+        "`dependencies` are required for the application to run in production (e.g., Express, React). `devDependencies` are only needed for development and testing (e.g., Nodemon, Jest, ESLint)."
+      ],
+      "answer": "You start your application with the `--inspect` flag (e.g., `node --inspect index.js`). Node.js will then print a WebSocket URL that you can open in Chrome DevTools to connect the debugger."
+    },
+    {
+      "question": "How do you serve static files in Express?",
+      "options": [
+        "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs in an async operation and you don't catch it, the request will hang. You must explicitly pass the error to Express's error-handling middleware by calling `next(error)`.",
+        "The caret (`^`) allows updates to the minor version (e.g., `^1.2.3` will match any `1.x.x` version from `1.2.3` up to, but not including, `2.0.0`). The tilde (`~`) is more restrictive and only allows updates to the patch version (e.g., `~1.2.3` will match any `1.2.x` version).",
+        "You can specify a mount path as the first argument. For example: `app.use('/static', express.static('public'))`. Now, a file like `public/images/logo.png` would be accessible at `http://localhost:3000/static/images/logo.png`.",
+        "Operational errors should be handled gracefully (e.g., sending a 404 response). Programmer errors are exceptional; a common best practice is to crash the application immediately and restart it using a process manager like PM2 to ensure a clean state."
+      ],
+      "answer": "You can specify a mount path as the first argument. For example: `app.use('/static', express.static('public'))`. Now, a file like `public/images/logo.png` would be accessible at `http://localhost:3000/static/images/logo.png`."
+    },
+    {
+      "question": "What is the `cluster` module used for?",
+      "options": [
+        "You start your application with the `--inspect` flag (e.g., `node --inspect index.js`). Node.js will then print a WebSocket URL that you can open in Chrome DevTools to connect the debugger.",
+        "The master process listens on a port and accepts new connections. It then distributes them across the worker processes in a round-robin fashion. This is the default behavior, but the strategy can be changed.",
+        "No, you should never manually edit this file. It is automatically generated and managed by `npm` whenever you modify your `node_modules` tree or `package.json`.",
+        "Buffers are necessary because native JavaScript does not have a good way to handle raw binary data. Buffers provide a low-level interface for interacting with octet streams in TCP streams, file system operations, and other contexts."
+      ],
+      "answer": "The master process listens on a port and accepts new connections. It then distributes them across the worker processes in a round-robin fashion. This is the default behavior, but the strategy can be changed."
+    },
+    {
+      "question": "What is the difference between `module.exports` and `exports`?",
+      "options": [
+        "Synchronous methods are only appropriate during the application's startup phase, before the event loop starts processing requests. For example, reading a configuration file when the server first starts.",
+        "Node.js would be a poor choice for **CPU-bound applications** (e.g., video encoding, complex scientific calculations). A long-running, synchronous, CPU-intensive task will block the single main thread and the event loop, making the server unresponsive to all other requests.",
+        "You must use `module.exports`. For example: `module.exports = class MyClass {}`. You cannot achieve this by reassigning `exports` (e.g., `exports = class MyClass {}` will not work).",
+        "No, they are not. They are specific to the CommonJS module system. In ES Modules, you can get similar functionality using `import.meta.url`."
+      ],
+      "answer": "You must use `module.exports`. For example: `module.exports = class MyClass {}`. You cannot achieve this by reassigning `exports` (e.g., `exports = class MyClass {}` will not work)."
+    },
+    {
+      "question": "What is libuv?",
+      "options": [
+        "Libuv also manages the thread pool, which is used to handle expensive tasks like file I/O or DNS lookups that cannot be done asynchronously at the operating system level. This is how Node.js avoids blocking the main thread even for these tasks.",
+        "You would use `fork` because it establishes an IPC (Inter-Process Communication) channel between the parent and child processes, allowing them to send messages back and forth using `.send()`.",
+        "`process.nextTick()` has the highest priority and its queue is processed immediately after the current operation, before the event loop continues. `setTimeout(0)` schedules a callback for the Timers phase. `setImmediate()` schedules a callback for the Check phase, which runs after the Poll phase.",
+        "The `next()` function is used to pass control to the next middleware function in the stack. If it's not called, the request will be left hanging."
+      ],
+      "answer": "Libuv also manages the thread pool, which is used to handle expensive tasks like file I/O or DNS lookups that cannot be done asynchronously at the operating system level. This is how Node.js avoids blocking the main thread even for these tasks."
+    },
+    {
+      "question": "What is the difference between operational errors and programmer errors?",
+      "options": [
+        "No, you should never manually edit this file. It is automatically generated and managed by `npm` whenever you modify your `node_modules` tree or `package.json`.",
+        "Operational errors should be handled gracefully (e.g., sending a 404 response). Programmer errors are exceptional; a common best practice is to crash the application immediately and restart it using a process manager like PM2 to ensure a clean state.",
+        "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs in an async operation and you don't catch it, the request will hang. You must explicitly pass the error to Express's error-handling middleware by calling `next(error)`.",
+        "`process.nextTick()` has the highest priority and its queue is processed immediately after the current operation, before the event loop continues. `setTimeout(0)` schedules a callback for the Timers phase. `setImmediate()` schedules a callback for the Check phase, which runs after the Poll phase."
+      ],
+      "answer": "Operational errors should be handled gracefully (e.g., sending a 404 response). Programmer errors are exceptional; a common best practice is to crash the application immediately and restart it using a process manager like PM2 to ensure a clean state."
+    },
+    {
+      "question": "What is the V8 engine?",
+      "options": [
+        "Synchronous methods are only appropriate during the application's startup phase, before the event loop starts processing requests. For example, reading a configuration file when the server first starts.",
+        "V8's JIT compiler, named TurboFan, analyzes and compiles JavaScript code into native machine code at runtime. It can make optimizations based on the types of data it sees, and even de-optimize code if its assumptions were wrong, leading to very high performance for frequently executed code paths.",
+        "You start your application with the `--inspect` flag (e.g., `node --inspect index.js`). Node.js will then print a WebSocket URL that you can open in Chrome DevTools to connect the debugger.",
+        "`process.nextTick()` has the highest priority and its queue is processed immediately after the current operation, before the event loop continues. `setTimeout(0)` schedules a callback for the Timers phase. `setImmediate()` schedules a callback for the Check phase, which runs after the Poll phase."
+      ],
+      "answer": "V8's JIT compiler, named TurboFan, analyzes and compiles JavaScript code into native machine code at runtime. It can make optimizations based on the types of data it sees, and even de-optimize code if its assumptions were wrong, leading to very high performance for frequently executed code paths."
+    },
+    {
+      "question": "What is REPL in Node.js?",
+      "options": [
+        "Libuv also manages the thread pool, which is used to handle expensive tasks like file I/O or DNS lookups that cannot be done asynchronously at the operating system level. This is how Node.js avoids blocking the main thread even for these tasks.",
+        "You must use `module.exports`. For example: `module.exports = class MyClass {}`. You cannot achieve this by reassigning `exports` (e.g., `exports = class MyClass {}` will not work).",
+        "You can start the REPL by simply typing `node` in your terminal and pressing Enter, without providing any filename.",
+        "It's described that way because its core architecture is built around a non-blocking I/O model and an event loop. Instead of waiting for an I/O operation to complete, Node.js registers a callback and moves on to the next task. When the operation finishes, an event is fired, and the callback is executed."
+      ],
+      "answer": "You can start the REPL by simply typing `node` in your terminal and pressing Enter, without providing any filename."
+    },
+    {
+      "question": "What is `npx`?",
+      "options": [
+        "A very common use case is for running scaffolding tools. For example, `npx create-react-app my-app` will download and run the `create-react-app` package to create a new project, without permanently installing the package on your system.",
+        "The caret (`^`) allows updates to the minor version (e.g., `^1.2.3` will match any `1.x.x` version from `1.2.3` up to, but not including, `2.0.0`). The tilde (`~`) is more restrictive and only allows updates to the patch version (e.g., `~1.2.3` will match any `1.2.x` version).",
+        "It can lead to serious issues like Denial of Service (DoS) by modifying standard object methods, or even Remote Code Execution (RCE) if properties that are later used in an unsafe way (like in `eval` or `child_process`) are modified.",
+        "Libuv also manages the thread pool, which is used to handle expensive tasks like file I/O or DNS lookups that cannot be done asynchronously at the operating system level. This is how Node.js avoids blocking the main thread even for these tasks."
+      ],
+      "answer": "A very common use case is for running scaffolding tools. For example, `npx create-react-app my-app` will download and run the `create-react-app` package to create a new project, without permanently installing the package on your system."
+    }
+  ]
+}

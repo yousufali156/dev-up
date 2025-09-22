@@ -1,0 +1,1014 @@
+{
+  "questions": [
+    {
+      "question": "What is JavaScript?",
+      "options": [
+        "It's useful for modules that need to perform asynchronous initialization, such as fetching data or connecting to a database, before they can be used by other modules.",
+        "Using `Reflect` methods (e.g., `Reflect.get`) inside a handler ensures that the original, default behavior is executed correctly, especially in complex cases involving inheritance and getters, preventing subtle bugs.",
+        "Because it is executed in the user's browser rather than on the web server.",
+        "`let x = null; x ??= 10;` // x becomes 10 because it was null. `let y = 5; y ??= 10;` // y remains 5."
+      ],
+      "answer": "Because it is executed in the user's browser rather than on the web server."
+    },
+    {
+      "question": "What is the difference between var, let, and const?",
+      "options": [
+        "In class components (like in older React), binding a method in the constructor (`this.handleClick = this.handleClick.bind(this)`) is often more performant than using an inline arrow function in the render method, as it prevents creating a new function on every render.",
+        "const is safest because it prevents reassignment, while let should be preferred over var due to block scoping.",
+        "By adding `'use strict';` at the beginning of a script or a function.",
+        "const [a, b] = [1, 2]; // a becomes 1, b becomes 2"
+      ],
+      "answer": "const is safest because it prevents reassignment, while let should be preferred over var due to block scoping."
+    },
+    {
+      "question": "What are the primitive data types in JavaScript?",
+      "options": [
+        "Because they are stored by value and cannot be altered directly after creation.",
+        "Using `Reflect` methods (e.g., `Reflect.get`) inside a handler ensures that the original, default behavior is executed correctly, especially in complex cases involving inheritance and getters, preventing subtle bugs.",
+        "No, private fields are truly private to the class in which they are defined and cannot be accessed by subclasses.",
+        "A long prototype chain can negatively impact performance because property lookups have to traverse more objects. For performance-critical code, it's best to keep prototype chains short."
+      ],
+      "answer": "Because they are stored by value and cannot be altered directly after creation."
+    },
+    {
+      "question": "What is a JavaScript function?",
+      "options": [
+        "Common causes include global variables, forgotten timers (`setInterval`), closures holding unnecessary references, and detached DOM elements that are still referenced in code.",
+        "```javascript\nfunction curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) {\n      return fn.apply(this, args);\n    } else {\n      return function(...args2) {\n        return curried.apply(this, args.concat(args2));\n      }\n    }\n  };\n}\n```",
+        "Function declarations are hoisted while function expressions are not, which affects when they can be called.",
+        "`structuredClone()` can clone many more data types (like `Date`, `RegExp`, `Map`, `Set`) and correctly handles circular references, whereas the JSON method fails on these."
+      ],
+      "answer": "Function declarations are hoisted while function expressions are not, which affects when they can be called."
+    },
+    {
+      "question": "What is the difference between local and global scope?",
+      "options": [
+        "`Promise.race` settles as soon as any promise settles (either fulfills or rejects). `Promise.any` waits for the first promise to *fulfill*, ignoring any rejected promises unless all of them reject.",
+        "Default export allows one per file, named exports allow multiple exports per file.",
+        "Because it can lead to naming conflicts and harder-to-maintain code.",
+        "Decorators are a core feature in TypeScript and are widely used in frameworks like Angular and NestJS for dependency injection, metadata, and more."
+      ],
+      "answer": "Because it can lead to naming conflicts and harder-to-maintain code."
+    },
+    {
+      "question": "What is an object in JavaScript?",
+      "options": [
+        "Using `Reflect` methods (e.g., `Reflect.get`) inside a handler ensures that the original, default behavior is executed correctly, especially in complex cases involving inheritance and getters, preventing subtle bugs.",
+        "The `finally` block always executes after the `try` and `catch` blocks, regardless of whether an error occurred or was caught. It's often used for cleanup code.",
+        "The modern, built-in way is to use the `structuredClone()` global function. It handles complex data types and circular references, which older methods like `JSON.parse(JSON.stringify(obj))` cannot.",
+        "An object uses key-value pairs for properties while an array uses numeric indices."
+      ],
+      "answer": "An object uses key-value pairs for properties while an array uses numeric indices."
+    },
+    {
+      "question": "How do you create an array in JavaScript?",
+      "options": [
+        "In class components (like in older React), binding a method in the constructor (`this.handleClick = this.handleClick.bind(this)`) is often more performant than using an inline arrow function in the render method, as it prevents creating a new function on every render.",
+        "No, because its contents can be removed by the garbage collector at any time, `WeakSet` is not iterable.",
+        "Arrays are ordered collections accessed by index, objects are key-value pairs.",
+        "It helps in creating more reusable and composable functions by allowing you to create specialized functions by partially applying arguments."
+      ],
+      "answer": "Arrays are ordered collections accessed by index, objects are key-value pairs."
+    },
+    {
+      "question": "What is the difference between == and ===?",
+      "options": [
+        "`Symbol.iterator`. If an object has this property, it is considered iterable and can be used with `for...of` loops and the spread operator.",
+        "Yes, using the `${expression}` syntax.",
+        "Use === to avoid unexpected type coercion.",
+        "The bubbling phase is the default. You can enable the capturing phase by setting the third argument of `addEventListener` to `true`."
+      ],
+      "answer": "Use === to avoid unexpected type coercion."
+    },
+    {
+      "question": "What are JavaScript modules?",
+      "options": [
+        "`Promise.race` settles as soon as any promise settles (either fulfills or rejects). `Promise.any` waits for the first promise to *fulfill*, ignoring any rejected promises unless all of them reject.",
+        "Arrays are ordered collections accessed by index, objects are key-value pairs.",
+        "It allows the execution of inline `<script>` elements and `javascript:` URIs, which defeats the primary purpose of CSP in preventing XSS, as attackers can easily inject malicious inline scripts if they find a vulnerability.",
+        "Default export allows one per file, named exports allow multiple exports per file."
+      ],
+      "answer": "Default export allows one per file, named exports allow multiple exports per file."
+    },
+    {
+      "question": "What is hoisting in JavaScript?",
+      "options": [
+        "When a user sends a message to one Node.js server, that server publishes the message to a Redis channel. All other Node.js servers are subscribed to that channel, so they receive the message and can push it to their connected clients. This ensures all users in a chat room see the message regardless of which server instance they are connected to.",
+        "An object uses key-value pairs for properties while an array uses numeric indices.",
+        "`var` and function declarations are hoisted and initialized with `undefined`. `let` and `const` are also hoisted but not initialized, creating a 'Temporal Dead Zone' (TDZ) where they cannot be accessed before their declaration.",
+        "If a closure holds a reference to a variable from its parent scope, that variable cannot be garbage collected. If the closure itself is long-lived (e.g., an event listener), it can prevent large objects from being freed from memory."
+      ],
+      "answer": "`var` and function declarations are hoisted and initialized with `undefined`. `let` and `const` are also hoisted but not initialized, creating a 'Temporal Dead Zone' (TDZ) where they cannot be accessed before their declaration."
+    },
+    {
+      "question": "What is the 'this' keyword in JavaScript?",
+      "options": [
+        "When you need to know the result of every promise, regardless of whether some of them reject. `Promise.all` would short-circuit and reject immediately on the first failure.",
+        "Yes, arrow functions do not have their own 'this'; they inherit it from the enclosing scope.",
+        "It improves performance by reducing the number of event listeners and allows events to be handled for dynamically added child elements without attaching new listeners.",
+        "To implement code-splitting in an application, which helps reduce the initial bundle size and improve load times by only loading code when it's needed."
+      ],
+      "answer": "Yes, arrow functions do not have their own 'this'; they inherit it from the enclosing scope."
+    },
+    {
+      "question": "What is destructuring in JavaScript?",
+      "options": [
+        "The order of precedence is: 1) `new` Binding, 2) Explicit Binding, 3) Implicit Binding, 4) Default Binding. Arrow functions are a special case that lexically binds `this` and ignores these rules.",
+        "It's useful for modules that need to perform asynchronous initialization, such as fetching data or connecting to a database, before they can be used by other modules.",
+        "const [a, b] = [1, 2]; // a becomes 1, b becomes 2",
+        "It combines the fast startup of an interpreter with the high performance of a compiler. It avoids the slow startup time of a traditional ahead-of-time (AOT) compiler."
+      ],
+      "answer": "const [a, b] = [1, 2]; // a becomes 1, b becomes 2"
+    },
+    {
+      "question": "What are the spread and rest operators?",
+      "options": [
+        "function sum(...numbers) { return numbers.reduce((a, b) => a + b, 0); }",
+        "Prototype chaining is the process of looking up a property on an object and, if not found, looking for it on its prototype, and so on, until the property is found or the end of the chain (null) is reached.",
+        "Common causes include global variables, forgotten timers (`setInterval`), closures holding unnecessary references, and detached DOM elements that are still referenced in code.",
+        "Use `Map` when you need non-string keys, need to maintain insertion order, or frequently add/remove key-value pairs, as `Map` is optimized for that."
+      ],
+      "answer": "function sum(...numbers) { return numbers.reduce((a, b) => a + b, 0); }"
+    },
+    {
+      "question": "How do you create multi-line strings in JavaScript?",
+      "options": [
+        "Yes, since ES2015, the order is based on the original insertion order of properties.",
+        "Decorators are a core feature in TypeScript and are widely used in frameworks like Angular and NestJS for dependency injection, metadata, and more.",
+        "Yes, using the `${expression}` syntax.",
+        "It was the primary vector for the Spectre and Meltdown vulnerabilities. To use it now, servers must send specific COOP and COEP headers to create a cross-origin isolated environment."
+      ],
+      "answer": "Yes, using the `${expression}` syntax."
+    },
+    {
+      "question": "What is the difference between slice, substring, and substr?",
+      "options": [
+        "`substr()` is considered a legacy feature and may be deprecated in the future. `slice()` and `substring()` are preferred.",
+        "`const city = user?.address?.city;` // This won't throw an error if `user` or `user.address` is undefined.",
+        "It improves performance by reducing the number of event listeners and allows events to be handled for dynamically added child elements without attaching new listeners.",
+        "Arrays are ordered collections accessed by index, objects are key-value pairs."
+      ],
+      "answer": "`substr()` is considered a legacy feature and may be deprecated in the future. `slice()` and `substring()` are preferred."
+    },
+    {
+      "question": "What is the difference between map, filter, and forEach?",
+      "options": [
+        "`let x = null; x ??= 10;` // x becomes 10 because it was null. `let y = 5; y ??= 10;` // y remains 5.",
+        "Cookies without the `HttpOnly` flag are vulnerable because they can be accessed by client-side scripts. `localStorage` and `sessionStorage` are also inherently accessible via scripts, making them vulnerable if a site has an XSS flaw.",
+        "Use `map()` to create a new array with transformed values.",
+        "To implement code-splitting in an application, which helps reduce the initial bundle size and improve load times by only loading code when it's needed."
+      ],
+      "answer": "Use `map()` to create a new array with transformed values."
+    },
+    {
+      "question": "What is Array.prototype.reduce used for?",
+      "options": [
+        "`Reflect.get(obj, 'prop')` allows you to perform the default 'get' operation, which is useful inside a Proxy handler to avoid infinite recursion. It also allows specifying a different `receiver` for `this`.",
+        "Yes, like this: `const sum = [1, 2, 3].reduce((accumulator, currentValue) => accumulator + currentValue, 0);`",
+        "The `||` operator returns the right-hand side for any 'falsy' value (like `0`, `''`, `false`), while `??` only does so for `null` or `undefined`.",
+        "It improves performance by reducing the number of event listeners and allows events to be handled for dynamically added child elements without attaching new listeners."
+      ],
+      "answer": "Yes, like this: `const sum = [1, 2, 3].reduce((accumulator, currentValue) => accumulator + currentValue, 0);`"
+    },
+    {
+      "question": "What's the difference between `instanceof` and `typeof` operators?",
+      "options": [
+        "It returns 'object', which is a well-known historical bug in JavaScript that can't be fixed due to backward compatibility issues.",
+        "Default export allows one per file, named exports allow multiple exports per file.",
+        "function sum(...numbers) { return numbers.reduce((a, b) => a + b, 0); }",
+        "It was the primary vector for the Spectre and Meltdown vulnerabilities. To use it now, servers must send specific COOP and COEP headers to create a cross-origin isolated environment."
+      ],
+      "answer": "It returns 'object', which is a well-known historical bug in JavaScript that can't be fixed due to backward compatibility issues."
+    },
+    {
+      "question": "Differentiate between Object.keys, Object.values, and Object.entries.",
+      "options": [
+        "```javascript\nfunction throttle(func, limit) {\n  let inThrottle;\n  return function(...args) {\n    if (!inThrottle) {\n      func.apply(this, args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n}\n```",
+        "`Reflect.get(obj, 'prop')` allows you to perform the default 'get' operation, which is useful inside a Proxy handler to avoid infinite recursion. It also allows specifying a different `receiver` for `this`.",
+        "Yes, since ES2015, the order is based on the original insertion order of properties.",
+        "Mark-and-Sweep can handle circular references (e.g., two objects pointing to each other), which reference-counting algorithms cannot, thus preventing a common type of memory leak."
+      ],
+      "answer": "Yes, since ES2015, the order is based on the original insertion order of properties."
+    },
+    {
+      "question": "How do you check if a property exists in an object?",
+      "options": [
+        "By appending `n` to the end of an integer literal (e.g., `123n`) or by calling the `BigInt()` constructor.",
+        "`Object.prototype.hasOwnProperty.call(obj, prop)` or the newer `Object.hasOwn(obj, prop)` are the most reliable ways, as they avoid issues with objects that might have a property named 'hasOwnProperty'.",
+        "A long prototype chain can negatively impact performance because property lookups have to traverse more objects. For performance-critical code, it's best to keep prototype chains short.",
+        "To create non-enumerable properties or to avoid property name collisions between different libraries or parts of a codebase."
+      ],
+      "answer": "`Object.prototype.hasOwnProperty.call(obj, prop)` or the newer `Object.hasOwn(obj, prop)` are the most reliable ways, as they avoid issues with objects that might have a property named 'hasOwnProperty'."
+    },
+    {
+      "question": "What is 'Strict Mode' in JavaScript?",
+      "options": [
+        "Use `Map` when you need non-string keys, need to maintain insertion order, or frequently add/remove key-value pairs, as `Map` is optimized for that.",
+        "By adding `'use strict';` at the beginning of a script or a function.",
+        "It continuously checks if the call stack is empty. If it is, it takes the first task from the task queue (or microtask queue) and pushes it onto the stack to be executed.",
+        "When a user sends a message to one Node.js server, that server publishes the message to a Redis channel. All other Node.js servers are subscribed to that channel, so they receive the message and can push it to their connected clients. This ensures all users in a chat room see the message regardless of which server instance they are connected to."
+      ],
+      "answer": "By adding `'use strict';` at the beginning of a script or a function."
+    },
+    {
+      "question": "What is a Promise in JavaScript?",
+      "options": [
+        "By adding `'use strict';` at the beginning of a script or a function.",
+        "A promise can be in one of three states: pending, fulfilled, or rejected.",
+        "No, private fields are truly private to the class in which they are defined and cannot be accessed by subclasses.",
+        "It allows the execution of inline `<script>` elements and `javascript:` URIs, which defeats the primary purpose of CSP in preventing XSS, as attackers can easily inject malicious inline scripts if they find a vulnerability."
+      ],
+      "answer": "A promise can be in one of three states: pending, fulfilled, or rejected."
+    },
+    {
+      "question": "What is async/await in JavaScript?",
+      "options": [
+        "To create non-enumerable properties or to avoid property name collisions between different libraries or parts of a codebase.",
+        "It provides cleaner syntax, makes error handling with try...catch blocks easier, and improves code readability by avoiding long `.then()` chains.",
+        "An object uses key-value pairs for properties while an array uses numeric indices.",
+        "Use === to avoid unexpected type coercion."
+      ],
+      "answer": "It provides cleaner syntax, makes error handling with try...catch blocks easier, and improves code readability by avoiding long `.then()` chains."
+    },
+    {
+      "question": "What is a closure in JavaScript?",
+      "options": [
+        "No, because they are not called on an instance, `this` inside a static method refers to the class itself, not an instance. Therefore, they cannot access instance properties directly.",
+        "They are useful for data privacy (creating private variables), function factories, and maintaining state in asynchronous operations.",
+        "The JavaScript runtime environment itself is single-threaded (it has one main thread and one call stack). However, environments like browsers and Node.js provide multi-threading capabilities through APIs like Web Workers, which allow for true parallelism.",
+        "Function declarations are hoisted while function expressions are not, which affects when they can be called."
+      ],
+      "answer": "They are useful for data privacy (creating private variables), function factories, and maintaining state in asynchronous operations."
+    },
+    {
+      "question": "What is the JavaScript event loop?",
+      "options": [
+        "No, private fields are truly private to the class in which they are defined and cannot be accessed by subclasses.",
+        "`const city = user?.address?.city;` // This won't throw an error if `user` or `user.address` is undefined.",
+        "It continuously checks if the call stack is empty. If it is, it takes the first task from the task queue (or microtask queue) and pushes it onto the stack to be executed.",
+        "const is safest because it prevents reassignment, while let should be preferred over var due to block scoping."
+      ],
+      "answer": "It continuously checks if the call stack is empty. If it is, it takes the first task from the task queue (or microtask queue) and pushes it onto the stack to be executed."
+    },
+    {
+      "question": "What is a prototype in JavaScript?",
+      "options": [
+        "By using the `super()` method inside the child class's `constructor()`.",
+        "Prototype chaining is the process of looking up a property on an object and, if not found, looking for it on its prototype, and so on, until the property is found or the end of the chain (null) is reached.",
+        "The modern, built-in way is to use the `structuredClone()` global function. It handles complex data types and circular references, which older methods like `JSON.parse(JSON.stringify(obj))` cannot.",
+        "The `finally` block always executes after the `try` and `catch` blocks, regardless of whether an error occurred or was caught. It's often used for cleanup code."
+      ],
+      "answer": "Prototype chaining is the process of looking up a property on an object and, if not found, looking for it on its prototype, and so on, until the property is found or the end of the chain (null) is reached."
+    },
+    {
+      "question": "What is the difference between call(), apply(), and bind()?",
+      "options": [
+        "`call()` accepts an argument list (e.g., `func.call(this, arg1, arg2)`), while `apply()` accepts a single array of arguments (e.g., `func.apply(this, [arg1, arg2])`).",
+        "function sum(...numbers) { return numbers.reduce((a, b) => a + b, 0); }",
+        "The JavaScript runtime environment itself is single-threaded (it has one main thread and one call stack). However, environments like browsers and Node.js provide multi-threading capabilities through APIs like Web Workers, which allow for true parallelism.",
+        "Prototype chaining is the process of looking up a property on an object and, if not found, looking for it on its prototype, and so on, until the property is found or the end of the chain (null) is reached."
+      ],
+      "answer": "`call()` accepts an argument list (e.g., `func.call(this, arg1, arg2)`), while `apply()` accepts a single array of arguments (e.g., `func.apply(this, [arg1, arg2])`)."
+    },
+    {
+      "question": "What is event delegation in JavaScript?",
+      "options": [
+        "Cookies without the `HttpOnly` flag are vulnerable because they can be accessed by client-side scripts. `localStorage` and `sessionStorage` are also inherently accessible via scripts, making them vulnerable if a site has an XSS flaw.",
+        "It improves performance by reducing the number of event listeners and allows events to be handled for dynamically added child elements without attaching new listeners.",
+        "No, they run in a separate context and cannot directly access the DOM. They communicate with the main thread using the `postMessage()` method.",
+        "`async` downloads the script without blocking HTML parsing and executes it as soon as it's available, possibly out of order. `defer` downloads without blocking and executes the script only after the HTML parsing is complete, in the order they appear."
+      ],
+      "answer": "It improves performance by reducing the number of event listeners and allows events to be handled for dynamically added child elements without attaching new listeners."
+    },
+    {
+      "question": "What is try...catch in JavaScript?",
+      "options": [
+        "The `finally` block always executes after the `try` and `catch` blocks, regardless of whether an error occurred or was caught. It's often used for cleanup code.",
+        "Use `map()` to create a new array with transformed values.",
+        "Debounce: Search bar input (wait until the user stops typing). Throttle: Window resize or scroll events (limit the rate of handler execution).",
+        "If a closure holds a reference to a variable from its parent scope, that variable cannot be garbage collected. If the closure itself is long-lived (e.g., an event listener), it can prevent large objects from being freed from memory."
+      ],
+      "answer": "The `finally` block always executes after the `try` and `catch` blocks, regardless of whether an error occurred or was caught. It's often used for cleanup code."
+    },
+    {
+      "question": "What is the difference between Map and Object?",
+      "options": [
+        "In class components (like in older React), binding a method in the constructor (`this.handleClick = this.handleClick.bind(this)`) is often more performant than using an inline arrow function in the render method, as it prevents creating a new function on every render.",
+        "It's useful for modules that need to perform asynchronous initialization, such as fetching data or connecting to a database, before they can be used by other modules.",
+        "It helps in creating more reusable and composable functions by allowing you to create specialized functions by partially applying arguments.",
+        "Use `Map` when you need non-string keys, need to maintain insertion order, or frequently add/remove key-value pairs, as `Map` is optimized for that."
+      ],
+      "answer": "Use `Map` when you need non-string keys, need to maintain insertion order, or frequently add/remove key-value pairs, as `Map` is optimized for that."
+    },
+    {
+      "question": "What are WeakMap and WeakSet?",
+      "options": [
+        "The bubbling phase is the default. You can enable the capturing phase by setting the third argument of `addEventListener` to `true`.",
+        "Microtasks (e.g., promise `.then()` callbacks) have higher priority. The event loop will execute all tasks in the microtask queue after a script runs before executing any task from the macrotask (or task) queue (e.g., `setTimeout`).",
+        "The `||` operator returns the right-hand side for any 'falsy' value (like `0`, `''`, `false`), while `??` only does so for `null` or `undefined`.",
+        "To associate metadata with an object without preventing that object from being garbage collected, which helps avoid memory leaks."
+      ],
+      "answer": "To associate metadata with an object without preventing that object from being garbage collected, which helps avoid memory leaks."
+    },
+    {
+      "question": "What is the difference between setTimeout and setInterval?",
+      "options": [
+        "The order of precedence is: 1) `new` Binding, 2) Explicit Binding, 3) Implicit Binding, 4) Default Binding. Arrow functions are a special case that lexically binds `this` and ignores these rules.",
+        "When a user sends a message to one Node.js server, that server publishes the message to a Redis channel. All other Node.js servers are subscribed to that channel, so they receive the message and can push it to their connected clients. This ensures all users in a chat room see the message regardless of which server instance they are connected to.",
+        "Use `clearInterval()` and pass it the ID that was returned by the `setInterval()` call.",
+        "`Object.prototype.hasOwnProperty.call(obj, prop)` or the newer `Object.hasOwn(obj, prop)` are the most reliable ways, as they avoid issues with objects that might have a property named 'hasOwnProperty'."
+      ],
+      "answer": "Use `clearInterval()` and pass it the ID that was returned by the `setInterval()` call."
+    },
+    {
+      "question": "How do you select elements in the DOM?",
+      "options": [
+        "`getElementById()` is generally faster because it uses a direct lookup on the document's ID map, whereas `querySelector()` has to traverse the DOM based on a CSS selector.",
+        "By using the `super()` method inside the child class's `constructor()`.",
+        "For certain requests (e.g., non-simple requests like PUT or DELETE), the browser first sends an HTTP request using the `OPTIONS` method to the server to determine if the actual request is safe to send. This initial `OPTIONS` request is called a preflight request.",
+        "Cookies without the `HttpOnly` flag are vulnerable because they can be accessed by client-side scripts. `localStorage` and `sessionStorage` are also inherently accessible via scripts, making them vulnerable if a site has an XSS flaw."
+      ],
+      "answer": "`getElementById()` is generally faster because it uses a direct lookup on the document's ID map, whereas `querySelector()` has to traverse the DOM based on a CSS selector."
+    },
+    {
+      "question": "What is JSON in JavaScript?",
+      "options": [
+        "Use the `JSON.parse(jsonString)` method.",
+        "No, because they are not called on an instance, `this` inside a static method refers to the class itself, not an instance. Therefore, they cannot access instance properties directly.",
+        "Validation (e.g., ensuring a property is a number before setting it), logging property access, or creating reactive objects in frameworks like Vue.js.",
+        "They are predictable, easier to test, and less prone to bugs because they don't depend on or affect outside state."
+      ],
+      "answer": "Use the `JSON.parse(jsonString)` method."
+    },
+    {
+      "question": "How do you convert an object to a JSON string?",
+      "options": [
+        "No, JSON does not support functions or `undefined`. When stringifying, functions and `undefined` values are omitted (or converted to `null` if they are in an array).",
+        "Yes, like this: `const sum = [1, 2, 3].reduce((accumulator, currentValue) => accumulator + currentValue, 0);`",
+        "No, it does not. `var` declarations are hoisted and initialized with `undefined`, so they can be accessed before their declaration without a `ReferenceError`.",
+        "Use the `JSON.parse(jsonString)` method."
+      ],
+      "answer": "No, JSON does not support functions or `undefined`. When stringifying, functions and `undefined` values are omitted (or converted to `null` if they are in an array)."
+    },
+    {
+      "question": "What is the difference between a macro-task and a micro-task?",
+      "options": [
+        "It combines the fast startup of an interpreter with the high performance of a compiler. It avoids the slow startup time of a traditional ahead-of-time (AOT) compiler.",
+        "The lifecycle includes Installation, Activation, and event handling (Fetch/Message). It can be in states like `installing`, `installed`, `activating`, `activated`, or `redundant`.",
+        "All tasks in the micro-task queue are executed before any single task from the macro-task queue is executed.",
+        "To create non-enumerable properties or to avoid property name collisions between different libraries or parts of a codebase."
+      ],
+      "answer": "All tasks in the micro-task queue are executed before any single task from the macro-task queue is executed."
+    },
+    {
+      "question": "How does JavaScript handle memory management?",
+      "options": [
+        "Common causes include global variables, forgotten timers (`setInterval`), closures holding unnecessary references, and detached DOM elements that are still referenced in code.",
+        "`Promise.race` resolves or rejects as soon as the *first* promise in the array resolves or rejects. `Promise.all` waits for *all* of them to resolve.",
+        "`Symbol.iterator`. If an object has this property, it is considered iterable and can be used with `for...of` loops and the spread operator.",
+        "All tasks in the micro-task queue are executed before any single task from the macro-task queue is executed."
+      ],
+      "answer": "Common causes include global variables, forgotten timers (`setInterval`), closures holding unnecessary references, and detached DOM elements that are still referenced in code."
+    },
+    {
+      "question": "What is a Symbol in JavaScript?",
+      "options": [
+        "To create non-enumerable properties or to avoid property name collisions between different libraries or parts of a codebase.",
+        "Use `map()` to create a new array with transformed values.",
+        "Use the `JSON.parse(jsonString)` method.",
+        "Decorators are a core feature in TypeScript and are widely used in frameworks like Angular and NestJS for dependency injection, metadata, and more."
+      ],
+      "answer": "To create non-enumerable properties or to avoid property name collisions between different libraries or parts of a codebase."
+    },
+    {
+      "question": "What is a generator function in JavaScript?",
+      "options": [
+        "Yes, since ES2015, the order is based on the original insertion order of properties.",
+        "SSE is a one-way communication channel (server to client) over standard HTTP. WebSockets provide a two-way (bidirectional) communication channel that is not based on HTTP after the initial handshake.",
+        "`Symbol.iterator`. If an object has this property, it is considered iterable and can be used with `for...of` loops and the spread operator.",
+        "function sum(...numbers) { return numbers.reduce((a, b) => a + b, 0); }"
+      ],
+      "answer": "`Symbol.iterator`. If an object has this property, it is considered iterable and can be used with `for...of` loops and the spread operator."
+    },
+    {
+      "question": "What is `Promise.all`?",
+      "options": [
+        "`Promise.race` resolves or rejects as soon as the *first* promise in the array resolves or rejects. `Promise.all` waits for *all* of them to resolve.",
+        "Mark-and-Sweep can handle circular references (e.g., two objects pointing to each other), which reference-counting algorithms cannot, thus preventing a common type of memory leak.",
+        "No, private fields are truly private to the class in which they are defined and cannot be accessed by subclasses.",
+        "It means if the value of an exported variable changes in the original module, the imported value in other modules also updates to reflect that change. CommonJS caches the value at the time of `require`."
+      ],
+      "answer": "`Promise.race` resolves or rejects as soon as the *first* promise in the array resolves or rejects. `Promise.all` waits for *all* of them to resolve."
+    },
+    {
+      "question": "What is the difference between ES6 modules and CommonJS?",
+      "options": [
+        "The bubbling phase is the default. You can enable the capturing phase by setting the third argument of `addEventListener` to `true`.",
+        "It's useful for modules that need to perform asynchronous initialization, such as fetching data or connecting to a database, before they can be used by other modules.",
+        "It was the primary vector for the Spectre and Meltdown vulnerabilities. To use it now, servers must send specific COOP and COEP headers to create a cross-origin isolated environment.",
+        "Yes, by using the `.mjs` file extension or by setting `\"type\": \"module\"` in the `package.json` file."
+      ],
+      "answer": "Yes, by using the `.mjs` file extension or by setting `\"type\": \"module\"` in the `package.json` file."
+    },
+    {
+      "question": "What is the difference between Set and WeakSet?",
+      "options": [
+        "No, they run in a separate context and cannot directly access the DOM. They communicate with the main thread using the `postMessage()` method.",
+        "No, because its contents can be removed by the garbage collector at any time, `WeakSet` is not iterable.",
+        "Use === to avoid unexpected type coercion.",
+        "The order of precedence is: 1) `new` Binding, 2) Explicit Binding, 3) Implicit Binding, 4) Default Binding. Arrow functions are a special case that lexically binds `this` and ignores these rules."
+      ],
+      "answer": "No, because its contents can be removed by the garbage collector at any time, `WeakSet` is not iterable."
+    },
+    {
+      "question": "What is a Proxy in JavaScript?",
+      "options": [
+        "It was the primary vector for the Spectre and Meltdown vulnerabilities. To use it now, servers must send specific COOP and COEP headers to create a cross-origin isolated environment.",
+        "Yes, by using the `.mjs` file extension or by setting `\"type\": \"module\"` in the `package.json` file.",
+        "Validation (e.g., ensuring a property is a number before setting it), logging property access, or creating reactive objects in frameworks like Vue.js.",
+        "No, it's designed to complement and run alongside JavaScript. It's best for CPU-intensive tasks like gaming, video editing, and simulations where performance is critical."
+      ],
+      "answer": "Validation (e.g., ensuring a property is a number before setting it), logging property access, or creating reactive objects in frameworks like Vue.js."
+    },
+    {
+      "question": "What is the Reflect API?",
+      "options": [
+        "Yes, like this: `const sum = [1, 2, 3].reduce((accumulator, currentValue) => accumulator + currentValue, 0);`",
+        "`Reflect.get(obj, 'prop')` allows you to perform the default 'get' operation, which is useful inside a Proxy handler to avoid infinite recursion. It also allows specifying a different `receiver` for `this`.",
+        "To associate metadata with an object without preventing that object from being garbage collected, which helps avoid memory leaks.",
+        "Yes, arrow functions do not have their own 'this'; they inherit it from the enclosing scope."
+      ],
+      "answer": "`Reflect.get(obj, 'prop')` allows you to perform the default 'get' operation, which is useful inside a Proxy handler to avoid infinite recursion. It also allows specifying a different `receiver` for `this`."
+    },
+    {
+      "question": "What is the difference between debounce and throttle?",
+      "options": [
+        "`window` is browser-specific and `global` is Node.js-specific. `globalThis` is environment-agnostic and works everywhere.",
+        "Debounce: Search bar input (wait until the user stops typing). Throttle: Window resize or scroll events (limit the rate of handler execution).",
+        "Use `Map` when you need non-string keys, need to maintain insertion order, or frequently add/remove key-value pairs, as `Map` is optimized for that.",
+        "They are predictable, easier to test, and less prone to bugs because they don't depend on or affect outside state."
+      ],
+      "answer": "Debounce: Search bar input (wait until the user stops typing). Throttle: Window resize or scroll events (limit the rate of handler execution)."
+    },
+    {
+      "question": "What is the difference between event bubbling and capturing?",
+      "options": [
+        "The bubbling phase is the default. You can enable the capturing phase by setting the third argument of `addEventListener` to `true`.",
+        "`var` and function declarations are hoisted and initialized with `undefined`. `let` and `const` are also hoisted but not initialized, creating a 'Temporal Dead Zone' (TDZ) where they cannot be accessed before their declaration.",
+        "Decorators are a core feature in TypeScript and are widely used in frameworks like Angular and NestJS for dependency injection, metadata, and more.",
+        "It starts with a standard HTTP request from the client that includes an `Upgrade: websocket` header. If the server supports it, it responds with a 101 Switching Protocols status, and the connection is upgraded from HTTP to the WebSocket protocol."
+      ],
+      "answer": "The bubbling phase is the default. You can enable the capturing phase by setting the third argument of `addEventListener` to `true`."
+    },
+    {
+      "question": "What is a pure function in JavaScript?",
+      "options": [
+        "`var` and function declarations are hoisted and initialized with `undefined`. `let` and `const` are also hoisted but not initialized, creating a 'Temporal Dead Zone' (TDZ) where they cannot be accessed before their declaration.",
+        "Yes, using the `${expression}` syntax.",
+        "`structuredClone()` can clone many more data types (like `Date`, `RegExp`, `Map`, `Set`) and correctly handles circular references, whereas the JSON method fails on these.",
+        "They are predictable, easier to test, and less prone to bugs because they don't depend on or affect outside state."
+      ],
+      "answer": "They are predictable, easier to test, and less prone to bugs because they don't depend on or affect outside state."
+    },
+    {
+      "question": "What is currying in JavaScript?",
+      "options": [
+        "They are predictable, easier to test, and less prone to bugs because they don't depend on or affect outside state.",
+        "No, it's designed to complement and run alongside JavaScript. It's best for CPU-intensive tasks like gaming, video editing, and simulations where performance is critical.",
+        "No, JSON does not support functions or `undefined`. When stringifying, functions and `undefined` values are omitted (or converted to `null` if they are in an array).",
+        "It helps in creating more reusable and composable functions by allowing you to create specialized functions by partially applying arguments."
+      ],
+      "answer": "It helps in creating more reusable and composable functions by allowing you to create specialized functions by partially applying arguments."
+    },
+    {
+      "question": "What is class inheritance in JavaScript?",
+      "options": [
+        "A long prototype chain can negatively impact performance because property lookups have to traverse more objects. For performance-critical code, it's best to keep prototype chains short.",
+        "By using the `super()` method inside the child class's `constructor()`.",
+        "Function declarations are hoisted while function expressions are not, which affects when they can be called.",
+        "The lifecycle includes Installation, Activation, and event handling (Fetch/Message). It can be in states like `installing`, `installed`, `activating`, `activated`, or `redundant`."
+      ],
+      "answer": "By using the `super()` method inside the child class's `constructor()`."
+    },
+    {
+      "question": "What are static methods in JavaScript classes?",
+      "options": [
+        "For certain requests (e.g., non-simple requests like PUT or DELETE), the browser first sends an HTTP request using the `OPTIONS` method to the server to determine if the actual request is safe to send. This initial `OPTIONS` request is called a preflight request.",
+        "An object uses key-value pairs for properties while an array uses numeric indices.",
+        "const [a, b] = [1, 2]; // a becomes 1, b becomes 2",
+        "No, because they are not called on an instance, `this` inside a static method refers to the class itself, not an instance. Therefore, they cannot access instance properties directly."
+      ],
+      "answer": "No, because they are not called on an instance, `this` inside a static method refers to the class itself, not an instance. Therefore, they cannot access instance properties directly."
+    },
+    {
+      "question": "What is optional chaining in JavaScript?",
+      "options": [
+        "`const city = user?.address?.city;` // This won't throw an error if `user` or `user.address` is undefined.",
+        "Because primitive values are not garbage collected. The purpose of a `WeakMap` is to allow its keys (which must be objects) to be collected, so allowing primitives would defeat its purpose.",
+        "It means if the value of an exported variable changes in the original module, the imported value in other modules also updates to reflect that change. CommonJS caches the value at the time of `require`.",
+        "The JavaScript runtime environment itself is single-threaded (it has one main thread and one call stack). However, environments like browsers and Node.js provide multi-threading capabilities through APIs like Web Workers, which allow for true parallelism."
+      ],
+      "answer": "`const city = user?.address?.city;` // This won't throw an error if `user` or `user.address` is undefined."
+    },
+    {
+      "question": "What is the nullish coalescing operator (??) in JavaScript?",
+      "options": [
+        "The `||` operator returns the right-hand side for any 'falsy' value (like `0`, `''`, `false`), while `??` only does so for `null` or `undefined`.",
+        "When a user sends a message to one Node.js server, that server publishes the message to a Redis channel. All other Node.js servers are subscribed to that channel, so they receive the message and can push it to their connected clients. This ensures all users in a chat room see the message regardless of which server instance they are connected to.",
+        "It means if the value of an exported variable changes in the original module, the imported value in other modules also updates to reflect that change. CommonJS caches the value at the time of `require`.",
+        "const [a, b] = [1, 2]; // a becomes 1, b becomes 2"
+      ],
+      "answer": "The `||` operator returns the right-hand side for any 'falsy' value (like `0`, `''`, `false`), while `??` only does so for `null` or `undefined`."
+    },
+    {
+      "question": "What are dynamic imports in JavaScript?",
+      "options": [
+        "A long prototype chain can negatively impact performance because property lookups have to traverse more objects. For performance-critical code, it's best to keep prototype chains short.",
+        "`window` is browser-specific and `global` is Node.js-specific. `globalThis` is environment-agnostic and works everywhere.",
+        "To implement code-splitting in an application, which helps reduce the initial bundle size and improve load times by only loading code when it's needed.",
+        "`const city = user?.address?.city;` // This won't throw an error if `user` or `user.address` is undefined."
+      ],
+      "answer": "To implement code-splitting in an application, which helps reduce the initial bundle size and improve load times by only loading code when it's needed."
+    },
+    {
+      "question": "What is top-level `await` in JavaScript?",
+      "options": [
+        "Using `Reflect` methods (e.g., `Reflect.get`) inside a handler ensures that the original, default behavior is executed correctly, especially in complex cases involving inheritance and getters, preventing subtle bugs.",
+        "It's useful for modules that need to perform asynchronous initialization, such as fetching data or connecting to a database, before they can be used by other modules.",
+        "Arrays are ordered collections accessed by index, objects are key-value pairs.",
+        "Common causes include global variables, forgotten timers (`setInterval`), closures holding unnecessary references, and detached DOM elements that are still referenced in code."
+      ],
+      "answer": "It's useful for modules that need to perform asynchronous initialization, such as fetching data or connecting to a database, before they can be used by other modules."
+    },
+    {
+      "question": "What is BigInt in JavaScript?",
+      "options": [
+        "They are predictable, easier to test, and less prone to bugs because they don't depend on or affect outside state.",
+        "A long prototype chain can negatively impact performance because property lookups have to traverse more objects. For performance-critical code, it's best to keep prototype chains short.",
+        "By appending `n` to the end of an integer literal (e.g., `123n`) or by calling the `BigInt()` constructor.",
+        "`Symbol.iterator`. If an object has this property, it is considered iterable and can be used with `for...of` loops and the spread operator."
+      ],
+      "answer": "By appending `n` to the end of an integer literal (e.g., `123n`) or by calling the `BigInt()` constructor."
+    },
+    {
+      "question": "What is `globalThis` in JavaScript?",
+      "options": [
+        "`structuredClone()` can clone many more data types (like `Date`, `RegExp`, `Map`, `Set`) and correctly handles circular references, whereas the JSON method fails on these.",
+        "Validation (e.g., ensuring a property is a number before setting it), logging property access, or creating reactive objects in frameworks like Vue.js.",
+        "`window` is browser-specific and `global` is Node.js-specific. `globalThis` is environment-agnostic and works everywhere.",
+        "It improves performance by reducing the number of event listeners and allows events to be handled for dynamically added child elements without attaching new listeners."
+      ],
+      "answer": "`window` is browser-specific and `global` is Node.js-specific. `globalThis` is environment-agnostic and works everywhere."
+    },
+    {
+      "question": "What is `Promise.any` in JavaScript?",
+      "options": [
+        "It improves performance by reducing the number of event listeners and allows events to be handled for dynamically added child elements without attaching new listeners.",
+        "Yes. If you `await` a non-promise value, it is implicitly wrapped in a resolved promise. For example, `await 10` will behave like `await Promise.resolve(10)`.",
+        "`Promise.race` settles as soon as any promise settles (either fulfills or rejects). `Promise.any` waits for the first promise to *fulfill*, ignoring any rejected promises unless all of them reject.",
+        "const is safest because it prevents reassignment, while let should be preferred over var due to block scoping."
+      ],
+      "answer": "`Promise.race` settles as soon as any promise settles (either fulfills or rejects). `Promise.any` waits for the first promise to *fulfill*, ignoring any rejected promises unless all of them reject."
+    },
+    {
+      "question": "What are logical assignment operators in JavaScript?",
+      "options": [
+        "`let x = null; x ??= 10;` // x becomes 10 because it was null. `let y = 5; y ??= 10;` // y remains 5.",
+        "To create non-enumerable properties or to avoid property name collisions between different libraries or parts of a codebase.",
+        "Yes, since ES2015, the order is based on the original insertion order of properties.",
+        "Use `map()` to create a new array with transformed values."
+      ],
+      "answer": "`let x = null; x ??= 10;` // x becomes 10 because it was null. `let y = 5; y ??= 10;` // y remains 5."
+    },
+    {
+      "question": "What are private class fields in JavaScript?",
+      "options": [
+        "`getElementById()` is generally faster because it uses a direct lookup on the document's ID map, whereas `querySelector()` has to traverse the DOM based on a CSS selector.",
+        "```javascript\nfunction debounce(func, delay) {\n  let timeoutId;\n  return function(...args) {\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() => {\n      func.apply(this, args);\n    }, delay);\n  };\n}\n```",
+        "They are predictable, easier to test, and less prone to bugs because they don't depend on or affect outside state.",
+        "No, private fields are truly private to the class in which they are defined and cannot be accessed by subclasses."
+      ],
+      "answer": "No, private fields are truly private to the class in which they are defined and cannot be accessed by subclasses."
+    },
+    {
+      "question": "What is `structuredClone` in JavaScript?",
+      "options": [
+        "It improves performance by reducing the number of event listeners and allows events to be handled for dynamically added child elements without attaching new listeners.",
+        "Because it can lead to naming conflicts and harder-to-maintain code.",
+        "CORS (Cross-Origin Resource Sharing) is a mechanism to relax the Same-Origin Policy. It allows servers to explicitly specify which other origins are allowed to access their resources, using HTTP headers.",
+        "`structuredClone()` can clone many more data types (like `Date`, `RegExp`, `Map`, `Set`) and correctly handles circular references, whereas the JSON method fails on these."
+      ],
+      "answer": "`structuredClone()` can clone many more data types (like `Date`, `RegExp`, `Map`, `Set`) and correctly handles circular references, whereas the JSON method fails on these."
+    },
+    {
+      "question": "What is `Promise.allSettled`?",
+      "options": [
+        "When you need to know the result of every promise, regardless of whether some of them reject. `Promise.all` would short-circuit and reject immediately on the first failure.",
+        "Because it is executed in the user's browser rather than on the web server.",
+        "`Symbol.iterator` is a well-known symbol. An object that has a function assigned to this symbol's key is considered iterable and can be used with `for...of` loops.",
+        "The modern, built-in way is to use the `structuredClone()` global function. It handles complex data types and circular references, which older methods like `JSON.parse(JSON.stringify(obj))` cannot."
+      ],
+      "answer": "When you need to know the result of every promise, regardless of whether some of them reject. `Promise.all` would short-circuit and reject immediately on the first failure."
+    },
+    {
+      "question": "How do Web Workers work and what are they used for?",
+      "options": [
+        "The order of precedence is: 1) `new` Binding, 2) Explicit Binding, 3) Implicit Binding, 4) Default Binding. Arrow functions are a special case that lexically binds `this` and ignores these rules.",
+        "The modern, built-in way is to use the `structuredClone()` global function. It handles complex data types and circular references, which older methods like `JSON.parse(JSON.stringify(obj))` cannot.",
+        "`getElementById()` is generally faster because it uses a direct lookup on the document's ID map, whereas `querySelector()` has to traverse the DOM based on a CSS selector.",
+        "No, they run in a separate context and cannot directly access the DOM. They communicate with the main thread using the `postMessage()` method."
+      ],
+      "answer": "No, they run in a separate context and cannot directly access the DOM. They communicate with the main thread using the `postMessage()` method."
+    },
+    {
+      "question": "What are Service Workers?",
+      "options": [
+        "The lifecycle includes Installation, Activation, and event handling (Fetch/Message). It can be in states like `installing`, `installed`, `activating`, `activated`, or `redundant`.",
+        "`Symbol.iterator`. If an object has this property, it is considered iterable and can be used with `for...of` loops and the spread operator.",
+        "It allows the execution of inline `<script>` elements and `javascript:` URIs, which defeats the primary purpose of CSP in preventing XSS, as attackers can easily inject malicious inline scripts if they find a vulnerability.",
+        "Use === to avoid unexpected type coercion."
+      ],
+      "answer": "The lifecycle includes Installation, Activation, and event handling (Fetch/Message). It can be in states like `installing`, `installed`, `activating`, `activated`, or `redundant`."
+    },
+    {
+      "question": "What is WebAssembly (WASM) and when should it be used with JavaScript?",
+      "options": [
+        "In class components (like in older React), binding a method in the constructor (`this.handleClick = this.handleClick.bind(this)`) is often more performant than using an inline arrow function in the render method, as it prevents creating a new function on every render.",
+        "`Symbol.iterator` is a well-known symbol. An object that has a function assigned to this symbol's key is considered iterable and can be used with `for...of` loops.",
+        "No, it's designed to complement and run alongside JavaScript. It's best for CPU-intensive tasks like gaming, video editing, and simulations where performance is critical.",
+        "SSE is a one-way communication channel (server to client) over standard HTTP. WebSockets provide a two-way (bidirectional) communication channel that is not based on HTTP after the initial handshake."
+      ],
+      "answer": "No, it's designed to complement and run alongside JavaScript. It's best for CPU-intensive tasks like gaming, video editing, and simulations where performance is critical."
+    },
+    {
+      "question": "What is the difference between `Object.freeze()` and `Object.seal()`?",
+      "options": [
+        "An object uses key-value pairs for properties while an array uses numeric indices.",
+        "No, it's a shallow operation. If a property of a frozen object is another object, that nested object can still be modified.",
+        "It allows the execution of inline `<script>` elements and `javascript:` URIs, which defeats the primary purpose of CSP in preventing XSS, as attackers can easily inject malicious inline scripts if they find a vulnerability.",
+        "Arrays are ordered collections accessed by index, objects are key-value pairs."
+      ],
+      "answer": "No, it's a shallow operation. If a property of a frozen object is another object, that nested object can still be modified."
+    },
+    {
+      "question": "What is a `SharedArrayBuffer`?",
+      "options": [
+        "The bubbling phase is the default. You can enable the capturing phase by setting the third argument of `addEventListener` to `true`.",
+        "```javascript\nfunction debounce(func, delay) {\n  let timeoutId;\n  return function(...args) {\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() => {\n      func.apply(this, args);\n    }, delay);\n  };\n}\n```",
+        "Using `Reflect` methods (e.g., `Reflect.get`) inside a handler ensures that the original, default behavior is executed correctly, especially in complex cases involving inheritance and getters, preventing subtle bugs.",
+        "It was the primary vector for the Spectre and Meltdown vulnerabilities. To use it now, servers must send specific COOP and COEP headers to create a cross-origin isolated environment."
+      ],
+      "answer": "It was the primary vector for the Spectre and Meltdown vulnerabilities. To use it now, servers must send specific COOP and COEP headers to create a cross-origin isolated environment."
+    },
+    {
+      "question": "What are Decorators in JavaScript?",
+      "options": [
+        "Decorators are a core feature in TypeScript and are widely used in frameworks like Angular and NestJS for dependency injection, metadata, and more.",
+        "`Symbol.iterator` is a well-known symbol. An object that has a function assigned to this symbol's key is considered iterable and can be used with `for...of` loops.",
+        "When you need to know the result of every promise, regardless of whether some of them reject. `Promise.all` would short-circuit and reject immediately on the first failure.",
+        "Validation (e.g., ensuring a property is a number before setting it), logging property access, or creating reactive objects in frameworks like Vue.js."
+      ],
+      "answer": "Decorators are a core feature in TypeScript and are widely used in frameworks like Angular and NestJS for dependency injection, metadata, and more."
+    },
+    {
+      "question": "How does the V8 engine optimize JavaScript code?",
+      "options": [
+        "If the element that was clicked is nested inside the element you're listening for (e.g., an icon inside a button), `event.target` will be the innermost element (the icon). Using `event.target.closest('.button-class')` is a robust way to handle this.",
+        "By using the `super()` method inside the child class's `constructor()`.",
+        "No, because they are not called on an instance, `this` inside a static method refers to the class itself, not an instance. Therefore, they cannot access instance properties directly.",
+        "Changing the shape of an object (adding/deleting properties) after it has been optimized, or passing values of unexpected types can cause V8 to de-optimize the code back to slower bytecode."
+      ],
+      "answer": "Changing the shape of an object (adding/deleting properties) after it has been optimized, or passing values of unexpected types can cause V8 to de-optimize the code back to slower bytecode."
+    },
+    {
+      "question": "What is 'tree shaking'?",
+      "options": [
+        "Modern JavaScript bundlers like Webpack, Rollup, and Parcel perform tree shaking automatically, especially in production mode.",
+        "No, JSON does not support functions or `undefined`. When stringifying, functions and `undefined` values are omitted (or converted to `null` if they are in an array).",
+        "`structuredClone()` can clone many more data types (like `Date`, `RegExp`, `Map`, `Set`) and correctly handles circular references, whereas the JSON method fails on these.",
+        "Yes, using the `${expression}` syntax."
+      ],
+      "answer": "Modern JavaScript bundlers like Webpack, Rollup, and Parcel perform tree shaking automatically, especially in production mode."
+    },
+    {
+      "question": "What are Server-Sent Events (SSE)?",
+      "options": [
+        "No, because they are not called on an instance, `this` inside a static method refers to the class itself, not an instance. Therefore, they cannot access instance properties directly.",
+        "Common causes include global variables, forgotten timers (`setInterval`), closures holding unnecessary references, and detached DOM elements that are still referenced in code.",
+        "SSE is a one-way communication channel (server to client) over standard HTTP. WebSockets provide a two-way (bidirectional) communication channel that is not based on HTTP after the initial handshake.",
+        "`var` and function declarations are hoisted and initialized with `undefined`. `let` and `const` are also hoisted but not initialized, creating a 'Temporal Dead Zone' (TDZ) where they cannot be accessed before their declaration."
+      ],
+      "answer": "SSE is a one-way communication channel (server to client) over standard HTTP. WebSockets provide a two-way (bidirectional) communication channel that is not based on HTTP after the initial handshake."
+    },
+    {
+      "question": "What are the differences between localStorage, sessionStorage, and cookies?",
+      "options": [
+        "It indicates a DOM element that has been removed from the page's DOM tree but is still being held in memory by a reference in your JavaScript code, which is a classic memory leak.",
+        "No, because its contents can be removed by the garbage collector at any time, `WeakSet` is not iterable.",
+        "const is safest because it prevents reassignment, while let should be preferred over var due to block scoping.",
+        "Cookies without the `HttpOnly` flag are vulnerable because they can be accessed by client-side scripts. `localStorage` and `sessionStorage` are also inherently accessible via scripts, making them vulnerable if a site has an XSS flaw."
+      ],
+      "answer": "Cookies without the `HttpOnly` flag are vulnerable because they can be accessed by client-side scripts. `localStorage` and `sessionStorage` are also inherently accessible via scripts, making them vulnerable if a site has an XSS flaw."
+    },
+    {
+      "question": "What is CORS (Cross-Origin Resource Sharing)?",
+      "options": [
+        "For certain requests (e.g., non-simple requests like PUT or DELETE), the browser first sends an HTTP request using the `OPTIONS` method to the server to determine if the actual request is safe to send. This initial `OPTIONS` request is called a preflight request.",
+        "`const city = user?.address?.city;` // This won't throw an error if `user` or `user.address` is undefined.",
+        "Yes, like this: `const sum = [1, 2, 3].reduce((accumulator, currentValue) => accumulator + currentValue, 0);`",
+        "If a closure holds a reference to a variable from its parent scope, that variable cannot be garbage collected. If the closure itself is long-lived (e.g., an event listener), it can prevent large objects from being freed from memory."
+      ],
+      "answer": "For certain requests (e.g., non-simple requests like PUT or DELETE), the browser first sends an HTTP request using the `OPTIONS` method to the server to determine if the actual request is safe to send. This initial `OPTIONS` request is called a preflight request."
+    },
+    {
+      "question": "Explain the JavaScript event loop, call stack, and task queue.",
+      "options": [
+        "Because they are stored by value and cannot be altered directly after creation.",
+        "Use `Map` when you need non-string keys, need to maintain insertion order, or frequently add/remove key-value pairs, as `Map` is optimized for that.",
+        "The `||` operator returns the right-hand side for any 'falsy' value (like `0`, `''`, `false`), while `??` only does so for `null` or `undefined`.",
+        "Microtasks (e.g., promise `.then()` callbacks) have higher priority. The event loop will execute all tasks in the microtask queue after a script runs before executing any task from the macrotask (or task) queue (e.g., `setTimeout`)."
+      ],
+      "answer": "Microtasks (e.g., promise `.then()` callbacks) have higher priority. The event loop will execute all tasks in the microtask queue after a script runs before executing any task from the macrotask (or task) queue (e.g., `setTimeout`)."
+    },
+    {
+      "question": "What are closures in JavaScript and why are they a potential cause of memory leaks?",
+      "options": [
+        "Yes, by using the `.mjs` file extension or by setting `\"type\": \"module\"` in the `package.json` file.",
+        "If a closure holds a reference to a variable from its parent scope, that variable cannot be garbage collected. If the closure itself is long-lived (e.g., an event listener), it can prevent large objects from being freed from memory.",
+        "Yes, like this: `const sum = [1, 2, 3].reduce((accumulator, currentValue) => accumulator + currentValue, 0);`",
+        "`Symbol.iterator` is a well-known symbol. An object that has a function assigned to this symbol's key is considered iterable and can be used with `for...of` loops."
+      ],
+      "answer": "If a closure holds a reference to a variable from its parent scope, that variable cannot be garbage collected. If the closure itself is long-lived (e.g., an event listener), it can prevent large objects from being freed from memory."
+    },
+    {
+      "question": "Explain the concept of the Temporal Dead Zone (TDZ).",
+      "options": [
+        "It means if the value of an exported variable changes in the original module, the imported value in other modules also updates to reflect that change. CommonJS caches the value at the time of `require`.",
+        "Use `Map` when you need non-string keys, need to maintain insertion order, or frequently add/remove key-value pairs, as `Map` is optimized for that.",
+        "No, it does not. `var` declarations are hoisted and initialized with `undefined`, so they can be accessed before their declaration without a `ReferenceError`.",
+        "```javascript\nfunction curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) {\n      return fn.apply(this, args);\n    } else {\n      return function(...args2) {\n        return curried.apply(this, args.concat(args2));\n      }\n    }\n  };\n}\n```"
+      ],
+      "answer": "No, it does not. `var` declarations are hoisted and initialized with `undefined`, so they can be accessed before their declaration without a `ReferenceError`."
+    },
+    {
+      "question": "Explain how the prototype chain works and its performance implications.",
+      "options": [
+        "`getElementById()` is generally faster because it uses a direct lookup on the document's ID map, whereas `querySelector()` has to traverse the DOM based on a CSS selector.",
+        "```javascript\nfunction throttle(func, limit) {\n  let inThrottle;\n  return function(...args) {\n    if (!inThrottle) {\n      func.apply(this, args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n}\n```",
+        "SSE is a one-way communication channel (server to client) over standard HTTP. WebSockets provide a two-way (bidirectional) communication channel that is not based on HTTP after the initial handshake.",
+        "A long prototype chain can negatively impact performance because property lookups have to traverse more objects. For performance-critical code, it's best to keep prototype chains short."
+      ],
+      "answer": "A long prototype chain can negatively impact performance because property lookups have to traverse more objects. For performance-critical code, it's best to keep prototype chains short."
+    },
+    {
+      "question": "How does `async/await` work under the hood?",
+      "options": [
+        "Yes. If you `await` a non-promise value, it is implicitly wrapped in a resolved promise. For example, `await 10` will behave like `await Promise.resolve(10)`.",
+        "When you need to know the result of every promise, regardless of whether some of them reject. `Promise.all` would short-circuit and reject immediately on the first failure.",
+        "Use `map()` to create a new array with transformed values.",
+        "```javascript\nfunction curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) {\n      return fn.apply(this, args);\n    } else {\n      return function(...args2) {\n        return curried.apply(this, args.concat(args2));\n      }\n    }\n  };\n}\n```"
+      ],
+      "answer": "Yes. If you `await` a non-promise value, it is implicitly wrapped in a resolved promise. For example, `await 10` will behave like `await Promise.resolve(10)`."
+    },
+    {
+      "question": "Explain the Mark-and-Sweep algorithm for garbage collection.",
+      "options": [
+        "To implement code-splitting in an application, which helps reduce the initial bundle size and improve load times by only loading code when it's needed.",
+        "To prevent race conditions when multiple threads are reading and writing to the same memory location. Atomic operations ensure that a read-modify-write sequence completes without another thread interfering in the middle.",
+        "For certain requests (e.g., non-simple requests like PUT or DELETE), the browser first sends an HTTP request using the `OPTIONS` method to the server to determine if the actual request is safe to send. This initial `OPTIONS` request is called a preflight request.",
+        "Mark-and-Sweep can handle circular references (e.g., two objects pointing to each other), which reference-counting algorithms cannot, thus preventing a common type of memory leak."
+      ],
+      "answer": "Mark-and-Sweep can handle circular references (e.g., two objects pointing to each other), which reference-counting algorithms cannot, thus preventing a common type of memory leak."
+    },
+    {
+      "question": "Explain deep copy vs. shallow copy in JavaScript.",
+      "options": [
+        "The modern, built-in way is to use the `structuredClone()` global function. It handles complex data types and circular references, which older methods like `JSON.parse(JSON.stringify(obj))` cannot.",
+        "Yes, using the `${expression}` syntax.",
+        "No, they run in a separate context and cannot directly access the DOM. They communicate with the main thread using the `postMessage()` method.",
+        "Yes, since ES2015, the order is based on the original insertion order of properties."
+      ],
+      "answer": "The modern, built-in way is to use the `structuredClone()` global function. It handles complex data types and circular references, which older methods like `JSON.parse(JSON.stringify(obj))` cannot."
+    },
+    {
+      "question": "Explain the four rules that determine the value of `this`.",
+      "options": [
+        "The order of precedence is: 1) `new` Binding, 2) Explicit Binding, 3) Implicit Binding, 4) Default Binding. Arrow functions are a special case that lexically binds `this` and ignores these rules.",
+        "`var` and function declarations are hoisted and initialized with `undefined`. `let` and `const` are also hoisted but not initialized, creating a 'Temporal Dead Zone' (TDZ) where they cannot be accessed before their declaration.",
+        "It helps in creating more reusable and composable functions by allowing you to create specialized functions by partially applying arguments.",
+        "They are useful for data privacy (creating private variables), function factories, and maintaining state in asynchronous operations."
+      ],
+      "answer": "The order of precedence is: 1) `new` Binding, 2) Explicit Binding, 3) Implicit Binding, 4) Default Binding. Arrow functions are a special case that lexically binds `this` and ignores these rules."
+    },
+    {
+      "question": "What is Just-In-Time (JIT) Compilation?",
+      "options": [
+        "CORS (Cross-Origin Resource Sharing) is a mechanism to relax the Same-Origin Policy. It allows servers to explicitly specify which other origins are allowed to access their resources, using HTTP headers.",
+        "`structuredClone()` can clone many more data types (like `Date`, `RegExp`, `Map`, `Set`) and correctly handles circular references, whereas the JSON method fails on these.",
+        "It combines the fast startup of an interpreter with the high performance of a compiler. It avoids the slow startup time of a traditional ahead-of-time (AOT) compiler.",
+        "SSE is a one-way communication channel (server to client) over standard HTTP. WebSockets provide a two-way (bidirectional) communication channel that is not based on HTTP after the initial handshake."
+      ],
+      "answer": "It combines the fast startup of an interpreter with the high performance of a compiler. It avoids the slow startup time of a traditional ahead-of-time (AOT) compiler."
+    },
+    {
+      "question": "Explain the difference between ES Modules and CommonJS.",
+      "options": [
+        "Yes, since ES2015, the order is based on the original insertion order of properties.",
+        "By adding `'use strict';` at the beginning of a script or a function.",
+        "`let x = null; x ??= 10;` // x becomes 10 because it was null. `let y = 5; y ??= 10;` // y remains 5.",
+        "It means if the value of an exported variable changes in the original module, the imported value in other modules also updates to reflect that change. CommonJS caches the value at the time of `require`."
+      ],
+      "answer": "It means if the value of an exported variable changes in the original module, the imported value in other modules also updates to reflect that change. CommonJS caches the value at the time of `require`."
+    },
+    {
+      "question": "How would you implement event delegation from scratch?",
+      "options": [
+        "It means if the value of an exported variable changes in the original module, the imported value in other modules also updates to reflect that change. CommonJS caches the value at the time of `require`.",
+        "If the element that was clicked is nested inside the element you're listening for (e.g., an icon inside a button), `event.target` will be the innermost element (the icon). Using `event.target.closest('.button-class')` is a robust way to handle this.",
+        "Use === to avoid unexpected type coercion.",
+        "Using `Reflect` methods (e.g., `Reflect.get`) inside a handler ensures that the original, default behavior is executed correctly, especially in complex cases involving inheritance and getters, preventing subtle bugs."
+      ],
+      "answer": "If the element that was clicked is nested inside the element you're listening for (e.g., an icon inside a button), `event.target` will be the innermost element (the icon). Using `event.target.closest('.button-class')` is a robust way to handle this."
+    },
+    {
+      "question": "Implement a generic `curry` function.",
+      "options": [
+        "No, they run in a separate context and cannot directly access the DOM. They communicate with the main thread using the `postMessage()` method.",
+        "The bubbling phase is the default. You can enable the capturing phase by setting the third argument of `addEventListener` to `true`.",
+        "Yes, arrow functions do not have their own 'this'; they inherit it from the enclosing scope.",
+        "```javascript\nfunction curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) {\n      return fn.apply(this, args);\n    } else {\n      return function(...args2) {\n        return curried.apply(this, args.concat(args2));\n      }\n    }\n  };\n}\n```"
+      ],
+      "answer": "```javascript\nfunction curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) {\n      return fn.apply(this, args);\n    } else {\n      return function(...args2) {\n        return curried.apply(this, args.concat(args2));\n      }\n    }\n  };\n}\n```"
+    },
+    {
+      "question": "Implement a `debounce` function.",
+      "options": [
+        "`const city = user?.address?.city;` // This won't throw an error if `user` or `user.address` is undefined.",
+        "```javascript\nfunction debounce(func, delay) {\n  let timeoutId;\n  return function(...args) {\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() => {\n      func.apply(this, args);\n    }, delay);\n  };\n}\n```",
+        "No, because they are not called on an instance, `this` inside a static method refers to the class itself, not an instance. Therefore, they cannot access instance properties directly.",
+        "Use `Map` when you need non-string keys, need to maintain insertion order, or frequently add/remove key-value pairs, as `Map` is optimized for that."
+      ],
+      "answer": "```javascript\nfunction debounce(func, delay) {\n  let timeoutId;\n  return function(...args) {\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() => {\n      func.apply(this, args);\n    }, delay);\n  };\n}\n```"
+    },
+    {
+      "question": "Implement a `throttle` function.",
+      "options": [
+        "Function declarations are hoisted while function expressions are not, which affects when they can be called.",
+        "```javascript\nfunction throttle(func, limit) {\n  let inThrottle;\n  return function(...args) {\n    if (!inThrottle) {\n      func.apply(this, args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n}\n```",
+        "The bubbling phase is the default. You can enable the capturing phase by setting the third argument of `addEventListener` to `true`.",
+        "`window` is browser-specific and `global` is Node.js-specific. `globalThis` is environment-agnostic and works everywhere."
+      ],
+      "answer": "```javascript\nfunction throttle(func, limit) {\n  let inThrottle;\n  return function(...args) {\n    if (!inThrottle) {\n      func.apply(this, args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n}\n```"
+    },
+    {
+      "question": "What are Proxies and the Reflect API used for together?",
+      "options": [
+        "Use `map()` to create a new array with transformed values.",
+        "Using `Reflect` methods (e.g., `Reflect.get`) inside a handler ensures that the original, default behavior is executed correctly, especially in complex cases involving inheritance and getters, preventing subtle bugs.",
+        "Because it can lead to naming conflicts and harder-to-maintain code.",
+        "The `||` operator returns the right-hand side for any 'falsy' value (like `0`, `''`, `false`), while `??` only does so for `null` or `undefined`."
+      ],
+      "answer": "Using `Reflect` methods (e.g., `Reflect.get`) inside a handler ensures that the original, default behavior is executed correctly, especially in complex cases involving inheritance and getters, preventing subtle bugs."
+    },
+    {
+      "question": "What are well-known Symbols?",
+      "options": [
+        "Debounce: Search bar input (wait until the user stops typing). Throttle: Window resize or scroll events (limit the rate of handler execution).",
+        "`Symbol.iterator` is a well-known symbol. An object that has a function assigned to this symbol's key is considered iterable and can be used with `for...of` loops.",
+        "When a user sends a message to one Node.js server, that server publishes the message to a Redis channel. All other Node.js servers are subscribed to that channel, so they receive the message and can push it to their connected clients. This ensures all users in a chat room see the message regardless of which server instance they are connected to.",
+        "It continuously checks if the call stack is empty. If it is, it takes the first task from the task queue (or microtask queue) and pushes it onto the stack to be executed."
+      ],
+      "answer": "`Symbol.iterator` is a well-known symbol. An object that has a function assigned to this symbol's key is considered iterable and can be used with `for...of` loops."
+    },
+    {
+      "question": "What is the primary use case for WeakMap?",
+      "options": [
+        "When a user sends a message to one Node.js server, that server publishes the message to a Redis channel. All other Node.js servers are subscribed to that channel, so they receive the message and can push it to their connected clients. This ensures all users in a chat room see the message regardless of which server instance they are connected to.",
+        "Because primitive values are not garbage collected. The purpose of a `WeakMap` is to allow its keys (which must be objects) to be collected, so allowing primitives would defeat its purpose.",
+        "const is safest because it prevents reassignment, while let should be preferred over var due to block scoping.",
+        "It provides cleaner syntax, makes error handling with try...catch blocks easier, and improves code readability by avoiding long `.then()` chains."
+      ],
+      "answer": "Because primitive values are not garbage collected. The purpose of a `WeakMap` is to allow its keys (which must be objects) to be collected, so allowing primitives would defeat its purpose."
+    },
+    {
+      "question": "How would you use Chrome DevTools to find a memory leak?",
+      "options": [
+        "It indicates a DOM element that has been removed from the page's DOM tree but is still being held in memory by a reference in your JavaScript code, which is a classic memory leak.",
+        "They are predictable, easier to test, and less prone to bugs because they don't depend on or affect outside state.",
+        "It helps in creating more reusable and composable functions by allowing you to create specialized functions by partially applying arguments.",
+        "The `finally` block always executes after the `try` and `catch` blocks, regardless of whether an error occurred or was caught. It's often used for cleanup code."
+      ],
+      "answer": "It indicates a DOM element that has been removed from the page's DOM tree but is still being held in memory by a reference in your JavaScript code, which is a classic memory leak."
+    },
+    {
+      "question": "Explain the Same-Origin Policy (SOP).",
+      "options": [
+        "Use `Map` when you need non-string keys, need to maintain insertion order, or frequently add/remove key-value pairs, as `Map` is optimized for that.",
+        "`Object.prototype.hasOwnProperty.call(obj, prop)` or the newer `Object.hasOwn(obj, prop)` are the most reliable ways, as they avoid issues with objects that might have a property named 'hasOwnProperty'.",
+        "CORS (Cross-Origin Resource Sharing) is a mechanism to relax the Same-Origin Policy. It allows servers to explicitly specify which other origins are allowed to access their resources, using HTTP headers.",
+        "`Symbol.iterator` is a well-known symbol. An object that has a function assigned to this symbol's key is considered iterable and can be used with `for...of` loops."
+      ],
+      "answer": "CORS (Cross-Origin Resource Sharing) is a mechanism to relax the Same-Origin Policy. It allows servers to explicitly specify which other origins are allowed to access their resources, using HTTP headers."
+    },
+    {
+      "question": "How would you implement your own Promise from scratch?",
+      "options": [
+        "const is safest because it prevents reassignment, while let should be preferred over var due to block scoping.",
+        "By appending `n` to the end of an integer literal (e.g., `123n`) or by calling the `BigInt()` constructor.",
+        "Correctly handling the asynchronous resolution and chaining of `.then()` calls. The logic must ensure that callbacks are executed in the right order and that values are passed down the chain correctly, even when `then` is called on an already settled promise.",
+        "`const city = user?.address?.city;` // This won't throw an error if `user` or `user.address` is undefined."
+      ],
+      "answer": "Correctly handling the asynchronous resolution and chaining of `.then()` calls. The logic must ensure that callbacks are executed in the right order and that values are passed down the chain correctly, even when `then` is called on an already settled promise."
+    },
+    {
+      "question": "What are potential issues with the `this` keyword and how do you solve them?",
+      "options": [
+        "By using the `super()` method inside the child class's `constructor()`.",
+        "`Promise.race` resolves or rejects as soon as the *first* promise in the array resolves or rejects. `Promise.all` waits for *all* of them to resolve.",
+        "In class components (like in older React), binding a method in the constructor (`this.handleClick = this.handleClick.bind(this)`) is often more performant than using an inline arrow function in the render method, as it prevents creating a new function on every render.",
+        "To implement code-splitting in an application, which helps reduce the initial bundle size and improve load times by only loading code when it's needed."
+      ],
+      "answer": "In class components (like in older React), binding a method in the constructor (`this.handleClick = this.handleClick.bind(this)`) is often more performant than using an inline arrow function in the render method, as it prevents creating a new function on every render."
+    },
+    {
+      "question": "How would you implement a deep clone function manually?",
+      "options": [
+        "Microtasks (e.g., promise `.then()` callbacks) have higher priority. The event loop will execute all tasks in the microtask queue after a script runs before executing any task from the macrotask (or task) queue (e.g., `setTimeout`).",
+        "By appending `n` to the end of an integer literal (e.g., `123n`) or by calling the `BigInt()` constructor.",
+        "By using a `Map` or `WeakMap` to keep track of objects that have already been visited. Before cloning an object, check if it's in the map. If it is, return the already-cloned reference. If not, add the new clone to the map and continue the recursion.",
+        "Because it is executed in the user's browser rather than on the web server."
+      ],
+      "answer": "By using a `Map` or `WeakMap` to keep track of objects that have already been visited. Before cloning an object, check if it's in the map. If it is, return the already-cloned reference. If not, add the new clone to the map and continue the recursion."
+    },
+    {
+      "question": "What is the difference between concurrency and parallelism in JavaScript?",
+      "options": [
+        "It continuously checks if the call stack is empty. If it is, it takes the first task from the task queue (or microtask queue) and pushes it onto the stack to be executed.",
+        "The JavaScript runtime environment itself is single-threaded (it has one main thread and one call stack). However, environments like browsers and Node.js provide multi-threading capabilities through APIs like Web Workers, which allow for true parallelism.",
+        "By appending `n` to the end of an integer literal (e.g., `123n`) or by calling the `BigInt()` constructor.",
+        "Validation (e.g., ensuring a property is a number before setting it), logging property access, or creating reactive objects in frameworks like Vue.js."
+      ],
+      "answer": "The JavaScript runtime environment itself is single-threaded (it has one main thread and one call stack). However, environments like browsers and Node.js provide multi-threading capabilities through APIs like Web Workers, which allow for true parallelism."
+    },
+    {
+      "question": "How can you handle race conditions in asynchronous JavaScript?",
+      "options": [
+        "A promise can be in one of three states: pending, fulfilled, or rejected.",
+        "```javascript\nfunction throttle(func, limit) {\n  let inThrottle;\n  return function(...args) {\n    if (!inThrottle) {\n      func.apply(this, args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n}\n```",
+        "Validation (e.g., ensuring a property is a number before setting it), logging property access, or creating reactive objects in frameworks like Vue.js.",
+        "Before making a new `fetch` request (e.g., from a search input), you can call `abort()` on the `AbortController` associated with the previous request. This cancels the ongoing fetch, ensuring that you only process the results from the latest request."
+      ],
+      "answer": "Before making a new `fetch` request (e.g., from a search input), you can call `abort()` on the `AbortController` associated with the previous request. This cancels the ongoing fetch, ensuring that you only process the results from the latest request."
+    },
+    {
+      "question": "Explain what WebSockets are and how they differ from HTTP.",
+      "options": [
+        "```javascript\nfunction curry(fn) {\n  return function curried(...args) {\n    if (args.length >= fn.length) {\n      return fn.apply(this, args);\n    } else {\n      return function(...args2) {\n        return curried.apply(this, args.concat(args2));\n      }\n    }\n  };\n}\n```",
+        "When a user sends a message to one Node.js server, that server publishes the message to a Redis channel. All other Node.js servers are subscribed to that channel, so they receive the message and can push it to their connected clients. This ensures all users in a chat room see the message regardless of which server instance they are connected to.",
+        "A long prototype chain can negatively impact performance because property lookups have to traverse more objects. For performance-critical code, it's best to keep prototype chains short.",
+        "It starts with a standard HTTP request from the client that includes an `Upgrade: websocket` header. If the server supports it, it responds with a 101 Switching Protocols status, and the connection is upgraded from HTTP to the WebSocket protocol."
+      ],
+      "answer": "It starts with a standard HTTP request from the client that includes an `Upgrade: websocket` header. If the server supports it, it responds with a 101 Switching Protocols status, and the connection is upgraded from HTTP to the WebSocket protocol."
+    },
+    {
+      "question": "What is the `Atomics` object and when would you use it?",
+      "options": [
+        "To prevent race conditions when multiple threads are reading and writing to the same memory location. Atomic operations ensure that a read-modify-write sequence completes without another thread interfering in the middle.",
+        "It continuously checks if the call stack is empty. If it is, it takes the first task from the task queue (or microtask queue) and pushes it onto the stack to be executed.",
+        "Arrays are ordered collections accessed by index, objects are key-value pairs.",
+        "Function declarations are hoisted while function expressions are not, which affects when they can be called."
+      ],
+      "answer": "To prevent race conditions when multiple threads are reading and writing to the same memory location. Atomic operations ensure that a read-modify-write sequence completes without another thread interfering in the middle."
+    },
+    {
+      "question": "How can you optimize the Critical Rendering Path?",
+      "options": [
+        "They are predictable, easier to test, and less prone to bugs because they don't depend on or affect outside state.",
+        "The modern, built-in way is to use the `structuredClone()` global function. It handles complex data types and circular references, which older methods like `JSON.parse(JSON.stringify(obj))` cannot.",
+        "`async` downloads the script without blocking HTML parsing and executes it as soon as it's available, possibly out of order. `defer` downloads without blocking and executes the script only after the HTML parsing is complete, in the order they appear.",
+        "All tasks in the micro-task queue are executed before any single task from the macro-task queue is executed."
+      ],
+      "answer": "`async` downloads the script without blocking HTML parsing and executes it as soon as it's available, possibly out of order. `defer` downloads without blocking and executes the script only after the HTML parsing is complete, in the order they appear."
+    },
+    {
+      "question": "What is a Content Security Policy (CSP)?",
+      "options": [
+        "No, because its contents can be removed by the garbage collector at any time, `WeakSet` is not iterable.",
+        "To implement code-splitting in an application, which helps reduce the initial bundle size and improve load times by only loading code when it's needed.",
+        "It allows the execution of inline `<script>` elements and `javascript:` URIs, which defeats the primary purpose of CSP in preventing XSS, as attackers can easily inject malicious inline scripts if they find a vulnerability.",
+        "`let x = null; x ??= 10;` // x becomes 10 because it was null. `let y = 5; y ??= 10;` // y remains 5."
+      ],
+      "answer": "It allows the execution of inline `<script>` elements and `javascript:` URIs, which defeats the primary purpose of CSP in preventing XSS, as attackers can easily inject malicious inline scripts if they find a vulnerability."
+    },
+    {
+      "question": "How would you design a highly scalable real-time chat application?",
+      "options": [
+        "Use `clearInterval()` and pass it the ID that was returned by the `setInterval()` call.",
+        "Prototype chaining is the process of looking up a property on an object and, if not found, looking for it on its prototype, and so on, until the property is found or the end of the chain (null) is reached.",
+        "It starts with a standard HTTP request from the client that includes an `Upgrade: websocket` header. If the server supports it, it responds with a 101 Switching Protocols status, and the connection is upgraded from HTTP to the WebSocket protocol.",
+        "When a user sends a message to one Node.js server, that server publishes the message to a Redis channel. All other Node.js servers are subscribed to that channel, so they receive the message and can push it to their connected clients. This ensures all users in a chat room see the message regardless of which server instance they are connected to."
+      ],
+      "answer": "When a user sends a message to one Node.js server, that server publishes the message to a Redis channel. All other Node.js servers are subscribed to that channel, so they receive the message and can push it to their connected clients. This ensures all users in a chat room see the message regardless of which server instance they are connected to."
+    }
+  ]
+}

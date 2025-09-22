@@ -1,0 +1,354 @@
+{
+  "questions": [
+    {
+      "question": "What is Next.js?",
+      "options": [
+        "The `<Link>` component automatically **prefetches** the code for the linked page when it enters the viewport. This means that by the time the user clicks the link, the destination page is often already loaded, making the navigation feel instantaneous.",
+        "The main benefits are: 1. **Zero Client-Side JavaScript:** Reduces the amount of code sent to the browser. 2. **Direct Backend Access:** They can securely access databases, internal services, and filesystems directly on the server without needing an API layer.",
+        "Next.js primarily solves two major problems of client-side React apps: 1. **Poor SEO:** Since the initial HTML is empty, search engine crawlers struggle to index the content. Next.js pre-renders the HTML on the server, making it fully indexable. 2. **Slow Initial Load:** Users have to wait for the entire JavaScript bundle to download and execute before seeing any content. Next.js sends fully rendered HTML, improving the perceived performance.",
+        "Server Actions simplify data mutations by removing the need to manually create API endpoints. You can define the server-side logic directly in your component or a separate file and call it from your form, leading to less boilerplate code."
+      ],
+      "answer": "Next.js primarily solves two major problems of client-side React apps: 1. **Poor SEO:** Since the initial HTML is empty, search engine crawlers struggle to index the content. Next.js pre-renders the HTML on the server, making it fully indexable. 2. **Slow Initial Load:** Users have to wait for the entire JavaScript bundle to download and execute before seeing any content. Next.js sends fully rendered HTML, improving the perceived performance."
+    },
+    {
+      "question": "What is the difference between SSR and SSG?",
+      "options": [
+        "Next.js primarily solves two major problems of client-side React apps: 1. **Poor SEO:** Since the initial HTML is empty, search engine crawlers struggle to index the content. Next.js pre-renders the HTML on the server, making it fully indexable. 2. **Slow Initial Load:** Users have to wait for the entire JavaScript bundle to download and execute before seeing any content. Next.js sends fully rendered HTML, improving the perceived performance.",
+        "You should choose SSR when the page content is highly dynamic and personalized for each user, and it must be up-to-date on every request. A good example is a user dashboard or a social media feed.",
+        "You can use the `ssr: false` option with `next/dynamic`. For example: `const MyComponent = dynamic(() => import('../components/MyComponent'), { ssr: false })`. This is useful for components that rely on browser-only APIs like `window`.",
+        "You implement ISR by adding a `revalidate` property (with a time in seconds) to the object returned by `getStaticProps`. For example: `return { props: { data }, revalidate: 60 }`."
+      ],
+      "answer": "You should choose SSR when the page content is highly dynamic and personalized for each user, and it must be up-to-date on every request. A good example is a user dashboard or a social media feed."
+    },
+    {
+      "question": "What is Incremental Static Regeneration (ISR)?",
+      "options": [
+        "Next.js extends the native `fetch` API to allow you to configure caching behavior on a per-request basis. By default, fetches are cached (`cache: 'force-cache'`). You can change this with options like `{ cache: 'no-store' }` for dynamic data or `{ next: { revalidate: 3600 } }` for ISR.",
+        "Next.js primarily solves two major problems of client-side React apps: 1. **Poor SEO:** Since the initial HTML is empty, search engine crawlers struggle to index the content. Next.js pre-renders the HTML on the server, making it fully indexable. 2. **Slow Initial Load:** Users have to wait for the entire JavaScript bundle to download and execute before seeing any content. Next.js sends fully rendered HTML, improving the perceived performance.",
+        "Streaming allows you to break down the page into smaller chunks and progressively send them from the server to the client. With `loading.js`, the server can immediately send the static parts of the layout and the loading UI, and then 'stream' in the dynamic content as it becomes ready, improving perceived performance.",
+        "You implement ISR by adding a `revalidate` property (with a time in seconds) to the object returned by `getStaticProps`. For example: `return { props: { data }, revalidate: 60 }`."
+      ],
+      "answer": "You implement ISR by adding a `revalidate` property (with a time in seconds) to the object returned by `getStaticProps`. For example: `return { props: { data }, revalidate: 60 }`."
+    },
+    {
+      "question": "What are React Server Components (RSCs)?",
+      "options": [
+        "The main benefits are: 1. **Zero Client-Side JavaScript:** Reduces the amount of code sent to the browser. 2. **Direct Backend Access:** They can securely access databases, internal services, and filesystems directly on the server without needing an API layer.",
+        "You create a dynamic route by wrapping a file or folder name in square brackets. For example, `app/blog/[slug]/page.js` creates a dynamic route where `slug` can be any value.",
+        "The `<Link>` component automatically **prefetches** the code for the linked page when it enters the viewport. This means that by the time the user clicks the link, the destination page is often already loaded, making the navigation feel instantaneous.",
+        "You should choose SSR when the page content is highly dynamic and personalized for each user, and it must be up-to-date on every request. A good example is a user dashboard or a social media feed."
+      ],
+      "answer": "The main benefits are: 1. **Zero Client-Side JavaScript:** Reduces the amount of code sent to the browser. 2. **Direct Backend Access:** They can securely access databases, internal services, and filesystems directly on the server without needing an API layer."
+    },
+    {
+      "question": "What is the difference between a Server Component and a Client Component?",
+      "options": [
+        "Key optimizations include: 1. **Image Resizing:** Automatically serves smaller images for smaller devices. 2. **Modern Formats:** Converts images to modern formats like WebP. 3. **Lazy Loading:** Images are loaded only when they enter the viewport. 4. **Preventing Cumulative Layout Shift (CLS):** Automatically reserves space for the image before it loads.",
+        "Yes, but you must also use `getStaticPaths` to tell Next.js which paths to pre-render at build time. `getStaticPaths` must return an object with a `paths` array.",
+        "You **cannot** directly import a Server Component into a Client Component's file. However, you **can** pass a Server Component as a `prop` (specifically `children`) to a Client Component. This allows you to 'slot' server-rendered content inside an interactive client-side layout.",
+        "The primary use case is to opt-in a segment of routes into a specific layout. For example, you can create a `(marketing)/layout.js` to create a layout that only applies to the routes inside the `(marketing)` folder."
+      ],
+      "answer": "You **cannot** directly import a Server Component into a Client Component's file. However, you **can** pass a Server Component as a `prop` (specifically `children`) to a Client Component. This allows you to 'slot' server-rendered content inside an interactive client-side layout."
+    },
+    {
+      "question": "How do you fetch data in the App Router?",
+      "options": [
+        "The `strategy` prop controls when the third-party script should be loaded. Options include `beforeInteractive` (before the page is interactive), `afterInteractive` (default, after the page is interactive), and `lazyOnload` (during browser idle time).",
+        "Next.js extends the native `fetch` API to allow you to configure caching behavior on a per-request basis. By default, fetches are cached (`cache: 'force-cache'`). You can change this with options like `{ cache: 'no-store' }` for dynamic data or `{ next: { revalidate: 3600 } }` for ISR.",
+        "By self-hosting the font files and preloading them, `next/font` ensures that the font is available when the page is first rendered. This prevents the 'flash' of a fallback font being replaced by the custom font, which would cause a layout shift.",
+        "Streaming allows you to break down the page into smaller chunks and progressively send them from the server to the client. With `loading.js`, the server can immediately send the static parts of the layout and the loading UI, and then 'stream' in the dynamic content as it becomes ready, improving perceived performance."
+      ],
+      "answer": "Next.js extends the native `fetch` API to allow you to configure caching behavior on a per-request basis. By default, fetches are cached (`cache: 'force-cache'`). You can change this with options like `{ cache: 'no-store' }` for dynamic data or `{ next: { revalidate: 3600 } }` for ISR."
+    },
+    {
+      "question": "What is the difference between `getStaticProps` and `getServerSideProps`?",
+      "options": [
+        "Streaming allows you to break down the page into smaller chunks and progressively send them from the server to the client. With `loading.js`, the server can immediately send the static parts of the layout and the loading UI, and then 'stream' in the dynamic content as it becomes ready, improving perceived performance.",
+        "Yes, but you must also use `getStaticPaths` to tell Next.js which paths to pre-render at build time. `getStaticPaths` must return an object with a `paths` array.",
+        "You would use `template.js` when you need to re-run effects (`useEffect`) or re-fetch data on every navigation to a route within that template, or when you need to re-initialize state.",
+        "`revalidateTag` is more powerful because you can associate a fetch request with one or more tags. When you revalidate a tag, Next.js will invalidate the cache for *all* fetch requests that use that tag, across your entire application. This is great for revalidating all data related to a specific entity (e.g., a 'products' tag)."
+      ],
+      "answer": "Yes, but you must also use `getStaticPaths` to tell Next.js which paths to pre-render at build time. `getStaticPaths` must return an object with a `paths` array."
+    },
+    {
+      "question": "What are Server Actions?",
+      "options": [
+        "You should choose SSR when the page content is highly dynamic and personalized for each user, and it must be up-to-date on every request. A good example is a user dashboard or a social media feed.",
+        "Server Actions simplify data mutations by removing the need to manually create API endpoints. You can define the server-side logic directly in your component or a separate file and call it from your form, leading to less boilerplate code.",
+        "You can export an async function named `generateMetadata` from a page. This function receives the `params` and `searchParams` and can fetch data to dynamically generate a metadata object (e.g., setting the title for a specific blog post).",
+        "CSS Modules automatically generate unique class names for your styles, scoping them locally to the component. This prevents class name collisions, which can be a major issue in large applications with many CSS files."
+      ],
+      "answer": "Server Actions simplify data mutations by removing the need to manually create API endpoints. You can define the server-side logic directly in your component or a separate file and call it from your form, leading to less boilerplate code."
+    },
+    {
+      "question": "How does file-based routing work in Next.js?",
+      "options": [
+        "Middleware runs on a special runtime called the 'Edge Runtime', which is very fast and lightweight. Common use cases include authentication, A/B testing, and handling internationalization (i18n) routing.",
+        "You create a dynamic route by wrapping a file or folder name in square brackets. For example, `app/blog/[slug]/page.js` creates a dynamic route where `slug` can be any value.",
+        "By self-hosting the font files and preloading them, `next/font` ensures that the font is available when the page is first rendered. This prevents the 'flash' of a fallback font being replaced by the custom font, which would cause a layout shift.",
+        "Use Next.js API Routes for simpler tasks tied to your frontend, like form submissions or acting as a proxy. Build a separate backend for complex, data-intensive applications, or when you need to serve multiple clients (e.g., web and mobile)."
+      ],
+      "answer": "You create a dynamic route by wrapping a file or folder name in square brackets. For example, `app/blog/[slug]/page.js` creates a dynamic route where `slug` can be any value."
+    },
+    {
+      "question": "What is the `next/image` component?",
+      "options": [
+        "Key optimizations include: 1. **Image Resizing:** Automatically serves smaller images for smaller devices. 2. **Modern Formats:** Converts images to modern formats like WebP. 3. **Lazy Loading:** Images are loaded only when they enter the viewport. 4. **Preventing Cumulative Layout Shift (CLS):** Automatically reserves space for the image before it loads.",
+        "You **cannot** directly import a Server Component into a Client Component's file. However, you **can** pass a Server Component as a `prop` (specifically `children`) to a Client Component. This allows you to 'slot' server-rendered content inside an interactive client-side layout.",
+        "The Edge Runtime does not support all Node.js APIs. For example, you cannot directly access a filesystem or a traditional database connection pool from the Edge. It's designed for speed and is best for tasks like authentication and routing, not heavy backend processing.",
+        "The main benefits are: 1. **Zero Client-Side JavaScript:** Reduces the amount of code sent to the browser. 2. **Direct Backend Access:** They can securely access databases, internal services, and filesystems directly on the server without needing an API layer."
+      ],
+      "answer": "Key optimizations include: 1. **Image Resizing:** Automatically serves smaller images for smaller devices. 2. **Modern Formats:** Converts images to modern formats like WebP. 3. **Lazy Loading:** Images are loaded only when they enter the viewport. 4. **Preventing Cumulative Layout Shift (CLS):** Automatically reserves space for the image before it loads."
+    },
+    {
+      "question": "What is the purpose of `layout.js` and `template.js` files in the App Router?",
+      "options": [
+        "Because Vercel created Next.js, the platform is perfectly optimized to support all of Next.js's features out-of-the-box (SSR, SSG, ISR, Server Components, Middleware, etc.) with zero configuration and superior performance.",
+        "Next.js extends the native `fetch` API to allow you to configure caching behavior on a per-request basis. By default, fetches are cached (`cache: 'force-cache'`). You can change this with options like `{ cache: 'no-store' }` for dynamic data or `{ next: { revalidate: 3600 } }` for ISR.",
+        "You would use `template.js` when you need to re-run effects (`useEffect`) or re-fetch data on every navigation to a route within that template, or when you need to re-initialize state.",
+        "CSS Modules automatically generate unique class names for your styles, scoping them locally to the component. This prevents class name collisions, which can be a major issue in large applications with many CSS files."
+      ],
+      "answer": "You would use `template.js` when you need to re-run effects (`useEffect`) or re-fetch data on every navigation to a route within that template, or when you need to re-initialize state."
+    },
+    {
+      "question": "What are API Routes (or Route Handlers)?",
+      "options": [
+        "You **cannot** directly import a Server Component into a Client Component's file. However, you **can** pass a Server Component as a `prop` (specifically `children`) to a Client Component. This allows you to 'slot' server-rendered content inside an interactive client-side layout.",
+        "A great use case is for dashboards. You can have separate, independent sections of the dashboard (like team activity, user settings, and analytics) each rendered in its own parallel route, with its own loading and error states.",
+        "`router.push()` adds the new URL to the browser's history stack, so the user can use the back button. `router.replace()` replaces the current URL in the history stack, so the back button will not take the user back to the previous page.",
+        "Use Next.js API Routes for simpler tasks tied to your frontend, like form submissions or acting as a proxy. Build a separate backend for complex, data-intensive applications, or when you need to serve multiple clients (e.g., web and mobile)."
+      ],
+      "answer": "Use Next.js API Routes for simpler tasks tied to your frontend, like form submissions or acting as a proxy. Build a separate backend for complex, data-intensive applications, or when you need to serve multiple clients (e.g., web and mobile)."
+    },
+    {
+      "question": "What is Middleware in Next.js?",
+      "options": [
+        "The Edge Runtime does not support all Node.js APIs. For example, you cannot directly access a filesystem or a traditional database connection pool from the Edge. It's designed for speed and is best for tasks like authentication and routing, not heavy backend processing.",
+        "Middleware runs on a special runtime called the 'Edge Runtime', which is very fast and lightweight. Common use cases include authentication, A/B testing, and handling internationalization (i18n) routing.",
+        "CSS Modules automatically generate unique class names for your styles, scoping them locally to the component. This prevents class name collisions, which can be a major issue in large applications with many CSS files.",
+        "`revalidateTag` is more powerful because you can associate a fetch request with one or more tags. When you revalidate a tag, Next.js will invalidate the cache for *all* fetch requests that use that tag, across your entire application. This is great for revalidating all data related to a specific entity (e.g., a 'products' tag)."
+      ],
+      "answer": "Middleware runs on a special runtime called the 'Edge Runtime', which is very fast and lightweight. Common use cases include authentication, A/B testing, and handling internationalization (i18n) routing."
+    },
+    {
+      "question": "How can you style Next.js applications?",
+      "options": [
+        "Use Next.js API Routes for simpler tasks tied to your frontend, like form submissions or acting as a proxy. Build a separate backend for complex, data-intensive applications, or when you need to serve multiple clients (e.g., web and mobile).",
+        "An `error.js` component **must be a Client Component**. You need to add the `'use client'` directive at the top. This is because it relies on state and effects to handle the error and provide functionality like a 'Retry' button.",
+        "CSS Modules automatically generate unique class names for your styles, scoping them locally to the component. This prevents class name collisions, which can be a major issue in large applications with many CSS files.",
+        "A very common pattern is showing a modal. When a user clicks a link, you can 'intercept' the navigation and show the content in a modal overlay. However, if the user refreshes the page or navigates directly to the URL, the full page for that route is rendered instead."
+      ],
+      "answer": "CSS Modules automatically generate unique class names for your styles, scoping them locally to the component. This prevents class name collisions, which can be a major issue in large applications with many CSS files."
+    },
+    {
+      "question": "What is the `next/font` component?",
+      "options": [
+        "A hydration error occurs when the initial UI rendered on the server does not match the initial UI rendered on the client. This can be caused by using browser-only APIs like `window` during the initial server render or having a timestamp that differs between server and client.",
+        "You can use the `ssr: false` option with `next/dynamic`. For example: `const MyComponent = dynamic(() => import('../components/MyComponent'), { ssr: false })`. This is useful for components that rely on browser-only APIs like `window`.",
+        "CSS Modules automatically generate unique class names for your styles, scoping them locally to the component. This prevents class name collisions, which can be a major issue in large applications with many CSS files.",
+        "By self-hosting the font files and preloading them, `next/font` ensures that the font is available when the page is first rendered. This prevents the 'flash' of a fallback font being replaced by the custom font, which would cause a layout shift."
+      ],
+      "answer": "By self-hosting the font files and preloading them, `next/font` ensures that the font is available when the page is first rendered. This prevents the 'flash' of a fallback font being replaced by the custom font, which would cause a layout shift."
+    },
+    {
+      "question": "What are Parallel Routes?",
+      "options": [
+        "The Edge Runtime does not support all Node.js APIs. For example, you cannot directly access a filesystem or a traditional database connection pool from the Edge. It's designed for speed and is best for tasks like authentication and routing, not heavy backend processing.",
+        "Server Actions simplify data mutations by removing the need to manually create API endpoints. You can define the server-side logic directly in your component or a separate file and call it from your form, leading to less boilerplate code.",
+        "The main benefits are: 1. **Zero Client-Side JavaScript:** Reduces the amount of code sent to the browser. 2. **Direct Backend Access:** They can securely access databases, internal services, and filesystems directly on the server without needing an API layer.",
+        "A great use case is for dashboards. You can have separate, independent sections of the dashboard (like team activity, user settings, and analytics) each rendered in its own parallel route, with its own loading and error states."
+      ],
+      "answer": "A great use case is for dashboards. You can have separate, independent sections of the dashboard (like team activity, user settings, and analytics) each rendered in its own parallel route, with its own loading and error states."
+    },
+    {
+      "question": "What are Intercepting Routes?",
+      "options": [
+        "To expose a variable to the browser, you need to prefix it with `NEXT_PUBLIC_`. For example, `NEXT_PUBLIC_API_KEY` would be available in both server and client components.",
+        "The `<Link>` component automatically **prefetches** the code for the linked page when it enters the viewport. This means that by the time the user clicks the link, the destination page is often already loaded, making the navigation feel instantaneous.",
+        "A very common pattern is showing a modal. When a user clicks a link, you can 'intercept' the navigation and show the content in a modal overlay. However, if the user refreshes the page or navigates directly to the URL, the full page for that route is rendered instead.",
+        "A hydration error occurs when the initial UI rendered on the server does not match the initial UI rendered on the client. This can be caused by using browser-only APIs like `window` during the initial server render or having a timestamp that differs between server and client."
+      ],
+      "answer": "A very common pattern is showing a modal. When a user clicks a link, you can 'intercept' the navigation and show the content in a modal overlay. However, if the user refreshes the page or navigates directly to the URL, the full page for that route is rendered instead."
+    },
+    {
+      "question": "How do you use environment variables in Next.js?",
+      "options": [
+        "Because Vercel created Next.js, the platform is perfectly optimized to support all of Next.js's features out-of-the-box (SSR, SSG, ISR, Server Components, Middleware, etc.) with zero configuration and superior performance.",
+        "Server Actions simplify data mutations by removing the need to manually create API endpoints. You can define the server-side logic directly in your component or a separate file and call it from your form, leading to less boilerplate code.",
+        "The Next.js App Router was heavily influenced by concepts popularized by Remix, particularly in its approach to data mutations with Server Actions (similar to Remix's actions) and its focus on nested layouts and co-locating data fetching with components.",
+        "To expose a variable to the browser, you need to prefix it with `NEXT_PUBLIC_`. For example, `NEXT_PUBLIC_API_KEY` would be available in both server and client components."
+      ],
+      "answer": "To expose a variable to the browser, you need to prefix it with `NEXT_PUBLIC_`. For example, `NEXT_PUBLIC_API_KEY` would be available in both server and client components."
+    },
+    {
+      "question": "What are Route Groups?",
+      "options": [
+        "Yes, but you must also use `getStaticPaths` to tell Next.js which paths to pre-render at build time. `getStaticPaths` must return an object with a `paths` array.",
+        "`revalidateTag` is more powerful because you can associate a fetch request with one or more tags. When you revalidate a tag, Next.js will invalidate the cache for *all* fetch requests that use that tag, across your entire application. This is great for revalidating all data related to a specific entity (e.g., a 'products' tag).",
+        "The primary use case is to opt-in a segment of routes into a specific layout. For example, you can create a `(marketing)/layout.js` to create a layout that only applies to the routes inside the `(marketing)` folder.",
+        "The `strategy` prop controls when the third-party script should be loaded. Options include `beforeInteractive` (before the page is interactive), `afterInteractive` (default, after the page is interactive), and `lazyOnload` (during browser idle time)."
+      ],
+      "answer": "The primary use case is to opt-in a segment of routes into a specific layout. For example, you can create a `(marketing)/layout.js` to create a layout that only applies to the routes inside the `(marketing)` folder."
+    },
+    {
+      "question": "What is Dynamic Import in Next.js?",
+      "options": [
+        "The `strategy` prop controls when the third-party script should be loaded. Options include `beforeInteractive` (before the page is interactive), `afterInteractive` (default, after the page is interactive), and `lazyOnload` (during browser idle time).",
+        "Next.js primarily solves two major problems of client-side React apps: 1. **Poor SEO:** Since the initial HTML is empty, search engine crawlers struggle to index the content. Next.js pre-renders the HTML on the server, making it fully indexable. 2. **Slow Initial Load:** Users have to wait for the entire JavaScript bundle to download and execute before seeing any content. Next.js sends fully rendered HTML, improving the perceived performance.",
+        "You create a dynamic route by wrapping a file or folder name in square brackets. For example, `app/blog/[slug]/page.js` creates a dynamic route where `slug` can be any value.",
+        "You can use the `ssr: false` option with `next/dynamic`. For example: `const MyComponent = dynamic(() => import('../components/MyComponent'), { ssr: false })`. This is useful for components that rely on browser-only APIs like `window`."
+      ],
+      "answer": "You can use the `ssr: false` option with `next/dynamic`. For example: `const MyComponent = dynamic(() => import('../components/MyComponent'), { ssr: false })`. This is useful for components that rely on browser-only APIs like `window`."
+    },
+    {
+      "question": "What is the purpose of the `loading.js` file?",
+      "options": [
+        "You create a dynamic route by wrapping a file or folder name in square brackets. For example, `app/blog/[slug]/page.js` creates a dynamic route where `slug` can be any value.",
+        "Next.js extends the native `fetch` API to allow you to configure caching behavior on a per-request basis. By default, fetches are cached (`cache: 'force-cache'`). You can change this with options like `{ cache: 'no-store' }` for dynamic data or `{ next: { revalidate: 3600 } }` for ISR.",
+        "Streaming allows you to break down the page into smaller chunks and progressively send them from the server to the client. With `loading.js`, the server can immediately send the static parts of the layout and the loading UI, and then 'stream' in the dynamic content as it becomes ready, improving perceived performance.",
+        "An Optional Catch-all Route is defined with double square brackets (`[[...slug]]`). It behaves the same as a catch-all but also matches the route without any parameters (e.g., `/docs` in addition to `/docs/a/b/c`)."
+      ],
+      "answer": "Streaming allows you to break down the page into smaller chunks and progressively send them from the server to the client. With `loading.js`, the server can immediately send the static parts of the layout and the loading UI, and then 'stream' in the dynamic content as it becomes ready, improving perceived performance."
+    },
+    {
+      "question": "How do you handle errors in the App Router?",
+      "options": [
+        "Yes, but you must also use `getStaticPaths` to tell Next.js which paths to pre-render at build time. `getStaticPaths` must return an object with a `paths` array.",
+        "An `error.js` component **must be a Client Component**. You need to add the `'use client'` directive at the top. This is because it relies on state and effects to handle the error and provide functionality like a 'Retry' button.",
+        "You would use `template.js` when you need to re-run effects (`useEffect`) or re-fetch data on every navigation to a route within that template, or when you need to re-initialize state.",
+        "`revalidateTag` is more powerful because you can associate a fetch request with one or more tags. When you revalidate a tag, Next.js will invalidate the cache for *all* fetch requests that use that tag, across your entire application. This is great for revalidating all data related to a specific entity (e.g., a 'products' tag)."
+      ],
+      "answer": "An `error.js` component **must be a Client Component**. You need to add the `'use client'` directive at the top. This is because it relies on state and effects to handle the error and provide functionality like a 'Retry' button."
+    },
+    {
+      "question": "What is the `<Link>` component?",
+      "options": [
+        "The `<Link>` component automatically **prefetches** the code for the linked page when it enters the viewport. This means that by the time the user clicks the link, the destination page is often already loaded, making the navigation feel instantaneous.",
+        "A great use case is for dashboards. You can have separate, independent sections of the dashboard (like team activity, user settings, and analytics) each rendered in its own parallel route, with its own loading and error states.",
+        "You should choose SSR when the page content is highly dynamic and personalized for each user, and it must be up-to-date on every request. A good example is a user dashboard or a social media feed.",
+        "The main benefits are: 1. **Zero Client-Side JavaScript:** Reduces the amount of code sent to the browser. 2. **Direct Backend Access:** They can securely access databases, internal services, and filesystems directly on the server without needing an API layer."
+      ],
+      "answer": "The `<Link>` component automatically **prefetches** the code for the linked page when it enters the viewport. This means that by the time the user clicks the link, the destination page is often already loaded, making the navigation feel instantaneous."
+    },
+    {
+      "question": "What is Vercel?",
+      "options": [
+        "The Edge Runtime does not support all Node.js APIs. For example, you cannot directly access a filesystem or a traditional database connection pool from the Edge. It's designed for speed and is best for tasks like authentication and routing, not heavy backend processing.",
+        "You use the `next start` command to start the production server. You should never use `next dev` in a production environment.",
+        "You create a dynamic route by wrapping a file or folder name in square brackets. For example, `app/blog/[slug]/page.js` creates a dynamic route where `slug` can be any value.",
+        "Because Vercel created Next.js, the platform is perfectly optimized to support all of Next.js's features out-of-the-box (SSR, SSG, ISR, Server Components, Middleware, etc.) with zero configuration and superior performance."
+      ],
+      "answer": "Because Vercel created Next.js, the platform is perfectly optimized to support all of Next.js's features out-of-the-box (SSR, SSG, ISR, Server Components, Middleware, etc.) with zero configuration and superior performance."
+    },
+    {
+      "question": "What are Catch-all Routes?",
+      "options": [
+        "You would use `template.js` when you need to re-run effects (`useEffect`) or re-fetch data on every navigation to a route within that template, or when you need to re-initialize state.",
+        "You can export an async function named `generateMetadata` from a page. This function receives the `params` and `searchParams` and can fetch data to dynamically generate a metadata object (e.g., setting the title for a specific blog post).",
+        "Server Actions simplify data mutations by removing the need to manually create API endpoints. You can define the server-side logic directly in your component or a separate file and call it from your form, leading to less boilerplate code.",
+        "An Optional Catch-all Route is defined with double square brackets (`[[...slug]]`). It behaves the same as a catch-all but also matches the route without any parameters (e.g., `/docs` in addition to `/docs/a/b/c`)."
+      ],
+      "answer": "An Optional Catch-all Route is defined with double square brackets (`[[...slug]]`). It behaves the same as a catch-all but also matches the route without any parameters (e.g., `/docs` in addition to `/docs/a/b/c`)."
+    },
+    {
+      "question": "What is the purpose of the `useRouter` hook?",
+      "options": [
+        "You use the `next start` command to start the production server. You should never use `next dev` in a production environment.",
+        "The Next.js App Router was heavily influenced by concepts popularized by Remix, particularly in its approach to data mutations with Server Actions (similar to Remix's actions) and its focus on nested layouts and co-locating data fetching with components.",
+        "Server Actions simplify data mutations by removing the need to manually create API endpoints. You can define the server-side logic directly in your component or a separate file and call it from your form, leading to less boilerplate code.",
+        "`router.push()` adds the new URL to the browser's history stack, so the user can use the back button. `router.replace()` replaces the current URL in the history stack, so the back button will not take the user back to the previous page."
+      ],
+      "answer": "`router.push()` adds the new URL to the browser's history stack, so the user can use the back button. `router.replace()` replaces the current URL in the history stack, so the back button will not take the user back to the previous page."
+    },
+    {
+      "question": "What is the `next/script` component?",
+      "options": [
+        "You can use the `ssr: false` option with `next/dynamic`. For example: `const MyComponent = dynamic(() => import('../components/MyComponent'), { ssr: false })`. This is useful for components that rely on browser-only APIs like `window`.",
+        "The `strategy` prop controls when the third-party script should be loaded. Options include `beforeInteractive` (before the page is interactive), `afterInteractive` (default, after the page is interactive), and `lazyOnload` (during browser idle time).",
+        "An Optional Catch-all Route is defined with double square brackets (`[[...slug]]`). It behaves the same as a catch-all but also matches the route without any parameters (e.g., `/docs` in addition to `/docs/a/b/c`).",
+        "You create a dynamic route by wrapping a file or folder name in square brackets. For example, `app/blog/[slug]/page.js` creates a dynamic route where `slug` can be any value."
+      ],
+      "answer": "The `strategy` prop controls when the third-party script should be loaded. Options include `beforeInteractive` (before the page is interactive), `afterInteractive` (default, after the page is interactive), and `lazyOnload` (during browser idle time)."
+    },
+    {
+      "question": "How do you access URL search parameters in the App Router?",
+      "options": [
+        "It's a hook because it reads from the client-side URL. Any component that needs to read the current URL must be a Client Component, as the full URL is a client-side concern and not available during server-side pre-rendering.",
+        "`revalidateTag` is more powerful because you can associate a fetch request with one or more tags. When you revalidate a tag, Next.js will invalidate the cache for *all* fetch requests that use that tag, across your entire application. This is great for revalidating all data related to a specific entity (e.g., a 'products' tag).",
+        "The `<Link>` component automatically **prefetches** the code for the linked page when it enters the viewport. This means that by the time the user clicks the link, the destination page is often already loaded, making the navigation feel instantaneous.",
+        "A hydration error occurs when the initial UI rendered on the server does not match the initial UI rendered on the client. This can be caused by using browser-only APIs like `window` during the initial server render or having a timestamp that differs between server and client."
+      ],
+      "answer": "It's a hook because it reads from the client-side URL. Any component that needs to read the current URL must be a Client Component, as the full URL is a client-side concern and not available during server-side pre-rendering."
+    },
+    {
+      "question": "What is 'hydration' in the context of React and Next.js?",
+      "options": [
+        "You can export an async function named `generateMetadata` from a page. This function receives the `params` and `searchParams` and can fetch data to dynamically generate a metadata object (e.g., setting the title for a specific blog post).",
+        "You would use `template.js` when you need to re-run effects (`useEffect`) or re-fetch data on every navigation to a route within that template, or when you need to re-initialize state.",
+        "Yes, but you must also use `getStaticPaths` to tell Next.js which paths to pre-render at build time. `getStaticPaths` must return an object with a `paths` array.",
+        "A hydration error occurs when the initial UI rendered on the server does not match the initial UI rendered on the client. This can be caused by using browser-only APIs like `window` during the initial server render or having a timestamp that differs between server and client."
+      ],
+      "answer": "A hydration error occurs when the initial UI rendered on the server does not match the initial UI rendered on the client. This can be caused by using browser-only APIs like `window` during the initial server render or having a timestamp that differs between server and client."
+    },
+    {
+      "question": "What is the purpose of the `generateStaticParams` function?",
+      "options": [
+        "You can export an async function named `generateMetadata` from a page. This function receives the `params` and `searchParams` and can fetch data to dynamically generate a metadata object (e.g., setting the title for a specific blog post).",
+        "No. In the App Router, data fetching is done directly inside the Server Component with `async/await`. `generateStaticParams` only provides the *parameters* (like the `slug`) for the pages to be generated; the page component itself is responsible for fetching its own data using that parameter.",
+        "Use Next.js API Routes for simpler tasks tied to your frontend, like form submissions or acting as a proxy. Build a separate backend for complex, data-intensive applications, or when you need to serve multiple clients (e.g., web and mobile).",
+        "Because Vercel created Next.js, the platform is perfectly optimized to support all of Next.js's features out-of-the-box (SSR, SSG, ISR, Server Components, Middleware, etc.) with zero configuration and superior performance."
+      ],
+      "answer": "No. In the App Router, data fetching is done directly inside the Server Component with `async/await`. `generateStaticParams` only provides the *parameters* (like the `slug`) for the pages to be generated; the page component itself is responsible for fetching its own data using that parameter."
+    },
+    {
+      "question": "How do you manage the `<head>` tag in Next.js?",
+      "options": [
+        "An `error.js` component **must be a Client Component**. You need to add the `'use client'` directive at the top. This is because it relies on state and effects to handle the error and provide functionality like a 'Retry' button.",
+        "You **cannot** directly import a Server Component into a Client Component's file. However, you **can** pass a Server Component as a `prop` (specifically `children`) to a Client Component. This allows you to 'slot' server-rendered content inside an interactive client-side layout.",
+        "You can export an async function named `generateMetadata` from a page. This function receives the `params` and `searchParams` and can fetch data to dynamically generate a metadata object (e.g., setting the title for a specific blog post).",
+        "An Optional Catch-all Route is defined with double square brackets (`[[...slug]]`). It behaves the same as a catch-all but also matches the route without any parameters (e.g., `/docs` in addition to `/docs/a/b/c`)."
+      ],
+      "answer": "You can export an async function named `generateMetadata` from a page. This function receives the `params` and `searchParams` and can fetch data to dynamically generate a metadata object (e.g., setting the title for a specific blog post)."
+    },
+    {
+      "question": "How does Next.js compare to Remix?",
+      "options": [
+        "You **cannot** directly import a Server Component into a Client Component's file. However, you **can** pass a Server Component as a `prop` (specifically `children`) to a Client Component. This allows you to 'slot' server-rendered content inside an interactive client-side layout.",
+        "You create a dynamic route by wrapping a file or folder name in square brackets. For example, `app/blog/[slug]/page.js` creates a dynamic route where `slug` can be any value.",
+        "The Next.js App Router was heavily influenced by concepts popularized by Remix, particularly in its approach to data mutations with Server Actions (similar to Remix's actions) and its focus on nested layouts and co-locating data fetching with components.",
+        "Key optimizations include: 1. **Image Resizing:** Automatically serves smaller images for smaller devices. 2. **Modern Formats:** Converts images to modern formats like WebP. 3. **Lazy Loading:** Images are loaded only when they enter the viewport. 4. **Preventing Cumulative Layout Shift (CLS):** Automatically reserves space for the image before it loads."
+      ],
+      "answer": "The Next.js App Router was heavily influenced by concepts popularized by Remix, particularly in its approach to data mutations with Server Actions (similar to Remix's actions) and its focus on nested layouts and co-locating data fetching with components."
+    },
+    {
+      "question": "What is the Edge Runtime?",
+      "options": [
+        "Next.js primarily solves two major problems of client-side React apps: 1. **Poor SEO:** Since the initial HTML is empty, search engine crawlers struggle to index the content. Next.js pre-renders the HTML on the server, making it fully indexable. 2. **Slow Initial Load:** Users have to wait for the entire JavaScript bundle to download and execute before seeing any content. Next.js sends fully rendered HTML, improving the perceived performance.",
+        "By self-hosting the font files and preloading them, `next/font` ensures that the font is available when the page is first rendered. This prevents the 'flash' of a fallback font being replaced by the custom font, which would cause a layout shift.",
+        "No. In the App Router, data fetching is done directly inside the Server Component with `async/await`. `generateStaticParams` only provides the *parameters* (like the `slug`) for the pages to be generated; the page component itself is responsible for fetching its own data using that parameter.",
+        "The Edge Runtime does not support all Node.js APIs. For example, you cannot directly access a filesystem or a traditional database connection pool from the Edge. It's designed for speed and is best for tasks like authentication and routing, not heavy backend processing."
+      ],
+      "answer": "The Edge Runtime does not support all Node.js APIs. For example, you cannot directly access a filesystem or a traditional database connection pool from the Edge. It's designed for speed and is best for tasks like authentication and routing, not heavy backend processing."
+    },
+    {
+      "question": "What does `next build` do?",
+      "options": [
+        "The `strategy` prop controls when the third-party script should be loaded. Options include `beforeInteractive` (before the page is interactive), `afterInteractive` (default, after the page is interactive), and `lazyOnload` (during browser idle time).",
+        "The Edge Runtime does not support all Node.js APIs. For example, you cannot directly access a filesystem or a traditional database connection pool from the Edge. It's designed for speed and is best for tasks like authentication and routing, not heavy backend processing.",
+        "Next.js extends the native `fetch` API to allow you to configure caching behavior on a per-request basis. By default, fetches are cached (`cache: 'force-cache'`). You can change this with options like `{ cache: 'no-store' }` for dynamic data or `{ next: { revalidate: 3600 } }` for ISR.",
+        "You use the `next start` command to start the production server. You should never use `next dev` in a production environment."
+      ],
+      "answer": "You use the `next start` command to start the production server. You should never use `next dev` in a production environment."
+    },
+    {
+      "question": "How can you revalidate data on-demand in the App Router?",
+      "options": [
+        "Middleware runs on a special runtime called the 'Edge Runtime', which is very fast and lightweight. Common use cases include authentication, A/B testing, and handling internationalization (i18n) routing.",
+        "`revalidateTag` is more powerful because you can associate a fetch request with one or more tags. When you revalidate a tag, Next.js will invalidate the cache for *all* fetch requests that use that tag, across your entire application. This is great for revalidating all data related to a specific entity (e.g., a 'products' tag).",
+        "You can export an async function named `generateMetadata` from a page. This function receives the `params` and `searchParams` and can fetch data to dynamically generate a metadata object (e.g., setting the title for a specific blog post).",
+        "To expose a variable to the browser, you need to prefix it with `NEXT_PUBLIC_`. For example, `NEXT_PUBLIC_API_KEY` would be available in both server and client components."
+      ],
+      "answer": "`revalidateTag` is more powerful because you can associate a fetch request with one or more tags. When you revalidate a tag, Next.js will invalidate the cache for *all* fetch requests that use that tag, across your entire application. This is great for revalidating all data related to a specific entity (e.g., a 'products' tag)."
+    }
+  ]
+}

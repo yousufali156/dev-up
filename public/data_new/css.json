@@ -1,0 +1,504 @@
+{
+  "questions": [
+    {
+      "question": "What is CSS?",
+      "options": [
+        "It should be used with caution because it has a performance cost. Applying a rule to every single element on the page can be slow, especially on large, complex pages. It's generally better to use more specific selectors.",
+        "They are often equivalent. `bold` is a keyword, while `700` is a numeric value on the font weight scale (100-900). Using the numeric value gives you more granular control if the font family supports different weights (e.g., 600 for semi-bold).",
+        "'Cascading' refers to the algorithm that determines how styles are applied to an element when multiple rules could apply. It's a priority scheme based on specificity, importance (`!important`), and source order.",
+        "It's commonly used to create non-rectangular shapes. You can use basic shapes like `circle()` or `polygon()` to clip images or divs into interesting shapes like hexagons or stars."
+      ],
+      "answer": "'Cascading' refers to the algorithm that determines how styles are applied to an element when multiple rules could apply. It's a priority scheme based on specificity, importance (`!important`), and source order."
+    },
+    {
+      "question": "What are the three basic ways to apply CSS styles?",
+      "options": [
+        "External stylesheets are the best practice because they separate content from presentation, allow for reusability across multiple pages, and improve performance through browser caching.",
+        "The available space is divided into 3 equal parts (1 + 2). The first column will take up 1 part, and the second column will take up 2 parts. The second column will be twice as wide as the first.",
+        "The general sibling combinator (`~`) is less strict. `h1 ~ p` will select all `<p>` elements that are siblings of and come after an `<h1>`, not just the one immediately following it.",
+        "The shorthand property is `flex-flow`. For example, `flex-flow: row wrap;` sets the direction to row and allows wrapping."
+      ],
+      "answer": "External stylesheets are the best practice because they separate content from presentation, allow for reusability across multiple pages, and improve performance through browser caching."
+    },
+    {
+      "question": "What is the difference between an ID selector and a class selector?",
+      "options": [
+        "You would use `visibility: hidden` in combination with `opacity: 0`. An element with `display: none` cannot be transitioned or animated because it is not rendered at all.",
+        "The shorthand property is `flex-flow`. For example, `flex-flow: row wrap;` sets the direction to row and allows wrapping.",
+        "Normalize.css is often preferred because it's less aggressive. It keeps useful defaults (like headings having different font sizes) and provides a better starting point, whereas a full reset forces you to redefine every single style from scratch.",
+        "An ID selector has a much higher specificity. This is important because if two rules target the same element, the one with the more specific selector will be applied, regardless of its order in the stylesheet."
+      ],
+      "answer": "An ID selector has a much higher specificity. This is important because if two rules target the same element, the one with the more specific selector will be applied, regardless of its order in the stylesheet."
+    },
+    {
+      "question": "What is the CSS Box Model?",
+      "options": [
+        "By default, an element's `width` and `height` properties only apply to its content. `box-sizing: border-box;` changes this so that the `width` and `height` properties include the content, padding, and border, making layouts much more intuitive.",
+        "A transition is typically triggered by a state change (like `:hover`) and animates from a start state to an end state. An animation, defined with `@keyframes`, can have multiple steps and can run without a user-triggered state change.",
+        "The available space is divided into 3 equal parts (1 + 2). The first column will take up 1 part, and the second column will take up 2 parts. The second column will be twice as wide as the first.",
+        "`rem` is preferred because you can scale the typography of the entire website up or down by simply changing the font-size on the `<html>` element, avoiding the compounding issues of nested `em` units."
+      ],
+      "answer": "By default, an element's `width` and `height` properties only apply to its content. `box-sizing: border-box;` changes this so that the `width` and `height` properties include the content, padding, and border, making layouts much more intuitive."
+    },
+    {
+      "question": "What are the different ways to specify colors in CSS?",
+      "options": [
+        "Including a generic family ensures that if none of the specified fonts are available on the user's system, the browser will use its default font from that generic category, maintaining a consistent look.",
+        "External stylesheets are the best practice because they separate content from presentation, allow for reusability across multiple pages, and improve performance through browser caching.",
+        "RGBA and HSLA include an 'alpha' channel, which allows you to specify the opacity of the color. This is useful for creating semi-transparent backgrounds or text effects.",
+        "A stacking context is a group of elements with a common parent that move together along the z-axis. An element's `z-index` only has meaning within its parent stacking context. A child element can never be layered on top of a different element if its parent has a lower `z-index`."
+      ],
+      "answer": "RGBA and HSLA include an 'alpha' channel, which allows you to specify the opacity of the color. This is useful for creating semi-transparent backgrounds or text effects."
+    },
+    {
+      "question": "What is the difference between `px`, `em`, and `rem` units?",
+      "options": [
+        "`rem` is preferred because you can scale the typography of the entire website up or down by simply changing the font-size on the `<html>` element, avoiding the compounding issues of nested `em` units.",
+        "Normalize.css is often preferred because it's less aggressive. It keeps useful defaults (like headings having different font sizes) and provides a better starting point, whereas a full reset forces you to redefine every single style from scratch.",
+        "A mixin is a block of CSS declarations that you can reuse throughout your site. It's similar to a function in a programming language, and you can even pass arguments to it to make it more flexible.",
+        "An ID selector has a much higher specificity. This is important because if two rules target the same element, the one with the more specific selector will be applied, regardless of its order in the stylesheet."
+      ],
+      "answer": "`rem` is preferred because you can scale the typography of the entire website up or down by simply changing the font-size on the `<html>` element, avoiding the compounding issues of nested `em` units."
+    },
+    {
+      "question": "What is the `font-family` property used for?",
+      "options": [
+        "`!important` is a rule that overrides all other specificity rules. It should be avoided because it breaks the natural cascading flow of CSS, making the code extremely difficult to debug and maintain.",
+        "You can use `calc()` to dynamically adjust layouts. For example, you can define a custom property `--gutter: 20px;` and then use `width: calc(50% - var(--gutter));`. This allows you to change the gutter width in one place and have all related calculations update automatically.",
+        "It's commonly used to create non-rectangular shapes. You can use basic shapes like `circle()` or `polygon()` to clip images or divs into interesting shapes like hexagons or stars.",
+        "Including a generic family ensures that if none of the specified fonts are available on the user's system, the browser will use its default font from that generic category, maintaining a consistent look."
+      ],
+      "answer": "Including a generic family ensures that if none of the specified fonts are available on the user's system, the browser will use its default font from that generic category, maintaining a consistent look."
+    },
+    {
+      "question": "What are the different values for the `position` property?",
+      "options": [
+        "`position: absolute` positions the element relative to its nearest *positioned* ancestor. `position: fixed` positions the element relative to the *viewport*, meaning it stays in the same place even when the page is scrolled.",
+        "The `dense` value tells the grid's auto-placement algorithm to attempt to fill in holes in the grid. If a smaller item appears later, it can be moved back to fill an earlier gap, leading to a more compact layout.",
+        "`rem` is preferred because you can scale the typography of the entire website up or down by simply changing the font-size on the `<html>` element, avoiding the compounding issues of nested `em` units.",
+        "The specificity is calculated for each selector in the group individually. The grouping itself does not increase the specificity. `h1` has its own low specificity, and `.title` has its own separate, higher specificity."
+      ],
+      "answer": "`position: absolute` positions the element relative to its nearest *positioned* ancestor. `position: fixed` positions the element relative to the *viewport*, meaning it stays in the same place even when the page is scrolled."
+    },
+    {
+      "question": "What is Flexbox?",
+      "options": [
+        "`justify-content` aligns items along the main axis (the direction of `flex-direction`). `align-items` aligns items along the cross axis (the axis perpendicular to the main axis).",
+        "Setting `opacity` on a parent element affects all of its child elements. You cannot make a child element more opaque than its parent. This is a key difference from using RGBA colors for transparency.",
+        "You would use `visibility: hidden` in combination with `opacity: 0`. An element with `display: none` cannot be transitioned or animated because it is not rendered at all.",
+        "RGBA and HSLA include an 'alpha' channel, which allows you to specify the opacity of the color. This is useful for creating semi-transparent backgrounds or text effects."
+      ],
+      "answer": "`justify-content` aligns items along the main axis (the direction of `flex-direction`). `align-items` aligns items along the cross axis (the axis perpendicular to the main axis)."
+    },
+    {
+      "question": "What is CSS Grid?",
+      "options": [
+        "Use **Flexbox** for one-dimensional layouts (aligning items in a single row or column). Use **CSS Grid** for two-dimensional layouts (arranging items in both rows and columns simultaneously). They are often used together.",
+        "An example would be `.card__title--large`. Here, `.card` is the Block, `__title` is the Element, and `--large` is the Modifier.",
+        "Using `transform: translate()` is more performant. It moves the element on the GPU without triggering a browser reflow or repaint of the surrounding elements, resulting in smoother animations.",
+        "The descendant combinator (`ul li`) is less strict. It selects all `<li>` elements that are anywhere inside a `<ul>`, no matter how deeply nested they are."
+      ],
+      "answer": "Use **Flexbox** for one-dimensional layouts (aligning items in a single row or column). Use **CSS Grid** for two-dimensional layouts (arranging items in both rows and columns simultaneously). They are often used together."
+    },
+    {
+      "question": "What is the difference between a pseudo-class and a pseudo-element?",
+      "options": [
+        "The available space is divided into 3 equal parts (1 + 2). The first column will take up 1 part, and the second column will take up 2 parts. The second column will be twice as wide as the first.",
+        "An ID selector has a much higher specificity. This is important because if two rules target the same element, the one with the more specific selector will be applied, regardless of its order in the stylesheet.",
+        "The double colon (`::`) was introduced in CSS3 to distinguish pseudo-elements from pseudo-classes. While browsers support a single colon for backward compatibility, using the double colon is the modern, correct syntax.",
+        "They are often equivalent. `bold` is a keyword, while `700` is a numeric value on the font weight scale (100-900). Using the numeric value gives you more granular control if the font family supports different weights (e.g., 600 for semi-bold)."
+      ],
+      "answer": "The double colon (`::`) was introduced in CSS3 to distinguish pseudo-elements from pseudo-classes. While browsers support a single colon for backward compatibility, using the double colon is the modern, correct syntax."
+    },
+    {
+      "question": "What are media queries?",
+      "options": [
+        "In a **'mobile-first'** approach, you write base CSS for mobile screens and use `min-width` media queries for larger screens. In **'desktop-first'**, you do the opposite. Mobile-first is the modern best practice.",
+        "The available space is divided into 3 equal parts (1 + 2). The first column will take up 1 part, and the second column will take up 2 parts. The second column will be twice as wide as the first.",
+        "`block` and `inline-block` elements respect top and bottom margins. `inline` elements do not; any top or bottom margin applied to them will have no effect.",
+        "A transition is typically triggered by a state change (like `:hover`) and animates from a start state to an end state. An animation, defined with `@keyframes`, can have multiple steps and can run without a user-triggered state change."
+      ],
+      "answer": "In a **'mobile-first'** approach, you write base CSS for mobile screens and use `min-width` media queries for larger screens. In **'desktop-first'**, you do the opposite. Mobile-first is the modern best practice."
+    },
+    {
+      "question": "What is CSS Specificity?",
+      "options": [
+        "You can use the `background-repeat` property and set its value to `no-repeat`. For example, `background-repeat: no-repeat;`.",
+        "It's useful for styling all elements except a specific one. For example, `nav a:not(.active)` would apply a style to all links in a navigation bar except for the one that has the `.active` class.",
+        "In a **'mobile-first'** approach, you write base CSS for mobile screens and use `min-width` media queries for larger screens. In **'desktop-first'**, you do the opposite. Mobile-first is the modern best practice.",
+        "`!important` is a rule that overrides all other specificity rules. It should be avoided because it breaks the natural cascading flow of CSS, making the code extremely difficult to debug and maintain."
+      ],
+      "answer": "`!important` is a rule that overrides all other specificity rules. It should be avoided because it breaks the natural cascading flow of CSS, making the code extremely difficult to debug and maintain."
+    },
+    {
+      "question": "What does the `z-index` property do?",
+      "options": [
+        "A stacking context is a group of elements with a common parent that move together along the z-axis. An element's `z-index` only has meaning within its parent stacking context. A child element can never be layered on top of a different element if its parent has a lower `z-index`.",
+        "Use **Flexbox** for one-dimensional layouts (aligning items in a single row or column). Use **CSS Grid** for two-dimensional layouts (arranging items in both rows and columns simultaneously). They are often used together.",
+        "Normalize.css is often preferred because it's less aggressive. It keeps useful defaults (like headings having different font sizes) and provides a better starting point, whereas a full reset forces you to redefine every single style from scratch.",
+        "`justify-content` aligns items along the main axis (the direction of `flex-direction`). `align-items` aligns items along the cross axis (the axis perpendicular to the main axis)."
+      ],
+      "answer": "A stacking context is a group of elements with a common parent that move together along the z-axis. An element's `z-index` only has meaning within its parent stacking context. A child element can never be layered on top of a different element if its parent has a lower `z-index`."
+    },
+    {
+      "question": "What are CSS Custom Properties (Variables)?",
+      "options": [
+        "The specificity is calculated for each selector in the group individually. The grouping itself does not increase the specificity. `h1` has its own low specificity, and `.title` has its own separate, higher specificity.",
+        "The key advantage is that CSS Custom Properties are **live and dynamic** in the browser's DOM. This means they can be accessed and manipulated with JavaScript in real-time, which is impossible for pre-processor variables.",
+        "The general sibling combinator (`~`) is less strict. `h1 ~ p` will select all `<p>` elements that are siblings of and come after an `<h1>`, not just the one immediately following it.",
+        "Use **Flexbox** for one-dimensional layouts (aligning items in a single row or column). Use **CSS Grid** for two-dimensional layouts (arranging items in both rows and columns simultaneously). They are often used together."
+      ],
+      "answer": "The key advantage is that CSS Custom Properties are **live and dynamic** in the browser's DOM. This means they can be accessed and manipulated with JavaScript in real-time, which is impossible for pre-processor variables."
+    },
+    {
+      "question": "What is a CSS transition?",
+      "options": [
+        "A very common use case is for creating navigation bars that scroll with the page initially but then 'stick' to the top of the viewport once the user scrolls past them.",
+        "The shorthand property is `flex-flow`. For example, `flex-flow: row wrap;` sets the direction to row and allows wrapping.",
+        "A transition is typically triggered by a state change (like `:hover`) and animates from a start state to an end state. An animation, defined with `@keyframes`, can have multiple steps and can run without a user-triggered state change.",
+        "It's commonly used to create non-rectangular shapes. You can use basic shapes like `circle()` or `polygon()` to clip images or divs into interesting shapes like hexagons or stars."
+      ],
+      "answer": "A transition is typically triggered by a state change (like `:hover`) and animates from a start state to an end state. An animation, defined with `@keyframes`, can have multiple steps and can run without a user-triggered state change."
+    },
+    {
+      "question": "What are CSS keyframes?",
+      "options": [
+        "You can create an inner shadow (inset) by adding the `inset` keyword as the first value in the `box-shadow` declaration. This makes the shadow appear inside the element's border.",
+        "By default, an element's `width` and `height` properties only apply to its content. `box-sizing: border-box;` changes this so that the `width` and `height` properties include the content, padding, and border, making layouts much more intuitive.",
+        "They are excellent for creating full-screen sections. For example, setting `height: 100vh;` on a hero section will make it always take up the full height of the browser window, regardless of the device.",
+        "`animation-fill-mode` specifies a style for the element when the animation is not playing (before it starts, after it ends, or both). For example, `forwards` will make the element retain the style values from the last keyframe."
+      ],
+      "answer": "`animation-fill-mode` specifies a style for the element when the animation is not playing (before it starts, after it ends, or both). For example, `forwards` will make the element retain the style values from the last keyframe."
+    },
+    {
+      "question": "What is the difference between `display: none` and `visibility: hidden`?",
+      "options": [
+        "You would use `visibility: hidden` in combination with `opacity: 0`. An element with `display: none` cannot be transitioned or animated because it is not rendered at all.",
+        "`rem` is preferred because you can scale the typography of the entire website up or down by simply changing the font-size on the `<html>` element, avoiding the compounding issues of nested `em` units.",
+        "The descendant combinator (`ul li`) is less strict. It selects all `<li>` elements that are anywhere inside a `<ul>`, no matter how deeply nested they are.",
+        "`block` and `inline-block` elements respect top and bottom margins. `inline` elements do not; any top or bottom margin applied to them will have no effect."
+      ],
+      "answer": "You would use `visibility: hidden` in combination with `opacity: 0`. An element with `display: none` cannot be transitioned or animated because it is not rendered at all."
+    },
+    {
+      "question": "What is a CSS preprocessor?",
+      "options": [
+        "`animation-fill-mode` specifies a style for the element when the animation is not playing (before it starts, after it ends, or both). For example, `forwards` will make the element retain the style values from the last keyframe.",
+        "A mixin is a block of CSS declarations that you can reuse throughout your site. It's similar to a function in a programming language, and you can even pass arguments to it to make it more flexible.",
+        "Using `transform: translate()` is more performant. It moves the element on the GPU without triggering a browser reflow or repaint of the surrounding elements, resulting in smoother animations.",
+        "`position: absolute` positions the element relative to its nearest *positioned* ancestor. `position: fixed` positions the element relative to the *viewport*, meaning it stays in the same place even when the page is scrolled."
+      ],
+      "answer": "A mixin is a block of CSS declarations that you can reuse throughout your site. It's similar to a function in a programming language, and you can even pass arguments to it to make it more flexible."
+    },
+    {
+      "question": "What is the universal selector (`*`) and when might you use it?",
+      "options": [
+        "An example would be `.card__title--large`. Here, `.card` is the Block, `__title` is the Element, and `--large` is the Modifier.",
+        "You can use the `background-repeat` property and set its value to `no-repeat`. For example, `background-repeat: no-repeat;`.",
+        "`position: absolute` positions the element relative to its nearest *positioned* ancestor. `position: fixed` positions the element relative to the *viewport*, meaning it stays in the same place even when the page is scrolled.",
+        "It should be used with caution because it has a performance cost. Applying a rule to every single element on the page can be slow, especially on large, complex pages. It's generally better to use more specific selectors."
+      ],
+      "answer": "It should be used with caution because it has a performance cost. Applying a rule to every single element on the page can be slow, especially on large, complex pages. It's generally better to use more specific selectors."
+    },
+    {
+      "question": "What does the `flex-wrap` property do?",
+      "options": [
+        "You can use the `^` symbol in the attribute selector. For example, `a[href^=\"https\"]` will select all anchor tags whose `href` attribute value starts with 'https'.",
+        "The shorthand property is `flex-flow`. For example, `flex-flow: row wrap;` sets the direction to row and allows wrapping.",
+        "An example would be `.card__title--large`. Here, `.card` is the Block, `__title` is the Element, and `--large` is the Modifier.",
+        "The specificity is calculated for each selector in the group individually. The grouping itself does not increase the specificity. `h1` has its own low specificity, and `.title` has its own separate, higher specificity."
+      ],
+      "answer": "The shorthand property is `flex-flow`. For example, `flex-flow: row wrap;` sets the direction to row and allows wrapping."
+    },
+    {
+      "question": "What is the `fr` unit in CSS Grid?",
+      "options": [
+        "The available space is divided into 3 equal parts (1 + 2). The first column will take up 1 part, and the second column will take up 2 parts. The second column will be twice as wide as the first.",
+        "Yes, the `filter` property is animatable. You can create smooth transitions between different filter states, for example, transitioning an image from grayscale to full color on hover.",
+        "They are often equivalent. `bold` is a keyword, while `700` is a numeric value on the font weight scale (100-900). Using the numeric value gives you more granular control if the font family supports different weights (e.g., 600 for semi-bold).",
+        "They are excellent for creating full-screen sections. For example, setting `height: 100vh;` on a hero section will make it always take up the full height of the browser window, regardless of the device."
+      ],
+      "answer": "The available space is divided into 3 equal parts (1 + 2). The first column will take up 1 part, and the second column will take up 2 parts. The second column will be twice as wide as the first."
+    },
+    {
+      "question": "What does the CSS `transform` property do?",
+      "options": [
+        "An ID selector has a much higher specificity. This is important because if two rules target the same element, the one with the more specific selector will be applied, regardless of its order in the stylesheet.",
+        "It's commonly used to create non-rectangular shapes. You can use basic shapes like `circle()` or `polygon()` to clip images or divs into interesting shapes like hexagons or stars.",
+        "Using `transform: translate()` is more performant. It moves the element on the GPU without triggering a browser reflow or repaint of the surrounding elements, resulting in smoother animations.",
+        "It's used for progressive enhancement. For example, you could provide a basic layout using floats, and then, inside `@supports (display: grid)`, override it with a more advanced CSS Grid layout for browsers that support it."
+      ],
+      "answer": "Using `transform: translate()` is more performant. It moves the element on the GPU without triggering a browser reflow or repaint of the surrounding elements, resulting in smoother animations."
+    },
+    {
+      "question": "What are attribute selectors?",
+      "options": [
+        "By default, an element's `width` and `height` properties only apply to its content. `box-sizing: border-box;` changes this so that the `width` and `height` properties include the content, padding, and border, making layouts much more intuitive.",
+        "You can use the `^` symbol in the attribute selector. For example, `a[href^=\"https\"]` will select all anchor tags whose `href` attribute value starts with 'https'.",
+        "A transition is typically triggered by a state change (like `:hover`) and animates from a start state to an end state. An animation, defined with `@keyframes`, can have multiple steps and can run without a user-triggered state change.",
+        "A mixin is a block of CSS declarations that you can reuse throughout your site. It's similar to a function in a programming language, and you can even pass arguments to it to make it more flexible."
+      ],
+      "answer": "You can use the `^` symbol in the attribute selector. For example, `a[href^=\"https\"]` will select all anchor tags whose `href` attribute value starts with 'https'."
+    },
+    {
+      "question": "What is BEM?",
+      "options": [
+        "An example would be `.card__title--large`. Here, `.card` is the Block, `__title` is the Element, and `--large` is the Modifier.",
+        "You would use `visibility: hidden` in combination with `opacity: 0`. An element with `display: none` cannot be transitioned or animated because it is not rendered at all.",
+        "`!important` is a rule that overrides all other specificity rules. It should be avoided because it breaks the natural cascading flow of CSS, making the code extremely difficult to debug and maintain.",
+        "It's useful for styling all elements except a specific one. For example, `nav a:not(.active)` would apply a style to all links in a navigation bar except for the one that has the `.active` class."
+      ],
+      "answer": "An example would be `.card__title--large`. Here, `.card` is the Block, `__title` is the Element, and `--large` is the Modifier."
+    },
+    {
+      "question": "How do you group selectors?",
+      "options": [
+        "The specificity is calculated for each selector in the group individually. The grouping itself does not increase the specificity. `h1` has its own low specificity, and `.title` has its own separate, higher specificity.",
+        "You would use `visibility: hidden` in combination with `opacity: 0`. An element with `display: none` cannot be transitioned or animated because it is not rendered at all.",
+        "You can use the `^` symbol in the attribute selector. For example, `a[href^=\"https\"]` will select all anchor tags whose `href` attribute value starts with 'https'.",
+        "Generally, no. The content inserted via the `content` property is not part of the DOM, so it cannot be selected by the user's cursor. However, some modern browsers are starting to allow it."
+      ],
+      "answer": "The specificity is calculated for each selector in the group individually. The grouping itself does not increase the specificity. `h1` has its own low specificity, and `.title` has its own separate, higher specificity."
+    },
+    {
+      "question": "What is collapsing margins?",
+      "options": [
+        "Margins do not collapse for floated or absolutely positioned elements, elements with `overflow` other than `visible`, or elements inside a Flexbox or Grid container.",
+        "In a **'mobile-first'** approach, you write base CSS for mobile screens and use `min-width` media queries for larger screens. In **'desktop-first'**, you do the opposite. Mobile-first is the modern best practice.",
+        "'Cascading' refers to the algorithm that determines how styles are applied to an element when multiple rules could apply. It's a priority scheme based on specificity, importance (`!important`), and source order.",
+        "RGBA and HSLA include an 'alpha' channel, which allows you to specify the opacity of the color. This is useful for creating semi-transparent backgrounds or text effects."
+      ],
+      "answer": "Margins do not collapse for floated or absolutely positioned elements, elements with `overflow` other than `visible`, or elements inside a Flexbox or Grid container."
+    },
+    {
+      "question": "What is the difference between `inline`, `block`, and `inline-block`?",
+      "options": [
+        "The `dense` value tells the grid's auto-placement algorithm to attempt to fill in holes in the grid. If a smaller item appears later, it can be moved back to fill an earlier gap, leading to a more compact layout.",
+        "The available space is divided into 3 equal parts (1 + 2). The first column will take up 1 part, and the second column will take up 2 parts. The second column will be twice as wide as the first.",
+        "`block` and `inline-block` elements respect top and bottom margins. `inline` elements do not; any top or bottom margin applied to them will have no effect.",
+        "An example would be `.card__title--large`. Here, `.card` is the Block, `__title` is the Element, and `--large` is the Modifier."
+      ],
+      "answer": "`block` and `inline-block` elements respect top and bottom margins. `inline` elements do not; any top or bottom margin applied to them will have no effect."
+    },
+    {
+      "question": "What is 'critical CSS'?",
+      "options": [
+        "`!important` is a rule that overrides all other specificity rules. It should be avoided because it breaks the natural cascading flow of CSS, making the code extremely difficult to debug and maintain.",
+        "By inlining the critical CSS directly in a `<style>` tag in the `<head>`, the browser can start rendering the visible part of the page immediately without waiting to download an external stylesheet. The rest of the CSS is then loaded asynchronously.",
+        "External stylesheets are the best practice because they separate content from presentation, allow for reusability across multiple pages, and improve performance through browser caching.",
+        "'Cascading' refers to the algorithm that determines how styles are applied to an element when multiple rules could apply. It's a priority scheme based on specificity, importance (`!important`), and source order."
+      ],
+      "answer": "By inlining the critical CSS directly in a `<style>` tag in the `<head>`, the browser can start rendering the visible part of the page immediately without waiting to download an external stylesheet. The rest of the CSS is then loaded asynchronously."
+    },
+    {
+      "question": "What is the `content` property used for?",
+      "options": [
+        "`animation-fill-mode` specifies a style for the element when the animation is not playing (before it starts, after it ends, or both). For example, `forwards` will make the element retain the style values from the last keyframe.",
+        "Generally, no. The content inserted via the `content` property is not part of the DOM, so it cannot be selected by the user's cursor. However, some modern browsers are starting to allow it.",
+        "To create a perfect circle, you need a square element (equal width and height) and then set `border-radius: 50%;`.",
+        "By default, an element's `width` and `height` properties only apply to its content. `box-sizing: border-box;` changes this so that the `width` and `height` properties include the content, padding, and border, making layouts much more intuitive."
+      ],
+      "answer": "Generally, no. The content inserted via the `content` property is not part of the DOM, so it cannot be selected by the user's cursor. However, some modern browsers are starting to allow it."
+    },
+    {
+      "question": "What is a CSS Reset or Normalize.css?",
+      "options": [
+        "Normalize.css is often preferred because it's less aggressive. It keeps useful defaults (like headings having different font sizes) and provides a better starting point, whereas a full reset forces you to redefine every single style from scratch.",
+        "`animation-fill-mode` specifies a style for the element when the animation is not playing (before it starts, after it ends, or both). For example, `forwards` will make the element retain the style values from the last keyframe.",
+        "`block` and `inline-block` elements respect top and bottom margins. `inline` elements do not; any top or bottom margin applied to them will have no effect.",
+        "You can create an inner shadow (inset) by adding the `inset` keyword as the first value in the `box-shadow` declaration. This makes the shadow appear inside the element's border."
+      ],
+      "answer": "Normalize.css is often preferred because it's less aggressive. It keeps useful defaults (like headings having different font sizes) and provides a better starting point, whereas a full reset forces you to redefine every single style from scratch."
+    },
+    {
+      "question": "What is the child combinator (`>`)?",
+      "options": [
+        "No, not all properties are inherited. Typographical properties like `font-family`, `color`, and `font-size` are typically inherited. Box model properties like `border`, `padding`, and `margin` are not inherited.",
+        "Normalize.css is often preferred because it's less aggressive. It keeps useful defaults (like headings having different font sizes) and provides a better starting point, whereas a full reset forces you to redefine every single style from scratch.",
+        "The descendant combinator (`ul li`) is less strict. It selects all `<li>` elements that are anywhere inside a `<ul>`, no matter how deeply nested they are.",
+        "You can use the `^` symbol in the attribute selector. For example, `a[href^=\"https\"]` will select all anchor tags whose `href` attribute value starts with 'https'."
+      ],
+      "answer": "The descendant combinator (`ul li`) is less strict. It selects all `<li>` elements that are anywhere inside a `<ul>`, no matter how deeply nested they are."
+    },
+    {
+      "question": "What problem does `display: contents` solve?",
+      "options": [
+        "You can use `calc()` to dynamically adjust layouts. For example, you can define a custom property `--gutter: 20px;` and then use `width: calc(50% - var(--gutter));`. This allows you to change the gutter width in one place and have all related calculations update automatically.",
+        "It's great for when a semantic wrapper element is breaking your layout. By applying `display: contents` to the wrapper, you remove it from the layout tree, allowing its children to become direct flex or grid items of the grandparent, achieving the desired visual layout.",
+        "An ID selector has a much higher specificity. This is important because if two rules target the same element, the one with the more specific selector will be applied, regardless of its order in the stylesheet.",
+        "An example would be `.card__title--large`. Here, `.card` is the Block, `__title` is the Element, and `--large` is the Modifier."
+      ],
+      "answer": "It's great for when a semantic wrapper element is breaking your layout. By applying `display: contents` to the wrapper, you remove it from the layout tree, allowing its children to become direct flex or grid items of the grandparent, achieving the desired visual layout."
+    },
+    {
+      "question": "What is the `calc()` function in CSS?",
+      "options": [
+        "Use **Flexbox** for one-dimensional layouts (aligning items in a single row or column). Use **CSS Grid** for two-dimensional layouts (arranging items in both rows and columns simultaneously). They are often used together.",
+        "You can use `calc()` to dynamically adjust layouts. For example, you can define a custom property `--gutter: 20px;` and then use `width: calc(50% - var(--gutter));`. This allows you to change the gutter width in one place and have all related calculations update automatically.",
+        "'Cascading' refers to the algorithm that determines how styles are applied to an element when multiple rules could apply. It's a priority scheme based on specificity, importance (`!important`), and source order.",
+        "It's commonly used to create non-rectangular shapes. You can use basic shapes like `circle()` or `polygon()` to clip images or divs into interesting shapes like hexagons or stars."
+      ],
+      "answer": "You can use `calc()` to dynamically adjust layouts. For example, you can define a custom property `--gutter: 20px;` and then use `width: calc(50% - var(--gutter));`. This allows you to change the gutter width in one place and have all related calculations update automatically."
+    },
+    {
+      "question": "How do you make text bold in CSS?",
+      "options": [
+        "You would use `visibility: hidden` in combination with `opacity: 0`. An element with `display: none` cannot be transitioned or animated because it is not rendered at all.",
+        "They are often equivalent. `bold` is a keyword, while `700` is a numeric value on the font weight scale (100-900). Using the numeric value gives you more granular control if the font family supports different weights (e.g., 600 for semi-bold).",
+        "By inlining the critical CSS directly in a `<style>` tag in the `<head>`, the browser can start rendering the visible part of the page immediately without waiting to download an external stylesheet. The rest of the CSS is then loaded asynchronously.",
+        "A mixin is a block of CSS declarations that you can reuse throughout your site. It's similar to a function in a programming language, and you can even pass arguments to it to make it more flexible."
+      ],
+      "answer": "They are often equivalent. `bold` is a keyword, while `700` is a numeric value on the font weight scale (100-900). Using the numeric value gives you more granular control if the font family supports different weights (e.g., 600 for semi-bold)."
+    },
+    {
+      "question": "What does the `overflow` property control?",
+      "options": [
+        "You can use the `background-repeat` property and set its value to `no-repeat`. For example, `background-repeat: no-repeat;`.",
+        "'Cascading' refers to the algorithm that determines how styles are applied to an element when multiple rules could apply. It's a priority scheme based on specificity, importance (`!important`), and source order.",
+        "`position: absolute` positions the element relative to its nearest *positioned* ancestor. `position: fixed` positions the element relative to the *viewport*, meaning it stays in the same place even when the page is scrolled.",
+        "`scroll` will always show scrollbars, even if the content fits. `auto` is smarter; it will only show scrollbars if the content actually overflows."
+      ],
+      "answer": "`scroll` will always show scrollbars, even if the content fits. `auto` is smarter; it will only show scrollbars if the content actually overflows."
+    },
+    {
+      "question": "How do you add a background image to an element?",
+      "options": [
+        "To create a perfect circle, you need a square element (equal width and height) and then set `border-radius: 50%;`.",
+        "You can use the `background-repeat` property and set its value to `no-repeat`. For example, `background-repeat: no-repeat;`.",
+        "They are often equivalent. `bold` is a keyword, while `700` is a numeric value on the font weight scale (100-900). Using the numeric value gives you more granular control if the font family supports different weights (e.g., 600 for semi-bold).",
+        "A transition is typically triggered by a state change (like `:hover`) and animates from a start state to an end state. An animation, defined with `@keyframes`, can have multiple steps and can run without a user-triggered state change."
+      ],
+      "answer": "You can use the `background-repeat` property and set its value to `no-repeat`. For example, `background-repeat: no-repeat;`."
+    },
+    {
+      "question": "What is the CSS `filter` property?",
+      "options": [
+        "An example would be `.card__title--large`. Here, `.card` is the Block, `__title` is the Element, and `--large` is the Modifier.",
+        "`justify-content` aligns items along the main axis (the direction of `flex-direction`). `align-items` aligns items along the cross axis (the axis perpendicular to the main axis).",
+        "Yes, the `filter` property is animatable. You can create smooth transitions between different filter states, for example, transitioning an image from grayscale to full color on hover.",
+        "The descendant combinator (`ul li`) is less strict. It selects all `<li>` elements that are anywhere inside a `<ul>`, no matter how deeply nested they are."
+      ],
+      "answer": "Yes, the `filter` property is animatable. You can create smooth transitions between different filter states, for example, transitioning an image from grayscale to full color on hover."
+    },
+    {
+      "question": "What does the `:not()` pseudo-class do?",
+      "options": [
+        "Using `transform: translate()` is more performant. It moves the element on the GPU without triggering a browser reflow or repaint of the surrounding elements, resulting in smoother animations.",
+        "It's useful for styling all elements except a specific one. For example, `nav a:not(.active)` would apply a style to all links in a navigation bar except for the one that has the `.active` class.",
+        "It's commonly used to create non-rectangular shapes. You can use basic shapes like `circle()` or `polygon()` to clip images or divs into interesting shapes like hexagons or stars.",
+        "It's used for progressive enhancement. For example, you could provide a basic layout using floats, and then, inside `@supports (display: grid)`, override it with a more advanced CSS Grid layout for browsers that support it."
+      ],
+      "answer": "It's useful for styling all elements except a specific one. For example, `nav a:not(.active)` would apply a style to all links in a navigation bar except for the one that has the `.active` class."
+    },
+    {
+      "question": "How do you create a rounded border in CSS?",
+      "options": [
+        "By default, an element's `width` and `height` properties only apply to its content. `box-sizing: border-box;` changes this so that the `width` and `height` properties include the content, padding, and border, making layouts much more intuitive.",
+        "The `dense` value tells the grid's auto-placement algorithm to attempt to fill in holes in the grid. If a smaller item appears later, it can be moved back to fill an earlier gap, leading to a more compact layout.",
+        "`!important` is a rule that overrides all other specificity rules. It should be avoided because it breaks the natural cascading flow of CSS, making the code extremely difficult to debug and maintain.",
+        "To create a perfect circle, you need a square element (equal width and height) and then set `border-radius: 50%;`."
+      ],
+      "answer": "To create a perfect circle, you need a square element (equal width and height) and then set `border-radius: 50%;`."
+    },
+    {
+      "question": "What is `position: sticky`?",
+      "options": [
+        "By inlining the critical CSS directly in a `<style>` tag in the `<head>`, the browser can start rendering the visible part of the page immediately without waiting to download an external stylesheet. The rest of the CSS is then loaded asynchronously.",
+        "A stacking context is a group of elements with a common parent that move together along the z-axis. An element's `z-index` only has meaning within its parent stacking context. A child element can never be layered on top of a different element if its parent has a lower `z-index`.",
+        "A very common use case is for creating navigation bars that scroll with the page initially but then 'stick' to the top of the viewport once the user scrolls past them.",
+        "A mixin is a block of CSS declarations that you can reuse throughout your site. It's similar to a function in a programming language, and you can even pass arguments to it to make it more flexible."
+      ],
+      "answer": "A very common use case is for creating navigation bars that scroll with the page initially but then 'stick' to the top of the viewport once the user scrolls past them."
+    },
+    {
+      "question": "What is inheritance in CSS?",
+      "options": [
+        "`animation-fill-mode` specifies a style for the element when the animation is not playing (before it starts, after it ends, or both). For example, `forwards` will make the element retain the style values from the last keyframe.",
+        "You can create an inner shadow (inset) by adding the `inset` keyword as the first value in the `box-shadow` declaration. This makes the shadow appear inside the element's border.",
+        "No, not all properties are inherited. Typographical properties like `font-family`, `color`, and `font-size` are typically inherited. Box model properties like `border`, `padding`, and `margin` are not inherited.",
+        "A transition is typically triggered by a state change (like `:hover`) and animates from a start state to an end state. An animation, defined with `@keyframes`, can have multiple steps and can run without a user-triggered state change."
+      ],
+      "answer": "No, not all properties are inherited. Typographical properties like `font-family`, `color`, and `font-size` are typically inherited. Box model properties like `border`, `padding`, and `margin` are not inherited."
+    },
+    {
+      "question": "What is `grid-auto-flow`?",
+      "options": [
+        "Generally, no. The content inserted via the `content` property is not part of the DOM, so it cannot be selected by the user's cursor. However, some modern browsers are starting to allow it.",
+        "The shorthand property is `flex-flow`. For example, `flex-flow: row wrap;` sets the direction to row and allows wrapping.",
+        "To create a perfect circle, you need a square element (equal width and height) and then set `border-radius: 50%;`.",
+        "The `dense` value tells the grid's auto-placement algorithm to attempt to fill in holes in the grid. If a smaller item appears later, it can be moved back to fill an earlier gap, leading to a more compact layout."
+      ],
+      "answer": "The `dense` value tells the grid's auto-placement algorithm to attempt to fill in holes in the grid. If a smaller item appears later, it can be moved back to fill an earlier gap, leading to a more compact layout."
+    },
+    {
+      "question": "What are viewport units (`vw`, `vh`)?",
+      "options": [
+        "`!important` is a rule that overrides all other specificity rules. It should be avoided because it breaks the natural cascading flow of CSS, making the code extremely difficult to debug and maintain.",
+        "By default, an element's `width` and `height` properties only apply to its content. `box-sizing: border-box;` changes this so that the `width` and `height` properties include the content, padding, and border, making layouts much more intuitive.",
+        "No, not all properties are inherited. Typographical properties like `font-family`, `color`, and `font-size` are typically inherited. Box model properties like `border`, `padding`, and `margin` are not inherited.",
+        "They are excellent for creating full-screen sections. For example, setting `height: 100vh;` on a hero section will make it always take up the full height of the browser window, regardless of the device."
+      ],
+      "answer": "They are excellent for creating full-screen sections. For example, setting `height: 100vh;` on a hero section will make it always take up the full height of the browser window, regardless of the device."
+    },
+    {
+      "question": "What is the adjacent sibling combinator (`+`)?",
+      "options": [
+        "'Cascading' refers to the algorithm that determines how styles are applied to an element when multiple rules could apply. It's a priority scheme based on specificity, importance (`!important`), and source order.",
+        "Setting `opacity` on a parent element affects all of its child elements. You cannot make a child element more opaque than its parent. This is a key difference from using RGBA colors for transparency.",
+        "Using `transform: translate()` is more performant. It moves the element on the GPU without triggering a browser reflow or repaint of the surrounding elements, resulting in smoother animations.",
+        "The general sibling combinator (`~`) is less strict. `h1 ~ p` will select all `<p>` elements that are siblings of and come after an `<h1>`, not just the one immediately following it."
+      ],
+      "answer": "The general sibling combinator (`~`) is less strict. `h1 ~ p` will select all `<p>` elements that are siblings of and come after an `<h1>`, not just the one immediately following it."
+    },
+    {
+      "question": "How do you create a box shadow in CSS?",
+      "options": [
+        "You can use the `^` symbol in the attribute selector. For example, `a[href^=\"https\"]` will select all anchor tags whose `href` attribute value starts with 'https'.",
+        "A mixin is a block of CSS declarations that you can reuse throughout your site. It's similar to a function in a programming language, and you can even pass arguments to it to make it more flexible.",
+        "You can create an inner shadow (inset) by adding the `inset` keyword as the first value in the `box-shadow` declaration. This makes the shadow appear inside the element's border.",
+        "'Cascading' refers to the algorithm that determines how styles are applied to an element when multiple rules could apply. It's a priority scheme based on specificity, importance (`!important`), and source order."
+      ],
+      "answer": "You can create an inner shadow (inset) by adding the `inset` keyword as the first value in the `box-shadow` declaration. This makes the shadow appear inside the element's border."
+    },
+    {
+      "question": "What is the `clip-path` property?",
+      "options": [
+        "The shorthand property is `flex-flow`. For example, `flex-flow: row wrap;` sets the direction to row and allows wrapping.",
+        "The general sibling combinator (`~`) is less strict. `h1 ~ p` will select all `<p>` elements that are siblings of and come after an `<h1>`, not just the one immediately following it.",
+        "Including a generic family ensures that if none of the specified fonts are available on the user's system, the browser will use its default font from that generic category, maintaining a consistent look.",
+        "It's commonly used to create non-rectangular shapes. You can use basic shapes like `circle()` or `polygon()` to clip images or divs into interesting shapes like hexagons or stars."
+      ],
+      "answer": "It's commonly used to create non-rectangular shapes. You can use basic shapes like `circle()` or `polygon()` to clip images or divs into interesting shapes like hexagons or stars."
+    },
+    {
+      "question": "What is the `opacity` property?",
+      "options": [
+        "Setting `opacity` on a parent element affects all of its child elements. You cannot make a child element more opaque than its parent. This is a key difference from using RGBA colors for transparency.",
+        "The double colon (`::`) was introduced in CSS3 to distinguish pseudo-elements from pseudo-classes. While browsers support a single colon for backward compatibility, using the double colon is the modern, correct syntax.",
+        "The shorthand property is `flex-flow`. For example, `flex-flow: row wrap;` sets the direction to row and allows wrapping.",
+        "An example would be `.card__title--large`. Here, `.card` is the Block, `__title` is the Element, and `--large` is the Modifier."
+      ],
+      "answer": "Setting `opacity` on a parent element affects all of its child elements. You cannot make a child element more opaque than its parent. This is a key difference from using RGBA colors for transparency."
+    },
+    {
+      "question": "What are feature queries (`@supports`)?",
+      "options": [
+        "They are often equivalent. `bold` is a keyword, while `700` is a numeric value on the font weight scale (100-900). Using the numeric value gives you more granular control if the font family supports different weights (e.g., 600 for semi-bold).",
+        "You can use `calc()` to dynamically adjust layouts. For example, you can define a custom property `--gutter: 20px;` and then use `width: calc(50% - var(--gutter));`. This allows you to change the gutter width in one place and have all related calculations update automatically.",
+        "`rem` is preferred because you can scale the typography of the entire website up or down by simply changing the font-size on the `<html>` element, avoiding the compounding issues of nested `em` units.",
+        "It's used for progressive enhancement. For example, you could provide a basic layout using floats, and then, inside `@supports (display: grid)`, override it with a more advanced CSS Grid layout for browsers that support it."
+      ],
+      "answer": "It's used for progressive enhancement. For example, you could provide a basic layout using floats, and then, inside `@supports (display: grid)`, override it with a more advanced CSS Grid layout for browsers that support it."
+    },
+    {
+      "question": "What is the 'float' property used for?",
+      "options": [
+        "No, not all properties are inherited. Typographical properties like `font-family`, `color`, and `font-size` are typically inherited. Box model properties like `border`, `padding`, and `margin` are not inherited.",
+        "To create a perfect circle, you need a square element (equal width and height) and then set `border-radius: 50%;`.",
+        "It's used for progressive enhancement. For example, you could provide a basic layout using floats, and then, inside `@supports (display: grid)`, override it with a more advanced CSS Grid layout for browsers that support it.",
+        "While `float` is still useful for wrapping text around images, it's not ideal for complex page layouts. Modern tools like Flexbox and CSS Grid provide far more powerful and predictable control over layout without the side effects of floats, such as needing to be 'cleared'."
+      ],
+      "answer": "While `float` is still useful for wrapping text around images, it's not ideal for complex page layouts. Modern tools like Flexbox and CSS Grid provide far more powerful and predictable control over layout without the side effects of floats, such as needing to be 'cleared'."
+    }
+  ]
+}

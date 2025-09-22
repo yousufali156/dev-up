@@ -4,6 +4,7 @@
 import React from 'react';
 import { HomeIcon, CodeIcon, ExamIcon, ProfileIcon, LoginIcon } from '../../common/Icons/Icons';
 import type { MockUser } from '../../../types';
+import Logo from '../../common/Logo/Logo';
 
 // 1. ক্লোজ (X) আইকন SVG হিসেবে তৈরি করা হয়েছে।
 const CloseIcon = () => (
@@ -57,10 +58,7 @@ export default function Sidebar({
         <aside className={`fixed inset-y-0 left-0 z-40 w-72 bg-[#1F2937] p-6 border-r border-gray-700 flex-shrink-0 flex flex-col transition-transform duration-300 ease-in-out md:relative md:translate-x-0 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
             <div className="flex justify-between items-center mb-8">
                 <div className="text-4xl font-extrabold flex items-center gap-2">
-                    <span className="text-5xl">🚀</span>
-                    <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 text-transparent bg-clip-text drop-shadow-lg">
-                        Dev Up
-                    </span>
+                    <Logo/>
                 </div>
                 {/* 7. এই ক্লোজ বাটনটি শুধু মোবাইল ভিউতে দেখা যাবে। */}
                 <button className="md:hidden text-gray-400 hover:text-white" onClick={toggleSidebar}>

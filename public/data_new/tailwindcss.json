@@ -1,0 +1,304 @@
+{
+  "questions": [
+    {
+      "question": "What is Tailwind CSS?",
+      "options": [
+        "1. **Fast Build Times:** Since it only generates the CSS you need, builds are incredibly fast. 2. **Arbitrary Value Support:** You can use values not in your theme directly in your HTML (e.g., `w-[321px]`). 3. **All Variants Enabled:** All variants (like `focus-visible`, `disabled`) are enabled by default without increasing build size.",
+        "'Utility-first' means you compose a design by applying small, single-purpose classes (e.g., `flex`, `pt-4`, `text-center`). This is different from Bootstrap, which provides pre-styled components (e.g., `.btn`, `.card`), giving you less design flexibility.",
+        "Overusing `@apply` can recreate the problem Tailwind aims to solve: building a large, abstract CSS file that is separate from your markup. The recommended modern alternative is to create abstractions at the component level (e.g., a React `<Button>` component), keeping the utilities co-located.",
+        "Yes. If you have nested groups, you can give them unique names using `group/{name}` (e.g., `group/item`) and then target them with variants like `group-hover/item:`."
+      ],
+      "answer": "'Utility-first' means you compose a design by applying small, single-purpose classes (e.g., `flex`, `pt-4`, `text-center`). This is different from Bootstrap, which provides pre-styled components (e.g., `.btn`, `.card`), giving you less design flexibility."
+    },
+    {
+      "question": "How do you apply responsive styles in Tailwind?",
+      "options": [
+        "Tailwind is mobile-first by default. Utility classes without a prefix (e.g., `text-center`) apply to all screen sizes, starting from mobile. Prefixed utilities (e.g., `md:text-left`) then override the base styles at that specific breakpoint and larger.",
+        "It's useful when you need to use a theme value where a utility class isn't possible, like in a CSS gradient. Example: `background-image: linear-gradient(to right, theme('colors.blue.500'), theme('colors.purple.500'));`",
+        "Yes. If you have nested groups, you can give them unique names using `group/{name}` (e.g., `group/item`) and then target them with variants like `group-hover/item:`.",
+        "You can use the `odd:` and `even:` variants, which correspond to the `:nth-child(odd)` and `:nth-child(even)` pseudo-classes. For example, `tr:odd:bg-gray-100`."
+      ],
+      "answer": "Tailwind is mobile-first by default. Utility classes without a prefix (e.g., `text-center`) apply to all screen sizes, starting from mobile. Prefixed utilities (e.g., `md:text-left`) then override the base styles at that specific breakpoint and larger."
+    },
+    {
+      "question": "How do you handle states like hover and focus?",
+      "options": [
+        "You can set the opacity by adding a slash followed by a percentage value to the color utility. For example, `text-red-500/50` will apply the red-500 color with 50% opacity.",
+        "You can use the `group` class on the parent element and then use the `group-hover:` prefix on a child element. For example, `<div class=\"group\"><p class=\"group-hover:text-red-500\">Text</p></div>`.",
+        "The counter-argument is that in modern component-based frameworks (like React or Vue), these long class lists are encapsulated within reusable components. You write the long class list once inside the component, and then reuse the clean component everywhere else.",
+        "You can use an attribute selector as the arbitrary variant. For example, `[&[data-state=open]]:bg-blue-200` would apply a blue background only when the element has the attribute `data-state=\"open\"`."
+      ],
+      "answer": "You can use the `group` class on the parent element and then use the `group-hover:` prefix on a child element. For example, `<div class=\"group\"><p class=\"group-hover:text-red-500\">Text</p></div>`."
+    },
+    {
+      "question": "What is the purpose of the `tailwind.config.js` file?",
+      "options": [
+        "Placing customizations directly inside `theme` will **completely replace** Tailwind's default values for that key. Placing them inside `theme.extend` will **add to or override** the defaults without removing the rest. Using `extend` is the recommended approach in almost all cases.",
+        "`addUtilities` is for adding small, single-purpose utility classes. `addComponents` is for adding more complex, multi-layered component classes, like a custom `.card` or `.btn`.",
+        "By placing your custom component styles in the `components` layer (e.g., `@layer components { .btn { ... } }`), you ensure that they can still be overridden by Tailwind's utility classes, preserving the utility-first workflow.",
+        "The counter-argument is that in modern component-based frameworks (like React or Vue), these long class lists are encapsulated within reusable components. You write the long class list once inside the component, and then reuse the clean component everywhere else."
+      ],
+      "answer": "Placing customizations directly inside `theme` will **completely replace** Tailwind's default values for that key. Placing them inside `theme.extend` will **add to or override** the defaults without removing the rest. Using `extend` is the recommended approach in almost all cases."
+    },
+    {
+      "question": "What is the Just-In-Time (JIT) Compiler in Tailwind?",
+      "options": [
+        "1. **Fast Build Times:** Since it only generates the CSS you need, builds are incredibly fast. 2. **Arbitrary Value Support:** You can use values not in your theme directly in your HTML (e.g., `w-[321px]`). 3. **All Variants Enabled:** All variants (like `focus-visible`, `disabled`) are enabled by default without increasing build size.",
+        "No, they should be used sparingly. Their purpose is for pixel-perfect, one-off adjustments. If you find yourself using the same arbitrary value repeatedly, it's a sign that you should add that value to your `tailwind.config.js` theme instead.",
+        "The `space-x-{amount}` or `space-y-{amount}` utilities are a convenient way to add a consistent margin between child elements. It applies a margin to all but the first child, preventing extra space at the beginning of the container.",
+        "The counter-argument is that in modern component-based frameworks (like React or Vue), these long class lists are encapsulated within reusable components. You write the long class list once inside the component, and then reuse the clean component everywhere else."
+      ],
+      "answer": "1. **Fast Build Times:** Since it only generates the CSS you need, builds are incredibly fast. 2. **Arbitrary Value Support:** You can use values not in your theme directly in your HTML (e.g., `w-[321px]`). 3. **All Variants Enabled:** All variants (like `focus-visible`, `disabled`) are enabled by default without increasing build size."
+    },
+    {
+      "question": "What does the `@apply` directive do?",
+      "options": [
+        "Tailwind is mobile-first by default. Utility classes without a prefix (e.g., `text-center`) apply to all screen sizes, starting from mobile. Prefixed utilities (e.g., `md:text-left`) then override the base styles at that specific breakpoint and larger.",
+        "Common official plugins include: `@tailwindcss/forms` which provides a basic reset for form styles, and `@tailwindcss/typography` which adds the `prose` class for styling blocks of rich text content like Markdown.",
+        "`w-full` makes an element 100% of the width of its **parent container**. `w-screen` makes an element 100% of the width of the **viewport** (the screen).",
+        "Overusing `@apply` can recreate the problem Tailwind aims to solve: building a large, abstract CSS file that is separate from your markup. The recommended modern alternative is to create abstractions at the component level (e.g., a React `<Button>` component), keeping the utilities co-located."
+      ],
+      "answer": "Overusing `@apply` can recreate the problem Tailwind aims to solve: building a large, abstract CSS file that is separate from your markup. The recommended modern alternative is to create abstractions at the component level (e.g., a React `<Button>` component), keeping the utilities co-located."
+    },
+    {
+      "question": "What is the purpose of the `content` property in `tailwind.config.js`?",
+      "options": [
+        "`addUtilities` is for adding small, single-purpose utility classes. `addComponents` is for adding more complex, multi-layered component classes, like a custom `.card` or `.btn`.",
+        "If a file path is missing, Tailwind will not scan that file. As a result, any utility classes used only in that file will not be included in the final CSS output, and those styles will appear broken.",
+        "The JIT compiler is essentially the evolution of purging. Instead of generating a massive CSS file and then removing unused classes, the JIT compiler works in reverse: it scans your files first and only generates the classes that you actually use.",
+        "The easiest way is to make the parent a flex container and use the classes `flex justify-center items-center`."
+      ],
+      "answer": "If a file path is missing, Tailwind will not scan that file. As a result, any utility classes used only in that file will not be included in the final CSS output, and those styles will appear broken."
+    },
+    {
+      "question": "What are the `@tailwind` directives used for?",
+      "options": [
+        "You would import the font file in your main CSS file using `@import`, or in your main HTML file's `<head>` section using a `<link>` tag, just like you would in a project without Tailwind.",
+        "1. **Fast Build Times:** Since it only generates the CSS you need, builds are incredibly fast. 2. **Arbitrary Value Support:** You can use values not in your theme directly in your HTML (e.g., `w-[321px]`). 3. **All Variants Enabled:** All variants (like `focus-visible`, `disabled`) are enabled by default without increasing build size.",
+        "It's useful when you need to use a theme value where a utility class isn't possible, like in a CSS gradient. Example: `background-image: linear-gradient(to right, theme('colors.blue.500'), theme('colors.purple.500'));`",
+        "They must be in the order: `base`, `components`, `utilities`. This is to ensure the correct cascade, where utilities can override component styles, and component styles can override base styles."
+      ],
+      "answer": "They must be in the order: `base`, `components`, `utilities`. This is to ensure the correct cascade, where utilities can override component styles, and component styles can override base styles."
+    },
+    {
+      "question": "What are Tailwind CSS plugins?",
+      "options": [
+        "You would use responsive prefixes: `grid grid-cols-1 lg:grid-cols-3`. This sets the default to one column and overrides it to three columns on large screens and up.",
+        "Tailwind is mobile-first by default. Utility classes without a prefix (e.g., `text-center`) apply to all screen sizes, starting from mobile. Prefixed utilities (e.g., `md:text-left`) then override the base styles at that specific breakpoint and larger.",
+        "Common official plugins include: `@tailwindcss/forms` which provides a basic reset for form styles, and `@tailwindcss/typography` which adds the `prose` class for styling blocks of rich text content like Markdown.",
+        "1. **Fast Build Times:** Since it only generates the CSS you need, builds are incredibly fast. 2. **Arbitrary Value Support:** You can use values not in your theme directly in your HTML (e.g., `w-[321px]`). 3. **All Variants Enabled:** All variants (like `focus-visible`, `disabled`) are enabled by default without increasing build size."
+      ],
+      "answer": "Common official plugins include: `@tailwindcss/forms` which provides a basic reset for form styles, and `@tailwindcss/typography` which adds the `prose` class for styling blocks of rich text content like Markdown."
+    },
+    {
+      "question": "What is the `theme()` function in CSS?",
+      "options": [
+        "It's useful when you need to use a theme value where a utility class isn't possible, like in a CSS gradient. Example: `background-image: linear-gradient(to right, theme('colors.blue.500'), theme('colors.purple.500'));`",
+        "You can use the `odd:` and `even:` variants, which correspond to the `:nth-child(odd)` and `:nth-child(even)` pseudo-classes. For example, `tr:odd:bg-gray-100`.",
+        "`w-full` makes an element 100% of the width of its **parent container**. `w-screen` makes an element 100% of the width of the **viewport** (the screen).",
+        "Yes. If you have nested groups, you can give them unique names using `group/{name}` (e.g., `group/item`) and then target them with variants like `group-hover/item:`."
+      ],
+      "answer": "It's useful when you need to use a theme value where a utility class isn't possible, like in a CSS gradient. Example: `background-image: linear-gradient(to right, theme('colors.blue.500'), theme('colors.purple.500'));`"
+    },
+    {
+      "question": "How do you apply dark mode styles?",
+      "options": [
+        "The two strategies are `class` and `media`. The `media` strategy uses the user's operating system preference (`prefers-color-scheme`). The `class` strategy (recommended) applies dark mode whenever a `.dark` class is present on a parent element (usually the `<html>` tag).",
+        "You might use a preset in a large organization to share a common base configuration (e.g., with company brand colors and fonts) across multiple Tailwind projects, ensuring design consistency.",
+        "By placing your custom component styles in the `components` layer (e.g., `@layer components { .btn { ... } }`), you ensure that they can still be overridden by Tailwind's utility classes, preserving the utility-first workflow.",
+        "The `space-x-{amount}` or `space-y-{amount}` utilities are a convenient way to add a consistent margin between child elements. It applies a margin to all but the first child, preventing extra space at the beginning of the container."
+      ],
+      "answer": "The two strategies are `class` and `media`. The `media` strategy uses the user's operating system preference (`prefers-color-scheme`). The `class` strategy (recommended) applies dark mode whenever a `.dark` class is present on a parent element (usually the `<html>` tag)."
+    },
+    {
+      "question": "What are arbitrary values?",
+      "options": [
+        "You can use the `odd:` and `even:` variants, which correspond to the `:nth-child(odd)` and `:nth-child(even)` pseudo-classes. For example, `tr:odd:bg-gray-100`.",
+        "No, they should be used sparingly. Their purpose is for pixel-perfect, one-off adjustments. If you find yourself using the same arbitrary value repeatedly, it's a sign that you should add that value to your `tailwind.config.js` theme instead.",
+        "This is most useful when using Tailwind in a project that already has existing CSS with high specificity that you need to override. By setting `important: '#app'`, all of Tailwind's classes will be scoped with a high-specificity selector (e.g., `#app .text-blue-500`), making them override the existing styles.",
+        "You would use responsive prefixes: `grid grid-cols-1 lg:grid-cols-3`. This sets the default to one column and overrides it to three columns on large screens and up."
+      ],
+      "answer": "No, they should be used sparingly. Their purpose is for pixel-perfect, one-off adjustments. If you find yourself using the same arbitrary value repeatedly, it's a sign that you should add that value to your `tailwind.config.js` theme instead."
+    },
+    {
+      "question": "What is the `@layer` directive used for?",
+      "options": [
+        "They must be in the order: `base`, `components`, `utilities`. This is to ensure the correct cascade, where utilities can override component styles, and component styles can override base styles.",
+        "You would choose Headless UI when you need complete control over the design and appearance of your components, without having to override pre-existing styles. It's ideal for building a truly custom design system from the ground up.",
+        "By placing your custom component styles in the `components` layer (e.g., `@layer components { .btn { ... } }`), you ensure that they can still be overridden by Tailwind's utility classes, preserving the utility-first workflow.",
+        "`addUtilities` is for adding small, single-purpose utility classes. `addComponents` is for adding more complex, multi-layered component classes, like a custom `.card` or `.btn`."
+      ],
+      "answer": "By placing your custom component styles in the `components` layer (e.g., `@layer components { .btn { ... } }`), you ensure that they can still be overridden by Tailwind's utility classes, preserving the utility-first workflow."
+    },
+    {
+      "question": "How do you center an element horizontally?",
+      "options": [
+        "1. **Fast Build Times:** Since it only generates the CSS you need, builds are incredibly fast. 2. **Arbitrary Value Support:** You can use values not in your theme directly in your HTML (e.g., `w-[321px]`). 3. **All Variants Enabled:** All variants (like `focus-visible`, `disabled`) are enabled by default without increasing build size.",
+        "The easiest way is to make the parent a flex container and use the classes `flex justify-center items-center`.",
+        "You would import the font file in your main CSS file using `@import`, or in your main HTML file's `<head>` section using a `<link>` tag, just like you would in a project without Tailwind.",
+        "You can use an attribute selector as the arbitrary variant. For example, `[&[data-state=open]]:bg-blue-200` would apply a blue background only when the element has the attribute `data-state=\"open\"`."
+      ],
+      "answer": "The easiest way is to make the parent a flex container and use the classes `flex justify-center items-center`."
+    },
+    {
+      "question": "What is 'purging' in Tailwind CSS?",
+      "options": [
+        "The JIT compiler is essentially the evolution of purging. Instead of generating a massive CSS file and then removing unused classes, the JIT compiler works in reverse: it scans your files first and only generates the classes that you actually use.",
+        "Overusing `@apply` can recreate the problem Tailwind aims to solve: building a large, abstract CSS file that is separate from your markup. The recommended modern alternative is to create abstractions at the component level (e.g., a React `<Button>` component), keeping the utilities co-located.",
+        "This is most useful when using Tailwind in a project that already has existing CSS with high specificity that you need to override. By setting `important: '#app'`, all of Tailwind's classes will be scoped with a high-specificity selector (e.g., `#app .text-blue-500`), making them override the existing styles.",
+        "The easiest way is to make the parent a flex container and use the classes `flex justify-center items-center`."
+      ],
+      "answer": "The JIT compiler is essentially the evolution of purging. Instead of generating a massive CSS file and then removing unused classes, the JIT compiler works in reverse: it scans your files first and only generates the classes that you actually use."
+    },
+    {
+      "question": "How do you handle spacing (margin and padding) in Tailwind?",
+      "options": [
+        "The JIT compiler is essentially the evolution of purging. Instead of generating a massive CSS file and then removing unused classes, the JIT compiler works in reverse: it scans your files first and only generates the classes that you actually use.",
+        "The `space-x-{amount}` or `space-y-{amount}` utilities are a convenient way to add a consistent margin between child elements. It applies a margin to all but the first child, preventing extra space at the beginning of the container.",
+        "You would use responsive prefixes: `grid grid-cols-1 lg:grid-cols-3`. This sets the default to one column and overrides it to three columns on large screens and up.",
+        "You would combine the `hover:` variant with a transform utility. For example, `scale-100 hover:scale-110 transition-transform` would make an element scale up to 110% when hovered, with a smooth transition."
+      ],
+      "answer": "The `space-x-{amount}` or `space-y-{amount}` utilities are a convenient way to add a consistent margin between child elements. It applies a margin to all but the first child, preventing extra space at the beginning of the container."
+    },
+    {
+      "question": "What are the main criticisms of Tailwind CSS?",
+      "options": [
+        "The counter-argument is that in modern component-based frameworks (like React or Vue), these long class lists are encapsulated within reusable components. You write the long class list once inside the component, and then reuse the clean component everywhere else.",
+        "It's useful when you need to use a theme value where a utility class isn't possible, like in a CSS gradient. Example: `background-image: linear-gradient(to right, theme('colors.blue.500'), theme('colors.purple.500'));`",
+        "This is most useful when using Tailwind in a project that already has existing CSS with high specificity that you need to override. By setting `important: '#app'`, all of Tailwind's classes will be scoped with a high-specificity selector (e.g., `#app .text-blue-500`), making them override the existing styles.",
+        "`addUtilities` is for adding small, single-purpose utility classes. `addComponents` is for adding more complex, multi-layered component classes, like a custom `.card` or `.btn`."
+      ],
+      "answer": "The counter-argument is that in modern component-based frameworks (like React or Vue), these long class lists are encapsulated within reusable components. You write the long class list once inside the component, and then reuse the clean component everywhere else."
+    },
+    {
+      "question": "How can you add a custom font family in Tailwind?",
+      "options": [
+        "You would import the font file in your main CSS file using `@import`, or in your main HTML file's `<head>` section using a `<link>` tag, just like you would in a project without Tailwind.",
+        "`w-full` makes an element 100% of the width of its **parent container**. `w-screen` makes an element 100% of the width of the **viewport** (the screen).",
+        "If a file path is missing, Tailwind will not scan that file. As a result, any utility classes used only in that file will not be included in the final CSS output, and those styles will appear broken.",
+        "The two strategies are `class` and `media`. The `media` strategy uses the user's operating system preference (`prefers-color-scheme`). The `class` strategy (recommended) applies dark mode whenever a `.dark` class is present on a parent element (usually the `<html>` tag)."
+      ],
+      "answer": "You would import the font file in your main CSS file using `@import`, or in your main HTML file's `<head>` section using a `<link>` tag, just like you would in a project without Tailwind."
+    },
+    {
+      "question": "How do you create your own Tailwind plugin?",
+      "options": [
+        "You might use a preset in a large organization to share a common base configuration (e.g., with company brand colors and fonts) across multiple Tailwind projects, ensuring design consistency.",
+        "`addUtilities` is for adding small, single-purpose utility classes. `addComponents` is for adding more complex, multi-layered component classes, like a custom `.card` or `.btn`.",
+        "Yes. If you have nested groups, you can give them unique names using `group/{name}` (e.g., `group/item`) and then target them with variants like `group-hover/item:`.",
+        "You would combine the `hover:` variant with a transform utility. For example, `scale-100 hover:scale-110 transition-transform` would make an element scale up to 110% when hovered, with a smooth transition."
+      ],
+      "answer": "`addUtilities` is for adding small, single-purpose utility classes. `addComponents` is for adding more complex, multi-layered component classes, like a custom `.card` or `.btn`."
+    },
+    {
+      "question": "How do you style the first or last item in a list?",
+      "options": [
+        "You can use the `odd:` and `even:` variants, which correspond to the `:nth-child(odd)` and `:nth-child(even)` pseudo-classes. For example, `tr:odd:bg-gray-100`.",
+        "You can set the opacity by adding a slash followed by a percentage value to the color utility. For example, `text-red-500/50` will apply the red-500 color with 50% opacity.",
+        "Overusing `@apply` can recreate the problem Tailwind aims to solve: building a large, abstract CSS file that is separate from your markup. The recommended modern alternative is to create abstractions at the component level (e.g., a React `<Button>` component), keeping the utilities co-located.",
+        "The counter-argument is that in modern component-based frameworks (like React or Vue), these long class lists are encapsulated within reusable components. You write the long class list once inside the component, and then reuse the clean component everywhere else."
+      ],
+      "answer": "You can use the `odd:` and `even:` variants, which correspond to the `:nth-child(odd)` and `:nth-child(even)` pseudo-classes. For example, `tr:odd:bg-gray-100`."
+    },
+    {
+      "question": "What is Headless UI?",
+      "options": [
+        "You would use responsive prefixes: `grid grid-cols-1 lg:grid-cols-3`. This sets the default to one column and overrides it to three columns on large screens and up.",
+        "`addUtilities` is for adding small, single-purpose utility classes. `addComponents` is for adding more complex, multi-layered component classes, like a custom `.card` or `.btn`.",
+        "`w-full` makes an element 100% of the width of its **parent container**. `w-screen` makes an element 100% of the width of the **viewport** (the screen).",
+        "You would choose Headless UI when you need complete control over the design and appearance of your components, without having to override pre-existing styles. It's ideal for building a truly custom design system from the ground up."
+      ],
+      "answer": "You would choose Headless UI when you need complete control over the design and appearance of your components, without having to override pre-existing styles. It's ideal for building a truly custom design system from the ground up."
+    },
+    {
+      "question": "What is the purpose of the `presets` option in the config file?",
+      "options": [
+        "`w-full` makes an element 100% of the width of its **parent container**. `w-screen` makes an element 100% of the width of the **viewport** (the screen).",
+        "Common official plugins include: `@tailwindcss/forms` which provides a basic reset for form styles, and `@tailwindcss/typography` which adds the `prose` class for styling blocks of rich text content like Markdown.",
+        "You might use a preset in a large organization to share a common base configuration (e.g., with company brand colors and fonts) across multiple Tailwind projects, ensuring design consistency.",
+        "Yes. If you have nested groups, you can give them unique names using `group/{name}` (e.g., `group/item`) and then target them with variants like `group-hover/item:`."
+      ],
+      "answer": "You might use a preset in a large organization to share a common base configuration (e.g., with company brand colors and fonts) across multiple Tailwind projects, ensuring design consistency."
+    },
+    {
+      "question": "How do you create a simple three-column grid?",
+      "options": [
+        "`addUtilities` is for adding small, single-purpose utility classes. `addComponents` is for adding more complex, multi-layered component classes, like a custom `.card` or `.btn`.",
+        "You would use responsive prefixes: `grid grid-cols-1 lg:grid-cols-3`. This sets the default to one column and overrides it to three columns on large screens and up.",
+        "You would import the font file in your main CSS file using `@import`, or in your main HTML file's `<head>` section using a `<link>` tag, just like you would in a project without Tailwind.",
+        "You might use a preset in a large organization to share a common base configuration (e.g., with company brand colors and fonts) across multiple Tailwind projects, ensuring design consistency."
+      ],
+      "answer": "You would use responsive prefixes: `grid grid-cols-1 lg:grid-cols-3`. This sets the default to one column and overrides it to three columns on large screens and up."
+    },
+    {
+      "question": "What are arbitrary variants?",
+      "options": [
+        "`w-full` makes an element 100% of the width of its **parent container**. `w-screen` makes an element 100% of the width of the **viewport** (the screen).",
+        "You can set the opacity by adding a slash followed by a percentage value to the color utility. For example, `text-red-500/50` will apply the red-500 color with 50% opacity.",
+        "You might use a preset in a large organization to share a common base configuration (e.g., with company brand colors and fonts) across multiple Tailwind projects, ensuring design consistency.",
+        "You can use an attribute selector as the arbitrary variant. For example, `[&[data-state=open]]:bg-blue-200` would apply a blue background only when the element has the attribute `data-state=\"open\"`."
+      ],
+      "answer": "You can use an attribute selector as the arbitrary variant. For example, `[&[data-state=open]]:bg-blue-200` would apply a blue background only when the element has the attribute `data-state=\"open\"`."
+    },
+    {
+      "question": "How do you add transitions in Tailwind?",
+      "options": [
+        "'Utility-first' means you compose a design by applying small, single-purpose classes (e.g., `flex`, `pt-4`, `text-center`). This is different from Bootstrap, which provides pre-styled components (e.g., `.btn`, `.card`), giving you less design flexibility.",
+        "`ease-in-out` is a timing function class. It specifies that the transition should have a slow start and a slow end, creating a more natural-looking animation than a linear transition.",
+        "The two strategies are `class` and `media`. The `media` strategy uses the user's operating system preference (`prefers-color-scheme`). The `class` strategy (recommended) applies dark mode whenever a `.dark` class is present on a parent element (usually the `<html>` tag).",
+        "`w-full` makes an element 100% of the width of its **parent container**. `w-screen` makes an element 100% of the width of the **viewport** (the screen)."
+      ],
+      "answer": "`ease-in-out` is a timing function class. It specifies that the transition should have a slow start and a slow end, creating a more natural-looking animation than a linear transition."
+    },
+    {
+      "question": "How do you set an element's width and height?",
+      "options": [
+        "You would import the font file in your main CSS file using `@import`, or in your main HTML file's `<head>` section using a `<link>` tag, just like you would in a project without Tailwind.",
+        "`w-full` makes an element 100% of the width of its **parent container**. `w-screen` makes an element 100% of the width of the **viewport** (the screen).",
+        "The counter-argument is that in modern component-based frameworks (like React or Vue), these long class lists are encapsulated within reusable components. You write the long class list once inside the component, and then reuse the clean component everywhere else.",
+        "Placing customizations directly inside `theme` will **completely replace** Tailwind's default values for that key. Placing them inside `theme.extend` will **add to or override** the defaults without removing the rest. Using `extend` is the recommended approach in almost all cases."
+      ],
+      "answer": "`w-full` makes an element 100% of the width of its **parent container**. `w-screen` makes an element 100% of the width of the **viewport** (the screen)."
+    },
+    {
+      "question": "How do you rotate an element?",
+      "options": [
+        "`addUtilities` is for adding small, single-purpose utility classes. `addComponents` is for adding more complex, multi-layered component classes, like a custom `.card` or `.btn`.",
+        "No, they should be used sparingly. Their purpose is for pixel-perfect, one-off adjustments. If you find yourself using the same arbitrary value repeatedly, it's a sign that you should add that value to your `tailwind.config.js` theme instead.",
+        "You would import the font file in your main CSS file using `@import`, or in your main HTML file's `<head>` section using a `<link>` tag, just like you would in a project without Tailwind.",
+        "You would combine the `hover:` variant with a transform utility. For example, `scale-100 hover:scale-110 transition-transform` would make an element scale up to 110% when hovered, with a smooth transition."
+      ],
+      "answer": "You would combine the `hover:` variant with a transform utility. For example, `scale-100 hover:scale-110 transition-transform` would make an element scale up to 110% when hovered, with a smooth transition."
+    },
+    {
+      "question": "What is the 'important' option in the config file?",
+      "options": [
+        "This is most useful when using Tailwind in a project that already has existing CSS with high specificity that you need to override. By setting `important: '#app'`, all of Tailwind's classes will be scoped with a high-specificity selector (e.g., `#app .text-blue-500`), making them override the existing styles.",
+        "You can use an attribute selector as the arbitrary variant. For example, `[&[data-state=open]]:bg-blue-200` would apply a blue background only when the element has the attribute `data-state=\"open\"`.",
+        "You would import the font file in your main CSS file using `@import`, or in your main HTML file's `<head>` section using a `<link>` tag, just like you would in a project without Tailwind.",
+        "They must be in the order: `base`, `components`, `utilities`. This is to ensure the correct cascade, where utilities can override component styles, and component styles can override base styles."
+      ],
+      "answer": "This is most useful when using Tailwind in a project that already has existing CSS with high specificity that you need to override. By setting `important: '#app'`, all of Tailwind's classes will be scoped with a high-specificity selector (e.g., `#app .text-blue-500`), making them override the existing styles."
+    },
+    {
+      "question": "How do you change the text color?",
+      "options": [
+        "You would choose Headless UI when you need complete control over the design and appearance of your components, without having to override pre-existing styles. It's ideal for building a truly custom design system from the ground up.",
+        "You would use responsive prefixes: `grid grid-cols-1 lg:grid-cols-3`. This sets the default to one column and overrides it to three columns on large screens and up.",
+        "You can set the opacity by adding a slash followed by a percentage value to the color utility. For example, `text-red-500/50` will apply the red-500 color with 50% opacity.",
+        "The `space-x-{amount}` or `space-y-{amount}` utilities are a convenient way to add a consistent margin between child elements. It applies a margin to all but the first child, preventing extra space at the beginning of the container."
+      ],
+      "answer": "You can set the opacity by adding a slash followed by a percentage value to the color utility. For example, `text-red-500/50` will apply the red-500 color with 50% opacity."
+    },
+    {
+      "question": "What is the `group` utility for?",
+      "options": [
+        "If a file path is missing, Tailwind will not scan that file. As a result, any utility classes used only in that file will not be included in the final CSS output, and those styles will appear broken.",
+        "`addUtilities` is for adding small, single-purpose utility classes. `addComponents` is for adding more complex, multi-layered component classes, like a custom `.card` or `.btn`.",
+        "You would use responsive prefixes: `grid grid-cols-1 lg:grid-cols-3`. This sets the default to one column and overrides it to three columns on large screens and up.",
+        "Yes. If you have nested groups, you can give them unique names using `group/{name}` (e.g., `group/item`) and then target them with variants like `group-hover/item:`."
+      ],
+      "answer": "Yes. If you have nested groups, you can give them unique names using `group/{name}` (e.g., `group/item`) and then target them with variants like `group-hover/item:`."
+    }
+  ]
+}

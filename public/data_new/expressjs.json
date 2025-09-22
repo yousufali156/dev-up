@@ -1,0 +1,254 @@
+{
+  "questions": [
+    {
+      "question": "What is Express.js?",
+      "options": [
+        "If the application is behind a reverse proxy (like Nginx or a load balancer), `req.ip` will return the IP address of the proxy. To get the true user IP, you must enable the 'trust proxy' setting in Express and then read the `X-Forwarded-For` header.",
+        "The built-in `http` module is very low-level. Express provides a layer of abstraction on top of it, simplifying tasks like routing, handling request/response objects, and managing middleware, which makes building web applications significantly faster and more organized.",
+        "Application-level middleware is bound to the app object using `app.use()` or `app.METHOD()`. Router-level middleware is bound to an instance of `express.Router()` and only applies to the routes defined by that router instance.",
+        "You first set the view engine using `app.set('view engine', 'ejs')`. Then, you use the `res.render()` method to render a template, passing it the name of the view and an object with data. For example: `res.render('profile', { user: userData })`."
+      ],
+      "answer": "The built-in `http` module is very low-level. Express provides a layer of abstraction on top of it, simplifying tasks like routing, handling request/response objects, and managing middleware, which makes building web applications significantly faster and more organized."
+    },
+    {
+      "question": "What is middleware in Express.js?",
+      "options": [
+        "`res.set()` will set a header, overwriting any existing header with the same name. `res.append()` will append a new value to an existing header, which is useful for headers that can have multiple values, like `Link`.",
+        "You can pass the status code as the first argument. For a permanent redirect, which is better for SEO, you should use a 301 status code: `res.redirect(301, '/new-location');`.",
+        "Yes, you can. You can call `express.static` multiple times. Express will look for a file in the directories in the order that you defined them. For example: `app.use(express.static('public')); app.use(express.static('assets'));`",
+        "The order is extremely important because middleware functions are executed sequentially. The first middleware that is called gets the request first, and it must call `next()` to pass control to the next middleware in the stack. This is crucial for tasks like authentication, which must run before the route handler."
+      ],
+      "answer": "The order is extremely important because middleware functions are executed sequentially. The first middleware that is called gets the request first, and it must call `next()` to pass control to the next middleware in the stack. This is crucial for tasks like authentication, which must run before the route handler."
+    },
+    {
+      "question": "What is the purpose of the `next()` function?",
+      "options": [
+        "You pass an error by calling `next()` with an argument. For example: `next(new Error('Something went wrong'))`. Express will then skip all other middleware and go directly to the error-handling middleware.",
+        "Yes, you can. You can call `express.static` multiple times. Express will look for a file in the directories in the order that you defined them. For example: `app.use(express.static('public')); app.use(express.static('assets'));`",
+        "Many developers prefer to build their application structure from scratch. This gives them complete control over the project structure and dependencies, avoiding the boilerplate that they might not need from the generator.",
+        "Gzip compression reduces the size of the response body before it is sent to the client. This significantly reduces the amount of data that needs to be transferred over the network, resulting in faster page loads."
+      ],
+      "answer": "You pass an error by calling `next()` with an argument. For example: `next(new Error('Something went wrong'))`. Express will then skip all other middleware and go directly to the error-handling middleware."
+    },
+    {
+      "question": "How do you define a route in Express?",
+      "options": [
+        "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs and you don't catch it, the request will hang. You must explicitly pass the error to the error-handling middleware by calling `next(error)`.",
+        "You pass an error by calling `next()` with an argument. For example: `next(new Error('Something went wrong'))`. Express will then skip all other middleware and go directly to the error-handling middleware.",
+        "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized.",
+        "The 'controller' contains the actual logic for handling a request. The route definition simply maps a URL path to a specific controller function. This separates the routing declaration from the business logic."
+      ],
+      "answer": "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized."
+    },
+    {
+      "question": "What is the difference between `req.params`, `req.query`, and `req.body`?",
+      "options": [
+        "You must use the `express.json()` middleware. Without it, `req.body` will be `undefined` for requests with a `Content-Type` of `application/json`.",
+        "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs and you don't catch it, the request will hang. You must explicitly pass the error to the error-handling middleware by calling `next(error)`.",
+        "You first set the view engine using `app.set('view engine', 'ejs')`. Then, you use the `res.render()` method to render a template, passing it the name of the view and an object with data. For example: `res.render('profile', { user: userData })`.",
+        "You can pass the status code as the first argument. For a permanent redirect, which is better for SEO, you should use a 301 status code: `res.redirect(301, '/new-location');`."
+      ],
+      "answer": "You must use the `express.json()` middleware. Without it, `req.body` will be `undefined` for requests with a `Content-Type` of `application/json`."
+    },
+    {
+      "question": "How do you implement centralized error handling in Express?",
+      "options": [
+        "Not exactly. The `express` module's default export is a function, not a class. When you call `express()`, this function returns a new app object, which is a mix of a function and an object.",
+        "Many developers prefer to build their application structure from scratch. This gives them complete control over the project structure and dependencies, avoiding the boilerplate that they might not need from the generator.",
+        "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs and you don't catch it, the request will hang. You must explicitly pass the error to the error-handling middleware by calling `next(error)`.",
+        "If the application is behind a reverse proxy (like Nginx or a load balancer), `req.ip` will return the IP address of the proxy. To get the true user IP, you must enable the 'trust proxy' setting in Express and then read the `X-Forwarded-For` header."
+      ],
+      "answer": "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs and you don't catch it, the request will hang. You must explicitly pass the error to the error-handling middleware by calling `next(error)`."
+    },
+    {
+      "question": "What is the difference between `res.send()` and `res.json()`?",
+      "options": [
+        "It should set the status to 404 and then send a response, for example: `res.status(404).send('Sorry, that page cannot be found!');`.",
+        "If you pass an object or array to `res.send()`, Express is smart enough to treat it like `res.json()`. It will automatically stringify the object and set the `Content-Type` header to `application/json`.",
+        "Yes, you can. You can call `express.static` multiple times. Express will look for a file in the directories in the order that you defined them. For example: `app.use(express.static('public')); app.use(express.static('assets'));`",
+        "You first set the view engine using `app.set('view engine', 'ejs')`. Then, you use the `res.render()` method to render a template, passing it the name of the view and an object with data. For example: `res.render('profile', { user: userData })`."
+      ],
+      "answer": "If you pass an object or array to `res.send()`, Express is smart enough to treat it like `res.json()`. It will automatically stringify the object and set the `Content-Type` header to `application/json`."
+    },
+    {
+      "question": "How do you serve static files in Express?",
+      "options": [
+        "Yes, you can. You can call `express.static` multiple times. Express will look for a file in the directories in the order that you defined them. For example: `app.use(express.static('public')); app.use(express.static('assets'));`",
+        "You must use the `express.json()` middleware. Without it, `req.body` will be `undefined` for requests with a `Content-Type` of `application/json`.",
+        "The order is extremely important because middleware functions are executed sequentially. The first middleware that is called gets the request first, and it must call `next()` to pass control to the next middleware in the stack. This is crucial for tasks like authentication, which must run before the route handler.",
+        "One header it sets is `X-Frame-Options: DENY`, which helps prevent clickjacking attacks by stopping your site from being embedded in an `<iframe>`."
+      ],
+      "answer": "Yes, you can. You can call `express.static` multiple times. Express will look for a file in the directories in the order that you defined them. For example: `app.use(express.static('public')); app.use(express.static('assets'));`"
+    },
+    {
+      "question": "What are the different types of middleware?",
+      "options": [
+        "Application-level middleware is bound to the app object using `app.use()` or `app.METHOD()`. Router-level middleware is bound to an instance of `express.Router()` and only applies to the routes defined by that router instance.",
+        "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs and you don't catch it, the request will hang. You must explicitly pass the error to the error-handling middleware by calling `next(error)`.",
+        "If you do not set a status code, Express will default to a status code of 200 (OK).",
+        "A good use case is for validating route parameters. For example, `app.all('/api/users/:id', validateUser)` would run the `validateUser` middleware for any request to that path, regardless of the HTTP method."
+      ],
+      "answer": "Application-level middleware is bound to the app object using `app.use()` or `app.METHOD()`. Router-level middleware is bound to an instance of `express.Router()` and only applies to the routes defined by that router instance."
+    },
+    {
+      "question": "How do you start an Express server?",
+      "options": [
+        "`app.listen()` is a convenience method that is identical to Node's `http.createServer(app).listen()`.",
+        "You can pass a configuration object to the `cors()` middleware. For example: `app.use(cors({ origin: 'https://example.com' }))`.",
+        "You must use the `express.json()` middleware. Without it, `req.body` will be `undefined` for requests with a `Content-Type` of `application/json`.",
+        "One header it sets is `X-Frame-Options: DENY`, which helps prevent clickjacking attacks by stopping your site from being embedded in an `<iframe>`."
+      ],
+      "answer": "`app.listen()` is a convenience method that is identical to Node's `http.createServer(app).listen()`."
+    },
+    {
+      "question": "What is the `cors` middleware used for?",
+      "options": [
+        "Yes, you can. You can call `express.static` multiple times. Express will look for a file in the directories in the order that you defined them. For example: `app.use(express.static('public')); app.use(express.static('assets'));`",
+        "If the application is behind a reverse proxy (like Nginx or a load balancer), `req.ip` will return the IP address of the proxy. To get the true user IP, you must enable the 'trust proxy' setting in Express and then read the `X-Forwarded-For` header.",
+        "You can pass a configuration object to the `cors()` middleware. For example: `app.use(cors({ origin: 'https://example.com' }))`.",
+        "The order is extremely important because middleware functions are executed sequentially. The first middleware that is called gets the request first, and it must call `next()` to pass control to the next middleware in the stack. This is crucial for tasks like authentication, which must run before the route handler."
+      ],
+      "answer": "You can pass a configuration object to the `cors()` middleware. For example: `app.use(cors({ origin: 'https://example.com' }))`."
+    },
+    {
+      "question": "What is `helmet` middleware?",
+      "options": [
+        "One header it sets is `X-Frame-Options: DENY`, which helps prevent clickjacking attacks by stopping your site from being embedded in an `<iframe>`.",
+        "Gzip compression reduces the size of the response body before it is sent to the client. This significantly reduces the amount of data that needs to be transferred over the network, resulting in faster page loads.",
+        "The built-in `http` module is very low-level. Express provides a layer of abstraction on top of it, simplifying tasks like routing, handling request/response objects, and managing middleware, which makes building web applications significantly faster and more organized.",
+        "Not exactly. The `express` module's default export is a function, not a class. When you call `express()`, this function returns a new app object, which is a mix of a function and an object."
+      ],
+      "answer": "One header it sets is `X-Frame-Options: DENY`, which helps prevent clickjacking attacks by stopping your site from being embedded in an `<iframe>`."
+    },
+    {
+      "question": "How do you set a status code on a response?",
+      "options": [
+        "You first set the view engine using `app.set('view engine', 'ejs')`. Then, you use the `res.render()` method to render a template, passing it the name of the view and an object with data. For example: `res.render('profile', { user: userData })`.",
+        "You must use the `express.json()` middleware. Without it, `req.body` will be `undefined` for requests with a `Content-Type` of `application/json`.",
+        "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized.",
+        "If you do not set a status code, Express will default to a status code of 200 (OK)."
+      ],
+      "answer": "If you do not set a status code, Express will default to a status code of 200 (OK)."
+    },
+    {
+      "question": "What does `app.all()` do?",
+      "options": [
+        "A good use case is for validating route parameters. For example, `app.all('/api/users/:id', validateUser)` would run the `validateUser` middleware for any request to that path, regardless of the HTTP method.",
+        "The built-in `http` module is very low-level. Express provides a layer of abstraction on top of it, simplifying tasks like routing, handling request/response objects, and managing middleware, which makes building web applications significantly faster and more organized.",
+        "It should set the status to 404 and then send a response, for example: `res.status(404).send('Sorry, that page cannot be found!');`.",
+        "You can pass a configuration object to the `cors()` middleware. For example: `app.use(cors({ origin: 'https://example.com' }))`."
+      ],
+      "answer": "A good use case is for validating route parameters. For example, `app.all('/api/users/:id', validateUser)` would run the `validateUser` middleware for any request to that path, regardless of the HTTP method."
+    },
+    {
+      "question": "What is a template engine and how do you use one with Express?",
+      "options": [
+        "If you do not set a status code, Express will default to a status code of 200 (OK).",
+        "A good use case is for validating route parameters. For example, `app.all('/api/users/:id', validateUser)` would run the `validateUser` middleware for any request to that path, regardless of the HTTP method.",
+        "A signed cookie is a cookie that has a signature attached to it. This signature allows the server to detect if the cookie has been tampered with on the client side. It does not encrypt the data, but it ensures its integrity.",
+        "You first set the view engine using `app.set('view engine', 'ejs')`. Then, you use the `res.render()` method to render a template, passing it the name of the view and an object with data. For example: `res.render('profile', { user: userData })`."
+      ],
+      "answer": "You first set the view engine using `app.set('view engine', 'ejs')`. Then, you use the `res.render()` method to render a template, passing it the name of the view and an object with data. For example: `res.render('profile', { user: userData })`."
+    },
+    {
+      "question": "What is `morgan` middleware used for?",
+      "options": [
+        "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized.",
+        "Yes, you can. You can call `express.static` multiple times. Express will look for a file in the directories in the order that you defined them. For example: `app.use(express.static('public')); app.use(express.static('assets'));`",
+        "The 'controller' contains the actual logic for handling a request. The route definition simply maps a URL path to a specific controller function. This separates the routing declaration from the business logic.",
+        "Logging requests is crucial for debugging. It allows you to see exactly which requests are hitting your server, what their status codes are, and how long they took to respond, which helps in identifying issues quickly."
+      ],
+      "answer": "Logging requests is crucial for debugging. It allows you to see exactly which requests are hitting your server, what their status codes are, and how long they took to respond, which helps in identifying issues quickly."
+    },
+    {
+      "question": "How do you create an Express application?",
+      "options": [
+        "If the application is behind a reverse proxy (like Nginx or a load balancer), `req.ip` will return the IP address of the proxy. To get the true user IP, you must enable the 'trust proxy' setting in Express and then read the `X-Forwarded-For` header.",
+        "`app.listen()` is a convenience method that is identical to Node's `http.createServer(app).listen()`.",
+        "Not exactly. The `express` module's default export is a function, not a class. When you call `express()`, this function returns a new app object, which is a mix of a function and an object.",
+        "The built-in `http` module is very low-level. Express provides a layer of abstraction on top of it, simplifying tasks like routing, handling request/response objects, and managing middleware, which makes building web applications significantly faster and more organized."
+      ],
+      "answer": "Not exactly. The `express` module's default export is a function, not a class. When you call `express()`, this function returns a new app object, which is a mix of a function and an object."
+    },
+    {
+      "question": "What is the Express application generator?",
+      "options": [
+        "A signed cookie is a cookie that has a signature attached to it. This signature allows the server to detect if the cookie has been tampered with on the client side. It does not encrypt the data, but it ensures its integrity.",
+        "You first set the view engine using `app.set('view engine', 'ejs')`. Then, you use the `res.render()` method to render a template, passing it the name of the view and an object with data. For example: `res.render('profile', { user: userData })`.",
+        "Many developers prefer to build their application structure from scratch. This gives them complete control over the project structure and dependencies, avoiding the boilerplate that they might not need from the generator.",
+        "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized."
+      ],
+      "answer": "Many developers prefer to build their application structure from scratch. This gives them complete control over the project structure and dependencies, avoiding the boilerplate that they might not need from the generator."
+    },
+    {
+      "question": "How can you get the IP address of a client?",
+      "options": [
+        "If the application is behind a reverse proxy (like Nginx or a load balancer), `req.ip` will return the IP address of the proxy. To get the true user IP, you must enable the 'trust proxy' setting in Express and then read the `X-Forwarded-For` header.",
+        "Logging requests is crucial for debugging. It allows you to see exactly which requests are hitting your server, what their status codes are, and how long they took to respond, which helps in identifying issues quickly.",
+        "If you do not set a status code, Express will default to a status code of 200 (OK).",
+        "`app.listen()` is a convenience method that is identical to Node's `http.createServer(app).listen()`."
+      ],
+      "answer": "If the application is behind a reverse proxy (like Nginx or a load balancer), `req.ip` will return the IP address of the proxy. To get the true user IP, you must enable the 'trust proxy' setting in Express and then read the `X-Forwarded-For` header."
+    },
+    {
+      "question": "What is the `res.redirect()` method used for?",
+      "options": [
+        "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized.",
+        "The 'controller' contains the actual logic for handling a request. The route definition simply maps a URL path to a specific controller function. This separates the routing declaration from the business logic.",
+        "You can pass the status code as the first argument. For a permanent redirect, which is better for SEO, you should use a 301 status code: `res.redirect(301, '/new-location');`.",
+        "A signed cookie is a cookie that has a signature attached to it. This signature allows the server to detect if the cookie has been tampered with on the client side. It does not encrypt the data, but it ensures its integrity."
+      ],
+      "answer": "You can pass the status code as the first argument. For a permanent redirect, which is better for SEO, you should use a 301 status code: `res.redirect(301, '/new-location');`."
+    },
+    {
+      "question": "How do you handle a 404 (Not Found) error?",
+      "options": [
+        "You must use the `express.json()` middleware. Without it, `req.body` will be `undefined` for requests with a `Content-Type` of `application/json`.",
+        "Express cannot automatically catch errors that occur in asynchronous code (like inside a promise). If an error occurs and you don't catch it, the request will hang. You must explicitly pass the error to the error-handling middleware by calling `next(error)`.",
+        "Gzip compression reduces the size of the response body before it is sent to the client. This significantly reduces the amount of data that needs to be transferred over the network, resulting in faster page loads.",
+        "It should set the status to 404 and then send a response, for example: `res.status(404).send('Sorry, that page cannot be found!');`."
+      ],
+      "answer": "It should set the status to 404 and then send a response, for example: `res.status(404).send('Sorry, that page cannot be found!');`."
+    },
+    {
+      "question": "How do you set response headers?",
+      "options": [
+        "`res.set()` will set a header, overwriting any existing header with the same name. `res.append()` will append a new value to an existing header, which is useful for headers that can have multiple values, like `Link`.",
+        "One header it sets is `X-Frame-Options: DENY`, which helps prevent clickjacking attacks by stopping your site from being embedded in an `<iframe>`.",
+        "A signed cookie is a cookie that has a signature attached to it. This signature allows the server to detect if the cookie has been tampered with on the client side. It does not encrypt the data, but it ensures its integrity.",
+        "You first set the view engine using `app.set('view engine', 'ejs')`. Then, you use the `res.render()` method to render a template, passing it the name of the view and an object with data. For example: `res.render('profile', { user: userData })`."
+      ],
+      "answer": "`res.set()` will set a header, overwriting any existing header with the same name. `res.append()` will append a new value to an existing header, which is useful for headers that can have multiple values, like `Link`."
+    },
+    {
+      "question": "How would you structure a large Express application?",
+      "options": [
+        "If the application is behind a reverse proxy (like Nginx or a load balancer), `req.ip` will return the IP address of the proxy. To get the true user IP, you must enable the 'trust proxy' setting in Express and then read the `X-Forwarded-For` header.",
+        "Many developers prefer to build their application structure from scratch. This gives them complete control over the project structure and dependencies, avoiding the boilerplate that they might not need from the generator.",
+        "The 'controller' contains the actual logic for handling a request. The route definition simply maps a URL path to a specific controller function. This separates the routing declaration from the business logic.",
+        "The built-in `http` module is very low-level. Express provides a layer of abstraction on top of it, simplifying tasks like routing, handling request/response objects, and managing middleware, which makes building web applications significantly faster and more organized."
+      ],
+      "answer": "The 'controller' contains the actual logic for handling a request. The route definition simply maps a URL path to a specific controller function. This separates the routing declaration from the business logic."
+    },
+    {
+      "question": "How do you handle cookies in Express?",
+      "options": [
+        "The order is extremely important because middleware functions are executed sequentially. The first middleware that is called gets the request first, and it must call `next()` to pass control to the next middleware in the stack. This is crucial for tasks like authentication, which must run before the route handler.",
+        "A signed cookie is a cookie that has a signature attached to it. This signature allows the server to detect if the cookie has been tampered with on the client side. It does not encrypt the data, but it ensures its integrity.",
+        "If you do not set a status code, Express will default to a status code of 200 (OK).",
+        "Logging requests is crucial for debugging. It allows you to see exactly which requests are hitting your server, what their status codes are, and how long they took to respond, which helps in identifying issues quickly."
+      ],
+      "answer": "A signed cookie is a cookie that has a signature attached to it. This signature allows the server to detect if the cookie has been tampered with on the client side. It does not encrypt the data, but it ensures its integrity."
+    },
+    {
+      "question": "How can you improve the performance of an Express application?",
+      "options": [
+        "Gzip compression reduces the size of the response body before it is sent to the client. This significantly reduces the amount of data that needs to be transferred over the network, resulting in faster page loads.",
+        "`express.Router()` creates a modular, mountable route handler. It allows you to group related routes into separate files (e.g., `userRoutes.js`) and then mount them on a path in your main app file (`app.use('/users', userRoutes)`), keeping your code organized.",
+        "Yes, you can. You can call `express.static` multiple times. Express will look for a file in the directories in the order that you defined them. For example: `app.use(express.static('public')); app.use(express.static('assets'));`",
+        "If the application is behind a reverse proxy (like Nginx or a load balancer), `req.ip` will return the IP address of the proxy. To get the true user IP, you must enable the 'trust proxy' setting in Express and then read the `X-Forwarded-For` header."
+      ],
+      "answer": "Gzip compression reduces the size of the response body before it is sent to the client. This significantly reduces the amount of data that needs to be transferred over the network, resulting in faster page loads."
+    }
+  ]
+}
